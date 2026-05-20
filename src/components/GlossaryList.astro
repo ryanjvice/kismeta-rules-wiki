@@ -1,0 +1,85 @@
+---
+import glossary from '../data/glossary.json';
+
+const termLinks: Record<string, string> = {
+	Opposition: '/reference/compendium/1-12-opposition/',
+	Gambit: '/reference/compendium/1-10-gambit/',
+	Harvest: '/reference/compendium/1-2-harvest/',
+	'Alignment Points': '/reference/compendium/1-1-aspects-alignment/#alignment-points',
+	'Alignment Bonus': '/reference/compendium/1-1-aspects-alignment/#alignment-points',
+	'Alignment Score': '/reference/compendium/1-1-aspects-alignment/#alignment-points',
+	Reagent: '/reference/compendium/1-6-reagents/',
+	Refinement: '/reference/compendium/1-6-reagents/',
+	'Crucible Card': '/reference/compendium/1-4-crucible-cards/',
+	'Astral House': '/reference/compendium/1-7-astral-houses/',
+	'Offering to the Age': '/reference/compendium/1-13-offering-to-the-age/',
+	'Fateful Wager': '/reference/compendium/1-14-fateful-wager/',
+	Transmutation: '/reference/compendium/1-11-crucible-philosophers-stone/',
+	Stasis: '/reference/compendium/1-11-crucible-philosophers-stone/#returning-from-stasis',
+	Tempering: '/reference/compendium/1-11-crucible-philosophers-stone/',
+	'Philosopher’s Stone': '/reference/compendium/1-11-crucible-philosophers-stone/',
+	Crucible: '/reference/compendium/1-11-crucible-philosophers-stone/',
+	'Cosmic Age': '/reference/compendium/1-0-cosmic-ages/',
+	'Cosmic Effect': '/reference/compendium/1-0-cosmic-ages/',
+	Agekeeper: '/play/setup/#v-selecting-the-first-agekeeper',
+	Activating: '/reference/compendium/1-4-crucible-cards/#activating-a-crucible-card',
+};
+
+function linkForTerm(term: string) {
+	return termLinks[term] ?? null;
+}
+
+function linkifyDefinition(text: string) {
+	return text
+		.replace(
+			/See 1\.1: Alignment Points\.?/gi,
+			'See [Alignment Points](/reference/compendium/1-1-aspects-alignment/#alignment-points).'
+		)
+		.replace(/See 1\.12 Opposition\.?/gi, 'See [Opposition](/reference/compendium/1-12-opposition/).')
+		.replace(/See 1\.10 Gambit\.?/gi, 'See [Gambit](/reference/compendium/1-10-gambit/).');
+}
+---
+
+
+<div class="glossary-list">
+	{
+		glossary.map((entry) => {
+			const href = linkForTerm(entry.term);
+			return (
+				<section class="glossary-entry" id={entry.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
+					<h2>
+						{href ? (
+							<a href={href}>{entry.term}</a>
+						) : (
+							entry.term
+						)}
+					</h2>
+					<p set:html={linkifyDefinition(entry.definition)} />
+				</section>
+			);
+		})
+	}
+</div>
+
+<style>
+	.glossary-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.glossary-entry h2 {
+		font-size: var(--sl-text-h3);
+		margin-bottom: 0.35rem;
+	}
+	.glossary-entry h2 a {
+		color: var(--sl-color-accent);
+		text-decoration: none;
+	}
+	.glossary-entry h2 a:hover {
+		text-decoration: underline;
+	}
+	.glossary-entry p {
+		margin: 0;
+		line-height: 1.6;
+	}
+</style>

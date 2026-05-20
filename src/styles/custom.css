@@ -1,0 +1,262 @@
+/* Kismeta typography — Germania One (titles), Futura Cyrillic (body/headers), Amarante (lore) */
+
+@font-face {
+	font-family: 'Futura Cyrillic';
+	src: url('/fonts/FuturaCyrillicBook.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Futura Cyrillic';
+	src: url('/fonts/FuturaCyrillicDemi.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Futura Cyrillic';
+	src: url('/fonts/FuturaCyrillicLight.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--kismeta-gold: #c9a227;
+	--kismeta-gold-dim: #8a7020;
+	--kismeta-purple-deep: #1a0f2e;
+	--kismeta-purple-mid: #2d1b4e;
+	--kismeta-cream: #f4efe6;
+
+	--kismeta-font-title: 'Germania One', serif;
+	--kismeta-font-heading: 'Futura Cyrillic', 'Century Gothic', 'Trebuchet MS', sans-serif;
+	--kismeta-font-body: 'Futura Cyrillic', 'Century Gothic', 'Trebuchet MS', sans-serif;
+	--kismeta-font-light: 'Futura Cyrillic', 'Century Gothic', 'Trebuchet MS', sans-serif;
+	--kismeta-font-lore: 'Amarante', serif;
+
+	--sl-color-accent: var(--kismeta-gold);
+	--sl-color-accent-high: #e8c547;
+	--sl-color-accent-low: var(--kismeta-gold-dim);
+	--sl-color-white: var(--kismeta-cream);
+	--sl-font: var(--kismeta-font-body);
+}
+
+/* Site title & major headings — Germania One */
+.site-title,
+h1#_top,
+.sl-markdown-content :is(h1):not(:where(.not-content *)) {
+	font-family: var(--kismeta-font-title);
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+
+/* Smaller headers — Futura Cyrillic Demi */
+.sl-markdown-content :is(h2, h3, h4, h5, h6):not(:where(.not-content *)),
+.sl-markdown-content .sl-heading-wrapper:not(:where(.not-content *)),
+.starlight-aside__title,
+.tab-nav__link,
+.game-mode-toggle__label {
+	font-family: var(--kismeta-font-heading);
+	font-weight: 600;
+}
+
+/* Body copy — Futura Cyrillic Book */
+body,
+.sl-markdown-content :is(p, li, td, th, dd, dt):not(:where(.not-content *)) {
+	font-family: var(--kismeta-font-body);
+	font-weight: 400;
+}
+
+/* Italics & notes — Futura Cyrillic Light */
+.sl-markdown-content :is(em, i, cite):not(:where(.not-content *)),
+.starlight-aside,
+blockquote:not(:where(.not-content *)),
+.game-mode-callout {
+	font-family: var(--kismeta-font-light);
+	font-weight: 300;
+	font-style: normal;
+}
+
+.sl-markdown-content em:not(:where(.not-content *)),
+.sl-markdown-content i:not(:where(.not-content *)) {
+	font-style: italic;
+}
+
+/* Lore pages — Amarante (wrap lore markdown in <div class="kismeta-lore">) */
+main:has(.kismeta-lore) h1#_top,
+.kismeta-lore,
+.kismeta-lore :is(p, li, h2, h3, h4, h5, h6) {
+	font-family: var(--kismeta-font-lore);
+	font-weight: 400;
+	letter-spacing: 0.01em;
+}
+
+:root[data-theme='dark'] {
+	--sl-color-bg: #0d0818;
+	--sl-color-bg-nav: var(--kismeta-purple-deep);
+	--sl-color-bg-sidebar: #120c1f;
+	--sl-color-hairline: #3d2a5c;
+	--sl-color-gray-1: var(--kismeta-cream);
+	--sl-color-gray-2: #c4b8a8;
+	--sl-color-gray-3: #9a8f82;
+}
+
+:root[data-theme='light'] {
+	--sl-color-bg: #f8f4ec;
+	--sl-color-bg-nav: #ede6d8;
+	--sl-color-bg-sidebar: #f0ebe2;
+	--sl-color-gray-1: #1a1028;
+}
+
+/* Tab navigation */
+.kismeta-header-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/* Starlight defaults .header to --sl-nav-height (title row only); grow for tabs + modifiers */
+.page > .header {
+	height: auto !important;
+}
+
+/*
+ * Full stacked header height (title + tabs + modifiers). Do not override --sl-nav-height —
+ * Starlight uses it for the inner title row and grid; inflating it breaks layout.
+ */
+:root:has(.kismeta-header-wrap) {
+	--kismeta-nav-offset: calc(3.5rem + 9rem);
+}
+
+@media (min-width: 50rem) {
+	:root:has(.kismeta-header-wrap) {
+		--kismeta-nav-offset: calc(4rem + 6.375rem);
+	}
+}
+
+.page:has(.kismeta-header-wrap) .main-frame {
+	padding-top: calc(var(--kismeta-nav-offset) + var(--sl-mobile-toc-height, 0px));
+}
+
+.page:has(.kismeta-header-wrap) .sidebar-pane {
+	inset-block-start: var(--kismeta-nav-offset);
+}
+
+.page:has(.kismeta-header-wrap) mobile-starlight-toc nav {
+	top: calc(var(--kismeta-nav-offset) - 1px);
+}
+
+.page:has(.kismeta-header-wrap) {
+	scroll-padding-top: calc(1.5rem + var(--kismeta-nav-offset) + var(--sl-mobile-toc-height, 0px));
+}
+
+@media (min-width: 72rem) {
+	.page:has(.kismeta-header-wrap) .right-sidebar {
+		padding-top: var(--kismeta-nav-offset);
+	}
+}
+
+.tab-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	padding: 0.5rem 1rem;
+	background: var(--sl-color-bg-nav);
+	border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+.tab-nav__link {
+	padding: 0.45rem 0.9rem;
+	border-radius: 0.35rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--sl-color-gray-2);
+	transition: background 0.15s, color 0.15s;
+}
+
+.tab-nav__link:hover {
+	color: var(--sl-color-accent-high);
+	background: color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+}
+
+.tab-nav__link--active {
+	color: var(--sl-color-bg);
+	background: var(--sl-color-accent);
+}
+
+/* Game mode toggle */
+.game-mode-toggle {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.4rem 1rem 0.6rem;
+	font-size: 0.82rem;
+	background: var(--sl-color-bg-nav);
+	border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+.game-mode-toggle__label {
+	font-weight: 600;
+	color: var(--sl-color-gray-3);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.game-mode-toggle__option {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	cursor: pointer;
+	color: var(--sl-color-gray-2);
+}
+
+.game-mode-toggle__option input {
+	accent-color: var(--sl-color-accent);
+}
+
+/* Game mode callouts in content */
+.game-mode-callout {
+	margin: 1rem 0;
+	padding: 0.75rem 1rem;
+	border-left: 3px solid var(--sl-color-accent);
+	background: color-mix(in srgb, var(--sl-color-accent) 8%, var(--sl-color-bg));
+	border-radius: 0 0.35rem 0.35rem 0;
+}
+
+.game-mode-callout[hidden] {
+	display: none !important;
+}
+
+/* Draft badge support via Starlight */
+.sl-badge.draft {
+	--sl-badge-bg: #6b3a6b;
+}
+
+/* Tables — readable at the table */
+.sl-markdown-content table {
+	font-size: 0.92rem;
+}
+
+/* Print-friendly quick reference */
+@media print {
+	.tab-nav,
+	.game-mode-toggle,
+	.kismeta-header-wrap :global(header) {
+		display: none !important;
+	}
+}
+
+/* Mobile tap targets */
+@media (max-width: 50rem) {
+	.tab-nav__link {
+		padding: 0.55rem 0.75rem;
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+	}
+}

@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+
+# astro
+.astro/
+
+# env
+.env
+.env.*
+
+# os
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# leftover scaffold
+dark-dwarf/
+
+# tooling / agent artifacts
+.playwright-mcp/
+.cursor/
+
+# logs (safety net)
+*.log

@@ -1,0 +1,24 @@
+---
+const tabs = [
+	{ label: 'Learn', href: '/learn/lore/', match: '/learn/' },
+	{ label: 'Play', href: '/play/round-at-a-glance/', match: '/play/' },
+	{ label: 'Reference', href: '/reference/quick-reference/', match: '/reference/' },
+	{ label: 'Glossary', href: '/glossary/', match: '/glossary/' },
+];
+
+const pathname = Astro.url.pathname;
+---
+
+<nav class="tab-nav" aria-label="Rules sections">
+	{
+		tabs.map((tab) => {
+			const active =
+				pathname === '/' ? tab.label === 'Learn' : pathname.startsWith(tab.match);
+			return (
+				<a href={tab.href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
+					{tab.label}
+				</a>
+			);
+		})
+	}
+</nav>

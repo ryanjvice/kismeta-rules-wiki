@@ -1,0 +1,150 @@
+[
+  {
+    "term": "Activating",
+    "definition": "Flip a Crucible Card face-up by discarding a matching card set from your Spread, as specified by the Crucible Codex for that card’s position (I, II, III, or IV). This drops the Molten Coal into a Cauldron, fueling the fire and permanently lowering that Cauldron’s Threshold by 5 RP. You can activate multiple Crucible Cards in any order during Phase 2: Summer or Phase 3: Autumn."
+  },
+  {
+    "term": "Agekeeper",
+    "definition": "The player with the Agekeeper’s Key rolls the Cosmic Age Die, deals Harvest cards, oversees Oppositions, resets the board each round, and passes the Key clockwise after every round."
+  },
+  {
+    "term": "Alchemical Formula",
+    "definition": "A unique combination of Reagents and Alignment. All must be met to progress the Philosopher’s Stone."
+  },
+  {
+    "term": "Alignment Bonus",
+    "definition": "Bonus Harvest cards earned through Aspect matching in Phase 1: Spring. Each source (Zodiac Die, Astral Houses, Specialist cards, Spread cards) contributes its Alignment Points against the Cosmic Age. All source points are added together to find your total bonus cards for the round. See 1.1: Alignment Points."
+  },
+  {
+    "term": "Alignment Points",
+    "definition": "The scoring unit for Aspect Alignments. Each source is compared against the primary source (typically the Cosmic Age or Opposition Age) and earns points equal to its highest matching Aspect: Sign (+3), Planet (+2), Element (+1). All source points are added together. Alignment Points are used as bonus cards in the Harvest (Alignment Bonus) and as a competitive score in Oppositions (Alignment Score)."
+  },
+  {
+    "term": "Alignment Score",
+    "definition": "A player’s total Alignment Points in an Opposition. Each source (Zodiac Die, Astral Houses, Spread and Hand cards, Arcanum) is compared against the Opposition Age and scored using the Alignment Points table. All source points are added together. The player with the higher Alignment Score wins. See 1.1: Alignment Points."
+  },
+  {
+    "term": "Arcanum",
+    "definition": "The visible zone in front of each player for any active Major Arcana cards. Standard & Specialist cards."
+  },
+  {
+    "term": "Arrested",
+    "definition": "The state of a Crucible Card wagered in a failed Gambit. Turned face-down and rotated sideways, it cannot be fired this round or targeted by a Gambit. Resets to Active at the start of the next round."
+  },
+  {
+    "term": "Aspect",
+    "definition": "One of three types: Zodiac Sign, Planet, or Element/Suit(color). They are used to match alignments. Displayed on the Great Year board and cards."
+  },
+  {
+    "term": "Aspect Alignment",
+    "definition": "A match between two or more sources sharing a Sign, Planet, or Element."
+  },
+  {
+    "term": "Astral House",
+    "definition": "A permanent structure built on a Zodiac Sign during Phase 2: Summer. Provides three ongoing benefits: bonus Harvest cards, an Alignment source in Oppositions, and a permanently unlocked Cosmic Effect. One per Sign."
+  },
+  {
+    "term": "Cauldron",
+    "definition": "One of four color-coded zones on your section of the board, each corresponding to a Reagent type. Placing Molten Coals in a Cauldron permanently lowers that Cauldron’s Refinement Threshold by 5 RP per Coal."
+  },
+  {
+    "term": "Cosmic Age",
+    "definition": "The active Zodiac Sign governing the current round, set by the Agekeeper rolling the Cosmic Age Die at the start of Phase 1: Spring. Its Aspects determine Alignment Points for the Harvest and Oppositions this round, and trigger the round’s Cosmic Effect for all players."
+  },
+  {
+    "term": "Cosmic Effect",
+    "definition": "A round-wide rule triggered by the current Cosmic Age and applied to all players at the start of Phase 1: Spring. Building an Astral House on a Sign permanently unlocks that Sign’s Cosmic Effect for you personally."
+  },
+  {
+    "term": "Crucible",
+    "definition": "The board track through which each player’s Philosopher’s Stone advances. Consists of nine positions (0–8): alternating Mantle Ring (safe) and Forge (vulnerable) spaces, ending at the Altar of Kismeta."
+  },
+  {
+    "term": "Crucible Card",
+    "definition": "One of 22 red cards, each containing an Alchemical Formula for one Stage of Transmutation. Each player uses four over the course of a game. Cards begin Dormant, are Activated during Autumn, and are discarded upon Tempering."
+  },
+  {
+    "term": "Crucible Catalyst",
+    "definition": "A personal chip, distinct from Molten Coals, that tracks participation in the “Offering to the Age.” At the start of each Offering, all Cauldron Catalysts return to the Altar of Kismeta. When a player successfully contributes to the Offering, they place their Token in a Cauldron of their choice. For the next full round, that Cauldron operates at 2-for-1 crafting: one successful Refinement yields two Reagents of the matching color instead of one."
+  },
+  {
+    "term": "Crucible Codex",
+    "definition": "The personal reference card that each player holds. Lists four Formulae handed down by the Fates; one formula per card position (I, II, III, and IV, left to right), each describing the card set required to activate that Crucible Card."
+  },
+  {
+    "term": "Fateful Wager",
+    "definition": "An optional bet declared during Phase 4: Winter. Declare one Zodiac Sign and commit any number of cards as your stake. Resolved when the Agekeeper rolls the Cosmic Age Die at the start of the next round. If the new Age matches your declared Sign, your wagered cards are doubled. If not, they are lost."
+  },
+  {
+    "term": "Forge",
+    "definition": "Positions 1, 3, 5, and 7 on the Crucible track. Where Transmutation occurs. Your Stone must remain in the Forge for one full round per Stage. While Forging, the Stone is vulnerable to Opposition from rival Alchemists."
+  },
+  {
+    "term": "Gambit",
+    "definition": "A Summer phase action in which a Challenger, whose Spread fully satisfies a rival’s Active Crucible Card Alignment requirement, stakes one of their own Active Crucible Cards to seize it. The Challenger pays any Protective Ward cost, both players roll their Zodiac Dice, and card effects are applied before results are compared. Challenger wins: cards are swapped. Challenger loses: the Challenger is exhausted, and their offered card is arrested for the remainder of the round."
+  },
+  {
+    "term": "Great Work",
+    "definition": "The four-stage Transmutation process of advancing the Philosopher’s Stone from Lead through Bronze and Silver to Gold, culminating at the Altar of Kismeta. Completing all four Stages wins the game."
+  },
+  {
+    "term": "Hand",
+    "definition": "Your hidden zone holds up to 5 cards. Cards in hand have inactive effects, cannot be used for most actions, but can be contributed to Reagent Refinement alongside Spread cards; used Hand cards are discarded. Hand cards may also be used in an Opposition, where they are discarded after the contest resolves."
+  },
+  {
+    "term": "Harvest",
+    "definition": "The card-drawing event at the start of Phase 1: Spring. Every player receives a base of 2 cards plus an Alignment Bonus earned from their Zodiac Die, Astral Houses, Specialist cards, and Spread Element matches. Bonus cards equal your total Alignment Points for the round."
+  },
+  {
+    "term": "Mantle Ring",
+    "definition": "Positions 0, 2, 4, and 6 on the Crucible track are safe resting spots between Transmutation Stages. The Stone isn't vulnerable to Opposition here."
+  },
+  {
+    "term": "Molten Coal",
+    "definition": "Small black crystal game pieces, Molten Coal, are placed atop Crucible Cards at setup, holding Formulas in darkness. Cards are laid in positions I, II, III, IV, each linked to a Formula in the Crucible Codex. When activated, Molten Coal drops into a chosen Crucible Cauldron, lowering its Refinement Threshold by 5 RP. Molten Coals are immovable once placed."
+  },
+  {
+    "term": "Offering to the Age",
+    "definition": "At the start of Phase 4: Winter, before card limits, all Cauldron Catalysts go to the Altar of Kismeta. The Agekeeper asks players to share Common Cards with the current Cosmic Age's Aspect. If the Rank Points combined meet or exceed the Threshold (25 RP for 2 players / 35 RP for 3 / 45 RP for 4), players place their Cauldron Catalyst in a chosen Cauldron, unlocking 2-for-1 Reagent crafting for that round. If not, all cards are lost, and Tokens stay on the Altar."
+  },
+  {
+    "term": "Opposition",
+    "definition": "A contest declared at the start of Phase 3: Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition. Any player may challenge a rival whose Stone is currently Forging. The Opposition Age is the current round’s Cosmic Age, known since Spring. Players roll Zodiac Dice, total their Alignment Points, and use all cards in their Spread. Hand cards can be played but are discarded afterward. Major Arcana in either player’s Arcanum may influence the result. The higher total wins."
+  },
+  {
+    "term": "Philosopher’s Stone",
+    "definition": "Each player’s token that travels through the Crucible toward the Altar of Kismeta. Advances through four Stages of Transmutation (Lead, Bronze, Silver, Gold). The first Stone to reach the Altar wins the game."
+  },
+  {
+    "term": "Protective Ward",
+    "definition": "Reagents are placed next to your Stone when it enters the Forge and set the entry fee that challengers must pay to oppose you. Protective Wards are permanently spent and not recovered upon Tempering."
+  },
+  {
+    "term": "Reagent",
+    "definition": "A refined resource token fuels the Forge, with four types: Sulphur (Red/Wands), Aqua Regia (Blue/Cups), Vitriol (Green/Pentacles), and Quicksilver (Yellow/Swords). Created by refining common cards in Phase 2: Summer."
+  },
+  {
+    "term": "Refinement",
+    "definition": "The process of refining common cards into Reagents. Discard same-suit Common Cards with combined Rank Points meeting/exceeding a Cauldron’s Threshold to get one Reagent token. Can be done any number of times during Phase 2: Summer."
+  },
+  {
+    "term": "Spread",
+    "definition": "Your active play zone for card effects, used for activating Crucible Cards, Alignments, Reagent Refinement, building Astral Houses, trading, wagering, and targeting in Duels. Max 7 cards in Phase 4."
+  },
+  {
+    "term": "Stasis",
+    "definition": "The stagnated state of a Philosopher’s Stone after losing an Opposition. The Stone is moved to the nearest Stasis zone on the Mantle Ring and cannot advance until Phase 3: Autumn of the following round, when it re-enters the Forge."
+  },
+  {
+    "term": "Tempering",
+    "definition": "The act of advancing the Philosopher’s Stone from the Forge to the next Mantle Ring, completing the current Transmutation Stage. The corresponding Crucible Card is discarded. The Stone returns to the Resting state."
+  },
+  {
+    "term": "Transmutation",
+    "definition": "The four-stage alchemical process transforms the Philosopher’s Stone from Lead (Stage 1) to Bronze (Stage 2) to Silver (Stage 3) to Gold (Stage 4). Each Stage requires a Crucible Card’s Alchemical Formula to be fulfilled."
+  },
+  {
+    "term": "Zodiac Die",
+    "definition": "Each player’s 12-sided die, matching their color, is rolled each round in Phase 1: Spring to determine their Zodiac Sign, and in Oppositions and Duels to decide outcomes."
+  }
+]

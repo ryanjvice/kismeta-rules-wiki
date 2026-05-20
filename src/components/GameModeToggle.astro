@@ -1,0 +1,73 @@
+<div class="game-mode-toggle" role="group" aria-label="Show game mode modifiers">
+	<span class="game-mode-toggle__label">Modifiers</span>
+	<label class="game-mode-toggle__option">
+		<input type="checkbox" data-mode="quickplay" checked />
+		Quickplay
+	</label>
+	<label class="game-mode-toggle__option">
+		<input type="checkbox" data-mode="magnus" checked />
+		Magnus
+	</label>
+</div>
+
+<script>
+	function applyGameModes() {
+		const quickplay = document.querySelector<HTMLInputElement>(
+			'.game-mode-toggle input[data-mode="quickplay"]'
+		);
+		const magnus = document.querySelector<HTMLInputElement>(
+			'.game-mode-toggle input[data-mode="magnus"]'
+		);
+		const showQuick = quickplay?.checked ?? true;
+		const showMagnus = magnus?.checked ?? true;
+
+		document.querySelectorAll<HTMLElement>('.game-mode-callout').forEach((el) => {
+			const modes = (el.dataset.modes || '').split(/\s+/).filter(Boolean);
+			const show =
+				(modes.includes('quickplay') && showQuick) ||
+				(modes.includes('magnus') && showMagnus);
+			el.hidden = !show;
+		});
+	}
+
+	function init() {
+		const saved = localStorage.getItem('kismeta-game-modes');
+		if (saved) {
+			try {
+				const { quickplay, magnus } = JSON.parse(saved);
+				const q = document.querySelector<HTMLInputElement>(
+					'.game-mode-toggle input[data-mode="quickplay"]'
+				);
+				const m = document.querySelector<HTMLInputElement>(
+					'.game-mode-toggle input[data-mode="magnus"]'
+				);
+				if (q) q.checked = quickplay;
+				if (m) m.checked = magnus;
+			} catch {
+				/* ignore */
+			}
+		}
+		applyGameModes();
+		document.querySelectorAll('.game-mode-toggle input').forEach((input) => {
+			input.addEventListener('change', () => {
+				localStorage.setItem(
+					'kismeta-game-modes',
+					JSON.stringify({
+						quickplay:
+							document.querySelector<HTMLInputElement>(
+								'.game-mode-toggle input[data-mode="quickplay"]'
+							)?.checked ?? true,
+						magnus:
+							document.querySelector<HTMLInputElement>(
+								'.game-mode-toggle input[data-mode="magnus"]'
+							)?.checked ?? true,
+					})
+				);
+				applyGameModes();
+			});
+		});
+	}
+
+	document.addEventListener('astro:page-load', init);
+	init();
+</script>

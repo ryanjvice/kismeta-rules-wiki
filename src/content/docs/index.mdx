@@ -1,0 +1,47 @@
+---
+title: Kismeta Rules
+description: Official rules reference for Kismeta — Alchemists of the Great Year.
+template: splash
+hero:
+  tagline: Alchemists of the Great Year — rules wiki for players at the table.
+  image:
+    alt: Kismeta
+    file: ../../assets/logo.svg
+  actions:
+    - text: Start learning
+      link: /learn/lore/
+      icon: right-arrow
+    - text: Round at a glance
+      link: /play/round-at-a-glance/
+      icon: document
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## How to use this site
+
+<CardGrid stagger>
+  <Card title="Search" icon="magnifier">
+    Press **Ctrl+K** (or **⌘K** on Mac) to find any rule, term, or phase instantly.
+  </Card>
+  <Card title="Four tabs" icon="list-format">
+    **Learn** for lore and overview, **Play** for setup and rounds, **Reference** for the compendium, **Glossary** for quick definitions.
+  </Card>
+  <Card title="Share a rule" icon="external">
+    Click a page heading to copy a direct link — send it to your table when a dispute comes up.
+  </Card>
+  <Card title="Install offline" icon="setting">
+    Use your browser’s **Install app** option (or Add to Home Screen on mobile). Works at the table without Wi‑Fi after the first visit.
+  </Card>
+  <Card title="Game mode modifiers" icon="caution">
+    Toggle **Quickplay** and **Magnus** modifiers in the header to show or hide ⚙️ rule variants.
+  </Card>
+  <Card title="New players" icon="open-book">
+    Read [Game Overview](/learn/game-overview/), then [Setup](/play/setup/), then keep [Round at a Glance](/play/round-at-a-glance/) handy during play.
+  </Card>
+</CardGrid>
+
+---
+
+*A GOODMAGIK Game. Rules content is synced from `Kismeta_GameGuide.md` — run `npm run sync` after editing the guide.*
