@@ -1,0 +1,46 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const t = Astro.locals.t;
+const locale = Astro.currentLocale ?? 'root';
+
+const overview = getRelativeLocaleUrl(locale, 'learn/game-overview');
+const setup = getRelativeLocaleUrl(locale, 'play/setup');
+const round = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
+---
+
+## {t('home.sectionTitle')}
+
+<CardGrid stagger>
+	<Card title={t('home.card.search.title')} icon="magnifier">
+		<Fragment set:html={t('home.card.search.body')} />
+	</Card>
+	<Card title={t('home.card.tabs.title')} icon="list-format">
+		<Fragment set:html={t('home.card.tabs.body')} />
+	</Card>
+	<Card title={t('home.card.share.title')} icon="external">
+		<Fragment set:html={t('home.card.share.body')} />
+	</Card>
+	<Card title={t('home.card.offline.title')} icon="setting">
+		<Fragment set:html={t('home.card.offline.body')} />
+	</Card>
+	<Card title={t('home.card.modes.title')} icon="caution">
+		<Fragment set:html={t('home.card.modes.body')} />
+	</Card>
+	<Card title={t('home.card.newPlayers.title')} icon="open-book">
+		<Fragment
+			set:html={t('home.card.newPlayers.body')
+				.replace('/learn/game-overview/', overview)
+				.replace('/play/setup/', setup)
+				.replace('/play/round-at-a-glance/', round)
+				.replace('/pt-br/learn/game-overview/', overview)
+				.replace('/pt-br/play/setup/', setup)
+				.replace('/pt-br/play/round-at-a-glance/', round)}
+		/>
+	</Card>
+</CardGrid>
+
+---
+
+<p set:html={t('home.footer')} />

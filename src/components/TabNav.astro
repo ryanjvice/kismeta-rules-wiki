@@ -1,22 +1,32 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const locale = Astro.currentLocale ?? 'root';
+const t = Astro.locals.t;
+
 const tabs = [
-	{ label: 'Learn', href: '/learn/lore/', match: '/learn/' },
-	{ label: 'Play', href: '/play/round-at-a-glance/', match: '/play/' },
-	{ label: 'Reference', href: '/reference/quick-reference/', match: '/reference/' },
-	{ label: 'Glossary', href: '/glossary/', match: '/glossary/' },
-];
+	{ key: 'tab.learn', path: 'learn/lore' },
+	{ key: 'tab.play', path: 'play/round-at-a-glance' },
+	{ key: 'tab.reference', path: 'reference/quick-reference' },
+	{ key: 'tab.glossary', path: 'glossary' },
+] as const;
 
 const pathname = Astro.url.pathname;
+const learnHref = getRelativeLocaleUrl(locale, 'learn/lore');
 ---
 
 <nav class="tab-nav" aria-label="Rules sections">
 	{
 		tabs.map((tab) => {
+			const href = getRelativeLocaleUrl(locale, tab.path);
+			const matchPath = `/${tab.path.split('/')[0]}/`;
 			const active =
-				pathname === '/' ? tab.label === 'Learn' : pathname.startsWith(tab.match);
+				pathname === '/' || pathname === `/${locale}/`
+					? href === learnHref
+					: pathname.includes(matchPath);
 			return (
-				<a href={tab.href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
-					{tab.label}
+				<a href={href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
+					{t(tab.key)}
 				</a>
 			);
 		})

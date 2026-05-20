@@ -250,10 +250,13 @@ function cleanBody(lines) {
 }
 
 function rmSyncOutput() {
-  for (const sub of ['learn', 'play', 'reference', 'glossary']) {
+  for (const sub of ['learn', 'play', 'reference']) {
     const p = path.join(OUT, sub);
     if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
   }
+  // Remove root-level glossary.md only (not locale trees)
+  const glossaryMd = path.join(OUT, 'glossary.md');
+  if (fs.existsSync(glossaryMd)) fs.unlinkSync(glossaryMd);
 }
 
 function main() {

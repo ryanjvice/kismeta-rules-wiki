@@ -1,12 +1,16 @@
-<div class="game-mode-toggle" role="group" aria-label="Show game mode modifiers">
-	<span class="game-mode-toggle__label">Modifiers</span>
+---
+const t = Astro.locals.t;
+---
+
+<div class="game-mode-toggle" role="group" aria-label={t('gameMode.modifiers')}>
+	<span class="game-mode-toggle__label">{t('gameMode.modifiers')}</span>
 	<label class="game-mode-toggle__option">
 		<input type="checkbox" data-mode="quickplay" checked />
-		Quickplay
+		{t('gameMode.quickplay')}
 	</label>
 	<label class="game-mode-toggle__option">
 		<input type="checkbox" data-mode="magnus" checked />
-		Magnus
+		{t('gameMode.magnus')}
 	</label>
 </div>
 

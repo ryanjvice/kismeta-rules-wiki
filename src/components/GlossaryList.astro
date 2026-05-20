@@ -1,45 +1,87 @@
 ---
-import glossary from '../data/glossary.json';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import glossaryEn from '../data/glossary.json';
+import glossaryPt from '../data/glossary.pt-br.json';
+
+const locale = Astro.currentLocale ?? 'root';
+const glossary = locale === 'pt-br' ? glossaryPt : glossaryEn;
+
+function pathFor(slug: string) {
+	return getRelativeLocaleUrl(locale, slug);
+}
 
 const termLinks: Record<string, string> = {
-	Opposition: '/reference/compendium/1-12-opposition/',
-	Gambit: '/reference/compendium/1-10-gambit/',
-	Harvest: '/reference/compendium/1-2-harvest/',
-	'Alignment Points': '/reference/compendium/1-1-aspects-alignment/#alignment-points',
-	'Alignment Bonus': '/reference/compendium/1-1-aspects-alignment/#alignment-points',
-	'Alignment Score': '/reference/compendium/1-1-aspects-alignment/#alignment-points',
-	Reagent: '/reference/compendium/1-6-reagents/',
-	Refinement: '/reference/compendium/1-6-reagents/',
-	'Crucible Card': '/reference/compendium/1-4-crucible-cards/',
-	'Astral House': '/reference/compendium/1-7-astral-houses/',
-	'Offering to the Age': '/reference/compendium/1-13-offering-to-the-age/',
-	'Fateful Wager': '/reference/compendium/1-14-fateful-wager/',
-	Transmutation: '/reference/compendium/1-11-crucible-philosophers-stone/',
-	Stasis: '/reference/compendium/1-11-crucible-philosophers-stone/#returning-from-stasis',
-	Tempering: '/reference/compendium/1-11-crucible-philosophers-stone/',
-	'Philosopher’s Stone': '/reference/compendium/1-11-crucible-philosophers-stone/',
-	Crucible: '/reference/compendium/1-11-crucible-philosophers-stone/',
-	'Cosmic Age': '/reference/compendium/1-0-cosmic-ages/',
-	'Cosmic Effect': '/reference/compendium/1-0-cosmic-ages/',
-	Agekeeper: '/play/setup/#v-selecting-the-first-agekeeper',
-	Activating: '/reference/compendium/1-4-crucible-cards/#activating-a-crucible-card',
+	Opposition: pathFor('reference/compendium/1-12-opposition'),
+	Gambit: pathFor('reference/compendium/1-10-gambit'),
+	Harvest: pathFor('reference/compendium/1-2-harvest'),
+	'Alignment Points': pathFor('reference/compendium/1-1-aspects-alignment') + '#alignment-points',
+	'Alignment Bonus': pathFor('reference/compendium/1-1-aspects-alignment') + '#alignment-points',
+	'Alignment Score': pathFor('reference/compendium/1-1-aspects-alignment') + '#alignment-points',
+	Reagent: pathFor('reference/compendium/1-6-reagents'),
+	Refinement: pathFor('reference/compendium/1-6-reagents'),
+	'Crucible Card': pathFor('reference/compendium/1-4-crucible-cards'),
+	'Astral House': pathFor('reference/compendium/1-7-astral-houses'),
+	'Offering to the Age': pathFor('reference/compendium/1-13-offering-to-the-age'),
+	'Fateful Wager': pathFor('reference/compendium/1-14-fateful-wager'),
+	Transmutation: pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
+	Stasis: pathFor('reference/compendium/1-11-crucible-philosophers-stone') + '#returning-from-stasis',
+	Tempering: pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
+	'Philosopher’s Stone': pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
+	Crucible: pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
+	'Cosmic Age': pathFor('reference/compendium/1-0-cosmic-ages'),
+	'Cosmic Effect': pathFor('reference/compendium/1-0-cosmic-ages'),
+	Agekeeper: pathFor('play/setup') + '#v-selecting-the-first-agekeeper',
+	Activating: pathFor('reference/compendium/1-4-crucible-cards') + '#activating-a-crucible-card',
+};
+
+// Portuguese term aliases → same link keys as English where applicable
+const ptTermAliases: Record<string, string> = {
+	Oposição: 'Opposition',
+	Gambito: 'Gambit',
+	Colheita: 'Harvest',
+	'Pontos de Alinhamento': 'Alignment Points',
+	'Bônus de Alinhamento': 'Alignment Bonus',
+	'Pontuação de Alinhamento': 'Alignment Score',
+	Reagente: 'Reagent',
+	Refinamento: 'Refinement',
+	'Carta do Crucible': 'Crucible Card',
+	'Casa Astral': 'Astral House',
+	'Oferenda à Era': 'Offering to the Age',
+	'Aposta Fatídica': 'Fateful Wager',
+	Transmutação: 'Transmutation',
+	Estase: 'Stasis',
+	Temperamento: 'Tempering',
+	'Pedra do Filósofo': 'Philosopher’s Stone',
+	'Guardião da Era': 'Agekeeper',
+	Ativação: 'Activating',
 };
 
 function linkForTerm(term: string) {
-	return termLinks[term] ?? null;
+	const key = ptTermAliases[term] ?? term;
+	return termLinks[key] ?? null;
 }
 
 function linkifyDefinition(text: string) {
+	const alignment = pathFor('reference/compendium/1-1-aspects-alignment') + '#alignment-points';
+	const opposition = pathFor('reference/compendium/1-12-opposition');
+	const gambit = pathFor('reference/compendium/1-10-gambit');
+
 	return text
 		.replace(
 			/See 1\.1: Alignment Points\.?/gi,
-			'See [Alignment Points](/reference/compendium/1-1-aspects-alignment/#alignment-points).'
+			`See [Alignment Points](${alignment}).`
 		)
-		.replace(/See 1\.12 Opposition\.?/gi, 'See [Opposition](/reference/compendium/1-12-opposition/).')
-		.replace(/See 1\.10 Gambit\.?/gi, 'See [Gambit](/reference/compendium/1-10-gambit/).');
+		.replace(/See 1\.1 Alignment Points\.?/gi, `See [Alignment Points](${alignment}).`)
+		.replace(/See 1\.12 Opposition\.?/gi, `See [Opposition](${opposition}).`)
+		.replace(/See 1\.10 Gambit\.?/gi, `See [Gambit](${gambit}).`)
+		.replace(
+			/Veja 1\.1: Pontos de Alinhamento\.?/gi,
+			`Veja [Pontos de Alinhamento](${alignment}).`
+		)
+		.replace(/Veja 1\.12 Oposição\.?/gi, `Veja [Oposição](${opposition}).`)
+		.replace(/Veja 1\.10 Gambito\.?/gi, `Veja [Gambito](${gambit}).`);
 }
 ---
-
 
 <div class="glossary-list">
 	{
