@@ -82,6 +82,8 @@ Use a workflow that runs `npm run build` and publishes `dist/` (set `site` in `a
 
 ## Project structure
 
+**Where to change what:** see [docs/MAINTENANCE.md](./docs/MAINTENANCE.md) (home page, sidebar, styling, sync workflow, and more).
+
 ```
 Kismeta_GameGuide.md     # Canonical rules (edit this)
 scripts/sync-guide.mjs   # Markdown → Starlight pages
