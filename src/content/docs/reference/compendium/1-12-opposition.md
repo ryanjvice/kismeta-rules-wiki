@@ -9,7 +9,15 @@ When your Stone is in the Forge, it can be attacked. A rival may declare an Oppo
 
 # WHEN AN OPPOSITION CAN BE DECLARED
 An Opposition can be declared only at the start of Phase 3: Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during the current round’s Autumn phase. All Oppositions are fully resolved before any player takes their other Autumn actions.
-* Multiple Oppositions against the same Stone: [Rules for multiple simultaneous Oppositions targeting the same Forging Stone — including declaration order, resolution sequence, and early Stasis cancellation — are forthcoming.]
+**Multiple Oppositions Against the Same Stone**
+
+More than one player may declare an Opposition against the same Forging Stone in the same round. The following rules govern this sequence:
+
+**Resolution Order:** Oppositions are resolved one at a time, in the order they are declared. Each Opposition is fully resolved — including all card effects and outcomes — before the next may be declared. If more than one player wishes to challenge the same Defender, the next Declaration follows clockwise turn order from the previous Challenger.
+
+**The Besieged Bonus:** Each time the Defender wins an Opposition during the current round, they earn +1 cumulative Alignment Points for all subsequent Oppositions that same round. This bonus is automatic and requires no action from the Defender.
+
+*A Defender who entered the Forge without Protective Wards accepts greater vulnerability to multiple challenges. Wards, the Besieged Bonus, Hand cards, and Arcanum effects are the Defender's tools — whether or not they choose to use them.*
 * Stasis Opposition: A player returning from Stasis whose previous Forge position is occupied may also declare an Opposition during Step 2. This is called a Stasis Opposition. It follows all the same rules as a standard Opposition, but its outcome is a position swap rather than a send-to-Stasis result: a Challenger win swaps the two Stones, placing the Challenger in the Forge and the Defender in Stasis; a Challenger loss leaves the Challenger in Stasis for another round. See [Returning from Stasis](/reference/compendium/1-11-crucible-philosophers-stone/#returning-from-stasis) for full outcomes.
 
 After the Defender completes a full round and moves their Stone to the next Mantle Ring, they complete the full stage of Transmutation.
@@ -22,7 +30,7 @@ After the Defender completes a full round and moves their Stone to the next Mant
   * **Arcanum:** Any Major Arcana card (Specialist or Standard) currently in either player’s Arcanum zone may have active effects during the Opposition. Some Standard cards may affect the Opposition for both players. Check each card’s text.
   * **Opposition Effects:** Some card effects modify Opposition outcomes, adjusting Alignment Points, changing contest rules, or causing other results. These are resolved before final scores are compared. See individual card text.
 * **The Roll:** The Opposition Age is the current round’s Cosmic Age, set at the start of Phase 1: Spring and known to all players throughout the round. Both players roll their Zodiac Die and place it on the corresponding Sign.
-* **Calculating the Results:** All Alignment Points are totaled. The player with the higher score wins.
+* **Calculating the Results:** All Alignment Points are totaled. The player with the higher score wins. **Tied Scores:** If both players have equal Alignment Points, each player rolls their Zodiac Die; the higher roll wins. Reroll if tied again.
 
 # CALCULATING THE ALIGNMENT POINTS
 Each player’s Alignment Points are the sum of all Aspect matches across every source in play. Each source is scored independently, and all points are added together. See [Alignment Points](/reference/compendium/1-1-aspects-alignment/#alignment-points) for the full scoring table.

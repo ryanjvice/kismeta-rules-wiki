@@ -48,6 +48,10 @@
     "definition": "One of four color-coded zones on your section of the board, each corresponding to a Reagent type. Placing Molten Coals in a Cauldron permanently lowers that Cauldron’s Refinement Threshold by 5 RP per Coal."
   },
   {
+    "term": "Cauldron Catalyst",
+    "definition": "A personal chip, distinct from Molten Coals, that tracks participation in the “Offering to the Age.” At the start of each Offering, all Cauldron Catalysts return to the Altar of Kismeta. When a player successfully contributes to the Offering, they place their Token in a Cauldron of their choice. For the next full round, that Cauldron operates at 2-for-1 crafting: one successful Refinement yields two Reagents of the matching color instead of one."
+  },
+  {
     "term": "Cosmic Age",
     "definition": "The active Zodiac Sign governing the current round, set by the Agekeeper rolling the Cosmic Age Die at the start of Phase 1: Spring. Its Aspects determine Alignment Points for the Harvest and Oppositions this round, and trigger the round’s Cosmic Effect for all players."
   },
@@ -62,10 +66,6 @@
   {
     "term": "Crucible Card",
     "definition": "One of 22 red cards, each containing an Alchemical Formula for one Stage of Transmutation. Each player uses four over the course of a game. Cards begin Dormant, are Activated during Autumn, and are discarded upon Tempering."
-  },
-  {
-    "term": "Crucible Catalyst",
-    "definition": "A personal chip, distinct from Molten Coals, that tracks participation in the “Offering to the Age.” At the start of each Offering, all Cauldron Catalysts return to the Altar of Kismeta. When a player successfully contributes to the Offering, they place their Token in a Cauldron of their choice. For the next full round, that Cauldron operates at 2-for-1 crafting: one successful Refinement yields two Reagents of the matching color instead of one."
   },
   {
     "term": "Crucible Codex",
@@ -105,7 +105,7 @@
   },
   {
     "term": "Offering to the Age",
-    "definition": "At the start of Phase 4: Winter, before card limits, all Cauldron Catalysts go to the Altar of Kismeta. The Agekeeper asks players to share Common Cards with the current Cosmic Age's Aspect. If the Rank Points combined meet or exceed the Threshold (25 RP for 2 players / 35 RP for 3 / 45 RP for 4), players place their Cauldron Catalyst in a chosen Cauldron, unlocking 2-for-1 Reagent crafting for that round. If not, all cards are lost, and Tokens stay on the Altar."
+    "definition": "At the start of Phase 4: Winter, before card limits, all Cauldron Catalysts go to the Altar of Kismeta. The Agekeeper asks players to share Common Cards with the current Cosmic Age's Aspect. If the Rank Points combined meet or exceed the Threshold (25 RP for 2 players / 35 RP for 3 / 45 RP for 4), players place their Cauldron Catalyst in a chosen Cauldron, unlocking 2-for-1 Reagent crafting for that round. If not, contributed cards are returned to their players, and Tokens stay on the Altar."
   },
   {
     "term": "Opposition",

@@ -403,7 +403,7 @@ These four systems are linked throughout the game. A card’s Suit determines it
 ## QUICK TIPS & STRATEGY
 * **Your Zodiac Sign Shapes the Whole Round:** After rolling in Spring, check your Sign’s Aspects before planning your Summer actions. Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from this single roll.
 * **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what’s visible is what works.
-* **Negotiate Wisely:**
+* **Negotiate Wisely:** Every interaction — Trade, Duel, Gambit, or Opposition — is a resource decision. Before committing, weigh your Spread’s Alignment strength: a well-aligned Spread improves your odds in Duels and Oppositions, qualifies you to declare Gambits, and signals real leverage in trades. Factor in any active card effects that modify dice rolls or protect your assets, and remember that Reagents placed as Protective Wards also count toward that card’s activation requirements — every resource has more than one job.
 * **Only One Card Can Be Fired At A Time:** You can Activate multiple Crucible Cards, but only one can be Fired and in the Forge. Plan your activations so you’re never caught with an unready Crucible Card when you reach the Forge.
 * **Cauldron Drops Are Permanent — Plan Them:** Each activated Crucible Card drops its Molten Coal into a Cauldron, permanently lowering that Cauldron’s Refinement Threshold by 5 RP. Think ahead: fuel the Cauldron for the Reagent type you’ll need most for upcoming Fuel Costs.
 * **Ward Up Before You Enter the Forge:** Setting even 1–2 Reagents as Protective Wards when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card’s requirements.
@@ -535,9 +535,9 @@ Traits of a Minor Arcana Card:
 
 #### HAND, SPREAD & ARCANUM: Managing Your Cards
 You manage your cards across three main zones: the Spread, the Hand, and the Arcanum.
-* **Spread: (Visible: Active Effects)** Up to 7 cards, with the card limit enforced at the round’s end. The Spread is your active area, where cards with effects remain active while in it: activating Crucible Cards, meeting Forge Alignment, refining Reagents, building Astral Houses, trading, wagering, opposing, and targeting in Duels.
+* **Spread: (Visible: Active Effects)** There is no card limit on the Spread during the course of a round. The 7-card maximum is enforced only at the end of the round during Phase 4: Winter. Cards added to the Spread mid-round (from Duels, card effects, or other sources) may exceed this limit temporarily. The Spread is your active area, where cards with effects remain active while in it: activating Crucible Cards, meeting Forge Alignment, refining Reagents, building Astral Houses, trading, wagering, opposing, and targeting in Duels.
 * **Hand: (Hidden; Inactive Effects)** Up to 5 private cards are hidden from opponents. Hand cards may be used alongside Spread cards for Reagent Refinement; used Hand cards are discarded. Hand cards may also contribute to an Opposition, but are discarded after the Opposition resolves, regardless of outcome. These cards can’t be used for Duels, Crucible, Alignments, Trades, Wagers, or Houses.
-* **Arcanum: (Visible; Active Major Arcana Cards)** Any active Major Arcana cards. Standard cards automatically join the Arcanum when drawn, whether publicly or privately. Specialist cards must be purchased and can be added in up to two at a time.
+* **Arcanum: (Visible; Active Major Arcana Cards)** Any active Major Arcana cards. Standard cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Specialist cards must be purchased and can be added in up to two at a time.
 
 #### COMMON CARD EFFECTS
 Common Cards have special effects that activate under specific conditions and stay in your Spread. They are not discarded after use and can be reused as specified.
@@ -660,7 +660,7 @@ A Duel lets you challenge a rival to steal a card from their Spread during Phase
 * **Declare the Duel:** Declare your opponent and the card you are targeting.
 * **Entry Fee:** Choose either Ante Card or Harvest Loan
   * **Ante Card:** Offer one card from your Spread or Hand as your Ante. If you lose, this card is forfeited to the Defender.
-  * **Harvest Loan:** Take a Harvest Loan against your next round’s Harvest. You may take up to 2 Harvest Loans per round. If you lose, the loan is deducted from your Base Harvest of 2 cards next round — not from your bonus cards. A single loan reduces your Base Harvest to 1 card; two loans reduce it to 0. Bonus cards from Alignment are unaffected. The Agekeeper tracks outstanding loans.
+  * **Harvest Loan:** Take a Harvest Loan against your next round’s Harvest. You may take up to 2 Harvest Loans per round. If you lose, the loan is deducted from your Base Harvest of 2 cards next round — not from your bonus cards. A single loan reduces your Base Harvest to 1 card; two loans reduce it to 0. Bonus cards from Alignment are unaffected. The Agekeeper tracks outstanding loans. A player who has already taken 2 Harvest Loans and wishes to initiate a further Duel that round must use an Ante Card as their entry fee. Only the initiating player pays the entry fee; the Defender does not.
 * **Consult Your Spread:** Both players look for any Spread Effects that may be relevant.
 * **The Clash:** Both players roll their Player Dice.
 * **Determine the Outcome:**
@@ -668,6 +668,7 @@ A Duel lets you challenge a rival to steal a card from their Spread during Phase
   * **Defender Wins:**
     * Ante Card: The Defender receives the Challenger Ante Card
     * Harvest Loan: One card is deducted from the Challenger’s Base Harvest next round.
+  * **Tie:** Both players reroll their dice. Repeat until one player rolls higher than the other. There are no ties in a Duel.
 
 ⚙️ **Game Mode Modifier: (Magnus Alchemist)** If you are misaligned with your target when initiating a Duel, add +1 to your dice roll before comparing results. The Defender receives no bonus. See GAME MODES: Magnus Alchemist.
 
@@ -753,7 +754,15 @@ When your Stone is in the Forge, it can be attacked. A rival may declare an Oppo
 
 #### WHEN AN OPPOSITION CAN BE DECLARED
 An Opposition can be declared only at the start of Phase 3: Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during the current round’s Autumn phase. All Oppositions are fully resolved before any player takes their other Autumn actions.
-* Multiple Oppositions against the same Stone: [Rules for multiple simultaneous Oppositions targeting the same Forging Stone — including declaration order, resolution sequence, and early Stasis cancellation — are forthcoming.]
+**Multiple Oppositions Against the Same Stone**
+
+More than one player may declare an Opposition against the same Forging Stone in the same round. The following rules govern this sequence:
+
+**Resolution Order:** Oppositions are resolved one at a time, in the order they are declared. Each Opposition is fully resolved — including all card effects and outcomes — before the next may be declared. If more than one player wishes to challenge the same Defender, the next Declaration follows clockwise turn order from the previous Challenger.
+
+**The Besieged Bonus:** Each time the Defender wins an Opposition during the current round, they earn +1 cumulative Alignment Points for all subsequent Oppositions that same round. This bonus is automatic and requires no action from the Defender.
+
+*A Defender who entered the Forge without Protective Wards accepts greater vulnerability to multiple challenges. Wards, the Besieged Bonus, Hand cards, and Arcanum effects are the Defender's tools — whether or not they choose to use them.*
 * Stasis Opposition: A player returning from Stasis whose previous Forge position is occupied may also declare an Opposition during Step 2. This is called a Stasis Opposition. It follows all the same rules as a standard Opposition, but its outcome is a position swap rather than a send-to-Stasis result: a Challenger win swaps the two Stones, placing the Challenger in the Forge and the Defender in Stasis; a Challenger loss leaves the Challenger in Stasis for another round. See 1.11 Returning from Stasis for full outcomes.
 
 After the Defender completes a full round and moves their Stone to the next Mantle Ring, they complete the full stage of Transmutation.
@@ -766,7 +775,7 @@ After the Defender completes a full round and moves their Stone to the next Mant
   * **Arcanum:** Any Major Arcana card (Specialist or Standard) currently in either player’s Arcanum zone may have active effects during the Opposition. Some Standard cards may affect the Opposition for both players. Check each card’s text.
   * **Opposition Effects:** Some card effects modify Opposition outcomes, adjusting Alignment Points, changing contest rules, or causing other results. These are resolved before final scores are compared. See individual card text.
 * **The Roll:** The Opposition Age is the current round’s Cosmic Age, set at the start of Phase 1: Spring and known to all players throughout the round. Both players roll their Zodiac Die and place it on the corresponding Sign.
-* **Calculating the Results:** All Alignment Points are totaled. The player with the higher score wins.
+* **Calculating the Results:** All Alignment Points are totaled. The player with the higher score wins. **Tied Scores:** If both players have equal Alignment Points, each player rolls their Zodiac Die; the higher roll wins. Reroll if tied again.
 
 #### CALCULATING THE ALIGNMENT POINTS
 Each player’s Alignment Points are the sum of all Aspect matches across every source in play. Each source is scored independently, and all points are added together. See 1.1: Alignment Points for the full scoring table.
@@ -870,7 +879,7 @@ A reference to every capitalized game term used throughout this guide. Return he
 | **Cosmic Effect** | A round-wide rule triggered by the current Cosmic Age and applied to all players at the start of Phase 1: Spring. Building an Astral House on a Sign permanently unlocks that Sign’s Cosmic Effect for you personally. |
 | **Crucible** | The board track through which each player’s Philosopher’s Stone advances. Consists of nine positions (0–8): alternating Mantle Ring (safe) and Forge (vulnerable) spaces, ending at the Altar of Kismeta. |
 | **Crucible Card** | One of 22 red cards, each containing an Alchemical Formula for one Stage of Transmutation. Each player uses four over the course of a game. Cards begin Dormant, are Activated during Autumn, and are discarded upon Tempering. |
-| **Crucible Catalyst** | A personal chip, distinct from Molten Coals, that tracks participation in the “Offering to the Age.” At the start of each Offering, all Cauldron Catalysts return to the Altar of Kismeta. When a player successfully contributes to the Offering, they place their Token in a Cauldron of their choice. For the next full round, that Cauldron operates at 2-for-1 crafting: one successful Refinement yields two Reagents of the matching color instead of one. |
+| **Cauldron Catalyst** | A personal chip, distinct from Molten Coals, that tracks participation in the “Offering to the Age.” At the start of each Offering, all Cauldron Catalysts return to the Altar of Kismeta. When a player successfully contributes to the Offering, they place their Token in a Cauldron of their choice. For the next full round, that Cauldron operates at 2-for-1 crafting: one successful Refinement yields two Reagents of the matching color instead of one. |
 | **Crucible Codex** | The personal reference card that each player holds. Lists four Formulae handed down by the Fates; one formula per card position (I, II, III, and IV, left to right), each describing the card set required to activate that Crucible Card. |
 | **Fateful Wager** | An optional bet declared during Phase 4: Winter. Declare one Zodiac Sign and commit any number of cards as your stake. Resolved when the Agekeeper rolls the Cosmic Age Die at the start of the next round. If the new Age matches your declared Sign, your wagered cards are doubled. If not, they are lost. |
 | **Forge** | Positions 1, 3, 5, and 7 on the Crucible track. Where Transmutation occurs. Your Stone must remain in the Forge for one full round per Stage. While Forging, the Stone is vulnerable to Opposition from rival Alchemists. |
@@ -880,7 +889,7 @@ A reference to every capitalized game term used throughout this guide. Return he
 | **Harvest** | The card-drawing event at the start of Phase 1: Spring. Every player receives a base of 2 cards plus an Alignment Bonus earned from their Zodiac Die, Astral Houses, Specialist cards, and Spread Element matches. Bonus cards equal your total Alignment Points for the round. |
 | **Mantle Ring** | Positions 0, 2, 4, and 6 on the Crucible track are safe resting spots between Transmutation Stages. The Stone isn't vulnerable to Opposition here. |
 | **Molten Coal** | Small black crystal game pieces, Molten Coal, are placed atop Crucible Cards at setup, holding Formulas in darkness. Cards are laid in positions I, II, III, IV, each linked to a Formula in the Crucible Codex. When activated, Molten Coal drops into a chosen Crucible Cauldron, lowering its Refinement Threshold by 5 RP. Molten Coals are immovable once placed. |
-| **Offering to the Age** | At the start of Phase 4: Winter, before card limits, all Cauldron Catalysts go to the Altar of Kismeta. The Agekeeper asks players to share Common Cards with the current Cosmic Age's Aspect. If the Rank Points combined meet or exceed the Threshold (25 RP for 2 players / 35 RP for 3 / 45 RP for 4), players place their Cauldron Catalyst in a chosen Cauldron, unlocking 2-for-1 Reagent crafting for that round. If not, all cards are lost, and Tokens stay on the Altar. |
+| **Offering to the Age** | At the start of Phase 4: Winter, before card limits, all Cauldron Catalysts go to the Altar of Kismeta. The Agekeeper asks players to share Common Cards with the current Cosmic Age's Aspect. If the Rank Points combined meet or exceed the Threshold (25 RP for 2 players / 35 RP for 3 / 45 RP for 4), players place their Cauldron Catalyst in a chosen Cauldron, unlocking 2-for-1 Reagent crafting for that round. If not, contributed cards are returned to their players, and Tokens stay on the Altar. |
 | **Opposition** | A contest declared at the start of Phase 3: Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition. Any player may challenge a rival whose Stone is currently Forging. The Opposition Age is the current round’s Cosmic Age, known since Spring. Players roll Zodiac Dice, total their Alignment Points, and use all cards in their Spread. Hand cards can be played but are discarded afterward. Major Arcana in either player’s Arcanum may influence the result. The higher total wins. |
 | **Philosopher’s Stone** | Each player’s token that travels through the Crucible toward the Altar of Kismeta. Advances through four Stages of Transmutation (Lead, Bronze, Silver, Gold). The first Stone to reach the Altar wins the game. |
 | **Protective Ward** | Reagents are placed next to your Stone when it enters the Forge and set the entry fee that challengers must pay to oppose you. Protective Wards are permanently spent and not recovered upon Tempering. |

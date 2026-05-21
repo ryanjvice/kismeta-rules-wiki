@@ -27,9 +27,9 @@ Traits of a Minor Arcana Card:
 
 # HAND, SPREAD & ARCANUM: Managing Your Cards
 You manage your cards across three main zones: the Spread, the Hand, and the Arcanum.
-* **Spread: (Visible: Active Effects)** Up to 7 cards, with the card limit enforced at the round’s end. The Spread is your active area, where cards with effects remain active while in it: activating Crucible Cards, meeting Forge Alignment, refining Reagents, building Astral Houses, trading, wagering, opposing, and targeting in Duels.
+* **Spread: (Visible: Active Effects)** There is no card limit on the Spread during the course of a round. The 7-card maximum is enforced only at the end of the round during Phase 4: Winter. Cards added to the Spread mid-round (from Duels, card effects, or other sources) may exceed this limit temporarily. The Spread is your active area, where cards with effects remain active while in it: activating Crucible Cards, meeting Forge Alignment, refining Reagents, building Astral Houses, trading, wagering, opposing, and targeting in Duels.
 * **Hand: (Hidden; Inactive Effects)** Up to 5 private cards are hidden from opponents. Hand cards may be used alongside Spread cards for Reagent Refinement; used Hand cards are discarded. Hand cards may also contribute to an Opposition, but are discarded after the Opposition resolves, regardless of outcome. These cards can’t be used for Duels, Crucible, Alignments, Trades, Wagers, or Houses.
-* **Arcanum: (Visible; Active Major Arcana Cards)** Any active Major Arcana cards. Standard cards automatically join the Arcanum when drawn, whether publicly or privately. Specialist cards must be purchased and can be added in up to two at a time.
+* **Arcanum: (Visible; Active Major Arcana Cards)** Any active Major Arcana cards. Standard cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Specialist cards must be purchased and can be added in up to two at a time.
 
 # COMMON CARD EFFECTS
 Common Cards have special effects that activate under specific conditions and stay in your Spread. They are not discarded after use and can be reused as specified.
