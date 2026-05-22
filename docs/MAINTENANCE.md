@@ -188,9 +188,25 @@ import HomeCards from '../../components/HomeCards.astro';
 
 ## Adding a new sidebar page
 
+### Guide heading conventions
+
+The sync script ([`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs)) expects this structure in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md):
+
+| Level | Markdown | Examples |
+| ----- | -------- | -------- |
+| Top-level (one page each) | `# TITLE` | `# SETUP`, `# GAME OVERVIEW`, `# APPENDIX` |
+| Subsections (stay on the same page) | `## …` | `## The Great Year`, `## PHASE 1: SPRING` |
+| Compendium entries | `### 1.x …` under `## COMPENDIUM…` | `### 1.2 HARVEST` |
+
+Special mappings:
+
+- `# KISMETA` — intro (players, play time); merged into **Game Overview**, not its own page.
+- `# ROUND OVERVIEW` — `## ROUND AT A GLANCE` is split into **Round at a Glance**; phase sections stay on **Round Overview**.
+- `# APPENDIX` — tables and reference material → **Quick Reference** (sidebar label unchanged); content after `## COMPENDIUM` becomes compendium pages.
+
 When you add a compendium section or other synced doc:
 
-1. Add the section to [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) with the heading name the sync script expects.
+1. Add the section to [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) using the heading levels above and the exact title keys in `SECTION_META` / `COMPENDIUM_SLUGS`.
 2. Map heading → URL slug in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) (`COMPENDIUM_SLUGS` or `SECTION_META`).
 3. Add a sidebar entry in [`astro.config.mjs`](../astro.config.mjs) using `link()` (English label + `pt-BR` translation).
 4. Run `npm run sync` (and `npm run sync:pt` if you maintain Portuguese).

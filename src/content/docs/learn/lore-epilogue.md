@@ -3,25 +3,28 @@ title: "Lore: Epilogue"
 description: "The Veil Stirs — teaser for Kismeta: The Veiled Ascent."
 ---
 
-The Philosopher’s Stone rests on the Altar of Kismeta, its surface flawless, the ultimate symbol of the Great Work’s completion.
-The voices of the Fates entwine with your thoughts, their whispers as familiar as the rhythms of the cosmos.
+The Philosopher's Stone rests on the Altar of Kismeta, its surface flawless, the ultimate symbol of the Great Work's completion. The voices of the Fates entwine with your thoughts, their whispers as familiar as the rhythms of the cosmos.
+
 Suddenly, the air shifts. A strange, melodic voice enters your mind, disrupting your focus and silencing the Fates.
-“You stand on the outermost shores of known existence, Magnus Alchemista.”
-The Philosopher’s Stone begins to tremble, its perfect surface fracturing into radiant cracks.
-It rises from the Altar, shuddering with unstable power, and with a deafening crack, it plunges into the marble, shattering into fragments that scatter across the chamber.
-Before you can react, the room dissolves. You’re plunged into an endless ocean of shimmering shadow and chaotic light, its currents rippling in fractal patterns that twist and shift in impossible ways.
-Figures emerge from the Veil, spectral and piscine, their radiant forms floating effortlessly through the shifting expanse, spiraling around you.
-Their unblinking eyes glow in iridescence.
-“The Veil surrounds you, dear Alchemist. Will you drown in it? No. Breathe it in.”
-The currents pull at you, flowing through your thoughts and the core of your being.
-The weight of the vast, infinite Veil presses against you, revealing glimpses of what lies ahead.
-A flash of energy ripples through your body, surging upward like a fountain of light, pouring from the crown of your head and back into the oceanic Veil.
-The spectral figures draw back and watch you intently.
-Then, with a final surge, the vision collapses. The Veil dissipates, the figures vanish, and the chamber regains its shape.
-As your vision sharpens, you notice the fragments of the Philosopher’s Stone are gone, as if neither they nor the Veil had ever existed.
+
+_"You stand on the outermost shores of known existence, Magnus Alchemista."_
+
+The Philosopher's Stone begins to tremble, its perfect surface fracturing into radiant cracks. It rises from the Altar, shuddering with unstable power, and with a deafening crack, it plunges into the marble, shattering into fragments that scatter across the chamber.
+
+Before you can react, the room dissolves. You're plunged into an endless ocean of shimmering shadow and chaotic light, its currents rippling in fractal patterns that twist and shift in impossible ways. Figures emerge from the Veil, spectral and piscine, their radiant forms floating effortlessly through the shifting expanse, spiraling around you. Their unblinking eyes glow in iridescence.
+
+_"The Veil surrounds you, dear Alchemist. Will you drown in it?_
+_No. Breathe it in."_
+
+The currents pull at you, flowing through your thoughts and the core of your being. The weight of the vast, infinite Veil presses against you, revealing glimpses of what lies ahead. A flash of energy ripples through your body, surging upward like a fountain of light, pouring from the crown of your head and back into the oceanic Veil. The spectral figures draw back and watch you intently.
+
+Then, with a final surge, the vision collapses. The Veil dissipates, the figures vanish, and the chamber regains its shape. As your vision sharpens, you notice the fragments of the Philosopher's Stone are gone, as if neither they nor the Veil had ever existed.
 
 The voice returns, faint but resolute:
-“The Veil surrounds you still, dear Alchemist. You must dive deep if you are to ascend.”
 
-KISMETA: The Veiled Ascent  
-Coming Soon to the Google Play Store!
+_"The Veil surrounds you still, dear Alchemist. You must dive deep if you are to ascend."_
+
+
+**KISMETA:**
+**The Veiled Ascent**
+Coming Soon to the Google Play Store

@@ -12,7 +12,13 @@ const GUIDE = path.join(ROOT, 'Kismeta_GameGuide.md');
 const OUT = path.join(ROOT, 'src', 'content', 'docs');
 const GLOSSARY_JSON = path.join(ROOT, 'src', 'data', 'glossary.json');
 
-const SKIP = new Set(['CONTENTS', 'KISMETA: ALCHEMISTS OF THE GREAT YEAR']);
+const SKIP = new Set([
+  'CONTENTS',
+  'Table of Contents',
+  'KISMETA:',
+  'ALCHEMISTS OF THE GREAT YEAR',
+  'A GOODMAGIK Game',
+]);
 
 const SECTION_META = {
   'LORE: ALCHEMISTS OF THE GREAT YEAR': {
@@ -45,22 +51,22 @@ const SECTION_META = {
     title: 'Round Overview',
     description: 'Spring, Summer, Autumn, and Winter in full detail.',
   },
-  'WINNING THE GAME 🏆': {
+  'WINNING THE GAME': {
     slug: 'play/winning',
     title: 'Winning the Game',
     description: 'Completing the Great Work at the Altar of Kismeta.',
   },
-  'QUICK REFERENCE': {
+  APPENDIX: {
     slug: 'reference/quick-reference',
     title: 'Quick Reference',
-    description: 'Elements, suits, colors, and reagents at a glance.',
+    description: 'Cosmic Ages, elements, inventory zones, alignment, reagents, and Crucible at a glance.',
   },
   'QUICK TIPS & STRATEGY': {
     slug: 'reference/quick-tips',
     title: 'Quick Tips & Strategy',
     description: 'Practical advice for new and returning alchemists.',
   },
-  'LORE: EPILOGUE ~ The Veil Stirs …': {
+  'LORE: EPILOGUE - The Veil Stirs…': {
     slug: 'learn/lore-epilogue',
     title: 'Lore: Epilogue',
     description: 'The Veil Stirs — teaser for Kismeta: The Veiled Ascent.',
@@ -111,8 +117,40 @@ const SEE_LINKS = [
   [/pg\. 1/gi, ''],
 ];
 
-function normalizeHeading(line) {
-  return line.replace(/^##\s+/, '').trim();
+function shouldSkip(title) {
+  return SKIP.has(title);
+}
+
+function isTopLevelHeading(line) {
+  return /^# [^#]/.test(line);
+}
+
+function mergeKismetaIntro(kismetaBody, overviewBody) {
+  if (!kismetaBody?.trim()) return overviewBody;
+  if (!overviewBody?.trim()) return kismetaBody;
+  return `${kismetaBody.trim()}\n\n${overviewBody.trim()}`;
+}
+
+function extractRoundAtAGlance(body) {
+  const lines = body.split('\n');
+  const glanceStart = lines.findIndex((l) => /^##\s+ROUND AT A GLANCE/i.test(l));
+  if (glanceStart === -1) return { overview: body, glance: null };
+
+  const phaseStart = lines.findIndex(
+    (l, i) => i > glanceStart && /^##\s+PHASE \d/i.test(l)
+  );
+  const glanceEnd = phaseStart === -1 ? lines.length : phaseStart;
+
+  const glance = lines.slice(glanceStart, glanceEnd).join('\n').trim();
+  const overview = [...lines.slice(0, glanceStart), ...lines.slice(glanceEnd)].join('\n').trim();
+  return { overview, glance };
+}
+
+function extractAppendixBody(body) {
+  const lines = body.split('\n');
+  const compendiumStart = lines.findIndex((l) => /^##\s+COMPENDIUM/i.test(l));
+  if (compendiumStart === -1) return body;
+  return lines.slice(0, compendiumStart).join('\n').trim();
 }
 
 function wrapGameModes(body) {
@@ -224,20 +262,30 @@ function parseSections(md) {
   let inCompendium = false;
 
   for (const line of md.split('\n')) {
-    if (line.startsWith('## ')) {
-      const title = normalizeHeading(line);
+    if (isTopLevelHeading(line)) {
       if (current) sections.push(current);
-      current = { title, lines: [], level: 2 };
-      inCompendium = title.startsWith('COMPENDIUM');
+      const title = line.replace(/^#\s+/, '').trim();
+      current = { title, lines: [], level: 1 };
+      inCompendium = false;
       continue;
     }
-    if (inCompendium && line.startsWith('### ') && /^###\s+1\.\d+/.test(line)) {
+
+    if (line.startsWith('## ') && /^##\s+COMPENDIUM/i.test(line)) {
       if (current && current.lines.length) sections.push(current);
+      current = null;
+      inCompendium = true;
+      continue;
+    }
+
+    if (inCompendium && line.startsWith('### ') && /^###\s+1\.\d+/.test(line)) {
+      if (current) sections.push(current);
       current = { title: line.replace(/^###\s+/, '').trim(), lines: [], level: 3, compendium: true };
       continue;
     }
+
     if (current) current.lines.push(line);
   }
+
   if (current) sections.push(current);
   return sections;
 }
@@ -254,7 +302,6 @@ function rmSyncOutput() {
     const p = path.join(OUT, sub);
     if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
   }
-  // Remove root-level glossary.md only (not locale trees)
   const glossaryMd = path.join(OUT, 'glossary.md');
   if (fs.existsSync(glossaryMd)) fs.unlinkSync(glossaryMd);
 }
@@ -265,20 +312,25 @@ function main() {
   rmSyncOutput();
 
   let glossaryTerms = [];
+  let kismetaBody = null;
 
   for (const section of sections) {
     const title = section.title;
-    if (SKIP.has(title) || title === 'CONTENTS') continue;
+    if (shouldSkip(title)) continue;
+
+    if (title === 'KISMETA') {
+      kismetaBody = cleanBody(section.lines);
+      continue;
+    }
 
     if (title === 'GLOSSARY OF TERMS') {
       glossaryTerms = parseGlossary(cleanBody(section.lines));
       continue;
     }
 
-    const body = cleanBody(section.lines);
-
     if (section.compendium && COMPENDIUM_SLUGS[title]) {
       const slug = COMPENDIUM_SLUGS[title];
+      const body = cleanBody(section.lines);
       writePage(
         slug,
         title.replace(/^\d+\.\d+\s+/, '') || title,
@@ -289,6 +341,33 @@ function main() {
     }
 
     if (title.startsWith('COMPENDIUM')) continue;
+
+    let body = cleanBody(section.lines);
+
+    if (title === 'GAME OVERVIEW') {
+      body = mergeKismetaIntro(kismetaBody, body);
+      const meta = SECTION_META[title];
+      writePage(meta.slug, meta.title, meta.description, body);
+      continue;
+    }
+
+    if (title === 'ROUND OVERVIEW') {
+      const { overview, glance } = extractRoundAtAGlance(body);
+      if (glance) {
+        const glanceMeta = SECTION_META['ROUND AT A GLANCE'];
+        writePage(glanceMeta.slug, glanceMeta.title, glanceMeta.description, glance);
+      }
+      const roundMeta = SECTION_META['ROUND OVERVIEW'];
+      writePage(roundMeta.slug, roundMeta.title, roundMeta.description, overview);
+      continue;
+    }
+
+    if (title === 'APPENDIX') {
+      body = extractAppendixBody(body);
+      const meta = SECTION_META.APPENDIX;
+      writePage(meta.slug, meta.title, meta.description, body);
+      continue;
+    }
 
     const meta = SECTION_META[title];
     if (!meta) {
