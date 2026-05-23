@@ -39,6 +39,7 @@ export const collections = {
 				'guided.resume.fresh': z.string(),
 				'guided.complete.cta': z.string(),
 				'guided.startOver': z.string(),
+				'guided.crucible.buildType': z.string(),
 				'home.sectionTitle': z.string(),
 				'home.card.search.title': z.string(),
 				'home.card.search.body': z.string(),

@@ -69,19 +69,64 @@ Jogadores alinhados não recebem bônus adicional em Duelos, Gambitos ou Oposiç
 Cada carta tem uma letra pequena no canto inferior esquerdo indicando seu grupo.
 Separe as Crucible Cards nos grupos A-D. Embaralhe cada grupo separadamente.
 Escolha o Modo de Jogo (I. Montagens curadas, ou II. Montagem aleatória).
-Siga a tabela abaixo para o número de cartas de cada grupo por jogador.
+Compre às cegas a quantidade correta de cada grupo conforme abaixo.
 
-# MONTAGENS CURADAS (Níveis de dificuldade predefinidos)
+<div class="crucible-deck" data-locale="pt-br">
+<p class="crucible-deck__intro">Montagens curadas — selecione o modo de jogo para ver as compras por número de jogadores.</p>
+<input type="radio" name="setup-crucible-mode" id="setup-crucible-tab-quickplay" class="crucible-deck__tab-input" checked />
+<input type="radio" name="setup-crucible-mode" id="setup-crucible-tab-standard" class="crucible-deck__tab-input" />
+<input type="radio" name="setup-crucible-mode" id="setup-crucible-tab-magnus" class="crucible-deck__tab-input" />
+<div class="crucible-deck__tab-strip" role="tablist"><label for="setup-crucible-tab-quickplay" class="crucible-deck__tab-label">Quickplay / Primeira Partida</label>
+<label for="setup-crucible-tab-standard" class="crucible-deck__tab-label">Jogo Padrão</label>
+<label for="setup-crucible-tab-magnus" class="crucible-deck__tab-label">Magnus Alchemist</label></div>
+<div class="crucible-deck__panel" id="setup-crucible-panel-quickplay" role="tabpanel" aria-labelledby="setup-crucible-tab-quickplay">
+  <ul class="crucible-deck__rows"><li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">2 jogadores (8 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">4</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">3</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">1</span></span><span class="crucible-deck__chip crucible-deck__chip--zero"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">0</span></span></div>
+</li>
+<li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">3 jogadores (12 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">4</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">6</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">2</span></span><span class="crucible-deck__chip crucible-deck__chip--zero"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">0</span></span></div>
+</li>
+<li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">4 jogadores (16 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">4</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">7</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">5</span></span><span class="crucible-deck__chip crucible-deck__chip--zero"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">0</span></span></div>
+</li></ul>
+</div>
+<div class="crucible-deck__panel" id="setup-crucible-panel-standard" role="tabpanel" aria-labelledby="setup-crucible-tab-standard">
+  <ul class="crucible-deck__rows"><li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">2 jogadores (8 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">1</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">3</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">3</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">1</span></span></div>
+</li>
+<li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">3 jogadores (12 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">2</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">4</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">4</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">2</span></span></div>
+</li>
+<li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">4 jogadores (16 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">2</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">6</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">6</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">2</span></span></div>
+</li></ul>
+</div>
+<div class="crucible-deck__panel" id="setup-crucible-panel-magnus" role="tabpanel" aria-labelledby="setup-crucible-tab-magnus">
+  <ul class="crucible-deck__rows"><li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">2 jogadores (8 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">1</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">2</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">3</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">2</span></span></div>
+</li>
+<li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">3 jogadores (12 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">1</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">3</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">5</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">3</span></span></div>
+</li>
+<li class="crucible-deck__row">
+  <span class="crucible-deck__row-label">4 jogadores (16 cartas)</span>
+  <div class="crucible-deck__chips" aria-label="Compre de cada grupo:"><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">A</span><span class="crucible-deck__chip-count">1</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">B</span><span class="crucible-deck__chip-count">5</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">C</span><span class="crucible-deck__chip-count">6</span></span><span class="crucible-deck__chip"><span class="crucible-deck__chip-letter">D</span><span class="crucible-deck__chip-count">4</span></span></div>
+</li></ul>
+</div>
+<details class="crucible-deck__random">
+<summary>Montagem aleatória — Deixe as Fates decidirem</summary>
+<ul class="crucible-deck__random-steps"><li>Embaralhe todas as 22 Cartas do Crucible juntas.</li><li>Compre às cegas quatro cartas para cada jogador.</li></ul>
+</details>
+</div>
 
-| MODO DE JOGO | JOGADORES | GRUPOS DE CARTAS |
-| :--- | :--- | :--- |
-| **1️⃣ QUICKPLAY (INICIANTE)** | 2 JOGADORES (8 CARTAS)<br>3 JOGADORES (12 CARTAS)<br>4 JOGADORES (16 CARTAS) | A4, B3, C1, D0<br>A4, B6, C2, D0<br>A4, B7, C5, D0 |
-| **2️⃣ PADRÃO (EQUILIBRADO)** | 2 JOGADORES<br>3 JOGADORES<br>4 JOGADORES | A1, B3, C3, D1<br>A2, B4, C4, D2<br>A2, B6, C6, D2 |
-| **3️⃣ MAGNUS ALCHEMIST (MAESTRIA)** | 2 JOGADORES<br>3 JOGADORES<br>4 JOGADORES | A1, B2, C3, D2<br>A1, B3, C5, D3<br>A1, B5, C6, D4 |
-
-# MONTAGENS ALEATÓRIAS: Deixe as Fates Decidirem (Dificuldade aleatória)
-Embaralhe todas as 22 Crucible Cards juntas.
-Compre às cegas quatro cartas para cada jogador.
 
 Depois de comprar, embaralhe e forme o baralho Crucible desta partida.
 Coloque o baralho Crucible ao lado do Great Year board.

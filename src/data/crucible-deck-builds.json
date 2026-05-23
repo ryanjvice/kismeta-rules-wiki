@@ -1,0 +1,23 @@
+{
+	"curated": {
+		"quickplay": {
+			"2": { "total": 8, "groups": { "A": 4, "B": 3, "C": 1, "D": 0 } },
+			"3": { "total": 12, "groups": { "A": 4, "B": 6, "C": 2, "D": 0 } },
+			"4": { "total": 16, "groups": { "A": 4, "B": 7, "C": 5, "D": 0 } }
+		},
+		"standard": {
+			"2": { "total": 8, "groups": { "A": 1, "B": 3, "C": 3, "D": 1 } },
+			"3": { "total": 12, "groups": { "A": 2, "B": 4, "C": 4, "D": 2 } },
+			"4": { "total": 16, "groups": { "A": 2, "B": 6, "C": 6, "D": 2 } }
+		},
+		"magnus": {
+			"2": { "total": 8, "groups": { "A": 1, "B": 2, "C": 3, "D": 2 } },
+			"3": { "total": 12, "groups": { "A": 1, "B": 3, "C": 5, "D": 3 } },
+			"4": { "total": 16, "groups": { "A": 1, "B": 5, "C": 6, "D": 4 } }
+		}
+	},
+	"random": {
+		"deckSize": 22,
+		"cardsPerPlayer": 4
+	}
+}

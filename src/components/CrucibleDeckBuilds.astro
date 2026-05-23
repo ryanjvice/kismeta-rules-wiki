@@ -1,0 +1,243 @@
+---
+import {
+	CARD_GROUPS,
+	GAME_MODES,
+	PLAYER_COUNTS,
+	getCrucibleLabels,
+	getCuratedBuild,
+	getRandomBuildTotal,
+	type BuildType,
+	type CrucibleGameMode,
+	type PlayerCount,
+} from '../data/crucible-deck-builds';
+
+interface Props {
+	/** Interactive builder for Guided Play; static HTML is injected on Setup via sync. */
+	variant?: 'interactive';
+	locale?: string;
+}
+
+const { variant = 'interactive', locale: localeProp } = Astro.props;
+const locale = Astro.currentLocale ?? localeProp ?? 'root';
+const crucibleLocale = locale === 'pt-br' ? 'pt-br' : 'en';
+const labels = getCrucibleLabels(crucibleLocale);
+const t = Astro.locals.t;
+
+const modeLabels: Record<CrucibleGameMode, string> = {
+	quickplay: t('guided.mode.quickplay'),
+	standard: t('guided.mode.standard'),
+	magnus: t('guided.mode.magnus'),
+};
+
+const uiLabels = JSON.stringify({
+	buildCurated: labels.buildCurated,
+	buildRandom: labels.buildRandom,
+	playersLabel: labels.playersLabel,
+	modeLabel: labels.modeLabel,
+	drawFrom: labels.drawFrom,
+	resultCuratedPrefix: crucibleLocale === 'pt-br' ? 'Compre' : 'Draw',
+	group: labels.group,
+	zeroCards: labels.zeroCards,
+	tabs: labels.tabs,
+	players: PLAYER_COUNTS.map((n) => labels.players(n, getRandomBuildTotal(n))),
+	modeLabels,
+});
+---
+
+{variant === 'interactive' && (
+	<div
+		class="crucible-deck crucible-deck--interactive"
+		data-crucible-interactive
+		data-labels={uiLabels}
+		data-locale={crucibleLocale}
+	>
+		<fieldset class="crucible-deck__controls">
+			<legend class="crucible-deck__sr-only">{labels.buildCurated} / {labels.buildRandom}</legend>
+			<div class="crucible-deck__control-row">
+				<span class="crucible-deck__control-label" id="crucible-build-type-label">
+					{t('guided.crucible.buildType')}
+				</span>
+				<div class="crucible-deck__segmented" role="group" aria-labelledby="crucible-build-type-label">
+					<button
+						type="button"
+						class="crucible-deck__segment crucible-deck__segment--active"
+						data-build-type="curated"
+					>
+						{labels.buildCurated}
+					</button>
+					<button type="button" class="crucible-deck__segment" data-build-type="random">
+						{labels.buildRandom}
+					</button>
+				</div>
+			</div>
+			<div class="crucible-deck__control-row" data-mode-row>
+				<span class="crucible-deck__control-label" id="crucible-mode-label">{labels.modeLabel}</span>
+				<div class="crucible-deck__segmented" role="group" aria-labelledby="crucible-mode-label">
+					{GAME_MODES.map((mode) => (
+						<button
+							type="button"
+							class="crucible-deck__segment"
+							data-game-mode={mode}
+						>
+							{labels.tabs[mode]}
+						</button>
+					))}
+				</div>
+			</div>
+			<div class="crucible-deck__control-row">
+				<span class="crucible-deck__control-label" id="crucible-players-label">
+					{labels.playersLabel}
+				</span>
+				<div class="crucible-deck__segmented" role="group" aria-labelledby="crucible-players-label">
+					{PLAYER_COUNTS.map((n) => (
+						<button
+							type="button"
+							class:list={[
+								'crucible-deck__segment',
+								{ 'crucible-deck__segment--active': n === 4 },
+							]}
+							data-player-count={n}
+						>
+							{n}
+						</button>
+					))}
+				</div>
+			</div>
+		</fieldset>
+		<div class="crucible-deck__result" data-result aria-live="polite" />
+		<div class="crucible-deck__result-chips" data-result-chips hidden />
+	</div>
+)}
+
+<script>
+	import {
+		CARD_GROUPS,
+		getCuratedBuild,
+		getRandomBuildTotal,
+		RANDOM_BUILD,
+		type BuildType,
+		type CrucibleGameMode,
+		type PlayerCount,
+	} from '../data/crucible-deck-builds';
+	import { GUIDED_PROGRESS_KEY, GUIDED_PROGRESS_VERSION } from '../data/guided-steps';
+
+	type UiLabels = {
+		buildCurated: string;
+		buildRandom: string;
+		playersLabel: string;
+		modeLabel: string;
+		drawFrom: string;
+		resultCuratedPrefix: string;
+		group: Record<string, string>;
+		zeroCards: string;
+		tabs: Record<CrucibleGameMode, string>;
+		players: string[];
+		modeLabels: Record<CrucibleGameMode, string>;
+	};
+
+	function loadGuidedMode(): CrucibleGameMode {
+		try {
+			const raw = localStorage.getItem(GUIDED_PROGRESS_KEY);
+			if (!raw) return 'standard';
+			const data = JSON.parse(raw);
+			if (data.version !== GUIDED_PROGRESS_VERSION) return 'standard';
+			if (['quickplay', 'standard', 'magnus'].includes(data.mode)) return data.mode;
+		} catch {
+			/* ignore */
+		}
+		return 'standard';
+	}
+
+	function renderChipsHtml(
+		groups: Record<string, number>,
+		labels: UiLabels
+	): string {
+		return CARD_GROUPS.map((g) => {
+			const count = groups[g];
+			const zero = count === 0 ? ' crucible-deck__chip--zero' : '';
+			return `<span class="crucible-deck__chip${zero}"><span class="crucible-deck__chip-letter">${g}</span><span class="crucible-deck__chip-count">${count}</span></span>`;
+		}).join('');
+	}
+
+	function initCrucibleInteractive() {
+		const root = document.querySelector<HTMLElement>('[data-crucible-interactive]');
+		if (!root) return;
+
+		const labels = JSON.parse(root.dataset.labels || '{}') as UiLabels;
+		let buildType: BuildType = 'curated';
+		let mode: CrucibleGameMode = loadGuidedMode();
+		let playerCount: PlayerCount = 4;
+
+		const resultEl = root.querySelector<HTMLElement>('[data-result]')!;
+		const chipsEl = root.querySelector<HTMLElement>('[data-result-chips]')!;
+		const modeRow = root.querySelector<HTMLElement>('[data-mode-row]')!;
+
+		const setActive = (selector: string, attr: string, value: string) => {
+			root.querySelectorAll<HTMLElement>(selector).forEach((el) => {
+				const match = el.getAttribute(attr) === value;
+				el.classList.toggle('crucible-deck__segment--active', match);
+			});
+		};
+
+		const render = () => {
+			modeRow.hidden = buildType === 'random';
+
+			if (buildType === 'random') {
+				const total = getRandomBuildTotal(playerCount);
+				const isEn = labels.resultCuratedPrefix === 'Draw';
+				const randomText = isEn
+					? `Shuffle all ${RANDOM_BUILD.deckSize} Crucible Cards. Draw <strong>${total}</strong> cards (${RANDOM_BUILD.cardsPerPlayer} per player × ${playerCount}).`
+					: `Embaralhe todas as ${RANDOM_BUILD.deckSize} Cartas do Crucible. Compre <strong>${total}</strong> cartas (${RANDOM_BUILD.cardsPerPlayer} por jogador × ${playerCount}).`;
+				resultEl.innerHTML = `<p class="crucible-deck__result-text">${labels.buildRandom}: ${randomText}</p>`;
+				chipsEl.hidden = true;
+				return;
+			}
+
+			const build = getCuratedBuild(mode, playerCount);
+			const parts = CARD_GROUPS.filter((g) => build.groups[g] > 0).map(
+				(g) => `<strong>${build.groups[g]}</strong> ${labels.group[g]}`
+			);
+			const modeName = labels.tabs[mode];
+			resultEl.innerHTML = `<p class="crucible-deck__result-text"><span class="crucible-deck__result-mode">${modeName}</span> · ${labels.players[playerCount - 2]}<br />${labels.drawFrom} ${parts.join(', ')}.</p>`;
+			chipsEl.hidden = false;
+			chipsEl.innerHTML = renderChipsHtml(build.groups, labels);
+		};
+
+		root.querySelectorAll<HTMLButtonElement>('[data-build-type]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				buildType = btn.dataset.buildType as BuildType;
+				setActive('[data-build-type]', 'data-build-type', buildType);
+				render();
+			});
+		});
+
+		root.querySelectorAll<HTMLButtonElement>('[data-game-mode]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				mode = btn.dataset.gameMode as CrucibleGameMode;
+				setActive('[data-game-mode]', 'data-game-mode', mode);
+				render();
+			});
+		});
+
+		root.querySelectorAll<HTMLButtonElement>('[data-player-count]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				playerCount = Number(btn.dataset.playerCount) as PlayerCount;
+				setActive('[data-player-count]', 'data-player-count', String(playerCount));
+				render();
+			});
+		});
+
+		setActive('[data-build-type]', 'data-build-type', 'curated');
+		setActive('[data-game-mode]', 'data-game-mode', mode);
+		setActive('[data-player-count]', 'data-player-count', String(playerCount));
+		render();
+	}
+
+	function setupCrucible() {
+		initCrucibleInteractive();
+	}
+
+	document.addEventListener('astro:page-load', setupCrucible);
+	window.addEventListener('crucible-deck-refresh', setupCrucible);
+	setupCrucible();
+</script>

@@ -1,5 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import CrucibleDeckBuilds from './CrucibleDeckBuilds.astro';
 import {
 	getGuidedSteps,
 	GUIDED_CONTENT_STEP_COUNT,
@@ -116,6 +117,9 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			<h2 class="guided-play__heading" data-step-title tabindex="-1"></h2>
 			<div class="guided-play__body" data-step-body></div>
 			<ul class="guided-play__checklist" data-step-checklist hidden></ul>
+			<div class="guided-play__embed" data-step-embed hidden>
+				<CrucibleDeckBuilds variant="interactive" />
+			</div>
 			<p class="guided-play__learn-more-wrap" data-learn-more-wrap hidden>
 				<a class="guided-play__learn-more" data-learn-more href="#" target="_blank" rel="noopener">
 				</a>
@@ -247,6 +251,7 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 
 		const steps = JSON.parse(root.dataset.steps || '[]') as (GuidedStep & {
 			learnMoreUrl?: string;
+			embed?: string;
 		})[];
 		const complete = JSON.parse(root.dataset.complete || '{}') as {
 			title: string;
@@ -307,6 +312,13 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 				}
 			} else {
 				checklist.hidden = true;
+			}
+
+			const embedEl = root.querySelector<HTMLElement>('[data-step-embed]')!;
+			const showCrucible = step.embed === 'crucible-deck';
+			embedEl.hidden = !showCrucible;
+			if (showCrucible) {
+				window.dispatchEvent(new CustomEvent('crucible-deck-refresh'));
 			}
 
 			const learnWrap = root.querySelector<HTMLElement>('[data-learn-more-wrap]')!;

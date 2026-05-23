@@ -16,6 +16,8 @@ export type GuidedStep = {
 	learnMoreHash?: string;
 	/** Setup III — body overrides per selected game mode */
 	modeBody?: Partial<Record<GameMode, string>>;
+	/** Embedded interactive UI on this step */
+	embed?: 'crucible-deck';
 };
 
 export type GuidedLocale = 'en' | 'pt-br';
@@ -83,12 +85,12 @@ const GUIDED_STEPS: Record<GuidedLocale, GuidedStep[]> = {
 		{
 			id: 'setup-iv',
 			title: 'Setup IV — Build the Crucible Deck',
-			body: '<p>Build the deck for this game before dealing cards.</p>',
+			body: '<p>Sort Crucible Cards into groups A–D (letter in the lower-left corner) and shuffle each group separately. Use the builder below for your game mode and player count.</p>',
+			embed: 'crucible-deck',
 			checklist: [
-				'Sort Crucible Cards into groups A, B, C, and D (letter in lower-left corner)',
+				'Sort Crucible Cards into groups A, B, C, and D',
 				'Shuffle each group separately',
-				'Choose Curated Build (by mode and player count) or Random Build',
-				'Blindly draw the correct number from each group per the Setup table',
+				'Draw the counts shown in the builder (curated or random)',
 				'Shuffle drawn cards into the Crucible Deck beside the board',
 				'Return unused Crucible Cards to the box',
 			],
@@ -190,12 +192,12 @@ const GUIDED_STEPS: Record<GuidedLocale, GuidedStep[]> = {
 		{
 			id: 'setup-iv',
 			title: 'Preparação IV — Montar o Baralho do Crucible',
-			body: '<p>Monte o baralho desta partida antes de distribuir cartas.</p>',
+			body: '<p>Separe as Cartas do Crucible nos grupos A–D (letra no canto inferior esquerdo) e embaralhe cada grupo. Use o assistente abaixo para o modo e número de jogadores.</p>',
+			embed: 'crucible-deck',
 			checklist: [
-				'Separe as Cartas do Crucible nos grupos A, B, C e D (letra no canto inferior esquerdo)',
+				'Separe as Cartas do Crucible nos grupos A, B, C e D',
 				'Embaralhe cada grupo separadamente',
-				'Escolha Montagem Curada (por modo e número de jogadores) ou Montagem Aleatória',
-				'Compre às cegas a quantidade correta de cada grupo conforme a tabela de Preparação',
+				'Compre as quantidades indicadas no assistente (curada ou aleatória)',
 				'Embaralhe as cartas sorteadas no Baralho do Crucible ao lado do tabuleiro',
 				'Devolva ao estojo as Cartas do Crucible não usadas',
 			],

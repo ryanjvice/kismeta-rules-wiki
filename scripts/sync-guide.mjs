@@ -5,6 +5,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  CRUCIBLE_DECK_PLACEHOLDER,
+  renderCrucibleDeckHtml,
+} from './render-crucible-deck-html.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -248,6 +252,12 @@ function demoteHeadings(body, levels = 1) {
     .join('\n');
 }
 
+function injectCrucibleDeckBuilds(body, locale = 'en') {
+  if (!body.includes(CRUCIBLE_DECK_PLACEHOLDER)) return body;
+  const html = renderCrucibleDeckHtml(locale, 'setup-crucible');
+  return body.replace(CRUCIBLE_DECK_PLACEHOLDER, html);
+}
+
 function writePage(slug, title, description, body) {
   const dir = path.join(OUT, path.dirname(slug));
   fs.mkdirSync(dir, { recursive: true });
@@ -259,7 +269,8 @@ description: ${JSON.stringify(description)}
 
 `;
   const notice = DRAFT_NOTICES[slug] || '';
-  const wrapped = wrapGameModes(demoteHeadings(body, 1));
+  const withCrucible = injectCrucibleDeckBuilds(body, 'en');
+  const wrapped = wrapGameModes(demoteHeadings(withCrucible, 1));
   const beforeFix = countHeadingsAfterHtmlClose(wrapped);
   const processed = applySeeLinks(ensureBlankLineAfterHtmlBlocks(wrapped));
   const afterFix = countHeadingsAfterHtmlClose(processed);
@@ -426,7 +437,35 @@ function main() {
 
   fs.mkdirSync(path.dirname(GLOSSARY_JSON), { recursive: true });
   fs.writeFileSync(GLOSSARY_JSON, JSON.stringify(glossaryTerms, null, 2), 'utf8');
+  patchPtBrSetupCrucible();
   console.log(`Wrote ${sections.length} sections, ${glossaryTerms.length} glossary terms.`);
+}
+
+/** Replace legacy pt-br Setup IV tables with rendered crucible-deck HTML. */
+function patchPtBrSetupCrucible() {
+  const file = path.join(OUT, 'pt-br', 'play', 'setup.md');
+  if (!fs.existsSync(file)) return;
+
+  let raw = fs.readFileSync(file, 'utf8');
+  if (raw.includes('class="crucible-deck"')) return;
+
+  const fmMatch = raw.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
+  const fm = fmMatch ? fmMatch[0] : '';
+  let body = raw.slice(fm.length);
+
+  const html = renderCrucibleDeckHtml('pt-br', 'setup-crucible');
+  const replaced = body.replace(
+    /Siga a tabela abaixo[\s\S]*?(?=\nDepois de comprar|\n# V\.)/,
+    `Compre às cegas a quantidade correta de cada grupo conforme abaixo.\n\n${html}\n\n`
+  );
+
+  if (replaced === body) {
+    console.warn('patchPtBrSetupCrucible: could not find table section to replace');
+    return;
+  }
+
+  fs.writeFileSync(file, fm + replaced, 'utf8');
+  console.log('Patched pt-br/play/setup.md crucible deck section.');
 }
 
 main();

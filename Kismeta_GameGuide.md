@@ -202,20 +202,9 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 - **Card Groups:** Crucible Cards are organized into four Card Groups: A, B, C, and D. Each card has a small letter in the lower left corner of the face side indicating its Card Group.
 - Sort the Crucible Cards into Groups A-D. Shuffle each group separately.
 - Choose the Game Mode you want to play (I. Curated Builds, or II. Random Build). Follow the Table below to determine the number of cards needed from each Card Group per number of players in the game.
-- Blindly draw the appropriate number of cards from each group, as shown in the table below.
+- Blindly draw the appropriate number of cards from each group, as shown below.
 
-| CURATED BUILDS (Preset Difficulty Levels) |                             |     |     |     |                            |     |     |     |                                   |     |     |     |     |
-| ----------------------------------------- | --------------------------- | --- | --- | --- | -------------------------- | --- | --- | --- | --------------------------------- | --- | --- | --- | --- |
-| **GAME MODE ➡️ PLAYERS ⬇️**               | **1️⃣ QUICKPLAY _BEGINNER_** |     |     |     | **2️⃣ STANDARD _BALANCED_** |     |     |     | **3️⃣ MAGNUS ALCHEMIST _MASTERY_** |     |     |     |     |
-|                                           | ⬇️ CARD GROUPS ⬇️           |     |     |     | ⬇️ CARD GROUPS ⬇️          |     |     |     | ⬇️ CARD GROUPS ⬇️                 |     |     |     |     |
-| **2 PLAYERS ➡️ (8 CARDS)**                | A 4                         | B 3 | C 1 | D 0 | A 1                        | B 3 | C 3 | D 1 | A 1                               | B 2 | C 3 | D 2 |     |
-| **3 PLAYERS ➡️ (12 CARDS)**               | A 4                         | B 6 | C 2 | D 0 | A 2                        | B 4 | C 4 | D 2 | A 1                               | B 3 | C 5 | D 3 |     |
-| **4 PLAYERS ➡️ (16 CARDS)**               | A 4                         | B 7 | C 5 | D 0 | A 2                        | B 6 | C 6 | D 2 | A 1                               | B 5 | C 6 | D 4 |     |
-
-| RANDOM BUILDS: Let The Fates Decide (Random Difficulty) |
-| ------------------------------------------------------- |
-| Shuffle all 22 Crucible Cards together.                 |
-| Blindly draw four cards for each player in the game.    |
+<!-- CRUCIBLE_DECK_BUILDS -->
 
 - Once all cards have been drawn, shuffle and form the Crucible Deck for this game. Place the Crucible Deck beside the Great Year board.
 - Return any unused Crucible Cards to the game box; they will not be used in this game.

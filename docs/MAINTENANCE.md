@@ -179,7 +179,7 @@ import HomeCards from '../../components/HomeCards.astro';
 
 | Safe to edit directly                                                                          | Overwritten by `npm run sync`                                     |
 | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `index.mdx`, `glossary.mdx`, `play/guided.mdx`, `src/data/guided-steps.ts`, `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | Most files under `src/content/docs/learn/`, `play/` (except `guided.mdx`), `reference/` |
+| `index.mdx`, `glossary.mdx`, `play/guided.mdx`, `src/data/guided-steps.ts`, `src/data/crucible-deck-builds.json`, `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | Most files under `src/content/docs/learn/`, `play/` (except `guided.mdx`), `reference/` |
 | `Kismeta_GameGuide.md` (source of truth)                                                       | `src/data/glossary.json`                                          |
 
 **Typical rules workflow:** edit `Kismeta_GameGuide.md` → `npm run sync` → `npm run dev` → preview → `npm run build` for production.
@@ -246,11 +246,28 @@ Interactive walkthrough for new players at the table — **not** synced from the
 
 **Sync safety:** `play/guided.mdx` is listed in `PRESERVED_DOC_PATHS` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) so `npm run sync` does not delete it when rebuilding `play/`.
 
-**When to update:** If you change **Components** or **Setup** in `Kismeta_GameGuide.md` (via sync), review matching steps in `guided-steps.ts` so summaries and checklists stay accurate. Each step links to the full synced page for details (e.g. Crucible deck table on Setup).
+**When to update:** If you change **Components** or **Setup** in `Kismeta_GameGuide.md` (via sync), review matching steps in `guided-steps.ts` so summaries and checklists stay accurate.
 
 **Game mode:** The mode picker writes `kismeta-game-modes` in `localStorage` (same key as [`GameModeToggle.astro`](../src/components/GameModeToggle.astro)). Progress is stored separately as `kismeta-guided-progress`.
 
 **Future (post-MVP):** Round phases (Spring 1–5, Summer, Autumn, Winter) from `round-overview.md` — extend `guided-steps.ts` and the stepper; see the `TODO` comment in that file.
+
+---
+
+## Crucible deck builds (Setup IV + Guided Play)
+
+Card counts per mode and player count live in one place — **not** in the Word-style markdown table.
+
+| What | Where |
+| ---- | ----- |
+| Canonical counts | [`src/data/crucible-deck-builds.json`](../src/data/crucible-deck-builds.json) + [`crucible-deck-builds.ts`](../src/data/crucible-deck-builds.ts) |
+| Static Setup UI (EN) | [`scripts/render-crucible-deck-html.mjs`](../scripts/render-crucible-deck-html.mjs) injected at `<!-- CRUCIBLE_DECK_BUILDS -->` during `npm run sync` |
+| Interactive Guided UI | [`src/components/CrucibleDeckBuilds.astro`](../src/components/CrucibleDeckBuilds.astro) on Guided Play step IV |
+| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.crucible-deck*` |
+
+**Guide source:** [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) § IV must keep the placeholder `<!-- CRUCIBLE_DECK_BUILDS -->` (do not re-paste the old multi-column table from Word).
+
+**When counts change:** Edit `crucible-deck-builds.json`, then `npm run sync` (regenerates EN Setup HTML and patches pt-br Setup if still using the legacy table). Re-run `npm run sync:pt` only for surrounding Setup prose — the translate script preserves `<div class="crucible-deck">` blocks.
 
 ---
 

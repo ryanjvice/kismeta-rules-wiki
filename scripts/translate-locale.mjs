@@ -105,6 +105,7 @@ function buildPrompt(body, config, termGlossary) {
 Rules:
 - Output ONLY the translated markdown body (no frontmatter, no code fences).
 - Preserve all markdown structure: headings, lists, tables, HTML tags (especially <div class="game-mode-callout">), emoji, and anchor IDs.
+- Do NOT translate or modify any HTML inside <div class="crucible-deck"> … </div> — copy that block exactly from the source.
 - Keep these proper nouns in English: ${preserve}
 - Use these term translations consistently:
 ${terms}
