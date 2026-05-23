@@ -1,0 +1,9 @@
+---
+import DefaultPageSidebar from '@astrojs/starlight/components/PageSidebar.astro';
+import ContextRulesPanel from './ContextRulesPanel.astro';
+
+const route = Astro.locals.starlightRoute;
+const isGuided = route.id === 'play/guided';
+---
+
+{isGuided ? <ContextRulesPanel /> : <DefaultPageSidebar {...Astro.props} />}

@@ -49,6 +49,9 @@
 	"guided.resume.fresh": "Começar de novo",
 	"guided.complete.cta": "Abrir Rodada em Resumo",
 	"guided.startOver": "Recomeçar",
+	"guided.context.title": "Referência de regras",
+	"guided.context.empty": "Continue o passo a passo ou toque uma ação para ver as regras correspondentes aqui.",
+	"guided.context.openFull": "Abrir regras completas",
 	"guided.crucible.buildType": "Tipo de montagem",
 	"home.footer": "*Um jogo GOODMAGIK. O conteúdo de regras é sincronizado a partir de `Kismeta_GameGuide.md` — execute `npm run sync` após editar o guia.*",
 	"glossary.intro": "Referência de todos os termos do jogo em letras maiúsculas usados no guia. Volte aqui sempre que precisar de uma definição rápida durante o jogo."

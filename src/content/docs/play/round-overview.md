@@ -14,18 +14,18 @@ Spring opens every Cosmic Age. The Agekeeper rolls the Cosmic Age Die, all playe
 | 🌸 SPRING Set the Age & Gather Resources | 1️⃣ Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2️⃣ Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3️⃣ Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). 4️⃣ Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. 5️⃣ Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-### 1️⃣ Set the Cosmic Age
+### 1️⃣ Set the Cosmic Age {#1-set-the-cosmic-age}
 
 - **Roll the Cosmic Age Die:** The Agekeeper rolls the 12-sided black die.
 - **Read the Sign and Aspects aloud:** Announce the Sign's name, its ruling Planet, and its Element. All players note these — every Alignment calculation this round is measured against them.
 - **Apply the Cosmic Effect:** The rolled Sign's Cosmic Effect activates immediately and applies for the entire round. See the _Cosmic Ages & Effects_ table in the Reference Appendix.
 
-### 2️⃣ Determine Your Sign
+### 2️⃣ Determine Your Sign {#2-determine-your-sign}
 
 - **Roll your Zodiac Die:** Each player rolls their color-matched 12-sided die simultaneously.
 - **Move your Meeple:** Advance it to the Sign you rolled on the Zodiac Wheel. Your rolled Sign's Aspects are now your Alignment source for this round's Harvest and all subsequent calculations.
 
-### 3️⃣ Harvest
+### 3️⃣ Harvest {#3-harvest}
 
 The Agekeeper deals cards in the following order. All Bonus Cards are determined before any are dealt.
 
@@ -59,20 +59,20 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 | Base Harvest            | 2 cards always dealt regardless of Alignment    | +2              |
 | **TOTAL HARVEST**       |                                                 | **8 cards**     |
 
-### 4️⃣ Commune
+### 4️⃣ Commune {#4-commune}
 
 - **Assign cards to zones:** Place each Harvested card into your **Spread** (face-up, active) or your **Hand** (face-down, hidden). Cards already in your Spread or Hand from the previous round remain where they are.
 - **Seat your Arcanum:** Specialist Major Arcana you hold remain in your Arcanum. If you drew a Standard Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
 - **Consider your goals:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Refinement. Your Hand is your reserve, useful for Oppositions and Refinement but invisible to rivals.
 
-### 5️⃣ Card Lock
+### 5️⃣ Card Lock {#5-card-lock}
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 
 📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**.
 
 
-## PHASE 2: ☀️ SUMMER
+## PHASE 2: ☀️ SUMMER {#phase-2-summer}
 
 ### Trade, Build & Prepare
 
@@ -80,7 +80,7 @@ In clockwise order, starting with the Agekeeper, each player takes their turn an
 
 <div class="action-flow action-flow--static" data-flow-id="summer-flow" data-locale="en"><p class="action-flow__intro">On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like.</p><ol class="action-flow__tree"><li class="action-flow__node action-flow__node--group" data-node-id="turn"><div class="action-flow__node-head"><span class="action-flow__node-label">Your turn</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--group" data-node-id="craft"><div class="action-flow__node-head"><span class="action-flow__node-label">Craft Resources</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--optional" data-node-id="activate"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Activate Crucible Card</span></div><p class="action-flow__body">Collect and discard the card set from your Codex; place Molten Coal in a Cauldron.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="houses"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Build Astral House</span></div><p class="action-flow__body">Pay Planet-matching Common Cards; place 🏰 on a Zodiac Sign (Standard: 2 cards; Quickplay: 1).</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="refine"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Refine Reagent</span></div><p class="action-flow__body">Discard suited cards meeting the Cauldron RP Threshold; take 1 Reagent.</p></li></ol></li><li class="action-flow__node action-flow__node--group" data-node-id="consort"><div class="action-flow__node-head"><span class="action-flow__node-label">Consort with Rivals</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--optional" data-node-id="trade"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Trade</span></div><p class="action-flow__body">Exchange Common Cards, Reagents, or Active Crucible Cards.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="duel"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Duel</span></div><p class="action-flow__body">Wager a Spread card; roll dice — winner steals a card from rival's Spread.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="gambit"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Gambit</span></div><p class="action-flow__body">Summer only. Match rival's Active Crucible Alignment; roll to swap Crucible Cards.</p></li></ol></li></ol></li></ol></div>
 
-### 1️⃣ Activate Crucible Cards
+### 1️⃣ Activate Crucible Cards {#1-activate-crucible-cards}
 
 Your Crucible Codex holds four Formulae - one per card position (I–IV). Activate each card by collecting and discarding the matching card set. You may activate any number in any order, and may do so in Phase 2: Summer or Phase 3: Autumn.
 
@@ -94,7 +94,7 @@ Your Crucible Codex holds four Formulae - one per card position (I–IV). Activa
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
-### 2️⃣ Build Astral Houses
+### 2️⃣ Build Astral Houses {#2-build-astral-houses}
 
 Astral Houses are permanent structures built on the Zodiac Wheel. Each provides three ongoing benefits and cannot be moved once placed. Only one player may build on any given Sign - but other players may still land on or Align with that Sign.
 
@@ -115,7 +115,7 @@ _⚙️ **Game Mode Modifier (Quickplay):** Cost reduced to 1 card matching the 
 
 </div>
 
-### 3️⃣ Refine Reagents
+### 3️⃣ Refine Reagents {#3-refine-reagents}
 
 Reagents are the fuels needed to Fire your Stone. Refine them by discarding matching-suit cards whose combined Rank Points (RP) meet your Cauldron's current Threshold. You may refine any number of times per turn, using cards from your Spread and/or Hand.
 
@@ -133,7 +133,7 @@ _⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified T
 
 </div>
 
-### 4️⃣ Trade
+### 4️⃣ Trade {#4-trade}
 
 Freely exchange resources with any rival during your turn.
 
@@ -151,7 +151,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** Misaligned players must trade
 
 </div>
 
-### 5️⃣ Duel
+### 5️⃣ Duel {#5-duel}
 
 Challenge a rival to steal a single card from their Spread. Only the Challenger pays an entry fee; the Defender does not.
 
@@ -173,7 +173,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your targe
 
 </div>
 
-### 6️⃣ Gambit
+### 6️⃣ Gambit {#6-gambit}
 
 A Gambit lets you seize a rival's Active Crucible Card by proving you have already mastered its Alignment requirements - at the cost of one of your own. Gambits may only be declared during Phase 2: Summer, and only when your Spread fully satisfies the target card's complete Alignment requirement at the moment of declaration.
 
@@ -207,7 +207,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 </div>
 
-## PHASE 3: 🍂 AUTUMN
+## PHASE 3: 🍂 AUTUMN {#phase-3-autumn}
 
 ### Conduct the Great Work
 
@@ -286,7 +286,7 @@ A Stone that has been Forging since the previous round and has survived all Oppo
 
 ⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
 
-### 4️⃣🔥 Fire the Stone
+### 4️⃣🔥 Fire the Stone {#4-fire-the-stone}
 
 If you have an Active Crucible Card whose Alchemical Formula you have satisfied, you may Fire your Stone into the Forge this Autumn.
 
@@ -319,7 +319,7 @@ Ward Reagents placed beside your Stone on the 🛡️ symbol follow different ru
 - **Temper successfully:** Remaining Wards are burned and returned to the supply — not recovered.
 
 
-## PHASE 4: ⛰️ WINTER
+## PHASE 4: ⛰️ WINTER {#phase-4-winter}
 
 ### Final Actions & Reset
 
@@ -327,11 +327,11 @@ Winter closes the Cosmic Age. Complete all steps below in order before passing t
 
 <div class="action-flow action-flow--static" data-flow-id="winter-flow" data-locale="en"><p class="action-flow__intro">Winter ends the Cosmic Age. Required steps must happen; Offering and Wager are optional.</p><ol class="action-flow__tree"><li class="action-flow__node action-flow__node--group" data-node-id="winter-sequence"><div class="action-flow__node-head"><span class="action-flow__node-label">Winter sequence</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--required" data-node-id="unlock"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">1. Card Unlock</span></div><p class="action-flow__body">All players may return locked Spread cards to hand.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="offering"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">2. Offering to the Age (optional)</span></div><p class="action-flow__body">Discard cards meeting the threshold to gain a boon from the Cosmic Age.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="wager"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">3. Fateful Wager (optional)</span></div><p class="action-flow__body">Wager Spread cards against the Fates for a chance at powerful rewards.</p></li><li class="action-flow__node action-flow__node--required" data-node-id="limits"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">4. Enforce Card Limits</span></div><p class="action-flow__body">Discard down to hand and Spread limits before the next Age.</p></li><li class="action-flow__node action-flow__node--required" data-node-id="reset"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">5. Reset deck &amp; pass Key</span></div><p class="action-flow__body">Shuffle the Common Deck. Pass the Agekeeper Key clockwise.</p></li></ol></li></ol></div>
 
-### 1️⃣ Card Unlock:
+### 1️⃣ Card Unlock: {#1-card-unlock}
 
 Cards are now unlocked. Move cards freely between your Hand and Spread before taking other actions.
 
-### 2️⃣ Offering to the Age
+### 2️⃣ Offering to the Age {#2-offering-to-the-age}
 
 The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent refining boost for the full following round.
 
@@ -367,7 +367,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** The Cauldron Catalyst must be
 
 </div>
 
-### 3️⃣ Fateful Wager
+### 3️⃣ Fateful Wager {#3-fateful-wager}
 
 Before the round ends, any player may wager cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly, and your wager is doubled. Guess wrong, and it is lost to the Fates.
 

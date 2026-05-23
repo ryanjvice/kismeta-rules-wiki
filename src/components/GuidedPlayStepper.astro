@@ -319,6 +319,14 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			h?.focus();
 		};
 
+		const dispatchContext = (path?: string, hash?: string) => {
+			window.dispatchEvent(
+				new CustomEvent('kismeta:context', {
+					detail: { path: path ?? '', hash: hash ?? '' },
+				})
+			);
+		};
+
 		const renderStep = () => {
 			const step = steps[stepIndex - 1];
 			if (!step) return;
@@ -375,6 +383,8 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 				learnWrap.hidden = true;
 			}
 
+			dispatchContext(step.learnMorePath, step.learnMoreHash);
+
 			let progressText = labels.progress
 				.replace('{current}', String(stepIndex))
 				.replace('{total}', String(stepCount));
@@ -419,18 +429,21 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			completeEl.hidden = false;
 			saveProgress(mode, stepCount + 1);
 			focusHeading(completeEl);
+			dispatchContext();
 		};
 
 		const showMode = () => {
 			hideAll();
 			modeEl.hidden = false;
 			focusHeading(modeEl);
+			dispatchContext();
 		};
 
 		const showResume = (saved: ProgressState) => {
 			hideAll();
 			resumeEl.hidden = false;
 			focusHeading(resumeEl);
+			dispatchContext();
 		};
 
 		// Static labels

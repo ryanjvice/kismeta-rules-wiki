@@ -3,7 +3,7 @@ title: "Preparação"
 description: "Preparar a mesa, modos de jogo, baralho Crucible e primeiro Guardião da Era."
 ---
 
-# I. PREPARANDO A MESA
+# I. PREPARANDO A MESA {#i-preparando-a-mesa}
 Coloque o Great Year Board no centro da área de jogo.
 Selecione um Modo de Jogo antes de continuar. (Próxima página)
 Separe as cartas Kismeta em duas pilhas: Common Cards (Azul) e Crucible Cards (Vermelho).
@@ -19,7 +19,7 @@ Deixe os seguintes componentes ao alcance:
   * 🔴 Sulphur = Vermelho
   * 🟢 Vitriol = Verde
 
-# II. TORNANDO-SE UM ALQUIMISTA
+# II. TORNANDO-SE UM ALQUIMISTA {#ii-tornando-se-um-alquimista}
 Escolha uma cor (Vermelho, Verde, Azul ou Branco) e pegue o equipamento correspondente:
 * 4 Astral House Tokens: Fichas com símbolo 🏰; mantenha por perto.
 * 1 Crucible Codex: Carta dupla face; Crucible Codex e Guia de Referência Rápida no verso.
@@ -28,7 +28,7 @@ Escolha uma cor (Vermelho, Verde, Azul ou Branco) e pegue o equipamento correspo
 * 1 Philosopher's Stone: Coloque no espaço "START" na sua seção do Mantle Ring.
 * 1 Zodiac Die: Dado de 12 lados na sua cor; mantenha por perto.
 
-# III. SELECIONE UM MODO DE JOGO
+# III. SELECIONE UM MODO DE JOGO {#iii-selecione-um-modo-de-jogo}
 Escolha seu Modo de Jogo antes de continuar. Cada modo ajusta as condições iniciais e a economia do jogo.
 A estrutura da rodada, as fases e as regras permanecem conforme descrito neste guia para todos os modos.
 <div class="game-mode-callout" data-modes="quickplay magnus">

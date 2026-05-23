@@ -49,6 +49,9 @@
 	"guided.resume.fresh": "Start fresh",
 	"guided.complete.cta": "Open Round at a Glance",
 	"guided.startOver": "Start over",
+	"guided.context.title": "Rules reference",
+	"guided.context.empty": "Continue the walkthrough or tap an action to see matching rules here.",
+	"guided.context.openFull": "Open full rules",
 	"guided.crucible.buildType": "Build type",
 	"home.footer": "*A GOODMAGIK Game. Rules content is synced from `Kismeta_GameGuide.md` — run `npm run sync` after editing the guide.*",
 	"glossary.intro": "A reference to every capitalized game term used throughout the guide. Return here any time you need a quick definition mid-game."

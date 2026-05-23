@@ -1,0 +1,82 @@
+---
+import { getContextSectionIndex } from '../data/context-sections';
+
+const locale = Astro.currentLocale === 'pt-br' ? 'pt-br' : 'en';
+const t = Astro.locals.t;
+const sections = getContextSectionIndex(locale);
+
+const labels = {
+	title: t('guided.context.title'),
+	empty: t('guided.context.empty'),
+	openFull: t('guided.context.openFull'),
+};
+---
+
+<div
+	class="context-rules-panel"
+	data-sections={JSON.stringify(sections)}
+	data-locale={locale}
+	data-labels={JSON.stringify(labels)}
+>
+	<div class="context-rules-panel__mobile lg:sl-hidden">
+		<nav aria-labelledby="kismeta-context-mobile-title">
+			<details class="context-rules-panel__mobile-details" id="kismeta-context-mobile">
+				<summary id="kismeta-context-mobile-title" class="context-rules-panel__mobile-summary">
+					<span class="context-rules-panel__mobile-toggle">
+						{labels.title}
+						<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+							<path
+								d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"
+							></path>
+						</svg>
+					</span>
+					<span class="context-rules-panel__mobile-current" data-context-mobile-label></span>
+				</summary>
+				<div class="context-rules-panel__mobile-dropdown">
+					<p class="context-rules-panel__empty" data-context-mobile-empty>{labels.empty}</p>
+					<div
+						class="context-rules-panel__body sl-markdown-content"
+						data-context-mobile-body
+						hidden
+					></div>
+					<a
+						class="context-rules-panel__link"
+						data-context-mobile-link
+						hidden
+						target="_blank"
+						rel="noopener"
+					></a>
+				</div>
+			</details>
+		</nav>
+	</div>
+
+	<div class="context-rules-panel__desktop right-sidebar-panel sl-hidden lg:sl-block">
+		<div class="sl-container">
+			<nav aria-labelledby="kismeta-context-title">
+				<h2 id="kismeta-context-title" data-context-title>{labels.title}</h2>
+				<p class="context-rules-panel__empty" data-context-empty>{labels.empty}</p>
+				<div class="context-rules-panel__body sl-markdown-content" data-context-body hidden></div>
+				<a
+					class="context-rules-panel__link"
+					data-context-link
+					hidden
+					target="_blank"
+					rel="noopener"
+				></a>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<script>
+	import '../scripts/context-panel.ts';
+</script>
+
+<style>
+	.context-rules-panel__desktop h2 {
+		font-size: var(--sl-text-h5);
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+</style>

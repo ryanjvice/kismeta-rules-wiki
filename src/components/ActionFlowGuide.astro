@@ -16,7 +16,8 @@ const { flowId } = Astro.props;
 const locale = Astro.currentLocale === 'pt-br' ? 'pt-br' : 'en';
 const flow = getFlow(flowId);
 const intro = localize(flow.intro, locale);
-const roundOverviewUrl = getRelativeLocaleUrl(locale, 'play/round-overview');
+const learnPath = 'play/round-overview';
+const roundOverviewUrl = getRelativeLocaleUrl(locale, learnPath);
 const learnBase = flow.learnMoreHash
 	? `${roundOverviewUrl}#${flow.learnMoreHash}`
 	: roundOverviewUrl;
@@ -83,6 +84,7 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 	data-flow-mode={flow.mode}
 	data-locale={locale}
 	data-learn-base={roundOverviewUrl}
+	data-learn-path={learnPath}
 	data-labels={JSON.stringify(labels)}
 >
 	{intro && <p class="action-flow__intro">{intro}</p>}
@@ -222,6 +224,7 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 				readMore?: string;
 			};
 			const learnBase = root.dataset.learnBase || '';
+			const learnPath = root.dataset.learnPath || 'play/round-overview';
 			const detail = root.querySelector<HTMLElement>('[data-flow-detail]')!;
 			const detailBody = root.querySelector<HTMLElement>('[data-detail-body]')!;
 			const detailCondition = root.querySelector<HTMLElement>('[data-detail-condition]')!;
@@ -264,6 +267,12 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 				detailLearn.href = learnHash ? `${learnBase}#${learnHash}` : learnBase;
 				detailLearn.textContent = labels.readMore || 'Read full rules';
 				detail.hidden = false;
+
+				window.dispatchEvent(
+					new CustomEvent('kismeta:context', {
+						detail: { path: learnPath, hash: learnHash },
+					})
+				);
 			};
 
 			root.querySelectorAll<HTMLButtonElement>('.action-flow__pick').forEach((btn) => {

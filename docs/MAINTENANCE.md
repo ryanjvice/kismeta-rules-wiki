@@ -298,6 +298,21 @@ Interactive walkthrough for new players at the table — **not** synced from the
 
 **Game mode:** The mode picker writes `kismeta-game-modes` in `localStorage` (same key as [`GameModeToggle.astro`](../src/components/GameModeToggle.astro)). `ActionFlowGuide` reads mode for Quickplay/Magnus callouts.
 
+### Context rules sidebar (Guided Play only)
+
+On [`play/guided`](src/content/docs/play/guided.mdx), the right sidebar shows **extracted rules sections** instead of the page TOC. It updates when the user changes steps or taps an action in an embedded flow.
+
+| What | Where |
+| ---- | ----- |
+| Sidebar override | [`src/components/PageSidebar.astro`](../src/components/PageSidebar.astro) → [`ContextRulesPanel.astro`](../src/components/ContextRulesPanel.astro) |
+| Client logic | [`src/scripts/context-panel.ts`](../src/scripts/context-panel.ts) listens for `kismeta:context` |
+| Section index (generated) | [`src/data/context-sections/`](../src/data/context-sections/) via [`scripts/extract-context-sections.mjs`](../scripts/extract-context-sections.mjs) |
+| Stable heading IDs | [`scripts/context-anchors.mjs`](../scripts/context-anchors.mjs) injects `{#learnMoreHash}` during `npm run sync` |
+| Event emitters | [`GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro), [`ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro) |
+| i18n | `guided.context.*` in [`en.json`](../src/content/i18n/en.json) / [`pt-BR.json`](../src/content/i18n/pt-BR.json) |
+
+**When adding steps or flow branches:** Set `learnMorePath` / `learnMoreHash` on the step or flow leaf, then run `npm run sync` (regenerates anchor suffixes and context JSON). Do **not** duplicate rules copy in the panel — content is pulled from synced markdown.
+
 ---
 
 ## Crucible deck builds (Setup IV + Guided Play)

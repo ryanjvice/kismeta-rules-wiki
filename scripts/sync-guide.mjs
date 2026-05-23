@@ -10,6 +10,14 @@ import {
   renderCrucibleDeckHtml,
 } from './render-crucible-deck-html.mjs';
 import { injectContentBlocks } from './render-content-html.mjs';
+import {
+  CONTEXT_SOURCE_PAGES,
+  getContextAnchorHashes,
+  injectContextAnchors,
+} from './context-anchors.mjs';
+import { extractContextSections } from './extract-context-sections.mjs';
+
+const EN_CONTEXT_ANCHORS = getContextAnchorHashes('en');
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -268,6 +276,7 @@ description: ${JSON.stringify(description)}
   const beforeFix = countHeadingsAfterHtmlClose(wrapped);
   const processed = applySeeLinks(ensureBlankLineAfterHtmlBlocks(wrapped));
   const afterFix = countHeadingsAfterHtmlClose(processed);
+  const withAnchors = injectContextAnchors(processed, EN_CONTEXT_ANCHORS);
   // #region agent log
   if (beforeFix > 0 || slug === 'play/round-overview') {
     debugLog({
@@ -279,7 +288,7 @@ description: ${JSON.stringify(description)}
     });
   }
   // #endregion
-  fs.writeFileSync(file, frontmatter + notice + processed.trim() + '\n', 'utf8');
+  fs.writeFileSync(file, frontmatter + notice + withAnchors.trim() + '\n', 'utf8');
 }
 
 function parseGlossary(sectionBody) {
@@ -358,7 +367,7 @@ function rmSyncOutput() {
   }
 }
 
-function main() {
+async function main() {
   const md = fs.readFileSync(GUIDE, 'utf8');
   const sections = parseSections(md);
   rmSyncOutput();
@@ -432,6 +441,7 @@ function main() {
   fs.mkdirSync(path.dirname(GLOSSARY_JSON), { recursive: true });
   fs.writeFileSync(GLOSSARY_JSON, JSON.stringify(glossaryTerms, null, 2), 'utf8');
   patchPtBrContent();
+  await extractContextSections();
   console.log(`Wrote ${sections.length} sections, ${glossaryTerms.length} glossary terms.`);
 }
 
@@ -440,6 +450,20 @@ function patchPtBrContent() {
   patchPtBrSetupCrucible();
   patchPtBrRoundPages();
   alignPtBrHeadingLevels();
+  patchPtBrContextAnchors();
+}
+
+/** Stable {#id} on pt-br headings referenced by guided play / flows. */
+function patchPtBrContextAnchors() {
+  const ptHashes = getContextAnchorHashes('pt-br');
+  for (const page of CONTEXT_SOURCE_PAGES) {
+    const file = path.join(OUT, 'pt-br', `${page}.md`);
+    if (!fs.existsSync(file)) continue;
+    const raw = fs.readFileSync(file, 'utf8');
+    const { fm, body } = readPageFrontmatter(raw);
+    const next = injectContextAnchors(body, ptHashes);
+    if (next !== body) fs.writeFileSync(file, fm + next, 'utf8');
+  }
 }
 
 /** Match pt-br heading levels to English counterparts (for Starlight TOC). */
@@ -615,4 +639,7 @@ function patchPtBrRoundPages() {
   }
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

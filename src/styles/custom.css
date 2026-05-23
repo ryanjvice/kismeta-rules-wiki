@@ -997,3 +997,104 @@ main:has(.kismeta-lore) h1#_top,
 		display: block !important;
 	}
 }
+
+/* Guided Play — context rules sidebar */
+.context-rules-panel__desktop {
+	padding: 1rem var(--sl-sidebar-pad-x);
+}
+
+.context-rules-panel__desktop .sl-container {
+	width: calc(var(--sl-sidebar-width) - 2 * var(--sl-sidebar-pad-x));
+}
+
+.context-rules-panel__body {
+	max-height: min(70vh, 42rem);
+	overflow: auto;
+	margin-top: 0.35rem;
+	font-size: 0.92rem;
+	line-height: 1.5;
+}
+
+.context-rules-panel__body :is(h2, h3, h4) {
+	font-size: 1rem;
+	margin: 0.75rem 0 0.35rem;
+}
+
+.context-rules-panel__body :is(p, ul, ol) {
+	margin: 0.35rem 0;
+}
+
+.context-rules-panel__body table {
+	font-size: 0.82rem;
+}
+
+.context-rules-panel__empty {
+	margin: 0;
+	font-size: 0.88rem;
+	line-height: 1.45;
+	color: var(--sl-color-gray-3);
+}
+
+.context-rules-panel__empty[hidden],
+.context-rules-panel__body[hidden],
+.context-rules-panel__link[hidden] {
+	display: none;
+}
+
+.context-rules-panel__link {
+	display: inline-block;
+	margin-top: 0.75rem;
+	font-size: 0.88rem;
+	font-weight: 600;
+}
+
+.context-rules-panel__mobile {
+	border-bottom: 1px solid var(--sl-color-hairline);
+	background: var(--sl-color-bg-nav);
+}
+
+.context-rules-panel__mobile-details {
+	margin: 0;
+}
+
+.context-rules-panel__mobile-summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	padding: 0.65rem 1rem;
+	cursor: pointer;
+	list-style: none;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.context-rules-panel__mobile-summary::-webkit-details-marker {
+	display: none;
+}
+
+.context-rules-panel__mobile-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	color: var(--sl-color-gray-2);
+}
+
+.context-rules-panel__mobile-current {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: right;
+	font-weight: 500;
+	color: var(--sl-color-accent);
+}
+
+.context-rules-panel__mobile-dropdown {
+	padding: 0 1rem 0.85rem;
+}
+
+.context-rules-panel__mobile-dropdown .context-rules-panel__body {
+	max-height: 50vh;
+}
