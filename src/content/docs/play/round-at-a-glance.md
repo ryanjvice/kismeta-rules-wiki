@@ -3,7 +3,7 @@ title: "Round at a Glance"
 description: "Quick seasonal reference for in-game lookup."
 ---
 
-# ROUND AT A GLANCE
+## ROUND AT A GLANCE
 
 <div class="game-table game-table--season-cards" data-table-id="round-at-a-glance" data-locale="en"><p class="game-table__intro">Each Cosmic Age moves through four seasons in order. Return here during play for a quick reference.</p><div class="game-table__season-grid"><article class="game-table__season-card" data-season="spring">
   <header class="game-table__season-header">

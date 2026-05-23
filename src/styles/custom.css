@@ -949,8 +949,29 @@ main:has(.kismeta-lore) h1#_top,
 	border-left: 3px solid var(--sl-color-accent);
 }
 
+.action-flow--interactive .action-flow__detail {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+.action-flow--interactive .action-flow__detail:not([hidden]) {
+	margin-bottom: 1rem;
+}
+
 .action-flow__detail[hidden] {
 	display: none;
+}
+
+.action-flow__hint {
+	margin: 0 0 0.75rem;
+	font-size: 0.88rem;
+	line-height: 1.45;
+	color: var(--sl-color-gray-3);
+}
+
+.action-flow--interactive .action-flow__summer,
+.action-flow--interactive .action-flow__tree--guided {
+	margin-top: 0;
 }
 
 .action-flow__mode-note {

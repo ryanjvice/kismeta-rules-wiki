@@ -3,7 +3,7 @@ title: "Quick Reference"
 description: "Cosmic Ages, elements, inventory zones, alignment, reagents, and Crucible at a glance."
 ---
 
-# Cosmic Ages & Effects
+## Cosmic Ages & Effects
 
 | 🛞          | SIGN        | PLANET(S)  | ELEMENT | EFFECT                                    |
 | ----------- | ----------- | ---------- | ------- | ----------------------------------------- |
@@ -20,7 +20,7 @@ description: "Cosmic Ages, elements, inventory zones, alignment, reagents, and C
 |             | Aquarius    | Saturn     | Air     | Court Cards of Swords are a Wild Suit.    |
 |             | Pisces      | Jupiter    | Water   | −3 RP to refine Aqua Regia                |
 
-# Element / Suit / Reagent / Cauldron
+## Element / Suit / Reagent / Cauldron
 
 | CORRESPONDENCE: ELEMENTS, CARD SUITS, REAGENTS, CAULDRONS & COLOR |             |               |             |              |
 | ----------------------------------------------------------------- | ----------- | ------------- | ----------- | ------------ |
@@ -30,7 +30,7 @@ description: "Cosmic Ages, elements, inventory zones, alignment, reagents, and C
 | 🟢 Green                                                          | Earth       | 🪙 Pentacles  | Vitriol     | Green        |
 | 🟡 Yellow                                                         | Air         | ⚔️ Swords     | Quicksilver | Yellow       |
 
-# COMMON CARDS
+## COMMON CARDS
 
 The Common Deck is your primary tool across the Great Year. Its 134 cards divide into two types.
 
@@ -56,7 +56,7 @@ Three concepts you'll use constantly:
 - **Card Sets** - Poker-style groupings of Common Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
-# YOUR INVENTORY: Spread, Hand & Arcanum Zones
+## YOUR INVENTORY: Spread, Hand & Arcanum Zones
 
 You always manage your inventory of Common cards across three zones.
 
@@ -76,7 +76,7 @@ You always manage your inventory of Common cards across three zones.
 |         |                                               |            |          | Standard: No limit           | Standard cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
 |         |                                               |            |          |                              | Specialist cards: must be purchased to enter; swap by paying new card's cost                    | Trades, Wagers, Astral Houses |
 
-# Alignment Scoring
+## Alignment Scoring
 
 | SOURCE                    | ASPECTS SCORED                                          | BONUS CARDS                      |
 | ------------------------- | ------------------------------------------------------- | -------------------------------- |
@@ -85,7 +85,7 @@ You always manage your inventory of Common cards across three zones.
 | Arcanum: Specialist Cards | Sign, Planet, and Element (each card carries all three) | +3 Sign · +2 Planet · +1 Element |
 | Astral Houses             | Sign, Planet, and Element of the built Sign             | +3 Sign · +2 Planet · +1 Element |
 
-# Alignment Point Sources
+## Alignment Point Sources
 
 | SOURCE                | ALWAYS ACTIVE? | NOTES                                                                                      |
 | --------------------- | -------------- | ------------------------------------------------------------------------------------------ |
@@ -95,7 +95,7 @@ You always manage your inventory of Common cards across three zones.
 | Hand Cards            | Optional       | Cards contributed from the Hand are discarded after the Opposition resolves.               |
 | Arcanum: Major Arcana | Yes (effects)  | Active effects apply; check individual card text. Some Standard cards affect both players. |
 
-# Reagent Thresholds
+## Reagent Thresholds
 
 | IGNITING CAULDRONS: REDUCING RP THRESHOLD TO REFINE REAGENTS |                  |
 | ------------------------------------------------------------ | ---------------- |
@@ -106,7 +106,7 @@ You always manage your inventory of Common cards across three zones.
 | 3                                                            | ≥ 15 RP          |
 | 4                                                            | ≥ 10 RP          |
 
-# Crucible: The Transmutation Pathway
+## Crucible: The Transmutation Pathway
 
 | POS. | CRUCIBLE LOCATION | STATUS                                      |
 | ---- | ----------------- | ------------------------------------------- |
@@ -120,7 +120,7 @@ You always manage your inventory of Common cards across three zones.
 | 7    | Forge (Gold)      | Stage 4 underway. Vulnerable to Opposition. |
 | 8    | Altar of Kismeta  | Victory. The Great Work is complete.        |
 
-# Philosopher's Stone States
+## Philosopher's Stone States
 
 | PHILOSOPHER'S STONE STATES |                          |                                                                                                   |
 | -------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
@@ -129,7 +129,7 @@ You always manage your inventory of Common cards across three zones.
 | Forging                    | Forge (1, 3, 5, 7)       | Transmutation underway. Crucible Card is Fired (face-up, sideways). Vulnerable to Opposition.     |
 | In Stasis                  | ❄️ Stasis zone           | Frozen until next Autumn. Crucible Card remains Fired. Cannot Temper or take other Stone actions. |
 
-# Crucible Card States
+## Crucible Card States
 
 | CRUCIBLE CARD STATES |                            |                                                                                             |
 | -------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |

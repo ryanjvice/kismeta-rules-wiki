@@ -5,7 +5,7 @@ description: "Compendium — 1.6 REAGENTS"
 
 Reagents are the concentrated alchemical fuels required to power the Great Work. While Common Cards represent raw potential gathered from the cosmos, Reagents are the refined energy needed to "Fuel the Forge" and advance your Philosopher’s Stone through the Crucible.
 
-# FOUR REAGENTS
+#### FOUR REAGENTS
 
 There are four types of Reagents, each refined from a specific suit of Common Cards:
 
@@ -16,7 +16,7 @@ There are four types of Reagents, each refined from a specific suit of Common Ca
 | Aqua Regia  | Cups                 | Blue     |
 | Vitriol     | Pentacles            | Green    |
 
-# REFINING REAGENTS
+#### REFINING REAGENTS
 
 Refinement is the process of trading in cards to receive a Reagent token. You may do this any number of times during Phase 2: Summer.
 
@@ -34,7 +34,7 @@ Refinement is the process of trading in cards to receive a Reagent token. You ma
 
 💡 **Tip:** Each Molten Coal placed in a Cauldron permanently lowers that Cauldron’s Threshold by 5 RP each. They cannot be moved once placed. Choose wisely.
 
-# EXAMPLE: Refining A Reagent
+#### EXAMPLE: Refining A Reagent
 
 You want to refine 1 Sulphur (Red) Reagent.
 Your Red Cauldron has 2 Molten Coals, lowering the Threshold to 20 RP.

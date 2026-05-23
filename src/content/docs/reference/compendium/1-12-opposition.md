@@ -7,7 +7,7 @@ description: "Compendium — 1.12 OPPOSITION"
 
 When your Stone is in the Forge, it can be attacked. A rival may declare an Opposition, a contest that uses Aspect Alignments and card effects to determine the outcome. If the Challenger wins, the Defender’s Stone is sent to the ❄️ Stasis zone and must wait a round before retrying. A failed Opposition exhausts the Challenger, who cannot challenge the same Defender again that round.
 
-# WHEN AN OPPOSITION CAN BE DECLARED
+#### WHEN AN OPPOSITION CAN BE DECLARED
 
 An Opposition can be declared only at the start of Phase 3: Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during the current round’s Autumn phase. All Oppositions are fully resolved before any player takes their other Autumn actions.
 **Multiple Oppositions Against the Same Stone**
@@ -26,7 +26,7 @@ After the Defender completes a full round and moves their Stone to the next Mant
 
 - ⚠️ Important: You cannot target a Stone that entered the Forge this round.
 
-# THE OPPOSITION: Order Of Play
+#### THE OPPOSITION: Order Of Play
 
 - **The Challenge:** The Challenger pays the bank a quantity of Reagents equal to the Defender’s Protective Ward. This is the entry fee for the Opposition. No Ward = no entry fee.
 - **Cards in Play:** All cards currently in each player’s Spread participate in the Opposition automatically. Their Aspects are used to calculate Alignment Points, and any card effects relevant to Oppositions are active for the duration of the contest.
@@ -36,7 +36,7 @@ After the Defender completes a full round and moves their Stone to the next Mant
 - **The Roll:** The Opposition Age is the current round’s Cosmic Age, set at the start of Phase 1: Spring and known to all players throughout the round. Both players roll their Zodiac Die and place it on the corresponding Sign.
 - **Calculating the Results:** All Alignment Points are totaled. The player with the higher score wins. **Tied Scores:** If both players have equal Alignment Points, each player rolls their Zodiac Die; the higher roll wins. Reroll if tied again.
 
-# CALCULATING THE ALIGNMENT POINTS
+#### CALCULATING THE ALIGNMENT POINTS
 
 Each player’s Alignment Points are the sum of all Aspect matches across every source in play. Each source is scored independently, and all points are added together. See [Alignment Points](/reference/compendium/1-1-aspects-alignment/#alignment-points) for the full scoring table.
 Sources for Alignments:
@@ -55,12 +55,12 @@ Certain card effects specifically modify Opposition outcomes. These effects may 
 
 </div>
 
-# OUTCOMES
+#### OUTCOMES
 
 - **Challenger Wins:** The Defender’s Stone is moved to the nearest ❄️ Stasis zone on the Mantle Ring. Their Protective Wards are discarded. Their Crucible Card remains Fired (face-up, turned sideways).
 - **Defender Wins:** The Stone remains in the Forge. The Challenger is Exhausted and may not challenge the same Defender again for the remainder of the current round.
 
-# EXAMPLE: An Opposition
+#### EXAMPLE: An Opposition
 
 The current Cosmic Age is Leo (Sign: Leo, Planet: Sun, Element: Fire) and serves as the Opposition Age for this contest.
 Opposition Age is Leo (Sign: Leo, Planet: Sun, Element: Fire).

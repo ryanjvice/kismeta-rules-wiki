@@ -5,7 +5,7 @@ description: "Compendium — 1.4 CRUCIBLE CARDS"
 
 The Fates inscribed twenty-two Crucible Cards for the Great Work, each linked to a Major Arcana card and shaping its Formula. Four cards are used in the game, one for each Stage of Transmutation. Initially dormant, each card has a Molten Coal on top, hiding its Alchemical Formula until activation.
 
-# CRUCIBLE CARD STATES
+#### CRUCIBLE CARD STATES
 
 Each Crucible Card has four states that track the card’s position and your actions. They relate to advancing the Philosopher’s Stone, which has separate states. See [Crucible & Philosopher's Stone](/reference/compendium/1-11-crucible-philosophers-stone/) & Philosopher’s Stone
 
@@ -16,7 +16,7 @@ Each Crucible Card has four states that track the card’s position and your act
 - **Discarded:** The Crucible Card is discarded when the Coal is Tempered to the next Mantle Ring. The Stage is complete.
 - ⚠️ Important: You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before you can fire again.
 
-# ACTIVATING A CRUCIBLE CARD
+#### ACTIVATING A CRUCIBLE CARD
 
 To activate a Crucible Card, follow these steps. You may do this during Phase 2: Summer or Phase 3: Autumn:
 
@@ -25,7 +25,7 @@ To activate a Crucible Card, follow these steps. You may do this during Phase 2:
 - **Collect the Cards:** Assemble the required card set in your Spread and discard it.
 - **Activate the Crucible Card:** Extract the Molten Coal from the card and drop it into any Crucible Cauldron of your choice. The flame burns hotter, and that Cauldron’s Threshold permanently drops by 5 RP. Flip the Crucible Card face-up. It is now Active, and its Formula has been revealed. See [Reagents](/reference/compendium/1-6-reagents/)
 
-# THE ALCHEMICAL FORMULA
+#### THE ALCHEMICAL FORMULA
 
 Every Crucible Card presents an Alchemical Formula, the sacred set of demands the Fates have placed upon this Stage of the Transmutation process. Each Formula has three components:
 

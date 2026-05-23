@@ -23,7 +23,7 @@ A Duel lets you challenge a rival to steal a card from their Spread during Phase
 
 </div>
 
-# EXAMPLE: A Duel
+#### EXAMPLE: A Duel
 
 You challenge a rival and target the King of Cups in their Spread.
 You offer a 5 of Wands as your Ante Card.

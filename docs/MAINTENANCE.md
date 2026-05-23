@@ -196,7 +196,13 @@ The sync script ([`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs)) expects 
 | ----- | -------- | -------- |
 | Top-level (one page each) | `# TITLE` | `# SETUP`, `# GAME OVERVIEW`, `# APPENDIX` |
 | Subsections (stay on the same page) | `## …` | `## The Great Year`, `## PHASE 1: SPRING` |
+| Sub-subsections | `### …` | `### 1️⃣ Set the Cosmic Age`, `### 1️⃣ QUICKPLAY` |
+| Detail blocks (not in TOC) | `#### …` | `#### How to Activate:` |
 | Compendium entries | `### 1.x …` under `## COMPENDIUM…` | `### 1.2 HARVEST` |
+
+**Synced output:** `writePage()` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) preserves `##` / `###` / `####` levels from the guide so Starlight’s “On this page” TOC (h2–h3) lists phase and step headings. Do **not** re-add heading flattening in `writePage()` — an old `demoteHeadings()` pass collapsed everything to `#` (h1) and left only “Overview” in the TOC.
+
+**pt-BR:** After each `npm run sync`, `alignPtBrHeadingLevels()` copies heading levels from the English page to the matching `pt-br/` file (when heading counts match). Re-run `npm run sync:pt` when translating copy changes.
 
 Special mappings:
 

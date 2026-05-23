@@ -5,27 +5,27 @@ description: "Spring, Summer, Autumn, and Winter in full detail."
 
 Each Cosmic Age (round) moves through four seasons in order: Spring, Summer, Autumn, and Winter. Complete them in sequence, starting with the Agekeeper.
 
-# PHASE 1: 🌸 SPRING
+## PHASE 1: 🌸 SPRING
 
-# Set the Age & Gather Resources
+### Set the Age & Gather Resources
 
 Spring opens every Cosmic Age. The Agekeeper rolls the Cosmic Age Die, all players determine their Zodiac Sign, and the Harvest fills everyone's hand for the round ahead.
 
 | 🌸 SPRING Set the Age & Gather Resources | 1️⃣ Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2️⃣ Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3️⃣ Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). 4️⃣ Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. 5️⃣ Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-# 1️⃣ Set the Cosmic Age
+### 1️⃣ Set the Cosmic Age
 
 - **Roll the Cosmic Age Die:** The Agekeeper rolls the 12-sided black die.
 - **Read the Sign and Aspects aloud:** Announce the Sign's name, its ruling Planet, and its Element. All players note these — every Alignment calculation this round is measured against them.
 - **Apply the Cosmic Effect:** The rolled Sign's Cosmic Effect activates immediately and applies for the entire round. See the _Cosmic Ages & Effects_ table in the Reference Appendix.
 
-# 2️⃣ Determine Your Sign
+### 2️⃣ Determine Your Sign
 
 - **Roll your Zodiac Die:** Each player rolls their color-matched 12-sided die simultaneously.
 - **Move your Meeple:** Advance it to the Sign you rolled on the Zodiac Wheel. Your rolled Sign's Aspects are now your Alignment source for this round's Harvest and all subsequent calculations.
 
-# 3️⃣ Harvest
+### 3️⃣ Harvest
 
 The Agekeeper deals cards in the following order. All Bonus Cards are determined before any are dealt.
 
@@ -43,7 +43,7 @@ The Agekeeper deals cards in the following order. All Bonus Cards are determined
   <p class="game-table__step-body">Agekeeper deals each player their Bonus Cards, one at a time, face-down.</p>
 </li></ol></div>
 
-# Aspects & Alignment
+#### Aspects & Alignment
 
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
@@ -59,32 +59,32 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 | Base Harvest            | 2 cards always dealt regardless of Alignment    | +2              |
 | **TOTAL HARVEST**       |                                                 | **8 cards**     |
 
-# 4️⃣ Commune
+### 4️⃣ Commune
 
 - **Assign cards to zones:** Place each Harvested card into your **Spread** (face-up, active) or your **Hand** (face-down, hidden). Cards already in your Spread or Hand from the previous round remain where they are.
 - **Seat your Arcanum:** Specialist Major Arcana you hold remain in your Arcanum. If you drew a Standard Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
 - **Consider your goals:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Refinement. Your Hand is your reserve, useful for Oppositions and Refinement but invisible to rivals.
 
-# 5️⃣ Card Lock
+### 5️⃣ Card Lock
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 
 📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**.
 
 
-# PHASE 2: ☀️ SUMMER
+## PHASE 2: ☀️ SUMMER
 
-# Trade, Build & Prepare
+### Trade, Build & Prepare
 
 In clockwise order, starting with the Agekeeper, each player takes their turn and may take any of the following actions, in any order, as many times as they like.
 
 <div class="action-flow action-flow--static" data-flow-id="summer-flow" data-locale="en"><p class="action-flow__intro">On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like.</p><ol class="action-flow__tree"><li class="action-flow__node action-flow__node--group" data-node-id="turn"><div class="action-flow__node-head"><span class="action-flow__node-label">Your turn</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--group" data-node-id="craft"><div class="action-flow__node-head"><span class="action-flow__node-label">Craft Resources</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--optional" data-node-id="activate"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Activate Crucible Card</span></div><p class="action-flow__body">Collect and discard the card set from your Codex; place Molten Coal in a Cauldron.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="houses"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Build Astral House</span></div><p class="action-flow__body">Pay Planet-matching Common Cards; place 🏰 on a Zodiac Sign (Standard: 2 cards; Quickplay: 1).</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="refine"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Refine Reagent</span></div><p class="action-flow__body">Discard suited cards meeting the Cauldron RP Threshold; take 1 Reagent.</p></li></ol></li><li class="action-flow__node action-flow__node--group" data-node-id="consort"><div class="action-flow__node-head"><span class="action-flow__node-label">Consort with Rivals</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--optional" data-node-id="trade"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Trade</span></div><p class="action-flow__body">Exchange Common Cards, Reagents, or Active Crucible Cards.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="duel"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Duel</span></div><p class="action-flow__body">Wager a Spread card; roll dice — winner steals a card from rival's Spread.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="gambit"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Gambit</span></div><p class="action-flow__body">Summer only. Match rival's Active Crucible Alignment; roll to swap Crucible Cards.</p></li></ol></li></ol></li></ol></div>
 
-# 1️⃣ Activate Crucible Cards
+### 1️⃣ Activate Crucible Cards
 
 Your Crucible Codex holds four Formulae - one per card position (I–IV). Activate each card by collecting and discarding the matching card set. You may activate any number in any order, and may do so in Phase 2: Summer or Phase 3: Autumn.
 
-# How to Activate:
+#### How to Activate:
 
 - **Consult your Codex:** Find the Formula for the card position you want to activate (I, II, III, or IV).
 - **Assemble the card set:** Collect the required cards in your Spread.
@@ -94,11 +94,11 @@ Your Crucible Codex holds four Formulae - one per card position (I–IV). Activa
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
-# 2️⃣ Build Astral Houses
+### 2️⃣ Build Astral Houses
 
 Astral Houses are permanent structures built on the Zodiac Wheel. Each provides three ongoing benefits and cannot be moved once placed. Only one player may build on any given Sign - but other players may still land on or Align with that Sign.
 
-# How to Build Astral Houses:
+#### How to Build Astral Houses:
 
 - Pay 2 Common Cards matching your current Sign's Planet.
 - Place your 🏰 token on the 🏰 icon on that Sign.
@@ -115,11 +115,11 @@ _⚙️ **Game Mode Modifier (Quickplay):** Cost reduced to 1 card matching the 
 
 </div>
 
-# 3️⃣ Refine Reagents
+### 3️⃣ Refine Reagents
 
 Reagents are the fuels needed to Fire your Stone. Refine them by discarding matching-suit cards whose combined Rank Points (RP) meet your Cauldron's current Threshold. You may refine any number of times per turn, using cards from your Spread and/or Hand.
 
-# How to Refine:
+#### How to Refine:
 
 - **Choose a Reagent type:** Select which of the four Reagents you want to refine.
 - **Gather cards:** Collect cards of the matching suit from your Spread and/or Hand.
@@ -133,7 +133,7 @@ _⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified T
 
 </div>
 
-# 4️⃣ Trade
+### 4️⃣ Trade
 
 Freely exchange resources with any rival during your turn.
 
@@ -151,11 +151,11 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** Misaligned players must trade
 
 </div>
 
-# 5️⃣ Duel
+### 5️⃣ Duel
 
 Challenge a rival to steal a single card from their Spread. Only the Challenger pays an entry fee; the Defender does not.
 
-# How to Declare a Duel:
+#### How to Declare a Duel:
 
 - **Declare:** Name your opponent and the specific card you are targeting in their Spread.
 - **Pay entry fee:** Choose an Ante Card
@@ -173,11 +173,11 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your targe
 
 </div>
 
-# 6️⃣ Gambit
+### 6️⃣ Gambit
 
 A Gambit lets you seize a rival's Active Crucible Card by proving you have already mastered its Alignment requirements - at the cost of one of your own. Gambits may only be declared during Phase 2: Summer, and only when your Spread fully satisfies the target card's complete Alignment requirement at the moment of declaration.
 
-# How to Instigate a Gambit:
+#### How to Instigate a Gambit:
 
 - **Identify the target:** Point to the rival's Active Crucible Card your Spread satisfies. Demonstrate that your Spread meets its full Alignment requirement.
 - **Name your offer:** Declare which of your own Active Crucible Cards you are putting up in exchange.
@@ -191,7 +191,7 @@ A Gambit lets you seize a rival's Active Crucible Card by proving you have alrea
 | Challenger Wins  | The two Active Crucible Cards swap positions.                                                                                                       | Protective Ward Reagents are spent.    |
 | Challenger Loses | Offered card is Arrested (face-down, sideways; cannot Fire this round; resets to Active next round). Cannot re-Gambit the same Defender this round. | Protective Ward Reagents are returned. |
 
-# Protective Wards on Crucible Cards
+#### Protective Wards on Crucible Cards
 
 During your turn in Phase 2, you may place Reagents directly on any Active Crucible Card as Protective Wards. These set the entry fee that any Challenger must pay to Gambit for that card.
 
@@ -207,25 +207,25 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 </div>
 
-# PHASE 3: 🍂 AUTUMN
+## PHASE 3: 🍂 AUTUMN
 
-# Conduct the Great Work
+### Conduct the Great Work
 
 Before any action is taken, the Agekeeper surveys the Forge, noting each player whose Stone is currently Forging or in Stasis. Autumn follows a fixed sequence — all steps are resolved in order before any player may take other actions.
 
 <div class="action-flow action-flow--static" data-flow-id="autumn-flow" data-locale="en"><p class="action-flow__intro">Autumn follows a fixed sequence. The Agekeeper oversees the Forge; each player acts in turn order.</p><ol class="action-flow__tree"><li class="action-flow__node action-flow__node--group" data-node-id="autumn-sequence"><div class="action-flow__node-head"><span class="action-flow__node-label">Autumn procession</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--required" data-node-id="leave-stasis"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">1. Leave Stasis (if applicable)</span></div><p class="action-flow__condition"><em>Only if your Stone is in Stasis</em></p><div class="action-flow__branches"><div class="action-flow__branch"><li class="action-flow__node action-flow__node--choice" data-node-id="forge-open"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot open</span></div><p class="action-flow__body">Return your Stone to the Forge. You may place a Ward on the spot.</p></li></div><div class="action-flow__branch"><li class="action-flow__node action-flow__node--choice" data-node-id="forge-occupied"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot occupied</span></div><div class="action-flow__branches"><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="wait"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Wait — stay in Stasis</span></div><p class="action-flow__body">Skip leaving Stasis this Autumn.</p></li></div><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="stasis-opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Challenge — Stasis Opposition in step 2</span></div><p class="action-flow__body">Declare Stasis Opposition when it is your turn in step 2.</p></li></div></div></li></div></div></li><li class="action-flow__node action-flow__node--required" data-node-id="opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">2. Opposition declarations</span></div><p class="action-flow__body">Each player may declare Opposition against a rival's Stone on the Forge.</p></li><li class="action-flow__node action-flow__node--required" data-node-id="temper"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">3. Temper (if eligible)</span></div><p class="action-flow__condition"><em>Not if you just left Stasis this Autumn</em></p><p class="action-flow__body">Spend Reagents to advance your Stone on the Forge track.</p></li><li class="action-flow__node action-flow__node--required" data-node-id="fire"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">4. Fire (if eligible)</span></div><p class="action-flow__condition"><em>Mantle Ring reached and formula met</em></p><p class="action-flow__body">Complete the Great Work — place your Stone in the Mantle Ring.</p></li></ol></li></ol></div>
 
-# 1️⃣ Leave Stasis
+### 1️⃣ Leave Stasis
 
 Players whose Stone is currently in the Stasis zone may return it to the Forge this Autumn.
 
-# Steps to Leave Stasis
+#### Steps to Leave Stasis
 
 - **Move your Stone:** Return it to the Forge position it previously held.
 - **Re-arm your Protective Ward:** Place Reagents on the 🛡️ symbol beside your Stone (optional but recommended).
 - **Resume Forging:** Your Crucible Card remains Fired. You must complete a full round in the Forge before you may Temper.
 
-# If Your Forge Position Is Occupied
+#### If Your Forge Position Is Occupied
 
 If another player's Stone now holds your previous Forge position, choose one:
 
@@ -234,7 +234,7 @@ If another player's Stone now holds your previous Forge position, choose one:
 | Wait in Stasis            | Remain in Stasis another round. Attempt to return next Autumn. No action required.                                                                                            |
 | Declare Stasis Opposition | Challenge the occupying Stone during Step 2: Opposition. Follows all standard Opposition rules, but with a different outcome (position swap, not send-to-Stasis). See Step 2. |
 
-# Stasis Opposition outcomes:
+#### Stasis Opposition outcomes:
 
 | RESULT           | OUTCOME                                                                                                                                                                               |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -243,25 +243,25 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
 
-# 2️⃣⚔️ Opposition
+### 2️⃣⚔️ Opposition
 
 An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
 
-# How to Declare an Opposition:
+#### How to Declare an Opposition:
 
 - **Pay the entry fee:** Pay the bank Reagents equal to the Defender's Protective Ward. No Ward = no fee.
 - **Cards in play:** All Spread cards participate automatically. You may also contribute Hand cards (discarded after use). All active Arcanum effects apply.
 - **Roll:** Both players roll their Zodiac Dice and place them on their Sign.
 - **Calculate Alignment Points:** Total all Aspect matches from every source in play. Highest score wins. On a tie, both players reroll; repeat until resolved.
 
-# Outcomes
+#### Outcomes
 
 | RESULT          | OUTCOME                                                                                                                                                                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Challenger Wins | Defender's Stone moves to the nearest ❄️ Stasis zone. Protective Wards discarded. Crucible Card remains Fired. Challenger cannot challenge same Defender again this round. |
 | Defender Wins   | Stone stays in the Forge. Challenger is Exhausted — cannot challenge the same Defender again this round.                                                                   |
 
-# Multiple Oppositions Against the Same Stone
+#### Multiple Oppositions Against the Same Stone
 
 More than one player may challenge the same Forging Stone in the same round. Resolve each Opposition fully before the next is declared, in clockwise order from the previous Challenger.
 
@@ -276,7 +276,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 </div>
 
-# 3️⃣🔨 Temper the Stone
+### 3️⃣🔨 Temper the Stone
 
 A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
 
@@ -286,11 +286,11 @@ A Stone that has been Forging since the previous round and has survived all Oppo
 
 ⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
 
-# 4️⃣🔥 Fire the Stone
+### 4️⃣🔥 Fire the Stone
 
 If you have an Active Crucible Card whose Alchemical Formula you have satisfied, you may Fire your Stone into the Forge this Autumn.
 
-# How to Fire
+#### How to Fire
 
 - **Confirm Alignment:** Show your Spread satisfies the Crucible Card's Alignment requirement.
 - **Pay the Reagents:** Discard the required Reagents to the supply.
@@ -300,7 +300,7 @@ If you have an Active Crucible Card whose Alchemical Formula you have satisfied,
 
 ⚠️ **Important:** You cannot Fire if your Stone is currently Forging or in Stasis. Your Stone must be in a Mantle Ring position (0, 2, 4, or 6).
 
-# Alchemical Formula
+#### Alchemical Formula
 
 Each Crucible Card shows its Alchemical Formula; two requirements you must satisfy before Firing your Stone:
 
@@ -310,7 +310,7 @@ Each Crucible Card shows its Alchemical Formula; two requirements you must satis
 | Reagents                            | Specific Reagent types and quantities to discard when Firing, listed on the card.                                                                 |
 | Alignment                           | A precise card configuration in your Spread - specified by suit, planet, rank, or a combination. Must be confirmed before the Stone can be Fired. |
 
-# Protective Wards in the Forge
+#### Protective Wards in the Forge
 
 Ward Reagents placed beside your Stone on the 🛡️ symbol follow different rules from Wards placed on Crucible Cards:
 
@@ -319,23 +319,23 @@ Ward Reagents placed beside your Stone on the 🛡️ symbol follow different ru
 - **Temper successfully:** Remaining Wards are burned and returned to the supply — not recovered.
 
 
-# PHASE 4: ⛰️ WINTER
+## PHASE 4: ⛰️ WINTER
 
-# Final Actions & Reset
+### Final Actions & Reset
 
 Winter closes the Cosmic Age. Complete all steps below in order before passing the Agekeeper's Key.
 
 <div class="action-flow action-flow--static" data-flow-id="winter-flow" data-locale="en"><p class="action-flow__intro">Winter ends the Cosmic Age. Required steps must happen; Offering and Wager are optional.</p><ol class="action-flow__tree"><li class="action-flow__node action-flow__node--group" data-node-id="winter-sequence"><div class="action-flow__node-head"><span class="action-flow__node-label">Winter sequence</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--required" data-node-id="unlock"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">1. Card Unlock</span></div><p class="action-flow__body">All players may return locked Spread cards to hand.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="offering"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">2. Offering to the Age (optional)</span></div><p class="action-flow__body">Discard cards meeting the threshold to gain a boon from the Cosmic Age.</p></li><li class="action-flow__node action-flow__node--optional" data-node-id="wager"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">3. Fateful Wager (optional)</span></div><p class="action-flow__body">Wager Spread cards against the Fates for a chance at powerful rewards.</p></li><li class="action-flow__node action-flow__node--required" data-node-id="limits"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">4. Enforce Card Limits</span></div><p class="action-flow__body">Discard down to hand and Spread limits before the next Age.</p></li><li class="action-flow__node action-flow__node--required" data-node-id="reset"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--required">Required</span><span class="action-flow__node-label">5. Reset deck &amp; pass Key</span></div><p class="action-flow__body">Shuffle the Common Deck. Pass the Agekeeper Key clockwise.</p></li></ol></li></ol></div>
 
-# 1️⃣ Card Unlock:
+### 1️⃣ Card Unlock:
 
 Cards are now unlocked. Move cards freely between your Hand and Spread before taking other actions.
 
-# 2️⃣ Offering to the Age
+### 2️⃣ Offering to the Age
 
 The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent refining boost for the full following round.
 
-# How to Call the Offering:
+#### How to Call the Offering:
 
 | ACCEPTING OFFERINGS |                  |
 | ------------------- | ---------------- |
@@ -352,7 +352,7 @@ The Agekeeper convenes all Alchemists to make a collective Offering to the concl
 
 ⚠️ **Important:** There is no partial success. If the combined RP does not meet the Threshold, no player earns the reward — regardless of individual contribution.
 
-# The Reward: Cauldron Catalyst
+#### The Reward: Cauldron Catalyst
 
 A Cauldron Catalyst grants 2-for-1 Reagent refining for the Cauldron it is placed in, for the full following round. When you would normally refine 1 Reagent by meeting the Threshold, you receive 2 instead. The Threshold still applies as normal. Only one Catalyst may be active per Cauldron at a time.
 
@@ -367,11 +367,11 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** The Cauldron Catalyst must be
 
 </div>
 
-# 3️⃣ Fateful Wager
+### 3️⃣ Fateful Wager
 
 Before the round ends, any player may wager cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly, and your wager is doubled. Guess wrong, and it is lost to the Fates.
 
-# How to Place a Wager:
+#### How to Place a Wager:
 
 - **Choose a Sign:** Declare any Zodiac Sign as your prediction for the next Cosmic Age.
 - **Commit your stake:** Place any number of cards face down in front of you. Place your Meeple on top to identify your bet. You may wager cards from your Spread or Hand.
@@ -384,11 +384,11 @@ Before the round ends, any player may wager cards on a prediction: which Zodiac 
 | Correct: Sign matches          | Your wagered cards are doubled and returned to you. |
 | Incorrect: Sign does not match | Your wagered cards are lost to the Fates.           |
 
-# 4️⃣ Enforce Card Limits & Reset
+### 4️⃣ Enforce Card Limits & Reset
 
 Before passing the Agekeeper's Key, enforce card limits and prepare the board for the next Age.
 
-# Card Limits:
+#### Card Limits:
 
 | CARD LIMITS |                       |                                                                                               |
 | ----------- | --------------------- | --------------------------------------------------------------------------------------------- |
@@ -397,7 +397,7 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | Hand        | 5 cards               | Discard excess cards of your choice down to 5.                                                |
 | Arcanum     | Specialist cards only | All Standard Major Arcana cards must be returned to the Common Deck. Specialist cards remain. |
 
-# 5️⃣ Reset Sequence:
+### 5️⃣ Reset Sequence:
 
 - **Shuffle the Common Deck:** The Agekeeper collects all discarded Common Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
 - **Pass the Agekeeper's Key:** The Agekeeper passes the Key clockwise to the next player, who becomes the new Agekeeper.

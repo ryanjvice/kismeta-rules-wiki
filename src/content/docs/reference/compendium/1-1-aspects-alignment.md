@@ -5,7 +5,7 @@ description: "Compendium — 1.1 ASPECTS & ALIGNMENT"
 
 Aspects are Zodiac Signs, Planets, and Element/Card Suit pairings. Aspects appear on the Great Year board and on the cards. When two sources share a matching Aspect, it is called an Alignment. Aspect Alignment is the game's primary resource engine, generating larger Harvests, satisfying your Crucible Card requirements, and determining your performance in Oppositions, among other purposes.
 
-# ASPECTS
+#### ASPECTS
 
 There are three Aspect types, each found across all three sources:
 
@@ -31,7 +31,7 @@ Each Element is tied to one Common Card Suit, both sharing the same color.
 | Water   | Cups      | Blue   |
 | Earth   | Pentacles | Green  |
 
-# ALIGNMENT
+#### ALIGNMENT
 
 An Alignment occurs when two sources share an Aspect. When Alignments are scored, the result is called Alignment Points. One source is always the primary reference, typically the current Cosmic Age or Opposition Age, and all other sources are compared against it.
 
@@ -42,7 +42,7 @@ An Alignment occurs when two sources share an Aspect. When Alignments are scored
 | Element    | +1                 |
 | None       | 0                  |
 
-# ALIGNMENT POINTS
+#### ALIGNMENT POINTS
 
 When sources are compared to the primary source, each matching source earns Alignment Points based on its Highest-Matching Aspect. Alignment Points are used in two ways:
 

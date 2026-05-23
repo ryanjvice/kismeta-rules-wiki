@@ -20,7 +20,7 @@ Um Duelo permite desafiar um rival para roubar uma carta do Spread dele durante 
 ⚙️ **Modificador de Modo de Jogo: (Magnus Alchemist)** Se estiver desalinhado com o alvo ao iniciar um Duelo, adicione +1 à rolagem antes de comparar. O Defensor não recebe bônus. Veja [Preparação — Magnus Alchemist](/pt-br/play/setup/#️⃣-magnus-alchemist-maestria).
 
 </div>
-# EXEMPLO: Um Duelo
+#### EXEMPLO: Um Duelo
 Você desafia um rival e mira o Rei de Copas no Spread dele.
 Você oferece um 5 de Paus como Ante Card.
 A rolagem:

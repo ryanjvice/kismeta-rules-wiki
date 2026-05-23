@@ -239,20 +239,6 @@ function applySeeLinks(text) {
   return result;
 }
 
-function demoteHeadings(body, levels = 1) {
-  const prefix = '#'.repeat(levels);
-  return body
-    .split('\n')
-    .map((line) => {
-      const m = line.match(/^(#{1,6})\s+/);
-      if (m && m[1].length > 1) {
-        return prefix + line.slice(m[1].length);
-      }
-      return line;
-    })
-    .join('\n');
-}
-
 function injectCrucibleDeckBuilds(body, locale = 'en') {
   if (!body.includes(CRUCIBLE_DECK_PLACEHOLDER)) return body;
   const html = renderCrucibleDeckHtml(locale, 'setup-crucible');
@@ -278,7 +264,7 @@ description: ${JSON.stringify(description)}
 `;
   const notice = DRAFT_NOTICES[slug] || '';
   const withContent = injectAllContent(body, 'en');
-  const wrapped = wrapGameModes(demoteHeadings(withContent, 1));
+  const wrapped = wrapGameModes(withContent);
   const beforeFix = countHeadingsAfterHtmlClose(wrapped);
   const processed = applySeeLinks(ensureBlankLineAfterHtmlBlocks(wrapped));
   const afterFix = countHeadingsAfterHtmlClose(processed);
@@ -453,6 +439,74 @@ function main() {
 function patchPtBrContent() {
   patchPtBrSetupCrucible();
   patchPtBrRoundPages();
+  alignPtBrHeadingLevels();
+}
+
+/** Match pt-br heading levels to English counterparts (for Starlight TOC). */
+function alignPtBrHeadingLevels() {
+  const roots = ['learn', 'play', 'reference'];
+  for (const root of roots) {
+    const enDir = path.join(OUT, root);
+    if (!fs.existsSync(enDir)) continue;
+    walkMdFiles(enDir, (enRel) => {
+      const enFile = path.join(OUT, enRel);
+      const ptRel = path.join('pt-br', enRel);
+      const ptFile = path.join(OUT, ptRel);
+      if (!fs.existsSync(ptFile)) return;
+
+      const enRaw = fs.readFileSync(enFile, 'utf8');
+      const ptRaw = fs.readFileSync(ptFile, 'utf8');
+      const en = readPageFrontmatter(enRaw);
+      const pt = readPageFrontmatter(ptRaw);
+      const aligned = alignHeadingLevelsFromEn(en.body, pt.body);
+      if (aligned !== pt.body) {
+        fs.writeFileSync(ptFile, pt.fm + aligned, 'utf8');
+      }
+    }, root);
+  }
+}
+
+function walkMdFiles(dir, onFile, relPrefix) {
+  for (const name of fs.readdirSync(dir)) {
+    const full = path.join(dir, name);
+    const rel = `${relPrefix}/${name}`.replace(/\\/g, '/');
+    if (fs.statSync(full).isDirectory()) {
+      walkMdFiles(full, onFile, rel);
+    } else if (name.endsWith('.md')) {
+      onFile(rel);
+    }
+  }
+}
+
+function alignHeadingLevelsFromEn(enBody, ptBody) {
+  const enLines = enBody.split('\n');
+  const ptLines = ptBody.split('\n');
+
+  const enHeadings = enLines
+    .map((line, lineIndex) => {
+      const m = line.match(/^(#{1,6})\s+/);
+      return m ? { lineIndex, level: m[1].length } : null;
+    })
+    .filter(Boolean);
+
+  const ptHeadings = ptLines
+    .map((line, lineIndex) => {
+      const m = line.match(/^(#{1,6})\s+(.*)/);
+      return m ? { lineIndex, text: m[2] } : null;
+    })
+    .filter(Boolean);
+
+  if (enHeadings.length !== ptHeadings.length) {
+    return ptBody;
+  }
+
+  for (let i = 0; i < enHeadings.length; i++) {
+    const { level } = enHeadings[i];
+    const { lineIndex, text } = ptHeadings[i];
+    ptLines[lineIndex] = `${'#'.repeat(level)} ${text}`;
+  }
+
+  return ptLines.join('\n');
 }
 
 function readPageFrontmatter(raw) {

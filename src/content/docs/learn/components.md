@@ -3,7 +3,7 @@ title: "Components"
 description: "Everything in the box."
 ---
 
-# In the Box
+## In the Box
 
 **Board & Cards**
 

@@ -87,6 +87,17 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 >
 	{intro && <p class="action-flow__intro">{intro}</p>}
 
+	<div class="action-flow__detail" data-flow-detail hidden>
+		<p data-detail-body></p>
+		<p class="action-flow__condition" data-detail-condition hidden></p>
+		<p class="action-flow__mode-note" data-detail-mode hidden></p>
+		<a class="action-flow__learn-more" data-detail-learn href={learnBase} target="_blank" rel="noopener">
+			{labels.readMore}
+		</a>
+	</div>
+
+	<p class="action-flow__hint">{labels.pickPrompt}</p>
+
 	{isSummer ? (
 		<div class="action-flow__summer" data-summer-root>
 			<div class="action-flow__groups" role="group" aria-label={localize(flow.root.label, locale)}>
@@ -174,17 +185,6 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 			))}
 		</ol>
 	)}
-
-	<p class="action-flow__hint">{labels.pickPrompt}</p>
-
-	<div class="action-flow__detail" data-flow-detail hidden>
-		<p data-detail-body></p>
-		<p class="action-flow__condition" data-detail-condition hidden></p>
-		<p class="action-flow__mode-note" data-detail-mode hidden></p>
-		<a class="action-flow__learn-more" data-detail-learn href={learnBase} target="_blank" rel="noopener">
-			{labels.readMore}
-		</a>
-	</div>
 </div>
 
 <script>

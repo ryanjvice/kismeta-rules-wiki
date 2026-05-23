@@ -5,7 +5,7 @@ description: "Compêndio — 1.6 REAGENTES"
 
 Reagentes são os combustíveis alquímicos concentrados necessários para a Great Work. Enquanto Common Cards representam potencial bruto do cosmos, Reagentes são a energia refinada para "abastecer a Forja" e avançar sua Philosopher's Stone pelo Crucible.
 
-# QUATRO REAGENTES
+#### QUATRO REAGENTES
 Há quatro tipos, cada um refinado de um naipe específico de Common Cards:
 
 | REAGENTE | NAIPE PARA REFINAR | CALDEIRÃO |
@@ -15,7 +15,7 @@ Há quatro tipos, cada um refinado de um naipe específico de Common Cards:
 | Aqua Regia | Copas | Azul |
 | Vitriol | Ouros | Verde |
 
-# REFINANDO REAGENTES
+#### REFINANDO REAGENTES
 Refinamento é trocar cartas por uma ficha de Reagente. Pode fazer quantas vezes quiser na Fase 2: Verão.
 
 | Nº DE COALS NO CALDEIRÃO | LIMIAR RP (Por naipe) |
@@ -32,7 +32,7 @@ Refinamento é trocar cartas por uma ficha de Reagente. Pode fazer quantas vezes
 
 💡 **Dica:** Cada Molten Coal em um Caldeirão reduz permanentemente seu limiar em 5 RP. Não podem ser movidos após colocados. Escolha com sabedoria.
 
-# EXEMPLO: Refinando um Reagente
+#### EXEMPLO: Refinando um Reagente
 Você quer refinar 1 Reagente Sulphur (Vermelho).
 Seu Caldeirão Vermelho tem 2 Molten Coals, reduzindo o limiar para 20 RP.
 Suas cartas:

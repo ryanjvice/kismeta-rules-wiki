@@ -7,12 +7,12 @@ Astral Houses are permanent structures built directly on the Zodiac Wheel of the
 
 - ⚠️ Important: Only one player may build an Astral House on any given Sign. However, Astral Houses do not prevent other players from placing their Meeple on that Sign if they roll it as their Zodiac Sign. Players may still use their Zodiac Sign to collect Bonus Harvest cards or in any Alignment.
 
-# BUILDING AN ASTRAL HOUSE
+#### BUILDING AN ASTRAL HOUSE
 
 - **Cost:** Pay 2 Common Cards sharing the Sign’s Planet.
 - **Placement:** Place your 🏰 Astral House token on the 🏰 symbol on the Sign where your Meeple currently stands. Once placed, the House is permanent and cannot be moved.
 
-# WHAT AN ASTRAL HOUSE DOES
+#### WHAT AN ASTRAL HOUSE DOES
 
 An Astral House on a Sign provides three permanent benefits, each operating independently.
 

@@ -5,7 +5,7 @@ description: "Compêndio — 1.14 APOSTA FATÍDICA"
 
 No fim de cada rodada, Alquimistas podem apostar em um Signo do Zodíaco para prever a próxima Era Cósmica. Palpites corretos rendem recompensas; incorretos perdem a aposta para as Fates.
 
-# FAZENDO UMA APOSTA
+#### FAZENDO UMA APOSTA
 * Aposte quantas cartas quiser em um único Signo do Zodíaco.
 * Coloque seu Meeple sobre as cartas para rastrear apostas de cada jogador.
 * Não pode apostar Major Arcana do Arcanum.

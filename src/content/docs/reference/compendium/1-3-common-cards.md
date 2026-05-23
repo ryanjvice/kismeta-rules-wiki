@@ -5,7 +5,7 @@ description: "Compendium — 1.3 COMMON CARDS"
 
 The Common Deck is your main tool during the Great Year, with 134 cards: 112 Minor Arcana, the building blocks of the Great Work, and 22 Major Arcana cards, with powerful one-time effects. Common cards are essential for activating Crucible Cards, Refining Reagents, executing Alignments, and protecting your Stone in the Forge.
 
-# MAJOR ARCANA CARDS
+#### MAJOR ARCANA CARDS
 
 Types of Major Arcana Cards:
 
@@ -14,7 +14,7 @@ Types of Major Arcana Cards:
   - ⚠️ Important: When a Specialist card is drawn, you must buy it immediately or discard it. You cannot hold it in your Hand and purchase it later.
 - **Standard Cards:** There are 11 Standard Major Arcana Cards. Each has a powerful one-time effect applied to your Arcanum zone, resolved by following the card’s directions, then discarded at the round’s end.
 
-# MINOR ARCANA CARDS
+#### MINOR ARCANA CARDS
 
 Traits of a Minor Arcana Card:
 
@@ -24,13 +24,13 @@ Traits of a Minor Arcana Card:
 - **Planet:** Each card is assigned a Planet.
 - **Card Effects:** Common Cards carry special effects that activate under specific conditions. See Common Card Effects below.
 
-# CARD SETS, RANK POINTS & ALCHEMICAL ALIGNMENTS
+#### CARD SETS, RANK POINTS & ALCHEMICAL ALIGNMENTS
 
 - **Card Sets:** Poker-style groupings of Common Cards (Pairs, Three Of A Kind, Flushes, Straights, etc.) collected in the Spread to fulfill Crucible Codex Formulae, Alignments, etc.
 - **Rank Points:** Each card’s numeric Rank. Add these ranks together to find the Total Rank Sum of a card set, used to refine Reagents, and in other areas of the game.
 - **Alchemical Alignments** are precise card configurations that an Alchemist must achieve in their Spread to satisfy part of an Alchemical Formula, found on the Crucible Cards.
 
-# HAND, SPREAD & ARCANUM: Managing Your Cards
+#### HAND, SPREAD & ARCANUM: Managing Your Cards
 
 You manage your cards across three main zones: the Spread, the Hand, and the Arcanum.
 
@@ -38,7 +38,7 @@ You manage your cards across three main zones: the Spread, the Hand, and the Arc
 - **Hand: (Hidden; Inactive Effects)** Up to 5 private cards are hidden from opponents. Hand cards may be used alongside Spread cards for Reagent Refinement; used Hand cards are discarded. Hand cards may also contribute to an Opposition, but are discarded after the Opposition resolves, regardless of outcome. These cards can’t be used for Duels, Crucible, Alignments, Trades, Wagers, or Houses.
 - **Arcanum: (Visible; Active Major Arcana Cards)** Any active Major Arcana cards. Standard cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Specialist cards must be purchased and can be added in up to two at a time.
 
-# COMMON CARD EFFECTS
+#### COMMON CARD EFFECTS
 
 Common Cards have special effects that activate under specific conditions and stay in your Spread. They are not discarded after use and can be reused as specified.
 
