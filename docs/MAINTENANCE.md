@@ -57,7 +57,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ### Navigation & chrome
 
-- **Top tabs** (Learn / Play / Reference / Glossary)  
+- **Top tabs** (Learn / Play / Guided / Reference / Glossary)  
   `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.*` · styles: `src/styles/custom.css` (`.tab-nav`)
 
 - **Game mode toggles** (Quickplay / Magnus)  
@@ -231,7 +231,42 @@ Lines with ⚙️ in the guide are converted during sync to:
 
 ---
 
-## Guided Play (step-by-step setup)
+## Game tables (flat reference tables)
+
+Word-exported wide tables are replaced with JSON + HTML injection during sync.
+
+| What | Where |
+| ---- | ----- |
+| Table data | [`src/data/tables/`](../src/data/tables/) (`harvest-order.json`, `round-at-a-glance.json`) |
+| Registry (Astro embeds) | [`src/data/content-registry.ts`](../src/data/content-registry.ts) |
+| HTML renderers | [`scripts/render-content-html.mjs`](../scripts/render-content-html.mjs) — `stepList`, `seasonCards` |
+| Guided static embed | [`src/components/GameTableEmbed.astro`](../src/components/GameTableEmbed.astro) |
+| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.game-table*` |
+
+**Guide placeholders:** `<!-- TABLE:harvest-order -->`, `<!-- TABLE:round-at-a-glance -->` in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). Do not paste mega-tables back into the guide.
+
+**Phase 2 candidates** (still inline in the guide): Offering threshold grid, Duel/Gambit outcome tables, card limits matrix, harvest bonus example, Cosmic Ages table in the appendix.
+
+---
+
+## Action flows (branching season summaries)
+
+Summer, Autumn, and Winter use decision-tree JSON — not flat markdown rows.
+
+| What | Where |
+| ---- | ----- |
+| Flow data | [`src/data/flows/`](../src/data/flows/) (`summer-flow.json`, `autumn-flow.json`, `winter-flow.json`) |
+| Static rules HTML | [`scripts/render-content-html.mjs`](../scripts/render-content-html.mjs) → `decisionTree` |
+| Interactive Guided UI | [`src/components/ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro) |
+| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.action-flow*` |
+
+**Guide placeholders:** `<!-- FLOW:summer-flow -->`, `<!-- FLOW:autumn-flow -->`, `<!-- FLOW:winter-flow -->`.
+
+**When adding branches:** Edit the flow JSON `children` array; link detail rules via `learnMoreHash` on leaf nodes (compendium / round-overview anchors), not by inlining every grid in the tree.
+
+---
+
+## Guided Play (setup + first Cosmic Age)
 
 Interactive walkthrough for new players at the table — **not** synced from the guide.
 
@@ -240,17 +275,22 @@ Interactive walkthrough for new players at the table — **not** synced from the
 | Step copy (EN + pt-br) | [`src/data/guided-steps.ts`](../src/data/guided-steps.ts) |
 | Stepper UI + progress | [`src/components/GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro) |
 | Pages | [`src/content/docs/play/guided.mdx`](../src/content/docs/play/guided.mdx), [`pt-br/play/guided.mdx`](../src/content/docs/pt-br/play/guided.mdx) |
-| Chrome strings | [`src/content/i18n/en.json`](../src/content/i18n/en.json) (`guided.*` keys) |
+| Chrome strings | [`src/content/i18n/en.json`](../src/content/i18n/en.json) (`guided.*`, `guided.phase.*`) |
 | Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.guided-play*` |
+| Top tab | [`src/components/TabNav.astro`](../src/components/TabNav.astro) → **Guided** |
 | Sidebar | [`astro.config.mjs`](../astro.config.mjs) → Play → **Guided Play** |
 
-**Sync safety:** `play/guided.mdx` is listed in `PRESERVED_DOC_PATHS` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) so `npm run sync` does not delete it when rebuilding `play/`.
+**Flow (17 content steps + completion screen):** Components → Setup I–VI → Round intro → Spring 1–5 → Summer / Autumn / Winter (in-step `ActionFlowGuide`) → Round end → completion CTA to Round at a Glance.
 
-**When to update:** If you change **Components** or **Setup** in `Kismeta_GameGuide.md` (via sync), review matching steps in `guided-steps.ts` so summaries and checklists stay accurate.
+**Embeds:** `crucible-deck` (Setup IV), `harvest-order` (Spring 3), `summer-flow` / `autumn-flow` / `winter-flow` (seasonal steps).
 
-**Game mode:** The mode picker writes `kismeta-game-modes` in `localStorage` (same key as [`GameModeToggle.astro`](../src/components/GameModeToggle.astro)). Progress is stored separately as `kismeta-guided-progress`.
+**Progress:** `kismeta-guided-progress` with `GUIDED_PROGRESS_VERSION` (currently **2**). Bumping the version invalidates saved progress from older builds.
 
-**Future (post-MVP):** Round phases (Spring 1–5, Summer, Autumn, Winter) from `round-overview.md` — extend `guided-steps.ts` and the stepper; see the `TODO` comment in that file.
+**Sync safety:** `play/guided.mdx` is in `PRESERVED_DOC_PATHS` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs).
+
+**When to update:** After changing **Components**, **Setup**, or **Round** sections in `Kismeta_GameGuide.md`, review matching steps in `guided-steps.ts`.
+
+**Game mode:** The mode picker writes `kismeta-game-modes` in `localStorage` (same key as [`GameModeToggle.astro`](../src/components/GameModeToggle.astro)). `ActionFlowGuide` reads mode for Quickplay/Magnus callouts.
 
 ---
 
@@ -268,6 +308,10 @@ Card counts per mode and player count live in one place — **not** in the Word-
 **Guide source:** [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) § IV must keep the placeholder `<!-- CRUCIBLE_DECK_BUILDS -->` (do not re-paste the old multi-column table from Word).
 
 **When counts change:** Edit `crucible-deck-builds.json`, then `npm run sync` (regenerates EN Setup HTML and patches pt-br Setup if still using the legacy table). Re-run `npm run sync:pt` only for surrounding Setup prose — the translate script preserves `<div class="crucible-deck">` blocks.
+
+**Optional cleanup:** Crucible could move to `<!-- TABLE:crucible-deck -->` + `tables/crucible-deck.json` for one pipeline; low priority while the dedicated renderer works.
+
+**Content injection:** [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) → `injectAllContent()` replaces `TABLE:*`, `FLOW:*`, and `<!-- CRUCIBLE_DECK_BUILDS -->`. pt-br round pages are patched by `patchPtBrRoundPages()` when legacy tables remain.
 
 ---
 

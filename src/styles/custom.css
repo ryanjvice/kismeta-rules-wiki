@@ -744,3 +744,235 @@ main:has(.kismeta-lore) h1#_top,
 		display: block !important;
 	}
 }
+
+/* Game tables (season cards, step lists) */
+.game-table {
+	margin: 1.25rem 0;
+}
+
+.game-table__intro {
+	margin: 0 0 1rem;
+	line-height: 1.55;
+	color: var(--sl-color-gray-2);
+}
+
+.game-table__season-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.game-table__season-card {
+	padding: 1rem 1.1rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--sl-color-hairline);
+	background: var(--sl-color-bg);
+}
+
+.game-table__season-header {
+	margin-bottom: 0.5rem;
+}
+
+.game-table__season-icon {
+	font-size: 1.35rem;
+	margin-right: 0.35rem;
+}
+
+.game-table__season-title {
+	margin: 0;
+	font-family: var(--kismeta-font-heading);
+	font-size: 1.05rem;
+}
+
+.game-table__season-subtitle {
+	margin: 0.2rem 0 0;
+	font-size: 0.88rem;
+	color: var(--sl-color-gray-3);
+}
+
+.game-table__season-summary {
+	margin: 0;
+	line-height: 1.5;
+	font-size: 0.92rem;
+}
+
+.game-table__steps {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: harvest-step;
+}
+
+.game-table__step {
+	counter-increment: harvest-step;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+.game-table__step:last-child {
+	border-bottom: none;
+}
+
+.game-table__step::before {
+	content: counter(harvest-step) '.';
+	display: block;
+	font-family: var(--kismeta-font-heading);
+	font-weight: 700;
+	color: var(--sl-color-accent-high);
+	margin-bottom: 0.25rem;
+}
+
+.game-table__step-label {
+	font-weight: 600;
+}
+
+.game-table__step-body {
+	margin: 0.35rem 0 0;
+	line-height: 1.5;
+	font-size: 0.92rem;
+	color: var(--sl-color-gray-2);
+}
+
+/* Action flows (static rules pages + guided interactive) */
+.action-flow {
+	margin: 1.25rem 0;
+}
+
+.action-flow__intro {
+	margin: 0 0 1rem;
+	line-height: 1.55;
+}
+
+.action-flow__tree,
+.action-flow__children {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.action-flow__node {
+	margin: 0.5rem 0;
+}
+
+.action-flow__node-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.action-flow__node-label {
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.action-flow__badge {
+	font-size: 0.72rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	padding: 0.15rem 0.45rem;
+	border-radius: 0.25rem;
+}
+
+.action-flow__badge--required {
+	background: color-mix(in srgb, var(--sl-color-accent) 25%, transparent);
+	color: var(--sl-color-accent-high);
+}
+
+.action-flow__badge--optional {
+	background: var(--sl-color-gray-6);
+	color: var(--sl-color-gray-2);
+}
+
+.action-flow__badge--choice {
+	background: color-mix(in srgb, var(--sl-color-orange) 30%, transparent);
+	color: var(--sl-color-orange);
+}
+
+.action-flow__condition,
+.action-flow__body {
+	margin: 0.35rem 0 0;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--sl-color-gray-2);
+}
+
+.action-flow__branches {
+	display: grid;
+	gap: 0.75rem;
+	margin-top: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+}
+
+.action-flow__branch {
+	padding: 0.65rem;
+	border-radius: 0.4rem;
+	border: 1px dashed var(--sl-color-hairline);
+}
+
+.action-flow--interactive .action-flow__pick {
+	min-height: 44px;
+	width: 100%;
+	text-align: left;
+	padding: 0.65rem 0.85rem;
+	margin: 0.35rem 0;
+	border-radius: 0.4rem;
+	font-family: inherit;
+	font-size: 0.92rem;
+	cursor: pointer;
+	color: var(--sl-color-text);
+	background: var(--sl-color-bg);
+	border: 1px solid var(--sl-color-hairline);
+	transition: border-color 0.15s, background 0.15s;
+}
+
+.action-flow--interactive .action-flow__pick:hover {
+	border-color: var(--sl-color-accent);
+}
+
+.action-flow--interactive .action-flow__pick--active {
+	border-color: var(--sl-color-accent);
+	background: color-mix(in srgb, var(--sl-color-accent) 12%, var(--sl-color-bg));
+}
+
+.action-flow--interactive .action-flow__pick:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+.action-flow__detail {
+	margin-top: 0.75rem;
+	padding: 0.85rem 1rem;
+	border-radius: 0.4rem;
+	background: color-mix(in srgb, var(--sl-color-accent) 10%, var(--sl-color-bg));
+	border-left: 3px solid var(--sl-color-accent);
+}
+
+.action-flow__detail[hidden] {
+	display: none;
+}
+
+.action-flow__mode-note {
+	margin: 0.5rem 0 0;
+	font-size: 0.85rem;
+	font-style: italic;
+	color: var(--sl-color-gray-3);
+}
+
+.action-flow__learn-more {
+	display: inline-block;
+	margin-top: 0.65rem;
+	font-weight: 600;
+}
+
+@media print {
+	.action-flow details,
+	.action-flow__branch {
+		break-inside: avoid;
+	}
+
+	.action-flow--static .action-flow__tree {
+		display: block !important;
+	}
+}

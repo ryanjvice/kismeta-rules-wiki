@@ -1,0 +1,277 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import {
+	getFlow,
+	localize,
+	type ActionFlow,
+	type FlowId,
+	type FlowNode,
+} from '../data/content-registry';
+
+interface Props {
+	flowId: FlowId;
+}
+
+const { flowId } = Astro.props;
+const locale = Astro.currentLocale === 'pt-br' ? 'pt-br' : 'en';
+const flow = getFlow(flowId);
+const intro = localize(flow.intro, locale);
+const roundOverviewUrl = getRelativeLocaleUrl(locale, 'play/round-overview');
+const learnBase = flow.learnMoreHash
+	? `${roundOverviewUrl}#${flow.learnMoreHash}`
+	: roundOverviewUrl;
+
+const labels = {
+	required: locale === 'pt-br' ? 'Obrigatório' : 'Required',
+	optional: locale === 'pt-br' ? 'Opcional' : 'Optional',
+	choice: locale === 'pt-br' ? 'Escolha' : 'Choose',
+	readMore: locale === 'pt-br' ? 'Ler regras completas' : 'Read full rules',
+	pickPrompt:
+		locale === 'pt-br' ? 'Toque para ver o lembrete' : 'Tap an action for a quick reminder',
+};
+
+function flattenPicks(node: FlowNode, ancestors: string[] = []): Array<{
+	id: string;
+	path: string[];
+	label: string;
+	body: string;
+	condition: string;
+	kind: string;
+	learnHash?: string;
+	modeNotes: FlowNode['gameModeNote'];
+}> {
+	const path = [...ancestors, node.id];
+	const items: ReturnType<typeof flattenPicks> = [];
+	const label = localize(node.label, locale);
+	const body = localize(node.body, locale);
+	const condition = localize(node.condition, locale);
+
+	if (node.kind !== 'group' || (node.children?.length === 1 && node.id !== 'turn')) {
+		if (node.kind !== 'group') {
+			items.push({
+				id: node.id,
+				path: path.join('.'),
+				label,
+				body,
+				condition,
+				kind: node.kind,
+				learnHash: node.learnMoreHash,
+				modeNotes: node.gameModeNote,
+			});
+		}
+	}
+
+	for (const child of node.children ?? []) {
+		items.push(...flattenPicks(child, path));
+	}
+	return items;
+}
+
+/** Top-level groups for summer (craft / consort). */
+function topGroups(node: FlowNode): FlowNode[] {
+	return node.children ?? [];
+}
+
+const isSummer = flow.mode === 'playerTurn';
+const topLevel = isSummer ? topGroups(flow.root) : [flow.root];
+const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== 'group');
+---
+
+<div
+	class="action-flow action-flow--interactive"
+	data-flow-id={flowId}
+	data-flow-mode={flow.mode}
+	data-locale={locale}
+	data-learn-base={roundOverviewUrl}
+	data-labels={JSON.stringify(labels)}
+>
+	{intro && <p class="action-flow__intro">{intro}</p>}
+
+	{isSummer ? (
+		<div class="action-flow__summer" data-summer-root>
+			<div class="action-flow__groups" role="group" aria-label={localize(flow.root.label, locale)}>
+				{topLevel.map((group) => (
+					<div class="action-flow__group" data-group-id={group.id}>
+						<h3 class="action-flow__group-title">{localize(group.label, locale)}</h3>
+						<div class="action-flow__group-actions">
+							{(group.children ?? []).map((action) => (
+								<button
+									type="button"
+									class="action-flow__pick"
+									data-pick-id={action.id}
+									data-body={localize(action.body, locale)}
+									data-condition={localize(action.condition, locale)}
+									data-learn-hash={action.learnMoreHash ?? ''}
+									data-mode-notes={JSON.stringify(action.gameModeNote ?? {})}
+								>
+									{localize(action.label, locale)}
+								</button>
+							))}
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	) : (
+		<ol class="action-flow__tree action-flow__tree--guided">
+			{(flow.root.children ?? []).map((step) => (
+				<li class={`action-flow__node action-flow__node--${step.kind}`} data-node-id={step.id}>
+					<div class="action-flow__node-head">
+						{step.kind === 'required' && (
+							<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
+						)}
+						{step.kind === 'optional' && (
+							<span class="action-flow__badge action-flow__badge--optional">{labels.optional}</span>
+						)}
+						<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+					</div>
+					{step.condition && (
+						<p class="action-flow__condition">
+							<em>{localize(step.condition, locale)}</em>
+						</p>
+					)}
+					{step.body && <p class="action-flow__body">{localize(step.body, locale)}</p>}
+					{step.children && step.children.length > 0 && (
+						<div class="action-flow__branches">
+							{step.children.map((branch) => (
+								<div class="action-flow__branch">
+									<button
+										type="button"
+										class="action-flow__pick"
+										data-pick-id={branch.id}
+										data-body={localize(branch.body, locale)}
+										data-condition={localize(branch.condition, locale)}
+										data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
+									>
+										{localize(branch.label, locale)}
+									</button>
+									{branch.children?.map((sub) => (
+										<button
+											type="button"
+											class="action-flow__pick action-flow__pick--sub"
+											data-pick-id={sub.id}
+											data-body={localize(sub.body, locale)}
+											data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
+										>
+											{localize(sub.label, locale)}
+										</button>
+									))}
+								</div>
+							))}
+						</div>
+					)}
+					{step.learnMoreHash && (
+						<a
+							class="action-flow__learn-more"
+							href={`${roundOverviewUrl}#${step.learnMoreHash}`}
+							target="_blank"
+							rel="noopener"
+						>
+							{labels.readMore}
+						</a>
+					)}
+				</li>
+			))}
+		</ol>
+	)}
+
+	<p class="action-flow__hint">{labels.pickPrompt}</p>
+
+	<div class="action-flow__detail" data-flow-detail hidden>
+		<p data-detail-body></p>
+		<p class="action-flow__condition" data-detail-condition hidden></p>
+		<p class="action-flow__mode-note" data-detail-mode hidden></p>
+		<a class="action-flow__learn-more" data-detail-learn href={learnBase} target="_blank" rel="noopener">
+			{labels.readMore}
+		</a>
+	</div>
+</div>
+
+<script>
+	function getGuidedGameMode(): 'quickplay' | 'standard' | 'magnus' {
+		const raw = localStorage.getItem('kismeta-guided-progress');
+		if (raw) {
+			try {
+				const data = JSON.parse(raw);
+				if (['quickplay', 'standard', 'magnus'].includes(data.mode)) {
+					return data.mode;
+				}
+			} catch {
+				/* ignore */
+			}
+		}
+		const modes = localStorage.getItem('kismeta-game-modes');
+		if (modes) {
+			try {
+				const { quickplay, magnus } = JSON.parse(modes);
+				if (quickplay && !magnus) return 'quickplay';
+				if (magnus && !quickplay) return 'magnus';
+			} catch {
+				/* ignore */
+			}
+		}
+		return 'standard';
+	}
+
+	function initActionFlowGuides() {
+		document.querySelectorAll<HTMLElement>('.action-flow--interactive').forEach((root) => {
+			if (root.dataset.bound === 'true') return;
+			root.dataset.bound = 'true';
+
+			const labels = JSON.parse(root.dataset.labels || '{}') as {
+				readMore?: string;
+			};
+			const learnBase = root.dataset.learnBase || '';
+			const detail = root.querySelector<HTMLElement>('[data-flow-detail]')!;
+			const detailBody = root.querySelector<HTMLElement>('[data-detail-body]')!;
+			const detailCondition = root.querySelector<HTMLElement>('[data-detail-condition]')!;
+			const detailMode = root.querySelector<HTMLElement>('[data-detail-mode]')!;
+			const detailLearn = root.querySelector<HTMLAnchorElement>('[data-detail-learn]')!;
+
+			const showDetail = (btn: HTMLButtonElement) => {
+				root.querySelectorAll('.action-flow__pick--active').forEach((el) => {
+					el.classList.remove('action-flow__pick--active');
+				});
+				btn.classList.add('action-flow__pick--active');
+
+				const body = btn.dataset.body || '';
+				const condition = btn.dataset.condition || '';
+				const learnHash = btn.dataset.learnHash || '';
+				let modeNotes: Record<string, string | null> = {};
+				try {
+					modeNotes = JSON.parse(btn.dataset.modeNotes || '{}');
+				} catch {
+					/* ignore */
+				}
+
+				detailBody.textContent = body || btn.textContent?.trim() || '';
+				if (condition) {
+					detailCondition.hidden = false;
+					detailCondition.innerHTML = `<em>${condition}</em>`;
+				} else {
+					detailCondition.hidden = true;
+				}
+
+				const mode = getGuidedGameMode();
+				const note = modeNotes[mode];
+				if (note) {
+					detailMode.hidden = false;
+					detailMode.textContent = note;
+				} else {
+					detailMode.hidden = true;
+				}
+
+				detailLearn.href = learnHash ? `${learnBase}#${learnHash}` : learnBase;
+				detailLearn.textContent = labels.readMore || 'Read full rules';
+				detail.hidden = false;
+			};
+
+			root.querySelectorAll<HTMLButtonElement>('.action-flow__pick').forEach((btn) => {
+				btn.addEventListener('click', () => showDetail(btn));
+			});
+		});
+	}
+
+	document.addEventListener('astro:page-load', initActionFlowGuides);
+	initActionFlowGuides();
+</script>

@@ -9,6 +9,7 @@ import {
   CRUCIBLE_DECK_PLACEHOLDER,
   renderCrucibleDeckHtml,
 } from './render-crucible-deck-html.mjs';
+import { injectContentBlocks } from './render-content-html.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -258,6 +259,13 @@ function injectCrucibleDeckBuilds(body, locale = 'en') {
   return body.replace(CRUCIBLE_DECK_PLACEHOLDER, html);
 }
 
+/** TABLE:*, FLOW:*, and crucible placeholder injection. */
+function injectAllContent(body, locale = 'en') {
+  let out = injectContentBlocks(body, locale);
+  out = injectCrucibleDeckBuilds(out, locale);
+  return out;
+}
+
 function writePage(slug, title, description, body) {
   const dir = path.join(OUT, path.dirname(slug));
   fs.mkdirSync(dir, { recursive: true });
@@ -269,8 +277,8 @@ description: ${JSON.stringify(description)}
 
 `;
   const notice = DRAFT_NOTICES[slug] || '';
-  const withCrucible = injectCrucibleDeckBuilds(body, 'en');
-  const wrapped = wrapGameModes(demoteHeadings(withCrucible, 1));
+  const withContent = injectAllContent(body, 'en');
+  const wrapped = wrapGameModes(demoteHeadings(withContent, 1));
   const beforeFix = countHeadingsAfterHtmlClose(wrapped);
   const processed = applySeeLinks(ensureBlankLineAfterHtmlBlocks(wrapped));
   const afterFix = countHeadingsAfterHtmlClose(processed);
@@ -437,8 +445,22 @@ function main() {
 
   fs.mkdirSync(path.dirname(GLOSSARY_JSON), { recursive: true });
   fs.writeFileSync(GLOSSARY_JSON, JSON.stringify(glossaryTerms, null, 2), 'utf8');
-  patchPtBrSetupCrucible();
+  patchPtBrContent();
   console.log(`Wrote ${sections.length} sections, ${glossaryTerms.length} glossary terms.`);
+}
+
+/** Replace legacy pt-br tables with rendered HTML (setup crucible + round pages). */
+function patchPtBrContent() {
+  patchPtBrSetupCrucible();
+  patchPtBrRoundPages();
+}
+
+function readPageFrontmatter(raw) {
+  const fmMatch = raw.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
+  return {
+    fm: fmMatch ? fmMatch[0] : '',
+    body: raw.slice(fmMatch ? fmMatch[0].length : 0),
+  };
 }
 
 /** Replace legacy pt-br Setup IV tables with rendered crucible-deck HTML. */
@@ -449,10 +471,7 @@ function patchPtBrSetupCrucible() {
   let raw = fs.readFileSync(file, 'utf8');
   if (raw.includes('class="crucible-deck"')) return;
 
-  const fmMatch = raw.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
-  const fm = fmMatch ? fmMatch[0] : '';
-  let body = raw.slice(fm.length);
-
+  const { fm, body } = readPageFrontmatter(raw);
   const html = renderCrucibleDeckHtml('pt-br', 'setup-crucible');
   const replaced = body.replace(
     /Siga a tabela abaixo[\s\S]*?(?=\nDepois de comprar|\n# V\.)/,
@@ -466,6 +485,80 @@ function patchPtBrSetupCrucible() {
 
   fs.writeFileSync(file, fm + replaced, 'utf8');
   console.log('Patched pt-br/play/setup.md crucible deck section.');
+}
+
+/** Inject TABLE/FLOW blocks on pt-br round pages that still have legacy markdown tables. */
+function patchPtBrRoundPages() {
+  const pages = [
+    {
+      rel: 'pt-br/play/round-at-a-glance.md',
+      marker: 'class="game-table--season-cards"',
+      replace: /(\n##[^\n]*\n\n)(?:\|[^\n]*\n)+/,
+      insertAfterHeading: true,
+    },
+    {
+      rel: 'pt-br/play/round-overview.md',
+      marker: 'class="action-flow"',
+      patches: [
+        {
+          name: 'harvest',
+          re: /(\n###[^\n]*Colheita[^\n]*\n\n[\s\S]*?)(?:\|[^\n]*\n){4,}/,
+          placeholder: '<!-- TABLE:harvest-order -->',
+        },
+        {
+          name: 'summer',
+          re: /(\n###[^\n]*Verão[^\n]*\n\n[\s\S]*?)(?:\|[^\n]*\n){2,}/,
+          placeholder: '<!-- FLOW:summer-flow -->',
+        },
+        {
+          name: 'autumn',
+          re: /(\n###[^\n]*Outono[^\n]*\n\n[\s\S]*?)(?:\|[^\n]*\n){2,}/,
+          placeholder: '<!-- FLOW:autumn-flow -->',
+        },
+        {
+          name: 'winter',
+          re: /(\n###[^\n]*Inverno[^\n]*\n\n[\s\S]*?)(?:\|[^\n]*\n){2,}/,
+          placeholder: '<!-- FLOW:winter-flow -->',
+        },
+      ],
+    },
+  ];
+
+  for (const page of pages) {
+    const file = path.join(OUT, page.rel);
+    if (!fs.existsSync(file)) continue;
+
+    let raw = fs.readFileSync(file, 'utf8');
+    if (page.marker && raw.includes(page.marker)) continue;
+
+    const { fm, body } = readPageFrontmatter(raw);
+    let next = body;
+
+    if (page.insertAfterHeading && page.replace) {
+      const tableHtml = injectContentBlocks('<!-- TABLE:round-at-a-glance -->', 'pt-br');
+      next = next.replace(page.replace, `$1${tableHtml}\n\n`);
+    }
+
+    if (page.patches) {
+      for (const patch of page.patches) {
+        if (next.includes(patch.placeholder)) {
+          next = injectContentBlocks(next, 'pt-br');
+          continue;
+        }
+        const m = next.match(patch.re);
+        if (!m) continue;
+        const injected = injectContentBlocks(patch.placeholder, 'pt-br');
+        next = next.replace(patch.re, `$1\n\n${injected}\n\n`);
+      }
+    } else {
+      next = injectContentBlocks(next, 'pt-br');
+    }
+
+    if (next !== body) {
+      fs.writeFileSync(file, fm + next, 'utf8');
+      console.log(`Patched ${page.rel}`);
+    }
+  }
 }
 
 main();

@@ -1,0 +1,100 @@
+{
+	"id": "autumn-flow",
+	"mode": "fixedSequence",
+	"intro": {
+		"en": "Autumn follows a fixed sequence. The Agekeeper oversees the Forge; each player acts in turn order.",
+		"pt-br": "O Outono segue sequência fixa. O Guardião supervisiona a Forja; cada jogador age na ordem de turno."
+	},
+	"learnMoreHash": "phase-3-autumn",
+	"root": {
+		"id": "autumn-sequence",
+		"label": { "en": "Autumn procession", "pt-br": "Procissão do Outono" },
+		"kind": "group",
+		"children": [
+			{
+				"id": "leave-stasis",
+				"label": { "en": "1. Leave Stasis (if applicable)", "pt-br": "1. Sair da Estase (se aplicável)" },
+				"kind": "required",
+				"condition": {
+					"en": "Only if your Stone is in Stasis",
+					"pt-br": "Apenas se sua Pedra estiver em Estase"
+				},
+				"children": [
+					{
+						"id": "forge-open",
+						"label": { "en": "Forge spot open", "pt-br": "Vaga na Forja aberta" },
+						"kind": "choice",
+						"body": {
+							"en": "Return your Stone to the Forge. You may place a Ward on the spot.",
+							"pt-br": "Retorne sua Pedra à Forja. Você pode colocar uma Proteção na vaga."
+						}
+					},
+					{
+						"id": "forge-occupied",
+						"label": { "en": "Forge spot occupied", "pt-br": "Vaga na Forja ocupada" },
+						"kind": "choice",
+						"children": [
+							{
+								"id": "wait",
+								"label": { "en": "Wait — stay in Stasis", "pt-br": "Esperar — permanecer em Estase" },
+								"kind": "optional",
+								"body": {
+									"en": "Skip leaving Stasis this Autumn.",
+									"pt-br": "Pule sair da Estase neste Outono."
+								}
+							},
+							{
+								"id": "stasis-opposition",
+								"label": { "en": "Challenge — Stasis Opposition in step 2", "pt-br": "Desafiar — Oposição em Estase no passo 2" },
+								"kind": "optional",
+								"body": {
+									"en": "Declare Stasis Opposition when it is your turn in step 2.",
+									"pt-br": "Declare Oposição em Estase no seu turno no passo 2."
+								},
+								"learnMoreHash": "2-opposition-declarations"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "opposition",
+				"label": { "en": "2. Opposition declarations", "pt-br": "2. Declarações de Oposição" },
+				"kind": "required",
+				"body": {
+					"en": "Each player may declare Opposition against a rival's Stone on the Forge.",
+					"pt-br": "Cada jogador pode declarar Oposição contra a Pedra de um rival na Forja."
+				},
+				"learnMoreHash": "2-opposition-declarations"
+			},
+			{
+				"id": "temper",
+				"label": { "en": "3. Temper (if eligible)", "pt-br": "3. Temperar (se elegível)" },
+				"kind": "required",
+				"condition": {
+					"en": "Not if you just left Stasis this Autumn",
+					"pt-br": "Não se acabou de sair da Estase neste Outono"
+				},
+				"body": {
+					"en": "Spend Reagents to advance your Stone on the Forge track.",
+					"pt-br": "Gaste Reagentes para avançar sua Pedra na trilha da Forja."
+				},
+				"learnMoreHash": "3-temper"
+			},
+			{
+				"id": "fire",
+				"label": { "en": "4. Fire (if eligible)", "pt-br": "4. Forjar (se elegível)" },
+				"kind": "required",
+				"condition": {
+					"en": "Mantle Ring reached and formula met",
+					"pt-br": "Anel do Manto alcançado e fórmula cumprida"
+				},
+				"body": {
+					"en": "Complete the Great Work — place your Stone in the Mantle Ring.",
+					"pt-br": "Complete a Grande Obra — coloque sua Pedra no Anel do Manto."
+				},
+				"learnMoreHash": "4-fire-the-stone"
+			}
+		]
+	}
+}

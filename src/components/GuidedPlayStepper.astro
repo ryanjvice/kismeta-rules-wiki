@@ -1,10 +1,13 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import ActionFlowGuide from './ActionFlowGuide.astro';
 import CrucibleDeckBuilds from './CrucibleDeckBuilds.astro';
+import GameTableEmbed from './GameTableEmbed.astro';
 import {
 	getGuidedSteps,
 	GUIDED_CONTENT_STEP_COUNT,
 	type GameMode,
+	type GuidedPhase,
 	type GuidedStep,
 } from '../data/guided-steps';
 
@@ -44,6 +47,12 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 	data-round-url={roundAtGlanceUrl}
 	data-labels={JSON.stringify({
 		progress: t('guided.progress'),
+		progressPhase: t('guided.progressPhase'),
+		phaseSetup: t('guided.phase.setup'),
+		phaseSpring: t('guided.phase.spring'),
+		phaseSummer: t('guided.phase.summer'),
+		phaseAutumn: t('guided.phase.autumn'),
+		phaseWinter: t('guided.phase.winter'),
 		back: t('guided.back'),
 		next: t('guided.next'),
 		learnMore: t('guided.learnMore'),
@@ -118,7 +127,21 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			<div class="guided-play__body" data-step-body></div>
 			<ul class="guided-play__checklist" data-step-checklist hidden></ul>
 			<div class="guided-play__embed" data-step-embed hidden>
-				<CrucibleDeckBuilds variant="interactive" />
+				<div class="guided-play__embed-panel" data-embed-panel="crucible-deck" hidden>
+					<CrucibleDeckBuilds variant="interactive" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="harvest-order" hidden>
+					<GameTableEmbed tableId="harvest-order" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="summer-flow" hidden>
+					<ActionFlowGuide flowId="summer-flow" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="autumn-flow" hidden>
+					<ActionFlowGuide flowId="autumn-flow" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="winter-flow" hidden>
+					<ActionFlowGuide flowId="winter-flow" />
+				</div>
 			</div>
 			<p class="guided-play__learn-more-wrap" data-learn-more-wrap hidden>
 				<a class="guided-play__learn-more" data-learn-more href="#" target="_blank" rel="noopener">
@@ -156,6 +179,12 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 
 	type Labels = {
 		progress: string;
+		progressPhase: string;
+		phaseSetup: string;
+		phaseSpring: string;
+		phaseSummer: string;
+		phaseAutumn: string;
+		phaseWinter: string;
 		back: string;
 		next: string;
 		learnMore: string;
@@ -315,11 +344,26 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			}
 
 			const embedEl = root.querySelector<HTMLElement>('[data-step-embed]')!;
-			const showCrucible = step.embed === 'crucible-deck';
-			embedEl.hidden = !showCrucible;
-			if (showCrucible) {
+			const embedId = step.embed ?? '';
+			embedEl.hidden = !embedId;
+			root.querySelectorAll<HTMLElement>('[data-embed-panel]').forEach((panel) => {
+				panel.hidden = panel.dataset.embedPanel !== embedId;
+			});
+			if (embedId === 'crucible-deck') {
 				window.dispatchEvent(new CustomEvent('crucible-deck-refresh'));
 			}
+
+			const phaseLabel = (phase?: GuidedPhase) => {
+				if (!phase) return '';
+				const map: Record<GuidedPhase, string> = {
+					setup: labels.phaseSetup,
+					spring: labels.phaseSpring,
+					summer: labels.phaseSummer,
+					autumn: labels.phaseAutumn,
+					winter: labels.phaseWinter,
+				};
+				return map[phase] ?? '';
+			};
 
 			const learnWrap = root.querySelector<HTMLElement>('[data-learn-more-wrap]')!;
 			const learnLink = root.querySelector<HTMLAnchorElement>('[data-learn-more]')!;
@@ -331,9 +375,15 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 				learnWrap.hidden = true;
 			}
 
-			const progressText = labels.progress
+			let progressText = labels.progress
 				.replace('{current}', String(stepIndex))
 				.replace('{total}', String(stepCount));
+			if (step.phase && step.phaseStep != null && step.phaseTotal != null) {
+				progressText = labels.progressPhase
+					.replace('{phase}', phaseLabel(step.phase))
+					.replace('{current}', String(step.phaseStep))
+					.replace('{total}', String(step.phaseTotal));
+			}
 			setText('[data-progress-text]', progressText);
 
 			const bar = root.querySelector<HTMLElement>('[data-progress-fill]')!;
@@ -453,11 +503,7 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 				return;
 			}
 			stepIndex += 1;
-			if (stepIndex >= stepCount) {
-				showComplete();
-			} else {
-				renderStep();
-			}
+			renderStep();
 		});
 
 		root.querySelector<HTMLButtonElement>('[data-action="start-over"]')!.addEventListener(

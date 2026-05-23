@@ -1,0 +1,52 @@
+---
+import {
+	getTable,
+	localize,
+	type SeasonCardsTable,
+	type StepListTable,
+	type TableId,
+} from '../data/content-registry';
+
+interface Props {
+	tableId: TableId;
+}
+
+const { tableId } = Astro.props;
+const locale = Astro.currentLocale === 'pt-br' ? 'pt-br' : 'en';
+const table = getTable(tableId);
+const intro = localize(table.intro, locale);
+---
+
+{tableId === 'harvest-order' && (
+	<div class="game-table game-table--step-list" data-table-id={tableId} data-locale={locale}>
+		{intro && <p class="game-table__intro">{intro}</p>}
+		<ol class="game-table__steps">
+			{(table as StepListTable).steps.map((step) => (
+				<li class="game-table__step">
+					<span class="game-table__step-label">{localize(step.label, locale)}</span>
+					<p class="game-table__step-body">{localize(step.body, locale)}</p>
+				</li>
+			))}
+		</ol>
+	</div>
+)}
+
+{tableId === 'round-at-a-glance' && (
+	<div class="game-table game-table--season-cards" data-table-id={tableId} data-locale={locale}>
+		{intro && <p class="game-table__intro">{intro}</p>}
+		<div class="game-table__season-grid">
+			{(table as SeasonCardsTable).seasons.map((season) => (
+				<article class="game-table__season-card" data-season={season.id}>
+					<header class="game-table__season-header">
+						<span class="game-table__season-icon" aria-hidden="true">
+							{season.icon}
+						</span>
+						<h3 class="game-table__season-title">{localize(season.title, locale)}</h3>
+						<p class="game-table__season-subtitle">{localize(season.subtitle, locale)}</p>
+					</header>
+					<p class="game-table__season-summary">{localize(season.summary, locale)}</p>
+				</article>
+			))}
+		</div>
+	</div>
+)}

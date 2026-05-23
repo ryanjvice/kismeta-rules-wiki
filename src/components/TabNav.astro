@@ -7,6 +7,7 @@ const t = Astro.locals.t;
 const tabs = [
 	{ key: 'tab.learn', path: 'learn/lore' },
 	{ key: 'tab.play', path: 'play/round-at-a-glance' },
+	{ key: 'tab.guided', path: 'play/guided' },
 	{ key: 'tab.reference', path: 'reference/quick-reference' },
 	{ key: 'tab.glossary', path: 'glossary' },
 ] as const;
@@ -20,10 +21,13 @@ const learnHref = getRelativeLocaleUrl(locale, 'learn/lore');
 		tabs.map((tab) => {
 			const href = getRelativeLocaleUrl(locale, tab.path);
 			const matchPath = `/${tab.path.split('/')[0]}/`;
+			const isGuided = tab.path === 'play/guided';
 			const active =
 				pathname === '/' || pathname === `/${locale}/`
 					? href === learnHref
-					: pathname.includes(matchPath);
+					: isGuided
+						? pathname.includes('/play/guided')
+						: pathname.includes(matchPath) && !pathname.includes('/play/guided');
 			return (
 				<a href={href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
 					{t(tab.key)}
