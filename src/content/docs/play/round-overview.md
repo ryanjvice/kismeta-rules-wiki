@@ -41,7 +41,7 @@ The Agekeeper deals cards in the following order. All Bonus Cards are determined
 
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
-⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**.
+_⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**._
 
 | 💡 EXAMPLE: SCORPIO AGE |                                                 |                 |
 | ----------------------- | ----------------------------------------------- | --------------- |
@@ -63,7 +63,7 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 
-📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**.
+_📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**._
 
 
 # PHASE 2: ☀️ SUMMER
@@ -88,7 +88,7 @@ Your Crucible Codex holds four Formulae - one per card position (I–IV). Activa
 - **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron's RP Threshold permanently drops by 5. Coal cannot be moved once placed.
 - **Flip the Crucible Card face-up:** It is now Active, and its Alchemical Formula is revealed.
 
-⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
+_⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again._
 
 # 2️⃣ Build Astral Houses
 
@@ -110,6 +110,7 @@ Astral Houses are permanent structures built on the Zodiac Wheel. Each provides 
 _⚙️ **Game Mode Modifier (Quickplay):** Cost reduced to 1 card matching the Sign's Planet._
 
 </div>
+
 # 3️⃣ Refine Reagents
 
 Reagents are the fuels needed to Fire your Stone. Refine them by discarding matching-suit cards whose combined Rank Points (RP) meet your Cauldron's current Threshold. You may refine any number of times per turn, using cards from your Spread and/or Hand.
@@ -127,6 +128,7 @@ _💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard
 _⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified Threshold. Each Coal placed in any Cauldron reduces the cost for all Reagents regardless of color._
 
 </div>
+
 # 4️⃣ Trade
 
 Freely exchange resources with any rival during your turn.
@@ -144,6 +146,7 @@ Freely exchange resources with any rival during your turn.
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** Misaligned players must trade 2:1 in favor of the non-initiating player._
 
 </div>
+
 # 5️⃣ Duel
 
 Challenge a rival to steal a single card from their Spread. Only the Challenger pays an entry fee; the Defender does not.
@@ -165,6 +168,7 @@ Challenge a rival to steal a single card from their Spread. Only the Challenger 
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your target, add +1 to your dice roll. The Defender receives no bonus._
 
 </div>
+
 # 6️⃣ Gambit
 
 A Gambit lets you seize a rival's Active Crucible Card by proving you have already mastered its Alignment requirements - at the cost of one of your own. Gambits may only be declared during Phase 2: Summer, and only when your Spread fully satisfies the target card's complete Alignment requirement at the moment of declaration.
@@ -198,6 +202,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 
 </div>
+
 # PHASE 3: 🍂 AUTUMN
 
 # Conduct the Great Work
@@ -268,6 +273,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 ⚠️ **Important:** All Oppositions — including any Stasis Oppositions from Step 1 — are fully declared and resolved before any other Autumn actions proceed.
 
 </div>
+
 # 3️⃣🔨 Temper the Stone
 
 A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
@@ -360,6 +366,7 @@ A Cauldron Catalyst grants 2-for-1 Reagent refining for the Cauldron it is place
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** The Cauldron Catalyst must be placed in the Cauldron that matches the Element of the concluded Cosmic Age._
 
 </div>
+
 # 3️⃣ Fateful Wager
 
 Before the round ends, any player may wager cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly, and your wager is doubled. Guess wrong, and it is lost to the Fates.

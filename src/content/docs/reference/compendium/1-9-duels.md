@@ -22,6 +22,7 @@ A Duel lets you challenge a rival to steal a card from their Spread during Phase
 ⚙️ **Game Mode Modifier: (Magnus Alchemist)** If you are misaligned with your target when initiating a Duel, add +1 to your dice roll before comparing results. The Defender receives no bonus. See [Setup — Magnus Alchemist](/play/setup/#️⃣-magnus-alchemist-mastery).
 
 </div>
+
 # EXAMPLE: A Duel
 
 You challenge a rival and target the King of Cups in their Spread.

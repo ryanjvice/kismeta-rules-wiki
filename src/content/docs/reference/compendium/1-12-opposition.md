@@ -54,6 +54,7 @@ Certain card effects specifically modify Opposition outcomes. These effects may 
 ⚙️ **Game Mode Modifier: (Magnus Alchemist)** If you are Misaligned with the Defender at the moment of declaration, add +1 to your final Alignment Points total before comparing results. The Defender receives no bonus. See [Setup — Magnus Alchemist](/play/setup/#️⃣-magnus-alchemist-mastery).
 
 </div>
+
 # OUTCOMES
 
 - **Challenger Wins:** The Defender’s Stone is moved to the nearest ❄️ Stasis zone on the Mantle Ring. Their Protective Wards are discarded. Their Crucible Card remains Fired (face-up, turned sideways).

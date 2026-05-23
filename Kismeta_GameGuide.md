@@ -313,7 +313,7 @@ The Agekeeper deals cards in the following order. All Bonus Cards are determined
 
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
-⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**.
+_⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**._
 
 | 💡 EXAMPLE: SCORPIO AGE |                                                 |                 |
 | ----------------------- | ----------------------------------------------- | --------------- |
@@ -335,7 +335,7 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 
-📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**.
+_📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**._
 
 ---
 
@@ -361,7 +361,7 @@ Your Crucible Codex holds four Formulae - one per card position (I–IV). Activa
 - **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron's RP Threshold permanently drops by 5. Coal cannot be moved once placed.
 - **Flip the Crucible Card face-up:** It is now Active, and its Alchemical Formula is revealed.
 
-⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
+_⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again._
 
 ### 2️⃣ Build Astral Houses
 

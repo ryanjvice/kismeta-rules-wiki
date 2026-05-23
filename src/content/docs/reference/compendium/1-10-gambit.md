@@ -17,6 +17,7 @@ A Gambit may only be declared during Phase 2: Summer, on the Challenger’s turn
 - ⚙️ **Game Mode Modifier: (Magnus Alchemist)** If Misaligned with the Defender at declaration, add +1 to the Challenger’s dice roll. The Defender receives no bonus. See [Setup — Magnus Alchemist](/play/setup/#️⃣-magnus-alchemist-mastery).
 
 </div>
+
 # OUTCOMES
 
 - **Challenger Wins:** The two Active Crucible Cards are swapped. Each card moves into the position vacated by the other. The Defender’s Protective Ward Reagents are spent.

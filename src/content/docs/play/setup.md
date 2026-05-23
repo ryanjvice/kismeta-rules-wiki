@@ -33,6 +33,7 @@ Choose your Game Mode before continuing. Each Mode adjusts the starting conditio
 Look for the "⚙️" icon in the Game Guide, highlighting modifiers. Continue to _Build The Crucible Deck._
 
 </div>
+
 # 1️⃣ QUICKPLAY / FIRST PLAY
 
 _Recommended for first playthroughs._
@@ -51,6 +52,7 @@ _Recommended once you are familiar with the game rules & game flow._
 - Use the Standard deck build.
 
 </div>
+
 # 3️⃣ MAGNUS ALCHEMIST (MASTERY)
 
 _For those returning from previous Great Years, seeking an even greater challenge._

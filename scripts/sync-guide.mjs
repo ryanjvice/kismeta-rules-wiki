@@ -11,6 +11,23 @@ const ROOT = path.join(__dirname, '..');
 const GUIDE = path.join(ROOT, 'Kismeta_GameGuide.md');
 const OUT = path.join(ROOT, 'src', 'content', 'docs');
 const GLOSSARY_JSON = path.join(ROOT, 'src', 'data', 'glossary.json');
+const DEBUG_LOG = path.join(ROOT, 'debug-cb2112.log');
+
+// #region agent log
+function debugLog(payload) {
+  const entry = { sessionId: 'cb2112', timestamp: Date.now(), ...payload };
+  fs.appendFileSync(DEBUG_LOG, `${JSON.stringify(entry)}\n`);
+}
+
+function countHeadingsAfterHtmlClose(body) {
+  return (body.match(/<\/div>\n#/g) || []).length;
+}
+
+/** Markdown requires a blank line after HTML blocks before block elements (e.g. headings). */
+function ensureBlankLineAfterHtmlBlocks(body) {
+  return body.replace(/<\/div>\n(?=#)/g, '</div>\n\n');
+}
+// #endregion
 
 const SKIP = new Set([
   'CONTENTS',
@@ -165,6 +182,7 @@ function wrapGameModes(body) {
       out.push(`<div class="game-mode-callout" data-modes="${calloutModes}">`);
       out.push(...calloutLines);
       out.push('</div>');
+      out.push('');
       calloutLines = [];
       inCallout = false;
     }
@@ -238,7 +256,21 @@ description: ${JSON.stringify(description)}
 
 `;
   const notice = DRAFT_NOTICES[slug] || '';
-  const processed = applySeeLinks(wrapGameModes(demoteHeadings(body, 1)));
+  const wrapped = wrapGameModes(demoteHeadings(body, 1));
+  const beforeFix = countHeadingsAfterHtmlClose(wrapped);
+  const processed = applySeeLinks(ensureBlankLineAfterHtmlBlocks(wrapped));
+  const afterFix = countHeadingsAfterHtmlClose(processed);
+  // #region agent log
+  if (beforeFix > 0 || slug === 'play/round-overview') {
+    debugLog({
+      hypothesisId: 'A',
+      location: 'sync-guide.mjs:writePage',
+      message: 'headings-after-html-close',
+      data: { slug, beforeFix, afterFix },
+      runId: afterFix === 0 && beforeFix > 0 ? 'post-fix' : 'pre-fix',
+    });
+  }
+  // #endregion
   fs.writeFileSync(file, frontmatter + notice + processed.trim() + '\n', 'utf8');
 }
 
