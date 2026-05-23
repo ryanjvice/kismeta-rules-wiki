@@ -19,6 +19,8 @@ const LABELS = {
 		required: 'Required',
 		optional: 'Optional',
 		choice: 'Choose one',
+		sequence: 'In order',
+		appliesWhen: 'Applies when:',
 		step: 'Step',
 		if: 'If',
 		otherwise: 'Otherwise',
@@ -27,6 +29,8 @@ const LABELS = {
 		required: 'Obrigatório',
 		optional: 'Opcional',
 		choice: 'Escolha uma',
+		sequence: 'Em ordem',
+		appliesWhen: 'Aplica-se quando:',
 		step: 'Passo',
 		if: 'Se',
 		otherwise: 'Caso contrário',
@@ -66,7 +70,9 @@ function badge(kind, labels) {
 				? labels.optional
 				: kind === 'choice'
 					? labels.choice
-					: '';
+					: kind === 'sequence'
+						? labels.sequence
+						: '';
 	if (!text) return '';
 	return `<span class="${cls}">${escapeHtml(text)}</span>`;
 }
@@ -85,7 +91,8 @@ function renderFlowNode(node, locale, labels, depth = 0) {
 	html += `</div>`;
 
 	if (condition) {
-		html += `<p class="action-flow__condition"><em>${escapeHtml(condition)}</em></p>`;
+		const prefix = kind === 'sequence' ? `${labels.appliesWhen} ` : '';
+		html += `<p class="action-flow__condition"><em>${escapeHtml(prefix)}${escapeHtml(condition)}</em></p>`;
 	}
 	if (body) {
 		html += `<p class="action-flow__body">${escapeHtml(body)}</p>`;

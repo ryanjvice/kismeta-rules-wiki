@@ -9,7 +9,10 @@ import winterFlow from './flows/winter-flow.json';
 
 export type LocalizedString = string | { en: string; 'pt-br'?: string };
 
-export type FlowNodeKind = 'required' | 'optional' | 'choice' | 'group';
+export type FlowNodeKind = 'required' | 'optional' | 'choice' | 'group' | 'sequence';
+
+/** Which autumn stone picker highlights this step (omit = all). */
+export type StoneState = 'stasis' | 'forgingNew' | 'forgingReady' | 'notInForge' | 'all';
 
 export type FlowNode = {
 	id: string;
@@ -17,6 +20,7 @@ export type FlowNode = {
 	kind: FlowNodeKind;
 	body?: LocalizedString;
 	condition?: LocalizedString;
+	stoneStates?: StoneState[];
 	children?: FlowNode[];
 	learnMoreHash?: string;
 	gameModeNote?: Partial<Record<'quickplay' | 'standard' | 'magnus', string | null>>;

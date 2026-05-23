@@ -2,8 +2,8 @@
 	"id": "autumn-flow",
 	"mode": "fixedSequence",
 	"intro": {
-		"en": "Autumn follows a fixed sequence. The Agekeeper oversees the Forge; each player acts in turn order.",
-		"pt-br": "O Outono segue sequência fixa. O Guardião supervisiona a Forja; cada jogador age na ordem de turno."
+		"en": "Every Autumn, the table resolves steps 1 through 4 in order. You only act on the beats that apply to where your Philosopher's Stone is right now.",
+		"pt-br": "Todo Outono, a mesa resolve os passos 1 a 4 em ordem. Você só age nos momentos que se aplicam à posição atual da sua Pedra do Filósofo."
 	},
 	"learnMoreHash": "phase-3-autumn",
 	"root": {
@@ -13,11 +13,12 @@
 		"children": [
 			{
 				"id": "leave-stasis",
-				"label": { "en": "1. Leave Stasis (if applicable)", "pt-br": "1. Sair da Estase (se aplicável)" },
-				"kind": "required",
+				"label": { "en": "1. Leave Stasis", "pt-br": "1. Sair da Estase" },
+				"kind": "sequence",
+				"stoneStates": ["stasis", "all"],
 				"condition": {
-					"en": "Only if your Stone is in Stasis",
-					"pt-br": "Apenas se sua Pedra estiver em Estase"
+					"en": "Your Stone is in Stasis",
+					"pt-br": "Sua Pedra está em Estase"
 				},
 				"children": [
 					{
@@ -60,7 +61,12 @@
 			{
 				"id": "opposition",
 				"label": { "en": "2. Opposition declarations", "pt-br": "2. Declarações de Oposição" },
-				"kind": "required",
+				"kind": "sequence",
+				"stoneStates": ["forgingNew", "forgingReady", "notInForge", "all"],
+				"condition": {
+					"en": "Rivals have Stones on the Forge, or you are challenging from Stasis",
+					"pt-br": "Rivais têm Pedras na Forja, ou você desafia da Estase"
+				},
 				"body": {
 					"en": "Each player may declare Opposition against a rival's Stone on the Forge.",
 					"pt-br": "Cada jogador pode declarar Oposição contra a Pedra de um rival na Forja."
@@ -69,11 +75,12 @@
 			},
 			{
 				"id": "temper",
-				"label": { "en": "3. Temper (if eligible)", "pt-br": "3. Temperar (se elegível)" },
-				"kind": "required",
+				"label": { "en": "3. Temper", "pt-br": "3. Temperar" },
+				"kind": "sequence",
+				"stoneStates": ["forgingReady", "all"],
 				"condition": {
-					"en": "Not if you just left Stasis this Autumn",
-					"pt-br": "Não se acabou de sair da Estase neste Outono"
+					"en": "Your Stone has been Forging since last round (not if you just left Stasis)",
+					"pt-br": "Sua Pedra forja desde a rodada anterior (não se acabou de sair da Estase)"
 				},
 				"body": {
 					"en": "Spend Reagents to advance your Stone on the Forge track.",
@@ -83,11 +90,12 @@
 			},
 			{
 				"id": "fire",
-				"label": { "en": "4. Fire (if eligible)", "pt-br": "4. Forjar (se elegível)" },
-				"kind": "required",
+				"label": { "en": "4. Fire", "pt-br": "4. Forjar" },
+				"kind": "sequence",
+				"stoneStates": ["forgingNew", "forgingReady", "notInForge", "all"],
 				"condition": {
-					"en": "Mantle Ring reached and formula met",
-					"pt-br": "Anel do Manto alcançado e fórmula cumprida"
+					"en": "Active Crucible formula met and Mantle Ring reached",
+					"pt-br": "Fórmula ativa do Crucible cumprida e Anel do Manto alcançado"
 				},
 				"body": {
 					"en": "Complete the Great Work — place your Stone in the Mantle Ring.",

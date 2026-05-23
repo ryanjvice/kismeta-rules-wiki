@@ -3,9 +3,9 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 import {
 	getFlow,
 	localize,
-	type ActionFlow,
 	type FlowId,
 	type FlowNode,
+	type StoneState,
 } from '../data/content-registry';
 
 interface Props {
@@ -22,64 +22,54 @@ const learnBase = flow.learnMoreHash
 	? `${roundOverviewUrl}#${flow.learnMoreHash}`
 	: roundOverviewUrl;
 
+const isSummer = flow.mode === 'playerTurn';
+const isAutumn = flowId === 'autumn-flow';
+
 const labels = {
 	required: locale === 'pt-br' ? 'Obrigatório' : 'Required',
 	optional: locale === 'pt-br' ? 'Opcional' : 'Optional',
 	choice: locale === 'pt-br' ? 'Escolha' : 'Choose',
+	sequence: locale === 'pt-br' ? 'Em ordem' : 'In order',
+	appliesWhen: locale === 'pt-br' ? 'Aplica-se quando:' : 'Applies when:',
+	likelySkip: locale === 'pt-br' ? 'Provavelmente pule neste turno.' : 'Likely skip on your turn.',
 	readMore: locale === 'pt-br' ? 'Ler regras completas' : 'Read full rules',
 	pickPrompt:
 		locale === 'pt-br' ? 'Toque para ver o lembrete' : 'Tap an action for a quick reminder',
+	stonePickerTitle:
+		locale === 'pt-br' ? 'Onde está sua Pedra do Filósofo?' : 'Where is your Philosopher\'s Stone?',
+	stoneAll: locale === 'pt-br' ? 'Mostrar todos' : 'Show all steps',
+	stoneStasis: locale === 'pt-br' ? 'Em Estase' : 'In Stasis',
+	stoneForgingNew:
+		locale === 'pt-br' ? 'Forjando — 1ª rodada na Forja' : 'Forging — first round in Forge',
+	stoneForgingReady:
+		locale === 'pt-br' ? 'Forjando — desde a rodada anterior' : 'Forging — since last round',
+	stoneNotInForge: locale === 'pt-br' ? 'Fora da Forja' : 'Not in the Forge',
+	processionLabel: locale === 'pt-br' ? 'Ordem da mesa (1 a 4)' : 'Table order (steps 1–4)',
 };
 
-function flattenPicks(node: FlowNode, ancestors: string[] = []): Array<{
-	id: string;
-	path: string[];
-	label: string;
-	body: string;
-	condition: string;
-	kind: string;
-	learnHash?: string;
-	modeNotes: FlowNode['gameModeNote'];
-}> {
-	const path = [...ancestors, node.id];
-	const items: ReturnType<typeof flattenPicks> = [];
-	const label = localize(node.label, locale);
-	const body = localize(node.body, locale);
-	const condition = localize(node.condition, locale);
+const stonePickerOptions: Array<{ id: StoneState; label: string }> = [
+	{ id: 'all', label: labels.stoneAll },
+	{ id: 'stasis', label: labels.stoneStasis },
+	{ id: 'forgingNew', label: labels.stoneForgingNew },
+	{ id: 'forgingReady', label: labels.stoneForgingReady },
+	{ id: 'notInForge', label: labels.stoneNotInForge },
+];
 
-	if (node.kind !== 'group' || (node.children?.length === 1 && node.id !== 'turn')) {
-		if (node.kind !== 'group') {
-			items.push({
-				id: node.id,
-				path: path.join('.'),
-				label,
-				body,
-				condition,
-				kind: node.kind,
-				learnHash: node.learnMoreHash,
-				modeNotes: node.gameModeNote,
-			});
-		}
-	}
-
-	for (const child of node.children ?? []) {
-		items.push(...flattenPicks(child, path));
-	}
-	return items;
-}
-
-/** Top-level groups for summer (craft / consort). */
 function topGroups(node: FlowNode): FlowNode[] {
 	return node.children ?? [];
 }
 
-const isSummer = flow.mode === 'playerTurn';
 const topLevel = isSummer ? topGroups(flow.root) : [flow.root];
-const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== 'group');
+const autumnSteps = isAutumn ? (flow.root.children ?? []) : [];
+
+function stoneStatesAttr(states: StoneState[] | undefined): string {
+	if (!states?.length) return 'all';
+	return states.join(' ');
+}
 ---
 
 <div
-	class="action-flow action-flow--interactive"
+	class:list={['action-flow', 'action-flow--interactive', { 'action-flow--autumn': isAutumn }]}
 	data-flow-id={flowId}
 	data-flow-mode={flow.mode}
 	data-locale={locale}
@@ -99,6 +89,31 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 	</div>
 
 	<p class="action-flow__hint">{labels.pickPrompt}</p>
+
+	{isAutumn && (
+		<div class="action-flow__stone-picker-wrap">
+			<p class="action-flow__stone-picker-title" id={`stone-picker-${flowId}`}>
+				{labels.stonePickerTitle}
+			</p>
+			<div
+				class="action-flow__stone-picker"
+				role="group"
+				aria-labelledby={`stone-picker-${flowId}`}
+				data-stone-picker
+			>
+				{stonePickerOptions.map((opt) => (
+					<button
+						type="button"
+						class="action-flow__stone-segment"
+						data-stone={opt.id}
+						aria-pressed={opt.id === 'all' ? 'true' : 'false'}
+					>
+						{opt.label}
+					</button>
+				))}
+			</div>
+		</div>
+	)}
 
 	{isSummer ? (
 		<div class="action-flow__summer" data-summer-root>
@@ -125,11 +140,107 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 				))}
 			</div>
 		</div>
+	) : isAutumn ? (
+		<div class="action-flow__procession" data-procession>
+			<p class="action-flow__procession-label">{labels.processionLabel}</p>
+			<ol class="action-flow__procession-steps">
+				{autumnSteps.map((step, index) => (
+					<li
+						class:list={[
+							'action-flow__procession-step',
+							`action-flow__node--${step.kind}`,
+						]}
+						data-node-id={step.id}
+						data-stone-states={stoneStatesAttr(step.stoneStates)}
+					>
+						<div class="action-flow__procession-marker" aria-hidden="true">
+							{index + 1}
+						</div>
+						<div class="action-flow__procession-content">
+							<div class="action-flow__node-head">
+								{step.kind === 'sequence' && (
+									<span class="action-flow__badge action-flow__badge--sequence">
+										{labels.sequence}
+									</span>
+								)}
+								{step.kind === 'required' && (
+									<span class="action-flow__badge action-flow__badge--required">
+										{labels.required}
+									</span>
+								)}
+								{step.kind === 'optional' && (
+									<span class="action-flow__badge action-flow__badge--optional">
+										{labels.optional}
+									</span>
+								)}
+								<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+							</div>
+							{step.condition && (
+								<p class="action-flow__condition action-flow__condition--applies">
+									<em>
+										{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
+										{localize(step.condition, locale)}
+									</em>
+								</p>
+							)}
+							{step.body && (
+								<p class="action-flow__body">{localize(step.body, locale)}</p>
+							)}
+							<p class="action-flow__skip-note" data-skip-note hidden>
+								{labels.likelySkip}
+							</p>
+							{step.children && step.children.length > 0 && (
+								<div class="action-flow__branches">
+									{step.children.map((branch) => (
+										<div class="action-flow__branch">
+											<button
+												type="button"
+												class="action-flow__pick"
+												data-pick-id={branch.id}
+												data-body={localize(branch.body, locale)}
+												data-condition={localize(branch.condition, locale)}
+												data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
+											>
+												{localize(branch.label, locale)}
+											</button>
+											{branch.children?.map((sub) => (
+												<button
+													type="button"
+													class="action-flow__pick action-flow__pick--sub"
+													data-pick-id={sub.id}
+													data-body={localize(sub.body, locale)}
+													data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
+												>
+													{localize(sub.label, locale)}
+												</button>
+											))}
+										</div>
+									))}
+								</div>
+							)}
+							{step.learnMoreHash && (
+								<a
+									class="action-flow__learn-more"
+									href={`${roundOverviewUrl}#${step.learnMoreHash}`}
+									target="_blank"
+									rel="noopener"
+								>
+									{labels.readMore}
+								</a>
+							)}
+						</div>
+					</li>
+				))}
+			</ol>
+		</div>
 	) : (
 		<ol class="action-flow__tree action-flow__tree--guided">
 			{(flow.root.children ?? []).map((step) => (
 				<li class={`action-flow__node action-flow__node--${step.kind}`} data-node-id={step.id}>
 					<div class="action-flow__node-head">
+						{step.kind === 'sequence' && (
+							<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
+						)}
 						{step.kind === 'required' && (
 							<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
 						)}
@@ -139,8 +250,11 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 						<span class="action-flow__node-label">{localize(step.label, locale)}</span>
 					</div>
 					{step.condition && (
-						<p class="action-flow__condition">
-							<em>{localize(step.condition, locale)}</em>
+						<p class="action-flow__condition action-flow__condition--applies">
+							<em>
+								{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
+								{localize(step.condition, locale)}
+							</em>
 						</p>
 					)}
 					{step.body && <p class="action-flow__body">{localize(step.body, locale)}</p>}
@@ -190,6 +304,10 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 </div>
 
 <script>
+	const AUTUMN_STONE_KEY = 'kismeta-autumn-stone';
+
+	type StonePicker = 'all' | 'stasis' | 'forgingNew' | 'forgingReady' | 'notInForge';
+
 	function getGuidedGameMode(): 'quickplay' | 'standard' | 'magnus' {
 		const raw = localStorage.getItem('kismeta-guided-progress');
 		if (raw) {
@@ -215,6 +333,69 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 		return 'standard';
 	}
 
+	function loadAutumnStone(): StonePicker {
+		const saved = sessionStorage.getItem(AUTUMN_STONE_KEY);
+		if (
+			saved === 'stasis' ||
+			saved === 'forgingNew' ||
+			saved === 'forgingReady' ||
+			saved === 'notInForge' ||
+			saved === 'all'
+		) {
+			return saved;
+		}
+		return 'all';
+	}
+
+	function stepMatchesStone(statesAttr: string, selected: StonePicker): boolean {
+		if (selected === 'all') return true;
+		const states = statesAttr.split(/\s+/).filter(Boolean);
+		return states.includes('all') || states.includes(selected);
+	}
+
+	function applyAutumnStone(root: HTMLElement, selected: StonePicker) {
+		root.querySelectorAll<HTMLElement>('[data-stone-states]').forEach((step) => {
+			const attr = step.dataset.stoneStates || 'all';
+			const matches = stepMatchesStone(attr, selected);
+			const skipNote = step.querySelector<HTMLElement>('[data-skip-note]');
+			if (selected === 'all') {
+				step.classList.remove(
+					'action-flow__procession-step--active',
+					'action-flow__procession-step--muted'
+				);
+				if (skipNote) skipNote.hidden = true;
+			} else {
+				step.classList.toggle('action-flow__procession-step--active', matches);
+				step.classList.toggle('action-flow__procession-step--muted', !matches);
+				if (skipNote) skipNote.hidden = matches;
+			}
+		});
+
+		root.querySelectorAll<HTMLButtonElement>('[data-stone]').forEach((btn) => {
+			const isActive = btn.dataset.stone === selected;
+			btn.classList.toggle('action-flow__stone-segment--active', isActive);
+			btn.setAttribute('aria-pressed', String(isActive));
+		});
+	}
+
+	function initAutumnStonePicker(root: HTMLElement) {
+		const picker = root.querySelector('[data-stone-picker]');
+		if (!picker) return;
+
+		let selected = loadAutumnStone();
+		applyAutumnStone(root, selected);
+
+		picker.querySelectorAll<HTMLButtonElement>('[data-stone]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const stone = btn.dataset.stone as StonePicker;
+				if (!stone) return;
+				selected = stone;
+				sessionStorage.setItem(AUTUMN_STONE_KEY, stone);
+				applyAutumnStone(root, selected);
+			});
+		});
+	}
+
 	function initActionFlowGuides() {
 		document.querySelectorAll<HTMLElement>('.action-flow--interactive').forEach((root) => {
 			if (root.dataset.bound === 'true') return;
@@ -230,6 +411,10 @@ const picks = isSummer ? [] : flattenPicks(flow.root).filter((p) => p.kind !== '
 			const detailCondition = root.querySelector<HTMLElement>('[data-detail-condition]')!;
 			const detailMode = root.querySelector<HTMLElement>('[data-detail-mode]')!;
 			const detailLearn = root.querySelector<HTMLAnchorElement>('[data-detail-learn]')!;
+
+			if (root.classList.contains('action-flow--autumn')) {
+				initAutumnStonePicker(root);
+			}
 
 			const showDetail = (btn: HTMLButtonElement) => {
 				root.querySelectorAll('.action-flow__pick--active').forEach((el) => {
