@@ -41,7 +41,7 @@ The Agekeeper deals cards in the following order. All Bonus Cards are determined
 
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
-_⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**._
+⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**.
 
 | 💡 EXAMPLE: SCORPIO AGE |                                                 |                 |
 | ----------------------- | ----------------------------------------------- | --------------- |
@@ -63,7 +63,7 @@ _⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 
-_📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**._
+📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**.
 
 
 # PHASE 2: ☀️ SUMMER
@@ -88,7 +88,7 @@ Your Crucible Codex holds four Formulae - one per card position (I–IV). Activa
 - **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron's RP Threshold permanently drops by 5. Coal cannot be moved once placed.
 - **Flip the Crucible Card face-up:** It is now Active, and its Alchemical Formula is revealed.
 
-_⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again._
+⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
 # 2️⃣ Build Astral Houses
 
@@ -122,7 +122,7 @@ Reagents are the fuels needed to Fire your Stone. Refine them by discarding matc
 - **Check the Threshold:** Confirm the combined RP meets or exceeds the Cauldron's current Threshold (see table below).
 - **Exchange:** Discard the cards and take 1 Reagent token from the supply.
 
-_💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur._
+💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur.
 
 <div class="game-mode-callout" data-modes="quickplay">
 _⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified Threshold. Each Coal placed in any Cauldron reduces the cost for all Reagents regardless of color._

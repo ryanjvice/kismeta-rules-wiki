@@ -11,6 +11,9 @@ const ROOT = path.join(__dirname, '..');
 const GUIDE = path.join(ROOT, 'Kismeta_GameGuide.md');
 const OUT = path.join(ROOT, 'src', 'content', 'docs');
 const GLOSSARY_JSON = path.join(ROOT, 'src', 'data', 'glossary.json');
+
+/** Hand-maintained pages under synced folders — preserved when `play/` etc. are rebuilt. */
+const PRESERVED_DOC_PATHS = ['play/guided.mdx'];
 const DEBUG_LOG = path.join(ROOT, 'debug-cb2112.log');
 
 // #region agent log
@@ -330,12 +333,24 @@ function cleanBody(lines) {
 }
 
 function rmSyncOutput() {
+  const preserved = new Map();
+  for (const rel of PRESERVED_DOC_PATHS) {
+    const fp = path.join(OUT, rel);
+    if (fs.existsSync(fp)) preserved.set(rel, fs.readFileSync(fp, 'utf8'));
+  }
+
   for (const sub of ['learn', 'play', 'reference']) {
     const p = path.join(OUT, sub);
     if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
   }
   const glossaryMd = path.join(OUT, 'glossary.md');
   if (fs.existsSync(glossaryMd)) fs.unlinkSync(glossaryMd);
+
+  for (const [rel, content] of preserved) {
+    const fp = path.join(OUT, rel);
+    fs.mkdirSync(path.dirname(fp), { recursive: true });
+    fs.writeFileSync(fp, content, 'utf8');
+  }
 }
 
 function main() {

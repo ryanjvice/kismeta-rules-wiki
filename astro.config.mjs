@@ -103,6 +103,7 @@ export default defineConfig({
 				{
 					...tr('Play', 'Jogar'),
 					items: [
+						link('Guided Play', 'Jogo Guiado', 'play/guided'),
 						link('Setup', 'Preparação', 'play/setup'),
 						link('Round at a Glance', 'Rodada em Resumo', 'play/round-at-a-glance'),
 						link('Round Overview', 'Visão Geral da Rodada', 'play/round-overview'),

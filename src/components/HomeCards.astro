@@ -5,8 +5,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 const t = Astro.locals.t;
 const locale = Astro.currentLocale ?? 'root';
 
-const overview = getRelativeLocaleUrl(locale, 'learn/game-overview');
-const setup = getRelativeLocaleUrl(locale, 'play/setup');
+const guided = getRelativeLocaleUrl(locale, 'play/guided');
 const round = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 ---
 
@@ -31,11 +30,9 @@ const round = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 	<Card title={t('home.card.newPlayers.title')} icon="open-book">
 		<Fragment
 			set:html={t('home.card.newPlayers.body')
-				.replace('/learn/game-overview/', overview)
-				.replace('/play/setup/', setup)
+				.replace('/play/guided/', guided)
 				.replace('/play/round-at-a-glance/', round)
-				.replace('/pt-br/learn/game-overview/', overview)
-				.replace('/pt-br/play/setup/', setup)
+				.replace('/pt-br/play/guided/', guided)
 				.replace('/pt-br/play/round-at-a-glance/', round)}
 		/>
 	</Card>

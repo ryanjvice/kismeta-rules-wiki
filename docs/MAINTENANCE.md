@@ -179,7 +179,7 @@ import HomeCards from '../../components/HomeCards.astro';
 
 | Safe to edit directly                                                                          | Overwritten by `npm run sync`                                     |
 | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `index.mdx`, `glossary.mdx`, `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | Most files under `src/content/docs/learn/`, `play/`, `reference/` |
+| `index.mdx`, `glossary.mdx`, `play/guided.mdx`, `src/data/guided-steps.ts`, `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | Most files under `src/content/docs/learn/`, `play/` (except `guided.mdx`), `reference/` |
 | `Kismeta_GameGuide.md` (source of truth)                                                       | `src/data/glossary.json`                                          |
 
 **Typical rules workflow:** edit `Kismeta_GameGuide.md` → `npm run sync` → `npm run dev` → preview → `npm run build` for production.
@@ -228,6 +228,29 @@ Lines with ⚙️ in the guide are converted during sync to:
 - **Show/hide:** [`GameModeToggle.astro`](../src/components/GameModeToggle.astro) toggles elements by `data-modes` (`quickplay`, `magnus`).
 - **Generation logic:** [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs).
 - **Styling:** [`src/styles/custom.css`](../src/styles/custom.css) → `.game-mode-callout`.
+
+---
+
+## Guided Play (step-by-step setup)
+
+Interactive walkthrough for new players at the table — **not** synced from the guide.
+
+| What | Where |
+| ---- | ----- |
+| Step copy (EN + pt-br) | [`src/data/guided-steps.ts`](../src/data/guided-steps.ts) |
+| Stepper UI + progress | [`src/components/GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro) |
+| Pages | [`src/content/docs/play/guided.mdx`](../src/content/docs/play/guided.mdx), [`pt-br/play/guided.mdx`](../src/content/docs/pt-br/play/guided.mdx) |
+| Chrome strings | [`src/content/i18n/en.json`](../src/content/i18n/en.json) (`guided.*` keys) |
+| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.guided-play*` |
+| Sidebar | [`astro.config.mjs`](../astro.config.mjs) → Play → **Guided Play** |
+
+**Sync safety:** `play/guided.mdx` is listed in `PRESERVED_DOC_PATHS` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) so `npm run sync` does not delete it when rebuilding `play/`.
+
+**When to update:** If you change **Components** or **Setup** in `Kismeta_GameGuide.md` (via sync), review matching steps in `guided-steps.ts` so summaries and checklists stay accurate. Each step links to the full synced page for details (e.g. Crucible deck table on Setup).
+
+**Game mode:** The mode picker writes `kismeta-game-modes` in `localStorage` (same key as [`GameModeToggle.astro`](../src/components/GameModeToggle.astro)). Progress is stored separately as `kismeta-guided-progress`.
+
+**Future (post-MVP):** Round phases (Spring 1–5, Summer, Autumn, Winter) from `round-overview.md` — extend `guided-steps.ts` and the stepper; see the `TODO` comment in that file.
 
 ---
 

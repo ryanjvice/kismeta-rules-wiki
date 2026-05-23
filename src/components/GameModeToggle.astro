@@ -72,6 +72,8 @@ const t = Astro.locals.t;
 		});
 	}
 
+	window.addEventListener('kismeta-game-modes-changed', applyGameModes);
+
 	document.addEventListener('astro:page-load', init);
 	init();
 </script>
