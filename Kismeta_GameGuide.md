@@ -283,8 +283,8 @@ Each Cosmic Age (round) moves through four seasons in order: Spring, Summer, Aut
 
 Spring opens every Cosmic Age. The Agekeeper rolls the Cosmic Age Die, all players determine their Zodiac Sign, and the Harvest fills everyone's hand for the round ahead.
 
-| 🌸 SPRING Set the Age & Gather Resources | Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🌸 SPRING Set the Age & Gather Resources | 1️⃣ Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2️⃣ Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3️⃣ Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). 4️⃣ Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. 5️⃣ Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### 1️⃣ Set the Cosmic Age
 
@@ -313,7 +313,7 @@ The Agekeeper deals cards in the following order. All Bonus Cards are determined
 
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
-_⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**._
+⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**.
 
 | 💡 EXAMPLE: SCORPIO AGE |                                                 |                 |
 | ----------------------- | ----------------------------------------------- | --------------- |
@@ -335,7 +335,7 @@ _⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 
-_📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**._
+📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**.
 
 ---
 
@@ -345,9 +345,9 @@ _📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, a
 
 In clockwise order, starting with the Agekeeper, each player takes their turn and may take any of the following actions, in any order, as many times as they like.
 
-| ☀️ SUMMER Trade, Build & Prepare (Available Actions) | **CRAFT RESOURCES (TAKE ANY ACTION)** Activate Crucible Card: Collect Card sets listed on the Codex & discard to activate. Build Astral House: Pay Planet-matching cards to permanently claim a Zodiac Sign. Refine Reagent: Collect Suited cards exceeding the current RP Threshold to refine Reagents.                                                                     |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                      | **CONSORT WITH RIVALS (TAKE ANY ACTION)** Trade: Exchange Common Cards, Reagents, or Active Crucible Cards freely. Duel: Wager cards and roll dice against a rival to steal a card from their Spread. Gambit: Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it by swapping one of your own Active Crucible Cards. |
+| ☀️ SUMMER Trade, Build & Prepare (Available Actions) | **CRAFT RESOURCES (TAKE ANY ACTION)** 1️⃣ Activate Crucible Card: Collect Card sets listed on the Codex & discard to activate. 2️⃣ Build Astral House: Pay Planet-matching cards to permanently claim a Zodiac Sign. 3️⃣ Refine Reagent: Collect Suited cards exceeding the current RP Threshold to refine Reagents.                                                                     |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                      | **CONSORT WITH RIVALS (TAKE ANY ACTION)** 4️⃣ Trade: Exchange Common Cards, Reagents, or Active Crucible Cards freely. 5️⃣ Duel: Wager cards and roll dice against a rival to steal a card from their Spread. 6️⃣ Gambit: Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it by swapping one of your own Active Crucible Cards. |
 
 ### 1️⃣ Activate Crucible Cards
 
@@ -361,7 +361,7 @@ Your Crucible Codex holds four Formulae - one per card position (I–IV). Activa
 - **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron's RP Threshold permanently drops by 5. Coal cannot be moved once placed.
 - **Flip the Crucible Card face-up:** It is now Active, and its Alchemical Formula is revealed.
 
-_⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again._
+⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
 ### 2️⃣ Build Astral Houses
 
@@ -392,7 +392,7 @@ Reagents are the fuels needed to Fire your Stone. Refine them by discarding matc
 - **Check the Threshold:** Confirm the combined RP meets or exceeds the Cauldron's current Threshold (see table below).
 - **Exchange:** Discard the cards and take 1 Reagent token from the supply.
 
-_💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur._
+💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur.
 
 _⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified Threshold. Each Coal placed in any Cauldron reduces the cost for all Reagents regardless of color._
 
@@ -468,9 +468,9 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 Before any action is taken, the Agekeeper surveys the Forge, noting each player whose Stone is currently Forging or in Stasis. Autumn follows a fixed sequence — all steps are resolved in order before any player may take other actions.
 
-| 🍂 AUTUMN Conduct the Great Work | **PROCESSION OF AUTUMN:** The Agekeeper Oversees the Crucible Activities                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|                                  | Leave Stasis: Move your Stone to its previous Forge spot. If occupied, wait or, in Step 2, declare Stasis Opposition to reclaim it. Winning swaps your Stone into the Forge and sends the Defender to Stasis; losing means another Stasis round. Opposition: Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. Temper: After a full round in the Forge, move your Stone to the next Mantle Ring space. Fire the Stone: Complete an active Crucible card and move your Stone into the Forge. |
+| 🍂 AUTUMN Conduct the Great Work | **PROCESSION OF AUTUMN:** The Agekeeper Oversees the Crucible Activities                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                  | 1️⃣ Leave Stasis: Move your Stone to its previous Forge spot. If occupied, wait or, in Step 2, declare Stasis Opposition to reclaim it. Winning swaps your Stone into the Forge and sends the Defender to Stasis; losing means another Stasis round. 2️⃣ Opposition: Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. 3️⃣ Temper: After a full round in the Forge, move your Stone to the next Mantle Ring space. 4️⃣ Fire the Stone: Complete an active Crucible card and move your Stone into the Forge. |
 
 ### 1️⃣ Leave Stasis
 
@@ -580,9 +580,9 @@ Ward Reagents placed beside your Stone on the 🛡️ symbol follow different ru
 
 Winter closes the Cosmic Age. Complete all steps below in order before passing the Agekeeper's Key.
 
-| ⛰️ WINTER Final Actions of the Cosmic Age & Reset Board | Card Unlock: Move cards freely between your Hand and Spread. Offering to the Age: Offer cards matching the Cosmic Age to earn a Bonus next round. Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. |
-| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                         | Enforce Card Limits: Spread 7 cards │ Hand 5 cards │ Arcanum: Specialist cards only. Reset: Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round.                                                         |
+| ⛰️ WINTER Final Actions of the Cosmic Age & Reset Board | 1️⃣ Card Unlock: Move cards freely between your Hand and Spread. 2️⃣ Offering to the Age: Offer cards matching the Cosmic Age to earn a Bonus next round. 3️⃣ Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                         | 4️⃣ Enforce Card Limits: Spread 7 cards │ Hand 5 cards │ Arcanum: Specialist cards only. 5️⃣ Reset: Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round.                                                            |
 
 ### 1️⃣ Card Unlock:
 
