@@ -12,6 +12,7 @@ import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
+import rehypeWrapTables from '../src/integrations/rehype-wrap-tables.mjs';
 import { CONTEXT_SOURCE_PAGES } from './context-anchors.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -26,6 +27,7 @@ const markdownProcessor = unified()
 	.use(remarkGfm)
 	.use(remarkRehype, { allowDangerousHtml: true })
 	.use(rehypeRaw)
+	.use(rehypeWrapTables)
 	.use(rehypeStringify);
 
 function readPageBody(filePath) {

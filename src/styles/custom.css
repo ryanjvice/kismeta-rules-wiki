@@ -42,6 +42,13 @@
 	--sl-color-accent-low: var(--kismeta-gold-dim);
 	--sl-color-white: var(--kismeta-cream);
 	--sl-font: var(--kismeta-font-body);
+
+	/* Shared panel recipe (Guided Play + doc tables) */
+	--kismeta-panel-margin: 1.25rem 0;
+	--kismeta-panel-border: 1px solid var(--sl-color-hairline);
+	--kismeta-panel-radius: 0.5rem;
+	--kismeta-panel-bg: color-mix(in srgb, var(--sl-color-accent) 5%, var(--sl-color-bg));
+	--kismeta-panel-header-bg: color-mix(in srgb, var(--sl-color-accent) 12%, var(--sl-color-bg));
 }
 
 /* Site title & major headings — Germania One */
@@ -51,6 +58,24 @@ h1#_top,
 	font-family: var(--kismeta-font-title);
 	font-weight: 400;
 	letter-spacing: 0.02em;
+}
+
+/* Splash hero subtitle — under KISMETA logo */
+.hero-subtitle {
+	margin: 0;
+	max-width: 50ch;
+	text-align: center;
+	font-family: var(--kismeta-font-body);
+	font-size: clamp(var(--sl-text-sm), calc(0.0625rem + 1.5vw), var(--sl-text-lg));
+	font-weight: 400;
+	color: var(--sl-color-gray-2);
+	line-height: 1.4;
+}
+
+@media (min-width: 50rem) {
+	.hero-subtitle {
+		text-align: center;
+	}
 }
 
 /* Smaller headers — Futura Cyrillic Demi */
@@ -237,9 +262,50 @@ main:has(.kismeta-lore) h1#_top,
 	--sl-badge-bg: #6b3a6b;
 }
 
-/* Tables — readable at the table */
-.sl-markdown-content table {
+/* Doc tables — self-contained panels (matches Guided Play panel recipe) */
+.sl-markdown-content .doc-table {
+	margin: var(--kismeta-panel-margin);
+	border: var(--kismeta-panel-border);
+	border-radius: var(--kismeta-panel-radius);
+	background: var(--kismeta-panel-bg);
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.sl-markdown-content .doc-table table {
+	display: table;
+	width: 100%;
+	margin: 0;
 	font-size: 0.92rem;
+	border-collapse: collapse;
+	background: transparent;
+}
+
+.sl-markdown-content .doc-table :is(th, td) {
+	padding: 0.55rem 0.85rem;
+	border-bottom: 1px solid var(--sl-color-hairline);
+	vertical-align: top;
+}
+
+.sl-markdown-content .doc-table thead th {
+	background: var(--kismeta-panel-header-bg);
+	font-family: var(--kismeta-font-heading);
+	font-weight: 600;
+	color: var(--sl-color-white);
+	text-align: start;
+	border-bottom-color: var(--sl-color-hairline);
+}
+
+.sl-markdown-content .doc-table thead tr:first-child th:first-child {
+	border-top-left-radius: var(--kismeta-panel-radius);
+}
+
+.sl-markdown-content .doc-table thead tr:first-child th:last-child {
+	border-top-right-radius: var(--kismeta-panel-radius);
+}
+
+.sl-markdown-content .doc-table tbody tr:last-child :is(th, td) {
+	border-bottom: none;
 }
 
 /* Print-friendly quick reference */
@@ -249,6 +315,11 @@ main:has(.kismeta-lore) h1#_top,
 	.guided-play__footer,
 	.kismeta-header-wrap :global(header) {
 		display: none !important;
+	}
+
+	.sl-markdown-content .doc-table {
+		break-inside: avoid;
+		page-break-inside: avoid;
 	}
 }
 
@@ -540,11 +611,11 @@ main:has(.kismeta-lore) h1#_top,
 
 /* Crucible deck builds (Setup static + Guided interactive) */
 .crucible-deck {
-	margin: 1.25rem 0;
+	margin: var(--kismeta-panel-margin);
 	padding: 1rem 1.1rem;
-	border: 1px solid var(--sl-color-hairline);
-	border-radius: 0.5rem;
-	background: color-mix(in srgb, var(--sl-color-accent) 5%, var(--sl-color-bg));
+	border: var(--kismeta-panel-border);
+	border-radius: var(--kismeta-panel-radius);
+	background: var(--kismeta-panel-bg);
 }
 
 .crucible-deck__intro {
@@ -1292,8 +1363,16 @@ main:has(.kismeta-lore) h1#_top,
 	margin: 0.35rem 0;
 }
 
-.context-rules-panel__body table {
+.context-rules-panel__body .doc-table {
+	margin: 0.5rem 0;
+}
+
+.context-rules-panel__body .doc-table table {
 	font-size: 0.82rem;
+}
+
+.context-rules-panel__body .doc-table :is(th, td) {
+	padding: 0.4rem 0.6rem;
 }
 
 .context-rules-panel__empty {

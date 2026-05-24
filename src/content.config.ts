@@ -4,7 +4,18 @@ import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
 import { z } from 'astro/zod';
 
 export const collections = {
-	docs: defineCollection({ loader: docsLoader(), schema: docsSchema() }),
+	docs: defineCollection({
+		loader: docsLoader(),
+		schema: docsSchema({
+			extend: z.object({
+				hero: z
+					.object({
+						subtitle: z.string().optional(),
+					})
+					.optional(),
+			}),
+		}),
+	}),
 	i18n: defineCollection({
 		loader: i18nLoader(),
 		schema: i18nSchema({
@@ -17,6 +28,7 @@ export const collections = {
 				'gameMode.modifiers': z.string(),
 				'gameMode.quickplay': z.string(),
 				'gameMode.magnus': z.string(),
+				'home.subtitle': z.string(),
 				'home.tagline': z.string(),
 				'home.action.learn': z.string(),
 				'home.action.round': z.string(),

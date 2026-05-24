@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { VitePWA } from 'vite-plugin-pwa';
+import rehypeWrapTables from './src/integrations/rehype-wrap-tables.mjs';
 
 /** @param {string} label @param {string} slug @param {Record<string,string>} [translations] */
 function link(label, slug, translations) {
@@ -11,6 +12,9 @@ function link(label, slug, translations) {
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://kismeta.goodmagik.com',
+	markdown: {
+		rehypePlugins: [rehypeWrapTables],
+	},
 	integrations: [
 		starlight({
 			title: 'Kismeta Rules',
@@ -26,6 +30,7 @@ export default defineConfig({
 			components: {
 				Header: './src/components/Header.astro',
 				PageSidebar: './src/components/PageSidebar.astro',
+				Hero: './src/components/Hero.astro',
 			},
 			defaultLocale: 'root',
 			locales: {
