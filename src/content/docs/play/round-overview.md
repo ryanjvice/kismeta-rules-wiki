@@ -62,7 +62,7 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 ### 4️⃣ Commune {#4-commune}
 
 - **Assign cards to zones:** Place each Harvested card into your **Spread** (face-up, active) or your **Hand** (face-down, hidden). Cards already in your Spread or Hand from the previous round remain where they are.
-- **Seat your Arcanum:** Specialist Major Arcana you hold remain in your Arcanum. If you drew a Standard Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
+- **Seat your Arcanum:** Adept Major Arcana you hold remain in your Arcanum. If you drew a Fate Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
 - **Consider your goals:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Refinement. Your Hand is your reserve, useful for Oppositions and Refinement but invisible to rivals.
 
 ### 5️⃣ Card Lock {#5-card-lock}
@@ -100,7 +100,7 @@ Astral Houses are permanent structures built on the Zodiac Wheel. Each provides 
 
 #### How to Build Astral Houses:
 
-- Pay 2 Common Cards matching your current Sign's Planet.
+- Pay 2 Kismeta Cards matching your current Sign's Planet.
 - Place your 🏰 token on the 🏰 icon on that Sign.
 
 | 🏰 ASTRAL HOUSES          |                                                                                                                                                                                          |
@@ -139,7 +139,7 @@ Freely exchange resources with any rival during your turn.
 
 | CAN TRADE                              | CANNOT TRADE           |
 | -------------------------------------- | ---------------------- |
-| Common Cards                           | Astral Houses          |
+| Kismeta Cards                           | Astral Houses          |
 | Reagents (only transferable via Trade) | Protective Wards       |
 | Active Crucible Cards (only via Trade) | Dormant Crucible Cards |
 |                                        | Molten Coals           |
@@ -158,15 +158,16 @@ Challenge a rival to steal a single card from their Spread. Only the Challenger 
 #### How to Declare a Duel:
 
 - **Declare:** Name your opponent and the specific card you are targeting in their Spread.
-- **Pay entry fee:** Choose an Ante Card
+- **Pay entry fee:** Choose an Ante Card from your Spread. You will lose this card if you lose the duel.
 - **Check Spreads:** Both players review their Spread for any relevant card effects.
 - **Roll:** Both players roll their Zodiac Dice. Higher roll wins. Reroll all ties until resolved.
 - **Resolve:** See outcomes below.
 
-| DUELS: ANTE CARDS |                                |                            |                                                                                   |
-| ----------------- | ------------------------------ | -------------------------- | --------------------------------------------------------------------------------- |
-| **Entry Fee**     | **How It Works**               | **If You Win**             | **If You Lose**                                                                   |
-| Ante Card         | Offer 1 card from your Spread. | Ante Card returned to you. | Defender claims your Ante Card. Cannot re-challenge the same Defender this round. |
+| DUEL RESULTS     |                                                        |
+| ---------------- | ------------------------------------------------------ |
+| **RESULT**       | **OUTCOME**                                            |
+| Challenger Wins  | Steal the card that was targeted from the Defender's Spread. Ante Card is returned to you. |
+| Challenger Loses | Ante Card is returned to the Common Deck. Cannot re-challenge the same Defender this round. |
 
 <div class="game-mode-callout" data-modes="magnus">
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your target, add +1 to your dice roll. The Defender receives no bonus._
@@ -211,11 +212,11 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 ### Conduct the Great Work
 
-Before any action is taken, the Agekeeper surveys the Forge, noting each player whose Stone is currently Forging or in Stasis. Autumn follows a fixed sequence — all steps are resolved in order before any player may take other actions.
+Autumn resolves in two passes through the player order, beginning with the Agekeeper and proceeding clockwise. In Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn. Once all players have completed Pass 1, Pass 2 begins: each player Tempers and Fires on their turn in the same clockwise order. Steps are always taken in sequence within each pass — but each player works through them individually.
 
 <div class="action-flow action-flow--static" data-flow-id="autumn-flow" data-locale="en"><p class="action-flow__intro">Every Autumn, the table resolves steps 1 through 4 in order. You only act on the beats that apply to where your Philosopher's Stone is right now.</p><ol class="action-flow__tree"><li class="action-flow__node action-flow__node--group" data-node-id="autumn-sequence"><div class="action-flow__node-head"><span class="action-flow__node-label">Autumn procession</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--sequence" data-node-id="leave-stasis"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">1. Leave Stasis</span></div><p class="action-flow__condition"><em>Applies when: Your Stone is in Stasis</em></p><div class="action-flow__branches"><div class="action-flow__branch"><li class="action-flow__node action-flow__node--choice" data-node-id="forge-open"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot open</span></div><p class="action-flow__body">Return your Stone to the Forge. You may place a Ward on the spot.</p></li></div><div class="action-flow__branch"><li class="action-flow__node action-flow__node--choice" data-node-id="forge-occupied"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot occupied</span></div><div class="action-flow__branches"><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="wait"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Wait — stay in Stasis</span></div><p class="action-flow__body">Skip leaving Stasis this Autumn.</p></li></div><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="stasis-opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Challenge — Stasis Opposition in step 2</span></div><p class="action-flow__body">Declare Stasis Opposition when it is your turn in step 2.</p></li></div></div></li></div></div></li><li class="action-flow__node action-flow__node--sequence" data-node-id="opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">2. Opposition declarations</span></div><p class="action-flow__condition"><em>Applies when: Rivals have Stones on the Forge, or you are challenging from Stasis</em></p><p class="action-flow__body">Each player may declare Opposition against a rival's Stone on the Forge.</p></li><li class="action-flow__node action-flow__node--sequence" data-node-id="temper"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">3. Temper</span></div><p class="action-flow__condition"><em>Applies when: Your Stone has been Forging since last round (not if you just left Stasis)</em></p><p class="action-flow__body">Spend Reagents to advance your Stone on the Forge track.</p></li><li class="action-flow__node action-flow__node--sequence" data-node-id="fire"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">4. Fire</span></div><p class="action-flow__condition"><em>Applies when: Active Crucible formula met and Mantle Ring reached</em></p><p class="action-flow__body">Complete the Great Work — place your Stone in the Mantle Ring.</p></li></ol></li></ol></div>
 
-### 1️⃣ Leave Stasis
+### PASS 1 — 1️⃣ Leave Stasis ❄️
 
 Players whose Stone is currently in the Stasis zone may return it to the Forge this Autumn.
 
@@ -243,7 +244,7 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
 
-### 2️⃣⚔️ Opposition
+### PASS 1 — 2️⃣ Opposition ⚔️
 
 An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
 
@@ -270,13 +271,11 @@ More than one player may challenge the same Forging Stone in the same round. Res
 <div class="game-mode-callout" data-modes="magnus">
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defender at declaration, add +1 to your final Alignment Points total. The Defender receives no bonus._
 
-⚠️ **Important:** Oppositions can only target a Stone that entered the Forge in a previous round — not one placed there during this round's Autumn.
-
-⚠️ **Important:** All Oppositions — including any Stasis Oppositions from Step 1 — are fully declared and resolved before any other Autumn actions proceed.
+⚠️ **Important:** A Stone Fired into the Forge this Autumn cannot be targeted by Opposition this round. Only Stones that were already Forging at the start of this Autumn are eligible targets.
 
 </div>
 
-### 3️⃣🔨 Temper the Stone
+### PASS 2 — 3️⃣ Temper the Stone ⏳
 
 A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
 
@@ -286,7 +285,7 @@ A Stone that has been Forging since the previous round and has survived all Oppo
 
 ⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
 
-### 4️⃣🔥 Fire the Stone {#4-fire-the-stone}
+### PASS 2 — 4️⃣ Fire the Stone 🔥
 
 If you have an Active Crucible Card whose Alchemical Formula you have satisfied, you may Fire your Stone into the Forge this Autumn.
 
@@ -395,10 +394,10 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | **ZONE**    | **MAX LIMIT**         | **NOTES**                                                                                     |
 | Spread      | 7 cards               | Discard excess cards of your choice down to 7.                                                |
 | Hand        | 5 cards               | Discard excess cards of your choice down to 5.                                                |
-| Arcanum     | Specialist cards only | All Standard Major Arcana cards must be returned to the Common Deck. Specialist cards remain. |
+| Arcanum     | Adept cards only | All Fate Major Arcana cards must be returned to the Common Deck. Adept cards remain. |
 
 ### 5️⃣ Reset Sequence:
 
-- **Shuffle the Common Deck:** The Agekeeper collects all discarded Common Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
+- **Shuffle the Common Deck:** The Agekeeper collects all discarded Kismeta Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
 - **Pass the Agekeeper's Key:** The Agekeeper passes the Key clockwise to the next player, who becomes the new Agekeeper.
 - **Start the next round:** Return to Phase 1: Spring.

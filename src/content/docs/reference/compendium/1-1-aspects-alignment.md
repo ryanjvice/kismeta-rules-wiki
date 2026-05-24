@@ -16,13 +16,13 @@ There are three Aspect types, each found across all three sources:
 Where to Find Aspects:
 
 - Great Year Board: Cosmic Age Signs on the Zodiac Wheel
-- Cards: Common and Crucible Cards in your Spread, Hand, and Arcanum
+- Cards: Kismeta and Crucible Cards in your Spread, Hand, and Arcanum
 
 Element, Card Suit & Color Connection:  
-Each Element is tied to one Common Card Suit, both sharing the same color.
+Each Element is tied to one Kismeta Card Suit, both sharing the same color.
 
 - Elements are found on the Great Year board’s Zodiac Wheel
-- Card Suits are found on the cards of the Common Card deck
+- Card Suits are found on the cards of the Kismeta Card deck
 
 | ELEMENT | SUIT      | COLOR  |
 | :------ | :-------- | :----- |

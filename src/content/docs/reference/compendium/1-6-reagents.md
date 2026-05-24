@@ -3,11 +3,11 @@ title: "REAGENTS"
 description: "Compendium — 1.6 REAGENTS"
 ---
 
-Reagents are the concentrated alchemical fuels required to power the Great Work. While Common Cards represent raw potential gathered from the cosmos, Reagents are the refined energy needed to "Fuel the Forge" and advance your Philosopher’s Stone through the Crucible.
+Reagents are the concentrated alchemical fuels required to power the Great Work. While Kismeta Cards represent raw potential gathered from the cosmos, Reagents are the refined energy needed to "Fuel the Forge" and advance your Philosopher’s Stone through the Crucible.
 
 #### FOUR REAGENTS
 
-There are four types of Reagents, each refined from a specific suit of Common Cards:
+There are four types of Reagents, each refined from a specific suit of Kismeta Cards:
 
 | REAGENT     | REQ’D SUIT TO REFINE | CAULDRON |
 | :---------- | :------------------- | :------- |

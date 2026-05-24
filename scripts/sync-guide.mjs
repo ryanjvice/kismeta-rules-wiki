@@ -27,23 +27,11 @@ const GLOSSARY_JSON = path.join(ROOT, 'src', 'data', 'glossary.json');
 
 /** Hand-maintained pages under synced folders — preserved when `play/` etc. are rebuilt. */
 const PRESERVED_DOC_PATHS = ['play/guided.mdx'];
-const DEBUG_LOG = path.join(ROOT, 'debug-cb2112.log');
-
-// #region agent log
-function debugLog(payload) {
-  const entry = { sessionId: 'cb2112', timestamp: Date.now(), ...payload };
-  fs.appendFileSync(DEBUG_LOG, `${JSON.stringify(entry)}\n`);
-}
-
-function countHeadingsAfterHtmlClose(body) {
-  return (body.match(/<\/div>\n#/g) || []).length;
-}
 
 /** Markdown requires a blank line after HTML blocks before block elements (e.g. headings). */
 function ensureBlankLineAfterHtmlBlocks(body) {
   return body.replace(/<\/div>\n(?=#)/g, '</div>\n\n');
 }
-// #endregion
 
 const SKIP = new Set([
   'CONTENTS',
@@ -110,7 +98,7 @@ const COMPENDIUM_SLUGS = {
   '1.0 COSMIC AGES': 'reference/compendium/1-0-cosmic-ages',
   '1.1 ASPECTS & ALIGNMENT': 'reference/compendium/1-1-aspects-alignment',
   '1.2 HARVEST': 'reference/compendium/1-2-harvest',
-  '1.3 COMMON CARDS': 'reference/compendium/1-3-common-cards',
+  '1.3 KISMETA CARDS': 'reference/compendium/1-3-common-cards',
   '1.4 CRUCIBLE CARDS': 'reference/compendium/1-4-crucible-cards',
   '1.5 CRUCIBLE CAULDRONS & MOLTEN COAL': 'reference/compendium/1-5-cauldrons-molten-coal',
   '1.6 REAGENTS': 'reference/compendium/1-6-reagents',
@@ -130,7 +118,7 @@ const DRAFT_NOTICES = {
 
 const SEE_LINKS = [
   [/See Compendium: 1\.2 Harvest/gi, 'See [Harvest](/reference/compendium/1-2-harvest/)'],
-  [/See Compendium: 1\.3 Common Cards/gi, 'See [Common Cards](/reference/compendium/1-3-common-cards/)'],
+  [/See Compendium: 1\.3 (?:Common Cards|Kismeta Cards)/gi, 'See [Kismeta Cards](/reference/compendium/1-3-common-cards/)'],
   [/See Compendium: 1\.4 Crucible Cards/gi, 'See [Crucible Cards](/reference/compendium/1-4-crucible-cards/)'],
   [/See Compendium: 1\.6 Reagents/gi, 'See [Reagents](/reference/compendium/1-6-reagents/)'],
   [/See Compendium: 1\.7 Astral Houses/gi, 'See [Astral Houses](/reference/compendium/1-7-astral-houses/)'],
@@ -273,21 +261,8 @@ description: ${JSON.stringify(description)}
   const notice = DRAFT_NOTICES[slug] || '';
   const withContent = injectAllContent(body, 'en');
   const wrapped = wrapGameModes(withContent);
-  const beforeFix = countHeadingsAfterHtmlClose(wrapped);
   const processed = applySeeLinks(ensureBlankLineAfterHtmlBlocks(wrapped));
-  const afterFix = countHeadingsAfterHtmlClose(processed);
   const withAnchors = injectContextAnchors(processed, EN_CONTEXT_ANCHORS);
-  // #region agent log
-  if (beforeFix > 0 || slug === 'play/round-overview') {
-    debugLog({
-      hypothesisId: 'A',
-      location: 'sync-guide.mjs:writePage',
-      message: 'headings-after-html-close',
-      data: { slug, beforeFix, afterFix },
-      runId: afterFix === 0 && beforeFix > 0 ? 'post-fix' : 'pre-fix',
-    });
-  }
-  // #endregion
   fs.writeFileSync(file, frontmatter + notice + withAnchors.trim() + '\n', 'utf8');
 }
 

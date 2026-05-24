@@ -9,7 +9,7 @@ When your Stone is in the Forge, it can be attacked. A rival may declare an Oppo
 
 #### WHEN AN OPPOSITION CAN BE DECLARED
 
-An Opposition can be declared only at the start of Phase 3: Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during the current round’s Autumn phase. All Oppositions are fully resolved before any player takes their other Autumn actions.
+An Opposition can be declared during Pass 1 of Phase 3: Autumn, on each player’s own turn. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during this round’s Autumn phase.
 **Multiple Oppositions Against the Same Stone**
 
 More than one player may declare an Opposition against the same Forging Stone in the same round. The following rules govern this sequence:
@@ -31,7 +31,7 @@ After the Defender completes a full round and moves their Stone to the next Mant
 - **The Challenge:** The Challenger pays the bank a quantity of Reagents equal to the Defender’s Protective Ward. This is the entry fee for the Opposition. No Ward = no entry fee.
 - **Cards in Play:** All cards currently in each player’s Spread participate in the Opposition automatically. Their Aspects are used to calculate Alignment Points, and any card effects relevant to Oppositions are active for the duration of the contest.
   - **Hand Cards:** You may also contribute cards from your Hand to the Opposition. Hand cards used this way are discarded after the Opposition is resolved.
-  - **Arcanum:** Any Major Arcana card (Specialist or Standard) currently in either player’s Arcanum zone may have active effects during the Opposition. Some Standard cards may affect the Opposition for both players. Check each card’s text.
+  - **Arcanum:** Any Major Arcana card (Adept or Fate) currently in either player’s Arcanum zone may have active effects during the Opposition. Some Fate cards may affect the Opposition for both players. Check each card’s text.
   - **Opposition Effects:** Some card effects modify Opposition outcomes, adjusting Alignment Points, changing contest rules, or causing other results. These are resolved before final scores are compared. See individual card text.
 - **The Roll:** The Opposition Age is the current round’s Cosmic Age, set at the start of Phase 1: Spring and known to all players throughout the round. Both players roll their Zodiac Die and place it on the corresponding Sign.
 - **Calculating the Results:** All Alignment Points are totaled. The player with the higher score wins. **Tied Scores:** If both players have equal Alignment Points, each player rolls their Zodiac Die; the higher roll wins. Reroll if tied again.
@@ -45,7 +45,7 @@ Sources for Alignments:
 - Astral Houses
 - Spread Cards (All cards in your Spread)
 - Hand Cards (Played & discarded after use)
-- Arcanum: Major Arcana (Specialist & Standard)
+- Arcanum: Major Arcana (Adept & Fate)
 
 Opposition Effects:  
 Certain card effects specifically modify Opposition outcomes. These effects may adjust Alignment Points, alter the contest rules, or produce other results. All modifications are resolved before the outcome is decided.
@@ -78,7 +78,7 @@ Defender’s Sources:
 - Zodiac Die result: Cancer: → No Match = +0
 - Astral House in Aries: (Element: Fire) → Element Match (Fire) = +1
 - Activated Card: (Planet: Mars) → No Match = +0
-- Active Specialist Card: (+2 to Fire) → Element Match (Fire) = +2
+- Active Adept Card: (+2 to Fire) → Element Match (Fire) = +2
 - Defender’s Alignment Points = 3
 
 Outcome:  

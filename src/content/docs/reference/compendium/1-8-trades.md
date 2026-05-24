@@ -5,7 +5,7 @@ description: "Compendium — 1.8 TRADES"
 
 Alchemists who deal wisely with their rivals can convert surplus cards into exactly what they need. During Phase 2: Summer, you may trade any of the following resources:
 
-- Common Cards: These can also be dueled over.
+- Kismeta Cards: These can also be dueled over.
 - Reagents: These cannot be exchanged any other way.
 - Active Crucible Cards: These cannot be exchanged any other way.
 

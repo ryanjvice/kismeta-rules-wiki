@@ -8,7 +8,7 @@ description: "Everything in the box."
 **Board & Cards**
 
 - **1 Great Year Board**
-- **134 Common Cards** (112 Minor Arcana + 22 Major Arcana: 11 Specialist, 11 Standard)
+- **134 Kismeta Cards** (112 Minor Arcana + 22 Major Arcana: 11 Adept, 11 Fate)
 - **22 Crucible Cards** (Groups A, B, C, D; 4 per player; per game)
 - **4 Crucible Codex Cards** (1 per player; dual-sided: Codex + Quick Reference Guide)
 

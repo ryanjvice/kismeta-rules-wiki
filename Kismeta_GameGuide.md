@@ -34,7 +34,7 @@
 - [APPENDIX](#appendix)
   - [Cosmic Ages & Effects](#cosmic-ages--effects)
   - [Element / Suit / Reagent / Cauldron](#element--suit--reagent--cauldron)
-  - [COMMON CARDS](#common-cards)
+  - [KISMETA CARDS](#kismeta-cards)
   - [YOUR INVENTORY: Spread, Hand & Arcanum Zones](#your-inventory-spread-hand--arcanum-zones)
   - [Alignment Scoring](#alignment-scoring)
   - [Alignment Point Sources](#alignment-point-sources)
@@ -65,7 +65,7 @@ Kismeta: Alchemists of the Great Year is a strategic card-and-dice game in which
 **Board & Cards**
 
 - **1 Great Year Board**
-- **134 Common Cards** (112 Minor Arcana + 22 Major Arcana: 11 Specialist, 11 Standard)
+- **134 Kismeta Cards** (112 Minor Arcana + 22 Major Arcana: 11 Adept, 11 Fate)
 - **22 Crucible Cards** (Groups A, B, C, D; 4 per player; per game)
 - **4 Crucible Codex Cards** (1 per player; dual-sided: Codex + Quick Reference Guide)
 
@@ -139,7 +139,7 @@ The Magnus Alchemist Grandis Illuminatus ex Kismeta!
 
 - Place the Great Year Board game board in the center of the play area.
 - Select a Game Mode before continuing. _(Next page)_
-- Sort the Kismeta cards into two piles, Common Cards (Blue) and Crucible Cards (Red).
+- Sort the Kismeta cards into two piles, Kismeta Cards (Blue) and Crucible Cards (Red).
 - Common Deck (Blue): Shuffle all cards and place them face down by the game board.
 - Crucible Deck (Red): Place next to the Great Year board. You'll build the Deck in step _IV. Build the Crucible Deck._
 - Set the following components within easy reach:
@@ -168,7 +168,7 @@ Look for the "⚙️" icon in the Game Guide, highlighting modifiers. Continue t
 _Recommended for first playthroughs._
 
 - **Crucible Deck:** Use the Quickplay deck build.
-- **Astral Houses:** Built by paying 1 Common Card whose Planet matches your current Zodiac Sign.
+- **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
 - **Cauldron Thresholds:** Each Molten Coal placed in any Cauldron reduces the Refinement cost for all Reagents BY 5 RP. The Base RP Threshold to start is 25 RP.
 
 ### 2️⃣ STANDARD GAME
@@ -214,8 +214,8 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 The Agekeeper is the curator of the round. You hold the Agekeeper's Key and are responsible for:
 
 - **Setting the Cosmic Age:** You roll the Cosmic Age Die to start the round.
-- **Managing the Common Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
-- **Oversee Any Oppositions:** At the start of Phase 3: Autumn, you survey the Forge to determine whether any player wishes to declare an Opposition against a Stone currently being forged. You then facilitate any Oppositions, resolving them in turn order, before other Autumn actions proceed.
+- **Managing the Kismeta Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
+- **Facilitate Autumn Turns:** Beginning with yourself, guide each player through their Autumn turn in clockwise order. Autumn resolves in two passes: in Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn; in Pass 2, each player Tempers and Fires on their turn in the same clockwise order. Oppositions are declared by each player on their own turn — you no longer survey the Forge in advance.
 - **Transit the Age:** Prepare the play area for the next Age. Pass the Agekeeper's Key clockwise at the end of every round.
 
 Who starts? Everyone rolls their dice; the highest roller becomes the first Agekeeper and takes the Agekeeper's Key first. Reroll if tied.
@@ -241,7 +241,7 @@ The first Agekeeper prepares the Crucible Cards before the game begins.
 
 📌 **Note:** The position of each card (I, II, III, & IV; from left to right) corresponds to a Formula shown on your Crucible Codex.
 
-- **Deal Starting Common Cards:** The Agekeeper deals one face-up card from the Common Deck to each player's Spread. If any player receives a Major Arcana, return it to the deck, reshuffle, tap twice to cleanse, and redeal until all players hold a Minor Arcana.
+- **Deal Starting Kismeta Cards:** The Agekeeper deals one face-up card from the Common Deck to each player's Spread. If any player receives a Major Arcana, return it to the deck, reshuffle, tap twice to cleanse, and redeal until all players hold a Minor Arcana.
 
 - The first Cosmic Age begins!
 
@@ -304,7 +304,7 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 ### 4️⃣ Commune
 
 - **Assign cards to zones:** Place each Harvested card into your **Spread** (face-up, active) or your **Hand** (face-down, hidden). Cards already in your Spread or Hand from the previous round remain where they are.
-- **Seat your Arcanum:** Specialist Major Arcana you hold remain in your Arcanum. If you drew a Standard Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
+- **Seat your Arcanum:** Adept Major Arcana you hold remain in your Arcanum. If you drew a Fate Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
 - **Consider your goals:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Refinement. Your Hand is your reserve, useful for Oppositions and Refinement but invisible to rivals.
 
 ### 5️⃣ Card Lock
@@ -343,7 +343,7 @@ Astral Houses are permanent structures built on the Zodiac Wheel. Each provides 
 
 #### How to Build Astral Houses:
 
-- Pay 2 Common Cards matching your current Sign's Planet.
+- Pay 2 Kismeta Cards matching your current Sign's Planet.
 - Place your 🏰 token on the 🏰 icon on that Sign.
 
 | 🏰 ASTRAL HOUSES          |                                                                                                                                                                                          |
@@ -376,7 +376,7 @@ Freely exchange resources with any rival during your turn.
 
 | CAN TRADE                              | CANNOT TRADE           |
 | -------------------------------------- | ---------------------- |
-| Common Cards                           | Astral Houses          |
+| Kismeta Cards                           | Astral Houses          |
 | Reagents (only transferable via Trade) | Protective Wards       |
 | Active Crucible Cards (only via Trade) | Dormant Crucible Cards |
 |                                        | Molten Coals           |
@@ -392,15 +392,16 @@ Challenge a rival to steal a single card from their Spread. Only the Challenger 
 #### How to Declare a Duel:
 
 - **Declare:** Name your opponent and the specific card you are targeting in their Spread.
-- **Pay entry fee:** Choose an Ante Card
+- **Pay entry fee:** Choose an Ante Card from your Spread. You will lose this card if you lose the duel.
 - **Check Spreads:** Both players review their Spread for any relevant card effects.
 - **Roll:** Both players roll their Zodiac Dice. Higher roll wins. Reroll all ties until resolved.
 - **Resolve:** See outcomes below.
 
-| DUELS: ANTE CARDS |                                |                            |                                                                                   |
-| ----------------- | ------------------------------ | -------------------------- | --------------------------------------------------------------------------------- |
-| **Entry Fee**     | **How It Works**               | **If You Win**             | **If You Lose**                                                                   |
-| Ante Card         | Offer 1 card from your Spread. | Ante Card returned to you. | Defender claims your Ante Card. Cannot re-challenge the same Defender this round. |
+| DUEL RESULTS     |                                                        |
+| ---------------- | ------------------------------------------------------ |
+| **RESULT**       | **OUTCOME**                                            |
+| Challenger Wins  | Steal the card that was targeted from the Defender's Spread. Ante Card is returned to you. |
+| Challenger Loses | Ante Card is returned to the Common Deck. Cannot re-challenge the same Defender this round. |
 
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your target, add +1 to your dice roll. The Defender receives no bonus._
 
@@ -440,11 +441,11 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 ### Conduct the Great Work
 
-Before any action is taken, the Agekeeper surveys the Forge, noting each player whose Stone is currently Forging or in Stasis. Autumn follows a fixed sequence — all steps are resolved in order before any player may take other actions.
+Autumn resolves in two passes through the player order, beginning with the Agekeeper and proceeding clockwise. In Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn. Once all players have completed Pass 1, Pass 2 begins: each player Tempers and Fires on their turn in the same clockwise order. Steps are always taken in sequence within each pass — but each player works through them individually.
 
 <!-- FLOW:autumn-flow -->
 
-### 1️⃣ Leave Stasis
+### PASS 1 — 1️⃣ Leave Stasis ❄️
 
 Players whose Stone is currently in the Stasis zone may return it to the Forge this Autumn.
 
@@ -472,7 +473,7 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
 
-### 2️⃣⚔️ Opposition
+### PASS 1 — 2️⃣ Opposition ⚔️
 
 An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
 
@@ -498,11 +499,9 @@ More than one player may challenge the same Forging Stone in the same round. Res
 
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defender at declaration, add +1 to your final Alignment Points total. The Defender receives no bonus._
 
-⚠️ **Important:** Oppositions can only target a Stone that entered the Forge in a previous round — not one placed there during this round's Autumn.
+⚠️ **Important:** A Stone Fired into the Forge this Autumn cannot be targeted by Opposition this round. Only Stones that were already Forging at the start of this Autumn are eligible targets.
 
-⚠️ **Important:** All Oppositions — including any Stasis Oppositions from Step 1 — are fully declared and resolved before any other Autumn actions proceed.
-
-### 3️⃣🔨 Temper the Stone
+### PASS 2 — 3️⃣ Temper the Stone ⏳
 
 A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
 
@@ -512,7 +511,7 @@ A Stone that has been Forging since the previous round and has survived all Oppo
 
 ⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
 
-### 4️⃣🔥 Fire the Stone
+### PASS 2 — 4️⃣ Fire the Stone 🔥
 
 If you have an Active Crucible Card whose Alchemical Formula you have satisfied, you may Fire your Stone into the Forge this Autumn.
 
@@ -619,11 +618,11 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | **ZONE**    | **MAX LIMIT**         | **NOTES**                                                                                     |
 | Spread      | 7 cards               | Discard excess cards of your choice down to 7.                                                |
 | Hand        | 5 cards               | Discard excess cards of your choice down to 5.                                                |
-| Arcanum     | Specialist cards only | All Standard Major Arcana cards must be returned to the Common Deck. Specialist cards remain. |
+| Arcanum     | Adept cards only | All Fate Major Arcana cards must be returned to the Common Deck. Adept cards remain. |
 
 ### 5️⃣ Reset Sequence:
 
-- **Shuffle the Common Deck:** The Agekeeper collects all discarded Common Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
+- **Shuffle the Common Deck:** The Agekeeper collects all discarded Kismeta Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
 - **Pass the Agekeeper's Key:** The Agekeeper passes the Key clockwise to the next player, who becomes the new Agekeeper.
 - **Start the next round:** Return to Phase 1: Spring.
 
@@ -631,7 +630,7 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 
 # WINNING THE GAME
 
-Once a player reaches Gold in the Forge (position 7), they are one round from winning. At the start of Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition, opposing players can knock the Alchemist out of the Forge. If the player defends their Philosopher's Stone, they move it to the Altar of Kismeta (position 8) during Step 3: Temper the Stone. Discarding the last Crucible Card and advancing to the Altar wins the game.
+Once a player reaches Gold in the Forge (position 7), they are one round from winning. During Pass 1 of Autumn, opposing players may declare Opposition against the Forging Stone. If the player defends their Philosopher's Stone through Pass 1, they move it to the Altar of Kismeta (position 8) during Pass 2, Step 3: Temper the Stone. Discarding the last Crucible Card and advancing to the Altar wins the game.
 
 ---
 
@@ -684,9 +683,9 @@ Keep these principles in mind as you find your footing across the first few roun
 | 🟢 Green                                                          | Earth       | 🪙 Pentacles  | Vitriol     | Green        |
 | 🟡 Yellow                                                         | Air         | ⚔️ Swords     | Quicksilver | Yellow       |
 
-## COMMON CARDS
+## KISMETA CARDS
 
-The Common Deck is your primary tool across the Great Year. Its 134 cards divide into two types.
+The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 134 cards divide into two types.
 
 **Minor Arcana** (112 cards) - the building blocks of the Great Work. Each card has four traits:
 
@@ -697,7 +696,7 @@ The Common Deck is your primary tool across the Great Year. Its 134 cards divide
 
 **Major Arcana (22 cards) - two varieties:**
 
-| Specialist Cards (11)                                                   | Standard Cards (11)                            |
+| Adept Cards (11)                                                   | Fate Cards (11)                            |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
 | Carries three Aspects; used in Harvest & Alignments                     | No Aspects; effect only                        |
@@ -707,12 +706,12 @@ The Common Deck is your primary tool across the Great Year. Its 134 cards divide
 Three concepts you'll use constantly:
 
 - **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used when Refining Reagents and in other contexts.
-- **Card Sets** - Poker-style groupings of Common Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
+- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
 ## YOUR INVENTORY: Spread, Hand & Arcanum Zones
 
-You always manage your inventory of Common cards across three zones.
+You always manage your inventory of Kismeta Cards across three zones.
 
 | ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS  | MAX LIMIT                    | USED FOR                                                                                        | CANNOT BE USED FOR            |
 | ------- | --------------------------------------------- | ---------- | -------- | ---------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------- |
@@ -725,10 +724,10 @@ You always manage your inventory of Common cards across three zones.
 |         |                                               |            |          |                              |                                                                                                 | Crucible Card activation      |
 |         |                                               |            |          |                              | Opposition contributions (discarded after)                                                      | Alignments                    |
 |         |                                               |            |          |                              |                                                                                                 | Trades, Wagers, Astral Houses |
-| ARCANUM | MAJOR ARCANA: Standard & Specialist           | Visible    | Active   | Specialist: Max 2 cards      | Active Major Arcana effects                                                                     | Duels                         |
-|         |                                               |            |          |                              | Specialist Aspects (Harvest & Alignments)                                                       | Crucible Card activation      |
-|         |                                               |            |          | Standard: No limit           | Standard cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
-|         |                                               |            |          |                              | Specialist cards: must be purchased to enter; swap by paying new card's cost                    | Trades, Wagers, Astral Houses |
+| ARCANUM | MAJOR ARCANA: Fate & Adept           | Visible    | Active   | Adept: Max 2 cards      | Active Major Arcana effects                                                                     | Duels                         |
+|         |                                               |            |          |                              | Adept Aspects (Harvest & Alignments)                                                       | Crucible Card activation      |
+|         |                                               |            |          | Fate: No limit           | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
+|         |                                               |            |          |                              | Adept cards: must be purchased to enter; swap by paying new card's cost                    | Trades, Wagers, Astral Houses |
 
 ## Alignment Scoring
 
@@ -736,7 +735,7 @@ You always manage your inventory of Common cards across three zones.
 | ------------------------- | ------------------------------------------------------- | -------------------------------- |
 | Zodiac Die: Result        | Sign, Planet, and Element of your rolled Sign           | +3 Sign · +2 Planet · +1 Element |
 | Spread Cards              | Planet and Element of each card (scored individually)   | +2 Planet · +1 Element           |
-| Arcanum: Specialist Cards | Sign, Planet, and Element (each card carries all three) | +3 Sign · +2 Planet · +1 Element |
+| Arcanum: Adept Cards | Sign, Planet, and Element (each card carries all three) | +3 Sign · +2 Planet · +1 Element |
 | Astral Houses             | Sign, Planet, and Element of the built Sign             | +3 Sign · +2 Planet · +1 Element |
 
 ## Alignment Point Sources
@@ -747,7 +746,7 @@ You always manage your inventory of Common cards across three zones.
 | Spread Cards          | Yes            | All Aspects of all cards in your Spread. Card effects that modify Oppositions apply.       |
 | Astral Houses         | Yes            | +3 (Sign match), +2 (Planet match), +1 (Element match) against the Opposition Age.         |
 | Hand Cards            | Optional       | Cards contributed from the Hand are discarded after the Opposition resolves.               |
-| Arcanum: Major Arcana | Yes (effects)  | Active effects apply; check individual card text. Some Standard cards affect both players. |
+| Arcanum: Major Arcana | Yes (effects)  | Active effects apply; check individual card text. Some Fate cards affect both players. |
 
 ## Reagent Thresholds
 
@@ -842,13 +841,13 @@ There are three Aspect types, each found across all three sources:
 Where to Find Aspects:
 
 - Great Year Board: Cosmic Age Signs on the Zodiac Wheel
-- Cards: Common and Crucible Cards in your Spread, Hand, and Arcanum
+- Cards: Kismeta and Crucible Cards in your Spread, Hand, and Arcanum
 
 Element, Card Suit & Color Connection:  
-Each Element is tied to one Common Card Suit, both sharing the same color.
+Each Element is tied to one Kismeta Card Suit, both sharing the same color.
 
 - Elements are found on the Great Year board’s Zodiac Wheel
-- Card Suits are found on the cards of the Common Card deck
+- Card Suits are found on the cards of the Kismeta Card deck
 
 | ELEMENT | SUIT      | COLOR  |
 | :------ | :-------- | :----- |
@@ -886,7 +885,7 @@ With every new Age comes a new Harvest, during which Alchemists collect the card
 
 - **Zodiac Die:** Each player rolls their personal Zodiac die. Compare the resulting Sign’s Aspects (Sign, Planet, Element) against the Cosmic Age’s Aspects. The Highest-Matching Aspect is awarded.
 - **Astral Houses:** Each Astral House a player has built is checked against the Cosmic Age. Multiple Astral Houses may each earn a bonus independently, adding to the total amount.
-- **Specialist Cards:** Each active Specialist card in your Arcanum carries three Aspects.
+- **Adept Cards:** Each active Adept card in your Arcanum carries three Aspects.
 - **Spread Element Match:** Before the Harvest deal, each player counts the cards already in their Spread whose suit matches the Cosmic Age’s element (same color). Each earns +1 card.
 
 #### ORDER OF OPERATIONS
@@ -913,18 +912,18 @@ The Cosmic Age is Aries (Aries, Mars, Fire).
 - You have a Spread Card effect: “Earn +2 Bonus Cards if Aries is the Cosmic Age”: +2 cards
 - Total Harvest Amount: 9 cards
 
-### 1.3 COMMON CARDS
+### 1.3 KISMETA CARDS
 
-The Common Deck is your main tool during the Great Year, with 134 cards: 112 Minor Arcana, the building blocks of the Great Work, and 22 Major Arcana cards, with powerful one-time effects. Common cards are essential for activating Crucible Cards, Refining Reagents, executing Alignments, and protecting your Stone in the Forge.
+The Kismeta Deck is your main tool during the Great Year, with 134 cards: 112 Minor Arcana, the building blocks of the Great Work, and 22 Major Arcana cards, with powerful one-time effects. Kismeta cards are essential for activating Crucible Cards, Refining Reagents, executing Alignments, and protecting your Stone in the Forge.
 
 #### MAJOR ARCANA CARDS
 
 Types of Major Arcana Cards:
 
-- **Specialist Cards:** There are 11 Specialist Major Arcana Cards in the Common Deck, each with a unique effect that lasts for rounds. You can buy a card at its listed price or discard it. You may hold up to two Specialist Cards and swap them by paying the listed price and returning the old card to the deck. Specialist Cards are played into the Arcanum zone.
-  - Aspects: Each Specialist has a set of three Aspects. These can be used during the Harvest to generate additional bonus cards.
-  - ⚠️ Important: When a Specialist card is drawn, you must buy it immediately or discard it. You cannot hold it in your Hand and purchase it later.
-- **Standard Cards:** There are 11 Standard Major Arcana Cards. Each has a powerful one-time effect applied to your Arcanum zone, resolved by following the card’s directions, then discarded at the round’s end.
+- **Adept Cards:** There are 11 Adept Major Arcana Cards in the Common Deck, each with a unique effect that lasts for rounds. You can buy a card at its listed price or discard it. You may hold up to two Adept Cards and swap them by paying the listed price and returning the old card to the deck. Adept Cards are played into the Arcanum zone.
+  - Aspects: Each Adept card has a set of three Aspects. These can be used during the Harvest to generate additional bonus cards.
+  - ⚠️ Important: When an Adept card is drawn, you must buy it immediately or discard it. You cannot hold it in your Hand and purchase it later.
+- **Fate Cards:** There are 11 Fate Major Arcana Cards. Each has a powerful one-time effect applied to your Arcanum zone, resolved by following the card’s directions, then discarded at the round’s end.
 
 #### MINOR ARCANA CARDS
 
@@ -934,11 +933,11 @@ Traits of a Minor Arcana Card:
 - **Court Cards:** Page (11), Knight (12), Queen (13), King (14), Ace (1 OR 15)
 - **Suit:** Wands (Fire), Cups (Water), Pentacles (Earth), and Swords (Air). Each shares the same color as one Element and one Reagent type.
 - **Planet:** Each card is assigned a Planet.
-- **Card Effects:** Common Cards carry special effects that activate under specific conditions. See Common Card Effects below.
+- **Card Effects:** Kismeta Cards carry special effects that activate under specific conditions. See Kismeta Card Effects below.
 
 #### CARD SETS, RANK POINTS & ALCHEMICAL ALIGNMENTS
 
-- **Card Sets:** Poker-style groupings of Common Cards (Pairs, Three Of A Kind, Flushes, Straights, etc.) collected in the Spread to fulfill Crucible Codex Formulae, Alignments, etc.
+- **Card Sets:** Poker-style groupings of Kismeta Cards (Pairs, Three Of A Kind, Flushes, Straights, etc.) collected in the Spread to fulfill Crucible Codex Formulae, Alignments, etc.
 - **Rank Points:** Each card’s numeric Rank. Add these ranks together to find the Total Rank Sum of a card set, used to refine Reagents, and in other areas of the game.
 - **Alchemical Alignments** are precise card configurations that an Alchemist must achieve in their Spread to satisfy part of an Alchemical Formula, found on the Crucible Cards.
 
@@ -948,16 +947,16 @@ You manage your cards across three main zones: the Spread, the Hand, and the Arc
 
 - **Spread: (Visible: Active Effects)** There is no card limit on the Spread during the course of a round. The 7-card maximum is enforced only at the end of the round during Phase 4: Winter. Cards added to the Spread mid-round (from Duels, card effects, or other sources) may exceed this limit temporarily. The Spread is your active area, where cards with effects remain active while in it: activating Crucible Cards, meeting Forge Alignment, refining Reagents, building Astral Houses, trading, wagering, opposing, and targeting in Duels.
 - **Hand: (Hidden; Inactive Effects)** Up to 5 private cards are hidden from opponents. Hand cards may be used alongside Spread cards for Reagent Refinement; used Hand cards are discarded. Hand cards may also contribute to an Opposition, but are discarded after the Opposition resolves, regardless of outcome. These cards can’t be used for Duels, Crucible, Alignments, Trades, Wagers, or Houses.
-- **Arcanum: (Visible; Active Major Arcana Cards)** Any active Major Arcana cards. Standard cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Specialist cards must be purchased and can be added in up to two at a time.
+- **Arcanum: (Visible; Active Major Arcana Cards)** Any active Major Arcana cards. Fate cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Adept cards must be purchased and can be added in up to two at a time.
 
-#### COMMON CARD EFFECTS
+#### KISMETA CARD EFFECTS
 
-Common Cards have special effects that activate under specific conditions and stay in your Spread. They are not discarded after use and can be reused as specified.
+Kismeta Cards have special effects that activate under specific conditions and stay in your Spread. They are not discarded after use and can be reused as specified.
 
 Aligning Cards to Activate Effects:
 
-- **Passive Effects:** Some Common Cards have effects that need no additional interaction to be activated. They remain active as long as they remain in the Spread.
-- **Active Effects:** Some Common Card effects require specific Aspect pairings among two or more cards in your Spread to activate. Follow the instructions on the card to activate.
+- **Passive Effects:** Some Kismeta Cards have effects that need no additional interaction to be activated. They remain active as long as they remain in the Spread.
+- **Active Effects:** Some Kismeta Card effects require specific Aspect pairings among two or more cards in your Spread to activate. Follow the instructions on the card to activate.
 
 ### 1.4 CRUCIBLE CARDS
 
@@ -1007,11 +1006,11 @@ Molten Coal is extracted from Dormant Crucible Cards. Dropping a Molten Coal int
 
 ### 1.6 REAGENTS
 
-Reagents are the concentrated alchemical fuels required to power the Great Work. While Common Cards represent raw potential gathered from the cosmos, Reagents are the refined energy needed to "Fuel the Forge" and advance your Philosopher’s Stone through the Crucible.
+Reagents are the concentrated alchemical fuels required to power the Great Work. While Kismeta Cards represent raw potential gathered from the cosmos, Reagents are the refined energy needed to "Fuel the Forge" and advance your Philosopher’s Stone through the Crucible.
 
 #### FOUR REAGENTS
 
-There are four types of Reagents, each refined from a specific suit of Common Cards:
+There are four types of Reagents, each refined from a specific suit of Kismeta Cards:
 
 | REAGENT     | REQ’D SUIT TO REFINE | CAULDRON |
 | :---------- | :------------------- | :------- |
@@ -1062,7 +1061,7 @@ Astral Houses are permanent structures built directly on the Zodiac Wheel of the
 
 #### BUILDING AN ASTRAL HOUSE
 
-- **Cost:** Pay 2 Common Cards sharing the Sign’s Planet.
+- **Cost:** Pay 2 Kismeta Cards sharing the Sign’s Planet.
 - **Placement:** Place your 🏰 Astral House token on the 🏰 symbol on the Sign where your Meeple currently stands. Once placed, the House is permanent and cannot be moved.
 
 #### WHAT AN ASTRAL HOUSE DOES
@@ -1077,7 +1076,7 @@ An Astral House on a Sign provides three permanent benefits, each operating inde
 
 Alchemists who deal wisely with their rivals can convert surplus cards into exactly what they need. During Phase 2: Summer, you may trade any of the following resources:
 
-- Common Cards: These can also be dueled over.
+- Kismeta Cards: These can also be dueled over.
 - Reagents: These cannot be exchanged any other way.
 - Active Crucible Cards: These cannot be exchanged any other way.
 
@@ -1098,14 +1097,14 @@ A Duel lets you challenge a rival to steal a card from their Spread during Phase
 
 - **Declare the Duel:** Declare your opponent and the card you are targeting.
 - **Entry Fee:** Choose either Ante Card or Harvest Loan
-  - **Ante Card:** Offer one card from your Spread or Hand as your Ante. If you lose, this card is forfeited to the Defender.
+  - **Ante Card:** Offer one card from your Spread as your Ante. If you lose, this card is returned to the Common Deck.
   - **Harvest Loan:** Take a Harvest Loan against your next round’s Harvest. You may take up to 2 Harvest Loans per round. If you lose, the loan is deducted from your Base Harvest of 2 cards next round — not from your bonus cards. A single loan reduces your Base Harvest to 1 card; two loans reduce it to 0. Bonus cards from Alignment are unaffected. The Agekeeper tracks outstanding loans. A player who has already taken 2 Harvest Loans and wishes to initiate a further Duel that round must use an Ante Card as their entry fee. Only the initiating player pays the entry fee; the Defender does not.
 - **Consult Your Spread:** Both players look for any Spread Effects that may be relevant.
 - **The Clash:** Both players roll their Player Dice.
 - **Determine the Outcome:**
   - **Challenger Wins:** Take any one card from the rival’s Spread.
   - **Defender Wins:**
-    - Ante Card: The Defender receives the Challenger Ante Card
+    - Ante Card: The Ante Card is returned to the Common Deck.
     - Harvest Loan: One card is deducted from the Challenger’s Base Harvest next round.
   - **Tie:** Both players reroll their dice. Repeat until one player rolls higher than the other. There are no ties in a Duel.
 
@@ -1120,7 +1119,7 @@ The Roll:
 - You roll: 9
 - Your rival rolls: 4
 - Challenger wins (9 > 4): Take the King of Cups from the rival’s Spread. Your Ante Card is returned to you.
-- Defender wins (if you roll lower): Your rival claims your 5 of Wands. You may not challenge the same Defender again this round.
+- Defender wins (if you roll lower): Your 5 of Wands Ante Card is returned to the Common Deck. You may not challenge the same Defender again this round.
 
 ### 1.10 GAMBIT
 
@@ -1213,7 +1212,7 @@ When your Stone is in the Forge, it can be attacked. A rival may declare an Oppo
 
 #### WHEN AN OPPOSITION CAN BE DECLARED
 
-An Opposition can be declared only at the start of Phase 3: Autumn, when the Agekeeper surveys the Forge and calls for Declarations of Opposition. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during the current round’s Autumn phase. All Oppositions are fully resolved before any player takes their other Autumn actions.
+An Opposition can be declared during Pass 1 of Phase 3: Autumn, on each player’s own turn. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during this round’s Autumn phase.
 **Multiple Oppositions Against the Same Stone**
 
 More than one player may declare an Opposition against the same Forging Stone in the same round. The following rules govern this sequence:
@@ -1235,7 +1234,7 @@ After the Defender completes a full round and moves their Stone to the next Mant
 - **The Challenge:** The Challenger pays the bank a quantity of Reagents equal to the Defender’s Protective Ward. This is the entry fee for the Opposition. No Ward = no entry fee.
 - **Cards in Play:** All cards currently in each player’s Spread participate in the Opposition automatically. Their Aspects are used to calculate Alignment Points, and any card effects relevant to Oppositions are active for the duration of the contest.
   - **Hand Cards:** You may also contribute cards from your Hand to the Opposition. Hand cards used this way are discarded after the Opposition is resolved.
-  - **Arcanum:** Any Major Arcana card (Specialist or Standard) currently in either player’s Arcanum zone may have active effects during the Opposition. Some Standard cards may affect the Opposition for both players. Check each card’s text.
+  - **Arcanum:** Any Major Arcana card (Adept or Fate) currently in either player’s Arcanum zone may have active effects during the Opposition. Some Fate cards may affect the Opposition for both players. Check each card’s text.
   - **Opposition Effects:** Some card effects modify Opposition outcomes, adjusting Alignment Points, changing contest rules, or causing other results. These are resolved before final scores are compared. See individual card text.
 - **The Roll:** The Opposition Age is the current round’s Cosmic Age, set at the start of Phase 1: Spring and known to all players throughout the round. Both players roll their Zodiac Die and place it on the corresponding Sign.
 - **Calculating the Results:** All Alignment Points are totaled. The player with the higher score wins. **Tied Scores:** If both players have equal Alignment Points, each player rolls their Zodiac Die; the higher roll wins. Reroll if tied again.
@@ -1249,7 +1248,7 @@ Sources for Alignments:
 - Astral Houses
 - Spread Cards (All cards in your Spread)
 - Hand Cards (Played & discarded after use)
-- Arcanum: Major Arcana (Specialist & Standard)
+- Arcanum: Major Arcana (Adept & Fate)
 
 Opposition Effects:  
 Certain card effects specifically modify Opposition outcomes. These effects may adjust Alignment Points, alter the contest rules, or produce other results. All modifications are resolved before the outcome is decided.
@@ -1279,7 +1278,7 @@ Defender’s Sources:
 - Zodiac Die result: Cancer: → No Match = +0
 - Astral House in Aries: (Element: Fire) → Element Match (Fire) = +1
 - Activated Card: (Planet: Mars) → No Match = +0
-- Active Specialist Card: (+2 to Fire) → Element Match (Fire) = +2
+- Active Adept Card: (+2 to Fire) → Element Match (Fire) = +2
 - Defender’s Alignment Points = 3
 
 Outcome:  
@@ -1344,7 +1343,7 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | Term                    | Definition                                                                                                                                                                                                                             |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Agekeeper's Boon**    | A +2-card bonus to everyone's Harvest total that is applied when the Agekeeper rolls the same sign for the Cosmic Age as for their Zodiac Sign.                                                                                        |
-| **Alchemical Formula**  | The two requirements on each Active Crucible Card that must be satisfied before a Stone can be Fired: an Alignment condition and a card set condition. Both must be met simultaneously.                                                |
+| **Alchemical Formula**  | The two requirements on each Active Crucible Card that must be satisfied before a Stone can be Fired: an Alchemical Alignment and a set amount of Reagents. Both must be met simultaneously.                                                |
 | **Alignment Points**    | Scores generated by comparing a player's Aspects against the Opposition Age. Calculated using the Harvest Bonus Scoring table and used to determine the outcome of Oppositions and Gambits.                                            |
 | **Aspects**             | The three-part identity of a Cosmic Age or Alignment source: Sign, Planet, and Element. Each Aspect can generate Bonus Cards in Harvest and Alignment Points in Opposition. Only the highest-matching Aspect per source counts.        |
 | **Astral House**        | A permanent structure built on the Zodiac Wheel. Each grants an ongoing Alignment source (Sign, Planet, Element) and two additional benefits. Only one player may build on any given Sign.                                             |

@@ -7,7 +7,7 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
 
 - Place the Great Year Board game board in the center of the play area.
 - Select a Game Mode before continuing. _(Next page)_
-- Sort the Kismeta cards into two piles, Common Cards (Blue) and Crucible Cards (Red).
+- Sort the Kismeta cards into two piles, Kismeta Cards (Blue) and Crucible Cards (Red).
 - Common Deck (Blue): Shuffle all cards and place them face down by the game board.
 - Crucible Deck (Red): Place next to the Great Year board. You'll build the Deck in step _IV. Build the Crucible Deck._
 - Set the following components within easy reach:
@@ -39,7 +39,7 @@ Look for the "⚙️" icon in the Game Guide, highlighting modifiers. Continue t
 _Recommended for first playthroughs._
 
 - **Crucible Deck:** Use the Quickplay deck build.
-- **Astral Houses:** Built by paying 1 Common Card whose Planet matches your current Zodiac Sign.
+- **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
 - **Cauldron Thresholds:** Each Molten Coal placed in any Cauldron reduces the Refinement cost for all Reagents BY 5 RP. The Base RP Threshold to start is 25 RP.
 
 ### 2️⃣ STANDARD GAME
@@ -142,8 +142,8 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 The Agekeeper is the curator of the round. You hold the Agekeeper's Key and are responsible for:
 
 - **Setting the Cosmic Age:** You roll the Cosmic Age Die to start the round.
-- **Managing the Common Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
-- **Oversee Any Oppositions:** At the start of Phase 3: Autumn, you survey the Forge to determine whether any player wishes to declare an Opposition against a Stone currently being forged. You then facilitate any Oppositions, resolving them in turn order, before other Autumn actions proceed.
+- **Managing the Kismeta Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
+- **Facilitate Autumn Turns:** Beginning with yourself, guide each player through their Autumn turn in clockwise order. Autumn resolves in two passes: in Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn; in Pass 2, each player Tempers and Fires on their turn in the same clockwise order. Oppositions are declared by each player on their own turn — you no longer survey the Forge in advance.
 - **Transit the Age:** Prepare the play area for the next Age. Pass the Agekeeper's Key clockwise at the end of every round.
 
 Who starts? Everyone rolls their dice; the highest roller becomes the first Agekeeper and takes the Agekeeper's Key first. Reroll if tied.
@@ -169,6 +169,6 @@ The first Agekeeper prepares the Crucible Cards before the game begins.
 
 📌 **Note:** The position of each card (I, II, III, & IV; from left to right) corresponds to a Formula shown on your Crucible Codex.
 
-- **Deal Starting Common Cards:** The Agekeeper deals one face-up card from the Common Deck to each player's Spread. If any player receives a Major Arcana, return it to the deck, reshuffle, tap twice to cleanse, and redeal until all players hold a Minor Arcana.
+- **Deal Starting Kismeta Cards:** The Agekeeper deals one face-up card from the Common Deck to each player's Spread. If any player receives a Major Arcana, return it to the deck, reshuffle, tap twice to cleanse, and redeal until all players hold a Minor Arcana.
 
 - The first Cosmic Age begins!

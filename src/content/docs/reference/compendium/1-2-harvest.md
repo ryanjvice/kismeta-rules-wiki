@@ -9,7 +9,7 @@ With every new Age comes a new Harvest, during which Alchemists collect the card
 
 - **Zodiac Die:** Each player rolls their personal Zodiac die. Compare the resulting Sign’s Aspects (Sign, Planet, Element) against the Cosmic Age’s Aspects. The Highest-Matching Aspect is awarded.
 - **Astral Houses:** Each Astral House a player has built is checked against the Cosmic Age. Multiple Astral Houses may each earn a bonus independently, adding to the total amount.
-- **Specialist Cards:** Each active Specialist card in your Arcanum carries three Aspects.
+- **Adept Cards:** Each active Adept card in your Arcanum carries three Aspects.
 - **Spread Element Match:** Before the Harvest deal, each player counts the cards already in their Spread whose suit matches the Cosmic Age’s element (same color). Each earns +1 card.
 
 #### ORDER OF OPERATIONS

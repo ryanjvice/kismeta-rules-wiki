@@ -9,7 +9,7 @@ Astral Houses are permanent structures built directly on the Zodiac Wheel of the
 
 #### BUILDING AN ASTRAL HOUSE
 
-- **Cost:** Pay 2 Common Cards sharing the Sign’s Planet.
+- **Cost:** Pay 2 Kismeta Cards sharing the Sign’s Planet.
 - **Placement:** Place your 🏰 Astral House token on the 🏰 symbol on the Sign where your Meeple currently stands. Once placed, the House is permanent and cannot be moved.
 
 #### WHAT AN ASTRAL HOUSE DOES

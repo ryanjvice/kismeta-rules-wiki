@@ -127,7 +127,7 @@ export default defineConfig({
 									'reference/compendium/1-1-aspects-alignment'
 								),
 								link('1.2 Harvest', '1.2 Colheita', 'reference/compendium/1-2-harvest'),
-								link('1.3 Common Cards', '1.3 Cartas Comuns', 'reference/compendium/1-3-common-cards'),
+								link('1.3 Kismeta Cards', '1.3 Cartas Kismeta', 'reference/compendium/1-3-common-cards'),
 								link('1.4 Crucible Cards', '1.4 Cartas do Crucible', 'reference/compendium/1-4-crucible-cards'),
 								link(
 									'1.5 Cauldrons & Molten Coal',
