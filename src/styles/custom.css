@@ -1366,3 +1366,116 @@ main:has(.kismeta-lore) h1#_top,
 .context-rules-panel__mobile-dropdown .context-rules-panel__body {
 	max-height: 50vh;
 }
+
+/* Home landing — game intro & site footer */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.kismeta-home-intro {
+	max-width: 42rem;
+	margin: 2.5rem auto 0;
+	padding: 1.75rem 1.5rem;
+	text-align: center;
+	border: 1px solid color-mix(in srgb, var(--kismeta-gold) 45%, transparent);
+	border-radius: 0.5rem;
+	background: color-mix(in srgb, var(--kismeta-purple-mid) 35%, var(--sl-color-bg));
+}
+
+.kismeta-home-intro__summary {
+	margin: 0;
+	font-family: var(--kismeta-font-lore);
+	font-size: 1.125rem;
+	line-height: 1.65;
+	color: var(--sl-color-gray-1);
+	letter-spacing: 0.01em;
+}
+
+.kismeta-home-intro__meta {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem 1.5rem;
+	margin: 1.5rem 0 0;
+	padding: 1.25rem 0 0;
+	border-top: 1px solid color-mix(in srgb, var(--kismeta-gold) 25%, transparent);
+	text-align: left;
+}
+
+.kismeta-home-intro__meta-item {
+	margin: 0;
+}
+
+.kismeta-home-intro__meta dt {
+	margin: 0 0 0.25rem;
+	font-family: var(--kismeta-font-heading);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--kismeta-gold);
+}
+
+.kismeta-home-intro__meta dd {
+	margin: 0;
+	font-family: var(--kismeta-font-body);
+	font-size: 0.95rem;
+	line-height: 1.45;
+	color: var(--sl-color-gray-2);
+}
+
+.kismeta-home-intro__meta dd em {
+	font-family: var(--kismeta-font-light);
+	font-style: italic;
+}
+
+@media (max-width: 32rem) {
+	.kismeta-home-intro__meta {
+		grid-template-columns: 1fr;
+	}
+}
+
+.kismeta-site-footer {
+	max-width: 42rem;
+	margin: 2.5rem auto 3rem;
+	padding: 0 1rem;
+	text-align: center;
+}
+
+.kismeta-site-footer__social ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem 1.25rem;
+	margin: 0 0 1rem;
+	padding: 0;
+	list-style: none;
+}
+
+.kismeta-site-footer__social a {
+	font-family: var(--kismeta-font-heading);
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+	color: var(--sl-color-gray-2);
+	transition: color 0.15s ease;
+}
+
+.kismeta-site-footer__social a:hover {
+	color: var(--kismeta-gold);
+}
+
+.kismeta-site-footer__copyright {
+	margin: 0;
+	font-size: 0.8rem;
+	line-height: 1.5;
+	color: var(--sl-color-gray-3);
+}

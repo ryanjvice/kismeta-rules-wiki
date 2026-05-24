@@ -1,0 +1,44 @@
+---
+const t = Astro.locals.t;
+
+/** Replace href values when real social URLs are available. */
+const socialLinks = [
+	{ id: 'instagram', href: '#', labelKey: 'home.social.instagram' as const },
+	{ id: 'facebook', href: '#', labelKey: 'home.social.facebook' as const },
+	{ id: 'youtube', href: '#', labelKey: 'home.social.youtube' as const },
+];
+---
+
+<section class="kismeta-home-intro not-content" aria-labelledby="home-intro-heading">
+	<h2 id="home-intro-heading" class="sr-only">Kismeta</h2>
+	<p class="kismeta-home-intro__summary">
+		{t('home.intro.summary')}
+	</p>
+	<dl class="kismeta-home-intro__meta">
+		<div class="kismeta-home-intro__meta-item">
+			<dt set:html={t('home.intro.playersLabel')} />
+			<dd set:html={t('home.intro.playersValue')} />
+		</div>
+		<div class="kismeta-home-intro__meta-item">
+			<dt set:html={t('home.intro.playTimeLabel')} />
+			<dd set:html={t('home.intro.playTimeValue')} />
+		</div>
+	</dl>
+</section>
+
+<footer class="kismeta-site-footer not-content">
+	<nav class="kismeta-site-footer__social" aria-label={t('home.social.aria')}>
+		<ul>
+			{
+				socialLinks.map(({ id, href, labelKey }) => (
+					<li>
+						<a href={href} data-social={id}>
+							{t(labelKey)}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+	<p class="kismeta-site-footer__copyright">{t('home.copyright')}</p>
+</footer>
