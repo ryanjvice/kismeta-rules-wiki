@@ -14,18 +14,18 @@ Spring opens every Cosmic Age. The Agekeeper rolls the Cosmic Age Die, all playe
 | 🌸 SPRING Set the Age & Gather Resources | 1️⃣ Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2️⃣ Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3️⃣ Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). 4️⃣ Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. 5️⃣ Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-### 1️⃣ Set the Cosmic Age {#1-set-the-cosmic-age}
+### 1️⃣ Set the Cosmic Age
 
 - **Roll the Cosmic Age Die:** The Agekeeper rolls the 12-sided black die.
 - **Read the Sign and Aspects aloud:** Announce the Sign's name, its ruling Planet, and its Element. All players note these — every Alignment calculation this round is measured against them.
 - **Apply the Cosmic Effect:** The rolled Sign's Cosmic Effect activates immediately and applies for the entire round. See the _Cosmic Ages & Effects_ table in the Reference Appendix.
 
-### 2️⃣ Determine Your Sign {#2-determine-your-sign}
+### 2️⃣ Determine Your Sign
 
 - **Roll your Zodiac Die:** Each player rolls their color-matched 12-sided die simultaneously.
 - **Move your Meeple:** Advance it to the Sign you rolled on the Zodiac Wheel. Your rolled Sign's Aspects are now your Alignment source for this round's Harvest and all subsequent calculations.
 
-### 3️⃣ Harvest {#3-harvest}
+### 3️⃣ Harvest
 
 The Agekeeper deals cards in the following order. All Bonus Cards are determined before any are dealt.
 
@@ -59,13 +59,13 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 | Base Harvest            | 2 cards always dealt regardless of Alignment    | +2              |
 | **TOTAL HARVEST**       |                                                 | **8 cards**     |
 
-### 4️⃣ Commune {#4-commune}
+### 4️⃣ Commune
 
 - **Assign cards to zones:** Place each Harvested card into your **Spread** (face-up, active) or your **Hand** (face-down, hidden). Cards already in your Spread or Hand from the previous round remain where they are.
 - **Seat your Arcanum:** Adept Major Arcana you hold remain in your Arcanum. If you drew a Fate Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
 - **Consider your goals:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Refinement. Your Hand is your reserve, useful for Oppositions and Refinement but invisible to rivals.
 
-### 5️⃣ Card Lock {#5-card-lock}
+### 5️⃣ Card Lock
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 
@@ -214,9 +214,9 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 Autumn resolves in two passes through the player order, beginning with the Agekeeper and proceeding clockwise. In Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn. Once all players have completed Pass 1, Pass 2 begins: each player Tempers and Fires on their turn in the same clockwise order. Steps are always taken in sequence within each pass — but each player works through them individually.
 
-<div class="action-flow action-flow--static" data-flow-id="autumn-flow" data-locale="en"><p class="action-flow__intro">Every Autumn, the table resolves steps 1 through 4 in order. You only act on the beats that apply to where your Philosopher's Stone is right now.</p><ol class="action-flow__tree"><li class="action-flow__node action-flow__node--group" data-node-id="autumn-sequence"><div class="action-flow__node-head"><span class="action-flow__node-label">Autumn procession</span></div><ol class="action-flow__children"><li class="action-flow__node action-flow__node--sequence" data-node-id="leave-stasis"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">1. Leave Stasis</span></div><p class="action-flow__condition"><em>Applies when: Your Stone is in Stasis</em></p><div class="action-flow__branches"><div class="action-flow__branch"><li class="action-flow__node action-flow__node--choice" data-node-id="forge-open"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot open</span></div><p class="action-flow__body">Return your Stone to the Forge. You may place a Ward on the spot.</p></li></div><div class="action-flow__branch"><li class="action-flow__node action-flow__node--choice" data-node-id="forge-occupied"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot occupied</span></div><div class="action-flow__branches"><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="wait"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Wait — stay in Stasis</span></div><p class="action-flow__body">Skip leaving Stasis this Autumn.</p></li></div><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="stasis-opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Challenge — Stasis Opposition in step 2</span></div><p class="action-flow__body">Declare Stasis Opposition when it is your turn in step 2.</p></li></div></div></li></div></div></li><li class="action-flow__node action-flow__node--sequence" data-node-id="opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">2. Opposition declarations</span></div><p class="action-flow__condition"><em>Applies when: Rivals have Stones on the Forge, or you are challenging from Stasis</em></p><p class="action-flow__body">Each player may declare Opposition against a rival's Stone on the Forge.</p></li><li class="action-flow__node action-flow__node--sequence" data-node-id="temper"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">3. Temper</span></div><p class="action-flow__condition"><em>Applies when: Your Stone has been Forging since last round (not if you just left Stasis)</em></p><p class="action-flow__body">Spend Reagents to advance your Stone on the Forge track.</p></li><li class="action-flow__node action-flow__node--sequence" data-node-id="fire"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">4. Fire</span></div><p class="action-flow__condition"><em>Applies when: Active Crucible formula met and Mantle Ring reached</em></p><p class="action-flow__body">Complete the Great Work — place your Stone in the Mantle Ring.</p></li></ol></li></ol></div>
+<div class="action-flow action-flow--static" data-flow-id="autumn-flow" data-locale="en"><p class="action-flow__intro">Quick reference for your turn — select where your Stone is, then open the matching beats. Full rules follow below.</p><section class="action-flow__pass" data-pass-id="pass-1"><h4 class="action-flow__pass-title">Pass 1 — Leave Stasis &amp; Opposition</h4><p class="action-flow__pass-body">Each player in turn order (clockwise from the Agekeeper).</p><ol class="action-flow__tree action-flow__tree--pass"><li class="action-flow__node action-flow__node--sequence" data-node-id="leave-stasis"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">1. Leave Stasis</span></div><p class="action-flow__condition"><em>Applies when: Your Stone is in Stasis</em></p><ol class="action-flow__branches"><li class="action-flow__node action-flow__node--choice" data-node-id="forge-open"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot open</span></div><p class="action-flow__body">Return your Stone to the Forge. You may re-arm a Protective Ward on the spot.</p></li><li class="action-flow__node action-flow__node--choice" data-node-id="forge-occupied"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--choice">Choose one</span><span class="action-flow__node-label">Forge spot occupied</span></div><div class="action-flow__branches"><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="wait"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Wait — stay in Stasis</span></div><p class="action-flow__body">Remain in Stasis another round. No action required.</p></li></div><div class="action-flow__branch"><li class="action-flow__node action-flow__node--optional" data-node-id="stasis-opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--optional">Optional</span><span class="action-flow__node-label">Challenge — Stasis Opposition in step 2</span></div><p class="action-flow__body">Declare Stasis Opposition on your turn in Pass 1, step 2.</p></li></div></div></li></ol></li><li class="action-flow__node action-flow__node--sequence" data-node-id="opposition"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">2. Opposition</span></div><p class="action-flow__condition"><em>Applies when: You may challenge a rival Forging Stone, or defend if you are Forging</em></p><p class="action-flow__body">Alignment contest — you may declare Opposition against eligible Stones on the Forge.</p></li></ol></section><section class="action-flow__pass" data-pass-id="pass-2"><h4 class="action-flow__pass-title">Pass 2 — Temper &amp; Fire</h4><p class="action-flow__pass-body">After all players finish Pass 1, repeat turn order for Temper and Fire.</p><ol class="action-flow__tree action-flow__tree--pass"><li class="action-flow__node action-flow__node--sequence" data-node-id="temper"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">3. Temper</span></div><p class="action-flow__condition"><em>Applies when: Forging since last round; not if you returned from Stasis this Autumn</em></p><p class="action-flow__body">Advance your Stone to the next Mantle Ring position; discard the Crucible Card and burn remaining Wards.</p></li><li class="action-flow__node action-flow__node--sequence" data-node-id="fire"><div class="action-flow__node-head"><span class="action-flow__badge action-flow__badge--sequence">In order</span><span class="action-flow__node-label">4. Fire</span></div><p class="action-flow__condition"><em>Applies when: Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis</em></p><p class="action-flow__body">Formula met on an Active Crucible Card — move your Stone into the Forge and Fire the card.</p></li></ol></section></div>
 
-### PASS 1 — 1️⃣ Leave Stasis ❄️
+### PASS 1 — 1️⃣ Leave Stasis ❄️ {#pass-1-1-leave-stasis}
 
 Players whose Stone is currently in the Stasis zone may return it to the Forge this Autumn.
 
@@ -244,7 +244,7 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
 
-### PASS 1 — 2️⃣ Opposition ⚔️
+### PASS 1 — 2️⃣ Opposition ⚔️ {#pass-1-2-opposition}
 
 An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
 
@@ -275,7 +275,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 </div>
 
-### PASS 2 — 3️⃣ Temper the Stone ⏳
+### PASS 2 — 3️⃣ Temper the Stone ⏳ {#pass-2-3-temper-the-stone}
 
 A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
 
@@ -285,7 +285,7 @@ A Stone that has been Forging since the previous round and has survived all Oppo
 
 ⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
 
-### PASS 2 — 4️⃣ Fire the Stone 🔥
+### PASS 2 — 4️⃣ Fire the Stone 🔥 {#pass-2-4-fire-the-stone}
 
 If you have an Active Crucible Card whose Alchemical Formula you have satisfied, you may Fire your Stone into the Forge this Autumn.
 

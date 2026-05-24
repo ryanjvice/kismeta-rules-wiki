@@ -117,6 +117,30 @@ function renderFlowNode(node, locale, labels, depth = 0) {
 	return html;
 }
 
+function isAutumnPassGroup(node) {
+	return node.id?.startsWith('pass-') && node.kind === 'group';
+}
+
+function renderAutumnPasses(root, locale, labels) {
+	let html = '';
+	for (const pass of root.children ?? []) {
+		if (!isAutumnPassGroup(pass)) continue;
+		const passLabel = loc(pass.label, locale);
+		const passBody = pass.body ? loc(pass.body, locale) : '';
+		html += `<section class="action-flow__pass" data-pass-id="${escapeHtml(pass.id)}">`;
+		html += `<h4 class="action-flow__pass-title">${escapeHtml(passLabel)}</h4>`;
+		if (passBody) {
+			html += `<p class="action-flow__pass-body">${escapeHtml(passBody)}</p>`;
+		}
+		html += `<ol class="action-flow__tree action-flow__tree--pass">`;
+		for (const step of pass.children ?? []) {
+			html += renderFlowNode(step, locale, labels);
+		}
+		html += `</ol></section>`;
+	}
+	return html;
+}
+
 function renderDecisionTree(flow, locale = 'en') {
 	const labels = LABELS[locale] ?? LABELS.en;
 	const intro = flow.intro ? loc(flow.intro, locale) : '';
@@ -126,9 +150,14 @@ function renderDecisionTree(flow, locale = 'en') {
 	if (intro) {
 		html += `<p class="action-flow__intro">${escapeHtml(intro)}</p>`;
 	}
-	html += `<ol class="action-flow__tree">`;
-	html += renderFlowNode(root, locale, labels);
-	html += `</ol></div>`;
+	if (flow.id === 'autumn-flow' && root.children?.some(isAutumnPassGroup)) {
+		html += renderAutumnPasses(root, locale, labels);
+	} else {
+		html += `<ol class="action-flow__tree">`;
+		html += renderFlowNode(root, locale, labels);
+		html += `</ol>`;
+	}
+	html += `</div>`;
 	return html;
 }
 

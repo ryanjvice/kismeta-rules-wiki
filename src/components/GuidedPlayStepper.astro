@@ -150,8 +150,23 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 		</article>
 
 		<footer class="guided-play__footer">
-			<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="back"></button>
-			<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="next"></button>
+			<div class="guided-play__action-context" data-action-context hidden aria-live="polite">
+				<p class="guided-play__action-context-body" data-action-context-body></p>
+				<p class="guided-play__action-context-meta" data-action-context-condition hidden></p>
+				<p class="guided-play__action-context-meta" data-action-context-mode hidden></p>
+				<a
+					class="guided-play__action-context-link"
+					data-action-context-learn
+					hidden
+					href="#"
+					target="_blank"
+					rel="noopener"
+				></a>
+			</div>
+			<div class="guided-play__footer-nav">
+				<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="back"></button>
+				<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="next"></button>
+			</div>
 		</footer>
 	</div>
 
@@ -276,7 +291,8 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 
 	function initGuidedPlay() {
 		const root = document.querySelector<HTMLElement>('.guided-play');
-		if (!root) return;
+		if (!root || root.dataset.bound === 'true') return;
+		root.dataset.bound = 'true';
 
 		const steps = JSON.parse(root.dataset.steps || '[]') as (GuidedStep & {
 			learnMoreUrl?: string;
@@ -327,9 +343,75 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			);
 		};
 
+		const actionContext = root.querySelector<HTMLElement>('[data-action-context]')!;
+		const actionContextBody = root.querySelector<HTMLElement>('[data-action-context-body]')!;
+		const actionContextCondition = root.querySelector<HTMLElement>('[data-action-context-condition]')!;
+		const actionContextMode = root.querySelector<HTMLElement>('[data-action-context-mode]')!;
+		const actionContextLearn = root.querySelector<HTMLAnchorElement>('[data-action-context-learn]')!;
+
+		const clearActionContext = () => {
+			actionContext.hidden = true;
+			actionContextBody.textContent = '';
+			actionContextCondition.hidden = true;
+			actionContextCondition.textContent = '';
+			actionContextMode.hidden = true;
+			actionContextMode.textContent = '';
+			actionContextLearn.hidden = true;
+			root.querySelectorAll('.action-flow__pick--active').forEach((el) => {
+				el.classList.remove('action-flow__pick--active');
+			});
+		};
+
+		const showActionContext = (detail: {
+			body?: string;
+			condition?: string;
+			modeNote?: string;
+			learnHref?: string;
+			learnLabel?: string;
+			visible?: boolean;
+		}) => {
+			if (!detail.visible) {
+				clearActionContext();
+				return;
+			}
+
+			actionContextBody.textContent = detail.body || '';
+			if (detail.condition) {
+				actionContextCondition.hidden = false;
+				actionContextCondition.innerHTML = `<em>${detail.condition}</em>`;
+			} else {
+				actionContextCondition.hidden = true;
+				actionContextCondition.textContent = '';
+			}
+
+			if (detail.modeNote) {
+				actionContextMode.hidden = false;
+				actionContextMode.textContent = detail.modeNote;
+			} else {
+				actionContextMode.hidden = true;
+				actionContextMode.textContent = '';
+			}
+
+			if (detail.learnHref) {
+				actionContextLearn.hidden = false;
+				actionContextLearn.href = detail.learnHref;
+				actionContextLearn.textContent = detail.learnLabel || labels.learnMore;
+			} else {
+				actionContextLearn.hidden = true;
+			}
+
+			actionContext.hidden = false;
+		};
+
+		window.addEventListener('kismeta:action-detail', ((event: CustomEvent) => {
+			showActionContext(event.detail ?? {});
+		}) as EventListener);
+
 		const renderStep = () => {
 			const step = steps[stepIndex - 1];
 			if (!step) return;
+
+			clearActionContext();
 
 			setText('[data-step-title]', step.title);
 			let body = step.body;

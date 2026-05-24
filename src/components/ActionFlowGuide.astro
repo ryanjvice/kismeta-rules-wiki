@@ -43,8 +43,12 @@ const labels = {
 		locale === 'pt-br' ? 'Forjando — 1ª rodada na Forja' : 'Forging — first round in Forge',
 	stoneForgingReady:
 		locale === 'pt-br' ? 'Forjando — desde a rodada anterior' : 'Forging — since last round',
-	stoneNotInForge: locale === 'pt-br' ? 'Fora da Forja' : 'Not in the Forge',
-	processionLabel: locale === 'pt-br' ? 'Ordem da mesa (1 a 4)' : 'Table order (steps 1–4)',
+	stoneNotInForge:
+		locale === 'pt-br' ? 'No Anel do Manto (não forjando)' : 'In Mantle Ring (not Forging)',
+	processionLabel:
+		locale === 'pt-br' ? 'Duas passagens na mesa' : 'Two passes around the table',
+	passLikelySkip:
+		locale === 'pt-br' ? 'Provavelmente pule esta passagem.' : 'Likely skip this pass.',
 };
 
 const stonePickerOptions: Array<{ id: StoneState; label: string }> = [
@@ -60,7 +64,17 @@ function topGroups(node: FlowNode): FlowNode[] {
 }
 
 const topLevel = isSummer ? topGroups(flow.root) : [flow.root];
-const autumnSteps = isAutumn ? (flow.root.children ?? []) : [];
+const autumnPasses = isAutumn
+	? (flow.root.children ?? []).filter((n) => n.id.startsWith('pass-'))
+	: [];
+
+/** Global step numbers 1–4 across both autumn passes */
+const autumnStepNumbers: Record<string, number> = {
+	'leave-stasis': 1,
+	opposition: 2,
+	temper: 3,
+	fire: 4,
+};
 
 function stoneStatesAttr(states: StoneState[] | undefined): string {
 	if (!states?.length) return 'all';
@@ -79,22 +93,13 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 >
 	{intro && <p class="action-flow__intro">{intro}</p>}
 
-	<div class="action-flow__detail" data-flow-detail hidden>
-		<p data-detail-body></p>
-		<p class="action-flow__condition" data-detail-condition hidden></p>
-		<p class="action-flow__mode-note" data-detail-mode hidden></p>
-		<a class="action-flow__learn-more" data-detail-learn href={learnBase} target="_blank" rel="noopener">
-			{labels.readMore}
-		</a>
-	</div>
-
 	<p class="action-flow__hint">{labels.pickPrompt}</p>
 
 	{isAutumn && (
 		<div class="action-flow__stone-picker-wrap">
-			<p class="action-flow__stone-picker-title" id={`stone-picker-${flowId}`}>
+			<h3 class="action-flow__stone-picker-title" id={`stone-picker-${flowId}`}>
 				{labels.stonePickerTitle}
-			</p>
+			</h3>
 			<div
 				class="action-flow__stone-picker"
 				role="group"
@@ -143,95 +148,151 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 	) : isAutumn ? (
 		<div class="action-flow__procession" data-procession>
 			<p class="action-flow__procession-label">{labels.processionLabel}</p>
-			<ol class="action-flow__procession-steps">
-				{autumnSteps.map((step, index) => (
-					<li
-						class:list={[
-							'action-flow__procession-step',
-							`action-flow__node--${step.kind}`,
-						]}
-						data-node-id={step.id}
-						data-stone-states={stoneStatesAttr(step.stoneStates)}
-					>
-						<div class="action-flow__procession-marker" aria-hidden="true">
-							{index + 1}
-						</div>
-						<div class="action-flow__procession-content">
-							<div class="action-flow__node-head">
-								{step.kind === 'sequence' && (
-									<span class="action-flow__badge action-flow__badge--sequence">
-										{labels.sequence}
-									</span>
-								)}
-								{step.kind === 'required' && (
-									<span class="action-flow__badge action-flow__badge--required">
-										{labels.required}
-									</span>
-								)}
-								{step.kind === 'optional' && (
-									<span class="action-flow__badge action-flow__badge--optional">
-										{labels.optional}
-									</span>
-								)}
-								<span class="action-flow__node-label">{localize(step.label, locale)}</span>
-							</div>
-							{step.condition && (
-								<p class="action-flow__condition action-flow__condition--applies">
-									<em>
-										{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-										{localize(step.condition, locale)}
-									</em>
-								</p>
-							)}
-							{step.body && (
-								<p class="action-flow__body">{localize(step.body, locale)}</p>
-							)}
-							<p class="action-flow__skip-note" data-skip-note hidden>
-								{labels.likelySkip}
-							</p>
-							{step.children && step.children.length > 0 && (
-								<div class="action-flow__branches">
-									{step.children.map((branch) => (
-										<div class="action-flow__branch">
-											<button
-												type="button"
-												class="action-flow__pick"
-												data-pick-id={branch.id}
-												data-body={localize(branch.body, locale)}
-												data-condition={localize(branch.condition, locale)}
-												data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
-											>
-												{localize(branch.label, locale)}
-											</button>
-											{branch.children?.map((sub) => (
-												<button
-													type="button"
-													class="action-flow__pick action-flow__pick--sub"
-													data-pick-id={sub.id}
-													data-body={localize(sub.body, locale)}
-													data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
-												>
-													{localize(sub.label, locale)}
-												</button>
+			{autumnPasses.map((pass) => (
+				<section class="action-flow__pass" data-pass-id={pass.id}>
+					<h3 class="action-flow__pass-title">{localize(pass.label, locale)}</h3>
+					{pass.body && (
+						<p class="action-flow__pass-body">{localize(pass.body, locale)}</p>
+					)}
+					<p class="action-flow__pass-skip-note" data-pass-skip-note hidden>
+						{labels.passLikelySkip}
+					</p>
+					<ol class="action-flow__procession-steps">
+						{(pass.children ?? []).map((step) => (
+							<li
+								class:list={[
+									'action-flow__procession-step',
+									`action-flow__node--${step.kind}`,
+								]}
+								data-node-id={step.id}
+								data-stone-states={stoneStatesAttr(step.stoneStates)}
+								data-pass-id={pass.id}
+							>
+								<div class="action-flow__procession-marker" aria-hidden="true">
+									{autumnStepNumbers[step.id] ?? '?'}
+								</div>
+								<div class="action-flow__procession-content">
+									{!step.children?.length && step.learnMoreHash ? (
+										<button
+											type="button"
+											class="action-flow__pick action-flow__pick--step"
+											data-pick-id={step.id}
+											data-body={localize(step.body, locale)}
+											data-condition={localize(step.condition, locale)}
+											data-learn-hash={step.learnMoreHash}
+										>
+											<span class="action-flow__pick-step-inner">
+												<span class="action-flow__node-head">
+													{step.kind === 'sequence' && (
+														<span class="action-flow__badge action-flow__badge--sequence">
+															{labels.sequence}
+														</span>
+													)}
+													{step.kind === 'required' && (
+														<span class="action-flow__badge action-flow__badge--required">
+															{labels.required}
+														</span>
+													)}
+													{step.kind === 'optional' && (
+														<span class="action-flow__badge action-flow__badge--optional">
+															{labels.optional}
+														</span>
+													)}
+													<span class="action-flow__node-label">
+														{localize(step.label, locale)}
+													</span>
+												</span>
+												{step.condition && (
+													<span class="action-flow__condition action-flow__condition--applies">
+														<em>
+															{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
+															{localize(step.condition, locale)}
+														</em>
+													</span>
+												)}
+											</span>
+										</button>
+									) : (
+										<>
+											<div class="action-flow__node-head">
+												{step.kind === 'sequence' && (
+													<span class="action-flow__badge action-flow__badge--sequence">
+														{labels.sequence}
+													</span>
+												)}
+												{step.kind === 'required' && (
+													<span class="action-flow__badge action-flow__badge--required">
+														{labels.required}
+													</span>
+												)}
+												{step.kind === 'optional' && (
+													<span class="action-flow__badge action-flow__badge--optional">
+														{labels.optional}
+													</span>
+												)}
+												<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+											</div>
+											{step.condition && (
+												<p class="action-flow__condition action-flow__condition--applies">
+													<em>
+														{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
+														{localize(step.condition, locale)}
+													</em>
+												</p>
+											)}
+											{step.body && (
+												<p class="action-flow__body">{localize(step.body, locale)}</p>
+											)}
+										</>
+									)}
+									<p class="action-flow__skip-note" data-skip-note hidden>
+										{labels.likelySkip}
+									</p>
+									{step.children && step.children.length > 0 && (
+										<div class="action-flow__branches">
+											{step.children.map((branch) => (
+												<div class="action-flow__branch">
+													<button
+														type="button"
+														class="action-flow__pick"
+														data-pick-id={branch.id}
+														data-body={localize(branch.body, locale)}
+														data-condition={localize(branch.condition, locale)}
+														data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
+													>
+														{localize(branch.label, locale)}
+													</button>
+													{branch.children?.map((sub) => (
+														<button
+															type="button"
+															class="action-flow__pick action-flow__pick--sub"
+															data-pick-id={sub.id}
+															data-body={localize(sub.body, locale)}
+															data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
+														>
+															{localize(sub.label, locale)}
+														</button>
+													))}
+												</div>
 											))}
 										</div>
-									))}
+									)}
+									{step.learnMoreHash && step.children?.length ? (
+										<a
+											class="action-flow__learn-more"
+											href={`${roundOverviewUrl}#${step.learnMoreHash}`}
+											target="_blank"
+											rel="noopener"
+										>
+											{labels.readMore}
+										</a>
+									) : null}
 								</div>
-							)}
-							{step.learnMoreHash && (
-								<a
-									class="action-flow__learn-more"
-									href={`${roundOverviewUrl}#${step.learnMoreHash}`}
-									target="_blank"
-									rel="noopener"
-								>
-									{labels.readMore}
-								</a>
-							)}
-						</div>
-					</li>
-				))}
-			</ol>
+							</li>
+						))}
+					</ol>
+				</section>
+			))}
 		</div>
 	) : (
 		<ol class="action-flow__tree action-flow__tree--guided">
@@ -353,12 +414,50 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 		return states.includes('all') || states.includes(selected);
 	}
 
+	/** Pass sections to dim when this stone state is selected */
+	const PASS_MUTE_BY_STONE: Record<StonePicker, string[]> = {
+		all: [],
+		stasis: ['pass-2'],
+		forgingNew: [],
+		forgingReady: [],
+		notInForge: [],
+	};
+
+	function passHasMatchingStep(passEl: HTMLElement, selected: StonePicker): boolean {
+		if (selected === 'all') return true;
+		const steps = passEl.querySelectorAll<HTMLElement>('[data-stone-states]');
+		for (const step of steps) {
+			if (stepMatchesStone(step.dataset.stoneStates || 'all', selected)) return true;
+		}
+		return false;
+	}
+
 	function applyAutumnStone(root: HTMLElement, selected: StonePicker) {
+		const mutedPasses = new Set(PASS_MUTE_BY_STONE[selected] ?? []);
+
+		root.querySelectorAll<HTMLElement>('.action-flow__pass').forEach((passEl) => {
+			const passId = passEl.dataset.passId || '';
+			const forceMute = mutedPasses.has(passId);
+			const passMatches = !forceMute && passHasMatchingStep(passEl, selected);
+			const passSkip = passEl.querySelector<HTMLElement>('[data-pass-skip-note]');
+
+			if (selected === 'all') {
+				passEl.classList.remove('action-flow__pass--muted', 'action-flow__pass--active');
+				if (passSkip) passSkip.hidden = true;
+			} else {
+				passEl.classList.toggle('action-flow__pass--muted', forceMute || !passMatches);
+				passEl.classList.toggle('action-flow__pass--active', passMatches && !forceMute);
+				if (passSkip) passSkip.hidden = passMatches && !forceMute;
+			}
+		});
+
 		root.querySelectorAll<HTMLElement>('[data-stone-states]').forEach((step) => {
 			const attr = step.dataset.stoneStates || 'all';
 			const matches = stepMatchesStone(attr, selected);
 			const skipNote = step.querySelector<HTMLElement>('[data-skip-note]');
-			if (selected === 'all') {
+			const passMuted = step.closest('.action-flow__pass--muted') !== null;
+
+			if (selected === 'all' || passMuted) {
 				step.classList.remove(
 					'action-flow__procession-step--active',
 					'action-flow__procession-step--muted'
@@ -406,11 +505,6 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 			};
 			const learnBase = root.dataset.learnBase || '';
 			const learnPath = root.dataset.learnPath || 'play/round-overview';
-			const detail = root.querySelector<HTMLElement>('[data-flow-detail]')!;
-			const detailBody = root.querySelector<HTMLElement>('[data-detail-body]')!;
-			const detailCondition = root.querySelector<HTMLElement>('[data-detail-condition]')!;
-			const detailMode = root.querySelector<HTMLElement>('[data-detail-mode]')!;
-			const detailLearn = root.querySelector<HTMLAnchorElement>('[data-detail-learn]')!;
 
 			if (root.classList.contains('action-flow--autumn')) {
 				initAutumnStonePicker(root);
@@ -432,26 +526,22 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 					/* ignore */
 				}
 
-				detailBody.textContent = body || btn.textContent?.trim() || '';
-				if (condition) {
-					detailCondition.hidden = false;
-					detailCondition.innerHTML = `<em>${condition}</em>`;
-				} else {
-					detailCondition.hidden = true;
-				}
-
 				const mode = getGuidedGameMode();
-				const note = modeNotes[mode];
-				if (note) {
-					detailMode.hidden = false;
-					detailMode.textContent = note;
-				} else {
-					detailMode.hidden = true;
-				}
+				const modeNote = modeNotes[mode] ?? '';
+				const learnHref = learnHash ? `${learnBase}#${learnHash}` : learnBase;
 
-				detailLearn.href = learnHash ? `${learnBase}#${learnHash}` : learnBase;
-				detailLearn.textContent = labels.readMore || 'Read full rules';
-				detail.hidden = false;
+				window.dispatchEvent(
+					new CustomEvent('kismeta:action-detail', {
+						detail: {
+							body: body || btn.textContent?.trim() || '',
+							condition,
+							modeNote,
+							learnHref,
+							learnLabel: labels.readMore || 'Read full rules',
+							visible: true,
+						},
+					})
+				);
 
 				window.dispatchEvent(
 					new CustomEvent('kismeta:context', {

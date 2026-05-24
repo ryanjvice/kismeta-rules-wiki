@@ -445,7 +445,7 @@ Autumn resolves in two passes through the player order, beginning with the Ageke
 
 <!-- FLOW:autumn-flow -->
 
-### PASS 1 — 1️⃣ Leave Stasis ❄️
+### PASS 1 — 1️⃣ Leave Stasis ❄️ {#pass-1-1-leave-stasis}
 
 Players whose Stone is currently in the Stasis zone may return it to the Forge this Autumn.
 
@@ -473,7 +473,7 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
 
-### PASS 1 — 2️⃣ Opposition ⚔️
+### PASS 1 — 2️⃣ Opposition ⚔️ {#pass-1-2-opposition}
 
 An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
 
@@ -501,7 +501,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 ⚠️ **Important:** A Stone Fired into the Forge this Autumn cannot be targeted by Opposition this round. Only Stones that were already Forging at the start of this Autumn are eligible targets.
 
-### PASS 2 — 3️⃣ Temper the Stone ⏳
+### PASS 2 — 3️⃣ Temper the Stone ⏳ {#pass-2-3-temper-the-stone}
 
 A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
 
@@ -511,7 +511,7 @@ A Stone that has been Forging since the previous round and has survived all Oppo
 
 ⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
 
-### PASS 2 — 4️⃣ Fire the Stone 🔥
+### PASS 2 — 4️⃣ Fire the Stone 🔥 {#pass-2-4-fire-the-stone}
 
 If you have an Active Crucible Card whose Alchemical Formula you have satisfied, you may Fire your Stone into the Forge this Autumn.
 

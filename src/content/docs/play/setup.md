@@ -3,7 +3,7 @@ title: "Setup"
 description: "Setting the table, game modes, Crucible deck, and first Agekeeper."
 ---
 
-## I. Setting the Table {#i-setting-the-table}
+## I. Setting the Table
 
 - Place the Great Year Board game board in the center of the play area.
 - Select a Game Mode before continuing. _(Next page)_
@@ -15,7 +15,7 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
   - 1 Cosmic Age Dice: (12-sided Die, black)
   - Reagents: Sort by color and keep nearby.
 
-## II. Becoming an Alchemist {#ii-becoming-an-alchemist}
+## II. Becoming an Alchemist
 
 Choose a color (Red, Green, Blue, or White) and take the following matching gear:
 
@@ -26,7 +26,7 @@ Choose a color (Red, Green, Blue, or White) and take the following matching gear
 - **1 Philosopher's Stone:** Place this on the "START" space in your section of the Mantle Ring.
 - **1 Zodiac Die:** 12-sided Die, matching your chosen color; Keep this nearby.
 
-## III. Select a Game Mode {#iii-select-a-game-mode}
+## III. Select a Game Mode
 
 Choose your Game Mode before continuing. Each Mode adjusts the starting conditions and the game's economy. The round structure, phases, and rules remain as outlined in this guide for all modes.
 <div class="game-mode-callout" data-modes="quickplay magnus">
@@ -71,7 +71,7 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 - **Duels, Gambits & Oppositions:** Challengers gain +1 to their dice roll (Duels & Gambits) or Alignment Points (Oppositions) when confronting a Misaligned opponent. Misalignment is checked at the start of the challenge using each player's current Zodiac Die result, before the Opponent Age is set.
 - Aligned players have no additional bonus in Duels, Gambits, or Oppositions.
 
-## IV. Build the Crucible Deck {#iv-build-the-crucible-deck}
+## IV. Build the Crucible Deck
 
 - **Card Groups:** Crucible Cards are organized into four Card Groups: A, B, C, and D. Each card has a small letter in the lower left corner of the face side indicating its Card Group.
 - Sort the Crucible Cards into Groups A-D. Shuffle each group separately.
@@ -137,7 +137,7 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 - Once all cards have been drawn, shuffle and form the Crucible Deck for this game. Place the Crucible Deck beside the Great Year board.
 - Return any unused Crucible Cards to the game box; they will not be used in this game.
 
-## V. Selecting the First Agekeeper {#v-selecting-the-first-agekeeper}
+## V. Selecting the First Agekeeper
 
 The Agekeeper is the curator of the round. You hold the Agekeeper's Key and are responsible for:
 
@@ -150,7 +150,7 @@ Who starts? Everyone rolls their dice; the highest roller becomes the first Agek
 
 The Agekeeper's Key is passed clockwise at the end of each round.
 
-## VI. Dealing Crucible Cards {#vi-dealing-crucible-cards}
+## VI. Dealing Crucible Cards
 
 The first Agekeeper prepares the Crucible Cards before the game begins.
 

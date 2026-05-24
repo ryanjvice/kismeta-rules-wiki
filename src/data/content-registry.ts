@@ -14,6 +14,8 @@ export type FlowNodeKind = 'required' | 'optional' | 'choice' | 'group' | 'seque
 /** Which autumn stone picker highlights this step (omit = all). */
 export type StoneState = 'stasis' | 'forgingNew' | 'forgingReady' | 'notInForge' | 'all';
 
+export type AutumnPassId = 'pass1' | 'pass2';
+
 export type FlowNode = {
 	id: string;
 	label: LocalizedString;
@@ -21,6 +23,8 @@ export type FlowNode = {
 	body?: LocalizedString;
 	condition?: LocalizedString;
 	stoneStates?: StoneState[];
+	/** Autumn: pass-1 / pass-2 group or step membership */
+	passId?: AutumnPassId;
 	children?: FlowNode[];
 	learnMoreHash?: string;
 	gameModeNote?: Partial<Record<'quickplay' | 'standard' | 'magnus', string | null>>;
