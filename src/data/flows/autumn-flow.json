@@ -1,75 +1,54 @@
 {
 	"id": "autumn-flow",
 	"mode": "fixedSequence",
-	"intro": {
-		"en": "Quick reference for your turn — select where your Stone is, then open the matching beats. Full rules follow below.",
-		"pt-br": "Referência rápida do seu turno — selecione onde está sua Pedra e abra os momentos correspondentes. As regras completas estão abaixo."
-	},
+	"intro": "Quick reference for your turn — select where your Stone is, then open the matching beats. Full rules follow below.",
 	"learnMoreHash": "phase-3-autumn",
 	"root": {
 		"id": "autumn-sequence",
-		"label": { "en": "Autumn procession", "pt-br": "Procissão do Outono" },
+		"label": "Autumn procession",
 		"kind": "group",
 		"children": [
 			{
 				"id": "pass-1",
 				"kind": "group",
 				"passId": "pass1",
-				"label": {
-					"en": "Pass 1 — Leave Stasis & Opposition",
-					"pt-br": "Passo 1 — Sair da Estase e Oposição"
-				},
-				"body": {
-					"en": "Each player in turn order (clockwise from the Agekeeper).",
-					"pt-br": "Cada jogador na ordem de turno (no sentido horário a partir do Guardião)."
-				},
+				"label": "Pass 1 — Leave Stasis & Opposition",
+				"body": "Each player in turn order (clockwise from the Agekeeper).",
 				"children": [
 					{
 						"id": "leave-stasis",
 						"passId": "pass1",
-						"label": { "en": "1. Leave Stasis", "pt-br": "1. Sair da Estase" },
+						"label": "1. Leave Stasis",
 						"kind": "sequence",
-						"stoneStates": ["stasis", "all"],
-						"condition": {
-							"en": "Your Stone is in Stasis",
-							"pt-br": "Sua Pedra está em Estase"
-						},
+						"stoneStates": [
+							"stasis",
+							"all"
+						],
+						"condition": "Your Stone is in Stasis",
 						"learnMoreHash": "pass-1-1-leave-stasis",
 						"children": [
 							{
 								"id": "forge-open",
-								"label": { "en": "Forge spot open", "pt-br": "Vaga na Forja aberta" },
+								"label": "Forge spot open",
 								"kind": "choice",
-								"body": {
-									"en": "Return your Stone to the Forge. You may re-arm a Protective Ward on the spot.",
-									"pt-br": "Retorne sua Pedra à Forja. Você pode recolocar uma Proteção na vaga."
-								}
+								"body": "Return your Stone to the Forge. You may re-arm a Protective Ward on the spot."
 							},
 							{
 								"id": "forge-occupied",
-								"label": { "en": "Forge spot occupied", "pt-br": "Vaga na Forja ocupada" },
+								"label": "Forge spot occupied",
 								"kind": "choice",
 								"children": [
 									{
 										"id": "wait",
-										"label": { "en": "Wait — stay in Stasis", "pt-br": "Esperar — permanecer em Estase" },
+										"label": "Wait — stay in Stasis",
 										"kind": "optional",
-										"body": {
-											"en": "Remain in Stasis another round. No action required.",
-											"pt-br": "Permaneça em Estase mais uma rodada. Nenhuma ação necessária."
-										}
+										"body": "Remain in Stasis another round. No action required."
 									},
 									{
 										"id": "stasis-opposition",
-										"label": {
-											"en": "Challenge — Stasis Opposition in step 2",
-											"pt-br": "Desafiar — Oposição em Estase no passo 2"
-										},
+										"label": "Challenge — Stasis Opposition in step 2",
 										"kind": "optional",
-										"body": {
-											"en": "Declare Stasis Opposition on your turn in Pass 1, step 2.",
-											"pt-br": "Declare Oposição em Estase no seu turno no Passo 1, passo 2."
-										},
+										"body": "Declare Stasis Opposition on your turn in Pass 1, step 2.",
 										"learnMoreHash": "pass-1-2-opposition"
 									}
 								]
@@ -79,17 +58,17 @@
 					{
 						"id": "opposition",
 						"passId": "pass1",
-						"label": { "en": "2. Opposition", "pt-br": "2. Oposição" },
+						"label": "2. Opposition",
 						"kind": "sequence",
-						"stoneStates": ["stasis", "forgingNew", "forgingReady", "notInForge", "all"],
-						"condition": {
-							"en": "You may challenge a rival Forging Stone, or defend if you are Forging",
-							"pt-br": "Você pode desafiar uma Pedra forjando rival ou defender se estiver forjando"
-						},
-						"body": {
-							"en": "Alignment contest — you may declare Opposition against eligible Stones on the Forge.",
-							"pt-br": "Disputa de Alinhamento — você pode declarar Oposição contra Pedras elegíveis na Forja."
-						},
+						"stoneStates": [
+							"stasis",
+							"forgingNew",
+							"forgingReady",
+							"notInForge",
+							"all"
+						],
+						"condition": "You may challenge a rival Forging Stone, or defend if you are Forging",
+						"body": "Alignment contest — you may declare Opposition against eligible Stones on the Forge.",
 						"learnMoreHash": "pass-1-2-opposition"
 					}
 				]
@@ -98,42 +77,34 @@
 				"id": "pass-2",
 				"kind": "group",
 				"passId": "pass2",
-				"label": { "en": "Pass 2 — Temper & Fire", "pt-br": "Passo 2 — Temperar e Forjar" },
-				"body": {
-					"en": "After all players finish Pass 1, repeat turn order for Temper and Fire.",
-					"pt-br": "Depois que todos terminarem o Passo 1, repita a ordem de turno para Temperar e Forjar."
-				},
+				"label": "Pass 2 — Temper & Fire",
+				"body": "After all players finish Pass 1, repeat turn order for Temper and Fire.",
 				"children": [
 					{
 						"id": "temper",
 						"passId": "pass2",
-						"label": { "en": "3. Temper", "pt-br": "3. Temperar" },
+						"label": "3. Temper",
 						"kind": "sequence",
-						"stoneStates": ["forgingReady", "all"],
-						"condition": {
-							"en": "Forging since last round; not if you returned from Stasis this Autumn",
-							"pt-br": "Forjando desde a rodada anterior; não se voltou da Estase neste Outono"
-						},
-						"body": {
-							"en": "Advance your Stone to the next Mantle Ring position; discard the Crucible Card and burn remaining Wards.",
-							"pt-br": "Avance sua Pedra para o próximo Anel do Manto; descarte a Carta do Crucible e queime Proteções restantes."
-						},
+						"stoneStates": [
+							"forgingReady",
+							"all"
+						],
+						"condition": "Forging since last round; not if you returned from Stasis this Autumn",
+						"body": "Advance your Stone to the next Mantle Ring position; discard the Crucible Card and burn remaining Wards.",
 						"learnMoreHash": "pass-2-3-temper-the-stone"
 					},
 					{
 						"id": "fire",
 						"passId": "pass2",
-						"label": { "en": "4. Fire", "pt-br": "4. Forjar" },
+						"label": "4. Fire",
 						"kind": "sequence",
-						"stoneStates": ["forgingNew", "notInForge", "all"],
-						"condition": {
-							"en": "Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis",
-							"pt-br": "Pedra em um Anel do Manto (0, 2, 4 ou 6) — não forjando nem em Estase"
-						},
-						"body": {
-							"en": "Formula met on an Active Crucible Card — move your Stone into the Forge and Fire the card.",
-							"pt-br": "Fórmula cumprida em Carta Ativa do Crucible — mova sua Pedra para a Forja e forje a carta."
-						},
+						"stoneStates": [
+							"forgingNew",
+							"notInForge",
+							"all"
+						],
+						"condition": "Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis",
+						"body": "Formula met on an Active Crucible Card — move your Stone into the Forge and Fire the card.",
 						"learnMoreHash": "pass-2-4-fire-the-stone"
 					}
 				]

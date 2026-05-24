@@ -7,7 +7,7 @@ import summerFlow from './flows/summer-flow.json';
 import autumnFlow from './flows/autumn-flow.json';
 import winterFlow from './flows/winter-flow.json';
 
-export type LocalizedString = string | { en: string; 'pt-br'?: string };
+export type LocalizedString = string | Record<string, string>;
 
 export type FlowNodeKind = 'required' | 'optional' | 'choice' | 'group' | 'sequence';
 
@@ -83,6 +83,5 @@ export function getFlow(id: FlowId): ActionFlow {
 export function localize(value: LocalizedString | undefined, locale: string): string {
 	if (!value) return '';
 	if (typeof value === 'string') return value;
-	const key = locale === 'pt-br' ? 'pt-br' : 'en';
-	return value[key] ?? value.en ?? '';
+	return value[locale] ?? value.en ?? Object.values(value)[0] ?? '';
 }

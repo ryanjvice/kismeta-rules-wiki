@@ -1,10 +1,9 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import glossaryEn from '../data/glossary.json';
-import glossaryPt from '../data/glossary.pt-br.json';
 
 const locale = Astro.currentLocale ?? 'root';
-const glossary = locale === 'pt-br' ? glossaryPt : glossaryEn;
+const glossary = glossaryEn;
 
 function pathFor(slug: string) {
 	return getRelativeLocaleUrl(locale, slug);
@@ -26,7 +25,7 @@ const termLinks: Record<string, string> = {
 	Transmutation: pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
 	Stasis: pathFor('reference/compendium/1-11-crucible-philosophers-stone') + '#returning-from-stasis',
 	Tempering: pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
-	'Philosopher’s Stone': pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
+	"Philosopher's Stone": pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
 	Crucible: pathFor('reference/compendium/1-11-crucible-philosophers-stone'),
 	'Cosmic Age': pathFor('reference/compendium/1-0-cosmic-ages'),
 	'Cosmic Effect': pathFor('reference/compendium/1-0-cosmic-ages'),
@@ -34,31 +33,8 @@ const termLinks: Record<string, string> = {
 	Activating: pathFor('reference/compendium/1-4-crucible-cards') + '#activating-a-crucible-card',
 };
 
-// Portuguese term aliases → same link keys as English where applicable
-const ptTermAliases: Record<string, string> = {
-	Oposição: 'Opposition',
-	Gambito: 'Gambit',
-	Colheita: 'Harvest',
-	'Pontos de Alinhamento': 'Alignment Points',
-	'Bônus de Alinhamento': 'Alignment Bonus',
-	'Pontuação de Alinhamento': 'Alignment Score',
-	Reagente: 'Reagent',
-	Refinamento: 'Refinement',
-	'Carta do Crucible': 'Crucible Card',
-	'Casa Astral': 'Astral House',
-	'Oferenda à Era': 'Offering to the Age',
-	'Aposta Fatídica': 'Fateful Wager',
-	Transmutação: 'Transmutation',
-	Estase: 'Stasis',
-	Temperamento: 'Tempering',
-	'Pedra do Filósofo': 'Philosopher’s Stone',
-	'Guardião da Era': 'Agekeeper',
-	Ativação: 'Activating',
-};
-
 function linkForTerm(term: string) {
-	const key = ptTermAliases[term] ?? term;
-	return termLinks[key] ?? null;
+	return termLinks[term] ?? null;
 }
 
 function linkifyDefinition(text: string) {
@@ -73,13 +49,7 @@ function linkifyDefinition(text: string) {
 		)
 		.replace(/See 1\.1 Alignment Points\.?/gi, `See [Alignment Points](${alignment}).`)
 		.replace(/See 1\.12 Opposition\.?/gi, `See [Opposition](${opposition}).`)
-		.replace(/See 1\.10 Gambit\.?/gi, `See [Gambit](${gambit}).`)
-		.replace(
-			/Veja 1\.1: Pontos de Alinhamento\.?/gi,
-			`Veja [Pontos de Alinhamento](${alignment}).`
-		)
-		.replace(/Veja 1\.12 Oposição\.?/gi, `Veja [Oposição](${opposition}).`)
-		.replace(/Veja 1\.10 Gambito\.?/gi, `Veja [Gambito](${gambit}).`);
+		.replace(/See 1\.10 Gambit\.?/gi, `See [Gambit](${gambit}).`);
 }
 ---
 

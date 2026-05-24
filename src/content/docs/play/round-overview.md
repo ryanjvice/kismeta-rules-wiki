@@ -14,18 +14,18 @@ Spring opens every Cosmic Age. The Agekeeper rolls the Cosmic Age Die, all playe
 | 🌸 SPRING Set the Age & Gather Resources | 1️⃣ Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2️⃣ Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3️⃣ Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). 4️⃣ Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. 5️⃣ Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-### 1️⃣ Set the Cosmic Age
+### 1️⃣ Set the Cosmic Age {#1-set-the-cosmic-age}
 
 - **Roll the Cosmic Age Die:** The Agekeeper rolls the 12-sided black die.
 - **Read the Sign and Aspects aloud:** Announce the Sign's name, its ruling Planet, and its Element. All players note these — every Alignment calculation this round is measured against them.
 - **Apply the Cosmic Effect:** The rolled Sign's Cosmic Effect activates immediately and applies for the entire round. See the _Cosmic Ages & Effects_ table in the Reference Appendix.
 
-### 2️⃣ Determine Your Sign
+### 2️⃣ Determine Your Sign {#2-determine-your-sign}
 
 - **Roll your Zodiac Die:** Each player rolls their color-matched 12-sided die simultaneously.
 - **Move your Meeple:** Advance it to the Sign you rolled on the Zodiac Wheel. Your rolled Sign's Aspects are now your Alignment source for this round's Harvest and all subsequent calculations.
 
-### 3️⃣ Harvest
+### 3️⃣ Harvest {#3-harvest}
 
 The Agekeeper deals cards in the following order. All Bonus Cards are determined before any are dealt.
 
@@ -59,13 +59,13 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 | Base Harvest            | 2 cards always dealt regardless of Alignment    | +2              |
 | **TOTAL HARVEST**       |                                                 | **8 cards**     |
 
-### 4️⃣ Commune
+### 4️⃣ Commune {#4-commune}
 
 - **Assign cards to zones:** Place each Harvested card into your **Spread** (face-up, active) or your **Hand** (face-down, hidden). Cards already in your Spread or Hand from the previous round remain where they are.
 - **Seat your Arcanum:** Adept Major Arcana you hold remain in your Arcanum. If you drew a Fate Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
 - **Consider your goals:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Refinement. Your Hand is your reserve, useful for Oppositions and Refinement but invisible to rivals.
 
-### 5️⃣ Card Lock
+### 5️⃣ Card Lock {#5-card-lock}
 
 Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
 

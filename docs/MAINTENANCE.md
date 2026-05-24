@@ -46,12 +46,12 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 ### Home & landing page
 
 - **Hero** (tagline, logo, CTA buttons)  
-  `src/content/docs/index.mdx` · `src/content/docs/pt-br/index.mdx`  
+  `src/content/docs/index.mdx`  
   Edit `hero:` in frontmatter (`splash` template). Buttons: `hero.actions`.
 
 - **Feature cards** (“How to use this site”)  
   Layout: `src/components/HomeCards.astro`  
-  Copy: `src/content/i18n/en.json` and `pt-BR.json` (`home.card.*`; keys in `src/content.config.ts`).
+  Copy: `src/content/i18n/en.json` (`home.card.*`; keys in `src/content.config.ts`).
 
 → More detail: [Home page layout](#home-page-layout)
 
@@ -98,8 +98,8 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ### Translations
 
-- **Portuguese rules and UI**  
-  See [i18n.md](./i18n.md) — `npm run sync:pt`, `src/content/docs/pt-br/`, `scripts/term-glossary-pt.json`
+- **Adding a locale**  
+  See [i18n.md](./i18n.md) — Starlight `locales`, mirrored `src/content/docs/<locale>/`, `translate-locale.mjs`
 
 ### Theme & brand
 
@@ -138,7 +138,7 @@ The landing page uses Starlight’s **splash** template.
 | + What to edit -------------------------------------------------------------------- |
 | ----------------------------------------------------------------------------------- |
 | + Hero title, tagline, logo, CTA buttons ------------------------------------------ |
-| + `src/content/docs/index.mdx` (EN), `src/content/docs/pt-br/index.mdx` (PT) ------ |
+| + `src/content/docs/index.mdx` --------------------------------------------------- |
 | + Frontmatter: `template: splash`, `hero.tagline`, `hero.image`, `hero.actions` --- |
 | ----------------------------------------------------------------------------------- |
 | + Feature cards below hero -------------------------------------------------------- |
@@ -146,7 +146,7 @@ The landing page uses Starlight’s **splash** template.
 | + Grid layout and which cards appear ---------------------------------------------- |
 | ----------------------------------------------------------------------------------- |
 | + Card text ----------------------------------------------------------------------- |
-| + `src/content/i18n/en.json` / `pt-BR.json` --------------------------------------- |
+| + `src/content/i18n/en.json` ------------------------------------------------------ |
 | + Keys `home.sectionTitle`, `home.card.*`, `home.footer` -------------------------- |
 | ----------------------------------------------------------------------------------- |
 **Hero example (English):**
@@ -202,8 +202,6 @@ The sync script ([`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs)) expects 
 
 **Synced output:** `writePage()` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) preserves `##` / `###` / `####` levels from the guide so Starlight’s “On this page” TOC (h2–h3) lists phase and step headings. Do **not** re-add heading flattening in `writePage()` — an old `demoteHeadings()` pass collapsed everything to `#` (h1) and left only “Overview” in the TOC.
 
-**pt-BR:** After each `npm run sync`, `alignPtBrHeadingLevels()` copies heading levels from the English page to the matching `pt-br/` file (when heading counts match). Re-run `npm run sync:pt` when translating copy changes.
-
 Special mappings:
 
 - `# KISMETA` — intro (players, play time); merged into **Game Overview**, not its own page.
@@ -214,8 +212,8 @@ When you add a compendium section or other synced doc:
 
 1. Add the section to [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) using the heading levels above and the exact title keys in `SECTION_META` / `COMPENDIUM_SLUGS`.
 2. Map heading → URL slug in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) (`COMPENDIUM_SLUGS` or `SECTION_META`).
-3. Add a sidebar entry in [`astro.config.mjs`](../astro.config.mjs) using `link()` (English label + `pt-BR` translation).
-4. Run `npm run sync` (and `npm run sync:pt` if you maintain Portuguese).
+3. Add a sidebar entry in [`astro.config.mjs`](../astro.config.mjs) using `link(label, slug)` (optional third arg for future `translations`).
+4. Run `npm run sync`.
 5. Optionally update:
    - `SEE_LINKS` in `sync-guide.mjs` (internal “See Compendium …” links)
    - `termLinks` in `GlossaryList.astro`
@@ -278,9 +276,9 @@ Interactive walkthrough for new players at the table — **not** synced from the
 
 | What | Where |
 | ---- | ----- |
-| Step copy (EN + pt-br) | [`src/data/guided-steps.ts`](../src/data/guided-steps.ts) |
+| Step copy | [`src/data/guided-steps.ts`](../src/data/guided-steps.ts) |
 | Stepper UI + progress | [`src/components/GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro) |
-| Pages | [`src/content/docs/play/guided.mdx`](../src/content/docs/play/guided.mdx), [`pt-br/play/guided.mdx`](../src/content/docs/pt-br/play/guided.mdx) |
+| Pages | [`src/content/docs/play/guided.mdx`](../src/content/docs/play/guided.mdx) |
 | Chrome strings | [`src/content/i18n/en.json`](../src/content/i18n/en.json) (`guided.*`, `guided.phase.*`) |
 | Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.guided-play*` |
 | Top tab | [`src/components/TabNav.astro`](../src/components/TabNav.astro) → **Guided** |
@@ -309,7 +307,7 @@ On [`play/guided`](src/content/docs/play/guided.mdx), the right sidebar shows **
 | Section index (generated) | [`src/data/context-sections/`](../src/data/context-sections/) via [`scripts/extract-context-sections.mjs`](../scripts/extract-context-sections.mjs) |
 | Stable heading IDs | [`scripts/context-anchors.mjs`](../scripts/context-anchors.mjs) injects `{#learnMoreHash}` during `npm run sync` |
 | Event emitters | [`GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro), [`ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro) |
-| i18n | `guided.context.*` in [`en.json`](../src/content/i18n/en.json) / [`pt-BR.json`](../src/content/i18n/pt-BR.json) |
+| i18n | `guided.context.*` in [`en.json`](../src/content/i18n/en.json) |
 
 **When adding steps or flow branches:** Set `learnMorePath` / `learnMoreHash` on the step or flow leaf, then run `npm run sync` (regenerates anchor suffixes and context JSON). Do **not** duplicate rules copy in the panel — content is pulled from synced markdown.
 
@@ -328,11 +326,11 @@ Card counts per mode and player count live in one place — **not** in the Word-
 
 **Guide source:** [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) § IV must keep the placeholder `<!-- CRUCIBLE_DECK_BUILDS -->` (do not re-paste the old multi-column table from Word).
 
-**When counts change:** Edit `crucible-deck-builds.json`, then `npm run sync` (regenerates EN Setup HTML and patches pt-br Setup if still using the legacy table). Re-run `npm run sync:pt` only for surrounding Setup prose — the translate script preserves `<div class="crucible-deck">` blocks.
+**When counts change:** Edit `crucible-deck-builds.json`, then `npm run sync` (regenerates Setup crucible deck HTML).
 
 **Optional cleanup:** Crucible could move to `<!-- TABLE:crucible-deck -->` + `tables/crucible-deck.json` for one pipeline; low priority while the dedicated renderer works.
 
-**Content injection:** [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) → `injectAllContent()` replaces `TABLE:*`, `FLOW:*`, and `<!-- CRUCIBLE_DECK_BUILDS -->`. pt-br round pages are patched by `patchPtBrRoundPages()` when legacy tables remain.
+**Content injection:** [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) → `injectAllContent()` replaces `TABLE:*`, `FLOW:*`, and `<!-- CRUCIBLE_DECK_BUILDS -->`.
 
 ---
 
@@ -364,9 +362,6 @@ After changing icons or manifest fields, run `npm run build` and confirm install
 | --------------------- | -------------------------------------------------------------------- |
 | `npm run dev`         | Local dev server ([http://localhost:4321](http://localhost:4321))    |
 | `npm run sync`        | `Kismeta_GameGuide.md` → English pages + `glossary.json`             |
-| `npm run sync:pt`     | Machine-translate `pt-br` content (needs `OPENAI_API_KEY` in `.env`) |
-| `npm run sync:all`    | `sync` then `sync:pt`                                                |
-| `npm run scaffold:pt` | Empty pt-br frontmatter stubs                                        |
 | `npm run build`       | Runs `sync`, then production build → `dist/`                         |
 | `npm run preview`     | Preview production build locally                                     |
 
@@ -377,7 +372,7 @@ After changing icons or manifest fields, run `npm run build` and confirm install
 ```
 Kismeta_GameGuide.md          # Canonical rules — edit first
 scripts/sync-guide.mjs        # Guide → Starlight markdown + glossary JSON
-scripts/translate-locale.mjs  # pt-br translation (see docs/i18n.md)
+scripts/translate-locale.mjs  # optional locale translation (see docs/i18n.md)
 astro.config.mjs              # Starlight: sidebar, locales, logo, PWA, site URL
 src/content/docs/             # Pages (most generated; index + glossary are manual)
 src/content/i18n/             # UI strings (tabs, home cards, glossary intro)
@@ -392,4 +387,4 @@ public/                       # favicon, brand/, fonts/, registerSW.js
 ## Related docs
 
 - [README.md](../README.md) — quick start, deploy, rules sync summary
-- [i18n.md](./i18n.md) — Portuguese workflow, term glossary, adding locales
+- [i18n.md](./i18n.md) — adding locales, translate script, UI strings

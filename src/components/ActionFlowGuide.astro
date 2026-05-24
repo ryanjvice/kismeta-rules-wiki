@@ -7,17 +7,20 @@ import {
 	type FlowNode,
 	type StoneState,
 } from '../data/content-registry';
+import { resolveContentLocale } from '../utils/locale';
 
 interface Props {
 	flowId: FlowId;
 }
 
 const { flowId } = Astro.props;
-const locale = Astro.currentLocale === 'pt-br' ? 'pt-br' : 'en';
+const starlightLocale = Astro.currentLocale ?? 'root';
+const contentLocale = resolveContentLocale(starlightLocale);
+const t = Astro.locals.t;
 const flow = getFlow(flowId);
-const intro = localize(flow.intro, locale);
+const intro = localize(flow.intro, contentLocale);
 const learnPath = 'play/round-overview';
-const roundOverviewUrl = getRelativeLocaleUrl(locale, learnPath);
+const roundOverviewUrl = getRelativeLocaleUrl(starlightLocale, learnPath);
 const learnBase = flow.learnMoreHash
 	? `${roundOverviewUrl}#${flow.learnMoreHash}`
 	: roundOverviewUrl;
@@ -26,29 +29,22 @@ const isSummer = flow.mode === 'playerTurn';
 const isAutumn = flowId === 'autumn-flow';
 
 const labels = {
-	required: locale === 'pt-br' ? 'Obrigatório' : 'Required',
-	optional: locale === 'pt-br' ? 'Opcional' : 'Optional',
-	choice: locale === 'pt-br' ? 'Escolha' : 'Choose',
-	sequence: locale === 'pt-br' ? 'Em ordem' : 'In order',
-	appliesWhen: locale === 'pt-br' ? 'Aplica-se quando:' : 'Applies when:',
-	likelySkip: locale === 'pt-br' ? 'Provavelmente pule neste turno.' : 'Likely skip on your turn.',
-	readMore: locale === 'pt-br' ? 'Ler regras completas' : 'Read full rules',
-	pickPrompt:
-		locale === 'pt-br' ? 'Toque para ver o lembrete' : 'Tap an action for a quick reminder',
-	stonePickerTitle:
-		locale === 'pt-br' ? 'Onde está sua Pedra do Filósofo?' : 'Where is your Philosopher\'s Stone?',
-	stoneAll: locale === 'pt-br' ? 'Mostrar todos' : 'Show all steps',
-	stoneStasis: locale === 'pt-br' ? 'Em Estase' : 'In Stasis',
-	stoneForgingNew:
-		locale === 'pt-br' ? 'Forjando — 1ª rodada na Forja' : 'Forging — first round in Forge',
-	stoneForgingReady:
-		locale === 'pt-br' ? 'Forjando — desde a rodada anterior' : 'Forging — since last round',
-	stoneNotInForge:
-		locale === 'pt-br' ? 'No Anel do Manto (não forjando)' : 'In Mantle Ring (not Forging)',
-	processionLabel:
-		locale === 'pt-br' ? 'Duas passagens na mesa' : 'Two passes around the table',
-	passLikelySkip:
-		locale === 'pt-br' ? 'Provavelmente pule esta passagem.' : 'Likely skip this pass.',
+	required: t('flow.required'),
+	optional: t('flow.optional'),
+	choice: t('flow.choice'),
+	sequence: t('flow.sequence'),
+	appliesWhen: t('flow.appliesWhen'),
+	likelySkip: t('flow.likelySkip'),
+	readMore: t('flow.readMore'),
+	pickPrompt: t('flow.pickPrompt'),
+	stonePickerTitle: t('flow.stonePickerTitle'),
+	stoneAll: t('flow.stoneAll'),
+	stoneStasis: t('flow.stoneStasis'),
+	stoneForgingNew: t('flow.stoneForgingNew'),
+	stoneForgingReady: t('flow.stoneForgingReady'),
+	stoneNotInForge: t('flow.stoneNotInForge'),
+	processionLabel: t('flow.processionLabel'),
+	passLikelySkip: t('flow.passLikelySkip'),
 };
 
 const stonePickerOptions: Array<{ id: StoneState; label: string }> = [
@@ -86,7 +82,7 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 	class:list={['action-flow', 'action-flow--interactive', { 'action-flow--autumn': isAutumn }]}
 	data-flow-id={flowId}
 	data-flow-mode={flow.mode}
-	data-locale={locale}
+	data-locale={contentLocale}
 	data-learn-base={roundOverviewUrl}
 	data-learn-path={learnPath}
 	data-labels={JSON.stringify(labels)}
@@ -122,22 +118,22 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 
 	{isSummer ? (
 		<div class="action-flow__summer" data-summer-root>
-			<div class="action-flow__groups" role="group" aria-label={localize(flow.root.label, locale)}>
+			<div class="action-flow__groups" role="group" aria-label={localize(flow.root.label, contentLocale)}>
 				{topLevel.map((group) => (
 					<div class="action-flow__group" data-group-id={group.id}>
-						<h3 class="action-flow__group-title">{localize(group.label, locale)}</h3>
+						<h3 class="action-flow__group-title">{localize(group.label, contentLocale)}</h3>
 						<div class="action-flow__group-actions">
 							{(group.children ?? []).map((action) => (
 								<button
 									type="button"
 									class="action-flow__pick"
 									data-pick-id={action.id}
-									data-body={localize(action.body, locale)}
-									data-condition={localize(action.condition, locale)}
+									data-body={localize(action.body, contentLocale)}
+									data-condition={localize(action.condition, contentLocale)}
 									data-learn-hash={action.learnMoreHash ?? ''}
 									data-mode-notes={JSON.stringify(action.gameModeNote ?? {})}
 								>
-									{localize(action.label, locale)}
+									{localize(action.label, contentLocale)}
 								</button>
 							))}
 						</div>
@@ -150,9 +146,9 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 			<p class="action-flow__procession-label">{labels.processionLabel}</p>
 			{autumnPasses.map((pass) => (
 				<section class="action-flow__pass" data-pass-id={pass.id}>
-					<h3 class="action-flow__pass-title">{localize(pass.label, locale)}</h3>
+					<h3 class="action-flow__pass-title">{localize(pass.label, contentLocale)}</h3>
 					{pass.body && (
-						<p class="action-flow__pass-body">{localize(pass.body, locale)}</p>
+						<p class="action-flow__pass-body">{localize(pass.body, contentLocale)}</p>
 					)}
 					<p class="action-flow__pass-skip-note" data-pass-skip-note hidden>
 						{labels.passLikelySkip}
@@ -177,8 +173,8 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 											type="button"
 											class="action-flow__pick action-flow__pick--step"
 											data-pick-id={step.id}
-											data-body={localize(step.body, locale)}
-											data-condition={localize(step.condition, locale)}
+											data-body={localize(step.body, contentLocale)}
+											data-condition={localize(step.condition, contentLocale)}
 											data-learn-hash={step.learnMoreHash}
 										>
 											<span class="action-flow__pick-step-inner">
@@ -199,14 +195,14 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 														</span>
 													)}
 													<span class="action-flow__node-label">
-														{localize(step.label, locale)}
+														{localize(step.label, contentLocale)}
 													</span>
 												</span>
 												{step.condition && (
 													<span class="action-flow__condition action-flow__condition--applies">
 														<em>
 															{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-															{localize(step.condition, locale)}
+															{localize(step.condition, contentLocale)}
 														</em>
 													</span>
 												)}
@@ -230,18 +226,18 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 														{labels.optional}
 													</span>
 												)}
-												<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+												<span class="action-flow__node-label">{localize(step.label, contentLocale)}</span>
 											</div>
 											{step.condition && (
 												<p class="action-flow__condition action-flow__condition--applies">
 													<em>
 														{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-														{localize(step.condition, locale)}
+														{localize(step.condition, contentLocale)}
 													</em>
 												</p>
 											)}
 											{step.body && (
-												<p class="action-flow__body">{localize(step.body, locale)}</p>
+												<p class="action-flow__body">{localize(step.body, contentLocale)}</p>
 											)}
 										</>
 									)}
@@ -256,21 +252,21 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 														type="button"
 														class="action-flow__pick"
 														data-pick-id={branch.id}
-														data-body={localize(branch.body, locale)}
-														data-condition={localize(branch.condition, locale)}
+														data-body={localize(branch.body, contentLocale)}
+														data-condition={localize(branch.condition, contentLocale)}
 														data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
 													>
-														{localize(branch.label, locale)}
+														{localize(branch.label, contentLocale)}
 													</button>
 													{branch.children?.map((sub) => (
 														<button
 															type="button"
 															class="action-flow__pick action-flow__pick--sub"
 															data-pick-id={sub.id}
-															data-body={localize(sub.body, locale)}
+															data-body={localize(sub.body, contentLocale)}
 															data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
 														>
-															{localize(sub.label, locale)}
+															{localize(sub.label, contentLocale)}
 														</button>
 													))}
 												</div>
@@ -303,8 +299,8 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 							type="button"
 							class="action-flow__pick action-flow__pick--step"
 							data-pick-id={step.id}
-							data-body={localize(step.body, locale)}
-							data-condition={localize(step.condition, locale)}
+							data-body={localize(step.body, contentLocale)}
+							data-condition={localize(step.condition, contentLocale)}
 							data-learn-hash={step.learnMoreHash}
 						>
 							<span class="action-flow__pick-step-inner">
@@ -324,13 +320,13 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 											{labels.optional}
 										</span>
 									)}
-									<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+									<span class="action-flow__node-label">{localize(step.label, contentLocale)}</span>
 								</span>
 								{step.condition && (
 									<span class="action-flow__condition action-flow__condition--applies">
 										<em>
 											{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-											{localize(step.condition, locale)}
+											{localize(step.condition, contentLocale)}
 										</em>
 									</span>
 								)}
@@ -354,17 +350,17 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 										{labels.optional}
 									</span>
 								)}
-								<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+								<span class="action-flow__node-label">{localize(step.label, contentLocale)}</span>
 							</div>
 							{step.condition && (
 								<p class="action-flow__condition action-flow__condition--applies">
 									<em>
 										{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-										{localize(step.condition, locale)}
+										{localize(step.condition, contentLocale)}
 									</em>
 								</p>
 							)}
-							{step.body && <p class="action-flow__body">{localize(step.body, locale)}</p>}
+							{step.body && <p class="action-flow__body">{localize(step.body, contentLocale)}</p>}
 						</>
 					)}
 					{step.children && step.children.length > 0 && (
@@ -375,21 +371,21 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 										type="button"
 										class="action-flow__pick"
 										data-pick-id={branch.id}
-										data-body={localize(branch.body, locale)}
-										data-condition={localize(branch.condition, locale)}
+										data-body={localize(branch.body, contentLocale)}
+										data-condition={localize(branch.condition, contentLocale)}
 										data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
 									>
-										{localize(branch.label, locale)}
+										{localize(branch.label, contentLocale)}
 									</button>
 									{branch.children?.map((sub) => (
 										<button
 											type="button"
 											class="action-flow__pick action-flow__pick--sub"
 											data-pick-id={sub.id}
-											data-body={localize(sub.body, locale)}
+											data-body={localize(sub.body, contentLocale)}
 											data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
 										>
-											{localize(sub.label, locale)}
+											{localize(sub.label, contentLocale)}
 										</button>
 									))}
 								</div>

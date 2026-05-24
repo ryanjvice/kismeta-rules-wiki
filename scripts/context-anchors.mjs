@@ -39,20 +39,17 @@ function collectHashesFromFlows() {
 	return hashes;
 }
 
-function collectHashesFromGuidedSteps(locale) {
+function collectHashesFromGuidedSteps() {
 	const raw = fs.readFileSync(GUIDED_STEPS, 'utf8');
-	const key = locale === 'pt-br' ? "'pt-br'" : 'en';
-	const block = raw.match(new RegExp(`${key}:\\s*\\[([\\s\\S]*?)\\n\\t\\],`))?.[1] ?? '';
 	const hashes = new Set();
-	for (const m of block.matchAll(/learnMoreHash:\s*['"]([^'"]+)['"]/g)) {
+	for (const m of raw.matchAll(/learnMoreHash:\s*['"]([^'"]+)['"]/g)) {
 		hashes.add(m[1]);
 	}
 	return hashes;
 }
 
-export function getContextAnchorHashes(locale = 'en') {
-	const hashes = new Set([...collectHashesFromFlows(), ...collectHashesFromGuidedSteps(locale)]);
-	return hashes;
+export function getContextAnchorHashes(_locale = 'en') {
+	return new Set([...collectHashesFromFlows(), ...collectHashesFromGuidedSteps()]);
 }
 
 export function injectContextAnchors(body, anchorHashes) {

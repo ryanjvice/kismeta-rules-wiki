@@ -37,9 +37,8 @@ function applyGameModeCallouts(scope: ParentNode) {
 	});
 }
 
-function buildPageUrl(locale: string, pagePath: string, hash: string) {
-	const prefix = locale === 'pt-br' ? '/pt-br' : '';
-	const base = `${prefix}/${pagePath}/`.replace(/\/{2,}/g, '/');
+function buildPageUrl(_locale: string, pagePath: string, hash: string) {
+	const base = `/${pagePath}/`.replace(/\/{2,}/g, '/');
 	return hash ? `${base}#${hash}` : base;
 }
 

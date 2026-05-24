@@ -50,5 +50,21 @@
 	"guided.context.empty": "Continue the walkthrough or tap an action to see matching rules here.",
 	"guided.context.openFull": "Open full rules",
 	"guided.crucible.buildType": "Build type",
-	"glossary.intro": "A reference to every capitalized game term used throughout the guide. Return here any time you need a quick definition mid-game."
+	"glossary.intro": "A reference to every capitalized game term used throughout the guide. Return here any time you need a quick definition mid-game.",
+	"flow.required": "Required",
+	"flow.optional": "Optional",
+	"flow.choice": "Choose",
+	"flow.sequence": "In order",
+	"flow.appliesWhen": "Applies when:",
+	"flow.likelySkip": "Likely skip on your turn.",
+	"flow.readMore": "Read full rules",
+	"flow.pickPrompt": "Tap an action for a quick reminder",
+	"flow.stonePickerTitle": "Where is your Philosopher's Stone?",
+	"flow.stoneAll": "Show all steps",
+	"flow.stoneStasis": "In Stasis",
+	"flow.stoneForgingNew": "Forging — first round in Forge",
+	"flow.stoneForgingReady": "Forging — since last round",
+	"flow.stoneNotInForge": "In Mantle Ring (not Forging)",
+	"flow.processionLabel": "Two passes around the table",
+	"flow.passLikelySkip": "Likely skip this pass."
 }

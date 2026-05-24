@@ -15,26 +15,14 @@ const TABLE_PLACEHOLDER_RE = /<!--\s*TABLE:([\w-]+)\s*-->/g;
 const FLOW_PLACEHOLDER_RE = /<!--\s*FLOW:([\w-]+)\s*-->/g;
 
 const LABELS = {
-	en: {
-		required: 'Required',
-		optional: 'Optional',
-		choice: 'Choose one',
-		sequence: 'In order',
-		appliesWhen: 'Applies when:',
-		step: 'Step',
-		if: 'If',
-		otherwise: 'Otherwise',
-	},
-	'pt-br': {
-		required: 'Obrigatório',
-		optional: 'Opcional',
-		choice: 'Escolha uma',
-		sequence: 'Em ordem',
-		appliesWhen: 'Aplica-se quando:',
-		step: 'Passo',
-		if: 'Se',
-		otherwise: 'Caso contrário',
-	},
+	required: 'Required',
+	optional: 'Optional',
+	choice: 'Choose one',
+	sequence: 'In order',
+	appliesWhen: 'Applies when:',
+	step: 'Step',
+	if: 'If',
+	otherwise: 'Otherwise',
 };
 
 function escapeHtml(s) {
@@ -142,7 +130,7 @@ function renderAutumnPasses(root, locale, labels) {
 }
 
 function renderDecisionTree(flow, locale = 'en') {
-	const labels = LABELS[locale] ?? LABELS.en;
+	const labels = LABELS;
 	const intro = flow.intro ? loc(flow.intro, locale) : '';
 	const root = flow.root;
 
@@ -162,7 +150,7 @@ function renderDecisionTree(flow, locale = 'en') {
 }
 
 function renderStepList(table, locale = 'en') {
-	const labels = LABELS[locale] ?? LABELS.en;
+	const labels = LABELS;
 	const intro = table.intro ? loc(table.intro, locale) : '';
 
 	let html = `<div class="game-table game-table--step-list" data-table-id="harvest-order" data-locale="${locale}">`;
@@ -204,7 +192,7 @@ function renderSeasonCards(table, locale = 'en') {
 
 /**
  * @param {string} tableId
- * @param {'en' | 'pt-br'} locale
+ * @param {string} locale
  */
 export function renderTableHtml(tableId, locale = 'en') {
 	const table = loadJson(TABLES_DIR, tableId);
@@ -223,7 +211,7 @@ export function renderTableHtml(tableId, locale = 'en') {
 
 /**
  * @param {string} flowId
- * @param {'en' | 'pt-br'} locale
+ * @param {string} locale
  */
 export function renderFlowHtml(flowId, locale = 'en') {
 	const flow = loadJson(FLOWS_DIR, flowId);
@@ -234,7 +222,7 @@ export function renderFlowHtml(flowId, locale = 'en') {
 /**
  * Replace <!-- TABLE:id --> and <!-- FLOW:id --> placeholders.
  * @param {string} body
- * @param {'en' | 'pt-br'} locale
+ * @param {string} locale
  */
 export function injectContentBlocks(body, locale = 'en') {
 	let out = body;

@@ -6,13 +6,14 @@ import {
 	type StepListTable,
 	type TableId,
 } from '../data/content-registry';
+import { resolveContentLocale } from '../utils/locale';
 
 interface Props {
 	tableId: TableId;
 }
 
 const { tableId } = Astro.props;
-const locale = Astro.currentLocale === 'pt-br' ? 'pt-br' : 'en';
+const locale = resolveContentLocale(Astro.currentLocale);
 const table = getTable(tableId);
 const intro = localize(table.intro, locale);
 ---

@@ -83,12 +83,11 @@ async function extractPageSections(body) {
 	return out;
 }
 
-async function buildLocale(locale) {
-	const prefix = locale === 'pt-br' ? path.join('pt-br') : '';
+async function buildLocale() {
 	const index = {};
 
 	for (const page of CONTEXT_SOURCE_PAGES) {
-		const rel = prefix ? path.join(prefix, `${page}.md`) : `${page}.md`;
+		const rel = `${page}.md`;
 		const filePath = path.join(DOCS, rel);
 		if (!fs.existsSync(filePath)) {
 			console.warn(`extract-context-sections: missing ${rel}`);
@@ -103,11 +102,7 @@ async function buildLocale(locale) {
 
 export async function extractContextSections() {
 	fs.mkdirSync(OUT_DIR, { recursive: true });
-	const en = await buildLocale('en');
-	const ptBr = await buildLocale('pt-br');
+	const en = await buildLocale();
 	fs.writeFileSync(path.join(OUT_DIR, 'en.json'), JSON.stringify(en, null, 2), 'utf8');
-	fs.writeFileSync(path.join(OUT_DIR, 'pt-br.json'), JSON.stringify(ptBr, null, 2), 'utf8');
-	console.log(
-		`Wrote context sections: en (${Object.keys(en).length} pages), pt-br (${Object.keys(ptBr).length} pages).`
-	);
+	console.log(`Wrote context sections: en (${Object.keys(en).length} pages).`);
 }

@@ -1,67 +1,55 @@
 {
 	"id": "summer-flow",
 	"mode": "playerTurn",
-	"intro": {
-		"en": "On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like.",
-		"pt-br": "No seu turno (no sentido horário a partir do Guardião), faça qualquer ação abaixo em qualquer ordem, quantas vezes quiser."
-	},
+	"intro": "On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like.",
 	"learnMoreHash": "phase-2-summer",
 	"root": {
 		"id": "turn",
-		"label": { "en": "Your turn", "pt-br": "Seu turno" },
+		"label": "Your turn",
 		"kind": "group",
 		"children": [
 			{
 				"id": "craft",
-				"label": { "en": "Craft Resources", "pt-br": "Criar Recursos" },
+				"label": "Craft Resources",
 				"kind": "group",
 				"children": [
 					{
 						"id": "activate",
-						"label": { "en": "Activate Crucible Card", "pt-br": "Ativar Carta do Crucible" },
+						"label": "Activate Crucible Card",
 						"kind": "optional",
-						"body": {
-							"en": "Collect and discard the card set from your Codex; place Molten Coal in a Cauldron.",
-							"pt-br": "Colete e descarte o conjunto do Codex; coloque Carvão Fundido em um Caldeirão."
-						},
+						"body": "Collect and discard the card set from your Codex; place Molten Coal in a Cauldron.",
 						"learnMoreHash": "1-activate-crucible-cards"
 					},
 					{
 						"id": "houses",
-						"label": { "en": "Build Astral House", "pt-br": "Construir Casa Astral" },
+						"label": "Build Astral House",
 						"kind": "optional",
-						"body": {
-							"en": "Pay Planet-matching Common Cards; place 🏰 on a Zodiac Sign (Standard: 2 cards; Quickplay: 1).",
-							"pt-br": "Pague Cartas Comuns do Planeta do Signo; coloque 🏰 no Signo (Padrão: 2; Quickplay: 1)."
-						},
+						"body": "Pay Planet-matching Common Cards; place 🏰 on a Zodiac Sign (Standard: 2 cards; Quickplay: 1).",
 						"learnMoreHash": "2-build-astral-houses",
-						"gameModeNote": { "quickplay": "Quickplay: 1 matching card.", "magnus": null }
+						"gameModeNote": {
+							"quickplay": "Quickplay: 1 matching card.",
+							"magnus": null
+						}
 					},
 					{
 						"id": "refine",
-						"label": { "en": "Refine Reagent", "pt-br": "Refinar Reagente" },
+						"label": "Refine Reagent",
 						"kind": "optional",
-						"body": {
-							"en": "Discard suited cards meeting the Cauldron RP Threshold; take 1 Reagent.",
-							"pt-br": "Descarte cartas do naipe que atinjam o limiar de PR do Caldeirão; pegue 1 Reagente."
-						},
+						"body": "Discard suited cards meeting the Cauldron RP Threshold; take 1 Reagent.",
 						"learnMoreHash": "3-refine-reagents"
 					}
 				]
 			},
 			{
 				"id": "consort",
-				"label": { "en": "Consort with Rivals", "pt-br": "Conviver com Rivais" },
+				"label": "Consort with Rivals",
 				"kind": "group",
 				"children": [
 					{
 						"id": "trade",
-						"label": { "en": "Trade", "pt-br": "Trocar" },
+						"label": "Trade",
 						"kind": "optional",
-						"body": {
-							"en": "Exchange Common Cards, Reagents, or Active Crucible Cards.",
-							"pt-br": "Troque Cartas Comuns, Reagentes ou Cartas do Crucible Ativas."
-						},
+						"body": "Exchange Common Cards, Reagents, or Active Crucible Cards.",
 						"learnMoreHash": "4-trade",
 						"gameModeNote": {
 							"magnus": "Misaligned players trade 2:1 in favor of the non-initiating player."
@@ -69,22 +57,16 @@
 					},
 					{
 						"id": "duel",
-						"label": { "en": "Duel", "pt-br": "Duelo" },
+						"label": "Duel",
 						"kind": "optional",
-						"body": {
-							"en": "Wager a Spread card; roll dice — winner steals a card from rival's Spread.",
-							"pt-br": "Aposte uma carta da Mão Aberta; role os dados — vencedor leva carta da Mão Aberta do rival."
-						},
+						"body": "Wager a Spread card; roll dice — winner steals a card from rival's Spread.",
 						"learnMoreHash": "5-duel"
 					},
 					{
 						"id": "gambit",
-						"label": { "en": "Gambit", "pt-br": "Gambito" },
+						"label": "Gambit",
 						"kind": "optional",
-						"body": {
-							"en": "Summer only. Match rival's Active Crucible Alignment; roll to swap Crucible Cards.",
-							"pt-br": "Apenas no Verão. Combine o Alinhamento da Crucible ativa do rival; role para trocar Cartas."
-						},
+						"body": "Summer only. Match rival's Active Crucible Alignment; roll to swap Crucible Cards.",
 						"learnMoreHash": "6-gambit"
 					}
 				]

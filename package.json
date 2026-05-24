@@ -8,10 +8,7 @@
     "build": "npm run sync && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sync": "node scripts/sync-guide.mjs",
-    "scaffold:pt": "node scripts/scaffold-pt-br.mjs",
-    "sync:pt": "node scripts/translate-locale.mjs --locale pt-br",
-    "sync:all": "npm run sync && npm run sync:pt"
+    "sync": "node scripts/sync-guide.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.39.2",

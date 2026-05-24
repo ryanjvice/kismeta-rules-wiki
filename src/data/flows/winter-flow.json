@@ -1,64 +1,46 @@
 {
 	"id": "winter-flow",
 	"mode": "sequentialHybrid",
-	"intro": {
-		"en": "Winter ends the Cosmic Age. Required steps must happen; Offering and Wager are optional.",
-		"pt-br": "O Inverno encerra a Era Cósmica. Passos obrigatórios devem ocorrer; Oferenda e Aposta são opcionais."
-	},
+	"intro": "Winter ends the Cosmic Age. Required steps must happen; Offering and Wager are optional.",
 	"learnMoreHash": "phase-4-winter",
 	"root": {
 		"id": "winter-sequence",
-		"label": { "en": "Winter sequence", "pt-br": "Sequência do Inverno" },
+		"label": "Winter sequence",
 		"kind": "group",
 		"children": [
 			{
 				"id": "unlock",
-				"label": { "en": "1. Card Unlock", "pt-br": "1. Desbloqueio de Cartas" },
+				"label": "1. Card Unlock",
 				"kind": "required",
-				"body": {
-					"en": "All players may return locked Spread cards to hand.",
-					"pt-br": "Todos podem devolver cartas bloqueadas da Mão Aberta à mão."
-				},
+				"body": "All players may return locked Spread cards to hand.",
 				"learnMoreHash": "1-card-unlock"
 			},
 			{
 				"id": "offering",
-				"label": { "en": "2. Offering to the Age (optional)", "pt-br": "2. Oferenda à Era (opcional)" },
+				"label": "2. Offering to the Age (optional)",
 				"kind": "optional",
-				"body": {
-					"en": "Discard cards meeting the threshold to gain a boon from the Cosmic Age.",
-					"pt-br": "Descarte cartas que atinjam o limiar para ganhar bênção da Era Cósmica."
-				},
+				"body": "Discard cards meeting the threshold to gain a boon from the Cosmic Age.",
 				"learnMoreHash": "2-offering-to-the-age"
 			},
 			{
 				"id": "wager",
-				"label": { "en": "3. Fateful Wager (optional)", "pt-br": "3. Aposta do Destino (opcional)" },
+				"label": "3. Fateful Wager (optional)",
 				"kind": "optional",
-				"body": {
-					"en": "Wager Spread cards against the Fates for a chance at powerful rewards.",
-					"pt-br": "Aposte cartas da Mão Aberta contra as Fates por recompensas poderosas."
-				},
+				"body": "Wager Spread cards against the Fates for a chance at powerful rewards.",
 				"learnMoreHash": "3-fateful-wager"
 			},
 			{
 				"id": "limits",
-				"label": { "en": "4. Enforce Card Limits", "pt-br": "4. Aplicar Limites de Cartas" },
+				"label": "4. Enforce Card Limits",
 				"kind": "required",
-				"body": {
-					"en": "Discard down to hand and Spread limits before the next Age.",
-					"pt-br": "Descarte até os limites de mão e Mão Aberta antes da próxima Era."
-				},
+				"body": "Discard down to hand and Spread limits before the next Age.",
 				"learnMoreHash": "4️⃣-enforce-card-limits--reset"
 			},
 			{
 				"id": "reset",
-				"label": { "en": "5. Reset deck & pass Key", "pt-br": "5. Reiniciar baralho e passar a Chave" },
+				"label": "5. Reset deck & pass Key",
 				"kind": "required",
-				"body": {
-					"en": "Shuffle the Common Deck. Pass the Agekeeper Key clockwise.",
-					"pt-br": "Embaralhe o Baralho Comum. Passe a Chave do Guardião no sentido horário."
-				},
+				"body": "Shuffle the Common Deck. Pass the Agekeeper Key clockwise.",
 				"learnMoreHash": "5️⃣-reset-sequence"
 			}
 		]

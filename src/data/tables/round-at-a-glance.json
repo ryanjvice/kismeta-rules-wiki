@@ -1,48 +1,33 @@
 {
-	"intro": {
-		"en": "Each Cosmic Age moves through four seasons in order. Return here during play for a quick reference.",
-		"pt-br": "Cada Era Cósmica passa por quatro estações em ordem. Volte aqui durante o jogo como referência rápida."
-	},
+	"intro": "Each Cosmic Age moves through four seasons in order. Return here during play for a quick reference.",
 	"seasons": [
 		{
 			"id": "spring",
 			"icon": "🌸",
-			"title": { "en": "Spring", "pt-br": "Primavera" },
-			"subtitle": { "en": "Set the Age & Gather Resources", "pt-br": "Definir a Era e Colher Recursos" },
-			"summary": {
-				"en": "Set Cosmic Age, roll Zodiac Signs, Harvest, Commune, then Card Lock until Winter.",
-				"pt-br": "Defina a Era Cósmica, role Signos, Colheita, Comunhão, depois Bloqueio de Cartas até o Inverno."
-			}
+			"title": "Spring",
+			"subtitle": "Set the Age & Gather Resources",
+			"summary": "Set Cosmic Age, roll Zodiac Signs, Harvest, Commune, then Card Lock until Winter."
 		},
 		{
 			"id": "summer",
 			"icon": "☀️",
-			"title": { "en": "Summer", "pt-br": "Verão" },
-			"subtitle": { "en": "Trade, Build & Prepare", "pt-br": "Trocar, Construir e Preparar" },
-			"summary": {
-				"en": "Turn-based: Craft (activate, houses, refine) and Consort (trade, duel, gambit) in any order.",
-				"pt-br": "Por turno: Criar (ativar, casas, refinar) e Conviver (trocar, duelo, gambito) em qualquer ordem."
-			}
+			"title": "Summer",
+			"subtitle": "Trade, Build & Prepare",
+			"summary": "Turn-based: Craft (activate, houses, refine) and Consort (trade, duel, gambit) in any order."
 		},
 		{
 			"id": "autumn",
 			"icon": "🍂",
-			"title": { "en": "Autumn", "pt-br": "Outono" },
-			"subtitle": { "en": "Conduct the Great Work", "pt-br": "Conduzir a Grande Obra" },
-			"summary": {
-				"en": "Fixed order: Leave Stasis, Opposition, Temper, Fire the Stone. Agekeeper oversees the Forge.",
-				"pt-br": "Ordem fixa: Sair da Estase, Oposição, Temperar, Forjar a Pedra. Guardião supervisiona a Forja."
-			}
+			"title": "Autumn",
+			"subtitle": "Conduct the Great Work",
+			"summary": "Fixed order: Leave Stasis, Opposition, Temper, Fire the Stone. Agekeeper oversees the Forge."
 		},
 		{
 			"id": "winter",
 			"icon": "⛰️",
-			"title": { "en": "Winter", "pt-br": "Inverno" },
-			"subtitle": { "en": "Final Actions & Reset", "pt-br": "Ações Finais e Reinício" },
-			"summary": {
-				"en": "Unlock cards, optional Offering and Wager, enforce limits, shuffle deck, pass the Key.",
-				"pt-br": "Desbloqueie cartas, Oferenda e Aposta opcionais, limites, embaralhe o baralho, passe a Chave."
-			}
+			"title": "Winter",
+			"subtitle": "Final Actions & Reset",
+			"summary": "Unlock cards, optional Offering and Wager, enforce limits, shuffle deck, pass the Key."
 		}
 	]
 }

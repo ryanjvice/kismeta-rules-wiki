@@ -3,14 +3,9 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { VitePWA } from 'vite-plugin-pwa';
 
-/** @param {string} label @param {string} ptBR */
-function tr(label, ptBR) {
-	return { label, translations: { 'pt-BR': ptBR } };
-}
-
-/** @param {string} label @param {string} ptBR @param {string} slug */
-function link(label, ptBR, slug) {
-	return { ...tr(label, ptBR), slug };
+/** @param {string} label @param {string} slug @param {Record<string,string>} [translations] */
+function link(label, slug, translations) {
+	return translations ? { label, slug, translations } : { label, slug };
 }
 
 // https://astro.build/config
@@ -18,10 +13,7 @@ export default defineConfig({
 	site: 'https://kismeta.goodmagik.com',
 	integrations: [
 		starlight({
-			title: {
-				en: 'Kismeta Rules',
-				'pt-br': 'Regras de Kismeta',
-			},
+			title: 'Kismeta Rules',
 			description:
 				'Official rules reference for Kismeta: Alchemists of the Great Year — a GOODMAGIK game.',
 			logo: {
@@ -40,10 +32,6 @@ export default defineConfig({
 				root: {
 					label: 'English',
 					lang: 'en',
-				},
-				'pt-br': {
-					label: 'Português (Brasil)',
-					lang: 'pt-BR',
 				},
 			},
 			head: [
@@ -93,71 +81,55 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					...tr('Learn', 'Aprender'),
+					label: 'Learn',
 					items: [
-						link('Lore', 'Lore', 'learn/lore'),
-						link('Game Overview', 'Visão Geral do Jogo', 'learn/game-overview'),
-						link('Components', 'Componentes', 'learn/components'),
-						link('Lore: Epilogue', 'Lore: Epílogo', 'learn/lore-epilogue'),
+						link('Lore', 'learn/lore'),
+						link('Game Overview', 'learn/game-overview'),
+						link('Components', 'learn/components'),
+						link('Lore: Epilogue', 'learn/lore-epilogue'),
 					],
 				},
 				{
-					...tr('Play', 'Jogar'),
+					label: 'Play',
 					items: [
-						link('Guided Play', 'Jogo Guiado', 'play/guided'),
-						link('Setup', 'Preparação', 'play/setup'),
-						link('Round at a Glance', 'Rodada em Resumo', 'play/round-at-a-glance'),
-						link('Round Overview', 'Visão Geral da Rodada', 'play/round-overview'),
-						link('Winning the Game', 'Vencendo o Jogo', 'play/winning'),
+						link('Guided Play', 'play/guided'),
+						link('Setup', 'play/setup'),
+						link('Round at a Glance', 'play/round-at-a-glance'),
+						link('Round Overview', 'play/round-overview'),
+						link('Winning the Game', 'play/winning'),
 					],
 				},
 				{
-					...tr('Reference', 'Referência'),
+					label: 'Reference',
 					items: [
-						link('Quick Reference', 'Referência Rápida', 'reference/quick-reference'),
-						link('Quick Tips', 'Dicas Rápidas', 'reference/quick-tips'),
+						link('Quick Reference', 'reference/quick-reference'),
+						link('Quick Tips', 'reference/quick-tips'),
 						{
-							...tr('Compendium', 'Compêndio'),
+							label: 'Compendium',
 							collapsed: false,
 							items: [
-								link('1.0 Cosmic Ages', '1.0 Eras Cósmicas', 'reference/compendium/1-0-cosmic-ages'),
-								link(
-									'1.1 Aspects & Alignment',
-									'1.1 Aspectos e Alinhamento',
-									'reference/compendium/1-1-aspects-alignment'
-								),
-								link('1.2 Harvest', '1.2 Colheita', 'reference/compendium/1-2-harvest'),
-								link('1.3 Kismeta Cards', '1.3 Cartas Kismeta', 'reference/compendium/1-3-common-cards'),
-								link('1.4 Crucible Cards', '1.4 Cartas do Crucible', 'reference/compendium/1-4-crucible-cards'),
-								link(
-									'1.5 Cauldrons & Molten Coal',
-									'1.5 Caldeirões e Carvão Fundido',
-									'reference/compendium/1-5-cauldrons-molten-coal'
-								),
-								link('1.6 Reagents', '1.6 Reagentes', 'reference/compendium/1-6-reagents'),
-								link('1.7 Astral Houses', '1.7 Casas Astrais', 'reference/compendium/1-7-astral-houses'),
-								link('1.8 Trades', '1.8 Trocas', 'reference/compendium/1-8-trades'),
-								link('1.9 Duels', '1.9 Duelos', 'reference/compendium/1-9-duels'),
-								link('1.10 Gambit', '1.10 Gambito', 'reference/compendium/1-10-gambit'),
-								link(
-									'1.11 Crucible & Stone',
-									'1.11 Crucible e Pedra',
-									'reference/compendium/1-11-crucible-philosophers-stone'
-								),
-								link('1.12 Opposition', '1.12 Oposição', 'reference/compendium/1-12-opposition'),
-								link(
-									'1.13 Offering to the Age',
-									'1.13 Oferenda à Era',
-									'reference/compendium/1-13-offering-to-the-age'
-								),
-								link('1.14 Fateful Wager', '1.14 Aposta Fatídica', 'reference/compendium/1-14-fateful-wager'),
+								link('1.0 Cosmic Ages', 'reference/compendium/1-0-cosmic-ages'),
+								link('1.1 Aspects & Alignment', 'reference/compendium/1-1-aspects-alignment'),
+								link('1.2 Harvest', 'reference/compendium/1-2-harvest'),
+								link('1.3 Kismeta Cards', 'reference/compendium/1-3-common-cards'),
+								link('1.4 Crucible Cards', 'reference/compendium/1-4-crucible-cards'),
+								link('1.5 Cauldrons & Molten Coal', 'reference/compendium/1-5-cauldrons-molten-coal'),
+								link('1.6 Reagents', 'reference/compendium/1-6-reagents'),
+								link('1.7 Astral Houses', 'reference/compendium/1-7-astral-houses'),
+								link('1.8 Trades', 'reference/compendium/1-8-trades'),
+								link('1.9 Duels', 'reference/compendium/1-9-duels'),
+								link('1.10 Gambit', 'reference/compendium/1-10-gambit'),
+								link('1.11 Crucible & Stone', 'reference/compendium/1-11-crucible-philosophers-stone'),
+								link('1.12 Opposition', 'reference/compendium/1-12-opposition'),
+								link('1.13 Offering to the Age', 'reference/compendium/1-13-offering-to-the-age'),
+								link('1.14 Fateful Wager', 'reference/compendium/1-14-fateful-wager'),
 							],
 						},
 					],
 				},
 				{
-					...tr('Glossary', 'Glossário'),
-					items: [link('All Terms', 'Todos os Termos', 'glossary')],
+					label: 'Glossary',
+					items: [link('All Terms', 'glossary')],
 				},
 			],
 		}),

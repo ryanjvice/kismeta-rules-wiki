@@ -10,6 +10,7 @@ import {
 	type CrucibleGameMode,
 	type PlayerCount,
 } from '../data/crucible-deck-builds';
+import { resolveContentLocale } from '../utils/locale';
 
 interface Props {
 	/** Interactive builder for Guided Play; static HTML is injected on Setup via sync. */
@@ -18,9 +19,8 @@ interface Props {
 }
 
 const { variant = 'interactive', locale: localeProp } = Astro.props;
-const locale = Astro.currentLocale ?? localeProp ?? 'root';
-const crucibleLocale = locale === 'pt-br' ? 'pt-br' : 'en';
-const labels = getCrucibleLabels(crucibleLocale);
+const contentLocale = resolveContentLocale(Astro.currentLocale ?? localeProp);
+const labels = getCrucibleLabels(contentLocale);
 const t = Astro.locals.t;
 
 const modeLabels: Record<CrucibleGameMode, string> = {
@@ -35,7 +35,7 @@ const uiLabels = JSON.stringify({
 	playersLabel: labels.playersLabel,
 	modeLabel: labels.modeLabel,
 	drawFrom: labels.drawFrom,
-	resultCuratedPrefix: crucibleLocale === 'pt-br' ? 'Compre' : 'Draw',
+	resultCuratedPrefix: 'Draw',
 	group: labels.group,
 	zeroCards: labels.zeroCards,
 	tabs: labels.tabs,
@@ -49,7 +49,7 @@ const uiLabels = JSON.stringify({
 		class="crucible-deck crucible-deck--interactive"
 		data-crucible-interactive
 		data-labels={uiLabels}
-		data-locale={crucibleLocale}
+		data-locale={contentLocale}
 	>
 		<fieldset class="crucible-deck__controls">
 			<legend class="crucible-deck__sr-only">{labels.buildCurated} / {labels.buildRandom}</legend>

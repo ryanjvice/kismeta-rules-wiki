@@ -1,40 +1,25 @@
 {
-	"intro": {
-		"en": "The Agekeeper deals cards in this order. Determine all Bonus Cards before dealing any.",
-		"pt-br": "O Guardião da Era distribui nesta ordem. Calcule todas as Cartas Bônus antes de distribuir."
-	},
+	"intro": "The Agekeeper deals cards in this order. Determine all Bonus Cards before dealing any.",
 	"steps": [
 		{
 			"id": "base",
-			"label": { "en": "Base Harvest", "pt-br": "Colheita Base" },
-			"body": {
-				"en": "Agekeeper deals 2 cards face-down to each player from the Common Deck.",
-				"pt-br": "Guardião distribui 2 cartas viradas para baixo a cada jogador do Baralho Comum."
-			}
+			"label": "Base Harvest",
+			"body": "Agekeeper deals 2 cards face-down to each player from the Common Deck."
 		},
 		{
 			"id": "boon",
-			"label": { "en": "Agekeeper's Boon", "pt-br": "Bênção do Guardião" },
-			"body": {
-				"en": "If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, all players receive +2 additional Harvest cards.",
-				"pt-br": "Se o Signo rolado do Guardião coincidir exatamente com o Signo da Era Cósmica, todos recebem +2 cartas de Colheita."
-			}
+			"label": "Agekeeper's Boon",
+			"body": "If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, all players receive +2 additional Harvest cards."
 		},
 		{
 			"id": "calculate",
-			"label": { "en": "Calculate Bonus Cards", "pt-br": "Calcular Cartas Bônus" },
-			"body": {
-				"en": "Each player tallies Bonus Cards using Alignment (Sign +3, Planet +2, Element +1 per source; highest Aspect only per source).",
-				"pt-br": "Cada jogador soma Cartas Bônus por Alinhamento (Signo +3, Planeta +2, Elemento +1 por fonte; apenas o Aspecto mais alto por fonte)."
-			}
+			"label": "Calculate Bonus Cards",
+			"body": "Each player tallies Bonus Cards using Alignment (Sign +3, Planet +2, Element +1 per source; highest Aspect only per source)."
 		},
 		{
 			"id": "deal-bonus",
-			"label": { "en": "Deal Bonus Cards", "pt-br": "Distribuir Cartas Bônus" },
-			"body": {
-				"en": "Agekeeper deals each player their Bonus Cards, one at a time, face-down.",
-				"pt-br": "Guardião distribui as Cartas Bônus, uma por vez, viradas para baixo."
-			}
+			"label": "Deal Bonus Cards",
+			"body": "Agekeeper deals each player their Bonus Cards, one at a time, face-down."
 		}
 	]
 }

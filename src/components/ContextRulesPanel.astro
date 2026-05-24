@@ -1,7 +1,8 @@
 ---
 import { getContextSectionIndex } from '../data/context-sections';
+import { resolveContentLocale } from '../utils/locale';
 
-const locale = Astro.currentLocale === 'pt-br' ? 'pt-br' : 'en';
+const locale = resolveContentLocale(Astro.currentLocale);
 const t = Astro.locals.t;
 const sections = getContextSectionIndex(locale);
 

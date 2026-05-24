@@ -24,22 +24,6 @@ const LABELS = {
 		players: (n, total) => `${n} players (${total} cards)`,
 		drawFrom: 'Draw from each group:',
 	},
-	'pt-br': {
-		curatedIntro:
-			'Montagens curadas — selecione o modo de jogo para ver as compras por número de jogadores.',
-		randomTitle: 'Montagem aleatória — Deixe as Fates decidirem',
-		randomSteps: [
-			'Embaralhe todas as 22 Cartas do Crucible juntas.',
-			'Compre às cegas quatro cartas para cada jogador.',
-		],
-		tabs: {
-			quickplay: 'Quickplay / Primeira Partida',
-			standard: 'Jogo Padrão',
-			magnus: 'Magnus Alchemist',
-		},
-		players: (n, total) => `${n} jogadores (${total} cartas)`,
-		drawFrom: 'Compre de cada grupo:',
-	},
 };
 
 export const CRUCIBLE_DECK_PLACEHOLDER = '<!-- CRUCIBLE_DECK_BUILDS -->';
@@ -78,11 +62,11 @@ function renderModePanel(mode, labels, prefix) {
 }
 
 /**
- * @param {'en' | 'pt-br'} locale
+ * @param {string} [_locale] reserved for future locales
  * @param {string} [prefix] unique id prefix when multiple on page
  */
-export function renderCrucibleDeckHtml(locale = 'en', prefix = 'crucible') {
-	const labels = LABELS[locale] ?? LABELS.en;
+export function renderCrucibleDeckHtml(_locale = 'en', prefix = 'crucible') {
+	const labels = LABELS.en;
 
 	const radios = GAME_MODES.map((mode, i) => {
 		const checked = i === 0 ? ' checked' : '';
@@ -100,7 +84,7 @@ export function renderCrucibleDeckHtml(locale = 'en', prefix = 'crucible') {
 		.map((step) => `<li>${escapeHtml(step)}</li>`)
 		.join('');
 
-	return `<div class="crucible-deck" data-locale="${locale}">
+	return `<div class="crucible-deck" data-locale="en">
 <p class="crucible-deck__intro">${escapeHtml(labels.curatedIntro)}</p>
 ${radios}
 <div class="crucible-deck__tab-strip" role="tablist">${tabLabels}</div>

@@ -1,11 +1,12 @@
 /**
- * AI-assisted translation: English docs → pt-br (or other locales).
+ * AI-assisted translation: English docs → another locale folder.
  *
  * Usage:
- *   node scripts/translate-locale.mjs --locale pt-br
- *   node scripts/translate-locale.mjs --locale pt-br --only learn/lore,play/setup
- *   node scripts/translate-locale.mjs --locale pt-br --dry-run
+ *   node scripts/translate-locale.mjs --locale es
+ *   node scripts/translate-locale.mjs --locale es --only learn/lore,play/setup
+ *   node scripts/translate-locale.mjs --locale es --dry-run
  *
+ * Add entries to LOCALE_CONFIG and scripts/term-glossary-<locale>.json first.
  * Requires OPENAI_API_KEY in .env (or environment).
  */
 import fs from 'node:fs';
@@ -16,13 +17,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const DOCS = path.join(ROOT, 'src', 'content', 'docs');
 
-const LOCALE_CONFIG = {
-	'pt-br': {
-		lang: 'Brazilian Portuguese',
-		prefix: '/pt-br',
-		termGlossary: path.join(__dirname, 'term-glossary-pt.json'),
-	},
-};
+/** Add locale entries when enabling a new language (see docs/i18n.md). */
+const LOCALE_CONFIG = {};
 
 function loadEnv() {
 	const envPath = path.join(ROOT, '.env');
@@ -35,7 +31,7 @@ function loadEnv() {
 
 function parseArgs() {
 	const args = process.argv.slice(2);
-	let locale = 'pt-br';
+	let locale = '';
 	let dryRun = false;
 	/** @type {string[] | null} */
 	let only = null;
@@ -177,8 +173,11 @@ async function main() {
 	loadEnv();
 	const { locale, dryRun, only } = parseArgs();
 	const config = LOCALE_CONFIG[locale];
-	if (!config) {
-		console.error('Unknown locale:', locale);
+	if (!locale || !config) {
+		console.error(
+			'Pass --locale <id> with an entry in LOCALE_CONFIG (see docs/i18n.md).',
+			locale ? `Unknown locale: ${locale}` : 'Missing --locale.'
+		);
 		process.exit(1);
 	}
 

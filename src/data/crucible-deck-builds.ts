@@ -4,7 +4,7 @@ export type CrucibleGameMode = 'quickplay' | 'standard' | 'magnus';
 export type PlayerCount = 2 | 3 | 4;
 export type CardGroup = 'A' | 'B' | 'C' | 'D';
 export type BuildType = 'curated' | 'random';
-export type CrucibleLocale = 'en' | 'pt-br';
+export type CrucibleLocale = 'en';
 
 export type GroupCounts = Record<CardGroup, number>;
 
@@ -89,40 +89,8 @@ export const CRUCIBLE_LABELS: Record<
 		playersLabel: 'Players',
 		zeroCards: '0',
 	},
-	'pt-br': {
-		curatedIntro:
-			'Montagens curadas — selecione o modo de jogo para ver as compras por número de jogadores.',
-		randomTitle: 'Montagem aleatória — Deixe as Fates decidirem',
-		randomSteps: [
-			'Embaralhe todas as 22 Cartas do Crucible juntas.',
-			'Compre às cegas quatro cartas para cada jogador.',
-		],
-		tabs: {
-			quickplay: 'Quickplay / Primeira Partida',
-			standard: 'Jogo Padrão',
-			magnus: 'Magnus Alchemist',
-		},
-		players: (n, total) => `${n} jogadores (${total} cartas)`,
-		drawFrom: 'Compre de cada grupo:',
-		group: { A: 'A', B: 'B', C: 'C', D: 'D' },
-		buildCurated: 'Montagem curada',
-		buildRandom: 'Montagem aleatória',
-		resultCurated: (groups, total) => {
-			const parts = CARD_GROUPS.filter((g) => groups[g] > 0).map(
-				(g) => `${groups[g]} do ${g}`
-			);
-			const zero = CARD_GROUPS.filter((g) => groups[g] === 0);
-			const zeroNote = zero.length ? ` (${zero.join(', ')}: 0)` : '';
-			return `Compre ${parts.join(', ')} — ${total} cartas no total${zeroNote}.`;
-		},
-		resultRandom: (total, playerCount) =>
-			`Embaralhe todas as ${RANDOM_BUILD.deckSize} Cartas do Crucible. Compre ${total} cartas (${RANDOM_BUILD.cardsPerPlayer} por jogador × ${playerCount}).`,
-		modeLabel: 'Modo de jogo',
-		playersLabel: 'Jogadores',
-		zeroCards: '0',
-	},
 };
 
-export function getCrucibleLabels(locale: string | undefined) {
-	return locale === 'pt-br' ? CRUCIBLE_LABELS['pt-br'] : CRUCIBLE_LABELS.en;
+export function getCrucibleLabels(_locale?: string) {
+	return CRUCIBLE_LABELS.en;
 }
