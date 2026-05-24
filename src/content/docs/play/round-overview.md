@@ -383,7 +383,7 @@ Before the round ends, any player may wager cards on a prediction: which Zodiac 
 | Correct: Sign matches          | Your wagered cards are doubled and returned to you. |
 | Incorrect: Sign does not match | Your wagered cards are lost to the Fates.           |
 
-### 4️⃣ Enforce Card Limits & Reset
+### 4️⃣ Enforce Card Limits & Reset {#4️⃣-enforce-card-limits--reset}
 
 Before passing the Agekeeper's Key, enforce card limits and prepare the board for the next Age.
 
@@ -396,7 +396,7 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | Hand        | 5 cards               | Discard excess cards of your choice down to 5.                                                |
 | Arcanum     | Adept cards only | All Fate Major Arcana cards must be returned to the Common Deck. Adept cards remain. |
 
-### 5️⃣ Reset Sequence:
+### 5️⃣ Reset Sequence: {#5️⃣-reset-sequence}
 
 - **Shuffle the Common Deck:** The Agekeeper collects all discarded Kismeta Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
 - **Pass the Agekeeper's Key:** The Agekeeper passes the Key clockwise to the next player, who becomes the new Agekeeper.

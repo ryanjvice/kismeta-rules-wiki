@@ -298,27 +298,75 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 		<ol class="action-flow__tree action-flow__tree--guided">
 			{(flow.root.children ?? []).map((step) => (
 				<li class={`action-flow__node action-flow__node--${step.kind}`} data-node-id={step.id}>
-					<div class="action-flow__node-head">
-						{step.kind === 'sequence' && (
-							<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
-						)}
-						{step.kind === 'required' && (
-							<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
-						)}
-						{step.kind === 'optional' && (
-							<span class="action-flow__badge action-flow__badge--optional">{labels.optional}</span>
-						)}
-						<span class="action-flow__node-label">{localize(step.label, locale)}</span>
-					</div>
-					{step.condition && (
-						<p class="action-flow__condition action-flow__condition--applies">
-							<em>
-								{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-								{localize(step.condition, locale)}
-							</em>
-						</p>
+					{!step.children?.length && step.learnMoreHash ? (
+						<button
+							type="button"
+							class="action-flow__pick action-flow__pick--step"
+							data-pick-id={step.id}
+							data-body={localize(step.body, locale)}
+							data-condition={localize(step.condition, locale)}
+							data-learn-hash={step.learnMoreHash}
+						>
+							<span class="action-flow__pick-step-inner">
+								<span class="action-flow__node-head">
+									{step.kind === 'sequence' && (
+										<span class="action-flow__badge action-flow__badge--sequence">
+											{labels.sequence}
+										</span>
+									)}
+									{step.kind === 'required' && (
+										<span class="action-flow__badge action-flow__badge--required">
+											{labels.required}
+										</span>
+									)}
+									{step.kind === 'optional' && (
+										<span class="action-flow__badge action-flow__badge--optional">
+											{labels.optional}
+										</span>
+									)}
+									<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+								</span>
+								{step.condition && (
+									<span class="action-flow__condition action-flow__condition--applies">
+										<em>
+											{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
+											{localize(step.condition, locale)}
+										</em>
+									</span>
+								)}
+							</span>
+						</button>
+					) : (
+						<>
+							<div class="action-flow__node-head">
+								{step.kind === 'sequence' && (
+									<span class="action-flow__badge action-flow__badge--sequence">
+										{labels.sequence}
+									</span>
+								)}
+								{step.kind === 'required' && (
+									<span class="action-flow__badge action-flow__badge--required">
+										{labels.required}
+									</span>
+								)}
+								{step.kind === 'optional' && (
+									<span class="action-flow__badge action-flow__badge--optional">
+										{labels.optional}
+									</span>
+								)}
+								<span class="action-flow__node-label">{localize(step.label, locale)}</span>
+							</div>
+							{step.condition && (
+								<p class="action-flow__condition action-flow__condition--applies">
+									<em>
+										{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
+										{localize(step.condition, locale)}
+									</em>
+								</p>
+							)}
+							{step.body && <p class="action-flow__body">{localize(step.body, locale)}</p>}
+						</>
 					)}
-					{step.body && <p class="action-flow__body">{localize(step.body, locale)}</p>}
 					{step.children && step.children.length > 0 && (
 						<div class="action-flow__branches">
 							{step.children.map((branch) => (
@@ -348,7 +396,7 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 							))}
 						</div>
 					)}
-					{step.learnMoreHash && (
+					{step.learnMoreHash && step.children?.length ? (
 						<a
 							class="action-flow__learn-more"
 							href={`${roundOverviewUrl}#${step.learnMoreHash}`}
@@ -357,7 +405,7 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 						>
 							{labels.readMore}
 						</a>
-					)}
+					) : null}
 				</li>
 			))}
 		</ol>

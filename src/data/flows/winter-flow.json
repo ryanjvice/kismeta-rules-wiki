@@ -49,7 +49,7 @@
 					"en": "Discard down to hand and Spread limits before the next Age.",
 					"pt-br": "Descarte até os limites de mão e Mão Aberta antes da próxima Era."
 				},
-				"learnMoreHash": "4-enforce-card-limits"
+				"learnMoreHash": "4️⃣-enforce-card-limits--reset"
 			},
 			{
 				"id": "reset",
@@ -59,7 +59,7 @@
 					"en": "Shuffle the Common Deck. Pass the Agekeeper Key clockwise.",
 					"pt-br": "Embaralhe o Baralho Comum. Passe a Chave do Guardião no sentido horário."
 				},
-				"learnMoreHash": "5-reset-and-pass-key"
+				"learnMoreHash": "5️⃣-reset-sequence"
 			}
 		]
 	}
