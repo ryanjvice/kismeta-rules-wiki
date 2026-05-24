@@ -26,7 +26,7 @@ export type GuidedStep = {
   phaseStep?: number;
   /** Total steps in this phase */
   phaseTotal?: number;
-  /** Setup III â€” body overrides per selected game mode */
+  /** Setup III — body overrides per selected game mode */
   modeBody?: Partial<Record<GameMode, string>>;
   /** Embedded interactive UI on this step */
   embed?: GuidedEmbed;
@@ -35,7 +35,7 @@ export type GuidedStep = {
 const GUIDED_STEPS: GuidedStep[] = [
     {
       id: "components",
-      title: "Components â€” In the Box",
+      title: "Components — In the Box",
       phase: "setup",
       phaseStep: 1,
       phaseTotal: 7,
@@ -52,7 +52,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "setup-i",
-      title: "Setup I â€” Setting the Table",
+      title: "Setup I — Setting the Table",
       phase: "setup",
       phaseStep: 2,
       phaseTotal: 7,
@@ -69,13 +69,13 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "setup-ii",
-      title: "Setup II â€” Becoming an Alchemist",
+      title: "Setup II — Becoming an Alchemist",
       phase: "setup",
       phaseStep: 3,
       phaseTotal: 7,
       body: "<p>Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.</p>",
       checklist: [
-        "4 Astral House tokens (ðŸ°)",
+        "4 Astral House tokens (🏰)",
         "1 Crucible Codex (dual-sided)",
         "4 Molten Coals",
         "1 Meeple",
@@ -87,29 +87,29 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "setup-iii",
-      title: "Setup III â€” Your Game Mode",
+      title: "Setup III — Your Game Mode",
       phase: "setup",
       phaseStep: 4,
       phaseTotal: 7,
       body: "<p>You chose a game mode at the start of guided play. Confirm these rules apply to your table.</p>",
       modeBody: {
         quickplay:
-          "<p><strong>Quickplay / First Play</strong> â€” recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Common Card matching your current Sign's Planet.</li><li>Cauldron thresholds: each Molten Coal in any Cauldron reduces refinement cost for <strong>all</strong> Reagents by 5 RP (base threshold 25 RP).</li></ul>",
+          "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Common Card matching your current Sign's Planet.</li><li>Cauldron thresholds: each Molten Coal in any Cauldron reduces refinement cost for <strong>all</strong> Reagents by 5 RP (base threshold 25 RP).</li></ul>",
         standard:
-          "<p><strong>Standard Game</strong> â€” full rules once you know the flow.</p><ul><li>Play as written in the guide; ignore âš™ï¸ Game Mode Modifiers.</li><li>Use the <strong>Standard</strong> Crucible deck build.</li></ul>",
+          "<p><strong>Standard Game</strong> — full rules once you know the flow.</p><ul><li>Play as written in the guide; ignore ⚙️ Game Mode Modifiers.</li><li>Use the <strong>Standard</strong> Crucible deck build.</li></ul>",
         magnus:
-          "<p><strong>Magnus Alchemist</strong> â€” mastery mode for returning players.</p><ul><li>All Standard rules apply; use the <strong>Magnus</strong> deck build.</li><li>Player Alignments affect Trades, Duels, Gambits, and Oppositions.</li><li>Misaligned trades are 2:1 in favor of the non-initiating player; Misaligned challengers gain +1 on Duels, Gambits, and Oppositions.</li></ul>",
+          "<p><strong>Magnus Alchemist</strong> — mastery mode for returning players.</p><ul><li>All Standard rules apply; use the <strong>Magnus</strong> deck build.</li><li>Player Alignments affect Trades, Duels, Gambits, and Oppositions.</li><li>Misaligned trades are 2:1 in favor of the non-initiating player; Misaligned challengers gain +1 on Duels, Gambits, and Oppositions.</li></ul>",
       },
       learnMorePath: "play/setup",
       learnMoreHash: "iii-select-a-game-mode",
     },
     {
       id: "setup-iv",
-      title: "Setup IV â€” Build the Crucible Deck",
+      title: "Setup IV — Build the Crucible Deck",
       phase: "setup",
       phaseStep: 5,
       phaseTotal: 7,
-      body: "<p>Sort Crucible Cards into groups Aâ€“D (letter in the lower-left corner) and shuffle each group separately. Use the builder below for your game mode and player count.</p>",
+      body: "<p>Sort Crucible Cards into groups A–D (letter in the lower-left corner) and shuffle each group separately. Use the builder below for your game mode and player count.</p>",
       embed: "crucible-deck",
       checklist: [
         "Sort Crucible Cards into groups A, B, C, and D",
@@ -123,13 +123,13 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "setup-v",
-      title: "Setup V â€” Selecting the First Agekeeper",
+      title: "Setup V — Selecting the First Agekeeper",
       phase: "setup",
       phaseStep: 6,
       phaseTotal: 7,
       body: "<p>The Agekeeper sets the Cosmic Age, deals the Harvest, oversees Oppositions in Autumn, and passes the Key each round.</p>",
       checklist: [
-        "Everyone rolls their Zodiac Die â€” highest becomes first Agekeeper (reroll ties)",
+        "Everyone rolls their Zodiac Die — highest becomes first Agekeeper (reroll ties)",
         "First Agekeeper takes the Agekeeper's Key",
         "Key passes clockwise at the end of each round",
       ],
@@ -138,7 +138,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "setup-vi",
-      title: "Setup VI â€” Dealing Crucible Cards",
+      title: "Setup VI — Dealing Crucible Cards",
       phase: "setup",
       phaseStep: 7,
       phaseTotal: 7,
@@ -156,7 +156,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     {
       id: "round-intro",
       title: "Your First Cosmic Age",
-      body: "<p>Each round is one <strong>Cosmic Age</strong> with four seasons in order: Spring â†’ Summer â†’ Autumn â†’ Winter. You will walk through your first age step by step.</p>",
+      body: "<p>Each round is one <strong>Cosmic Age</strong> with four seasons in order: Spring → Summer → Autumn → Winter. You will walk through your first age step by step.</p>",
       checklist: [
         "Spring: set the Age, Harvest, Commune, Card Lock",
         "Summer: craft and consort on your turns",
@@ -167,7 +167,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "spring-1",
-      title: "Spring â€” Set the Cosmic Age",
+      title: "Spring — Set the Cosmic Age",
       phase: "spring",
       phaseStep: 1,
       phaseTotal: 5,
@@ -182,7 +182,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "spring-2",
-      title: "Spring â€” Determine Your Sign",
+      title: "Spring — Determine Your Sign",
       phase: "spring",
       phaseStep: 2,
       phaseTotal: 5,
@@ -196,7 +196,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "spring-3",
-      title: "Spring â€” Harvest",
+      title: "Spring — Harvest",
       phase: "spring",
       phaseStep: 3,
       phaseTotal: 5,
@@ -213,7 +213,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "spring-4",
-      title: "Spring â€” Commune",
+      title: "Spring — Commune",
       phase: "spring",
       phaseStep: 4,
       phaseTotal: 5,
@@ -227,12 +227,12 @@ const GUIDED_STEPS: GuidedStep[] = [
     },
     {
       id: "spring-5",
-      title: "Spring â€” Card Lock",
+      title: "Spring — Card Lock",
       phase: "spring",
       phaseStep: 5,
       phaseTotal: 5,
       body: "<p>After Commune, cards cannot move between Hand and Spread until Winter.</p>",
-      checklist: ["Confirm card zones â€” they are locked until Winter"],
+      checklist: ["Confirm card zones — they are locked until Winter"],
       learnMorePath: "play/round-overview",
       learnMoreHash: "5-card-lock",
     },
@@ -253,7 +253,7 @@ const GUIDED_STEPS: GuidedStep[] = [
       phase: "autumn",
       phaseStep: 1,
       phaseTotal: 1,
-      body: "<p>Autumn runs in <strong>two passes</strong> around the table: </p><p><strong>Pass 1 </strong> â€” Leave Stasis and Opposition on each turn. </p><p> <strong>Pass 2 </strong> â€” Temper and Fire after everyone finishes Pass 1.</p>",
+      body: "<p>Autumn runs in <strong>two passes</strong> around the table: </p><p><strong>Pass 1 </strong> — Leave Stasis and Opposition on each turn. </p><p> <strong>Pass 2 </strong> — Temper and Fire after everyone finishes Pass 1.</p>",
       embed: "autumn-flow",
       learnMorePath: "play/round-overview",
       learnMoreHash: "phase-3-autumn",
@@ -283,7 +283,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     {
       id: "complete",
       title: "You're Ready to Keep Playing",
-      body: "<p>You have walked through your first Cosmic Age. For the next round, repeat <strong>Spring â†’ Summer â†’ Autumn â†’ Winter</strong>.</p><p>Keep <strong>Round at a Glance</strong> open at the table for a quick seasonal reference.</p>",
+      body: "<p>You have walked through your first Cosmic Age. For the next round, repeat <strong>Spring → Summer → Autumn → Winter</strong>.</p><p>Keep <strong>Round at a Glance</strong> open at the table for a quick seasonal reference.</p>",
       learnMorePath: "play/round-at-a-glance",
     },
 ];

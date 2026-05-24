@@ -151,9 +151,11 @@ main:has(.kismeta-lore) h1#_top,
 /*
  * Full stacked header height (title + tabs + modifiers). Do not override --sl-nav-height —
  * Starlight uses it for the inner title row and grid; inflating it breaks layout.
+ * These are CSS fallback values only; nav-offset.ts sets the variable precisely via
+ * ResizeObserver so content, sidebar, and TOC track the real measured height.
  */
 :root:has(.kismeta-header-wrap) {
-	--kismeta-nav-offset: calc(3.5rem + 9rem);
+	--kismeta-nav-offset: calc(3.5rem + 5rem);
 }
 
 @media (min-width: 50rem) {
@@ -213,16 +215,29 @@ main:has(.kismeta-lore) h1#_top,
 	background: var(--sl-color-accent);
 }
 
-/* Game mode toggle */
+/* Game mode toggle — collapsible <details> on mobile, flat flex row on desktop */
 .game-mode-toggle {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 0.75rem;
-	padding: 0.4rem 1rem 0.6rem;
 	font-size: 0.82rem;
 	background: var(--sl-color-bg-nav);
 	border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+/* Remove native disclosure marker */
+.game-mode-toggle > summary {
+	list-style: none;
+}
+
+.game-mode-toggle > summary::-webkit-details-marker {
+	display: none;
+}
+
+.game-mode-toggle__summary {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.45rem 1rem;
+	cursor: pointer;
+	user-select: none;
 }
 
 .game-mode-toggle__label {
@@ -230,6 +245,25 @@ main:has(.kismeta-lore) h1#_top,
 	color: var(--sl-color-gray-3);
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
+}
+
+.game-mode-toggle__chevron {
+	margin-inline-start: auto;
+	color: var(--sl-color-gray-3);
+	transition: transform 0.2s ease;
+	flex-shrink: 0;
+}
+
+.game-mode-toggle[open] .game-mode-toggle__chevron {
+	transform: rotate(90deg);
+}
+
+.game-mode-toggle__controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.25rem 1rem 0.55rem;
 }
 
 .game-mode-toggle__option {
@@ -242,6 +276,32 @@ main:has(.kismeta-lore) h1#_top,
 
 .game-mode-toggle__option input {
 	accent-color: var(--sl-color-accent);
+}
+
+/* Desktop: always-open flex row — summary becomes a non-interactive label */
+@media (min-width: 50rem) {
+	.game-mode-toggle {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0;
+		padding: 0;
+	}
+
+	.game-mode-toggle__summary {
+		pointer-events: none;
+		cursor: default;
+		padding: 0.4rem 0 0.4rem 1rem;
+		flex-shrink: 0;
+	}
+
+	.game-mode-toggle__chevron {
+		display: none;
+	}
+
+	.game-mode-toggle__controls {
+		padding: 0.4rem 1rem 0.4rem 0.75rem;
+	}
 }
 
 /* Game mode callouts in content */
@@ -323,15 +383,36 @@ main:has(.kismeta-lore) h1#_top,
 	}
 }
 
-/* Mobile tap targets */
+/* Mobile: compact single-row scrollable tab bar + collapsed modifiers */
 @media (max-width: 50rem) {
+	/* Compact scrollable tab row — no wrapping, horizontal scroll */
+	.tab-nav {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		padding: 0.35rem 0.75rem;
+		gap: 0.2rem;
+	}
+
+	.tab-nav::-webkit-scrollbar {
+		display: none;
+	}
+
 	.tab-nav__link {
-		padding: 0.55rem 0.75rem;
-		min-height: 44px;
+		flex-shrink: 0;
+		padding: 0.4rem 0.7rem;
+		min-height: 40px;
 		display: inline-flex;
 		align-items: center;
+		font-size: 0.85rem;
 	}
 }
+
+/* Hamburger sidebar starts below the full header stack, not just the title row.
+ * The sidebar-pane already uses --kismeta-nav-offset (set above).
+ * The button itself stays in the title row — that's the correct UX position. */
 
 /* Guided Play stepper */
 .guided-play {

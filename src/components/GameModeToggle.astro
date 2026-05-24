@@ -2,17 +2,31 @@
 const t = Astro.locals.t;
 ---
 
-<div class="game-mode-toggle" role="group" aria-label={t('gameMode.modifiers')}>
-	<span class="game-mode-toggle__label">{t('gameMode.modifiers')}</span>
-	<label class="game-mode-toggle__option">
-		<input type="checkbox" data-mode="quickplay" checked />
-		{t('gameMode.quickplay')}
-	</label>
-	<label class="game-mode-toggle__option">
-		<input type="checkbox" data-mode="magnus" checked />
-		{t('gameMode.magnus')}
-	</label>
-</div>
+<details class="game-mode-toggle">
+	<summary class="game-mode-toggle__summary">
+		<span class="game-mode-toggle__label">{t('gameMode.modifiers')}</span>
+		<svg
+			class="game-mode-toggle__chevron"
+			aria-hidden="true"
+			width="16"
+			height="16"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+		>
+			<path d="m9.29 6.71-1.41 1.41L13.17 13l-5.29 5.29 1.41 1.41L16 13z"></path>
+		</svg>
+	</summary>
+	<div class="game-mode-toggle__controls">
+		<label class="game-mode-toggle__option">
+			<input type="checkbox" data-mode="quickplay" checked />
+			{t('gameMode.quickplay')}
+		</label>
+		<label class="game-mode-toggle__option">
+			<input type="checkbox" data-mode="magnus" checked />
+			{t('gameMode.magnus')}
+		</label>
+	</div>
+</details>
 
 <script>
 	function applyGameModes() {
@@ -34,6 +48,15 @@ const t = Astro.locals.t;
 		});
 	}
 
+	function syncDetailsState() {
+		const details = document.querySelector<HTMLDetailsElement>('details.game-mode-toggle');
+		if (!details) return;
+		// On desktop the details is always open; on mobile it starts closed
+		if (window.matchMedia('(min-width: 50rem)').matches) {
+			details.open = true;
+		}
+	}
+
 	function init() {
 		const saved = localStorage.getItem('kismeta-game-modes');
 		if (saved) {
@@ -51,7 +74,10 @@ const t = Astro.locals.t;
 				/* ignore */
 			}
 		}
+
+		syncDetailsState();
 		applyGameModes();
+
 		document.querySelectorAll('.game-mode-toggle input').forEach((input) => {
 			input.addEventListener('change', () => {
 				localStorage.setItem(
@@ -71,6 +97,14 @@ const t = Astro.locals.t;
 			});
 		});
 	}
+
+	// Keep desktop always-open when viewport resizes across the 50rem boundary
+	window.addEventListener('resize', () => {
+		const details = document.querySelector<HTMLDetailsElement>('details.game-mode-toggle');
+		if (details && window.matchMedia('(min-width: 50rem)').matches) {
+			details.open = true;
+		}
+	});
 
 	window.addEventListener('kismeta-game-modes-changed', applyGameModes);
 
