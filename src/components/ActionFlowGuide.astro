@@ -21,12 +21,11 @@ const flow = getFlow(flowId);
 const intro = localize(flow.intro, contentLocale);
 const learnPath = 'play/round-overview';
 const roundOverviewUrl = getRelativeLocaleUrl(starlightLocale, learnPath);
-const learnBase = flow.learnMoreHash
-	? `${roundOverviewUrl}#${flow.learnMoreHash}`
-	: roundOverviewUrl;
 
 const isSummer = flow.mode === 'playerTurn';
 const isAutumn = flowId === 'autumn-flow';
+const isWinter = flowId === 'winter-flow';
+const isWizard = isAutumn || isWinter;
 
 const labels = {
 	required: t('flow.required'),
@@ -45,10 +44,23 @@ const labels = {
 	stoneNotInForge: t('flow.stoneNotInForge'),
 	processionLabel: t('flow.processionLabel'),
 	passLikelySkip: t('flow.passLikelySkip'),
+	wizardBack: t('flow.wizardBack'),
+	wizardContinue: t('flow.wizardContinue'),
+	wizardDone: t('flow.wizardDone'),
+	wizardStepOf: t('flow.wizardStepOf'),
+	yes: t('flow.yes'),
+	noSkip: t('flow.noSkip'),
+	autumnDoneMessage: t('flow.autumnDoneMessage'),
+	autumnRestartLabel: t('flow.autumnRestartLabel'),
+	autumnOppositionPrompt: t('flow.autumnOppositionPrompt'),
+	autumnTemperPrompt: t('flow.autumnTemperPrompt'),
+	autumnFirePrompt: t('flow.autumnFirePrompt'),
+	winterOfferingPrompt: t('flow.winterOfferingPrompt'),
+	winterWagerPrompt: t('flow.winterWagerPrompt'),
 };
 
-const stonePickerOptions: Array<{ id: StoneState; label: string }> = [
-	{ id: 'all', label: labels.stoneAll },
+// Wizard stone options — the four real states (no "show all")
+const wizardStoneOptions: Array<{ id: Exclude<StoneState, 'all'>; label: string }> = [
 	{ id: 'stasis', label: labels.stoneStasis },
 	{ id: 'forgingNew', label: labels.stoneForgingNew },
 	{ id: 'forgingReady', label: labels.stoneForgingReady },
@@ -60,26 +72,34 @@ function topGroups(node: FlowNode): FlowNode[] {
 }
 
 const topLevel = isSummer ? topGroups(flow.root) : [flow.root];
-const autumnPasses = isAutumn
-	? (flow.root.children ?? []).filter((n) => n.id.startsWith('pass-'))
-	: [];
 
-/** Global step numbers 1–4 across both autumn passes */
-const autumnStepNumbers: Record<string, number> = {
-	'leave-stasis': 1,
-	opposition: 2,
-	temper: 3,
-	fire: 4,
-};
+// Autumn: extract the specific step nodes used in wizard panels
+const autumnPass1 = isAutumn
+	? (flow.root.children ?? []).find((n) => n.id === 'pass-1') ?? null
+	: null;
+const autumnPass2 = isAutumn
+	? (flow.root.children ?? []).find((n) => n.id === 'pass-2') ?? null
+	: null;
+const leaveStasisNode = autumnPass1?.children?.find((n) => n.id === 'leave-stasis') ?? null;
+const oppositionNode = autumnPass1?.children?.find((n) => n.id === 'opposition') ?? null;
+const temperNode = autumnPass2?.children?.find((n) => n.id === 'temper') ?? null;
+const fireNode = autumnPass2?.children?.find((n) => n.id === 'fire') ?? null;
 
-function stoneStatesAttr(states: StoneState[] | undefined): string {
-	if (!states?.length) return 'all';
-	return states.join(' ');
-}
+// Winter: extract the specific step nodes used in wizard panels
+const winterChildren = isWinter ? (flow.root.children ?? []) : [];
+const unlockNode = winterChildren.find((n) => n.id === 'unlock') ?? null;
+const offeringNode = winterChildren.find((n) => n.id === 'offering') ?? null;
+const wagerNode = winterChildren.find((n) => n.id === 'wager') ?? null;
+const limitsNode = winterChildren.find((n) => n.id === 'limits') ?? null;
+const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 ---
 
 <div
-	class:list={['action-flow', 'action-flow--interactive', { 'action-flow--autumn': isAutumn }]}
+	class:list={[
+		'action-flow',
+		'action-flow--interactive',
+		{ 'action-flow--autumn': isAutumn, 'action-flow--winter': isWinter },
+	]}
 	data-flow-id={flowId}
 	data-flow-mode={flow.mode}
 	data-locale={contentLocale}
@@ -89,32 +109,7 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 >
 	{intro && <p class="action-flow__intro">{intro}</p>}
 
-	<p class="action-flow__hint">{labels.pickPrompt}</p>
-
-	{isAutumn && (
-		<div class="action-flow__stone-picker-wrap">
-			<h3 class="action-flow__stone-picker-title" id={`stone-picker-${flowId}`}>
-				{labels.stonePickerTitle}
-			</h3>
-			<div
-				class="action-flow__stone-picker"
-				role="group"
-				aria-labelledby={`stone-picker-${flowId}`}
-				data-stone-picker
-			>
-				{stonePickerOptions.map((opt) => (
-					<button
-						type="button"
-						class="action-flow__stone-segment"
-						data-stone={opt.id}
-						aria-pressed={opt.id === 'all' ? 'true' : 'false'}
-					>
-						{opt.label}
-					</button>
-				))}
-			</div>
-		</div>
-	)}
+	{!isWizard && <p class="action-flow__hint">{labels.pickPrompt}</p>}
 
 	{isSummer ? (
 		<div class="action-flow__summer" data-summer-root>
@@ -141,277 +136,431 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 				))}
 			</div>
 		</div>
-	) : isAutumn ? (
-		<div class="action-flow__procession" data-procession>
-			<p class="action-flow__procession-label">{labels.processionLabel}</p>
-			{autumnPasses.map((pass) => (
-				<section class="action-flow__pass" data-pass-id={pass.id}>
-					<h3 class="action-flow__pass-title">{localize(pass.label, contentLocale)}</h3>
-					{pass.body && (
-						<p class="action-flow__pass-body">{localize(pass.body, contentLocale)}</p>
-					)}
-					<p class="action-flow__pass-skip-note" data-pass-skip-note hidden>
-						{labels.passLikelySkip}
-					</p>
-					<ol class="action-flow__procession-steps">
-						{(pass.children ?? []).map((step) => (
-							<li
-								class:list={[
-									'action-flow__procession-step',
-									`action-flow__node--${step.kind}`,
-								]}
-								data-node-id={step.id}
-								data-stone-states={stoneStatesAttr(step.stoneStates)}
-								data-pass-id={pass.id}
-							>
-								<div class="action-flow__procession-marker" aria-hidden="true">
-									{autumnStepNumbers[step.id] ?? '?'}
-								</div>
-								<div class="action-flow__procession-content">
-									{!step.children?.length && step.learnMoreHash ? (
-										<button
-											type="button"
-											class="action-flow__pick action-flow__pick--step"
-											data-pick-id={step.id}
-											data-body={localize(step.body, contentLocale)}
-											data-condition={localize(step.condition, contentLocale)}
-											data-learn-hash={step.learnMoreHash}
-										>
-											<span class="action-flow__pick-step-inner">
-												<span class="action-flow__node-head">
-													{step.kind === 'sequence' && (
-														<span class="action-flow__badge action-flow__badge--sequence">
-															{labels.sequence}
-														</span>
-													)}
-													{step.kind === 'required' && (
-														<span class="action-flow__badge action-flow__badge--required">
-															{labels.required}
-														</span>
-													)}
-													{step.kind === 'optional' && (
-														<span class="action-flow__badge action-flow__badge--optional">
-															{labels.optional}
-														</span>
-													)}
-													<span class="action-flow__node-label">
-														{localize(step.label, contentLocale)}
-													</span>
-												</span>
-												{step.condition && (
-													<span class="action-flow__condition action-flow__condition--applies">
-														<em>
-															{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-															{localize(step.condition, contentLocale)}
-														</em>
-													</span>
-												)}
-											</span>
-										</button>
-									) : (
-										<>
-											<div class="action-flow__node-head">
-												{step.kind === 'sequence' && (
-													<span class="action-flow__badge action-flow__badge--sequence">
-														{labels.sequence}
-													</span>
-												)}
-												{step.kind === 'required' && (
-													<span class="action-flow__badge action-flow__badge--required">
-														{labels.required}
-													</span>
-												)}
-												{step.kind === 'optional' && (
-													<span class="action-flow__badge action-flow__badge--optional">
-														{labels.optional}
-													</span>
-												)}
-												<span class="action-flow__node-label">{localize(step.label, contentLocale)}</span>
-											</div>
-											{step.condition && (
-												<p class="action-flow__condition action-flow__condition--applies">
-													<em>
-														{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-														{localize(step.condition, contentLocale)}
-													</em>
-												</p>
-											)}
-											{step.body && (
-												<p class="action-flow__body">{localize(step.body, contentLocale)}</p>
-											)}
-										</>
-									)}
-									<p class="action-flow__skip-note" data-skip-note hidden>
-										{labels.likelySkip}
-									</p>
-									{step.children && step.children.length > 0 && (
-										<div class="action-flow__branches">
-											{step.children.map((branch) => (
-												<div class="action-flow__branch">
-													<button
-														type="button"
-														class="action-flow__pick"
-														data-pick-id={branch.id}
-														data-body={localize(branch.body, contentLocale)}
-														data-condition={localize(branch.condition, contentLocale)}
-														data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
-													>
-														{localize(branch.label, contentLocale)}
-													</button>
-													{branch.children?.map((sub) => (
-														<button
-															type="button"
-															class="action-flow__pick action-flow__pick--sub"
-															data-pick-id={sub.id}
-															data-body={localize(sub.body, contentLocale)}
-															data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
-														>
-															{localize(sub.label, contentLocale)}
-														</button>
-													))}
-												</div>
-											))}
-										</div>
-									)}
-									{step.learnMoreHash && step.children?.length ? (
-										<a
-											class="action-flow__learn-more"
-											href={`${roundOverviewUrl}#${step.learnMoreHash}`}
-											target="_blank"
-											rel="noopener"
-										>
-											{labels.readMore}
-										</a>
-									) : null}
-								</div>
-							</li>
-						))}
-					</ol>
-				</section>
-			))}
-		</div>
 	) : (
-		<ol class="action-flow__tree action-flow__tree--guided">
-			{(flow.root.children ?? []).map((step) => (
-				<li class={`action-flow__node action-flow__node--${step.kind}`} data-node-id={step.id}>
-					{!step.children?.length && step.learnMoreHash ? (
-						<button
-							type="button"
-							class="action-flow__pick action-flow__pick--step"
-							data-pick-id={step.id}
-							data-body={localize(step.body, contentLocale)}
-							data-condition={localize(step.condition, contentLocale)}
-							data-learn-hash={step.learnMoreHash}
-						>
-							<span class="action-flow__pick-step-inner">
-								<span class="action-flow__node-head">
-									{step.kind === 'sequence' && (
-										<span class="action-flow__badge action-flow__badge--sequence">
-											{labels.sequence}
-										</span>
-									)}
-									{step.kind === 'required' && (
-										<span class="action-flow__badge action-flow__badge--required">
-											{labels.required}
-										</span>
-									)}
-									{step.kind === 'optional' && (
-										<span class="action-flow__badge action-flow__badge--optional">
-											{labels.optional}
-										</span>
-									)}
-									<span class="action-flow__node-label">{localize(step.label, contentLocale)}</span>
+		<div class="action-flow__wizard" data-flow-wizard>
+			<div class="action-flow__wizard-progress" data-wizard-progress aria-live="polite"></div>
+
+			{/* ── Autumn wizard panels ─────────────────────────────────── */}
+			{isAutumn && (
+				<>
+					{/* Panel 1: Stone state picker */}
+					<div class="action-flow__wizard-panel" data-wizard-panel="autumn-stone-pick" hidden>
+						<p class="action-flow__wizard-stone-title">{labels.stonePickerTitle}</p>
+						<div class="action-flow__wizard-stone-options">
+							{wizardStoneOptions.map((opt) => (
+								<button
+									type="button"
+									class="action-flow__wizard-stone-btn"
+									data-wizard-stone={opt.id}
+								>
+									{opt.label}
+								</button>
+							))}
+						</div>
+					</div>
+
+					{/* Panel: Leave Stasis — only shown for stasis stone */}
+					{leaveStasisNode && (
+						<div class="action-flow__wizard-panel" data-wizard-panel="autumn-leave-stasis" hidden>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(leaveStasisNode.label, contentLocale)}
 								</span>
-								{step.condition && (
-									<span class="action-flow__condition action-flow__condition--applies">
-										<em>
-											{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-											{localize(step.condition, contentLocale)}
-										</em>
-									</span>
-								)}
-							</span>
-						</button>
-					) : (
-						<>
-							<div class="action-flow__node-head">
-								{step.kind === 'sequence' && (
-									<span class="action-flow__badge action-flow__badge--sequence">
-										{labels.sequence}
-									</span>
-								)}
-								{step.kind === 'required' && (
-									<span class="action-flow__badge action-flow__badge--required">
-										{labels.required}
-									</span>
-								)}
-								{step.kind === 'optional' && (
-									<span class="action-flow__badge action-flow__badge--optional">
-										{labels.optional}
-									</span>
-								)}
-								<span class="action-flow__node-label">{localize(step.label, contentLocale)}</span>
 							</div>
-							{step.condition && (
-								<p class="action-flow__condition action-flow__condition--applies">
+							{leaveStasisNode.condition && (
+								<p class="action-flow__wizard-step-condition">
 									<em>
-										{step.kind === 'sequence' ? labels.appliesWhen : ''}{' '}
-										{localize(step.condition, contentLocale)}
+										{labels.appliesWhen} {localize(leaveStasisNode.condition, contentLocale)}
 									</em>
 								</p>
 							)}
-							{step.body && <p class="action-flow__body">{localize(step.body, contentLocale)}</p>}
-						</>
-					)}
-					{step.children && step.children.length > 0 && (
-						<div class="action-flow__branches">
-							{step.children.map((branch) => (
-								<div class="action-flow__branch">
-									<button
-										type="button"
-										class="action-flow__pick"
-										data-pick-id={branch.id}
-										data-body={localize(branch.body, contentLocale)}
-										data-condition={localize(branch.condition, contentLocale)}
-										data-learn-hash={branch.learnMoreHash ?? step.learnMoreHash ?? ''}
-									>
-										{localize(branch.label, contentLocale)}
-									</button>
-									{branch.children?.map((sub) => (
-										<button
-											type="button"
-											class="action-flow__pick action-flow__pick--sub"
-											data-pick-id={sub.id}
-											data-body={localize(sub.body, contentLocale)}
-											data-learn-hash={sub.learnMoreHash ?? branch.learnMoreHash ?? ''}
-										>
-											{localize(sub.label, contentLocale)}
-										</button>
+							{leaveStasisNode.children && leaveStasisNode.children.length > 0 && (
+								<div class="action-flow__branches">
+									{leaveStasisNode.children.map((branch) => (
+										<div class="action-flow__branch">
+											<button
+												type="button"
+												class="action-flow__pick"
+												data-pick-id={branch.id}
+												data-body={localize(branch.body, contentLocale)}
+												data-condition={localize(branch.condition, contentLocale)}
+												data-learn-hash={branch.learnMoreHash ?? leaveStasisNode.learnMoreHash ?? ''}
+											>
+												{localize(branch.label, contentLocale)}
+											</button>
+											{branch.children?.map((sub) => (
+												<button
+													type="button"
+													class="action-flow__pick action-flow__pick--sub"
+													data-pick-id={sub.id}
+													data-body={localize(sub.body, contentLocale)}
+													data-learn-hash={
+														sub.learnMoreHash ??
+														branch.learnMoreHash ??
+														leaveStasisNode.learnMoreHash ??
+														''
+													}
+												>
+													{localize(sub.label, contentLocale)}
+												</button>
+											))}
+										</div>
 									))}
 								</div>
-							))}
+							)}
+							{leaveStasisNode.learnMoreHash && (
+								<a
+									class="action-flow__learn-more"
+									href={`${roundOverviewUrl}#${leaveStasisNode.learnMoreHash}`}
+									target="_blank"
+									rel="noopener"
+								>
+									{labels.readMore}
+								</a>
+							)}
 						</div>
 					)}
-					{step.learnMoreHash && step.children?.length ? (
-						<a
-							class="action-flow__learn-more"
-							href={`${roundOverviewUrl}#${step.learnMoreHash}`}
-							target="_blank"
-							rel="noopener"
+
+					{/* Panel: Opposition gate — shown for all stone states */}
+					{oppositionNode && (
+						<div
+							class="action-flow__wizard-panel"
+							data-wizard-panel="autumn-opposition-gate"
+							data-wizard-panel-type="gate"
+							hidden
 						>
-							{labels.readMore}
-						</a>
-					) : null}
-				</li>
-			))}
-		</ol>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(oppositionNode.label, contentLocale)}
+								</span>
+							</div>
+							{oppositionNode.condition && (
+								<p class="action-flow__wizard-step-condition">
+									<em>
+										{labels.appliesWhen} {localize(oppositionNode.condition, contentLocale)}
+									</em>
+								</p>
+							)}
+							<p class="action-flow__wizard-gate-prompt">{labels.autumnOppositionPrompt}</p>
+							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
+								{oppositionNode.body && (
+									<p class="action-flow__wizard-step-body">
+										{localize(oppositionNode.body, contentLocale)}
+									</p>
+								)}
+								{oppositionNode.learnMoreHash && (
+									<a
+										class="action-flow__learn-more"
+										href={`${roundOverviewUrl}#${oppositionNode.learnMoreHash}`}
+										target="_blank"
+										rel="noopener"
+									>
+										{labels.readMore}
+									</a>
+								)}
+							</div>
+						</div>
+					)}
+
+					{/* Panel: Temper gate — only shown for forgingReady */}
+					{temperNode && (
+						<div
+							class="action-flow__wizard-panel"
+							data-wizard-panel="autumn-temper-gate"
+							data-wizard-panel-type="gate"
+							hidden
+						>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(temperNode.label, contentLocale)}
+								</span>
+							</div>
+							{temperNode.condition && (
+								<p class="action-flow__wizard-step-condition">
+									<em>
+										{labels.appliesWhen} {localize(temperNode.condition, contentLocale)}
+									</em>
+								</p>
+							)}
+							<p class="action-flow__wizard-gate-prompt">{labels.autumnTemperPrompt}</p>
+							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
+								{temperNode.body && (
+									<p class="action-flow__wizard-step-body">
+										{localize(temperNode.body, contentLocale)}
+									</p>
+								)}
+								{temperNode.learnMoreHash && (
+									<a
+										class="action-flow__learn-more"
+										href={`${roundOverviewUrl}#${temperNode.learnMoreHash}`}
+										target="_blank"
+										rel="noopener"
+									>
+										{labels.readMore}
+									</a>
+								)}
+							</div>
+						</div>
+					)}
+
+					{/* Panel: Fire gate — only shown for forgingNew / notInForge */}
+					{fireNode && (
+						<div
+							class="action-flow__wizard-panel"
+							data-wizard-panel="autumn-fire-gate"
+							data-wizard-panel-type="gate"
+							hidden
+						>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(fireNode.label, contentLocale)}
+								</span>
+							</div>
+							{fireNode.condition && (
+								<p class="action-flow__wizard-step-condition">
+									<em>
+										{labels.appliesWhen} {localize(fireNode.condition, contentLocale)}
+									</em>
+								</p>
+							)}
+							<p class="action-flow__wizard-gate-prompt">{labels.autumnFirePrompt}</p>
+							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
+								{fireNode.body && (
+									<p class="action-flow__wizard-step-body">
+										{localize(fireNode.body, contentLocale)}
+									</p>
+								)}
+								{fireNode.learnMoreHash && (
+									<a
+										class="action-flow__learn-more"
+										href={`${roundOverviewUrl}#${fireNode.learnMoreHash}`}
+										target="_blank"
+										rel="noopener"
+									>
+										{labels.readMore}
+									</a>
+								)}
+							</div>
+						</div>
+					)}
+
+					{/* Panel: Done */}
+					<div
+						class="action-flow__wizard-panel action-flow__wizard-panel--done"
+						data-wizard-panel="autumn-done"
+						hidden
+					>
+						<p class="action-flow__wizard-done-message">{labels.autumnDoneMessage}</p>
+						<button type="button" class="action-flow__wizard-restart" data-wizard-restart>
+							{labels.autumnRestartLabel}
+						</button>
+					</div>
+				</>
+			)}
+
+			{/* ── Winter wizard panels ─────────────────────────────────── */}
+			{isWinter && (
+				<>
+					{/* Panel 1: Card Unlock — required */}
+					{unlockNode && (
+						<div class="action-flow__wizard-panel" data-wizard-panel="winter-unlock" hidden>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(unlockNode.label, contentLocale)}
+								</span>
+							</div>
+							{unlockNode.body && (
+								<p class="action-flow__wizard-step-body">
+									{localize(unlockNode.body, contentLocale)}
+								</p>
+							)}
+							{unlockNode.learnMoreHash && (
+								<a
+									class="action-flow__learn-more"
+									href={`${roundOverviewUrl}#${unlockNode.learnMoreHash}`}
+									target="_blank"
+									rel="noopener"
+								>
+									{labels.readMore}
+								</a>
+							)}
+						</div>
+					)}
+
+					{/* Panel: Offering — optional gate */}
+					{offeringNode && (
+						<div
+							class="action-flow__wizard-panel"
+							data-wizard-panel="winter-offering-gate"
+							data-wizard-panel-type="gate"
+							hidden
+						>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--optional">{labels.optional}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(offeringNode.label, contentLocale)}
+								</span>
+							</div>
+							<p class="action-flow__wizard-gate-prompt">{labels.winterOfferingPrompt}</p>
+							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
+								{offeringNode.body && (
+									<p class="action-flow__wizard-step-body">
+										{localize(offeringNode.body, contentLocale)}
+									</p>
+								)}
+								{offeringNode.learnMoreHash && (
+									<a
+										class="action-flow__learn-more"
+										href={`${roundOverviewUrl}#${offeringNode.learnMoreHash}`}
+										target="_blank"
+										rel="noopener"
+									>
+										{labels.readMore}
+									</a>
+								)}
+							</div>
+						</div>
+					)}
+
+					{/* Panel: Fateful Wager — optional gate */}
+					{wagerNode && (
+						<div
+							class="action-flow__wizard-panel"
+							data-wizard-panel="winter-wager-gate"
+							data-wizard-panel-type="gate"
+							hidden
+						>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--optional">{labels.optional}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(wagerNode.label, contentLocale)}
+								</span>
+							</div>
+							<p class="action-flow__wizard-gate-prompt">{labels.winterWagerPrompt}</p>
+							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
+								{wagerNode.body && (
+									<p class="action-flow__wizard-step-body">
+										{localize(wagerNode.body, contentLocale)}
+									</p>
+								)}
+								{wagerNode.learnMoreHash && (
+									<a
+										class="action-flow__learn-more"
+										href={`${roundOverviewUrl}#${wagerNode.learnMoreHash}`}
+										target="_blank"
+										rel="noopener"
+									>
+										{labels.readMore}
+									</a>
+								)}
+							</div>
+						</div>
+					)}
+
+					{/* Panel: Enforce Card Limits — required */}
+					{limitsNode && (
+						<div class="action-flow__wizard-panel" data-wizard-panel="winter-limits" hidden>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(limitsNode.label, contentLocale)}
+								</span>
+							</div>
+							{limitsNode.body && (
+								<p class="action-flow__wizard-step-body">
+									{localize(limitsNode.body, contentLocale)}
+								</p>
+							)}
+							{limitsNode.learnMoreHash && (
+								<a
+									class="action-flow__learn-more"
+									href={`${roundOverviewUrl}#${limitsNode.learnMoreHash}`}
+									target="_blank"
+									rel="noopener"
+								>
+									{labels.readMore}
+								</a>
+							)}
+						</div>
+					)}
+
+					{/* Panel: Reset & Pass Key — required, last */}
+					{resetNode && (
+						<div class="action-flow__wizard-panel" data-wizard-panel="winter-reset" hidden>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(resetNode.label, contentLocale)}
+								</span>
+							</div>
+							{resetNode.body && (
+								<p class="action-flow__wizard-step-body">
+									{localize(resetNode.body, contentLocale)}
+								</p>
+							)}
+							{resetNode.learnMoreHash && (
+								<a
+									class="action-flow__learn-more"
+									href={`${roundOverviewUrl}#${resetNode.learnMoreHash}`}
+									target="_blank"
+									rel="noopener"
+								>
+									{labels.readMore}
+								</a>
+							)}
+						</div>
+					)}
+				</>
+			)}
+
+			{/* ── Shared wizard navigation ─────────────────────────────── */}
+			<div class="action-flow__wizard-nav" data-wizard-nav hidden>
+				<button
+					type="button"
+					class="action-flow__wizard-btn action-flow__wizard-btn--back"
+					data-wizard-back
+					hidden
+				>
+					{labels.wizardBack}
+				</button>
+				<div class="action-flow__wizard-nav-right">
+					<button
+						type="button"
+						class="action-flow__wizard-btn action-flow__wizard-btn--gate-no"
+						data-wizard-gate-no
+						hidden
+					>
+						{labels.noSkip}
+					</button>
+					<button
+						type="button"
+						class="action-flow__wizard-btn action-flow__wizard-btn--gate-yes"
+						data-wizard-gate-yes
+						hidden
+					>
+						{labels.yes}
+					</button>
+					<button
+						type="button"
+						class="action-flow__wizard-btn action-flow__wizard-btn--continue"
+						data-wizard-continue
+						hidden
+					>
+						{labels.wizardContinue}
+					</button>
+				</div>
+			</div>
+		</div>
 	)}
 </div>
 
 <script>
-	const AUTUMN_STONE_KEY = 'kismeta-autumn-stone';
-
-	type StonePicker = 'all' | 'stasis' | 'forgingNew' | 'forgingReady' | 'notInForge';
+	// ── Helpers ────────────────────────────────────────────────────────────
 
 	function getGuidedGameMode(): 'quickplay' | 'standard' | 'magnus' {
 		const raw = localStorage.getItem('kismeta-guided-progress');
@@ -438,106 +587,323 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 		return 'standard';
 	}
 
-	function loadAutumnStone(): StonePicker {
-		const saved = sessionStorage.getItem(AUTUMN_STONE_KEY);
-		if (
-			saved === 'stasis' ||
-			saved === 'forgingNew' ||
-			saved === 'forgingReady' ||
-			saved === 'notInForge' ||
-			saved === 'all'
-		) {
-			return saved;
+	// ── Wizard state types & storage ───────────────────────────────────────
+
+	const AUTUMN_WIZARD_KEY = 'kismeta-autumn-wizard';
+	const WINTER_WIZARD_KEY = 'kismeta-winter-wizard';
+
+	type AutumnStone = 'stasis' | 'forgingNew' | 'forgingReady' | 'notInForge';
+
+	interface AutumnWizardState {
+		stone: AutumnStone | null;
+		index: number;
+		gateAnswers: Record<string, boolean>;
+	}
+
+	interface WinterWizardState {
+		index: number;
+		gateAnswers: Record<string, boolean>;
+	}
+
+	const WINTER_SEQUENCE = [
+		'winter-unlock',
+		'winter-offering-gate',
+		'winter-wager-gate',
+		'winter-limits',
+		'winter-reset',
+	];
+
+	function buildAutumnSequence(stone: AutumnStone): string[] {
+		const seq: string[] = ['autumn-stone-pick'];
+		if (stone === 'stasis') seq.push('autumn-leave-stasis');
+		seq.push('autumn-opposition-gate');
+		if (stone !== 'stasis') {
+			if (stone === 'forgingReady') seq.push('autumn-temper-gate');
+			else seq.push('autumn-fire-gate'); // forgingNew or notInForge
 		}
-		return 'all';
+		seq.push('autumn-done');
+		return seq;
 	}
 
-	function stepMatchesStone(statesAttr: string, selected: StonePicker): boolean {
-		if (selected === 'all') return true;
-		const states = statesAttr.split(/\s+/).filter(Boolean);
-		return states.includes('all') || states.includes(selected);
-	}
-
-	/** Pass sections to dim when this stone state is selected */
-	const PASS_MUTE_BY_STONE: Record<StonePicker, string[]> = {
-		all: [],
-		stasis: ['pass-2'],
-		forgingNew: [],
-		forgingReady: [],
-		notInForge: [],
-	};
-
-	function passHasMatchingStep(passEl: HTMLElement, selected: StonePicker): boolean {
-		if (selected === 'all') return true;
-		const steps = passEl.querySelectorAll<HTMLElement>('[data-stone-states]');
-		for (const step of steps) {
-			if (stepMatchesStone(step.dataset.stoneStates || 'all', selected)) return true;
+	function loadAutumnState(): AutumnWizardState {
+		try {
+			const raw = sessionStorage.getItem(AUTUMN_WIZARD_KEY);
+			if (raw) {
+				const p = JSON.parse(raw);
+				return {
+					stone: p.stone ?? null,
+					index: typeof p.index === 'number' ? p.index : 0,
+					gateAnswers: p.gateAnswers ?? {},
+				};
+			}
+		} catch {
+			/* ignore */
 		}
-		return false;
+		return { stone: null, index: 0, gateAnswers: {} };
 	}
 
-	function applyAutumnStone(root: HTMLElement, selected: StonePicker) {
-		const mutedPasses = new Set(PASS_MUTE_BY_STONE[selected] ?? []);
-
-		root.querySelectorAll<HTMLElement>('.action-flow__pass').forEach((passEl) => {
-			const passId = passEl.dataset.passId || '';
-			const forceMute = mutedPasses.has(passId);
-			const passMatches = !forceMute && passHasMatchingStep(passEl, selected);
-			const passSkip = passEl.querySelector<HTMLElement>('[data-pass-skip-note]');
-
-			if (selected === 'all') {
-				passEl.classList.remove('action-flow__pass--muted', 'action-flow__pass--active');
-				if (passSkip) passSkip.hidden = true;
-			} else {
-				passEl.classList.toggle('action-flow__pass--muted', forceMute || !passMatches);
-				passEl.classList.toggle('action-flow__pass--active', passMatches && !forceMute);
-				if (passSkip) passSkip.hidden = passMatches && !forceMute;
-			}
-		});
-
-		root.querySelectorAll<HTMLElement>('[data-stone-states]').forEach((step) => {
-			const attr = step.dataset.stoneStates || 'all';
-			const matches = stepMatchesStone(attr, selected);
-			const skipNote = step.querySelector<HTMLElement>('[data-skip-note]');
-			const passMuted = step.closest('.action-flow__pass--muted') !== null;
-
-			if (selected === 'all' || passMuted) {
-				step.classList.remove(
-					'action-flow__procession-step--active',
-					'action-flow__procession-step--muted'
-				);
-				if (skipNote) skipNote.hidden = true;
-			} else {
-				step.classList.toggle('action-flow__procession-step--active', matches);
-				step.classList.toggle('action-flow__procession-step--muted', !matches);
-				if (skipNote) skipNote.hidden = matches;
-			}
-		});
-
-		root.querySelectorAll<HTMLButtonElement>('[data-stone]').forEach((btn) => {
-			const isActive = btn.dataset.stone === selected;
-			btn.classList.toggle('action-flow__stone-segment--active', isActive);
-			btn.setAttribute('aria-pressed', String(isActive));
-		});
+	function saveAutumnState(s: AutumnWizardState): void {
+		sessionStorage.setItem(AUTUMN_WIZARD_KEY, JSON.stringify(s));
 	}
 
-	function initAutumnStonePicker(root: HTMLElement) {
-		const picker = root.querySelector('[data-stone-picker]');
-		if (!picker) return;
+	function loadWinterState(): WinterWizardState {
+		try {
+			const raw = sessionStorage.getItem(WINTER_WIZARD_KEY);
+			if (raw) {
+				const p = JSON.parse(raw);
+				return {
+					index: typeof p.index === 'number' ? p.index : 0,
+					gateAnswers: p.gateAnswers ?? {},
+				};
+			}
+		} catch {
+			/* ignore */
+		}
+		return { index: 0, gateAnswers: {} };
+	}
 
-		let selected = loadAutumnStone();
-		applyAutumnStone(root, selected);
+	function saveWinterState(s: WinterWizardState): void {
+		sessionStorage.setItem(WINTER_WIZARD_KEY, JSON.stringify(s));
+	}
 
-		picker.querySelectorAll<HTMLButtonElement>('[data-stone]').forEach((btn) => {
-			btn.addEventListener('click', () => {
-				const stone = btn.dataset.stone as StonePicker;
-				if (!stone) return;
-				selected = stone;
-				sessionStorage.setItem(AUTUMN_STONE_KEY, stone);
-				applyAutumnStone(root, selected);
+	// ── Wizard initialiser ─────────────────────────────────────────────────
+
+	function initWizard(root: HTMLElement): void {
+		const isAutumn = root.classList.contains('action-flow--autumn');
+		const wizardEl = root.querySelector<HTMLElement>('[data-flow-wizard]');
+		if (!wizardEl) return;
+
+		const progressEl = wizardEl.querySelector<HTMLElement>('[data-wizard-progress]');
+		const navEl = wizardEl.querySelector<HTMLElement>('[data-wizard-nav]');
+		const backBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-back]');
+		const continueBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-continue]');
+		const gateYesBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-gate-yes]');
+		const gateNoBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-gate-no]');
+
+		if (!navEl || !backBtn || !continueBtn || !gateYesBtn || !gateNoBtn) return;
+
+		const labels = JSON.parse(root.dataset.labels || '{}') as {
+			readMore?: string;
+			wizardContinue?: string;
+			wizardDone?: string;
+			wizardStepOf?: string;
+		};
+
+		let autumnState: AutumnWizardState = { stone: null, index: 0, gateAnswers: {} };
+		let winterState: WinterWizardState = { index: 0, gateAnswers: {} };
+		let sequence: string[] = [];
+
+		if (isAutumn) {
+			autumnState = loadAutumnState();
+			sequence = autumnState.stone
+				? buildAutumnSequence(autumnState.stone)
+				: ['autumn-stone-pick'];
+		} else {
+			winterState = loadWinterState();
+			sequence = [...WINTER_SEQUENCE];
+		}
+
+		function getState(): { index: number; gateAnswers: Record<string, boolean> } {
+			return isAutumn ? autumnState : winterState;
+		}
+
+		function saveState(): void {
+			if (isAutumn) saveAutumnState(autumnState);
+			else saveWinterState(winterState);
+		}
+
+		function getPanelEl(panelId: string): HTMLElement | null {
+			return wizardEl!.querySelector<HTMLElement>(`[data-wizard-panel="${panelId}"]`);
+		}
+
+		function isGatePanel(panelId: string): boolean {
+			return getPanelEl(panelId)?.dataset.wizardPanelType === 'gate';
+		}
+
+		function updateNav(panelId: string, index: number): void {
+			const isStone = panelId === 'autumn-stone-pick';
+			const isDone = panelId === 'autumn-done';
+			const isFirst = index === 0;
+			const isLast = index === sequence.length - 1;
+			const isGate = isGatePanel(panelId);
+			const gateAnswer = getState().gateAnswers[panelId];
+
+			navEl!.hidden = isStone;
+			if (isStone) return;
+
+			backBtn!.hidden = isFirst;
+
+			if (isDone) {
+				continueBtn!.hidden = true;
+				gateYesBtn!.hidden = true;
+				gateNoBtn!.hidden = true;
+			} else if (isGate && gateAnswer === undefined) {
+				continueBtn!.hidden = true;
+				gateYesBtn!.hidden = false;
+				gateNoBtn!.hidden = false;
+			} else {
+				continueBtn!.hidden = false;
+				continueBtn!.textContent = isLast
+					? (labels.wizardDone || 'Done')
+					: (labels.wizardContinue || 'Continue');
+				gateYesBtn!.hidden = true;
+				gateNoBtn!.hidden = true;
+			}
+		}
+
+		function showPanel(panelId: string, index: number): void {
+			// Hide every panel
+			wizardEl!.querySelectorAll<HTMLElement>('[data-wizard-panel]').forEach((p) => {
+				p.hidden = true;
 			});
+
+			// Reveal the active panel
+			const panelEl = getPanelEl(panelId);
+			if (panelEl) {
+				panelEl.hidden = false;
+
+				// Gate content visibility reflects the stored answer
+				if (isGatePanel(panelId)) {
+					const gateContent = panelEl.querySelector<HTMLElement>('[data-wizard-gate-content]');
+					if (gateContent) {
+						gateContent.hidden = getState().gateAnswers[panelId] !== true;
+					}
+				}
+
+				// Highlight the previously-chosen stone when returning to the picker
+				if (panelId === 'autumn-stone-pick' && autumnState.stone) {
+					panelEl.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]').forEach((btn) => {
+						btn.classList.toggle(
+							'action-flow__wizard-stone-btn--active',
+							btn.dataset.wizardStone === autumnState.stone
+						);
+					});
+				}
+			}
+
+			// Progress indicator
+			if (progressEl) {
+				if (panelId === 'autumn-stone-pick') {
+					progressEl.textContent = '';
+				} else {
+					const tpl = labels.wizardStepOf || '{current} of {total}';
+					progressEl.textContent = tpl
+						.replace('{current}', String(index + 1))
+						.replace('{total}', String(sequence.length));
+				}
+			}
+
+			updateNav(panelId, index);
+		}
+
+		function navigate(delta: number): void {
+			const state = getState();
+			const targetIndex = state.index + delta;
+			if (targetIndex < 0 || targetIndex >= sequence.length) return;
+
+			// Navigating Back through a gate resets it so the player can re-answer
+			if (delta < 0) {
+				const targetPanel = sequence[targetIndex];
+				if (isGatePanel(targetPanel)) {
+					delete state.gateAnswers[targetPanel];
+				}
+			}
+
+			state.index = targetIndex;
+			saveState();
+			showPanel(sequence[targetIndex], targetIndex);
+		}
+
+		// Back
+		backBtn.addEventListener('click', () => navigate(-1));
+
+		// Continue (also acts as "Done" on the last winter panel)
+		continueBtn.addEventListener('click', () => {
+			const state = getState();
+			if (state.index < sequence.length - 1) {
+				navigate(1);
+			} else if (!isAutumn) {
+				// Winter: Done restarts the sequence
+				state.index = 0;
+				state.gateAnswers = {};
+				saveState();
+				showPanel(sequence[0], 0);
+			}
 		});
+
+		// Gate Yes — reveal content in current panel, switch to Continue
+		gateYesBtn.addEventListener('click', () => {
+			const state = getState();
+			const panelId = sequence[state.index];
+			state.gateAnswers[panelId] = true;
+			saveState();
+
+			const panelEl = getPanelEl(panelId);
+			const gateContent = panelEl?.querySelector<HTMLElement>('[data-wizard-gate-content]');
+			if (gateContent) gateContent.hidden = false;
+
+			updateNav(panelId, state.index);
+		});
+
+		// Gate No — store answer and advance to the next panel
+		gateNoBtn.addEventListener('click', () => {
+			const state = getState();
+			const panelId = sequence[state.index];
+			state.gateAnswers[panelId] = false;
+			saveState();
+			navigate(1);
+		});
+
+		// Stone selection (autumn only) — rebuilds sequence and advances
+		if (isAutumn) {
+			wizardEl.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]').forEach((btn) => {
+				btn.addEventListener('click', () => {
+					const stone = btn.dataset.wizardStone as AutumnStone;
+					if (!stone) return;
+
+					autumnState.stone = stone;
+					autumnState.gateAnswers = {};
+					sequence = buildAutumnSequence(stone);
+					autumnState.index = 1;
+					saveAutumnState(autumnState);
+
+					// Highlight selection
+					wizardEl!
+						.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]')
+						.forEach((b) =>
+							b.classList.toggle('action-flow__wizard-stone-btn--active', b === btn)
+						);
+
+					showPanel(sequence[1], 1);
+				});
+			});
+
+			// "Change stone state" restart button on the done panel
+			const restartBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-restart]');
+			if (restartBtn) {
+				restartBtn.addEventListener('click', () => {
+					autumnState.stone = null;
+					autumnState.index = 0;
+					autumnState.gateAnswers = {};
+					sequence = ['autumn-stone-pick'];
+					saveAutumnState(autumnState);
+
+					wizardEl!
+						.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]')
+						.forEach((b) => b.classList.remove('action-flow__wizard-stone-btn--active'));
+
+					showPanel('autumn-stone-pick', 0);
+				});
+			}
+		}
+
+		// Restore from session storage — clamp index in case sequence length changed
+		const initialState = getState();
+		initialState.index = Math.min(initialState.index, sequence.length - 1);
+		showPanel(sequence[initialState.index], initialState.index);
 	}
+
+	// ── Action-detail dispatch (branch pick buttons) ───────────────────────
 
 	function initActionFlowGuides() {
 		document.querySelectorAll<HTMLElement>('.action-flow--interactive').forEach((root) => {
@@ -550,8 +916,11 @@ function stoneStatesAttr(states: StoneState[] | undefined): string {
 			const learnBase = root.dataset.learnBase || '';
 			const learnPath = root.dataset.learnPath || 'play/round-overview';
 
-			if (root.classList.contains('action-flow--autumn')) {
-				initAutumnStonePicker(root);
+			if (
+				root.classList.contains('action-flow--autumn') ||
+				root.classList.contains('action-flow--winter')
+			) {
+				initWizard(root);
 			}
 
 			const showDetail = (btn: HTMLButtonElement) => {

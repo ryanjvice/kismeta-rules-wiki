@@ -1,7 +1,7 @@
 {
 	"id": "winter-flow",
 	"mode": "sequentialHybrid",
-	"intro": "Winter ends the Cosmic Age. Required steps must happen; Offering and Wager are optional.",
+	"intro": "Step through the Winter sequence together. Required steps must happen; Offering and Wager are optional — answer when you reach each one.",
 	"learnMoreHash": "phase-4-winter",
 	"root": {
 		"id": "winter-sequence",

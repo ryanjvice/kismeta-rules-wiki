@@ -67,5 +67,18 @@
   "flow.stoneForgingReady": "Forging — since last round",
   "flow.stoneNotInForge": "In Mantle Ring (not Forging)",
   "flow.processionLabel": "Two passes around the table",
-  "flow.passLikelySkip": "Likely skip this pass."
+  "flow.passLikelySkip": "Likely skip this pass.",
+  "flow.wizardBack": "Back",
+  "flow.wizardContinue": "Continue",
+  "flow.wizardDone": "Done",
+  "flow.wizardStepOf": "Step {current} of {total}",
+  "flow.yes": "Yes",
+  "flow.noSkip": "No, skip",
+  "flow.autumnDoneMessage": "You've completed your Autumn turn.",
+  "flow.autumnRestartLabel": "Change stone state",
+  "flow.autumnOppositionPrompt": "Do you want to declare Opposition this turn?",
+  "flow.autumnTemperPrompt": "Do you want to Temper your Stone this turn?",
+  "flow.autumnFirePrompt": "Do you want to Fire your Stone this turn?",
+  "flow.winterOfferingPrompt": "Perform Offering to the Age this round?",
+  "flow.winterWagerPrompt": "Take a Fateful Wager this round?"
 }

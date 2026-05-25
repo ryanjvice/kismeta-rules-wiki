@@ -1150,6 +1150,211 @@ main:has(.kismeta-lore) h1#_top,
 	color: var(--sl-color-accent-high);
 }
 
+/* ── Autumn / Winter step-by-step wizard ───────────────────────────── */
+
+.action-flow__wizard {
+	margin-top: 0.25rem;
+}
+
+.action-flow__wizard-progress {
+	margin: 0 0 0.85rem;
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--sl-color-gray-3);
+	min-height: 1.2em;
+}
+
+/* Each panel is hidden until the wizard makes it active */
+.action-flow__wizard-panel[hidden],
+.action-flow__wizard-gate-content[hidden],
+.action-flow__wizard-btn[hidden],
+.action-flow__wizard-nav[hidden] {
+	display: none;
+}
+
+/* Stone-state picker panel */
+.action-flow__wizard-stone-title {
+	margin: 0 0 0.75rem;
+	font-family: var(--kismeta-font-heading);
+	font-size: 0.95rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.action-flow__wizard-stone-options {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.action-flow__wizard-stone-btn {
+	min-height: 48px;
+	width: 100%;
+	text-align: left;
+	padding: 0.75rem 1rem;
+	border-radius: 0.4rem;
+	font-family: var(--kismeta-font-heading);
+	font-size: 0.88rem;
+	font-weight: 600;
+	line-height: 1.3;
+	cursor: pointer;
+	color: var(--sl-color-text);
+	background: var(--sl-color-bg);
+	border: 2px solid var(--sl-color-hairline);
+	transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.action-flow__wizard-stone-btn:hover {
+	border-color: var(--sl-color-accent);
+	color: var(--sl-color-accent-high);
+}
+
+.action-flow__wizard-stone-btn--active {
+	border-color: var(--sl-color-accent);
+	background: color-mix(in srgb, var(--sl-color-accent) 12%, var(--sl-color-bg));
+	color: var(--sl-color-accent-high);
+}
+
+/* Step panel content */
+.action-flow__wizard-step-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.45rem;
+	margin: 0 0 0.5rem;
+}
+
+.action-flow__wizard-step-label {
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.35;
+}
+
+.action-flow__wizard-step-condition {
+	margin: 0 0 0.65rem;
+	font-size: 0.88rem;
+	line-height: 1.45;
+	color: var(--sl-color-gray-3);
+}
+
+.action-flow__wizard-step-body {
+	margin: 0 0 0.65rem;
+	font-size: 0.9rem;
+	line-height: 1.55;
+	color: var(--sl-color-gray-2);
+}
+
+/* Gate panel */
+.action-flow__wizard-gate-prompt {
+	margin: 0.75rem 0 0;
+	font-size: 0.95rem;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.action-flow__wizard-gate-content {
+	margin-top: 0.85rem;
+	padding: 0.85rem 1rem;
+	border-radius: 0.4rem;
+	background: color-mix(in srgb, var(--sl-color-accent) 8%, var(--sl-color-bg));
+	border-left: 3px solid var(--sl-color-accent);
+}
+
+/* Done panel */
+.action-flow__wizard-panel--done {
+	text-align: center;
+	padding: 1rem 0 0.5rem;
+}
+
+.action-flow__wizard-done-message {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 0 1rem;
+}
+
+.action-flow__wizard-restart {
+	padding: 0.5rem 1rem;
+	border-radius: 0.35rem;
+	font-family: var(--kismeta-font-heading);
+	font-size: 0.82rem;
+	font-weight: 600;
+	cursor: pointer;
+	color: var(--sl-color-gray-2);
+	background: transparent;
+	border: 1px solid var(--sl-color-hairline);
+	transition: border-color 0.15s, color 0.15s;
+}
+
+.action-flow__wizard-restart:hover {
+	border-color: var(--sl-color-accent);
+	color: var(--sl-color-accent-high);
+}
+
+/* Wizard navigation bar */
+.action-flow__wizard-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1.25rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--sl-color-hairline);
+	gap: 0.5rem;
+}
+
+.action-flow__wizard-nav-right {
+	display: flex;
+	gap: 0.5rem;
+	margin-left: auto;
+}
+
+.action-flow__wizard-btn {
+	min-height: 40px;
+	padding: 0.45rem 1.1rem;
+	border-radius: 0.35rem;
+	font-family: var(--kismeta-font-heading);
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.action-flow__wizard-btn--back {
+	color: var(--sl-color-gray-2);
+	background: transparent;
+	border: 1px solid var(--sl-color-hairline);
+}
+
+.action-flow__wizard-btn--back:hover {
+	border-color: var(--sl-color-accent);
+	color: var(--sl-color-accent-high);
+}
+
+.action-flow__wizard-btn--continue,
+.action-flow__wizard-btn--gate-yes {
+	color: var(--sl-color-bg);
+	background: var(--sl-color-accent);
+	border: 1px solid var(--sl-color-accent);
+}
+
+.action-flow__wizard-btn--continue:hover,
+.action-flow__wizard-btn--gate-yes:hover {
+	opacity: 0.88;
+}
+
+.action-flow__wizard-btn--gate-no {
+	color: var(--sl-color-gray-2);
+	background: transparent;
+	border: 1px solid var(--sl-color-hairline);
+}
+
+.action-flow__wizard-btn--gate-no:hover {
+	border-color: var(--sl-color-accent);
+	color: var(--sl-color-accent-high);
+}
+
+/* ── End wizard ─────────────────────────────────────────────────────── */
+
 .action-flow__procession-label {
 	margin: 0 0 0.75rem;
 	font-size: 0.88rem;

@@ -1,7 +1,7 @@
 {
 	"id": "autumn-flow",
 	"mode": "fixedSequence",
-	"intro": "Quick reference for your turn — select where your Stone is, then open the matching beats. Full rules follow below.",
+	"intro": "Step through your Autumn turn. Start by telling us where your Stone is, then follow the prompts for Leave Stasis, Opposition, Temper, and Fire.",
 	"learnMoreHash": "phase-3-autumn",
 	"root": {
 		"id": "autumn-sequence",
