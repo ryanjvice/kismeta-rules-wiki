@@ -1,6 +1,7 @@
 {
-  "tab.learn": "Learn",
   "tab.play": "Play",
+  "tab.learn": "Learn",
+  "tab.compendium": "Compendium",
   "gameMode.modifiers": "Modifiers",
   "gameMode.quickplay": "Quickplay",
   "gameMode.magnus": "Magnus",

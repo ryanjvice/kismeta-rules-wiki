@@ -20,8 +20,9 @@ export const collections = {
 		loader: i18nLoader(),
 		schema: i18nSchema({
 			extend: z.object({
-				'tab.learn': z.string(),
 				'tab.play': z.string(),
+				'tab.learn': z.string(),
+				'tab.compendium': z.string(),
 				'gameMode.modifiers': z.string(),
 				'gameMode.quickplay': z.string(),
 				'gameMode.magnus': z.string(),
