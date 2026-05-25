@@ -57,8 +57,9 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ### Navigation & chrome
 
-- **Top tabs** (Learn / Play / Guided / Reference / Glossary)  
-  `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.*` · styles: `src/styles/custom.css` (`.tab-nav`)
+- **Top tabs** (Learn / Play)  
+  `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.learn` and `tab.play` · styles: `src/styles/custom.css` (`.tab-nav`)  
+  **Learn** is active for `/learn/`, `/reference/`, and `/glossary/` paths. **Play** is active for all `/play/` paths.
 
 - **Game mode toggles** (Quickplay / Magnus)  
   `src/components/GameModeToggle.astro` · labels: i18n `gameMode.*`  

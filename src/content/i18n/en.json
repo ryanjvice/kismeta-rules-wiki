@@ -1,9 +1,6 @@
 {
   "tab.learn": "Learn",
   "tab.play": "Play",
-  "tab.reference": "Reference",
-  "tab.glossary": "Glossary",
-  "tab.guided": "Guided",
   "gameMode.modifiers": "Modifiers",
   "gameMode.quickplay": "Quickplay",
   "gameMode.magnus": "Magnus",
@@ -21,7 +18,7 @@
   "home.social.facebook": "Facebook",
   "home.social.youtube": "YouTube",
   "home.copyright": "Kismeta: Alchemists of the Great Year © 2026 Goodmagik Games. All rights reserved.",
-  "home.action.guided": "Guided play",
+  "home.action.guided": "Play",
   "guided.progress": "Step {current} of {total}",
   "guided.progressPhase": "{phase} — Step {current} of {total}",
   "guided.phase.setup": "Setup",

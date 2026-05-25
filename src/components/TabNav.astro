@@ -6,28 +6,30 @@ const t = Astro.locals.t;
 
 const tabs = [
 	{ key: 'tab.learn', path: 'learn/lore' },
-	{ key: 'tab.play', path: 'play/round-at-a-glance' },
-	{ key: 'tab.guided', path: 'play/guided' },
-	{ key: 'tab.reference', path: 'reference/quick-reference' },
-	{ key: 'tab.glossary', path: 'glossary' },
+	{ key: 'tab.play', path: 'play/guided' },
 ] as const;
 
 const pathname = Astro.url.pathname;
 const learnHref = getRelativeLocaleUrl(locale, 'learn/lore');
+
+// Paths that belong to the Learn tab (everything that isn't /play/guided)
+const learnPaths = ['/learn/', '/reference/', '/glossary/'];
 ---
 
 <nav class="tab-nav" aria-label="Rules sections">
 	{
 		tabs.map((tab) => {
 			const href = getRelativeLocaleUrl(locale, tab.path);
-			const matchPath = `/${tab.path.split('/')[0]}/`;
-			const isGuided = tab.path === 'play/guided';
+			const isLearn = tab.key === 'tab.learn';
+			const isPlay = tab.key === 'tab.play';
 			const active =
 				pathname === '/' || pathname === `/${locale}/`
-					? href === learnHref
-					: isGuided
-						? pathname.includes('/play/guided')
-						: pathname.includes(matchPath) && !pathname.includes('/play/guided');
+					? isLearn
+					: isLearn
+						? learnPaths.some((p) => pathname.includes(p))
+						: isPlay
+							? pathname.includes('/play/')
+							: false;
 			return (
 				<a href={href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
 					{t(tab.key)}

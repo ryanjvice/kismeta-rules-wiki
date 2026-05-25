@@ -22,9 +22,6 @@ export const collections = {
 			extend: z.object({
 				'tab.learn': z.string(),
 				'tab.play': z.string(),
-				'tab.reference': z.string(),
-				'tab.glossary': z.string(),
-				'tab.guided': z.string(),
 				'gameMode.modifiers': z.string(),
 				'gameMode.quickplay': z.string(),
 				'gameMode.magnus': z.string(),
