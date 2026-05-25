@@ -10,6 +10,7 @@ export type GuidedPhase = "setup" | "spring" | "summer" | "autumn" | "winter";
 export type GuidedEmbed =
   | "crucible-deck"
   | "harvest-order"
+  | "round-at-a-glance"
   | "summer-flow"
   | "autumn-flow"
   | "winter-flow";
@@ -157,12 +158,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     id: "round-intro",
     title: "Your First Cosmic Age",
     body: "<p>Each round is one <strong>Cosmic Age</strong> with four seasons in order: Spring → Summer → Autumn → Winter. You will walk through your first age step by step.</p>",
-    checklist: [
-      "Spring: set the Age, Harvest, Commune, Card Lock",
-      "Summer: craft and consort on your turns",
-      "Autumn: Forge sequence (Stasis, Opposition, Temper, Fire)",
-      "Winter: unlock, optional Offering/Wager, limits, reset",
-    ],
+    embed: "round-at-a-glance",
     learnMorePath: "play/round-at-a-glance",
   },
   {
