@@ -11,7 +11,7 @@ function link(label, slug, translations) {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://kismeta.goodmagik.com',
+	site: 'https://kismeta-rules-wiki.vercel.app',
 	markdown: {
 		rehypePlugins: [rehypeWrapTables],
 	},
