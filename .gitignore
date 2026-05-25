@@ -29,3 +29,5 @@ dark-dwarf/
 
 # logs (safety net)
 *.log
+
+.vercel
