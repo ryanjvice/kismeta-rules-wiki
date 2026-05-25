@@ -57,6 +57,7 @@ export const collections = {
 				'guided.resume.continue': z.string(),
 				'guided.resume.fresh': z.string(),
 				'guided.complete.cta': z.string(),
+				'guided.complete.continuePlaying': z.string(),
 				'guided.startOver': z.string(),
 				'guided.context.title': z.string(),
 				'guided.context.empty': z.string(),

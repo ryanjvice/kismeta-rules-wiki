@@ -46,6 +46,7 @@
   "guided.resume.continue": "Resume where I left off",
   "guided.resume.fresh": "Start fresh",
   "guided.complete.cta": "Open Round at a Glance",
+  "guided.complete.continuePlaying": "Continue Playing",
   "guided.startOver": "Start over",
   "guided.context.title": "Rules reference",
   "guided.context.empty": "Continue the walkthrough or tap an action to see matching rules here.",

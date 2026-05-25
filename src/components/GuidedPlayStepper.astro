@@ -70,6 +70,7 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 		resumeContinue: t('guided.resume.continue'),
 		resumeFresh: t('guided.resume.fresh'),
 		completeCta: t('guided.complete.cta'),
+		continuePlaying: t('guided.complete.continuePlaying'),
 		startOver: t('guided.startOver'),
 	})}
 >
@@ -176,7 +177,8 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			<div class="guided-play__body" data-complete-body></div>
 		</article>
 		<div class="guided-play__complete-actions">
-			<a class="guided-play__btn guided-play__btn--primary" data-complete-cta href={roundAtGlanceUrl}></a>
+			<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="continue-playing"></button>
+			<a class="guided-play__btn guided-play__btn--ghost" data-complete-cta href={roundAtGlanceUrl}></a>
 			<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="start-over"></button>
 		</div>
 	</div>
@@ -217,6 +219,7 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 		resumeContinue: string;
 		resumeFresh: string;
 		completeCta: string;
+		continuePlaying: string;
 		startOver: string;
 	};
 
@@ -551,6 +554,10 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 		setText('[data-action="back"]', labels.back);
 		setText('[data-action="next"]', labels.next);
 		setText('[data-action="start-over"]', labels.startOver);
+		setText('[data-action="continue-playing"]', labels.continuePlaying);
+
+		// Index of the first Spring step (1-based) — the loop re-entry point
+		const springStepIndex = steps.findIndex((s) => s.id === 'spring-1') + 1 || 1;
 
 		root.querySelector<HTMLButtonElement>('[data-action="resume"]')!.addEventListener('click', () => {
 			const saved = loadProgress();
@@ -601,6 +608,16 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			renderStep();
 		});
 
+		window.addEventListener('kismeta:guided-advance', () => {
+			if (mainEl.hidden) return;
+			if (stepIndex >= stepCount) {
+				showComplete();
+				return;
+			}
+			stepIndex += 1;
+			renderStep();
+		});
+
 		root.querySelector<HTMLButtonElement>('[data-action="start-over"]')!.addEventListener(
 			'click',
 			() => {
@@ -612,6 +629,14 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 				);
 				if (standardRadio) standardRadio.checked = true;
 				showMode();
+			}
+		);
+
+		root.querySelector<HTMLButtonElement>('[data-action="continue-playing"]')?.addEventListener(
+			'click',
+			() => {
+				stepIndex = springStepIndex;
+				showMain();
 			}
 		);
 

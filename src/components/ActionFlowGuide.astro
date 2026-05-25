@@ -161,7 +161,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 
 					{/* Panel: Leave Stasis — only shown for stasis stone */}
 					{leaveStasisNode && (
-						<div class="action-flow__wizard-panel" data-wizard-panel="autumn-leave-stasis" hidden>
+						<div class="action-flow__wizard-panel" data-wizard-panel="autumn-leave-stasis" data-learn-hash={leaveStasisNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
 								<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
 								<span class="action-flow__wizard-step-label">
@@ -228,6 +228,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="autumn-opposition-gate"
 							data-wizard-panel-type="gate"
+							data-learn-hash={oppositionNode.learnMoreHash ?? ''}
 							hidden
 						>
 							<div class="action-flow__wizard-step-head">
@@ -270,6 +271,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="autumn-temper-gate"
 							data-wizard-panel-type="gate"
+							data-learn-hash={temperNode.learnMoreHash ?? ''}
 							hidden
 						>
 							<div class="action-flow__wizard-step-head">
@@ -312,6 +314,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="autumn-fire-gate"
 							data-wizard-panel-type="gate"
+							data-learn-hash={fireNode.learnMoreHash ?? ''}
 							hidden
 						>
 							<div class="action-flow__wizard-step-head">
@@ -367,7 +370,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 				<>
 					{/* Panel 1: Card Unlock — required */}
 					{unlockNode && (
-						<div class="action-flow__wizard-panel" data-wizard-panel="winter-unlock" hidden>
+						<div class="action-flow__wizard-panel" data-wizard-panel="winter-unlock" data-learn-hash={unlockNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
 								<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
 								<span class="action-flow__wizard-step-label">
@@ -398,6 +401,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="winter-offering-gate"
 							data-wizard-panel-type="gate"
+							data-learn-hash={offeringNode.learnMoreHash ?? ''}
 							hidden
 						>
 							<div class="action-flow__wizard-step-head">
@@ -433,6 +437,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="winter-wager-gate"
 							data-wizard-panel-type="gate"
+							data-learn-hash={wagerNode.learnMoreHash ?? ''}
 							hidden
 						>
 							<div class="action-flow__wizard-step-head">
@@ -464,7 +469,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 
 					{/* Panel: Enforce Card Limits — required */}
 					{limitsNode && (
-						<div class="action-flow__wizard-panel" data-wizard-panel="winter-limits" hidden>
+						<div class="action-flow__wizard-panel" data-wizard-panel="winter-limits" data-learn-hash={limitsNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
 								<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
 								<span class="action-flow__wizard-step-label">
@@ -491,7 +496,7 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 
 					{/* Panel: Reset & Pass Key — required, last */}
 					{resetNode && (
-						<div class="action-flow__wizard-panel" data-wizard-panel="winter-reset" hidden>
+						<div class="action-flow__wizard-panel" data-wizard-panel="winter-reset" data-learn-hash={resetNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
 								<span class="action-flow__badge action-flow__badge--required">{labels.required}</span>
 								<span class="action-flow__wizard-step-label">
@@ -794,6 +799,15 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 			}
 
 			updateNav(panelId, index);
+
+			// Update the aside context for this panel's rules section
+			const learnHash = panelEl?.dataset.learnHash ?? '';
+			const learnPath = root.dataset.learnPath || 'play/round-overview';
+			window.dispatchEvent(
+				new CustomEvent('kismeta:context', {
+					detail: { path: learnPath, hash: learnHash },
+				})
+			);
 		}
 
 		function navigate(delta: number): void {
@@ -817,17 +831,15 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 		// Back
 		backBtn.addEventListener('click', () => navigate(-1));
 
-		// Continue (also acts as "Done" on the last winter panel)
+		// Continue / Done
 		continueBtn.addEventListener('click', () => {
 			const state = getState();
 			if (state.index < sequence.length - 1) {
 				navigate(1);
 			} else if (!isAutumn) {
-				// Winter: Done restarts the sequence
-				state.index = 0;
-				state.gateAnswers = {};
-				saveState();
-				showPanel(sequence[0], 0);
+				// Winter: clear session so returning later starts fresh, then advance the outer stepper
+				sessionStorage.removeItem(WINTER_WIZARD_KEY);
+				window.dispatchEvent(new CustomEvent('kismeta:guided-advance'));
 			}
 		});
 
