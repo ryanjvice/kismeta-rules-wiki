@@ -43,6 +43,9 @@
 	--sl-color-white: var(--kismeta-cream);
 	--sl-font: var(--kismeta-font-body);
 
+	/* Text color on gold-filled controls (dark default = dark page bg) */
+	--kismeta-on-accent: #0d0818;
+
 	/* Shared panel recipe (Guided Play + doc tables) */
 	--kismeta-panel-margin: 1.25rem 0;
 	--kismeta-panel-border: 1px solid var(--sl-color-hairline);
@@ -124,16 +127,32 @@ main:has(.kismeta-lore) h1#_top,
 	--sl-color-bg-nav: var(--kismeta-purple-deep);
 	--sl-color-bg-sidebar: #120c1f;
 	--sl-color-hairline: #3d2a5c;
+	--sl-color-white: var(--kismeta-cream);
 	--sl-color-gray-1: var(--kismeta-cream);
 	--sl-color-gray-2: #c4b8a8;
 	--sl-color-gray-3: #9a8f82;
+	--sl-color-accent-high: #e8c547;
+	--kismeta-on-accent: #0d0818;
 }
 
 :root[data-theme='light'] {
 	--sl-color-bg: #f8f4ec;
 	--sl-color-bg-nav: #ede6d8;
 	--sl-color-bg-sidebar: #f0ebe2;
+	--sl-color-hairline: #cfc4b4;
+
+	/* Foreground scale — warm purple on cream */
+	--sl-color-white: #1a1028;
 	--sl-color-gray-1: #1a1028;
+	--sl-color-gray-2: #3e2d5e;
+	--sl-color-gray-3: #6b5a85;
+
+	/* Accent text readable on light cream background */
+	--sl-color-accent-high: #7a5200;
+	--sl-color-accent-low: #5a3c00;
+
+	/* Text on gold-filled controls */
+	--kismeta-on-accent: #1a0f2e;
 }
 
 /* Tab navigation */
@@ -211,7 +230,7 @@ main:has(.kismeta-lore) h1#_top,
 }
 
 .tab-nav__link--active {
-	color: var(--sl-color-bg);
+	color: var(--kismeta-on-accent);
 	background: var(--sl-color-accent);
 }
 
@@ -645,14 +664,14 @@ main:has(.kismeta-lore) h1#_top,
 
 .guided-play__btn--primary {
 	background: var(--sl-color-accent);
-	color: var(--sl-color-bg);
+	color: var(--kismeta-on-accent);
 	border-color: var(--sl-color-accent);
 }
 
 .guided-play__btn--primary:hover {
 	background: var(--sl-color-accent-high);
 	border-color: var(--sl-color-accent-high);
-	color: var(--sl-color-bg);
+	color: var(--kismeta-on-accent);
 }
 
 .guided-play__btn--ghost {
@@ -749,7 +768,7 @@ main:has(.kismeta-lore) h1#_top,
 
 .crucible-deck__tab-input:checked + .crucible-deck__tab-label {
 	background: var(--sl-color-accent);
-	color: var(--sl-color-bg);
+	color: var(--kismeta-on-accent);
 	border-color: var(--sl-color-accent);
 }
 
@@ -897,7 +916,7 @@ main:has(.kismeta-lore) h1#_top,
 
 .crucible-deck__segment--active {
 	background: var(--sl-color-accent);
-	color: var(--sl-color-bg);
+	color: var(--kismeta-on-accent);
 	border-color: var(--sl-color-accent);
 }
 
@@ -1141,7 +1160,7 @@ main:has(.kismeta-lore) h1#_top,
 .action-flow__stone-segment--active,
 .action-flow__stone-segment[aria-pressed='true'] {
 	background: var(--sl-color-accent);
-	color: var(--sl-color-bg);
+	color: var(--kismeta-on-accent);
 	border-color: var(--sl-color-accent);
 }
 
@@ -1332,7 +1351,7 @@ main:has(.kismeta-lore) h1#_top,
 
 .action-flow__wizard-btn--continue,
 .action-flow__wizard-btn--gate-yes {
-	color: var(--sl-color-bg);
+	color: var(--kismeta-on-accent);
 	background: var(--sl-color-accent);
 	border: 1px solid var(--sl-color-accent);
 }
