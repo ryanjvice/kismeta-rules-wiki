@@ -157,7 +157,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   {
     id: "round-intro",
     title: "Your First Cosmic Age",
-    body: "<p>Each round is one <strong>Cosmic Age</strong> with four seasons in order: Spring → Summer → Autumn → Winter. You will walk through your first age step by step.</p>",
+    body: "<p>Each round of Kismeta is one <strong>Cosmic Age</strong> of the Great Year.</p><p>Let's walk through your first Cosmic Age step by step.</p>",
     embed: "round-at-a-glance",
     learnMorePath: "play/round-at-a-glance",
   },
@@ -192,7 +192,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   },
   {
     id: "spring-3",
-    title: "Spring — Harvest",
+    title: "Spring — Harvest Kismeta Cards",
     phase: "spring",
     phaseStep: 3,
     phaseTotal: 5,
@@ -209,7 +209,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   },
   {
     id: "spring-4",
-    title: "Spring — Commune",
+    title: "Spring — Commune with the Cards",
     phase: "spring",
     phaseStep: 4,
     phaseTotal: 5,

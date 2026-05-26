@@ -3,7 +3,7 @@
  *
  * Usage:
  *   node scripts/translate-locale.mjs --locale es
- *   node scripts/translate-locale.mjs --locale es --only learn/lore,play/setup
+ *   node scripts/translate-locale.mjs --locale es --only lore/index,play/setup
  *   node scripts/translate-locale.mjs --locale es --dry-run
  *
  * Add entries to LOCALE_CONFIG and scripts/term-glossary-<locale>.json first.
@@ -86,7 +86,7 @@ function parseFrontmatter(raw) {
 
 function rewriteLinks(body, prefix) {
 	return body
-		.replace(/\]\(\/(learn|play|reference|glossary)/g, `](${prefix}/$1`)
+		.replace(/\]\(\/(learn|lore|play|reference|glossary)/g, `](${prefix}/$1`)
 		.replace(/\]\(\/(reference\/compendium)/g, `](${prefix}/$1`);
 }
 

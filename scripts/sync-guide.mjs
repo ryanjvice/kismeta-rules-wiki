@@ -39,12 +39,12 @@ const SKIP = new Set([
 
 const SECTION_META = {
   'LORE: ALCHEMISTS OF THE GREAT YEAR': {
-    slug: 'learn/lore',
+    slug: 'lore/index',
     title: 'Lore: Alchemists of the Great Year',
     description: 'The mythic backdrop of Kismeta and the Great Work.',
   },
   'GAME OVERVIEW': {
-    slug: 'learn/game-overview',
+    slug: 'play/game-overview',
     title: 'Game Overview',
     description: 'Players, play time, Great Year, Great Work, and winning.',
   },
@@ -84,7 +84,7 @@ const SECTION_META = {
     description: 'Practical advice for new and returning alchemists.',
   },
   'LORE: EPILOGUE - The Veil Stirs…': {
-    slug: 'learn/lore-epilogue',
+    slug: 'lore/epilogue',
     title: 'Lore: Epilogue',
     description: 'The Veil Stirs — teaser for Kismeta: The Veiled Ascent.',
   },
@@ -324,7 +324,7 @@ function rmSyncOutput() {
     if (fs.existsSync(fp)) preserved.set(rel, fs.readFileSync(fp, 'utf8'));
   }
 
-  for (const sub of ['learn', 'play', 'reference']) {
+  for (const sub of ['learn', 'lore', 'play', 'reference']) {
     const p = path.join(OUT, sub);
     if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
   }

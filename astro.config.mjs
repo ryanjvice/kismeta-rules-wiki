@@ -89,27 +89,27 @@ export default defineConfig({
           label: "Play",
           items: [
             link("Play", "play/guided"),
-            link("Setup", "play/setup"),
+            link("Game Overview", "play/game-overview"),
             link("Round at a Glance", "play/round-at-a-glance"),
             link("Round Overview", "play/round-overview"),
             link("Winning the Game", "play/winning"),
-          ],
-        },
-        {
-          label: "Learn",
-          items: [
-            link("Lore", "learn/lore"),
-            link("Game Overview", "learn/game-overview"),
-            link("Components", "learn/components"),
-            link("Lore: Epilogue", "learn/lore-epilogue"),
+            link("Quick Reference", "reference/quick-reference"),
+            link("Quick Tips", "reference/quick-tips"),
             link("Glossary", "glossary"),
           ],
         },
         {
-          label: "Compendium",
+          label: "Lore",
           items: [
-            link("Quick Reference", "reference/quick-reference"),
-            link("Quick Tips", "reference/quick-tips"),
+            link("Lore", "lore"),
+            link("Lore: Epilogue", "lore/epilogue"),
+          ],
+        },
+        {
+          label: "Rules",
+          items: [
+            link("Components", "learn/components"),
+            link("Setup", "play/setup"),
             link("1.0 Cosmic Ages", "reference/compendium/1-0-cosmic-ages"),
             link(
               "1.1 Aspects & Alignment",

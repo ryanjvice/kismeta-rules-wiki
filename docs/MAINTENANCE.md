@@ -57,9 +57,9 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ### Navigation & chrome
 
-- **Top tabs** (Play / Learn / Compendium)  
-  `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.play`, `tab.learn`, `tab.compendium` · styles: `src/styles/custom.css` (`.tab-nav`)  
-  **Play** is active for `/play/*` (and the home page `/`). **Learn** is active for `/learn/*` and `/glossary/`. **Compendium** is active for `/reference/*`.
+- **Top tabs** (Play / Rules / Lore)  
+  `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.play`, `tab.rules`, `tab.lore` · styles: `src/styles/custom.css` (`.tab-nav`)  
+  **Play** is active for `/play/*` except `/play/setup/` (and the home page `/`), `/glossary/`, `/reference/quick-reference/`, `/reference/quick-tips/`. **Rules** is active for `/learn/*`, `/play/setup/`, `/reference/compendium/*`. **Lore** is active for `/lore/*`.
 
 - **Game mode toggles** (Quickplay / Magnus)  
   `src/components/GameModeToggle.astro` · labels: i18n `gameMode.*`  
@@ -70,7 +70,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 - **Left sidebar** (page list, order, labels)  
   `astro.config.mjs` → `starlight.sidebar`  
-  New compendium page: add a `link()` here **and** a slug in `scripts/sync-guide.mjs`.
+  New reference/compendium page: add a `link()` here (under the Learn group) **and** a slug in `scripts/sync-guide.mjs`.
 
 ### Rules content
 

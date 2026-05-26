@@ -5,9 +5,9 @@ const locale = Astro.currentLocale ?? 'root';
 const t = Astro.locals.t;
 
 const tabs = [
-	{ key: 'tab.play',       path: 'play/guided' },
-	{ key: 'tab.learn',      path: 'learn/lore' },
-	{ key: 'tab.compendium', path: 'reference/quick-reference' },
+	{ key: 'tab.play',  path: 'play/guided' },
+	{ key: 'tab.rules', path: 'learn/components' },
+	{ key: 'tab.lore',  path: 'lore' },
 ] as const;
 
 const pathname = Astro.url.pathname;
@@ -20,11 +20,14 @@ const pathname = Astro.url.pathname;
 			const active =
 				pathname === '/' || pathname === `/${locale}/`
 					? tab.key === 'tab.play'
-					: tab.key === 'tab.play'
-						? pathname.includes('/play/')
-						: tab.key === 'tab.learn'
-							? pathname.includes('/learn/') || pathname.includes('/glossary/')
-							: pathname.includes('/reference/');
+					: tab.key === 'tab.lore'
+						? pathname.includes('/lore/')
+						: tab.key === 'tab.play'
+							? (pathname.includes('/play/') && !pathname.includes('/play/setup/')) ||
+							  pathname.includes('/glossary/') ||
+							  (pathname.includes('/reference/') && !pathname.includes('/reference/compendium/'))
+							: pathname.includes('/learn/') || pathname.includes('/play/setup/') ||
+							  pathname.includes('/reference/compendium/');
 			return (
 				<a href={href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
 					{t(tab.key)}

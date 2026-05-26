@@ -21,8 +21,8 @@ export const collections = {
 		schema: i18nSchema({
 			extend: z.object({
 				'tab.play': z.string(),
-				'tab.learn': z.string(),
-				'tab.compendium': z.string(),
+				'tab.rules': z.string(),
+				'tab.lore': z.string(),
 				'gameMode.modifiers': z.string(),
 				'gameMode.quickplay': z.string(),
 				'gameMode.magnus': z.string(),
