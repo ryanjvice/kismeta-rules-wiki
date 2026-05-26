@@ -1707,55 +1707,169 @@ main:has(.kismeta-lore) h1#_top,
 	font-weight: 600;
 }
 
-.context-rules-panel__mobile {
-	border-bottom: 1px solid var(--sl-color-hairline);
-	background: var(--sl-color-bg-nav);
+/* Mobile: floating trigger button (FAB) */
+.context-rules-panel__trigger-wrap {
+	/* wrapper exists only to carry the lg:sl-hidden visibility class */
 }
 
-.context-rules-panel__mobile-details {
-	margin: 0;
+.context-rules-panel__trigger {
+	position: fixed;
+	bottom: 1.5rem;
+	right: 1.25rem;
+	z-index: 100;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0.6rem 1rem 0.6rem 0.8rem;
+	background: var(--sl-color-accent);
+	color: var(--kismeta-on-accent);
+	border: none;
+	border-radius: 2rem;
+	font-family: var(--kismeta-font-heading);
+	font-size: 0.88rem;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
+	transition: background 0.15s, box-shadow 0.15s;
 }
 
-.context-rules-panel__mobile-summary {
+.context-rules-panel__trigger:hover,
+.context-rules-panel__trigger:focus-visible {
+	background: var(--sl-color-accent-high);
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+	outline: 2px solid var(--sl-color-accent-high);
+	outline-offset: 2px;
+}
+
+.context-rules-panel__trigger-icon {
+	flex-shrink: 0;
+}
+
+.context-rules-panel__trigger-label {
+	white-space: nowrap;
+}
+
+.context-rules-panel__trigger-active {
+	max-width: 9rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 0.1rem 0.45rem;
+	background: rgba(0, 0, 0, 0.22);
+	border-radius: 1rem;
+	font-size: 0.78rem;
+}
+
+.context-rules-panel__trigger-active[hidden] {
+	display: none;
+}
+
+/* Mobile: bottom-sheet modal */
+.context-rules-panel__modal {
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.context-rules-panel__modal[hidden] {
+	display: none;
+}
+
+@media (min-width: 72rem) {
+	/* Safety: never show on desktop even if JS forgets to hide it */
+	.context-rules-panel__trigger {
+		display: none !important;
+	}
+
+	.context-rules-panel__modal {
+		display: none !important;
+	}
+}
+
+.context-rules-panel__modal-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+}
+
+.context-rules-panel__modal-sheet {
+	position: relative;
+	background: var(--sl-color-bg);
+	border-radius: 1rem 1rem 0 0;
+	border-top: 1px solid var(--sl-color-hairline);
+	max-height: 72vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.context-rules-panel__modal-handle {
+	width: 2.5rem;
+	height: 0.25rem;
+	background: var(--sl-color-hairline);
+	border-radius: 999px;
+	margin: 0.65rem auto 0;
+	flex-shrink: 0;
+}
+
+.context-rules-panel__modal-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 0.75rem;
-	padding: 0.65rem 1rem;
-	cursor: pointer;
-	list-style: none;
-	font-size: 0.9rem;
+	padding: 0.85rem 1rem 0.75rem;
+	border-bottom: 1px solid var(--sl-color-hairline);
+	flex-shrink: 0;
+}
+
+.context-rules-panel__modal-title {
+	margin: 0;
+	font-family: var(--kismeta-font-heading);
+	font-size: var(--sl-text-h5);
 	font-weight: 600;
 }
 
-.context-rules-panel__mobile-summary::-webkit-details-marker {
-	display: none;
-}
-
-.context-rules-panel__mobile-toggle {
+.context-rules-panel__modal-close {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.35rem;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	flex-shrink: 0;
+	padding: 0;
+	background: transparent;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 50%;
 	color: var(--sl-color-gray-2);
+	cursor: pointer;
+	transition: border-color 0.15s, color 0.15s;
 }
 
-.context-rules-panel__mobile-current {
-	flex: 1;
-	min-width: 0;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	text-align: right;
-	font-weight: 500;
+.context-rules-panel__modal-close:hover,
+.context-rules-panel__modal-close:focus-visible {
+	border-color: var(--sl-color-accent);
 	color: var(--sl-color-accent);
+	outline: 2px solid var(--sl-color-accent);
+	outline-offset: 2px;
 }
 
-.context-rules-panel__mobile-dropdown {
-	padding: 0 1rem 0.85rem;
+.context-rules-panel__modal-content {
+	padding: 0.9rem 1rem 1.5rem;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	flex: 1;
+	min-height: 0;
 }
 
-.context-rules-panel__mobile-dropdown .context-rules-panel__body {
-	max-height: 50vh;
+/* Inside the modal, the body doesn't need its own max-height cap
+   because the sheet already constrains to 72vh. */
+.context-rules-panel__modal-content .context-rules-panel__body {
+	max-height: none;
+	overflow: visible;
+	margin-top: 0;
 }
 
 /* Home landing — game intro & site footer */

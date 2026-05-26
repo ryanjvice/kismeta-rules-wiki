@@ -2,6 +2,7 @@ export type ContextPanelLabels = {
 	title: string;
 	empty: string;
 	openFull: string;
+	close: string;
 };
 
 export type ContextSectionRecord = {
@@ -50,17 +51,43 @@ function initContextPanel(root: HTMLElement) {
 	const locale = root.dataset.locale || 'en';
 	const labels = JSON.parse(root.dataset.labels || '{}') as ContextPanelLabels;
 
+	// Desktop refs
 	const desktopTitle = root.querySelector<HTMLElement>('[data-context-title]')!;
 	const desktopBody = root.querySelector<HTMLElement>('[data-context-body]')!;
 	const desktopEmpty = root.querySelector<HTMLElement>('[data-context-empty]')!;
 	const desktopLink = root.querySelector<HTMLAnchorElement>('[data-context-link]')!;
 
-	const mobileSummary = root.querySelector<HTMLElement>('[data-context-mobile-label]')!;
+	// Mobile trigger refs
+	const trigger = root.querySelector<HTMLButtonElement>('[data-context-trigger]');
+	const triggerActive = root.querySelector<HTMLElement>('[data-context-trigger-active]');
+
+	// Mobile modal refs
+	const modal = root.querySelector<HTMLElement>('[data-context-modal]');
+	const modalClose = root.querySelector<HTMLButtonElement>('[data-context-modal-close]');
+	const modalBackdrop = root.querySelector<HTMLElement>('[data-context-modal-backdrop]');
+	const modalTitle = root.querySelector<HTMLElement>('[data-context-mobile-label]');
 	const mobileBody = root.querySelector<HTMLElement>('[data-context-mobile-body]')!;
 	const mobileEmpty = root.querySelector<HTMLElement>('[data-context-mobile-empty]')!;
 	const mobileLink = root.querySelector<HTMLAnchorElement>('[data-context-mobile-link]')!;
 
 	let current: ContextDetail = { path: '', hash: '' };
+
+	const openModal = () => {
+		if (!modal || !trigger) return;
+		modal.hidden = false;
+		trigger.setAttribute('aria-expanded', 'true');
+		document.body.style.overflow = 'hidden';
+		// Move focus to the close button so keyboard users can immediately dismiss
+		modalClose?.focus();
+	};
+
+	const closeModal = () => {
+		if (!modal || !trigger) return;
+		modal.hidden = true;
+		trigger.setAttribute('aria-expanded', 'false');
+		document.body.style.overflow = '';
+		trigger.focus();
+	};
 
 	const render = () => {
 		const path = current.path || '';
@@ -69,7 +96,17 @@ function initContextPanel(root: HTMLElement) {
 
 		const titleText = section?.title || labels.title;
 		desktopTitle.textContent = titleText;
-		mobileSummary.textContent = section?.title || labels.title;
+		if (modalTitle) modalTitle.textContent = titleText;
+
+		// Update the trigger's active section indicator
+		if (triggerActive) {
+			if (section?.title) {
+				triggerActive.textContent = section.title;
+				triggerActive.hidden = false;
+			} else {
+				triggerActive.hidden = true;
+			}
+		}
 
 		if (section?.html) {
 			desktopBody.innerHTML = section.html;
@@ -109,6 +146,45 @@ function initContextPanel(root: HTMLElement) {
 		};
 		render();
 	};
+
+	// Wire modal interactions
+	if (trigger) trigger.addEventListener('click', openModal);
+	if (modalClose) modalClose.addEventListener('click', closeModal);
+	if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+	// Escape key closes the modal; also trap Tab focus inside the sheet
+	if (modal) {
+		modal.addEventListener('keydown', (e: KeyboardEvent) => {
+			if (e.key === 'Escape') {
+				closeModal();
+				return;
+			}
+			if (e.key === 'Tab' && modal && !modal.hidden) {
+				const focusable = Array.from(
+					modal.querySelectorAll<HTMLElement>(
+						'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+					)
+				).filter((el) => !el.hidden && el.offsetParent !== null);
+				if (focusable.length === 0) return;
+				const first = focusable[0];
+				const last = focusable[focusable.length - 1];
+				if (e.shiftKey && document.activeElement === first) {
+					e.preventDefault();
+					last.focus();
+				} else if (!e.shiftKey && document.activeElement === last) {
+					e.preventDefault();
+					first.focus();
+				}
+			}
+		});
+	}
+
+	// Restore body scroll if the page navigates away while modal is open
+	document.addEventListener('astro:before-swap', () => {
+		if (modal && !modal.hidden) {
+			document.body.style.overflow = '';
+		}
+	}, { once: false });
 
 	window.addEventListener('kismeta:context', onContext);
 	window.addEventListener('kismeta-game-modes-changed', () => {

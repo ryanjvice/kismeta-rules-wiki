@@ -49,6 +49,7 @@
   "guided.context.title": "Rules reference",
   "guided.context.empty": "Continue the walkthrough or tap an action to see matching rules here.",
   "guided.context.openFull": "Open full rules",
+  "guided.context.close": "Close",
   "guided.crucible.buildType": "Build type",
   "glossary.intro": "A reference to every capitalized game term used throughout the guide. Return here any time you need a quick definition mid-game.",
   "flow.required": "Required",
