@@ -97,7 +97,7 @@ Once the Harvest is complete, all cards are locked in their current zones until 
 
 ## PHASE 2: ☀️ SUMMER {#phase-2-summer}
 
-### Trade, Build & Prepare
+### Trade, Build & Prepare {#trade-build-prepare}
 
 The Sun shines brightly as you and your fellow Alchemists focus on your plans. Summer is the perfect time for socializing; bartering over trades, initiating duels, and risking your luck in gambits. While fortune favors the bold, Fate may have other plans in store for you. In clockwise order, beginning with the Agekeeper, each player takes their turn and can perform any of the listed actions multiple times and in any sequence.
 
