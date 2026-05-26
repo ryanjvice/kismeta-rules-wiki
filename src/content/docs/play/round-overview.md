@@ -243,7 +243,7 @@ As the Cosmic Age shifts into Autumn, you and your fellow Alchemists gather arou
 The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.
 
 | 🍂 AUTUMN Conduct the Great Work | 1. Survey the Crucible: Take note of everyone's current positions in the Crucible. 2. Opposition ⚔️: Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. **CRUCIBLE ACTIONS** 3. Temper: (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space. 4. Fire the Stone: (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge. 5. Leave Stasis ❄️: Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it. |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### 1️⃣ Survey the Crucible: Your Stone's Current Position
 
@@ -385,9 +385,9 @@ Players whose Stone is currently in the Stasis zone may return it to the Forge t
 
 If another player's Stone now holds your previous Forge position, choose one:
 
-| OPTION                    | HOW IT WORKS                                                                                                                                                                    |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wait in Stasis            | Remain in Stasis another round. Attempt to return next Autumn. No action required.                                                                                              |
+| OPTION                    | HOW IT WORKS                                                                                                                                                                  |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wait in Stasis            | Remain in Stasis another round. Attempt to return next Autumn. No action required.                                                                                            |
 | Declare Stasis Opposition | Challenge the occupying Stone during Step 2: Opposition. Follows all standard Opposition rules, but with a different outcome (position swap, not send-to-Stasis). See Step 2. |
 
 #### Stasis Opposition outcomes:
