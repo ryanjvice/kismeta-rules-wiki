@@ -52,6 +52,7 @@
 	--kismeta-panel-radius: 0.5rem;
 	--kismeta-panel-bg: color-mix(in srgb, var(--sl-color-accent) 5%, var(--sl-color-bg));
 	--kismeta-panel-header-bg: color-mix(in srgb, var(--sl-color-accent) 12%, var(--sl-color-bg));
+	--kismeta-right-sidebar-gap: 1.5rem;
 }
 
 /* Site title & major headings — Germania One */
@@ -201,7 +202,16 @@ main:has(.kismeta-lore) h1#_top,
 
 @media (min-width: 72rem) {
 	.page:has(.kismeta-header-wrap) .right-sidebar {
-		padding-top: var(--kismeta-nav-offset);
+		inset-block-start: var(--kismeta-nav-offset) !important;
+		top: var(--kismeta-nav-offset) !important;
+		height: calc(100vh - var(--kismeta-nav-offset)) !important;
+		padding-top: 0 !important;
+		box-sizing: border-box;
+		scroll-padding-top: var(--kismeta-right-sidebar-gap);
+	}
+
+	.page:has(.kismeta-header-wrap) .right-sidebar > .right-sidebar-panel {
+		padding-block-start: var(--kismeta-right-sidebar-gap) !important;
 	}
 }
 
@@ -1710,7 +1720,7 @@ main:has(.kismeta-lore) h1#_top,
 }
 
 .context-rules-panel__body {
-	max-height: min(70vh, 42rem);
+	max-height: min(calc(100vh - var(--kismeta-nav-offset) - 7rem), 42rem);
 	overflow: auto;
 	margin-top: 0.35rem;
 	font-size: 0.92rem;
