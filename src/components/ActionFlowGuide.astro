@@ -92,7 +92,7 @@ const unlockNode = winterChildren.find((n) => n.id === 'unlock') ?? null;
 const offeringNode = winterChildren.find((n) => n.id === 'offering') ?? null;
 const wagerNode = winterChildren.find((n) => n.id === 'wager') ?? null;
 const limitsNode = winterChildren.find((n) => n.id === 'limits') ?? null;
-const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
+const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 ---
 
 <div
@@ -144,8 +144,8 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 			{/* ── Autumn wizard panels ─────────────────────────────────── */}
 			{isAutumn && (
 				<>
-					{/* Panel 1: Stone state picker */}
-					<div class="action-flow__wizard-panel" data-wizard-panel="autumn-stone-pick" hidden>
+				{/* Panel 1: Stone state picker */}
+				<div class="action-flow__wizard-panel" data-wizard-panel="autumn-stone-pick" data-learn-hash="conduct-the-great-work" hidden>
 						<p class="action-flow__wizard-stone-title">{labels.stonePickerTitle}</p>
 						<div class="action-flow__wizard-stone-options">
 							{wizardStoneOptions.map((opt) => (
@@ -352,12 +352,13 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Done */}
-					<div
-						class="action-flow__wizard-panel action-flow__wizard-panel--done"
-						data-wizard-panel="autumn-done"
-						hidden
-					>
+				{/* Panel: Done */}
+				<div
+					class="action-flow__wizard-panel action-flow__wizard-panel--done"
+					data-wizard-panel="autumn-done"
+					data-learn-hash="conduct-the-great-work"
+					hidden
+				>
 						<p class="action-flow__wizard-done-message">{labels.autumnDoneMessage}</p>
 						<button type="button" class="action-flow__wizard-restart" data-wizard-restart>
 							{labels.autumnRestartLabel}
@@ -935,11 +936,21 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 			}
 		}
 
-		// Restore from session storage — clamp index in case sequence length changed
-		const initialState = getState();
-		initialState.index = Math.min(initialState.index, sequence.length - 1);
-		showPanel(sequence[initialState.index], initialState.index);
-	}
+	// Restore from session storage — clamp index in case sequence length changed
+	const initialState = getState();
+	initialState.index = Math.min(initialState.index, sequence.length - 1);
+	showPanel(sequence[initialState.index], initialState.index);
+
+	// Re-dispatch the active panel's context whenever the guided stepper
+	// re-renders its step (which briefly overwrites the panel-specific context
+	// with the generic phase hash). Only reassert when this wizard is visible.
+	window.addEventListener('kismeta:wizard-refocus', () => {
+		const embedPanel = root.closest<HTMLElement>('[data-embed-panel]');
+		if (!embedPanel || embedPanel.hidden) return;
+		const state = getState();
+		showPanel(sequence[state.index], state.index);
+	});
+}
 
 	// ── Action-detail dispatch (branch pick buttons) ───────────────────────
 

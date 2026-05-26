@@ -475,6 +475,9 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 			}
 
 			dispatchContext(step.learnMorePath, step.learnMoreHash);
+		// If an embedded wizard is now visible, let it override with its active
+		// panel's specific context (e.g. Autumn/Winter wizard panels).
+		window.dispatchEvent(new CustomEvent('kismeta:wizard-refocus'));
 
 			let progressText = labels.progress
 				.replace('{current}', String(stepIndex))

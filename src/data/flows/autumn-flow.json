@@ -2,7 +2,7 @@
 	"id": "autumn-flow",
 	"mode": "fixedSequence",
 	"intro": "Take a moment to survey the Forge and note where every Stone sits before you begin. Then step through your Autumn turn — the guide shows only the steps that apply to your Stone's current position.",
-	"learnMoreHash": "phase-3-autumn",
+	"learnMoreHash": "conduct-the-great-work",
 	"root": {
 		"id": "autumn-sequence",
 		"label": "Autumn procession",
@@ -25,7 +25,7 @@
 							"all"
 						],
 						"condition": "Your Stone is in Stasis",
-						"learnMoreHash": "pass-1-1-leave-stasis",
+						"learnMoreHash": "4-leave-stasis",
 						"children": [
 							{
 								"id": "forge-open",
@@ -49,7 +49,7 @@
 										"label": "Challenge — Stasis Opposition in step 2",
 										"kind": "optional",
 										"body": "Declare Stasis Opposition on your turn in Pass 1, step 2. If you win, the two Stones swap — your Stone enters the Forge and the Defender goes to Stasis. If you lose, you remain in Stasis.",
-										"learnMoreHash": "pass-1-2-opposition"
+										"learnMoreHash": "2-opposition"
 									}
 								]
 							}
@@ -69,7 +69,7 @@
 						],
 						"condition": "You may challenge a rival Forging Stone, or defend if you are Forging",
 						"body": "Alignment contest — declare Opposition against an eligible Forging Stone. Pay the Defender's Ward Reagent entry fee; play cards; roll dice; highest Alignment Points wins. Defender's Stone moves to Stasis on a Challenger win.",
-						"learnMoreHash": "pass-1-2-opposition"
+						"learnMoreHash": "2-opposition"
 					}
 				]
 			},
@@ -91,7 +91,7 @@
 						],
 						"condition": "Forging since last round; not if you returned from Stasis this Autumn",
 						"body": "Advance your Stone from the Forge to the next Mantle Ring position. Discard the Crucible Card — the Stage is complete. Remaining Ward Reagents are burned and returned to the supply.",
-						"learnMoreHash": "pass-2-3-temper-the-stone"
+						"learnMoreHash": "3-crucible-actions"
 					},
 					{
 						"id": "fire",
@@ -105,7 +105,7 @@
 						],
 						"condition": "Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis",
 						"body": "Satisfy an Active Crucible Card's Alchemical Formula (Alignment cards + Reagents). Discard the cards and Reagents, turn the Crucible Card sideways, move your Stone into the Forge. Optionally place Ward Reagents on the 🛡️ symbol to raise the entry fee for Oppositions.",
-						"learnMoreHash": "pass-2-4-fire-the-stone"
+						"learnMoreHash": "3-crucible-actions"
 					}
 				]
 			}

@@ -236,7 +236,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 ## PHASE 3: 🍂 AUTUMN {#phase-3-autumn}
 
-### Conduct the Great Work
+### Conduct the Great Work {#conduct-the-great-work}
 
 As the Cosmic Age shifts into Autumn, you and your fellow Alchemists gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta.
 
@@ -282,7 +282,7 @@ The actions you take during this phase depend on the location of you and your fe
 | Arrested  | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.                         |
 | Discarded | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                                  |
 
-### 2️⃣ Opposition ⚔️
+### 2️⃣ Opposition ⚔️ {#2-opposition}
 
 An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
 
@@ -323,7 +323,7 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 </div>
 
-### 3️⃣ Crucible Actions
+### 3️⃣ Crucible Actions {#3-crucible-actions}
 
 Your Stone's available actions depend on its current position. On your turn, take whichever of the following applies.
 
@@ -371,7 +371,7 @@ Ward Reagents placed beside your Stone on the 🛡️ symbol follow different ru
 - **B. Win in Opposition:** Wards remain in place for the next round.
 - **C. Advance to Mantle Successfully:** Remaining Wards are burned and returned to the supply — not recovered.
 
-### 4️⃣ Leave Stasis ❄️
+### 4️⃣ Leave Stasis ❄️ {#4-leave-stasis}
 
 Players whose Stone is currently in the Stasis zone may return it to the Forge this Autumn.
 
