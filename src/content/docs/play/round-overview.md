@@ -1,5 +1,5 @@
 ---
-title: "Round Overview"
+title: "Full Game Rules"
 description: "Spring, Summer, Autumn, and Winter in full detail."
 ---
 
@@ -11,8 +11,13 @@ Each Cosmic Age (round) moves through four seasons in order: Spring, Summer, Aut
 
 Spring ushers in a new Cosmic Age. The Agekeeper rolls the Cosmic Age Die. All players determine their Zodiac Sign, and the Harvest fills everyone's hand for the upcoming round. Manage your inventory wisely, and what you sow in the Spring may well bear fruit in seasons yet to come.
 
-| 🌸 SPRING Set the Age & Gather Resources | 1️⃣ Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2️⃣ Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3️⃣ Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). 4️⃣ Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. 5️⃣ Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
-| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Step** | **Action** |
+| --- | --- |
+| **1️⃣ Set the Cosmic Age** | Agekeeper rolls the Cosmic Age Die. Read the Sign & Aspects aloud. |
+| **2️⃣ Determine Your Sign** | All players roll their Zodiac Die. Move their Meeple to their Sign. |
+| **3️⃣ Harvest** | Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). |
+| **4️⃣ Commune** | Build your Spread, Hand, and Arcanum zones. Consider your goals. |
+| **5️⃣ Card Lock** | Cards are locked between your Hand and Spread until Phase 4: Winter. |
 
 ### 1️⃣ Set the Cosmic Age {#1-set-the-cosmic-age}
 
@@ -101,8 +106,16 @@ Once the Harvest is complete, all cards are locked in their current zones until 
 
 The Sun shines brightly as you and your fellow Alchemists focus on your plans. Summer is the perfect time for socializing; bartering over trades, initiating duels, and risking your luck in gambits. While fortune favors the bold, Fate may have other plans in store for you. In clockwise order, beginning with the Agekeeper, each player takes their turn and can perform any of the listed actions multiple times and in any sequence.
 
-| ☀️ SUMMER Trade, Build & Prepare | **CRAFT RESOURCES (TAKE ANY ACTION)** 1. Activate Crucible Card 2. Build Astral House 3. Craft Reagent **CONSORT WITH RIVALS (TAKE ANY ACTION)** 4. Trade 5. Duel 6. Gambit |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Step** | **Action** |
+| --- | --- |
+| | _**CRAFT RESOURCES — TAKE ANY ACTION**_ |
+| **1. Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate. |
+| **2. Build Astral House** | Pay Planet-matching cards to permanently claim a Zodiac Sign. |
+| **3. Craft Reagent** | Collect Suited cards exceeding the current RP Threshold to Craft Reagents. |
+| | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_ |
+| **4. Trade** | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely. |
+| **5. Duel** | Wager cards and roll dice against a rival to steal a card from their Spread. |
+| **6. Gambit** | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it. |
 
 ### 1️⃣ Activate Crucible Cards {#1-activate-crucible-cards}
 
@@ -242,8 +255,14 @@ As the Cosmic Age shifts into Autumn, you and your fellow Alchemists gather arou
 
 The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.
 
-| 🍂 AUTUMN Conduct the Great Work | 1. Survey the Crucible: Take note of everyone's current positions in the Crucible. 2. Opposition ⚔️: Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. **CRUCIBLE ACTIONS** 3. Temper: (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space. 4. Fire the Stone: (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge. 5. Leave Stasis ❄️: Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it. |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Step** | **Action** |
+| --- | --- |
+| **1. Survey the Crucible** | Take note of everyone's current positions in the Crucible. |
+| **2. Opposition ⚔️** | Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. |
+| | _**CRUCIBLE ACTIONS**_ |
+| **3. Temper** | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space. |
+| **4. Fire the Stone** | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge. |
+| **5. Leave Stasis ❄️** | Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it. |
 
 ### 1️⃣ Survey the Crucible: Your Stone's Current Position
 
@@ -406,8 +425,13 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 Winter closes the Cosmic Age. Complete all steps below in order before passing the Agekeeper's Key.
 
-| ⛰️ WINTER Final Actions of the Cosmic Age & Reset Board | 1. Card Unlock: Move cards freely between your Hand and Spread. 2. Offering to the Age: Offer cards matching the Cosmic Age to earn a Bonus next round. 3. Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. 4. Enforce Card Limits: Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only. 5. Transit the Age: The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Step** | **Action** |
+| --- | --- |
+| **1. Card Unlock** | Move cards freely between your Hand and Spread. |
+| **2. Offering to the Age** | Offer cards matching the Cosmic Age to earn a Bonus next round. |
+| **3. Fateful Wager** | Bet on the next Cosmic Age with cards; double or lose your Wager. |
+| **4. Enforce Card Limits** | Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only. |
+| **5. Transit the Age** | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
 
 ### 1️⃣ Card Unlock: {#1-card-unlock}
 

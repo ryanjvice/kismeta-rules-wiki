@@ -92,7 +92,6 @@ export default defineConfig({
             link("Play", "play/guided"),
             link("Game Overview", "play/game-overview"),
             link("Round at a Glance", "play/round-at-a-glance"),
-            link("Round Overview", "play/round-overview"),
             link("Winning the Game", "play/winning"),
             link("Quick Reference", "reference/quick-reference"),
             link("Quick Tips", "reference/quick-tips"),
@@ -111,6 +110,7 @@ export default defineConfig({
           items: [
             link("Components", "learn/components"),
             link("Setup", "play/setup"),
+            link("Full Game Rules", "play/round-overview"),
             link("1.0 Cosmic Ages", "reference/compendium/1-0-cosmic-ages"),
             link(
               "1.1 Aspects & Alignment",

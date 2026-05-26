@@ -65,7 +65,7 @@ const SECTION_META = {
   },
   'ROUND OVERVIEW': {
     slug: 'play/round-overview',
-    title: 'Round Overview',
+    title: 'Full Game Rules',
     description: 'Spring, Summer, Autumn, and Winter in full detail.',
   },
   'WINNING THE GAME': {

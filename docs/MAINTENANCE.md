@@ -59,7 +59,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 - **Top tabs** (Play / Rules / Lore)  
   `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.play`, `tab.rules`, `tab.lore` · styles: `src/styles/custom.css` (`.tab-nav`)  
-  **Play** is active for `/play/*` except `/play/setup/` (and the home page `/`), `/glossary/`, `/reference/quick-reference/`, `/reference/quick-tips/`. **Rules** is active for `/learn/*`, `/play/setup/`, `/reference/compendium/*`. **Lore** is active for `/lore/*`.
+  **Play** is active for `/play/*` except `/play/setup/` and `/play/round-overview/` (and the home page `/`), `/glossary/`, `/reference/quick-reference/`, `/reference/quick-tips/`. **Rules** is active for `/learn/*`, `/play/setup/`, `/play/round-overview/`, `/reference/compendium/*`. **Lore** is active for `/lore/*`.
 
 - **Game mode toggles** (Quickplay / Magnus)  
   `src/components/GameModeToggle.astro` · labels: i18n `gameMode.*`  
@@ -206,7 +206,7 @@ The sync script ([`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs)) expects 
 Special mappings:
 
 - `# KISMETA` — intro (players, play time); merged into **Game Overview**, not its own page.
-- `# ROUND OVERVIEW` — `## ROUND AT A GLANCE` is split into **Round at a Glance**; phase sections stay on **Round Overview**.
+- `# ROUND OVERVIEW` — `## ROUND AT A GLANCE` is split into **Round at a Glance**; phase sections stay on **Full Game Rules**.
 - `# APPENDIX` — tables and reference material → **Quick Reference** (sidebar label unchanged); content after `## COMPENDIUM` becomes compendium pages.
 
 When you add a compendium section or other synced doc:

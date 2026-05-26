@@ -11,6 +11,8 @@ const tabs = [
 ] as const;
 
 const pathname = Astro.url.pathname;
+
+const rulesPlayPaths = ['/play/setup/', '/play/round-overview/'];
 ---
 
 <nav class="tab-nav" aria-label="Rules sections">
@@ -23,10 +25,10 @@ const pathname = Astro.url.pathname;
 					: tab.key === 'tab.lore'
 						? pathname.includes('/lore/')
 						: tab.key === 'tab.play'
-							? (pathname.includes('/play/') && !pathname.includes('/play/setup/')) ||
+							? (pathname.includes('/play/') && !rulesPlayPaths.some((path) => pathname.includes(path))) ||
 							  pathname.includes('/glossary/') ||
 							  (pathname.includes('/reference/') && !pathname.includes('/reference/compendium/'))
-							: pathname.includes('/learn/') || pathname.includes('/play/setup/') ||
+							: pathname.includes('/learn/') || rulesPlayPaths.some((path) => pathname.includes(path)) ||
 							  pathname.includes('/reference/compendium/');
 			return (
 				<a href={href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
