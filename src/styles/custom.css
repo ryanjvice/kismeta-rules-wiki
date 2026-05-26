@@ -1733,8 +1733,8 @@ main:has(.kismeta-lore) h1#_top,
 
 .context-rules-panel__trigger {
 	position: fixed;
-	bottom: 1.5rem;
-	right: 1.25rem;
+	top: calc(var(--kismeta-nav-offset) + 0.75rem);
+	right: 1rem;
 	z-index: 100;
 	display: inline-flex;
 	align-items: center;
