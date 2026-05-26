@@ -1,0 +1,38 @@
+---
+import DefaultSidebar from '@astrojs/starlight/components/Sidebar.astro';
+
+const t = Astro.locals.t;
+---
+
+<button
+	type="button"
+	class="kismeta-sidebar-toggle"
+	data-kismeta-sidebar-toggle
+	aria-expanded="true"
+	aria-label={t('sidebar.collapse')}
+	data-label-collapse={t('sidebar.collapse')}
+	data-label-expand={t('sidebar.expand')}
+>
+	<svg
+		class="kismeta-sidebar-toggle__icon"
+		aria-hidden="true"
+		width="16"
+		height="16"
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke="currentColor"
+		stroke-width="2.5"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+	>
+		<path d="M15 18l-6-6 6-6"/>
+	</svg>
+</button>
+
+<div data-kismeta-sidebar-content>
+	<DefaultSidebar><slot /></DefaultSidebar>
+</div>
+
+<script>
+	import '../scripts/sidebar-collapse.ts';
+</script>

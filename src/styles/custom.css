@@ -1984,3 +1984,77 @@ main:has(.kismeta-lore) h1#_top,
 	line-height: 1.5;
 	color: var(--sl-color-gray-3);
 }
+
+/* ── Collapsible left sidebar ───────────────────────────────────────── */
+
+:root {
+	--kismeta-sidebar-collapsed-width: 3.25rem;
+}
+
+/* Toggle button: hidden on mobile (hamburger handles small viewports) */
+.kismeta-sidebar-toggle {
+	display: none;
+}
+
+@media (min-width: 50rem) {
+	/* Show the toggle on desktop */
+	.kismeta-sidebar-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 2.5rem;
+		flex-shrink: 0;
+		padding: 0;
+		margin-bottom: 0.25rem;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid var(--sl-color-hairline);
+		cursor: pointer;
+		color: var(--sl-color-gray-3);
+		transition: color 0.15s, background 0.15s;
+	}
+
+	.kismeta-sidebar-toggle:hover {
+		color: var(--sl-color-accent-high);
+		background: color-mix(in srgb, var(--sl-color-accent) 8%, transparent);
+	}
+
+	.kismeta-sidebar-toggle:focus-visible {
+		outline: 2px solid var(--sl-color-accent);
+		outline-offset: -2px;
+		color: var(--sl-color-accent-high);
+	}
+
+	.kismeta-sidebar-toggle__icon {
+		transition: transform 0.2s ease;
+	}
+
+	/* ── Collapsed state ────────────────────────────────────────────── */
+
+	html[data-kismeta-sidebar-collapsed='true'] .sidebar-pane {
+		width: var(--kismeta-sidebar-collapsed-width);
+		overflow: hidden;
+	}
+
+	/* Override the inline-start offset so main content fills the freed space */
+	html[data-kismeta-sidebar-collapsed='true'][data-has-sidebar] {
+		--sl-content-inline-start: var(--kismeta-sidebar-collapsed-width);
+	}
+
+	/* Remove horizontal padding so the rail fits exactly */
+	html[data-kismeta-sidebar-collapsed='true'] .sidebar-content {
+		padding-inline: 0;
+	}
+
+	/* Hide the nav tree; toggle button stays visible */
+	html[data-kismeta-sidebar-collapsed='true'] [data-kismeta-sidebar-content] {
+		display: none;
+	}
+
+	/* Flip chevron to point right when collapsed */
+	html[data-kismeta-sidebar-collapsed='true'] .kismeta-sidebar-toggle__icon {
+		transform: rotate(180deg);
+	}
+}
+

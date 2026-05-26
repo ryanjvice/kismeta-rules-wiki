@@ -10,6 +10,16 @@ import GameModeToggle from './GameModeToggle.astro';
 	<GameModeToggle />
 </div>
 
+<script is:inline>
+	// Apply stored sidebar-collapsed state before first paint to prevent flash.
+	try {
+		if (localStorage.getItem('kismeta-sidebar-collapsed') === 'true'
+			&& window.matchMedia('(min-width: 50rem)').matches) {
+			document.documentElement.dataset.kismetaSidebarCollapsed = 'true';
+		}
+	} catch (_) {}
+</script>
+
 <script>
 	import '../scripts/nav-offset.ts';
 </script>

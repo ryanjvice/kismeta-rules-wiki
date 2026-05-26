@@ -31,6 +31,7 @@ export default defineConfig({
         Header: "./src/components/Header.astro",
         PageSidebar: "./src/components/PageSidebar.astro",
         Hero: "./src/components/Hero.astro",
+        Sidebar: "./src/components/Sidebar.astro",
       },
       defaultLocale: "root",
       locales: {

@@ -72,6 +72,8 @@
   "flow.wizardContinue": "Continue",
   "flow.wizardDone": "Done",
   "flow.wizardStepOf": "Step {current} of {total}",
+  "sidebar.collapse": "Collapse sidebar",
+  "sidebar.expand": "Expand sidebar",
   "flow.yes": "Yes",
   "flow.noSkip": "No, skip",
   "flow.autumnDoneMessage": "You've completed your Autumn turn.",
