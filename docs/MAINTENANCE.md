@@ -1,4 +1,4 @@
-# Maintainer guide: where to update what
+﻿# Maintainer guide: where to update what
 
 Task-oriented map for the Kismeta Rules Wiki. Use this when you need to change layout, navigation, styling, rules text, translations, or deploy settings — without hunting through the repo.
 
@@ -59,7 +59,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 - **Top tabs** (Play / Rules / Lore)  
   `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.play`, `tab.rules`, `tab.lore` · styles: `src/styles/custom.css` (`.tab-nav`)  
-  **Play** is active for `/play/*` except `/play/setup/` and `/play/round-overview/` (and the home page `/`), `/glossary/`, `/reference/quick-reference/`, `/reference/quick-tips/`. **Rules** is active for `/learn/*`, `/play/setup/`, `/play/round-overview/`, `/reference/compendium/*`. **Lore** is active for `/lore/*`.
+  **Play** is active for `/play/*` except `/play/setup/` and `/play/round-overview/` (and the home page `/`), `/glossary/`, `/reference/*`. **Rules** is active for `/learn/*`, `/play/setup/`, `/play/round-overview/`. **Lore** is active for `/lore/*`.
 
 - **Game mode toggles** (Quickplay / Magnus)  
   `src/components/GameModeToggle.astro` · labels: i18n `gameMode.*`  
@@ -70,16 +70,16 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 - **Left sidebar** (page list, order, labels)  
   `astro.config.mjs` → `starlight.sidebar`  
-  New reference/compendium page: add a `link()` here (under the Learn group) **and** a slug in `scripts/sync-guide.mjs`.
+  New reference page: add a `link()` here (under the Rules group) **and** a `SECTION_META` entry in `scripts/sync-guide.mjs`.
 
 ### Rules content
 
-- **Rules, compendium, play pages**  
+- **Rules and play pages**  
   `Kismeta_GameGuide.md` → run `npm run sync`  
   Output: `src/content/docs/learn/`, `play/`, `reference/`. Do not hand-edit those folders unless you accept overwrite on the next sync.
 
-- **Sync script** (slugs, draft banners, cross-links, ⚙️ callouts)  
-  `scripts/sync-guide.mjs` — `SECTION_META`, `COMPENDIUM_SLUGS`, `DRAFT_NOTICES`, `SEE_LINKS`.
+- **Sync script** (slugs, draft banners, cross-links, ⚙️ callouts)
+  `scripts/sync-guide.mjs` — `SECTION_META`, `DRAFT_NOTICES`, `SEE_LINKS`.
 
 → Workflow: [Generated vs hand-edited](#generated-vs-hand-edited-content) · New page: [Adding a sidebar page](#adding-a-new-sidebar-page)
 
@@ -91,7 +91,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 - **Glossary page layout**  
   `src/content/docs/glossary.mdx` · `src/components/GlossaryList.astro`
 
-- **Link a term to a compendium page**  
+- **Link a term to a rules page**  
   `src/components/GlossaryList.astro` → `termLinks`
 
 - **Glossary intro text**  
@@ -199,7 +199,7 @@ The sync script ([`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs)) expects 
 | Subsections (stay on the same page) | `## …` | `## The Great Year`, `## PHASE 1: SPRING` |
 | Sub-subsections | `### …` | `### 1️⃣ Set the Cosmic Age`, `### 1️⃣ QUICKPLAY` |
 | Detail blocks (not in TOC) | `#### …` | `#### How to Activate:` |
-| Compendium entries | `### 1.x …` under `## COMPENDIUM…` | `### 1.2 HARVEST` |
+| Detail blocks (sub-sub-sections) | `#### …` | `#### How to Craft:` |
 
 **Synced output:** `writePage()` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) preserves `##` / `###` / `####` levels from the guide so Starlight’s “On this page” TOC (h2–h3) lists phase and step headings. Do **not** re-add heading flattening in `writePage()` — an old `demoteHeadings()` pass collapsed everything to `#` (h1) and left only “Overview” in the TOC.
 
@@ -207,13 +207,13 @@ Special mappings:
 
 - `# KISMETA` — intro (players, play time); merged into **Game Overview**, not its own page.
 - `# ROUND OVERVIEW` — `## ROUND AT A GLANCE` is split into **Round at a Glance**; phase sections stay on **Full Game Rules**.
-- `# APPENDIX` — tables and reference material → **Quick Reference** (sidebar label unchanged); content after `## COMPENDIUM` becomes compendium pages.
+- `# APPENDIX` — tables and reference material → **Quick Reference** (sidebar label unchanged).
 
-When you add a compendium section or other synced doc:
+When you add a new synced doc section:
 
-1. Add the section to [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) using the heading levels above and the exact title keys in `SECTION_META` / `COMPENDIUM_SLUGS`.
-2. Map heading → URL slug in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) (`COMPENDIUM_SLUGS` or `SECTION_META`).
-3. Add a sidebar entry in [`astro.config.mjs`](../astro.config.mjs) using `link(label, slug)` (optional third arg for future `translations`).
+1. Add the section to [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) using the heading levels above and the exact title key in `SECTION_META`.
+2. Map heading → URL slug in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) (`SECTION_META`).
+3. Add a sidebar entry in [`astro.config.mjs`](../astro.config.mjs) using `link(label, slug)`.
 4. Run `npm run sync`.
 5. Optionally update:
    - `SEE_LINKS` in `sync-guide.mjs` (internal “See Compendium …” links)
@@ -267,7 +267,7 @@ Summer, Autumn, and Winter use decision-tree JSON — not flat markdown rows.
 
 **Guide placeholders:** `<!-- FLOW:summer-flow -->`, `<!-- FLOW:autumn-flow -->`, `<!-- FLOW:winter-flow -->`.
 
-**When adding branches:** Edit the flow JSON `children` array; link detail rules via `learnMoreHash` on leaf nodes (compendium / round-overview anchors), not by inlining every grid in the tree.
+**When adding branches:** Edit the flow JSON `children` array; link detail rules via `learnMoreHash` on leaf nodes (round-overview anchors), not by inlining every grid in the tree.
 
 ---
 

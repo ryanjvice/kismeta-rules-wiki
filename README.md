@@ -1,4 +1,4 @@
-# Kismeta Rules Wiki
+﻿# Kismeta Rules Wiki
 
 Official rules reference site for **Kismeta: Alchemists of the Great Year** (GOODMAGIK). Built with [Astro](https://astro.build) + [Starlight](https://starlight.astro.build).
 
@@ -40,11 +40,11 @@ Open [http://localhost:4321](http://localhost:4321).
    npm run build
    ```
 
-The `sync` script splits the guide into `src/content/docs/` and rebuilds `src/data/glossary.json`. Do not hand-edit generated markdown under `learn/`, `play/`, or `reference/compendium/` unless you are okay with changes being overwritten on the next sync.
+The `sync` script splits the guide into `src/content/docs/` and rebuilds `src/data/glossary.json`. Do not hand-edit generated markdown under `learn/`, `play/`, or `reference/` unless you are okay with changes being overwritten on the next sync.
 
 ### Draft / WIP sections
 
-Add a notice in `scripts/sync-guide.mjs` under `DRAFT_NOTICES` for any page that needs a visible “still being finalized” banner (see Opposition as an example).
+Add a notice in `scripts/sync-guide.mjs` under `DRAFT_NOTICES` for any page that needs a visible “still being finalized” banner .
 
 ### Cross-links
 

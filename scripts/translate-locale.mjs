@@ -86,8 +86,7 @@ function parseFrontmatter(raw) {
 
 function rewriteLinks(body, prefix) {
 	return body
-		.replace(/\]\(\/(learn|lore|play|reference|glossary)/g, `](${prefix}/$1`)
-		.replace(/\]\(\/(reference\/compendium)/g, `](${prefix}/$1`);
+		.replace(/\]\(\/(learn|lore|play|reference|glossary)/g, `](${prefix}/$1`);
 }
 
 function buildPrompt(body, config, termGlossary) {
@@ -105,8 +104,8 @@ Rules:
 - Keep these proper nouns in English: ${preserve}
 - Use these term translations consistently:
 ${terms}
-- Rewrite internal links to use the ${config.prefix} prefix (e.g. ${config.prefix}/reference/compendium/1-2-harvest/)
-- Translate "See Compendium:" / "See 1." cross-references naturally in Portuguese while keeping working markdown links.
+- Rewrite internal links to use the ${config.prefix} prefix (e.g. ${config.prefix}/play/round-overview/)
+- Translate any "See …" cross-references naturally in Portuguese while keeping working markdown links.
 
 ---
 

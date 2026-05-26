@@ -70,7 +70,7 @@
     },
     "5-card-lock": {
       "title": "5️⃣ Card Lock 🔒",
-      "html": "<h2>5️⃣ Card Lock 🔒</h2>\n<p>Once the Harvest is complete, all cards are locked in their current zones until the beginning of <strong>Phase 4: Winter</strong>. Any new cards you gain in Summer or Autumn are automatically added to your Spread zone.</p>\n<p>📌 <strong>Spring is complete.</strong> The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to <strong>Phase 2: ☀️ Summer</strong>.</p>"
+      "html": "<h2>5️⃣ Card Lock 🔒</h2>\n<p>Once the players have finished arranging their cards for the round, all cards are locked in their current zones until the beginning of <strong>Phase 4: Winter</strong>. Any new cards you gain in Summer or Autumn are automatically added to your Spread zone.</p>\n<p>📌 <strong>Spring is complete.</strong> The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to <strong>Phase 2: ☀️ Summer</strong>.</p>"
     },
     "phase-2-summer": {
       "title": "PHASE 2: ☀️ SUMMER",

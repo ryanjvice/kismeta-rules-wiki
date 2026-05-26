@@ -111,45 +111,6 @@ export default defineConfig({
             link("Components", "learn/components"),
             link("Setup", "play/setup"),
             link("Full Game Rules", "play/round-overview"),
-            link("1.0 Cosmic Ages", "reference/compendium/1-0-cosmic-ages"),
-            link(
-              "1.1 Aspects & Alignment",
-              "reference/compendium/1-1-aspects-alignment",
-            ),
-            link("1.2 Harvest", "reference/compendium/1-2-harvest"),
-            link(
-              "1.3 Kismeta Cards",
-              "reference/compendium/1-3-common-cards",
-            ),
-            link(
-              "1.4 Crucible Cards",
-              "reference/compendium/1-4-crucible-cards",
-            ),
-            link(
-              "1.5 Cauldrons & Molten Coal",
-              "reference/compendium/1-5-cauldrons-molten-coal",
-            ),
-            link("1.6 Reagents", "reference/compendium/1-6-reagents"),
-            link(
-              "1.7 Astral Houses",
-              "reference/compendium/1-7-astral-houses",
-            ),
-            link("1.8 Trades", "reference/compendium/1-8-trades"),
-            link("1.9 Duels", "reference/compendium/1-9-duels"),
-            link("1.10 Gambit", "reference/compendium/1-10-gambit"),
-            link(
-              "1.11 Crucible & Stone",
-              "reference/compendium/1-11-crucible-philosophers-stone",
-            ),
-            link("1.12 Opposition", "reference/compendium/1-12-opposition"),
-            link(
-              "1.13 Offering to the Age",
-              "reference/compendium/1-13-offering-to-the-age",
-            ),
-            link(
-              "1.14 Fateful Wager",
-              "reference/compendium/1-14-fateful-wager",
-            ),
           ],
         },
       ],
