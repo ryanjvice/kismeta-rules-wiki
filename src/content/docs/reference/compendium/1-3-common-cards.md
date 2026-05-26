@@ -52,19 +52,19 @@ Aligning Cards to Activate Effects:
 
 The 22 Major Arcana are divided into two equal sets of 11. **Fate Cards** are volatile, disruptive cosmic events that arrive uninvited. **Adept Cards** are persistent enhancements the Alchemist actively acquires and buys into.
 
-| | **FATE CARDS (11)** | **ADEPT CARDS (11)** |
-| :--- | :--- | :--- |
-| **Effect Duration** | Single round — discarded at end | Persistent across rounds |
-| **Aspects** | None — effect only | Carry all 3 Aspects (Sign, Planet, Element) |
-| **Entry** | Drawn in Harvest — resolves immediately | Must be purchased when drawn, or discarded |
-| **Arcanum Limit** | No limit while active | Max 2 cards |
-| **Player Agency** | Low — forced on all or the drawer | High — player chooses to buy in |
-| **Design Role** | Disruption, equalization, social moments | Specialization, optimization, identity |
+|                     | **FATE CARDS (11)**                      | **ADEPT CARDS (11)**                        |
+| :------------------ | :--------------------------------------- | :------------------------------------------ |
+| **Effect Duration** | Single round — discarded at end          | Persistent across rounds                    |
+| **Aspects**         | None — effect only                       | Carry all 3 Aspects (Sign, Planet, Element) |
+| **Entry**           | Drawn in Harvest — resolves immediately  | Must be purchased when drawn, or discarded  |
+| **Arcanum Limit**   | No limit while active                    | Max 2 cards                                 |
+| **Player Agency**   | Low — forced on all or the drawer        | High — player chooses to buy in             |
+| **Design Role**     | Disruption, equalization, social moments | Specialization, optimization, identity      |
 
 **Arcana Assignment**
 
-| **FATE CARDS** | **ADEPT CARDS** |
-| :--- | :--- |
+| **FATE CARDS**                                                                                                                     | **ADEPT CARDS**                                                                                                                                            |
+| :--------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | The Fool · Justice · Wheel of Fortune · The Hanged Man · Death · The Devil · The Tower · The Star · The Moon · The Sun · Judgement | The Magician · The High Priestess · The Empress · The Emperor · The Hierophant · The Lovers · The Chariot · Strength · The Hermit · Temperance · The World |
 
 
@@ -74,19 +74,19 @@ Fate cards enter play the moment they are drawn. The player places the card in t
 
 **At a Glance**
 
-| **Card Name** | **Domain** | **Summary** |
-| :--- | :--- | :--- |
-| **The Tower** | Hand Redistribution | All Hands pooled, shuffled, dealt clockwise |
-| **Death** | Immediate Action | Drawer discards entire Spread; Agekeeper shuffles deck |
-| **The Sun** | Immediate Action | All Hands revealed until Winter |
-| **Judgement** | Immediate Action | Agekeeper names a Reagent; holders of none discard 2 Spread cards |
-| **Justice** | Threshold | Most Reagents gives 1 to fewest |
-| **The Moon** | Social Action | Drawer gives 1 Spread card left; receives 1 from right |
-| **The Fool** | Collective Action | Collective Crucible Card drawn; first to complete claims it |
-| **The Devil** | Forced Exchange | Name any Spread card; owner gives it, draws 2 replacements |
-| **Wheel of Fortune** | Dice Event | All re-roll Zodiac Dice; highest gains 2 Reagents, lowest discards Spread |
-| **The Hanged Man** | Hand Redistribution | All players pass full Hand to the left |
-| **The Star** | Boon | Drawer conducts a full second Harvest |
+| **Card Name**        | **Domain**          | **Summary**                                                               |
+| :------------------- | :------------------ | :------------------------------------------------------------------------ |
+| **The Tower**        | Hand Redistribution | All Hands pooled, shuffled, dealt clockwise                               |
+| **Death**            | Immediate Action    | Drawer discards entire Spread; Agekeeper shuffles deck                    |
+| **The Sun**          | Immediate Action    | All Hands revealed until Winter                                           |
+| **Judgement**        | Immediate Action    | Agekeeper names a Reagent; holders of none discard 2 Spread cards         |
+| **Justice**          | Threshold           | Most Reagents gives 1 to fewest                                           |
+| **The Moon**         | Social Action       | Drawer gives 1 Spread card left; receives 1 from right                    |
+| **The Fool**         | Collective Action   | Collective Crucible Card drawn; first to complete claims it               |
+| **The Devil**        | Forced Exchange     | Name any Spread card; owner gives it, draws 2 replacements                |
+| **Wheel of Fortune** | Dice Event          | All re-roll Zodiac Dice; highest gains 2 Reagents, lowest discards Spread |
+| **The Hanged Man**   | Hand Redistribution | All players pass full Hand to the left                                    |
+| **The Star**         | Boon                | Drawer conducts a full second Harvest                                     |
 
 **Individual Card Dynamics**
 
@@ -207,19 +207,19 @@ When a player draws an Adept card, they must immediately choose to purchase it o
 
 **At a Glance**
 
-| **Card Name** | **Domain** | **Summary** |
-| :--- | :--- | :--- |
-| **The Magician** | Trade / Reagents | Reagents interchangeable for Crucible Card activation |
-| **The High Priestess** 📋 Open | Hand Management | OPEN — candidates: expanded Hand limit, recover Opposition Hand cards |
-| **The Empress** 📋 Open | Reagent / Abundance | OPEN — candidates: double Refinement output, Cauldron threshold reduction |
-| **The Emperor** | Opposition / Defense | Forge Wards persist after losing an Opposition |
-| **The Hierophant** 📋 Open | Arcanum / Capacity | OPEN — candidate: hold 3 Adept cards in Arcanum |
-| **The Lovers** | Trade / Social | Partner chooses: both draw 2 cards or both gain 1 Reagent |
-| **The Chariot** | Duel | Win = take 2 Spread cards; Lose = Ante returned |
-| **Strength** 📋 Open | Opposition / Resilience | OPEN — candidates: Hand card sacrifice for +2, Reagent cost to cancel effect |
-| **The Hermit** | Harvest / Hand | Draw 1 extra card to Hand each Harvest; free to place in Commune |
-| **Temperance** | Reagent / Cauldron | Blend two suits to refine any Reagent at the matching Threshold |
-| **The World** | Crucible / Forge | Free Crucible activation on Temper |
+| **Card Name**                  | **Domain**              | **Summary**                                                                  |
+| :----------------------------- | :---------------------- | :--------------------------------------------------------------------------- |
+| **The Magician**               | Trade / Reagents        | Reagents interchangeable for Crucible Card activation                        |
+| **The High Priestess** 📋 Open | Hand Management         | OPEN — candidates: expanded Hand limit, recover Opposition Hand cards        |
+| **The Empress** 📋 Open        | Reagent / Abundance     | OPEN — candidates: double Refinement output, Cauldron threshold reduction    |
+| **The Emperor**                | Opposition / Defense    | Forge Wards persist after losing an Opposition                               |
+| **The Hierophant** 📋 Open     | Arcanum / Capacity      | OPEN — candidate: hold 3 Adept cards in Arcanum                              |
+| **The Lovers**                 | Trade / Social          | Partner chooses: both draw 2 cards or both gain 1 Reagent                    |
+| **The Chariot**                | Duel                    | Win = take 2 Spread cards; Lose = Ante returned                              |
+| **Strength** 📋 Open           | Opposition / Resilience | OPEN — candidates: Hand card sacrifice for +2, Reagent cost to cancel effect |
+| **The Hermit**                 | Harvest / Hand          | Draw 1 extra card to Hand each Harvest; free to place in Commune             |
+| **Temperance**                 | Reagent / Cauldron      | Blend two suits to refine any Reagent at the matching Threshold              |
+| **The World**                  | Crucible / Forge        | Free Crucible activation on Temper                                           |
 
 **Individual Card Dynamics**
 
@@ -239,6 +239,7 @@ When a player draws an Adept card, they must immediately choose to purchase it o
 **Thematic Focus:** Hidden knowledge, secrets, expanded capacity. Should reward players who build and protect a deep Hand reserve.
 
 **Candidate Directions:**
+
 - **(A)** Expanded Hand limit — hold up to 8 cards instead of 5.
 - **(B)** Recover Hand cards contributed to a winning Opposition rather than discarding them.
 - **(C)** Once per round, look at one opponent's Hand without revealing your own.
@@ -251,6 +252,7 @@ When a player draws an Adept card, they must immediately choose to purchase it o
 **Thematic Focus:** Fertility, abundance, growth. Should reward players who invest deeply in Reagent production — distinct from The Magician (flexibility) and Temperance (suit blending).
 
 **Candidate Directions:**
+
 - **(A)** Once per round, when you successfully refine a Reagent, immediately refine a second from the same Cauldron at −5 RP.
 - **(B)** Gain 1 bonus Reagent of your choice each time you contribute to a successful Offering to the Age.
 - **(C)** Reduce the RP threshold of one chosen Cauldron by a permanent 5 RP (stacks with Molten Coal).
@@ -274,6 +276,7 @@ When a player draws an Adept card, they must immediately choose to purchase it o
 **Thematic Focus:** Tradition, initiation, holding more than others can. Should expand what the player can maintain in their Arcanum.
 
 **Candidate Directions:**
+
 - **(A)** Hold up to 3 Adept cards in the Arcanum simultaneously (instead of 2).
 - **(B)** Once per round, swap one Adept card for another at no cost — pay the incoming card's cost as normal but recover the outgoing card's cost as a Reagent credit.
 - **(C)** Adept cards in your Arcanum cannot be affected by Fate card effects.
@@ -306,6 +309,7 @@ When a player draws an Adept card, they must immediately choose to purchase it o
 **Thematic Focus:** Endurance, inner power, withstanding force. Should reward players who hold on under pressure — in Oppositions, Duels, or against Fate card effects.
 
 **Candidate Directions:**
+
 - **(A)** Once per round, after any dice roll in a Duel or Opposition (not Gambit), discard 2 Hand cards to add +2 to your roll or Alignment score — declared before results are compared.
 - **(B)** Pay 2 Sulphur Reagents to cancel any one card effect applied to you (single use per purchase).
 - **(C)** Reroll your Zodiac Die once per round in any Duel or Opposition before results are compared.
@@ -348,237 +352,237 @@ When a player draws an Adept card, they must immediately choose to purchase it o
 
 The 112 Minor Arcana cards form the core resource of the Kismeta deck. Because Kismeta uses two full tarot decks, every Suit/Rank combination exists as **two distinct physical cards** (Card 1 and Card 2) with different effects.
 
-| **Card 1 — Active Effect + Spread Alignment** | **Card 2 — Wildcard Link + Active Effect** |
-| :--- | :--- |
-| Carries a base Active Effect (always on while in Spread or Hand as applicable) | Carries a Wildcard Link to a specific Major Arcana card; may substitute for that card in all requirements |
-| May also carry a Spread Alignment — a conditional secondary effect triggered by cards in your Spread | Carries a standalone Active Effect of its own, independent of the Wildcard function |
+| **Card 1 — Active Effect + Spread Alignment**                                                         | **Card 2 — Wildcard Link + Active Effect**                                                                      |
+| :---------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| Carries a base Active Effect (always on while in Spread or Hand as applicable)                        | Carries a Wildcard Link to a specific Major Arcana card; may substitute for that card in all requirements       |
+| May also carry a Spread Alignment — a conditional secondary effect triggered by cards in your Spread  | Carries a standalone Active Effect of its own, independent of the Wildcard function                             |
 | Curse cards (Ranks 4, 5, 6) have negative Active Effects; their Alignment conditions negate the curse | Court cards (Page, Knight, Queen, King) C2 effects are unique per card and generally stronger than numbered C2s |
-| No Wildcard Link | Queens C2 and Kings C2 have no Wildcard Link — they carry unique standalone effects only |
+| No Wildcard Link                                                                                      | Queens C2 and Kings C2 have no Wildcard Link — they carry unique standalone effects only                        |
 
 **Suit Correspondence**
 
-| **Color** | **Suit** | **Element** | **Reagent** | **Cauldron** |
-| :--- | :--- | :--- | :--- | :--- |
-| 🔴 Red | Wands | Fire | Sulphur | Red |
-| 🔵 Blue | Cups | Water | Aqua Regia | Blue |
-| 🟢 Green | Pentacles | Earth | Vitriol | Green |
-| 🟡 Yellow | Swords | Air | Quicksilver | Yellow |
+| **Color** | **Suit**  | **Element** | **Reagent** | **Cauldron** |
+| :-------- | :-------- | :---------- | :---------- | :----------- |
+| 🔴 Red    | Wands     | Fire        | Sulphur     | Red          |
+| 🔵 Blue   | Cups      | Water       | Aqua Regia  | Blue         |
+| 🟢 Green  | Pentacles | Earth       | Vitriol     | Green        |
+| 🟡 Yellow | Swords    | Air         | Quicksilver | Yellow       |
 
 **Spread Alignment**
 
 Each Card 1 Minor Arcana may carry a **Spread Alignment** — a conditional trigger that activates a secondary effect when a specific type of card is present elsewhere in your Spread. Spread Alignment has two components: the **Alignment Condition** (what must be in your Spread) and the **Alignment Effect** (what activates when the condition is met).
 
-| **Condition Type** | **Description** |
-| :--- | :--- |
-| **Planet Align** | Any card in your Spread whose Planet symbol matches the stated planet, regardless of Suit or Rank. |
-| **Suit Align** | Any card in your Spread of the stated Suit. |
-| **Rank Align** | Any card in your Spread of the stated Rank, regardless of Suit or Planet. |
+| **Condition Type** | **Description**                                                                                    |
+| :----------------- | :------------------------------------------------------------------------------------------------- |
+| **Planet Align**   | Any card in your Spread whose Planet symbol matches the stated planet, regardless of Suit or Rank. |
+| **Suit Align**     | Any card in your Spread of the stated Suit.                                                        |
+| **Rank Align**     | Any card in your Spread of the stated Rank, regardless of Suit or Planet.                          |
 
-| **Effect Type** | **Description** |
-| :--- | :--- |
-| **Negation** | Cancels the card's Active Effect entirely. Always applies to curse cards (Ranks 4, 5, 6). No curse is unplayable — every curse has a negation condition requiring deliberate Spread construction. |
-| **Enhancement** | Adds a bonus to or upgrades the card's existing effect. Some Enhancement Alignments activate an effect the card doesn't have on its own. |
+| **Effect Type** | **Description**                                                                                                                                                                                   |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Negation**    | Cancels the card's Active Effect entirely. Always applies to curse cards (Ranks 4, 5, 6). No curse is unplayable — every curse has a negation condition requiring deliberate Spread construction. |
+| **Enhancement** | Adds a bonus to or upgrades the card's existing effect. Some Enhancement Alignments activate an effect the card doesn't have on its own.                                                          |
 
 **Core Rules**
 
-| **Rule** | **Detail** |
-| :--- | :--- |
-| **Self-exclusion** | A card cannot satisfy its own Spread Alignment condition. The triggering card must be a separate card already in the Spread. |
-| **Spread-only** | Only cards in your Spread count. Cards in your Hand, Arcanum, or committed to a Fateful Wager do not satisfy Spread Alignment conditions. |
-| **Continuous** | Spread Alignment is checked continuously. It activates the moment a qualifying card enters your Spread and deactivates the moment that card leaves. If a Mercury card that was negating a curse is discarded mid-Summer, the curse resumes immediately. |
-| **Stacking** | If multiple cards share the same Alignment condition, a single qualifying card satisfies all of them simultaneously. One Mercury card in your Spread negates every Mercury Align curse you are carrying. |
+| **Rule**                    | **Detail**                                                                                                                                                                                                                                                 |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Self-exclusion**          | A card cannot satisfy its own Spread Alignment condition. The triggering card must be a separate card already in the Spread.                                                                                                                               |
+| **Spread-only**             | Only cards in your Spread count. Cards in your Hand, Arcanum, or committed to a Fateful Wager do not satisfy Spread Alignment conditions.                                                                                                                  |
+| **Continuous**              | Spread Alignment is checked continuously. It activates the moment a qualifying card enters your Spread and deactivates the moment that card leaves. If a Mercury card that was negating a curse is discarded mid-Summer, the curse resumes immediately.    |
+| **Stacking**                | If multiple cards share the same Alignment condition, a single qualifying card satisfies all of them simultaneously. One Mercury card in your Spread negates every Mercury Align curse you are carrying.                                                   |
 | **Passive / Active timing** | Passive effects (curse negations, Threshold reductions, Trade bonuses) require no announcement. Active effects that modify dice rolls (Pages, Knights, 7s) are declared at the moment of the relevant action and confirmed by showing the qualifying card. |
 
 **Design Notes — Intentional Patterns**
 
-| **Pattern** | **Detail** |
-| :--- | :--- |
-| **4s — Universal Negation** | All four 4s share Mercury Align as their negation condition regardless of Suit. Mercury is the universal negotiator in alchemical tradition — a single Mercury card in your Spread protects against any 4 curse you carry. |
-| **5s — Cross-Element Pairs** | The 5s use cross-element suit pairings as negation conditions: Cups 5 by Swords, Pentacles 5 by Wands, Swords 5 by Cups, Wands 5 by Pentacles. These are opposite-element pairs (Water/Air, Earth/Fire). |
-| **Swords & Wands 4s — Different Curse** | Cups and Pentacles 4s curse opponents with +2 cards on Duel wins. Swords and Wands 4s instead force the holder to offer two Ante Cards to begin a Duel. Both are Mercury Align negated. |
-| **3s — Reagent Payment** | The 3 Spread Alignment replaces the payment method for Astral Houses: instead of 2 Planet-matching cards, the holder pays 1 Reagent of the matching type. |
-| **Queens — Moon Align** | All Queens share Moon Align as their Alignment condition, enhancing Reagent doubling when another Moon influence is present in the Spread. |
-| **Kings — Venus Align** | All Kings share Venus Align as their enhancement condition, triggering their double-output Refinement effect twice per round when a Venus card is in the Spread. |
+| **Pattern**                             | **Detail**                                                                                                                                                                                                                 |
+| :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **4s — Universal Negation**             | All four 4s share Mercury Align as their negation condition regardless of Suit. Mercury is the universal negotiator in alchemical tradition — a single Mercury card in your Spread protects against any 4 curse you carry. |
+| **5s — Cross-Element Pairs**            | The 5s use cross-element suit pairings as negation conditions: Cups 5 by Swords, Pentacles 5 by Wands, Swords 5 by Cups, Wands 5 by Pentacles. These are opposite-element pairs (Water/Air, Earth/Fire).                   |
+| **Swords & Wands 4s — Different Curse** | Cups and Pentacles 4s curse opponents with +2 cards on Duel wins. Swords and Wands 4s instead force the holder to offer two Ante Cards to begin a Duel. Both are Mercury Align negated.                                    |
+| **3s — Reagent Payment**                | The 3 Spread Alignment replaces the payment method for Astral Houses: instead of 2 Planet-matching cards, the holder pays 1 Reagent of the matching type.                                                                  |
+| **Queens — Moon Align**                 | All Queens share Moon Align as their Alignment condition, enhancing Reagent doubling when another Moon influence is present in the Spread.                                                                                 |
+| **Kings — Venus Align**                 | All Kings share Venus Align as their enhancement condition, triggering their double-output Refinement effect twice per round when a Venus card is in the Spread.                                                           |
 
 **Effect Patterns by Rank — Quick Reference**
 
-| **Rank** | **C1 Active Effect** | **Align Condition** | **Alignment Effect** | **C2 Link** | **C2 Active Effect** |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Ace** | Wildcard — any Suit, Rank, or Planet | — | — | Wild Rank | Unique per Suit (discard for a specific resource action) |
-| **2** | +1 Bonus Harvest Card when Cosmic Age Element matches suit | — | — | Major Arcana | Wildcard for a specific Major Arcana |
-| **3** | — (no Active Effect) | Rank Align: varies | Astral House discount: pay 1 matching Reagent instead of 2 Planet cards | Major Arcana | Wildcard for a specific Major Arcana |
-| **4** ⚠️ | Cups/Pentacles: Opponent earns +2 cards on Duel win. Swords/Wands: You must offer 2 Ante Cards to Duel. | Mercury Align | Negates this Effect | Major Arcana | Wildcard for a specific Major Arcana |
-| **5** ⚠️ | Opponent gains a Reroll in Duels against you | Suit Align (cross-element) | Negates this Effect | Major Arcana | Wildcard for a specific Major Arcana |
-| **6** ⚠️ | Subtract 2 from your Dice Rolls in all contests | Mars Align | Negates this Effect | Major Arcana | Wildcard for a specific Major Arcana |
-| **7** | — (no Active Effect) | Jupiter Align | Gain 1 Reroll in Duels this round | Major Arcana | Wildcard for a specific Major Arcana |
-| **8** | When Cosmic Age Element matches: −10 RP Refinement Threshold this round (stacks with Coals) | — | — | Major Arcana | Wildcard for a specific Major Arcana |
-| **9** | — (no Active Effect) | Saturn Align | Draw 1 Kismeta Card per successful Trade this round | Major Arcana | Wildcard for a specific Major Arcana |
-| **10** | — (no Active Effect) | Suit Align (cross-suit) | Wildcard in Oppositions | Major Arcana | Wildcard for a specific Major Arcana |
-| **Page** | +1 to Dice Rolls when Defending | Suit Align | +2 when Defending (upgraded) | Major Arcana | Wildcard for a specific Major Arcana |
-| **Knight** | +1 to Dice Rolls when Attacking | Rank Align | +2 when Attacking (upgraded) | Major Arcana | Wildcard for a specific Major Arcana |
-| **Queen** | [Suit Reagent] is a Wild Reagent | Moon Align | Refine 2 [Suit Reagent] for the cost of 1 | — | While in Spread: Hand limit +1 (all four stack; max +4 = 9 cards) |
-| **King** | Once per round: Refine [Suit Reagent], receive 2 instead of 1 | Venus Align | Effect triggers twice per round | — | [Suit] cards in Spread cannot be targeted in Duels |
+| **Rank**   | **C1 Active Effect**                                                                                    | **Align Condition**        | **Alignment Effect**                                                    | **C2 Link**  | **C2 Active Effect**                                              |
+| :--------- | :------------------------------------------------------------------------------------------------------ | :------------------------- | :---------------------------------------------------------------------- | :----------- | :---------------------------------------------------------------- |
+| **Ace**    | Wildcard — any Suit, Rank, or Planet                                                                    | —                          | —                                                                       | Wild Rank    | Unique per Suit (discard for a specific resource action)          |
+| **2**      | +1 Bonus Harvest Card when Cosmic Age Element matches suit                                              | —                          | —                                                                       | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **3**      | — (no Active Effect)                                                                                    | Rank Align: varies         | Astral House discount: pay 1 matching Reagent instead of 2 Planet cards | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **4** ⚠️   | Cups/Pentacles: Opponent earns +2 cards on Duel win. Swords/Wands: You must offer 2 Ante Cards to Duel. | Mercury Align              | Negates this Effect                                                     | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **5** ⚠️   | Opponent gains a Reroll in Duels against you                                                            | Suit Align (cross-element) | Negates this Effect                                                     | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **6** ⚠️   | Subtract 2 from your Dice Rolls in all contests                                                         | Mars Align                 | Negates this Effect                                                     | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **7**      | — (no Active Effect)                                                                                    | Jupiter Align              | Gain 1 Reroll in Duels this round                                       | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **8**      | When Cosmic Age Element matches: −10 RP Refinement Threshold this round (stacks with Coals)             | —                          | —                                                                       | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **9**      | — (no Active Effect)                                                                                    | Saturn Align               | Draw 1 Kismeta Card per successful Trade this round                     | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **10**     | — (no Active Effect)                                                                                    | Suit Align (cross-suit)    | Wildcard in Oppositions                                                 | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **Page**   | +1 to Dice Rolls when Defending                                                                         | Suit Align                 | +2 when Defending (upgraded)                                            | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **Knight** | +1 to Dice Rolls when Attacking                                                                         | Rank Align                 | +2 when Attacking (upgraded)                                            | Major Arcana | Wildcard for a specific Major Arcana                              |
+| **Queen**  | [Suit Reagent] is a Wild Reagent                                                                        | Moon Align                 | Refine 2 [Suit Reagent] for the cost of 1                               | —            | While in Spread: Hand limit +1 (all four stack; max +4 = 9 cards) |
+| **King**   | Once per round: Refine [Suit Reagent], receive 2 instead of 1                                           | Venus Align                | Effect triggers twice per round                                         | —            | [Suit] cards in Spread cannot be targeted in Duels                |
 
 
 **Complete Card Reference — Cups · Water · Aqua Regia · Blue Cauldron**
 
-*Card 1 — Active Effect + Spread Alignment*
+_Card 1 — Active Effect + Spread Alignment_
 
-| **Rank** | **RP** | **Planet** | **Active Effect** | **Align Condition** | **Alignment Effect** |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wildcard — may be used as any Suit, Rank, or Planet. | — | — |
-| **2** | 2 | Moon | +1 Bonus Harvest Card when the Cosmic Age's Element is Water. | — | — |
-| **3** | 3 | Jupiter | — | Rank Align: 2s | Build Astral Houses on Water Signs by paying 1 Aqua Regia instead of 2 Planet-matching cards. |
-| **4** | 4 | Venus | Your opponent earns +2 Kismeta Cards from the deck if they win a Duel against you. | Mercury Align | Negates this Effect. |
-| **5** | 5 | Mercury | Your opponent gains a Reroll in Duels against you. | Swords Align | Negates this Effect. |
-| **6** | 6 | Saturn | Subtract 2 from your Dice Rolls in all contests. | Mars Align | Negates this Effect. |
-| **7** | 7 | Mars | — | Jupiter Align | Gain 1 Reroll in Duels this round. |
-| **8** | 8 | Jupiter | When the Cosmic Age's Element is Water: reduce the Aqua Regia Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | — | — |
-| **9** | 9 | Venus | — | Saturn Align | Draw 1 Kismeta Card from the deck for each successful Trade this round. |
-| **10** | 10 | Saturn | — | Wands Align | This card counts as a Wildcard in Oppositions. |
-| **Page** | 11 | Mercury | +1 to Dice Rolls when Defending in an Opposition or Duel. | Pentacles Align | +2 to Dice Rolls when Defending (instead of +1). |
-| **Knight** | 12 | Mars | +1 to Dice Rolls when Attacking in a Duel or Gambit. | Rank Align: 3s | +2 to Dice Rolls when Attacking (instead of +1). |
-| **Queen** | 13 | Moon | Aqua Regia is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card. | Moon Align | Refine 2 Aqua Regia for the cost of 1 Refinement action. |
-| **King** | 14 | Saturn | Once per round: when you successfully Refine Aqua Regia, receive 1 additional Aqua Regia (2 total). | Venus Align | This effect may trigger twice per round. |
+| **Rank**   | **RP** | **Planet** | **Active Effect**                                                                                                                           | **Align Condition** | **Alignment Effect**                                                                          |
+| :--------- | :----- | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------ | :------------------ | :-------------------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wildcard — may be used as any Suit, Rank, or Planet.                                                                                        | —                   | —                                                                                             |
+| **2**      | 2      | Moon       | +1 Bonus Harvest Card when the Cosmic Age's Element is Water.                                                                               | —                   | —                                                                                             |
+| **3**      | 3      | Jupiter    | —                                                                                                                                           | Rank Align: 2s      | Build Astral Houses on Water Signs by paying 1 Aqua Regia instead of 2 Planet-matching cards. |
+| **4**      | 4      | Venus      | Your opponent earns +2 Kismeta Cards from the deck if they win a Duel against you.                                                          | Mercury Align       | Negates this Effect.                                                                          |
+| **5**      | 5      | Mercury    | Your opponent gains a Reroll in Duels against you.                                                                                          | Swords Align        | Negates this Effect.                                                                          |
+| **6**      | 6      | Saturn     | Subtract 2 from your Dice Rolls in all contests.                                                                                            | Mars Align          | Negates this Effect.                                                                          |
+| **7**      | 7      | Mars       | —                                                                                                                                           | Jupiter Align       | Gain 1 Reroll in Duels this round.                                                            |
+| **8**      | 8      | Jupiter    | When the Cosmic Age's Element is Water: reduce the Aqua Regia Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | —                   | —                                                                                             |
+| **9**      | 9      | Venus      | —                                                                                                                                           | Saturn Align        | Draw 1 Kismeta Card from the deck for each successful Trade this round.                       |
+| **10**     | 10     | Saturn     | —                                                                                                                                           | Wands Align         | This card counts as a Wildcard in Oppositions.                                                |
+| **Page**   | 11     | Mercury    | +1 to Dice Rolls when Defending in an Opposition or Duel.                                                                                   | Pentacles Align     | +2 to Dice Rolls when Defending (instead of +1).                                              |
+| **Knight** | 12     | Mars       | +1 to Dice Rolls when Attacking in a Duel or Gambit.                                                                                        | Rank Align: 3s      | +2 to Dice Rolls when Attacking (instead of +1).                                              |
+| **Queen**  | 13     | Moon       | Aqua Regia is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card.                                             | Moon Align          | Refine 2 Aqua Regia for the cost of 1 Refinement action.                                      |
+| **King**   | 14     | Saturn     | Once per round: when you successfully Refine Aqua Regia, receive 1 additional Aqua Regia (2 total).                                         | Venus Align         | This effect may trigger twice per round.                                                      |
 
-*Card 2 — Wildcard Link + Active Effect*
+_Card 2 — Wildcard Link + Active Effect_
 
-| **Rank** | **RP** | **Planet** | **Wildcard Link** | **Active Effect** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wild Rank | Discard this card to replace the current Collective Crucible Card. |
-| **2** | 2 | Moon | The High Priestess | Wildcard for The High Priestess. |
-| **3** | 3 | Jupiter | Wheel of Fortune | Wildcard for Wheel of Fortune. |
-| **4** | 4 | Venus | The Chariot | Wildcard for The Chariot. |
-| **5** | 5 | Mercury | The Sun | Wildcard for The Sun. |
-| **6** | 6 | Saturn | The Lovers | Wildcard for The Lovers. |
-| **7** | 7 | Mars | The Fool | Wildcard for The Fool. |
-| **8** | 8 | Jupiter | Wheel of Fortune | Wildcard for Wheel of Fortune. |
-| **9** | 9 | Venus | The Chariot | Wildcard for The Chariot. |
-| **10** | 10 | Saturn | The Hanged Man | Wildcard for The Hanged Man. |
-| **Page** | 11 | Mercury | The Moon | Wildcard for The Moon. |
-| **Knight** | 12 | Mars | The Star | Wildcard for The Star. |
-| **Queen** | 13 | Moon | — | While in your Spread, your Hand limit increases by +1. |
-| **King** | 14 | Saturn | — | Cups cards in your Spread cannot be targeted in Duels. This card remains vulnerable. |
+| **Rank**   | **RP** | **Planet** | **Wildcard Link**  | **Active Effect**                                                                    |
+| :--------- | :----- | :--------- | :----------------- | :----------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wild Rank          | Discard this card to replace the current Collective Crucible Card.                   |
+| **2**      | 2      | Moon       | The High Priestess | Wildcard for The High Priestess.                                                     |
+| **3**      | 3      | Jupiter    | Wheel of Fortune   | Wildcard for Wheel of Fortune.                                                       |
+| **4**      | 4      | Venus      | The Chariot        | Wildcard for The Chariot.                                                            |
+| **5**      | 5      | Mercury    | The Sun            | Wildcard for The Sun.                                                                |
+| **6**      | 6      | Saturn     | The Lovers         | Wildcard for The Lovers.                                                             |
+| **7**      | 7      | Mars       | The Fool           | Wildcard for The Fool.                                                               |
+| **8**      | 8      | Jupiter    | Wheel of Fortune   | Wildcard for Wheel of Fortune.                                                       |
+| **9**      | 9      | Venus      | The Chariot        | Wildcard for The Chariot.                                                            |
+| **10**     | 10     | Saturn     | The Hanged Man     | Wildcard for The Hanged Man.                                                         |
+| **Page**   | 11     | Mercury    | The Moon           | Wildcard for The Moon.                                                               |
+| **Knight** | 12     | Mars       | The Star           | Wildcard for The Star.                                                               |
+| **Queen**  | 13     | Moon       | —                  | While in your Spread, your Hand limit increases by +1.                               |
+| **King**   | 14     | Saturn     | —                  | Cups cards in your Spread cannot be targeted in Duels. This card remains vulnerable. |
 
 
 **Complete Card Reference — Pentacles · Earth · Vitriol · Green Cauldron**
 
-*Card 1 — Active Effect + Spread Alignment*
+_Card 1 — Active Effect + Spread Alignment_
 
-| **Rank** | **RP** | **Planet** | **Active Effect** | **Align Condition** | **Alignment Effect** |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wildcard — may be used as any Suit, Rank, or Planet. | — | — |
-| **2** | 2 | Moon | +1 Bonus Harvest Card when the Cosmic Age's Element is Earth. | — | — |
-| **3** | 3 | Jupiter | — | Rank Align: 4s | Build Astral Houses on Earth Signs by paying 1 Vitriol instead of 2 Planet-matching cards. |
-| **4** | 4 | Venus | Your opponent earns +2 Kismeta Cards from the deck if they win a Duel against you. | Mercury Align | Negates this Effect. |
-| **5** | 5 | Mercury | Your opponent gains a Reroll in Duels against you. | Wands Align | Negates this Effect. |
-| **6** | 6 | Saturn | Subtract 2 from your Dice Rolls in all contests. | Mars Align | Negates this Effect. |
-| **7** | 7 | Mars | — | Jupiter Align | Gain 1 Reroll in Duels this round. |
-| **8** | 8 | Jupiter | When the Cosmic Age's Element is Earth: reduce the Vitriol Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | — | — |
-| **9** | 9 | Venus | — | Saturn Align | Draw 1 Kismeta Card from the deck for each successful Trade this round. |
-| **10** | 10 | Saturn | — | Cups Align | This card counts as a Wildcard in Oppositions. |
-| **Page** | 11 | Mercury | +1 to Dice Rolls when Defending in an Opposition or Duel. | Swords Align | +2 to Dice Rolls when Defending (instead of +1). |
-| **Knight** | 12 | Mars | +1 to Dice Rolls when Attacking in a Duel or Gambit. | Rank Align: 5s | +2 to Dice Rolls when Attacking (instead of +1). |
-| **Queen** | 13 | Moon | Vitriol is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card. | Moon Align | Refine 2 Vitriol for the cost of 1 Refinement action. |
-| **King** | 14 | Saturn | Once per round: when you successfully Refine Vitriol, receive 1 additional Vitriol (2 total). | Venus Align | This effect may trigger twice per round. |
+| **Rank**   | **RP** | **Planet** | **Active Effect**                                                                                                                        | **Align Condition** | **Alignment Effect**                                                                       |
+| :--------- | :----- | :--------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :------------------ | :----------------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wildcard — may be used as any Suit, Rank, or Planet.                                                                                     | —                   | —                                                                                          |
+| **2**      | 2      | Moon       | +1 Bonus Harvest Card when the Cosmic Age's Element is Earth.                                                                            | —                   | —                                                                                          |
+| **3**      | 3      | Jupiter    | —                                                                                                                                        | Rank Align: 4s      | Build Astral Houses on Earth Signs by paying 1 Vitriol instead of 2 Planet-matching cards. |
+| **4**      | 4      | Venus      | Your opponent earns +2 Kismeta Cards from the deck if they win a Duel against you.                                                       | Mercury Align       | Negates this Effect.                                                                       |
+| **5**      | 5      | Mercury    | Your opponent gains a Reroll in Duels against you.                                                                                       | Wands Align         | Negates this Effect.                                                                       |
+| **6**      | 6      | Saturn     | Subtract 2 from your Dice Rolls in all contests.                                                                                         | Mars Align          | Negates this Effect.                                                                       |
+| **7**      | 7      | Mars       | —                                                                                                                                        | Jupiter Align       | Gain 1 Reroll in Duels this round.                                                         |
+| **8**      | 8      | Jupiter    | When the Cosmic Age's Element is Earth: reduce the Vitriol Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | —                   | —                                                                                          |
+| **9**      | 9      | Venus      | —                                                                                                                                        | Saturn Align        | Draw 1 Kismeta Card from the deck for each successful Trade this round.                    |
+| **10**     | 10     | Saturn     | —                                                                                                                                        | Cups Align          | This card counts as a Wildcard in Oppositions.                                             |
+| **Page**   | 11     | Mercury    | +1 to Dice Rolls when Defending in an Opposition or Duel.                                                                                | Swords Align        | +2 to Dice Rolls when Defending (instead of +1).                                           |
+| **Knight** | 12     | Mars       | +1 to Dice Rolls when Attacking in a Duel or Gambit.                                                                                     | Rank Align: 5s      | +2 to Dice Rolls when Attacking (instead of +1).                                           |
+| **Queen**  | 13     | Moon       | Vitriol is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card.                                             | Moon Align          | Refine 2 Vitriol for the cost of 1 Refinement action.                                      |
+| **King**   | 14     | Saturn     | Once per round: when you successfully Refine Vitriol, receive 1 additional Vitriol (2 total).                                            | Venus Align         | This effect may trigger twice per round.                                                   |
 
-*Card 2 — Wildcard Link + Active Effect*
+_Card 2 — Wildcard Link + Active Effect_
 
-| **Rank** | **RP** | **Planet** | **Wildcard Link** | **Active Effect** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wild Rank | Discard this card to Refine any 1 Reagent of your choice from the supply. |
-| **2** | 2 | Moon | The Hierophant | Wildcard for The Hierophant. |
-| **3** | 3 | Jupiter | The Empress | Wildcard for The Empress. |
-| **4** | 4 | Venus | The Hermit | Wildcard for The Hermit. |
-| **5** | 5 | Mercury | The Devil | Wildcard for The Devil. |
-| **6** | 6 | Saturn | The Hierophant | Wildcard for The Hierophant. |
-| **7** | 7 | Mars | Death | Wildcard for Death. |
-| **8** | 8 | Jupiter | The Empress | Wildcard for The Empress. |
-| **9** | 9 | Venus | The Devil | Wildcard for The Devil. |
-| **10** | 10 | Saturn | The Hermit | Wildcard for The Hermit. |
-| **Page** | 11 | Mercury | Judgement | Wildcard for Judgement. |
-| **Knight** | 12 | Mars | The Moon | Wildcard for The Moon. |
-| **Queen** | 13 | Moon | — | While in your Spread, your Hand limit increases by +1. |
-| **King** | 14 | Saturn | — | Pentacles cards in your Spread cannot be targeted in Duels. This card remains vulnerable. |
+| **Rank**   | **RP** | **Planet** | **Wildcard Link** | **Active Effect**                                                                         |
+| :--------- | :----- | :--------- | :---------------- | :---------------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wild Rank         | Discard this card to Refine any 1 Reagent of your choice from the supply.                 |
+| **2**      | 2      | Moon       | The Hierophant    | Wildcard for The Hierophant.                                                              |
+| **3**      | 3      | Jupiter    | The Empress       | Wildcard for The Empress.                                                                 |
+| **4**      | 4      | Venus      | The Hermit        | Wildcard for The Hermit.                                                                  |
+| **5**      | 5      | Mercury    | The Devil         | Wildcard for The Devil.                                                                   |
+| **6**      | 6      | Saturn     | The Hierophant    | Wildcard for The Hierophant.                                                              |
+| **7**      | 7      | Mars       | Death             | Wildcard for Death.                                                                       |
+| **8**      | 8      | Jupiter    | The Empress       | Wildcard for The Empress.                                                                 |
+| **9**      | 9      | Venus      | The Devil         | Wildcard for The Devil.                                                                   |
+| **10**     | 10     | Saturn     | The Hermit        | Wildcard for The Hermit.                                                                  |
+| **Page**   | 11     | Mercury    | Judgement         | Wildcard for Judgement.                                                                   |
+| **Knight** | 12     | Mars       | The Moon          | Wildcard for The Moon.                                                                    |
+| **Queen**  | 13     | Moon       | —                 | While in your Spread, your Hand limit increases by +1.                                    |
+| **King**   | 14     | Saturn     | —                 | Pentacles cards in your Spread cannot be targeted in Duels. This card remains vulnerable. |
 
 
 **Complete Card Reference — Swords · Air · Quicksilver · Yellow Cauldron**
 
-*Card 1 — Active Effect + Spread Alignment*
+_Card 1 — Active Effect + Spread Alignment_
 
-| **Rank** | **RP** | **Planet** | **Active Effect** | **Align Condition** | **Alignment Effect** |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wildcard — may be used as any Suit, Rank, or Planet. | — | — |
-| **2** | 2 | Moon | +1 Bonus Harvest Card when the Cosmic Age's Element is Air. | — | — |
-| **3** | 3 | Jupiter | — | Rank Align: 6s | Build Astral Houses on Air Signs by paying 1 Quicksilver instead of 2 Planet-matching cards. |
-| **4** | 4 | Venus | You must offer two Ante Cards to begin a Duel (instead of one). | Mercury Align | Negates this Effect. |
-| **5** | 5 | Mercury | Your opponent gains a Reroll in Duels against you. | Cups Align | Negates this Effect. |
-| **6** | 6 | Saturn | Subtract 2 from your Dice Rolls in all contests. | Mars Align | Negates this Effect. |
-| **7** | 7 | Mars | — | Jupiter Align | Gain 1 Reroll in Duels this round. |
-| **8** | 8 | Jupiter | When the Cosmic Age's Element is Air: reduce the Quicksilver Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | — | — |
-| **9** | 9 | Venus | — | Saturn Align | Draw 1 Kismeta Card from the deck for each successful Trade this round. |
-| **10** | 10 | Saturn | — | Pentacles Align | This card counts as a Wildcard in Oppositions. |
-| **Page** | 11 | Mercury | +1 to Dice Rolls when Defending in an Opposition or Duel. | Wands Align | +2 to Dice Rolls when Defending (instead of +1). |
-| **Knight** | 12 | Mars | +1 to Dice Rolls when Attacking in a Duel or Gambit. | Rank Align: 7s | +2 to Dice Rolls when Attacking (instead of +1). |
-| **Queen** | 13 | Moon | Quicksilver is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card. | Moon Align | Refine 2 Quicksilver for the cost of 1 Refinement action. |
-| **King** | 14 | Saturn | Once per round: when you successfully Refine Quicksilver, receive 1 additional Quicksilver (2 total). | Venus Align | This effect may trigger twice per round. |
+| **Rank**   | **RP** | **Planet** | **Active Effect**                                                                                                                          | **Align Condition** | **Alignment Effect**                                                                         |
+| :--------- | :----- | :--------- | :----------------------------------------------------------------------------------------------------------------------------------------- | :------------------ | :------------------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wildcard — may be used as any Suit, Rank, or Planet.                                                                                       | —                   | —                                                                                            |
+| **2**      | 2      | Moon       | +1 Bonus Harvest Card when the Cosmic Age's Element is Air.                                                                                | —                   | —                                                                                            |
+| **3**      | 3      | Jupiter    | —                                                                                                                                          | Rank Align: 6s      | Build Astral Houses on Air Signs by paying 1 Quicksilver instead of 2 Planet-matching cards. |
+| **4**      | 4      | Venus      | You must offer two Ante Cards to begin a Duel (instead of one).                                                                            | Mercury Align       | Negates this Effect.                                                                         |
+| **5**      | 5      | Mercury    | Your opponent gains a Reroll in Duels against you.                                                                                         | Cups Align          | Negates this Effect.                                                                         |
+| **6**      | 6      | Saturn     | Subtract 2 from your Dice Rolls in all contests.                                                                                           | Mars Align          | Negates this Effect.                                                                         |
+| **7**      | 7      | Mars       | —                                                                                                                                          | Jupiter Align       | Gain 1 Reroll in Duels this round.                                                           |
+| **8**      | 8      | Jupiter    | When the Cosmic Age's Element is Air: reduce the Quicksilver Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | —                   | —                                                                                            |
+| **9**      | 9      | Venus      | —                                                                                                                                          | Saturn Align        | Draw 1 Kismeta Card from the deck for each successful Trade this round.                      |
+| **10**     | 10     | Saturn     | —                                                                                                                                          | Pentacles Align     | This card counts as a Wildcard in Oppositions.                                               |
+| **Page**   | 11     | Mercury    | +1 to Dice Rolls when Defending in an Opposition or Duel.                                                                                  | Wands Align         | +2 to Dice Rolls when Defending (instead of +1).                                             |
+| **Knight** | 12     | Mars       | +1 to Dice Rolls when Attacking in a Duel or Gambit.                                                                                       | Rank Align: 7s      | +2 to Dice Rolls when Attacking (instead of +1).                                             |
+| **Queen**  | 13     | Moon       | Quicksilver is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card.                                           | Moon Align          | Refine 2 Quicksilver for the cost of 1 Refinement action.                                    |
+| **King**   | 14     | Saturn     | Once per round: when you successfully Refine Quicksilver, receive 1 additional Quicksilver (2 total).                                      | Venus Align         | This effect may trigger twice per round.                                                     |
 
-*Card 2 — Wildcard Link + Active Effect*
+_Card 2 — Wildcard Link + Active Effect_
 
-| **Rank** | **RP** | **Planet** | **Wildcard Link** | **Active Effect** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wild Rank | Compel any one player to reroll the Cosmic Age Die or their Zodiac Die once per round. |
-| **2** | 2 | Moon | The High Priestess | Wildcard for The High Priestess. |
-| **3** | 3 | Jupiter | Justice | Wildcard for Justice. |
-| **4** | 4 | Venus | Justice | Wildcard for Justice. |
-| **5** | 5 | Mercury | The World | Wildcard for The World. |
-| **6** | 6 | Saturn | Strength | Wildcard for Strength. |
-| **7** | 7 | Mars | Strength | Wildcard for Strength. |
-| **8** | 8 | Jupiter | Death | Wildcard for Death. |
-| **9** | 9 | Venus | The Tower | Wildcard for The Tower. |
-| **10** | 10 | Saturn | The Tower | Wildcard for The Tower. |
-| **Page** | 11 | Mercury | The Sun | Wildcard for The Sun. |
-| **Knight** | 12 | Mars | The Star | Wildcard for The Star. |
-| **Queen** | 13 | Moon | — | While in your Spread, your Hand limit increases by +1. |
-| **King** | 14 | Saturn | — | Swords cards in your Spread cannot be targeted in Duels. This card remains vulnerable. |
+| **Rank**   | **RP** | **Planet** | **Wildcard Link**  | **Active Effect**                                                                      |
+| :--------- | :----- | :--------- | :----------------- | :------------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wild Rank          | Compel any one player to reroll the Cosmic Age Die or their Zodiac Die once per round. |
+| **2**      | 2      | Moon       | The High Priestess | Wildcard for The High Priestess.                                                       |
+| **3**      | 3      | Jupiter    | Justice            | Wildcard for Justice.                                                                  |
+| **4**      | 4      | Venus      | Justice            | Wildcard for Justice.                                                                  |
+| **5**      | 5      | Mercury    | The World          | Wildcard for The World.                                                                |
+| **6**      | 6      | Saturn     | Strength           | Wildcard for Strength.                                                                 |
+| **7**      | 7      | Mars       | Strength           | Wildcard for Strength.                                                                 |
+| **8**      | 8      | Jupiter    | Death              | Wildcard for Death.                                                                    |
+| **9**      | 9      | Venus      | The Tower          | Wildcard for The Tower.                                                                |
+| **10**     | 10     | Saturn     | The Tower          | Wildcard for The Tower.                                                                |
+| **Page**   | 11     | Mercury    | The Sun            | Wildcard for The Sun.                                                                  |
+| **Knight** | 12     | Mars       | The Star           | Wildcard for The Star.                                                                 |
+| **Queen**  | 13     | Moon       | —                  | While in your Spread, your Hand limit increases by +1.                                 |
+| **King**   | 14     | Saturn     | —                  | Swords cards in your Spread cannot be targeted in Duels. This card remains vulnerable. |
 
 
 **Complete Card Reference — Wands · Fire · Sulphur · Red Cauldron**
 
-*Card 1 — Active Effect + Spread Alignment*
+_Card 1 — Active Effect + Spread Alignment_
 
-| **Rank** | **RP** | **Planet** | **Active Effect** | **Align Condition** | **Alignment Effect** |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wildcard — may be used as any Suit, Rank, or Planet. | — | — |
-| **2** | 2 | Moon | +1 Bonus Harvest Card when the Cosmic Age's Element is Fire. | — | — |
-| **3** | 3 | Jupiter | — | Rank Align: 8s | Build Astral Houses on Fire Signs by paying 1 Sulphur instead of 2 Planet-matching cards. |
-| **4** | 4 | Venus | You must offer two Ante Cards to begin a Duel (instead of one). | Mercury Align | Negates this Effect. |
-| **5** | 5 | Mercury | Your opponent gains a Reroll in Duels against you. | Pentacles Align | Negates this Effect. |
-| **6** | 6 | Saturn | Subtract 2 from your Dice Rolls in all contests. | Mars Align | Negates this Effect. |
-| **7** | 7 | Mars | — | Jupiter Align | Gain 1 Reroll in Duels this round. |
-| **8** | 8 | Jupiter | When the Cosmic Age's Element is Fire: reduce the Sulphur Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | — | — |
-| **9** | 9 | Venus | — | Saturn Align | Draw 1 Kismeta Card from the deck for each successful Trade this round. |
-| **10** | 10 | Saturn | — | Swords Align | This card counts as a Wildcard in Oppositions. |
-| **Page** | 11 | Mercury | +1 to Dice Rolls when Defending in an Opposition or Duel. | Cups Align | +2 to Dice Rolls when Defending (instead of +1). |
-| **Knight** | 12 | Mars | +1 to Dice Rolls when Attacking in a Duel or Gambit. | Rank Align: 9s | +2 to Dice Rolls when Attacking (instead of +1). |
-| **Queen** | 13 | Moon | Sulphur is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card. | Moon Align | Refine 2 Sulphur for the cost of 1 Refinement action. |
-| **King** | 14 | Saturn | Once per round: when you successfully Refine Sulphur, receive 1 additional Sulphur (2 total). | Venus Align | This effect may trigger twice per round. |
+| **Rank**   | **RP** | **Planet** | **Active Effect**                                                                                                                       | **Align Condition** | **Alignment Effect**                                                                      |
+| :--------- | :----- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------ | :---------------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wildcard — may be used as any Suit, Rank, or Planet.                                                                                    | —                   | —                                                                                         |
+| **2**      | 2      | Moon       | +1 Bonus Harvest Card when the Cosmic Age's Element is Fire.                                                                            | —                   | —                                                                                         |
+| **3**      | 3      | Jupiter    | —                                                                                                                                       | Rank Align: 8s      | Build Astral Houses on Fire Signs by paying 1 Sulphur instead of 2 Planet-matching cards. |
+| **4**      | 4      | Venus      | You must offer two Ante Cards to begin a Duel (instead of one).                                                                         | Mercury Align       | Negates this Effect.                                                                      |
+| **5**      | 5      | Mercury    | Your opponent gains a Reroll in Duels against you.                                                                                      | Pentacles Align     | Negates this Effect.                                                                      |
+| **6**      | 6      | Saturn     | Subtract 2 from your Dice Rolls in all contests.                                                                                        | Mars Align          | Negates this Effect.                                                                      |
+| **7**      | 7      | Mars       | —                                                                                                                                       | Jupiter Align       | Gain 1 Reroll in Duels this round.                                                        |
+| **8**      | 8      | Jupiter    | When the Cosmic Age's Element is Fire: reduce the Sulphur Refinement Threshold by 10 RP this round. Stacks with Molten Coal reductions. | —                   | —                                                                                         |
+| **9**      | 9      | Venus      | —                                                                                                                                       | Saturn Align        | Draw 1 Kismeta Card from the deck for each successful Trade this round.                   |
+| **10**     | 10     | Saturn     | —                                                                                                                                       | Swords Align        | This card counts as a Wildcard in Oppositions.                                            |
+| **Page**   | 11     | Mercury    | +1 to Dice Rolls when Defending in an Opposition or Duel.                                                                               | Cups Align          | +2 to Dice Rolls when Defending (instead of +1).                                          |
+| **Knight** | 12     | Mars       | +1 to Dice Rolls when Attacking in a Duel or Gambit.                                                                                    | Rank Align: 9s      | +2 to Dice Rolls when Attacking (instead of +1).                                          |
+| **Queen**  | 13     | Moon       | Sulphur is a Wild Reagent — may substitute for any Reagent type when Firing a Crucible Card.                                            | Moon Align          | Refine 2 Sulphur for the cost of 1 Refinement action.                                     |
+| **King**   | 14     | Saturn     | Once per round: when you successfully Refine Sulphur, receive 1 additional Sulphur (2 total).                                           | Venus Align         | This effect may trigger twice per round.                                                  |
 
-*Card 2 — Wildcard Link + Active Effect*
+_Card 2 — Wildcard Link + Active Effect_
 
-| **Rank** | **RP** | **Planet** | **Wildcard Link** | **Active Effect** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Ace** | 1 | Sun | Wild Rank | Discard this card to cover the Ward entry fee for any Opposition or Gambit you declare. |
-| **2** | 2 | Moon | The Lovers | Wildcard for The Lovers. |
-| **3** | 3 | Jupiter | The Magician | Wildcard for The Magician. |
-| **4** | 4 | Venus | The Hanged Man | Wildcard for The Hanged Man. |
-| **5** | 5 | Mercury | Temperance | Wildcard for Temperance. |
-| **6** | 6 | Saturn | The Emperor | Wildcard for The Emperor. |
-| **7** | 7 | Mars | The Fool | Wildcard for The Fool. |
-| **8** | 8 | Jupiter | The Magician | Wildcard for The Magician. |
-| **9** | 9 | Venus | Temperance | Wildcard for Temperance. |
-| **10** | 10 | Saturn | The Emperor | Wildcard for The Emperor. |
-| **Page** | 11 | Mercury | Judgement | Wildcard for Judgement. |
-| **Knight** | 12 | Mars | The World | Wildcard for The World. |
-| **Queen** | 13 | Moon | — | While in your Spread, your Hand limit increases by +1. |
-| **King** | 14 | Saturn | — | Wands cards in your Spread cannot be targeted in Duels. This card remains vulnerable. |
+| **Rank**   | **RP** | **Planet** | **Wildcard Link** | **Active Effect**                                                                       |
+| :--------- | :----- | :--------- | :---------------- | :-------------------------------------------------------------------------------------- |
+| **Ace**    | 1      | Sun        | Wild Rank         | Discard this card to cover the Ward entry fee for any Opposition or Gambit you declare. |
+| **2**      | 2      | Moon       | The Lovers        | Wildcard for The Lovers.                                                                |
+| **3**      | 3      | Jupiter    | The Magician      | Wildcard for The Magician.                                                              |
+| **4**      | 4      | Venus      | The Hanged Man    | Wildcard for The Hanged Man.                                                            |
+| **5**      | 5      | Mercury    | Temperance        | Wildcard for Temperance.                                                                |
+| **6**      | 6      | Saturn     | The Emperor       | Wildcard for The Emperor.                                                               |
+| **7**      | 7      | Mars       | The Fool          | Wildcard for The Fool.                                                                  |
+| **8**      | 8      | Jupiter    | The Magician      | Wildcard for The Magician.                                                              |
+| **9**      | 9      | Venus      | Temperance        | Wildcard for Temperance.                                                                |
+| **10**     | 10     | Saturn     | The Emperor       | Wildcard for The Emperor.                                                               |
+| **Page**   | 11     | Mercury    | Judgement         | Wildcard for Judgement.                                                                 |
+| **Knight** | 12     | Mars       | The World         | Wildcard for The World.                                                                 |
+| **Queen**  | 13     | Moon       | —                 | While in your Spread, your Hand limit increases by +1.                                  |
+| **King**   | 14     | Saturn     | —                 | Wands cards in your Spread cannot be targeted in Duels. This card remains vulnerable.   |

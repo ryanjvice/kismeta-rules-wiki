@@ -9,7 +9,7 @@ When your Stone is in the Forge, it can be attacked. A rival may declare an Oppo
 
 #### WHEN AN OPPOSITION CAN BE DECLARED
 
-An Opposition can be declared during Pass 1 of Phase 3: Autumn, on each player’s own turn. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during this round’s Autumn phase.
+An Opposition can be declared during Step 2: Opposition of Phase 3: Autumn, on each player’s own turn. A valid target is any Stone currently Forging in the Crucible (positions 1, 3, 5, or 7) that entered the Forge in a previous round. Oppositions cannot be declared against a Stone placed in the Forge during this round’s Autumn phase.
 **Multiple Oppositions Against the Same Stone**
 
 More than one player may declare an Opposition against the same Forging Stone in the same round. The following rules govern this sequence:

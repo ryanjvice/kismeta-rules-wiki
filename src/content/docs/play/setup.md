@@ -80,12 +80,12 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 
 **I. CURATED BUILDS (Preset Difficulty Levels)**
 
-| GAME MODE ➡️ | 1️⃣ QUICKPLAY BEGINNER | | | | 2️⃣ STANDARD BALANCED | | | | 3️⃣ MAGNUS ALCHEMIST MASTERY | | | |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **PLAYERS ⬇️** | **A** | **B** | **C** | **D** | **A** | **B** | **C** | **D** | **A** | **B** | **C** | **D** |
-| **2 PLAYERS (8 Cards)** | 4 | 3 | 1 | 0 | 1 | 3 | 3 | 1 | 1 | 2 | 3 | 2 |
-| **3 PLAYERS (12 Cards)** | 4 | 6 | 2 | 0 | 2 | 4 | 4 | 2 | 1 | 3 | 5 | 3 |
-| **4 PLAYERS (16 Cards)** | 4 | 7 | 5 | 0 | 2 | 6 | 6 | 2 | 1 | 5 | 6 | 4 |
+| GAME MODE ➡️             | 1️⃣ QUICKPLAY BEGINNER |       |       |       | 2️⃣ STANDARD BALANCED |       |       |       | 3️⃣ MAGNUS ALCHEMIST MASTERY |       |       |       |
+| ------------------------ | --------------------- | ----- | ----- | ----- | -------------------- | ----- | ----- | ----- | --------------------------- | ----- | ----- | ----- |
+| **PLAYERS ⬇️**           | **A**                 | **B** | **C** | **D** | **A**                | **B** | **C** | **D** | **A**                       | **B** | **C** | **D** |
+| **2 PLAYERS (8 Cards)**  | 4                     | 3     | 1     | 0     | 1                    | 3     | 3     | 1     | 1                           | 2     | 3     | 2     |
+| **3 PLAYERS (12 Cards)** | 4                     | 6     | 2     | 0     | 2                    | 4     | 4     | 2     | 1                           | 3     | 5     | 3     |
+| **4 PLAYERS (16 Cards)** | 4                     | 7     | 5     | 0     | 2                    | 6     | 6     | 2     | 1                           | 5     | 6     | 4     |
 
 **II. RANDOM BUILDS: Let The Fates Decide (Random Difficulty)**
 
@@ -101,7 +101,7 @@ The Agekeeper is the curator of the round. You hold the Agekeeper's Key and are 
 
 - **Setting the Cosmic Age:** You roll the Cosmic Age Die to start the round.
 - **Managing the Kismeta Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
-- **Facilitate Autumn Turns:** Beginning with yourself, guide each player through their Autumn turn in clockwise order. Autumn resolves in two passes: in Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn; in Pass 2, each player Tempers and Fires on their turn.
+- **Facilitate Autumn Turns:** Beginning with yourself, guide each player through their Autumn turn in clockwise order. Each player surveys the Crucible, then resolves Opposition, Crucible Actions (Temper and/or Fire the Stone), and Leave Stasis in that sequence.
 - **Transit the Age:** Prepare the play area for the next Age. Pass the Agekeeper's Key clockwise at the end of every round.
 
 Who starts? Everyone rolls their dice; the highest roller becomes the first Agekeeper and takes the Agekeeper's Key first. Reroll if tied.

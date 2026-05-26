@@ -1,33 +1,33 @@
 {
-	"intro": "Each Cosmic Age moves through four seasons in order. Return here during play for a quick reference.",
-	"seasons": [
-		{
-			"id": "spring",
-			"icon": "🌸",
-			"title": "Spring",
-			"subtitle": "Set the Age & Gather Resources",
-			"summary": "Spring ushers in a new Cosmic Age. The Agekeeper rolls the Cosmic Age Die. All players determine their Zodiac Sign and receive their personal Cosmic Effect. The Harvest fills everyone's hand — manage your inventory wisely. Ends with Card Lock."
-		},
-		{
-			"id": "summer",
-			"icon": "☀️",
-			"title": "Summer",
-			"subtitle": "Trade, Build & Prepare",
-			"summary": "The Sun shines brightly as you and your fellow Alchemists focus on your plans. Summer is the perfect time for socializing — bartering over trades, initiating duels, and risking your luck in gambits. In clockwise order, beginning with the Agekeeper, each player takes actions multiple times and in any sequence."
-		},
-		{
-			"id": "autumn",
-			"icon": "🍂",
-			"title": "Autumn",
-			"subtitle": "Conduct the Great Work",
-			"summary": "Alchemists gather around the Crucible to advance their Stones. Two passes in clockwise order: Pass 1 — Leave Stasis and declare Oppositions; Pass 2 — Temper and Fire the Stone. The Agekeeper oversees the Forge."
-		},
-		{
-			"id": "winter",
-			"icon": "⛰️",
-			"title": "Winter",
-			"subtitle": "Final Actions & Reset",
-			"summary": "Winter closes the Cosmic Age. Unlock cards, take the optional Offering to the Age and Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise."
-		}
-	]
+  "intro": "Each Cosmic Age moves through four seasons in order. Return here during play for a quick reference.",
+  "seasons": [
+    {
+      "id": "spring",
+      "icon": "🌸",
+      "title": "Spring",
+      "subtitle": "Set the Age & Gather Resources",
+      "summary": "Spring ushers in a new Cosmic Age. Set the Cosmic Age, determine your Zodiac sign, and receive your Harvest. Manage your inventory wisely and prepare for the Age ahead."
+    },
+    {
+      "id": "summer",
+      "icon": "☀️",
+      "title": "Summer",
+      "subtitle": "Trade, Build & Prepare",
+      "summary": "The Sun shines brightly as you work to outpace your rivals, bartering over trades, initiating duels, and risking your luck in gambits."
+    },
+    {
+      "id": "autumn",
+      "icon": "🍂",
+      "title": "Autumn",
+      "subtitle": "Conduct the Great Work",
+      "summary": "As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta."
+    },
+    {
+      "id": "winter",
+      "icon": "⛰️",
+      "title": "Winter",
+      "subtitle": "Final Actions & Reset",
+      "summary": "Winter closes the Cosmic Age. Unlock cards, make an optional Offering to the Age or place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise."
+    }
+  ]
 }

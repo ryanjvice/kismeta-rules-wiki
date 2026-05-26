@@ -41,80 +41,80 @@ The cards are organized into four Groups (A–D) by difficulty tier. Actual per-
 
 **Reagent Key:** ● S = Sulphur (Red) · ● AR = Aqua Regia (Blue) · ● V = Vitriol (Green) · ● Q = Quicksilver (Yellow) · ○ = none required
 
-| **Group** | **Arcana** | **Difficulty** | **Cards** | **Game Modes** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Group A** | The Fool – The Empress (0–3) | Beginner | 4 cards | Heavy use in Quickplay; included in all build types at low counts. |
-| **Group B** | The Emperor – Wheel of Fortune (4–10) | Standard | 7 cards | Core of Standard and Magnus Alchemist builds. |
-| **Group C** | Justice – The Star (11–17) | Advanced | 7 cards | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
-| **Group D** | The Moon – The World (18–21) | Mastery | 4 cards | Magnus Alchemist builds only. |
+| **Group**   | **Arcana**                            | **Difficulty** | **Cards** | **Game Modes**                                                         |
+| :---------- | :------------------------------------ | :------------- | :-------- | :--------------------------------------------------------------------- |
+| **Group A** | The Fool – The Empress (0–3)          | Beginner       | 4 cards   | Heavy use in Quickplay; included in all build types at low counts.     |
+| **Group B** | The Emperor – Wheel of Fortune (4–10) | Standard       | 7 cards   | Core of Standard and Magnus Alchemist builds.                          |
+| **Group C** | Justice – The Star (11–17)            | Advanced       | 7 cards   | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
+| **Group D** | The Moon – The World (18–21)          | Mastery        | 4 cards   | Magnus Alchemist builds only.                                          |
 
 
 #### GROUP A — Beginner · Lead Stage · 4 Cards · Arcana 0–3
 
 Used heavily in Quickplay; foundation cards in all builds.
 
-| **Card** | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)** |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **The Fool** | 1 | 1 | 1 | 1 | One card of each Suit (1 Wand, 1 Cup, 1 Pentacle, 1 Sword) |
-| **The Magician** | 1 | 2 | 1 | 0 | A Pair of Mercury cards + a Pair of Swords |
-| **The High Priestess** | 1 | 1 | 0 | 1 | Three Court Cards — Cups & Pentacles suits only |
-| **The Empress** | 0 | 2 | 0 | 1 | A Pair of Venus cards + a Pair of Queens (any Suit) |
-| **Group A Total** | **3** | **6** | **2** | **3** | **14 Reagents** |
+| **Card**               | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)**                         |
+| :--------------------- | :-----: | :------: | :-----: | :-----: | :--------------------------------------------------------- |
+| **The Fool**           |    1    |    1     |    1    |    1    | One card of each Suit (1 Wand, 1 Cup, 1 Pentacle, 1 Sword) |
+| **The Magician**       |    1    |    2     |    1    |    0    | A Pair of Mercury cards + a Pair of Swords                 |
+| **The High Priestess** |    1    |    1     |    0    |    1    | Three Court Cards — Cups & Pentacles suits only            |
+| **The Empress**        |    0    |    2     |    0    |    1    | A Pair of Venus cards + a Pair of Queens (any Suit)        |
+| **Group A Total**      |  **3**  |  **6**   |  **2**  |  **3**  | **14 Reagents**                                            |
 
 
 #### GROUP B — Standard · Bronze Stage · 7 Cards · Arcana 4–10
 
 Core cards in Standard and Magnus Alchemist builds.
 
-| **Card** | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)** |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **The Emperor** | 1 | 0 | 2 | 0 | A Page, a Knight, a Queen & a King — any Suit |
-| **The Hierophant** | 0 | 3 | 0 | 0 | One Mercury + one Mars + one Venus + one Jupiter card |
-| **The Lovers** | 1 | 0 | 1 | 1 | A Pair of Venus cards + a Pair of Mars cards |
-| **The Chariot** | 1 | 1 | 0 | 1 | Four sequential Ranks: 2, 3, 5 & 8 — any Suit |
-| **Strength** | 1 | 0 | 2 | 0 | A Flush — 4 cards of the same Suit |
-| **The Hermit** | 2 | 1 | 0 | 0 | A Pair of Mercury cards + a Pair of 9s (any Suit) |
-| **Wheel of Fortune** | 0 | 0 | 1 | 2 | Three 10s — any Suit |
-| **Group B Total** | **6** | **5** | **6** | **4** | **21 Reagents** |
+| **Card**             | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)**                    |
+| :------------------- | :-----: | :------: | :-----: | :-----: | :---------------------------------------------------- |
+| **The Emperor**      |    1    |    0     |    2    |    0    | A Page, a Knight, a Queen & a King — any Suit         |
+| **The Hierophant**   |    0    |    3     |    0    |    0    | One Mercury + one Mars + one Venus + one Jupiter card |
+| **The Lovers**       |    1    |    0     |    1    |    1    | A Pair of Venus cards + a Pair of Mars cards          |
+| **The Chariot**      |    1    |    1     |    0    |    1    | Four sequential Ranks: 2, 3, 5 & 8 — any Suit         |
+| **Strength**         |    1    |    0     |    2    |    0    | A Flush — 4 cards of the same Suit                    |
+| **The Hermit**       |    2    |    1     |    0    |    0    | A Pair of Mercury cards + a Pair of 9s (any Suit)     |
+| **Wheel of Fortune** |    0    |    0     |    1    |    2    | Three 10s — any Suit                                  |
+| **Group B Total**    |  **6**  |  **5**   |  **6**  |  **4**  | **21 Reagents**                                       |
 
 
 #### GROUP C — Advanced · Silver Stage · 7 Cards · Arcana 11–17
 
 Higher distribution in Standard; heavier presence in Magnus Alchemist.
 
-| **Card** | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)** |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Justice** | 3 | 0 | 0 | 0 | Four Court Cards — Swords & Wands suits only |
-| **The Hanged Man** | 0 | 1 | 0 | 2 | A Pair of Mercury cards + a Pair of Moon cards |
-| **Death** | 0 | 1 | 1 | 1 | Three sequential Ranks: 4, 5 & 6 — any Suit |
-| **Temperance** | 1 | 0 | 2 | 0 | A Pair of Jupiter cards + a Pair of Saturn cards |
-| **The Devil** | 0 | 2 | 1 | 0 | Three 6s — any Suit |
-| **The Tower** | 0 | 1 | 1 | 1 | A Pair of Mars cards + a Pair of 5s (any Suit) |
-| **The Star** | 2 | 0 | 0 | 1 | A Straight — 4 cards of sequential Rank, any Suit (e.g. 5, 6, 7, 8) |
-| **Group C Total** | **6** | **5** | **5** | **5** | **21 Reagents** |
+| **Card**           | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)**                                  |
+| :----------------- | :-----: | :------: | :-----: | :-----: | :------------------------------------------------------------------ |
+| **Justice**        |    3    |    0     |    0    |    0    | Four Court Cards — Swords & Wands suits only                        |
+| **The Hanged Man** |    0    |    1     |    0    |    2    | A Pair of Mercury cards + a Pair of Moon cards                      |
+| **Death**          |    0    |    1     |    1    |    1    | Three sequential Ranks: 4, 5 & 6 — any Suit                         |
+| **Temperance**     |    1    |    0     |    2    |    0    | A Pair of Jupiter cards + a Pair of Saturn cards                    |
+| **The Devil**      |    0    |    2     |    1    |    0    | Three 6s — any Suit                                                 |
+| **The Tower**      |    0    |    1     |    1    |    1    | A Pair of Mars cards + a Pair of 5s (any Suit)                      |
+| **The Star**       |    2    |    0     |    0    |    1    | A Straight — 4 cards of sequential Rank, any Suit (e.g. 5, 6, 7, 8) |
+| **Group C Total**  |  **6**  |  **5**   |  **5**  |  **5**  | **21 Reagents**                                                     |
 
 
 #### GROUP D — Mastery · Gold Stage · 4 Cards · Arcana 18–21
 
 Exclusive to Magnus Alchemist builds. Most demanding cards.
 
-| **Card** | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)** |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **The Moon** | 0 | 0 | 0 | 3 | A Full House — Three cards of one Rank, two cards of another Rank |
-| **The Sun** | 0 | 0 | 3 | 0 | A Pair of Sun (planet) cards + a Pair of Wands |
-| **Judgement** | 2 | 0 | 1 | 0 | A Pair of Swords + a Pair of 2s (any Suit) |
-| **The World** | 0 | 1 | 0 | 2 | A Pair of Kings + a Pair of Pentacles |
-| **Group D Total** | **2** | **1** | **4** | **5** | **12 Reagents** |
+| **Card**          | **● S** | **● AR** | **● V** | **● Q** | **Alignment Requirement (Firing)**                                |
+| :---------------- | :-----: | :------: | :-----: | :-----: | :---------------------------------------------------------------- |
+| **The Moon**      |    0    |    0     |    0    |    3    | A Full House — Three cards of one Rank, two cards of another Rank |
+| **The Sun**       |    0    |    0     |    3    |    0    | A Pair of Sun (planet) cards + a Pair of Wands                    |
+| **Judgement**     |    2    |    0     |    1    |    0    | A Pair of Swords + a Pair of 2s (any Suit)                        |
+| **The World**     |    0    |    1     |    0    |    2    | A Pair of Kings + a Pair of Pentacles                             |
+| **Group D Total** |  **2**  |  **1**   |  **4**  |  **5**  | **12 Reagents**                                                   |
 
 
 #### REAGENT TOTALS ACROSS ALL GROUPS
 
 Combined Reagent demand across all 22 Crucible Cards. Actual per-game demand varies by which cards are drawn for that game.
 
-| | **● Sulphur** | **● Aqua Regia** | **● Vitriol** | **● Quicksilver** | **Total** |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| Group A — Lead (4 cards) | 3 | 6 | 2 | 3 | 14 |
-| Group B — Bronze (7 cards) | 6 | 5 | 6 | 4 | 21 |
-| Group C — Silver (7 cards) | 6 | 5 | 5 | 5 | 21 |
-| Group D — Gold (4 cards) | 2 | 1 | 4 | 5 | 12 |
-| **ALL GROUPS — Grand Total (22 cards)** | **17** | **17** | **17** | **17** | **68** |
+|                                         | **● Sulphur** | **● Aqua Regia** | **● Vitriol** | **● Quicksilver** | **Total** |
+| :-------------------------------------- | :-----------: | :--------------: | :-----------: | :---------------: | :-------: |
+| Group A — Lead (4 cards)                |       3       |        6         |       2       |         3         |    14     |
+| Group B — Bronze (7 cards)              |       6       |        5         |       6       |         4         |    21     |
+| Group C — Silver (7 cards)              |       6       |        5         |       5       |         5         |    21     |
+| Group D — Gold (4 cards)                |       2       |        1         |       4       |         5         |    12     |
+| **ALL GROUPS — Grand Total (22 cards)** |    **17**     |      **17**      |    **17**     |      **17**       |  **68**   |
