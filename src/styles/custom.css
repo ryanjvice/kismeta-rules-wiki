@@ -342,7 +342,8 @@ main:has(.kismeta-lore) h1#_top,
 }
 
 /* Doc tables — self-contained panels (matches Guided Play panel recipe) */
-.sl-markdown-content .doc-table {
+.sl-markdown-content .doc-table,
+.guided-play__body .doc-table {
 	margin: var(--kismeta-panel-margin);
 	border: var(--kismeta-panel-border);
 	border-radius: var(--kismeta-panel-radius);
@@ -351,7 +352,8 @@ main:has(.kismeta-lore) h1#_top,
 	-webkit-overflow-scrolling: touch;
 }
 
-.sl-markdown-content .doc-table table {
+.sl-markdown-content .doc-table table,
+.guided-play__body .doc-table table {
 	display: table;
 	width: 100%;
 	margin: 0;
@@ -360,13 +362,15 @@ main:has(.kismeta-lore) h1#_top,
 	background: transparent;
 }
 
-.sl-markdown-content .doc-table :is(th, td) {
+.sl-markdown-content .doc-table :is(th, td),
+.guided-play__body .doc-table :is(th, td) {
 	padding: 0.55rem 0.85rem;
 	border-bottom: 1px solid var(--sl-color-hairline);
 	vertical-align: top;
 }
 
-.sl-markdown-content .doc-table thead th {
+.sl-markdown-content .doc-table thead th,
+.guided-play__body .doc-table thead th {
 	background: var(--kismeta-panel-header-bg);
 	font-family: var(--kismeta-font-heading);
 	font-weight: 600;
@@ -375,15 +379,18 @@ main:has(.kismeta-lore) h1#_top,
 	border-bottom-color: var(--sl-color-hairline);
 }
 
-.sl-markdown-content .doc-table thead tr:first-child th:first-child {
+.sl-markdown-content .doc-table thead tr:first-child th:first-child,
+.guided-play__body .doc-table thead tr:first-child th:first-child {
 	border-top-left-radius: var(--kismeta-panel-radius);
 }
 
-.sl-markdown-content .doc-table thead tr:first-child th:last-child {
+.sl-markdown-content .doc-table thead tr:first-child th:last-child,
+.guided-play__body .doc-table thead tr:first-child th:last-child {
 	border-top-right-radius: var(--kismeta-panel-radius);
 }
 
-.sl-markdown-content .doc-table tbody tr:last-child :is(th, td) {
+.sl-markdown-content .doc-table tbody tr:last-child :is(th, td),
+.guided-play__body .doc-table tbody tr:last-child :is(th, td) {
 	border-bottom: none;
 }
 

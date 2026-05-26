@@ -20,11 +20,6 @@
 			"id": "deal",
 			"label": "Deal the Harvest",
 			"body": "The Agekeeper deals each player their full Harvest total face-down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered.)"
-		},
-		{
-			"id": "commune",
-			"label": "Commune with the Cards",
-			"body": "Each player arranges their full hand across their Spread, Hand, and Arcanum zones. Consider your goals for the round."
 		}
 	]
 }
