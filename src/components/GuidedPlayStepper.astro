@@ -168,8 +168,11 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 				></a>
 			</div>
 			<div class="guided-play__footer-nav">
-				<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="back"></button>
-				<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="next"></button>
+				<span class="guided-play__footer-nav-label" data-footer-nav-label></span>
+				<div class="guided-play__footer-nav-btns">
+					<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="back"></button>
+					<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="next"></button>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -483,6 +486,9 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'play/round-at-a-glance');
 					.replace('{total}', String(step.phaseTotal));
 			}
 			setText('[data-progress-text]', progressText);
+
+			const footerNavLabel = root.querySelector<HTMLElement>('[data-footer-nav-label]')!;
+			footerNavLabel.textContent = progressText;
 
 			const bar = root.querySelector<HTMLElement>('[data-progress-fill]')!;
 			const pct = (stepIndex / stepCount) * 100;

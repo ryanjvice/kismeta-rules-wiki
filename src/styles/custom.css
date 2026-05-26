@@ -645,6 +645,25 @@ main:has(.kismeta-lore) h1#_top,
 
 .guided-play__footer-nav {
 	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	border: 1px solid color-mix(in srgb, var(--sl-color-accent) 28%, var(--sl-color-hairline));
+	border-radius: 0.5rem;
+	padding: 0.65rem 0.85rem 0.75rem;
+}
+
+.guided-play__footer-nav-label {
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: var(--sl-color-gray-3);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	padding-bottom: 0.1rem;
+}
+
+.guided-play__footer-nav-btns {
+	display: flex;
 	justify-content: space-between;
 	gap: 0.75rem;
 }
@@ -710,7 +729,7 @@ main:has(.kismeta-lore) h1#_top,
 }
 
 @media (max-width: 50rem) {
-	.guided-play__footer-nav .guided-play__btn {
+	.guided-play__footer-nav-btns .guided-play__btn {
 		flex: 1;
 		min-width: 0;
 	}
