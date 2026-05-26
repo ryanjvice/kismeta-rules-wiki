@@ -5,34 +5,10 @@ description: "Quick seasonal reference for in-game lookup."
 
 ## ROUND AT A GLANCE
 
-<div class="game-table game-table--season-cards" data-table-id="round-at-a-glance" data-locale="en"><p class="game-table__intro">Each Cosmic Age moves through four seasons in order. Return here during play for a quick reference.</p><div class="game-table__season-grid"><article class="game-table__season-card" data-season="spring">
-  <header class="game-table__season-header">
-    <span class="game-table__season-icon" aria-hidden="true">🌸</span>
-    <h3 class="game-table__season-title">Spring</h3>
-    <p class="game-table__season-subtitle">Set the Age &amp; Gather Resources</p>
-  </header>
-  <p class="game-table__season-summary">Set Cosmic Age, roll Zodiac Signs, Harvest, Commune, then Card Lock until Winter.</p>
-</article><article class="game-table__season-card" data-season="summer">
-  <header class="game-table__season-header">
-    <span class="game-table__season-icon" aria-hidden="true">☀️</span>
-    <h3 class="game-table__season-title">Summer</h3>
-    <p class="game-table__season-subtitle">Trade, Build &amp; Prepare</p>
-  </header>
-  <p class="game-table__season-summary">Turn-based: Craft (activate, houses, refine) and Consort (trade, duel, gambit) in any order.</p>
-</article><article class="game-table__season-card" data-season="autumn">
-  <header class="game-table__season-header">
-    <span class="game-table__season-icon" aria-hidden="true">🍂</span>
-    <h3 class="game-table__season-title">Autumn</h3>
-    <p class="game-table__season-subtitle">Conduct the Great Work</p>
-  </header>
-  <p class="game-table__season-summary">Fixed order: Leave Stasis, Opposition, Temper, Fire the Stone. Agekeeper oversees the Forge.</p>
-</article><article class="game-table__season-card" data-season="winter">
-  <header class="game-table__season-header">
-    <span class="game-table__season-icon" aria-hidden="true">⛰️</span>
-    <h3 class="game-table__season-title">Winter</h3>
-    <p class="game-table__season-subtitle">Final Actions &amp; Reset</p>
-  </header>
-  <p class="game-table__season-summary">Unlock cards, optional Offering and Wager, enforce limits, shuffle deck, pass the Key.</p>
-</article></div></div>
+| 🌸 **SPRING** Set the Age & Gather Resources | 1. Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2. Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3. Harvest Kismeta Cards: Base Harvest + Bonus Cards + Agekeeper's Boon. 4. Commune with the Cards: Build your Spread, Hand, and Arcanum zones for the round. 5. Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
+| --- | --- |
+| ☀️ **SUMMER** Trade, Build & Prepare | **CRAFT RESOURCES (TAKE ANY ACTION)** 1. Activate Crucible Card: Collect Card sets listed on the Codex & discard to activate. 2. Build Astral House: Pay Planet-matching cards to permanently claim a Zodiac Sign. 3. Craft Reagent: Collect Suited cards exceeding the current RP Threshold to Craft Reagents. **CONSORT WITH RIVALS (TAKE ANY ACTION)** 4. Trade: Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely. 5. Duel: Wager cards and roll dice against a rival to steal a card from their Spread. 6. Gambit: Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it by swapping one of your own Active Crucible Cards. |
+| 🍂 **AUTUMN** Conduct the Great Work | **FIRST PASS** 1. Leave Stasis ❄️: Move your Stone to its previous Forge spot. If occupied, wait or, in Step 2, declare Stasis Opposition to reclaim it. Winning swaps your Stone into the Forge and sends the Defender to Stasis; losing means another Stasis round. 2. Opposition ⚔️: Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. **SECOND PASS** 3. Temper: After a full round in the Forge, move your Stone to the next Mantle Ring space. 4. Fire the Stone: Complete an active Crucible card and move your Stone into the Forge. |
+| ⛰️ **WINTER** Final Actions of the Cosmic Age & Reset Board | 1. Card Unlock: Move cards freely between your Hand and Spread. 2. Offering to the Age: Offer cards matching the Cosmic Age to earn a Bonus next round. 3. Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. 4. Enforce Card Limits: Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only. 5. Transit the Age: Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
 
 📌 _Return to this table during play as a quick reference._

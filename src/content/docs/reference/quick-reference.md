@@ -5,22 +5,24 @@ description: "Cosmic Ages, elements, inventory zones, alignment, reagents, and C
 
 ## Cosmic Ages & Effects
 
+Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect applies to all players. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If your rolled Sign matches the Cosmic Age, the effect is simply active. It doesn't apply twice.
+
 | 🛞          | SIGN        | PLANET(S)  | ELEMENT | EFFECT                                    |
 | ----------- | ----------- | ---------- | ------- | ----------------------------------------- |
 | COSMIC AGES | Aries       | Mars       | Fire    | +1 Base Harvest Card each round           |
 |             | Taurus      | Venus      | Earth   | Court Cards of Pentacles are a Wild Suit. |
-|             | Gemini      | Mercury    | Air     | −3 RP to refine Quicksilver               |
+|             | Gemini      | Mercury    | Air     | −3 RP to Craft Quicksilver               |
 |             | Cancer      | Sun /Moon  | Water   | +1 Base Harvest Card each round           |
 |             | Leo         | Sun / Moon | Fire    | Court Cards of Wands are a Wild Suit.     |
-|             | Virgo       | Mercury    | Earth   | −3 RP to refine Vitriol                   |
+|             | Virgo       | Mercury    | Earth   | −3 RP to Craft Vitriol                   |
 |             | Libra       | Venus      | Air     | +1 Base Harvest Card each round           |
 |             | Scorpio     | Mars       | Water   | Court Cards of Cups are a Wild Suit.      |
-|             | Sagittarius | Jupiter    | Fire    | −3 RP to refine Sulphur                   |
+|             | Sagittarius | Jupiter    | Fire    | −3 RP to Craft Sulphur                   |
 |             | Capricorn   | Saturn     | Earth   | +1 Base Harvest Card each round           |
 |             | Aquarius    | Saturn     | Air     | Court Cards of Swords are a Wild Suit.    |
-|             | Pisces      | Jupiter    | Water   | −3 RP to refine Aqua Regia                |
+|             | Pisces      | Jupiter    | Water   | −3 RP to Craft Aqua Regia                |
 
-## Element / Suit / Reagent / Cauldron
+## Correspondence
 
 | CORRESPONDENCE: ELEMENTS, CARD SUITS, REAGENTS, CAULDRONS & COLOR |             |               |             |              |
 | ----------------------------------------------------------------- | ----------- | ------------- | ----------- | ------------ |
@@ -43,7 +45,7 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 **Major Arcana (22 cards) - two varieties:**
 
-| Adept Cards (11)                                                   | Fate Cards (11)                            |
+| Specialist Cards (11)                                                   | Fate Cards (11)                            |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
 | Carries three Aspects; used in Harvest & Alignments                     | No Aspects; effect only                        |
@@ -52,8 +54,8 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used when Refining Reagents and in other contexts.
-- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used when Crafting Reagents and in other contexts.
+- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
 ## YOUR INVENTORY: Spread, Hand & Arcanum Zones
@@ -64,17 +66,17 @@ You always manage your inventory of Kismeta Cards across three zones.
 | ------- | --------------------------------------------- | ---------- | -------- | ---------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------- |
 | SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | No card limit during a round | Activating Crucible Cards                                                                       | No restrictions               |
 |         |                                               |            |          |                              | Meeting Forge Alignment                                                                         |                               |
-|         |                                               |            |          | 7-cards; enforced in Winter  | Refining Reagents                                                                               |                               |
+|         |                                               |            |          | 7-cards; enforced in Winter  | Crafting Reagents                                                                               |                               |
 |         |                                               |            |          |                              | Building Astral Houses                                                                          |                               |
 |         |                                               |            |          |                              | Trading, wagering & targeting in Duels                                                          |                               |
-| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | Max 5 cards                  | Reagent Refinement alongside Spread cards (discarded after)                                     | Duels                         |
+| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | Max 5 cards                  | Reagent Crafting alongside Spread cards (discarded after)                                       | Duels                         |
 |         |                                               |            |          |                              |                                                                                                 | Crucible Card activation      |
 |         |                                               |            |          |                              | Opposition contributions (discarded after)                                                      | Alignments                    |
 |         |                                               |            |          |                              |                                                                                                 | Trades, Wagers, Astral Houses |
-| ARCANUM | MAJOR ARCANA: Fate & Adept           | Visible    | Active   | Adept: Max 2 cards      | Active Major Arcana effects                                                                     | Duels                         |
-|         |                                               |            |          |                              | Adept Aspects (Harvest & Alignments)                                                       | Crucible Card activation      |
-|         |                                               |            |          | Fate: No limit           | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
-|         |                                               |            |          |                              | Adept cards: must be purchased to enter; swap by paying new card's cost                    | Trades, Wagers, Astral Houses |
+| ARCANUM | MAJOR ARCANA: Fate & Specialist Cards         | Visible    | Active   | Specialist: Max 2 cards      | Active Major Arcana effects                                                                     | Duels                         |
+|         |                                               |            |          |                              | Specialist Aspects (Harvest & Alignments)                                                       | Crucible Card activation      |
+|         |                                               |            |          | Fate: No limit               | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end     | Alignments                    |
+|         |                                               |            |          |                              | Specialist cards: must be purchased to enter; swap by paying the new card's cost                | Trades, Wagers, Astral Houses |
 
 ## Alignment Scoring
 
@@ -97,9 +99,22 @@ You always manage your inventory of Kismeta Cards across three zones.
 
 ## Reagent Thresholds
 
-| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO REFINE REAGENTS |                  |
+**Quickplay / 1st Playthrough**
+
+| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
 | ------------------------------------------------------------ | ---------------- |
-| **MOLTEN COALS IN CAULDRON**                                 | **RP THRESHOLD** |
+| **MOLTEN COALS IN ANY CAULDRON**                             | **RP THRESHOLD** |
+| 0                                                            | ≥ 25 RP          |
+| 1                                                            | ≥ 20 RP          |
+| 2                                                            | ≥ 15 RP          |
+| 3                                                            | ≥ 10 RP          |
+| 4                                                            | ≥ 5 RP           |
+
+**Standard & Magnus Alchemist**
+
+| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
+| ------------------------------------------------------------ | ---------------- |
+| **MOLTEN COALS IN ONE CAULDRON**                             | **RP THRESHOLD** |
 | 0                                                            | ≥ 30 RP          |
 | 1                                                            | ≥ 25 RP          |
 | 2                                                            | ≥ 20 RP          |

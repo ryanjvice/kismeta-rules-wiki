@@ -17,14 +17,14 @@
 						"id": "activate",
 						"label": "Activate Crucible Card",
 						"kind": "optional",
-						"body": "Collect and discard the card set from your Codex; place Molten Coal in a Cauldron.",
+						"body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and drop the Molten Coal into a Cauldron. Flip the Crucible Card face-up — it is now Active.",
 						"learnMoreHash": "1-activate-crucible-cards"
 					},
 					{
 						"id": "houses",
 						"label": "Build Astral House",
 						"kind": "optional",
-						"body": "Pay Planet-matching Common Cards; place 🏰 on a Zodiac Sign (Standard: 2 cards; Quickplay: 1).",
+						"body": "Pay Planet-matching Common Cards; place 🏰 on a Zodiac Sign. Each House is a permanent Alignment source for every future Harvest.",
 						"learnMoreHash": "2-build-astral-houses",
 						"gameModeNote": {
 							"quickplay": "Quickplay: 1 matching card.",
@@ -32,11 +32,11 @@
 						}
 					},
 					{
-						"id": "refine",
-						"label": "Refine Reagent",
+						"id": "craft-reagent",
+						"label": "Craft Reagent",
 						"kind": "optional",
-						"body": "Discard suited cards meeting the Cauldron RP Threshold; take 1 Reagent.",
-						"learnMoreHash": "3-refine-reagents"
+						"body": "Collect suited cards from your Spread and/or Hand whose combined Rank Points meet or exceed your current Cauldron RP Threshold. Discard the cards and take 1 Reagent token.",
+						"learnMoreHash": "3-craft-reagents"
 					}
 				]
 			},
@@ -49,7 +49,7 @@
 						"id": "trade",
 						"label": "Trade",
 						"kind": "optional",
-						"body": "Exchange Common Cards, Reagents, or Active Crucible Cards.",
+						"body": "Freely exchange Kismeta Cards, Reagents, or Active Crucible Cards with any rival. Trading is the only way to transfer Reagents and Active Crucible Cards between players.",
 						"learnMoreHash": "4-trade",
 						"gameModeNote": {
 							"magnus": "Misaligned players trade 2:1 in favor of the non-initiating player."
@@ -59,14 +59,14 @@
 						"id": "duel",
 						"label": "Duel",
 						"kind": "optional",
-						"body": "Wager a Spread card; roll dice — winner steals a card from rival's Spread.",
+						"body": "Wager a card from your Spread; roll dice against a rival — winner steals the targeted card from the Defender's Spread.",
 						"learnMoreHash": "5-duel"
 					},
 					{
 						"id": "gambit",
 						"label": "Gambit",
 						"kind": "optional",
-						"body": "Summer only. Match rival's Active Crucible Alignment; roll to swap Crucible Cards.",
+						"body": "Summer only. Show your Spread satisfies a rival's Active Crucible Card Alignment; pay any Ward Reagent entry fee; roll dice — winner swaps the two Active Crucible Cards.",
 						"learnMoreHash": "6-gambit"
 					}
 				]

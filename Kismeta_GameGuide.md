@@ -50,7 +50,7 @@
 
 # KISMETA
 
-Kismeta: Alchemists of the Great Year is a strategic card-and-dice game in which you and up to three friends take on the roles of rival Alchemists. Your goal is to complete the Alchemists' Great Work, transforming your Philosopher's Stone from Lead into Gold. Journey through the Cosmic Ages of the Great Year as you pursue this transformation, all the while under the watchful gaze of the Fates, the eternal keepers of the Crucible of Kismeta.
+Kismeta: Alchemists of the Great Year is a strategic card-and-dice game where you and up to three friends take on the roles of rival Alchemists. Your quest is to complete the Great Work, transforming your Philosopher's Stone from Lead into Gold. Travel through the Cosmic Ages of the Great Year, pursuing this transformation under the watchful gaze of the Fates, the eternal guardians of the Crucible of Kismeta.
 
 **Players:** 2–4
 
@@ -65,9 +65,9 @@ Kismeta: Alchemists of the Great Year is a strategic card-and-dice game in which
 **Board & Cards**
 
 - **1 Great Year Board**
-- **134 Kismeta Cards** (112 Minor Arcana + 22 Major Arcana: 11 Adept, 11 Fate)
-- **22 Crucible Cards** (Groups A, B, C, D; 4 per player; per game)
-- **4 Crucible Codex Cards** (1 per player; dual-sided: Codex + Quick Reference Guide)
+- **Kismeta Card Deck** (134 Cards: 112 Minor Arcana + 22 Major Arcana: 11 Adept, 11 Fate)
+- **Crucible Card Deck** (22 Cards: Groups A, B, C, D; 4 per player; per game)
+- **4 Cauldron Codex Cards** (1 per player; dual-sided: Codex + Quick Reference Guide)
 
 **Dice**
 
@@ -112,30 +112,28 @@ The Crucible of Kismeta awaits.
 
 ## The Great Year
 
-The game unfolds across the many Cosmic Ages of the Great Year. Each game represents a single Great Year, the grand cycle of your voyage across the Universe.
+Each game of Kismeta: Alchemists of the Great Year takes you on a journey through a single Great Year, the grand cycle of the solar system spiraling around the galaxy's core. You experience each Cosmic Age, represented by a Zodiac sign chosen at random at the start of each round by the Agekeeper's dice. These signs hold unique Aspects and Effects that shape resource flow and interactions throughout the cycle. You'll roll your Zodiac dice to determine your own sign for the Age, receiving that Sign's Cosmic Effect as your personal blessing for the round, and work to align your Aspects with the Cosmic Age, gathering valuable Kismeta Cards.
 
-Each Cosmic Age is ruled by a Zodiac sign, randomly selected at the start of each round by the Agekeeper's dice roll. As a result, no two Great Years will play out the same way. Each Zodiac sign has unique Aspects and Effects that influence resource availability and interactions with cosmic forces.
-
-Cosmic Ages progress through four Seasons, each offering different actions to advance your Great Work: Spring, when the Age is set, and resources are gathered; Summer, when you trade, duel, and prepare; Autumn, when Stones are fired into the Forge to advance the Great Work; and Winter, when the Age concludes, and the board resets for the next cycle. As you journey through the Ages, focus on maximizing your Alignments with each Cosmic Age, managing your resources, enduring the Crucible's heat, and outlasting your opponents.
+The Cosmic Age unfolds through four Seasons, each offering distinct opportunities to advance your Great Work: Spring sets the Age and gathers resources; Summer is for trading, dueling, and preparing; Autumn fires Stones into the Forge to push your progress; and Winter marks the end, resetting the board for the next cycle. As you traverse these Ages, focus on maximizing your Alignments, managing resources, enduring the Crucible's heat, and outlasting your rivals.
 
 ## The Great Work
 
-The Great Work, the transmutation of lead into the golden Philosopher's Stone, motivates all your seasonal actions. Cards drawn from the Harvest are refined into Reagents, which are used to complete Crucible Cards, guiding your Philosopher's Stone through each Stage of Transmutation in the Crucible Forge.
+This is your driving objective: to be the first to transform lead into the legendary Philosopher's Stone. This pursuit guides all your seasonal actions. Cards from the Harvest become Reagents, which you use to complete Crucible Cards, guiding your Stone through each Stage of Transmutation in the Forge.
 
-While your Stone remains in the Forge, it must be protected. Opposing Alchemists may challenge you with a test of Opposition. If they succeed, your Philosopher's Stone enters Stasis, requiring a full round before you can resume forging.
+Keep your Stone protected in the Forge, for opposing Alchemists may challenge you with Opposition tests. If they succeed, your Stone enters Stasis, pausing your progress until you can resume forging.
 
 ## The Altar of Kismeta
 
-The first Alchemist to complete all four Crucible Cards and advance their Stone through every Stage of Transformation to the Altar of Kismeta completes the Great Work and wins the game.
+Ultimately, the first Alchemist to complete all four Crucible Cards and carry their Stone through every Stage of Transformation to the Altar of Kismeta will finish the Great Work and claim victory.
 
 All Hail! All Hail!
-The Magnus Alchemist Grandis Illuminatus ex Kismeta!
+The Magnus Alchemista Grandis Illuminatus ex Kismeta!
 
 ---
 
 # SETUP
 
-## I. Setting the Table
+## I. Set the Table
 
 - Place the Great Year Board game board in the center of the play area.
 - Select a Game Mode before continuing. _(Next page)_
@@ -147,12 +145,12 @@ The Magnus Alchemist Grandis Illuminatus ex Kismeta!
   - 1 Cosmic Age Dice: (12-sided Die, black)
   - Reagents: Sort by color and keep nearby.
 
-## II. Becoming an Alchemist
+## II. Become an Alchemist
 
 Choose a color (Red, Green, Blue, or White) and take the following matching gear:
 
 - **4 Astral House Tokens:** Tokens with 🏰 symbol; Keep these nearby.
-- **1 Crucible Codex:** Dual-sided card; Crucible Codex & Quick Reference Guide on reverse.
+- **1 Cauldron Codex:** Dual-sided card; Cauldron Codex & Quick Reference Guide on reverse.
 - **4 Molten Coals:** Small black crystal pieces; Keep these nearby.
 - **1 Meeple:** Wooden game piece; Keep this nearby.
 - **1 Philosopher's Stone:** Place this on the "START" space in your section of the Mantle Ring.
@@ -169,7 +167,7 @@ _Recommended for first playthroughs._
 
 - **Crucible Deck:** Use the Quickplay deck build.
 - **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
-- **Cauldron Thresholds:** Each Molten Coal placed in any Cauldron reduces the Refinement cost for all Reagents BY 5 RP. The Base RP Threshold to start is 25 RP.
+- **Cauldron Thresholds:** Each Molten Coal placed in any Cauldron reduces the Crafting cost for all Reagents BY 5 RP. The Base RP Threshold to start is 25 RP.
 
 ### 2️⃣ STANDARD GAME
 
@@ -204,25 +202,37 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 - Choose the Game Mode you want to play (I. Curated Builds, or II. Random Build). Follow the Table below to determine the number of cards needed from each Card Group per number of players in the game.
 - Blindly draw the appropriate number of cards from each group, as shown below.
 
-<!-- CRUCIBLE_DECK_BUILDS -->
+**I. CURATED BUILDS (Preset Difficulty Levels)**
+
+| GAME MODE ➡️ | 1️⃣ QUICKPLAY BEGINNER | | | | 2️⃣ STANDARD BALANCED | | | | 3️⃣ MAGNUS ALCHEMIST MASTERY | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **PLAYERS ⬇️** | **A** | **B** | **C** | **D** | **A** | **B** | **C** | **D** | **A** | **B** | **C** | **D** |
+| **2 PLAYERS (8 Cards)** | 4 | 3 | 1 | 0 | 1 | 3 | 3 | 1 | 1 | 2 | 3 | 2 |
+| **3 PLAYERS (12 Cards)** | 4 | 6 | 2 | 0 | 2 | 4 | 4 | 2 | 1 | 3 | 5 | 3 |
+| **4 PLAYERS (16 Cards)** | 4 | 7 | 5 | 0 | 2 | 6 | 6 | 2 | 1 | 5 | 6 | 4 |
+
+**II. RANDOM BUILDS: Let The Fates Decide (Random Difficulty)**
+
+i. Shuffle all 22 Crucible Cards together.
+ii. Blindly draw four cards for each player in the game.
 
 - Once all cards have been drawn, shuffle and form the Crucible Deck for this game. Place the Crucible Deck beside the Great Year board.
 - Return any unused Crucible Cards to the game box; they will not be used in this game.
 
-## V. Selecting the First Agekeeper
+## V. Determine the First Agekeeper
 
 The Agekeeper is the curator of the round. You hold the Agekeeper's Key and are responsible for:
 
 - **Setting the Cosmic Age:** You roll the Cosmic Age Die to start the round.
 - **Managing the Kismeta Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
-- **Facilitate Autumn Turns:** Beginning with yourself, guide each player through their Autumn turn in clockwise order. Autumn resolves in two passes: in Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn; in Pass 2, each player Tempers and Fires on their turn in the same clockwise order. Oppositions are declared by each player on their own turn — you no longer survey the Forge in advance.
+- **Facilitate Autumn Turns:** Beginning with yourself, guide each player through their Autumn turn in clockwise order. Autumn resolves in two passes: in Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn; in Pass 2, each player Tempers and Fires on their turn.
 - **Transit the Age:** Prepare the play area for the next Age. Pass the Agekeeper's Key clockwise at the end of every round.
 
 Who starts? Everyone rolls their dice; the highest roller becomes the first Agekeeper and takes the Agekeeper's Key first. Reroll if tied.
 
 The Agekeeper's Key is passed clockwise at the end of each round.
 
-## VI. Dealing Crucible Cards
+## VI. Deal the Crucible Cards
 
 The first Agekeeper prepares the Crucible Cards before the game begins.
 
@@ -239,7 +249,7 @@ The first Agekeeper prepares the Crucible Cards before the game begins.
   - Take your four Molten Coals and place one atop each of your Crucible Cards.
   - The cards are now Dormant, their Formulae hidden.
 
-📌 **Note:** The position of each card (I, II, III, & IV; from left to right) corresponds to a Formula shown on your Crucible Codex.
+📌 **Note:** The position of each card (I, II, III, & IV; from left to right) corresponds to a Formula shown on your Cauldron Codex.
 
 - **Deal Starting Kismeta Cards:** The Agekeeper deals one face-up card from the Common Deck to each player's Spread. If any player receives a Major Arcana, return it to the deck, reshuffle, tap twice to cleanse, and redeal until all players hold a Minor Arcana.
 
@@ -253,7 +263,11 @@ Each Cosmic Age (round) moves through four seasons in order: Spring, Summer, Aut
 
 ## ROUND AT A GLANCE
 
-<!-- TABLE:round-at-a-glance -->
+| 🌸 **SPRING** Set the Age & Gather Resources | 1. Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2. Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3. Harvest Kismeta Cards: Base Harvest + Bonus Cards + Agekeeper's Boon. 4. Commune with the Cards: Build your Spread, Hand, and Arcanum zones for the round. 5. Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
+| --- | --- |
+| ☀️ **SUMMER** Trade, Build & Prepare | **CRAFT RESOURCES (TAKE ANY ACTION)** 1. Activate Crucible Card: Collect Card sets listed on the Codex & discard to activate. 2. Build Astral House: Pay Planet-matching cards to permanently claim a Zodiac Sign. 3. Craft Reagent: Collect Suited cards exceeding the current RP Threshold to Craft Reagents. **CONSORT WITH RIVALS (TAKE ANY ACTION)** 4. Trade: Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely. 5. Duel: Wager cards and roll dice against a rival to steal a card from their Spread. 6. Gambit: Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it by swapping one of your own Active Crucible Cards. |
+| 🍂 **AUTUMN** Conduct the Great Work | **FIRST PASS** 1. Leave Stasis ❄️: Move your Stone to its previous Forge spot. If occupied, wait or, in Step 2, declare Stasis Opposition to reclaim it. Winning swaps your Stone into the Forge and sends the Defender to Stasis; losing means another Stasis round. 2. Opposition ⚔️: Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. **SECOND PASS** 3. Temper: After a full round in the Forge, move your Stone to the next Mantle Ring space. 4. Fire the Stone: Complete an active Crucible card and move your Stone into the Forge. |
+| ⛰️ **WINTER** Final Actions of the Cosmic Age & Reset Board | 1. Card Unlock: Move cards freely between your Hand and Spread. 2. Offering to the Age: Offer cards matching the Cosmic Age to earn a Bonus next round. 3. Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. 4. Enforce Card Limits: Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only. 5. Transit the Age: Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
 
 📌 _Return to this table during play as a quick reference._
 
@@ -263,7 +277,7 @@ Each Cosmic Age (round) moves through four seasons in order: Spring, Summer, Aut
 
 ### Set the Age & Gather Resources
 
-Spring opens every Cosmic Age. The Agekeeper rolls the Cosmic Age Die, all players determine their Zodiac Sign, and the Harvest fills everyone's hand for the round ahead.
+Spring ushers in a new Cosmic Age. The Agekeeper rolls the Cosmic Age Die. All players determine their Zodiac Sign, and the Harvest fills everyone's hand for the upcoming round. Manage your inventory wisely, and what you sow in the Spring may well bear fruit in seasons yet to come.
 
 | 🌸 SPRING Set the Age & Gather Resources | 1️⃣ Set the Cosmic Age: Agekeeper rolls the Cosmic Age Die: Read the Sign & Aspects aloud. 2️⃣ Determine Your Sign: All players roll their Zodiac Die. Move their Meeple to their Sign. 3️⃣ Harvest: Base Harvest + Bonus Cards + Agekeeper's Boon (when applicable). 4️⃣ Commune: Build your Spread, Hand, and Arcanum zones. Consider your goals. 5️⃣ Card Lock: Cards are locked between your Hand and Spread until Phase 4: Winter. |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -277,39 +291,74 @@ Spring opens every Cosmic Age. The Agekeeper rolls the Cosmic Age Die, all playe
 ### 2️⃣ Determine Your Sign
 
 - **Roll your Zodiac Die:** Each player rolls their color-matched 12-sided die simultaneously.
-- **Move your Meeple:** Advance it to the Sign you rolled on the Zodiac Wheel. Your rolled Sign's Aspects are now your Alignment source for this round's Harvest and all subsequent calculations.
+- **Move your Meeple:** Advance it to the Sign you rolled on the Zodiac Wheel. Your Sign is your cosmic identity for this Age. It shapes your Alignments and grants you a personal Cosmic Effect.
 
-### 3️⃣ Harvest
+Each player receives the Cosmic Effect listed for their own rolled Sign, active throughout the round. This is in addition to the shared Cosmic Age Effect, which applies to all players. If your Sign matches the current Cosmic Age, its Cosmic Effect is simply active for you — it does not stack or apply twice.
 
-The Agekeeper deals cards in the following order. All Bonus Cards are determined before any are dealt.
+📌 **Note:** Your Sign's Aspects (Sign, Planet, Element) also serve as an Alignment source for this round's Harvest and all other interactions. Both your personal Cosmic Effect and your Alignment contributions remain active until Winter Reset.
 
-<!-- TABLE:harvest-order -->
+### 3️⃣ Harvest Kismeta Cards
+
+All players earn a base of 2 Kismeta Cards at the start of every Harvest. You can earn additional Bonus Cards by aligning items from your inventory with the Cosmic Age's Aspects. Each player calculates their own total; the Agekeeper confirms and deals the full Harvest.
+
+#### Harvest Sources
+
+- **Zodiac Die** — Compare your rolled Sign's Aspects (Sign, Planet, Element) against the Cosmic Age. Earn the bonus for the highest match.
+- **Astral Houses** — Each Astral House you've built is checked independently. Multiple Astral Houses each earn their own bonus and stack with all other sources.
+- **Specialist Cards** — Each active Specialist Card in your Arcanum carries three Aspects. Each one is scored independently as a Harvest Source.
+- **Spread Element Match** — Before the Harvest deal, count the cards already in your Spread whose suit matches the Cosmic Age's Element. Each matching card earns +1 card.
+
+⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-matching Aspect. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, the score is **+3**, not +5.
+
+⚠️ **If the Common Deck runs out during Harvest:** Immediately reshuffle the discard pile to form a new deck and continue dealing. If no discard pile is available, the Fates intervene: all players discard their entire Hand to the Common Deck, which is then reshuffled, and the Harvest continues from there.
+
+| 🌸 HARVEST BONUS SCORING | | |
+| --- | --- | --- |
+| Each Harvest Source scores its single highest-matching Aspect. Do not stack multiple Aspects from the same source. | | |
+| **ASPECT MATCH** | **BONUS CARDS (PER SOURCE)** | |
+| Sign | +3 Cards | |
+| Planet | +2 Cards | |
+| Element | +1 Card | |
+| No Match | +0 | |
+
+#### Order of Operations
+
+| STEP | ACTION |
+| ---- | ------ |
+| 1. Base Harvest | All players begin with 2 cards. This is always granted regardless of Alignment. |
+| 2. Calculate Bonus Cards | Each player tallies bonus cards from all applicable Harvest Sources using the Bonus Scoring table above. (Zodiac Die + Astral Houses + Specialist Cards + Spread Element Match) |
+| 3. Agekeeper's Boon | If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally. |
+| 4. Deal the Harvest | The Agekeeper deals each player their full Harvest total face down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered) |
+| 5. Commune with the Cards | Each player arranges their full hand across their Spread, Hand, and Arcanum zones. Consider your goals for the round. |
 
 #### Aspects & Alignment
 
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
-⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-tier Aspect match. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, score is **+3**.
-
-| 💡 EXAMPLE: SCORPIO AGE |                                                 |                 |
+| 💡 EXAMPLE: SCORPIO AGE (Scorpio, Pluto, Water) | | |
 | ----------------------- | ----------------------------------------------- | --------------- |
-| **SOURCE**              | **ASPECT MATCHED**                              | **BONUS CARDS** |
-| Zodiac Die: Scorpio     | Sign match (Scorpio = Scorpio) → highest Aspect | +3              |
-| Spread: 7 of Cups       | Element match (Water = Water)                   | +1              |
-| Spread: Knight of Cups  | Element match (Water = Water)                   | +1              |
-| Astral House: Pisces    | Element match (Water = Water)                   | +1              |
-| Base Harvest            | 2 cards always dealt regardless of Alignment    | +2              |
-| **TOTAL HARVEST**       |                                                 | **8 cards**     |
+| **SOURCE** | **ASPECT MATCHED** | **BONUS CARDS** |
+| Zodiac Die: Scorpio | Sign match (Scorpio = Scorpio) → highest Aspect | +3 |
+| Spread: 7 of Cups | Element match (Water = Water) | +1 |
+| Spread: Knight of Cups | Element match (Water = Water) | +1 |
+| Astral House: Pisces | Element match (Water = Water) | +1 |
+| Specialist Card: The High Priestess | Element match (Moon → Water) | +1 |
+| Base Harvest | 2 cards always dealt regardless of Alignment | +2 |
+| **TOTAL HARVEST** | | **9 cards** |
 
-### 4️⃣ Commune
+### 4️⃣ Commune with the Kismeta Cards
 
-- **Assign cards to zones:** Place each Harvested card into your **Spread** (face-up, active) or your **Hand** (face-down, hidden). Cards already in your Spread or Hand from the previous round remain where they are.
-- **Seat your Arcanum:** Adept Major Arcana you hold remain in your Arcanum. If you drew a Fate Major Arcana in the Harvest, place it in your Arcanum immediately — its effect resolves now.
-- **Consider your goals:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Refinement. Your Hand is your reserve, useful for Oppositions and Refinement but invisible to rivals.
+Now that you have your Kismeta Cards for the Age, it's time to commune with them. Cards you place in your Spread will have active effects that influence gameplay in many ways. Spread cards can be used to complete card sets for your Cauldron Codex and Crucible cards' Alchemical Formulas, or to craft Reagents. They are vulnerable to being lost in duels and serve other functions in the game.
 
-### 5️⃣ Card Lock
+The cards you hold privately are your Hand cards. They can be used to craft Reagents and in Oppositions, but do not have active effects and cannot be used to complete card sets. They cannot be lost in duels.
 
-Once the Harvest is complete, all cards are locked to the zone you place them in during Commune. Cards may not move between your Hand and Spread until **Phase 4: Winter** unlocks them.
+Any Major Arcana card (Adept Card or Fate Card) is played into a separate zone, the Arcanum.
+
+📌 **Note:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Crafting. Your Hand is your reserve, useful for Oppositions and Crafting but invisible to rivals.
+
+### 5️⃣ Card Lock 🔒
+
+Once the Harvest is complete, all cards are locked in their current zones until the beginning of **Phase 4: Winter**. Any new cards you gain in Summer or Autumn are automatically added to your Spread zone.
 
 📌 **Spring is complete.** The Cosmic Age has been set, resources gathered, and your inventory built. Proceed to **Phase 2: ☀️ Summer**.
 
@@ -319,21 +368,22 @@ Once the Harvest is complete, all cards are locked to the zone you place them in
 
 ### Trade, Build & Prepare
 
-In clockwise order, starting with the Agekeeper, each player takes their turn and may take any of the following actions, in any order, as many times as they like.
+The Sun shines brightly as you and your fellow Alchemists focus on your plans. Summer is the perfect time for socializing; bartering over trades, initiating duels, and risking your luck in gambits. While fortune favors the bold, Fate may have other plans in store for you. In clockwise order, beginning with the Agekeeper, each player takes their turn and can perform any of the listed actions multiple times and in any sequence.
 
-<!-- FLOW:summer-flow -->
+| ☀️ SUMMER Trade, Build & Prepare | **CRAFT RESOURCES (TAKE ANY ACTION)** 1. Activate Crucible Card 2. Build Astral House 3. Craft Reagent **CONSORT WITH RIVALS (TAKE ANY ACTION)** 4. Trade 5. Duel 6. Gambit |
+| --- | --- |
 
 ### 1️⃣ Activate Crucible Cards
 
-Your Crucible Codex holds four Formulae - one per card position (I–IV). Activate each card by collecting and discarding the matching card set. You may activate any number in any order, and may do so in Phase 2: Summer or Phase 3: Autumn.
+Your Cauldron Codex holds four Formulae - one per card position (I–IV). Activate each card by collecting and discarding the matching card set. You may activate any number in any order, and may do so in Phase 2: Summer or Phase 3: Autumn.
 
 #### How to Activate:
 
-- **Consult your Codex:** Find the Formula for the card position you want to activate (I, II, III, or IV).
+- **Consult your Codex:** Follow the Codex for formulas of card sets you'll need to collect.
 - **Assemble the card set:** Collect the required cards in your Spread.
 - **Discard the card set:** Remove all cards in the set from your Spread.
-- **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron's RP Threshold permanently drops by 5. Coal cannot be moved once placed.
-- **Flip the Crucible Card face-up:** It is now Active, and its Alchemical Formula is revealed.
+- **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice.
+- **Activate the Crucible Card:** Flip the card face-up to Activate it. Each Crucible card reveals an Alchemical Formula that is necessary to advance your Philosopher's Stone one step closer to the Altar of Kismeta.
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
@@ -351,24 +401,26 @@ Astral Houses are permanent structures built on the Zodiac Wheel. Each provides 
 | **BENEFIT**               | **HOW IT WORKS**                                                                                                                                                                         |
 | Harvest Bonus             | Acts as an Alignment source each Spring. Earns +3 (Sign match), +2 (Planet match), or +1 (Element match) against the Cosmic Age. Stacks with all other Harvest sources.                  |
 | Opposition Alignment      | Contributes Alignment Points in Oppositions as both Challenger and Defender: +3 (Sign), +2 (Planet), +1 (Element) against the Opposition Age.                                            |
-| Cosmic Effect (Permanent) | Permanently unlocks that Sign's Cosmic Effect for you. Applies every Spring regardless of the current Age, stacking on the universal effect. Multiple Houses grant each unlocked effect. |
+| Cosmic Effect (Permanent) | Permanently unlocks that Sign's Cosmic Effect for you every round, regardless of your Zodiac Die result. If you also roll that Sign, the effect is simply active — it does not apply twice. Multiple Houses each grant their own unlocked effect. |
 
 _⚙️ **Game Mode Modifier (Quickplay):** Cost reduced to 1 card matching the Sign's Planet._
 
-### 3️⃣ Refine Reagents
+### 3️⃣ Craft Reagents
 
-Reagents are the fuels needed to Fire your Stone. Refine them by discarding matching-suit cards whose combined Rank Points (RP) meet your Cauldron's current Threshold. You may refine any number of times per turn, using cards from your Spread and/or Hand.
+Reagents are the fuels needed to Fire your Stone. You can craft them using cards from your Spread or Hand. The color of the card's Suit matches the color of the Reagent you can craft with it. Add up the ranks of the cards you collect, then compare the total to your current Reagent RP Threshold. If the total meets or exceeds the RP Threshold, you can trade the cards in to take a Reagent from the supply.
 
-#### How to Refine:
+The starting Base RP Threshold is 30 RP in Standard & Magnus Alchemist Mode, and 25 RP in Quickplay. You can reduce the RP Threshold for crafting Reagents by activating your Crucible cards and moving the Molten Coal from the Crucible Card into one of your four Crucible Cauldrons. Each Molten Coal placed in a Crucible Cauldron reduces the cost to craft a Reagent by 5 RP.
 
-- **Choose a Reagent type:** Select which of the four Reagents you want to refine.
+#### How to Craft:
+
+- **Choose a Reagent type:** Select which of the four Reagents you want to Craft. See Correspondence Table.
 - **Gather cards:** Collect cards of the matching suit from your Spread and/or Hand.
-- **Check the Threshold:** Confirm the combined RP meets or exceeds the Cauldron's current Threshold (see table below).
+- **Check the Threshold:** Confirm the combined RP meets or exceeds the current Threshold, based on the number of Molten Coals you have in your Cauldrons. The starting Base Threshold is 30 RP in the Standard and Magnus Alchemist Mode, and 25 RP in Quickplay.
 - **Exchange:** Discard the cards and take 1 Reagent token from the supply.
 
-💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur.
+💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur. (Wands → Fire → Red Cauldron → Sulphur.)
 
-_⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified Threshold. Each Coal placed in any Cauldron reduces the cost for all Reagents regardless of color._
+_⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified Threshold. Each Coal placed in any Cauldron reduces the cost for all Reagents regardless of color. Base RP is 25, going down to 5 RP with four Molten Coals._
 
 ### 4️⃣ Trade
 
@@ -377,7 +429,7 @@ Freely exchange resources with any rival during your turn.
 | CAN TRADE                              | CANNOT TRADE           |
 | -------------------------------------- | ---------------------- |
 | Kismeta Cards                           | Astral Houses          |
-| Reagents (only transferable via Trade) | Protective Wards       |
+| Reagents (only transferable via Trade) | Ward Reagents          |
 | Active Crucible Cards (only via Trade) | Dormant Crucible Cards |
 |                                        | Molten Coals           |
 
@@ -400,8 +452,8 @@ Challenge a rival to steal a single card from their Spread. Only the Challenger 
 | DUEL RESULTS     |                                                        |
 | ---------------- | ------------------------------------------------------ |
 | **RESULT**       | **OUTCOME**                                            |
-| Challenger Wins  | Steal the card that was targeted from the Defender's Spread. Ante Card is returned to you. |
-| Challenger Loses | Ante Card is returned to the Common Deck. Cannot re-challenge the same Defender this round. |
+| Challenger Wins  | Steal the card that was targeted from the Defender's Spread. |
+| Challenger Loses | Return the Ante Card to the Common Deck. |
 
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your target, add +1 to your dice roll. The Defender receives no bonus._
 
@@ -413,19 +465,19 @@ A Gambit lets you seize a rival's Active Crucible Card by proving you have alrea
 
 - **Identify the target:** Point to the rival's Active Crucible Card your Spread satisfies. Demonstrate that your Spread meets its full Alignment requirement.
 - **Name your offer:** Declare which of your own Active Crucible Cards you are putting up in exchange.
-- **Pay the entry fee:** Pay the bank Reagents equal to the Defender's Protective Ward on the targeted card. No Ward = no fee.
+- **Pay the entry fee:** Pay the bank Reagents equal to the Defender's Ward Reagents on the targeted card. No Ward = no fee.
 - **Roll:** Both players roll their Zodiac Dice. Apply any card effects that modify Gambits before comparing results.
 - **Resolve:** See outcomes below.
 
 | GAMBIT RESULTS   |                                                                                                                                                     |                                        |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | **Result**       | **Challenger**                                                                                                                                      | **Defender**                           |
-| Challenger Wins  | The two Active Crucible Cards swap positions.                                                                                                       | Protective Ward Reagents are spent.    |
-| Challenger Loses | Offered card is Arrested (face-down, sideways; cannot Fire this round; resets to Active next round). Cannot re-Gambit the same Defender this round. | Protective Ward Reagents are returned. |
+| Challenger Wins  | The two Active Crucible Cards swap positions.                                                                                                       | Ward Reagents are spent.    |
+| Challenger Loses | Offered card is Arrested (face-down, sideways; cannot Fire this round; resets to Active next round). Cannot re-Gambit the same Defender this round. | Ward Reagents are returned. |
 
-#### Protective Wards on Crucible Cards
+#### Ward Reagents on Crucible Cards
 
-During your turn in Phase 2, you may place Reagents directly on any Active Crucible Card as Protective Wards. These set the entry fee that any Challenger must pay to Gambit for that card.
+During your turn in Phase 2, you may place Reagents directly on any Active Crucible Card as Ward Reagents. These set the entry fee that any Challenger must pay to Gambit for that card.
 
 - Wards may not be placed reactively once a Gambit has been declared.
 - No limit to the number of Reagents placed on a single card.
@@ -441,9 +493,86 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defend
 
 ### Conduct the Great Work
 
-Autumn resolves in two passes through the player order, beginning with the Agekeeper and proceeding clockwise. In Pass 1, each player handles Leave Stasis and declares any Oppositions on their turn. Once all players have completed Pass 1, Pass 2 begins: each player Tempers and Fires on their turn in the same clockwise order. Steps are always taken in sequence within each pass — but each player works through them individually.
+As the Cosmic Age shifts into Autumn, you and your fellow Alchemists gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta.
 
-<!-- FLOW:autumn-flow -->
+The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.
+
+| 🍂 AUTUMN Conduct the Great Work | **FIRST PASS** 1. Leave Stasis ❄️: Move your Stone to its previous Forge spot. If occupied, wait or declare Stasis Opposition to reclaim it. 2. Opposition ⚔️: Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. **SECOND PASS** 3. Temper: After a full round in the Forge, move your Stone to the next Mantle Ring space. 4. Fire the Stone: Complete an active Crucible card and move your Stone into the Forge. |
+| --- | --- |
+
+### 1️⃣ Survey the Crucible: Your Stone's Current Position
+
+- When your Stone is on the **Mantle Ring** (even-numbered positions: 0, 2, 4, 6), it is **Tempering**. It is safe from attack but does not advance. While there, focus on activating and firing your Crucible Cards.
+- When you **Fire** a Crucible Card, you may move your Stone into the **Forge**. While in the Forge, your Stone is **Forging**, working on one step of the Transmutation process from Lead into Gold. If you complete a full round in the Forge, you may advance to the next Mantle Ring position or the Altar of Kismeta.
+- If your Stone is in a **Stasis zone** (marked with a snowflake ❄️), it has stalled, and you must choose how to get back on track.
+
+| POS. | CRUCIBLE LOCATION | STATUS | SAFE? |
+| ---- | ----------------- | ------- | ----- |
+| 0 | Mantle Ring | TEMPERING | YES |
+| 1 | Forge (Lead) | FORGING | NO |
+| 2 | Mantle Ring | TEMPERING | YES |
+| 3 | Forge (Bronze) | FORGING | NO |
+| 4 | Mantle Ring | TEMPERING | YES |
+| 5 | Forge (Silver) | FORGING | NO |
+| 6 | Mantle Ring | TEMPERING | YES |
+| 7 | Forge (Gold) | FORGING | NO |
+| 8 | Altar of Kismeta | Victory. | YES |
+
+#### Philosopher's Stone States
+
+| STATE | POSITION | WHAT IT MEANS |
+| ----- | -------- | ------------- |
+| Tempering | Mantle Ring (0, 2, 4, 6) | Safe. No Crucible Card is Fired. Cannot be targeted by an Opposition. Focus on Activating and Firing Crucible Cards at this time. |
+| Forging | Forge (1, 3, 5, 7) | Transmutation underway. Crucible Card is Fired (face-up, sideways). Vulnerable to Opposition. Focus on Protecting your Stone at this time. |
+| In Stasis | ❄️ Stasis zone | Frozen until next Autumn. Crucible Card remains Fired. Cannot Temper or take other Stone actions. Focus on returning to the Forge at this time. |
+| Complete | Altar of Kismeta | You have finished all four stages of Transmutation and won the game! All hail! All hail! The Magnus Alchemist! |
+
+#### Crucible Card States
+
+| STATE | APPEARANCE | NOTES |
+| ----- | ---------- | ----- |
+| Dormant | Face-down; Coal on top | The Alchemical Formula is hidden. Awaiting activation. |
+| Active | Face-up; Coal removed | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
+| Fired | Face-up; Turned sideways | The Alchemical Formula executed; the Stone is in the Forge. Only one card may be Fired at a time. |
+| Arrested | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round. |
+| Discarded | Removed from play | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete. |
+
+### PASS 1 — 2️⃣ Opposition ⚔️
+
+An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
+
+#### How to Declare an Opposition:
+
+- **Pay the entry fee:** Pay the bank Reagents equal to the Defender's Ward Reagents. No Ward = no fee.
+- **Cards in play:** All Spread cards participate automatically. You may also contribute Hand cards (discarded after use). All active Arcanum effects apply.
+- **Roll:** Both players roll their Zodiac Dice and place them on their Sign.
+- **Calculate Alignment Points:** Total all Aspect matches from every source in play. Highest score wins. On a tie, both players reroll; repeat until resolved.
+
+#### Outcomes
+
+| RESULT          | OUTCOME                                                                                                                                                                    |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Challenger Wins | Defender's Stone moves to the nearest ❄️ Stasis zone. Ward Reagents discarded. Crucible Card remains Fired. Challenger cannot challenge same Defender again this round. |
+| Defender Wins   | Stone stays in the Forge. Challenger is Exhausted — cannot challenge the same Defender again this round.                                                                   |
+
+#### Multiple Oppositions Against the Same Stone
+
+More than one player may challenge the same Forging Stone in the same round. Resolve each Opposition fully before the next is declared, in clockwise order from the previous Challenger.
+
+📌 **Besieged Bonus:** Each time the Defender wins an Opposition this round, they earn +1 cumulative Alignment Points for all subsequent Oppositions that same round. Automatic — no action required.
+
+#### Ward Reagents in the Forge
+
+Once you place your Stone in the Forge, you may place Reagents next to it on the 🛡️ icon as Ward Reagents. These set the entry fee that any Challenger must pay to declare an Opposition against your Stone.
+
+Ward Reagents placed in the Forge follow these rules:
+1. **Lose in Opposition:** Wards are discarded to the supply.
+2. **Win in Opposition:** Wards remain in place for the next round.
+3. **Advance to Mantle Successfully:** Remaining Wards are burned and returned to the supply — not recovered.
+
+_⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defender at declaration, add +1 to your final Alignment Points total. The Defender receives no bonus._
+
+⚠️ **Important:** A Stone Fired into the Forge this Autumn cannot be targeted by Opposition this round. Only Stones that were already Forging at the start of this Autumn are eligible targets.
 
 ### PASS 1 — 1️⃣ Leave Stasis ❄️
 
@@ -452,7 +581,7 @@ Players whose Stone is currently in the Stasis zone may return it to the Forge t
 #### Steps to Leave Stasis
 
 - **Move your Stone:** Return it to the Forge position it previously held.
-- **Re-arm your Protective Ward:** Place Reagents on the 🛡️ symbol beside your Stone (optional but recommended).
+- **Re-arm your Ward Reagent:** Place Reagents on the 🛡️ symbol beside your Stone (optional but recommended).
 - **Resume Forging:** Your Crucible Card remains Fired. You must complete a full round in the Forge before you may Temper.
 
 #### If Your Forge Position Is Occupied
@@ -473,57 +602,19 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
 
-### PASS 1 — 2️⃣ Opposition ⚔️
-
-An Opposition is an Alignment contest against a rival whose Stone is currently Forging. If the Challenger wins, the Defender's Stone is sent to Stasis and must wait a round before retrying.
-
-#### How to Declare an Opposition:
-
-- **Pay the entry fee:** Pay the bank Reagents equal to the Defender's Protective Ward. No Ward = no fee.
-- **Cards in play:** All Spread cards participate automatically. You may also contribute Hand cards (discarded after use). All active Arcanum effects apply.
-- **Roll:** Both players roll their Zodiac Dice and place them on their Sign.
-- **Calculate Alignment Points:** Total all Aspect matches from every source in play. Highest score wins. On a tie, both players reroll; repeat until resolved.
-
-#### Outcomes
-
-| RESULT          | OUTCOME                                                                                                                                                                    |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Challenger Wins | Defender's Stone moves to the nearest ❄️ Stasis zone. Protective Wards discarded. Crucible Card remains Fired. Challenger cannot challenge same Defender again this round. |
-| Defender Wins   | Stone stays in the Forge. Challenger is Exhausted — cannot challenge the same Defender again this round.                                                                   |
-
-#### Multiple Oppositions Against the Same Stone
-
-More than one player may challenge the same Forging Stone in the same round. Resolve each Opposition fully before the next is declared, in clockwise order from the previous Challenger.
-
-📌 **Besieged Bonus:** Each time the Defender wins an Opposition this round, they earn +1 cumulative Alignment Points for all subsequent Oppositions that same round. Automatic — no action required.
-
-_⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defender at declaration, add +1 to your final Alignment Points total. The Defender receives no bonus._
-
-⚠️ **Important:** A Stone Fired into the Forge this Autumn cannot be targeted by Opposition this round. Only Stones that were already Forging at the start of this Autumn are eligible targets.
-
-### PASS 2 — 3️⃣ Temper the Stone ⏳
-
-A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
-
-- **Advance your Stone:** Move it from the Forge to the next Mantle Ring position.
-- **Discard the Crucible Card:** The current Crucible Card is removed from play. The Stage is complete.
-- **Burn remaining Wards:** Any Protective Wards remaining on the 🛡️ symbol are returned to the supply. They are not recovered.
-
-⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
-
 ### PASS 2 — 4️⃣ Fire the Stone 🔥
+
+Available if your Stone's current position is on #0, 2, 4, or 6.
 
 If you have an Active Crucible Card whose Alchemical Formula you have satisfied, you may Fire your Stone into the Forge this Autumn.
 
 #### How to Fire
 
-- **Confirm Alignment:** Show your Spread satisfies the Crucible Card's Alignment requirement.
-- **Pay the Reagents:** Discard the required Reagents to the supply.
-- **Set your Protective Ward:** Place Reagents on the 🛡️ symbol beside your Stone in the Forge. These set the entry fee that challengers must pay to declare an Opposition. No Ward = no entry fee (but you are a free target).
+- **Confirm Alignment:** Show your Spread satisfies the Crucible Card's Alignment requirement. Discard the cards.
+- **Pay the Reagents:** Discard the required Reagents to the supply. These cannot be used as Ward Reagents for your card in the Forge.
+- **Set your Ward Reagent:** Place Reagents on the 🛡️ symbol beside your Stone in the Forge. These set the entry fee that challengers must pay to declare an Opposition. No Ward = no entry fee (but you are a free target).
 - **Turn the Crucible Card sideways:** It is now Fired.
 - **Advance your Stone:** Move it from the Mantle Ring to the next Forge position.
-
-⚠️ **Important:** You cannot Fire if your Stone is currently Forging or in Stasis. Your Stone must be in a Mantle Ring position (0, 2, 4, or 6).
 
 #### Alchemical Formula
 
@@ -533,15 +624,27 @@ Each Crucible Card shows its Alchemical Formula; two requirements you must satis
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **REQUIREMENT**                     | **WHAT IT REQUIRES**                                                                                                                              |
 | Reagents                            | Specific Reagent types and quantities to discard when Firing, listed on the card.                                                                 |
-| Alignment                           | A precise card configuration in your Spread - specified by suit, planet, rank, or a combination. Must be confirmed before the Stone can be Fired. |
+| Alignment                           | A precise card configuration in your Spread - specified by suit, planet, rank, or a combination. Discard the cards at the time of Firing. |
 
-#### Protective Wards in the Forge
+#### Ward Reagents in the Forge
 
 Ward Reagents placed beside your Stone on the 🛡️ symbol follow different rules from Wards placed on Crucible Cards:
 
-- **Opposed and lose:** Wards are discarded to the supply.
-- **Opposed and win:** Wards remain in place for the next round.
-- **Temper successfully:** Remaining Wards are burned and returned to the supply — not recovered.
+- **A. Lose in Opposition:** Wards are discarded to the supply.
+- **B. Win in Opposition:** Wards remain in place for the next round.
+- **C. Advance to Mantle Successfully:** Remaining Wards are burned and returned to the supply — not recovered.
+
+### PASS 2 — 3️⃣ Temper the Stone ⏳
+
+Available if your Stone's current position is on #1, 3, 5, or 7.
+
+A Stone that has been Forging since the previous round and has survived all Oppositions this Autumn may now advance to the next stage.
+
+- **Advance your Stone:** Move it from the Forge to the next Mantle Ring position.
+- **Discard the Crucible Card:** The current Crucible Card is removed from play. The Stage is complete.
+- **Burn remaining Wards:** Any Ward Reagents remaining on the 🛡️ symbol are returned to the supply. They are not recovered.
+
+⚠️ **Important:** A Stone that returned from Stasis this round cannot Temper. It must complete a full round of Forging first.
 
 ---
 
@@ -551,7 +654,8 @@ Ward Reagents placed beside your Stone on the 🛡️ symbol follow different ru
 
 Winter closes the Cosmic Age. Complete all steps below in order before passing the Agekeeper's Key.
 
-<!-- FLOW:winter-flow -->
+| ⛰️ WINTER Final Actions of the Cosmic Age & Reset Board | 1. Card Unlock: Move cards freely between your Hand and Spread. 2. Offering to the Age: Offer cards matching the Cosmic Age to earn a Bonus next round. 3. Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. 4. Enforce Card Limits: Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only. 5. Transit the Age: The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
+| --- | --- |
 
 ### 1️⃣ Card Unlock:
 
@@ -620,7 +724,7 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | Hand        | 5 cards               | Discard excess cards of your choice down to 5.                                                |
 | Arcanum     | Adept cards only | All Fate Major Arcana cards must be returned to the Common Deck. Adept cards remain. |
 
-### 5️⃣ Reset Sequence:
+### 5️⃣ Transit the Age:
 
 - **Shuffle the Common Deck:** The Agekeeper collects all discarded Kismeta Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
 - **Pass the Agekeeper's Key:** The Agekeeper passes the Key clockwise to the next player, who becomes the new Agekeeper.
@@ -638,19 +742,21 @@ Once a player reaches Gold in the Forge (position 7), they are one round from wi
 
 Keep these principles in mind as you find your footing across the first few rounds.
 
-- **Your Zodiac Sign Shapes the Whole Round:** After rolling in Spring, check your Sign's Aspects before planning your Summer actions. Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from this single roll.
+1. **Your Alignments Shape the Round:** Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from the Aspect Alignments between the Cosmic Age and each of your inventory items.
 
-- **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
+2. **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
 
-- **Negotiate Wisely:** Every interaction — Trade, Duel, Gambit, or Opposition — is a resource decision. Before committing, weigh your Spread's Alignment strength: a well-aligned Spread improves your odds in Duels and Oppositions, qualifies you to declare Gambits, and signals real leverage in trades. Factor in any active card effects that modify dice rolls or protect your assets, and remember that Reagents placed as Protective Wards also count toward that card's activation requirements — every resource has more than one job.
+3. **Cauldron Drops Are Permanent:** Each activated Crucible Card drops its Molten Coal into a Cauldron, permanently lowering that Cauldron's Crafting Threshold by 5 RP. Think ahead: fuel the Cauldron for the Reagent type you'll need most. (See Correspondence table.)
 
-- **Only One Card Can Be Fired At A Time:** You can Activate multiple Crucible Cards, but only one can be Fired and in the Forge. Plan your activations so you're never caught with an unready Crucible Card when you reach the Forge.
+4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to meet the Threshold. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
 
-- **Cauldron Drops Are Permanent — Plan Them:** Each activated Crucible Card drops its Molten Coal into a Cauldron, permanently lowering that Cauldron's Refinement Threshold by 5 RP. Think ahead: fuel the Cauldron for the Reagent type you'll need most for upcoming Fuel Costs.
+5. **Astral Houses Are Your Anchor:** Build Astral Houses early. Each House acts as a permanent Alignment source for Harvesting Bonus cards every Spring for the rest of the game. A House built in round one compounds its advantage over every subsequent Age. A House built in the final round is barely worth the cost.
 
-- **Ward Up Before You Enter the Forge:** Setting even 1–2 Reagents as Protective Wards when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card's requirements.
+6. **Adept Cards Synergies:** Your Arcanum has two Adept slots that, as a pair, permanently add their Sign, Planet, and Element to all calculations. A strong pair spans multiple Aspect types, preserving bonuses even as the Cosmic Age shifts. When a new Adept appears, consider how it complements your existing one. Overlapping Aspects with your Astral Houses create a strong Alignment advantage that rivals can't disrupt.
 
-- **The Offering Rewards Everyone — Coordinate:** The Offering to the Age is a shared opportunity. Even rivals benefit from a successful Offering. If the Threshold looks reachable, contribute cards and nudge others to do the same — the 2-for-1 Refinement bonus is worth the cooperation.
+7. **Protect Your Progress with Wards:** Setting even 1–2 Reagents as Ward Reagents when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card's requirements.
+
+8. **The Offering Rewards Everyone:** The Offering to the Age is a shared opportunity. Even rivals benefit from a successful Offering. If the Threshold looks reachable, contribute cards and nudge others to do the same — the 2-for-1 Crafting bonus is worth the cooperation.
 
 ---
 
@@ -658,22 +764,24 @@ Keep these principles in mind as you find your footing across the first few roun
 
 ## Cosmic Ages & Effects
 
+Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect applies to all players. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If your rolled Sign matches the Cosmic Age, the effect is simply active. It doesn't apply twice.
+
 | 🛞          | SIGN        | PLANET(S)  | ELEMENT | EFFECT                                    |
 | ----------- | ----------- | ---------- | ------- | ----------------------------------------- |
 | COSMIC AGES | Aries       | Mars       | Fire    | +1 Base Harvest Card each round           |
 |             | Taurus      | Venus      | Earth   | Court Cards of Pentacles are a Wild Suit. |
-|             | Gemini      | Mercury    | Air     | −3 RP to refine Quicksilver               |
+|             | Gemini      | Mercury    | Air     | −3 RP to Craft Quicksilver               |
 |             | Cancer      | Sun /Moon  | Water   | +1 Base Harvest Card each round           |
 |             | Leo         | Sun / Moon | Fire    | Court Cards of Wands are a Wild Suit.     |
-|             | Virgo       | Mercury    | Earth   | −3 RP to refine Vitriol                   |
+|             | Virgo       | Mercury    | Earth   | −3 RP to Craft Vitriol                   |
 |             | Libra       | Venus      | Air     | +1 Base Harvest Card each round           |
 |             | Scorpio     | Mars       | Water   | Court Cards of Cups are a Wild Suit.      |
-|             | Sagittarius | Jupiter    | Fire    | −3 RP to refine Sulphur                   |
+|             | Sagittarius | Jupiter    | Fire    | −3 RP to Craft Sulphur                   |
 |             | Capricorn   | Saturn     | Earth   | +1 Base Harvest Card each round           |
 |             | Aquarius    | Saturn     | Air     | Court Cards of Swords are a Wild Suit.    |
-|             | Pisces      | Jupiter    | Water   | −3 RP to refine Aqua Regia                |
+|             | Pisces      | Jupiter    | Water   | −3 RP to Craft Aqua Regia                |
 
-## Element / Suit / Reagent / Cauldron
+## Correspondence
 
 | CORRESPONDENCE: ELEMENTS, CARD SUITS, REAGENTS, CAULDRONS & COLOR |             |               |             |              |
 | ----------------------------------------------------------------- | ----------- | ------------- | ----------- | ------------ |
@@ -696,7 +804,7 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 **Major Arcana (22 cards) - two varieties:**
 
-| Adept Cards (11)                                                   | Fate Cards (11)                            |
+| Specialist Cards (11)                                                   | Fate Cards (11)                            |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
 | Carries three Aspects; used in Harvest & Alignments                     | No Aspects; effect only                        |
@@ -705,8 +813,8 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used when Refining Reagents and in other contexts.
-- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used when Crafting Reagents and in other contexts.
+- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
 ## YOUR INVENTORY: Spread, Hand & Arcanum Zones
@@ -717,17 +825,17 @@ You always manage your inventory of Kismeta Cards across three zones.
 | ------- | --------------------------------------------- | ---------- | -------- | ---------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------- |
 | SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | No card limit during a round | Activating Crucible Cards                                                                       | No restrictions               |
 |         |                                               |            |          |                              | Meeting Forge Alignment                                                                         |                               |
-|         |                                               |            |          | 7-cards; enforced in Winter  | Refining Reagents                                                                               |                               |
+|         |                                               |            |          | 7-cards; enforced in Winter  | Crafting Reagents                                                                               |                               |
 |         |                                               |            |          |                              | Building Astral Houses                                                                          |                               |
 |         |                                               |            |          |                              | Trading, wagering & targeting in Duels                                                          |                               |
-| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | Max 5 cards                  | Reagent Refinement alongside Spread cards (discarded after)                                     | Duels                         |
+| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | Max 5 cards                  | Reagent Crafting alongside Spread cards (discarded after)                                       | Duels                         |
 |         |                                               |            |          |                              |                                                                                                 | Crucible Card activation      |
 |         |                                               |            |          |                              | Opposition contributions (discarded after)                                                      | Alignments                    |
 |         |                                               |            |          |                              |                                                                                                 | Trades, Wagers, Astral Houses |
-| ARCANUM | MAJOR ARCANA: Fate & Adept           | Visible    | Active   | Adept: Max 2 cards      | Active Major Arcana effects                                                                     | Duels                         |
-|         |                                               |            |          |                              | Adept Aspects (Harvest & Alignments)                                                       | Crucible Card activation      |
-|         |                                               |            |          | Fate: No limit           | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
-|         |                                               |            |          |                              | Adept cards: must be purchased to enter; swap by paying new card's cost                    | Trades, Wagers, Astral Houses |
+| ARCANUM | MAJOR ARCANA: Fate & Specialist Cards         | Visible    | Active   | Specialist: Max 2 cards      | Active Major Arcana effects                                                                     | Duels                         |
+|         |                                               |            |          |                              | Specialist Aspects (Harvest & Alignments)                                                       | Crucible Card activation      |
+|         |                                               |            |          | Fate: No limit               | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end     | Alignments                    |
+|         |                                               |            |          |                              | Specialist cards: must be purchased to enter; swap by paying the new card's cost                | Trades, Wagers, Astral Houses |
 
 ## Alignment Scoring
 
@@ -750,9 +858,22 @@ You always manage your inventory of Kismeta Cards across three zones.
 
 ## Reagent Thresholds
 
-| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO REFINE REAGENTS |                  |
+**Quickplay / 1st Playthrough**
+
+| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
 | ------------------------------------------------------------ | ---------------- |
-| **MOLTEN COALS IN CAULDRON**                                 | **RP THRESHOLD** |
+| **MOLTEN COALS IN ANY CAULDRON**                             | **RP THRESHOLD** |
+| 0                                                            | ≥ 25 RP          |
+| 1                                                            | ≥ 20 RP          |
+| 2                                                            | ≥ 15 RP          |
+| 3                                                            | ≥ 10 RP          |
+| 4                                                            | ≥ 5 RP           |
+
+**Standard & Magnus Alchemist**
+
+| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
+| ------------------------------------------------------------ | ---------------- |
+| **MOLTEN COALS IN ONE CAULDRON**                             | **RP THRESHOLD** |
 | 0                                                            | ≥ 30 RP          |
 | 1                                                            | ≥ 25 RP          |
 | 2                                                            | ≥ 20 RP          |
@@ -2011,12 +2132,12 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Astral House**          | A permanent structure built on the Zodiac Wheel. Each grants an ongoing Alignment source (Sign, Planet, Element) and two additional benefits. Only one player may build on any given Sign.                                                                                                          |
 | **Besieged Bonus**        | An automatic bonus that's awarded to a Defender who wins an Opposition. Each successive win against different Challengers in the same round grants the Defender +1 cumulative Alignment Points for all further Oppositions that round.                                                               |
 | **Card Sets**             | Groups of cards organized by Rank and Suit, following poker-hand conventions (pairs, three of a kind, straights, flushes, and so on). Assembled in a player's Spread to satisfy Alchemical Formulas on Crucible Cards.                                                                              |
-| **Cauldron**              | A colored refining station on each player's Crucible Codex (Red, Blue, Green, Yellow). Each Cauldron corresponds to a specific Reagent type and Element via the Correspondence table. Molten Coals placed in a Cauldron permanently lower its RP Threshold by 5 per Coal, making Reagent refinement cheaper over time. |
+| **Cauldron**              | A colored refining station on each player's Cauldron Codex (Red, Blue, Green, Yellow). Each Cauldron corresponds to a specific Reagent type and Element via the Correspondence table. Molten Coals placed in a Cauldron permanently lower its RP Threshold by 5 per Coal, making Reagent Crafting cheaper over time. |
 | **Cauldron Catalyst**     | A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent refining in the Cauldron it is placed in for the full following round. Only one Catalyst may be active per Cauldron at a time.                                                                                   |
 | **Correspondence**        | The fixed relationship between an Element, Card Suit, Reagent, Cauldron, and Color. See the Correspondence table in the Appendix.                                                                                                                                                                   |
 | **Cosmic Age**            | One complete round of play, defined by the Zodiac Sign rolled by the Agekeeper in Spring. Its three Aspects govern Harvest bonuses, Alignment scoring, and the active Cosmic Effect for that round.                                                                                                 |
-| **Cosmic Effect**         | The unique game modifier activated by the rolled Cosmic Age Sign. Applies to the entire round and affects all players. See the Cosmic Ages & Effects table in the Reference Appendix.                                                                                                               |
-| **Crucible Codex**        | A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance.                                                                                           |
+| **Cosmic Effect**         | Each Sign's Cosmic Effect operates on two levels. The Cosmic Age Effect, set by the Agekeeper's roll, applies to all players for the entire round. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If a player's Sign matches the Cosmic Age, the effect is simply active — it does not apply twice. See the Cosmic Ages & Effects table in the Reference Appendix. |
+| **Cauldron Codex**        | A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance.                                                                                           |
 | **Duel**                  | A Summer action in which a player challenges a rival to steal a single targeted card from their Spread. The Challenger names their target, then pays an Ante Card from their own Spread as the entry fee. Both players roll their Zodiac Dice; the higher roll wins. The Challenger wins the targeted card on a win, or loses their Ante Card on a loss. |
 | **Fate Card**             | A Major Arcana card with a one-time effect. Must be placed into the Arcanum immediately when drawn; its effect resolves at once and the card is discarded at round's end. Fate cards carry no Aspects and require no purchase cost.                                                                  |
 | **Fateful Wager**         | A Winter action in which a player bets cards on which Sign will rule the next Cosmic Age. A correct prediction doubles the wager; an incorrect one forfeits all wagered cards to the Fates.                                                                                                         |
@@ -2025,21 +2146,21 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Gambit**                | A Summer action to seize a rival's Active Crucible Card by demonstrating your Spread satisfies its Alignment, at the cost of surrendering one of your own Active Crucible Cards.                                                                                                                    |
 | **Great Work**            | The central objective of the game: to be the first Alchemist to advance your Philosopher's Stone through all four Forge stages and reach the Altar of Kismeta (position 8) on the Transmutation Path. Completing the Great Work wins the game.                                                     |
 | **Great Year**            | The full arc of a single game of Kismeta, representing one grand cosmic cycle of the solar system. Each round of play is one Cosmic Age within the Great Year.                                                                                                                                      |
-| **Hand**                  | One of three card zones in a player's inventory. Cards held here are face-down and hidden from rivals. Hand cards may contribute to Reagent Refinement and Oppositions (discarded after use) but cannot be used for Alignments, Crucible Card activation, Duels, Trades, Astral Houses, or Wagers. Limited to 5 cards at round's end. |
+| **Hand**                  | One of three card zones in a player's inventory. Cards held here are face-down and hidden from rivals. Hand cards may contribute to Reagent Crafting and Oppositions (discarded after use) but cannot be used for Alignments, Crucible Card activation, Duels, Trades, Astral Houses, or Wagers. Limited to 5 cards at round's end. |
 | **Harvest**               | The card-drawing phase of Spring. Each player receives 2 Base Harvest cards plus Bonus Cards determined by their Aspect Alignments with the current Cosmic Age.                                                                                                                                     |
 | **Major Arcana**          | The 22 special cards in the Kismeta Deck, divided into Adept Cards (11) and Fate Cards (11). Major Arcana are held in the Arcanum zone and carry unique persistent or one-time effects. They cannot be used for Crucible Card activation, Alignments, Duels, Trades, or Wagers.                     |
 | **Mantle Ring**           | The four safe positions (0, 2, 4, 6) on the Transmutation Path between Forge stages. A Stone resting on the Mantle Ring cannot be targeted by Opposition.                                                                                                                                          |
-| **Minor Arcana**          | The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Refinement, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers.                   |
-| **Molten Coal**           | A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is moved by the activating player into any Cauldron of their choice, permanently reducing that Cauldron's RP Threshold by 5. Coals cannot be moved once placed.                        |
+| **Minor Arcana**          | The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers.                   |
+| **Molten Coal**           | A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is moved by the activating player into any Cauldron of their choice, permanently reducing that Cauldron's RP Threshold by 5. Molten Coals cannot be moved once placed.                        |
 | **Offering to the Age**   | A collective Winter action in which players contribute Aligned cards toward a shared RP Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round.                                                                                         |
 | **Opposition**            | An Alignment contest declared in Phase 3: Autumn against a rival whose Stone is currently Forging. Alignment Points are compared; a Challenger victory sends the Defender's Stone to Stasis.                                                                                                        |
 | **Opposition Age**        | The Cosmic Age Sign in effect at the moment an Opposition is declared. All Alignment Points in that contest are scored against this Sign's Aspects.                                                                                                                                                 |
 | **Philosopher's Stone**   | Each player's primary game piece, representing the material being transformed through the Great Work. Begins at position 0 (Mantle Ring) on the Transmutation Path and must reach the Altar of Kismeta (position 8) to win. May be Forging, Tempering, or in Stasis at any given time.             |
-| **Protective Ward**       | A Reagent placed on the shield symbol beside a Forging Stone or Active Crucible Card. Acts as a mandatory entry cost that any Challenger must pay before declaring Opposition or a Gambit against that position.                                                                                    |
+| **Ward Reagent**          | A Reagent placed on the shield symbol beside a Forging Stone or Active Crucible Card. Acts as a mandatory entry cost that any Challenger must pay before declaring Opposition or a Gambit against that position.                                                                                    |
 | **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points when refining Reagents. Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.          |
 | **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used to meet Cauldron Thresholds when refining Reagents. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.           |
-| **Reagent**               | A refined resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are refined by discarding matching-Suit cards that meet a Cauldron's RP Threshold. |
-| **Spread**                | One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Refinement, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end. |
+| **Reagent**               | A Crafted resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are Crafted by discarding matching-Suit cards that meet a Cauldron's RP Threshold. |
+| **Spread**                | One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end. |
 | **Stasis**                | The frozen state of a Philosopher's Stone after losing an Opposition. A Stone in Stasis cannot Temper or take Stone actions until the following Autumn, when it may attempt to return to the Forge.                                                                                                  |
 | **Suit**                  | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when refining Reagents or fulfilling certain Alchemical Formula requirements. |
 | **Tempering**             | The Autumn action of advancing a Stone that has completed a full round of Forging. The Stone moves from the Forge to the next Mantle Ring position, and its Crucible Card is discarded.                                                                                                             |

@@ -1,25 +1,30 @@
 {
-	"intro": "The Agekeeper deals cards in this order. Determine all Bonus Cards before dealing any.",
+	"intro": "Calculate all Bonus Cards before the Agekeeper deals any. Each Harvest Source scores its single highest-matching Aspect.",
 	"steps": [
 		{
 			"id": "base",
 			"label": "Base Harvest",
-			"body": "Agekeeper deals 2 cards face-down to each player from the Common Deck."
-		},
-		{
-			"id": "boon",
-			"label": "Agekeeper's Boon",
-			"body": "If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, all players receive +2 additional Harvest cards."
+			"body": "All players begin with 2 Kismeta Cards. This is always granted regardless of Alignment."
 		},
 		{
 			"id": "calculate",
 			"label": "Calculate Bonus Cards",
-			"body": "Each player tallies Bonus Cards using Alignment (Sign +3, Planet +2, Element +1 per source; highest Aspect only per source)."
+			"body": "Each player tallies bonus cards from all applicable Harvest Sources: Zodiac Die, Astral Houses, Specialist Cards, and Spread Element Match. Each source scores its single highest-matching Aspect — Sign (+3), Planet (+2), Element (+1)."
 		},
 		{
-			"id": "deal-bonus",
-			"label": "Deal Bonus Cards",
-			"body": "Agekeeper deals each player their Bonus Cards, one at a time, face-down."
+			"id": "boon",
+			"label": "Agekeeper's Boon",
+			"body": "If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally."
+		},
+		{
+			"id": "deal",
+			"label": "Deal the Harvest",
+			"body": "The Agekeeper deals each player their full Harvest total face-down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered.)"
+		},
+		{
+			"id": "commune",
+			"label": "Commune with the Cards",
+			"body": "Each player arranges their full hand across their Spread, Hand, and Arcanum zones. Consider your goals for the round."
 		}
 	]
 }

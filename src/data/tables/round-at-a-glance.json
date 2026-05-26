@@ -6,28 +6,28 @@
 			"icon": "🌸",
 			"title": "Spring",
 			"subtitle": "Set the Age & Gather Resources",
-			"summary": "Set Cosmic Age, roll Zodiac Signs, Harvest, Commune, then Card Lock until Winter."
+			"summary": "Spring ushers in a new Cosmic Age. The Agekeeper rolls the Cosmic Age Die. All players determine their Zodiac Sign and receive their personal Cosmic Effect. The Harvest fills everyone's hand — manage your inventory wisely. Ends with Card Lock."
 		},
 		{
 			"id": "summer",
 			"icon": "☀️",
 			"title": "Summer",
 			"subtitle": "Trade, Build & Prepare",
-			"summary": "Turn-based: Craft (activate, houses, refine) and Consort (trade, duel, gambit) in any order."
+			"summary": "The Sun shines brightly as you and your fellow Alchemists focus on your plans. Summer is the perfect time for socializing — bartering over trades, initiating duels, and risking your luck in gambits. In clockwise order, beginning with the Agekeeper, each player takes actions multiple times and in any sequence."
 		},
 		{
 			"id": "autumn",
 			"icon": "🍂",
 			"title": "Autumn",
 			"subtitle": "Conduct the Great Work",
-			"summary": "Fixed order: Leave Stasis, Opposition, Temper, Fire the Stone. Agekeeper oversees the Forge."
+			"summary": "Alchemists gather around the Crucible to advance their Stones. Two passes in clockwise order: Pass 1 — Leave Stasis and declare Oppositions; Pass 2 — Temper and Fire the Stone. The Agekeeper oversees the Forge."
 		},
 		{
 			"id": "winter",
 			"icon": "⛰️",
 			"title": "Winter",
 			"subtitle": "Final Actions & Reset",
-			"summary": "Unlock cards, optional Offering and Wager, enforce limits, shuffle deck, pass the Key."
+			"summary": "Winter closes the Cosmic Age. Unlock cards, take the optional Offering to the Age and Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise."
 		}
 	]
 }

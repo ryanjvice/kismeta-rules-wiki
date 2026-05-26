@@ -1,7 +1,7 @@
 {
 	"id": "winter-flow",
 	"mode": "sequentialHybrid",
-	"intro": "Step through the Winter sequence together. Required steps must happen; Offering and Wager are optional — answer when you reach each one.",
+	"intro": "Winter closes the Cosmic Age. Step through the sequence together as a table. Required steps must happen; Offering and Fateful Wager are optional — answer when you reach each one.",
 	"learnMoreHash": "phase-4-winter",
 	"root": {
 		"id": "winter-sequence",
@@ -12,36 +12,36 @@
 				"id": "unlock",
 				"label": "1. Card Unlock",
 				"kind": "required",
-				"body": "All players may return locked Spread cards to hand.",
+				"body": "Cards are now unlocked. Move cards freely between your Hand and Spread before taking other Winter actions.",
 				"learnMoreHash": "1-card-unlock"
 			},
 			{
 				"id": "offering",
 				"label": "2. Offering to the Age (optional)",
 				"kind": "optional",
-				"body": "Discard cards meeting the threshold to gain a boon from the Cosmic Age.",
+				"body": "The Agekeeper convenes all Alchemists to make a collective Offering. Contribute cards sharing at least one Aspect with the Cosmic Age. If the group's combined Rank Points meet the threshold, every contributor earns a Cauldron Catalyst — a 2-for-1 Reagent Crafting boost for the full following round.",
 				"learnMoreHash": "2-offering-to-the-age"
 			},
 			{
 				"id": "wager",
 				"label": "3. Fateful Wager (optional)",
 				"kind": "optional",
-				"body": "Wager Spread cards against the Fates for a chance at powerful rewards.",
+				"body": "Bet cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly and your wager is doubled. Guess wrong and it is lost to the Fates. Wagers resolve at the start of next Spring.",
 				"learnMoreHash": "3-fateful-wager"
 			},
 			{
 				"id": "limits",
 				"label": "4. Enforce Card Limits",
 				"kind": "required",
-				"body": "Discard down to hand and Spread limits before the next Age.",
-				"learnMoreHash": "4️⃣-enforce-card-limits--reset"
+				"body": "Discard down to card limits before the next Age: Spread 7 cards · Hand 5 cards · Arcanum: Adept cards only (discard all Fate Major Arcana to the Common Deck).",
+				"learnMoreHash": "4-enforce-card-limits--reset"
 			},
 			{
-				"id": "reset",
-				"label": "5. Reset deck & pass Key",
+				"id": "transit",
+				"label": "5. Transit the Age",
 				"kind": "required",
-				"body": "Shuffle the Common Deck. Pass the Agekeeper Key clockwise.",
-				"learnMoreHash": "5️⃣-reset-sequence"
+				"body": "The Agekeeper collects all discarded Kismeta Cards, shuffles the Common Deck, and taps it twice to cleanse it. Then pass the Agekeeper's Key clockwise to the next player. Return to Phase 1: Spring.",
+				"learnMoreHash": "5-transit-the-age"
 			}
 		]
 	}

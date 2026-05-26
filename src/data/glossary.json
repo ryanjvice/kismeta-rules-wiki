@@ -49,11 +49,15 @@
   },
   {
     "term": "Cauldron",
-    "definition": "A colored refining station on each player's Crucible Codex (Red, Blue, Green, Yellow). Each Cauldron corresponds to a specific Reagent type and Element via the Correspondence table. Molten Coals placed in a Cauldron permanently lower its RP Threshold by 5 per Coal, making Reagent refinement cheaper over time."
+    "definition": "A colored refining station on each player's Cauldron Codex (Red, Blue, Green, Yellow). Each Cauldron corresponds to a specific Reagent type and Element via the Correspondence table. Molten Coals placed in a Cauldron permanently lower its RP Threshold by 5 per Coal, making Reagent Crafting cheaper over time."
   },
   {
     "term": "Cauldron Catalyst",
     "definition": "A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent refining in the Cauldron it is placed in for the full following round. Only one Catalyst may be active per Cauldron at a time."
+  },
+  {
+    "term": "Cauldron Codex",
+    "definition": "A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance."
   },
   {
     "term": "Correspondence",
@@ -65,11 +69,7 @@
   },
   {
     "term": "Cosmic Effect",
-    "definition": "The unique game modifier activated by the rolled Cosmic Age Sign. Applies to the entire round and affects all players. See the Cosmic Ages & Effects table in the Reference Appendix."
-  },
-  {
-    "term": "Crucible Codex",
-    "definition": "A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance."
+    "definition": "Each Sign's Cosmic Effect operates on two levels. The Cosmic Age Effect, set by the Agekeeper's roll, applies to all players for the entire round. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If a player's Sign matches the Cosmic Age, the effect is simply active — it does not apply twice. See the Cosmic Ages & Effects table in the Reference Appendix."
   },
   {
     "term": "Duel",
@@ -105,7 +105,7 @@
   },
   {
     "term": "Hand",
-    "definition": "One of three card zones in a player's inventory. Cards held here are face-down and hidden from rivals. Hand cards may contribute to Reagent Refinement and Oppositions (discarded after use) but cannot be used for Alignments, Crucible Card activation, Duels, Trades, Astral Houses, or Wagers. Limited to 5 cards at round's end."
+    "definition": "One of three card zones in a player's inventory. Cards held here are face-down and hidden from rivals. Hand cards may contribute to Reagent Crafting and Oppositions (discarded after use) but cannot be used for Alignments, Crucible Card activation, Duels, Trades, Astral Houses, or Wagers. Limited to 5 cards at round's end."
   },
   {
     "term": "Harvest",
@@ -121,11 +121,11 @@
   },
   {
     "term": "Minor Arcana",
-    "definition": "The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Refinement, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers."
+    "definition": "The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers."
   },
   {
     "term": "Molten Coal",
-    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is moved by the activating player into any Cauldron of their choice, permanently reducing that Cauldron's RP Threshold by 5. Coals cannot be moved once placed."
+    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is moved by the activating player into any Cauldron of their choice, permanently reducing that Cauldron's RP Threshold by 5. Molten Coals cannot be moved once placed."
   },
   {
     "term": "Offering to the Age",
@@ -144,10 +144,6 @@
     "definition": "Each player's primary game piece, representing the material being transformed through the Great Work. Begins at position 0 (Mantle Ring) on the Transmutation Path and must reach the Altar of Kismeta (position 8) to win. May be Forging, Tempering, or in Stasis at any given time."
   },
   {
-    "term": "Protective Ward",
-    "definition": "A Reagent placed on the shield symbol beside a Forging Stone or Active Crucible Card. Acts as a mandatory entry cost that any Challenger must pay before declaring Opposition or a Gambit against that position."
-  },
-  {
     "term": "Rank",
     "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points when refining Reagents. Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
@@ -157,11 +153,11 @@
   },
   {
     "term": "Reagent",
-    "definition": "A refined resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are refined by discarding matching-Suit cards that meet a Cauldron's RP Threshold."
+    "definition": "A Crafted resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are Crafted by discarding matching-Suit cards that meet a Cauldron's RP Threshold."
   },
   {
     "term": "Spread",
-    "definition": "One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Refinement, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end."
+    "definition": "One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end."
   },
   {
     "term": "Stasis",
@@ -186,5 +182,9 @@
   {
     "term": "Transmutation",
     "definition": "The overarching process of advancing the Philosopher's Stone from its starting position through all four Forge stages to the Altar of Kismeta. Completing Transmutation wins the game."
+  },
+  {
+    "term": "Ward Reagent",
+    "definition": "A Reagent placed on the shield symbol beside a Forging Stone or Active Crucible Card. Acts as a mandatory entry cost that any Challenger must pay before declaring Opposition or a Gambit against that position."
   }
 ]

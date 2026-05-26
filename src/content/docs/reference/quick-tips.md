@@ -5,16 +5,18 @@ description: "Practical advice for new and returning alchemists."
 
 Keep these principles in mind as you find your footing across the first few rounds.
 
-- **Your Zodiac Sign Shapes the Whole Round:** After rolling in Spring, check your Sign's Aspects before planning your Summer actions. Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from this single roll.
+1. **Your Alignments Shape the Round:** Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from the Aspect Alignments between the Cosmic Age and each of your inventory items.
 
-- **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
+2. **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
 
-- **Negotiate Wisely:** Every interaction — Trade, Duel, Gambit, or Opposition — is a resource decision. Before committing, weigh your Spread's Alignment strength: a well-aligned Spread improves your odds in Duels and Oppositions, qualifies you to declare Gambits, and signals real leverage in trades. Factor in any active card effects that modify dice rolls or protect your assets, and remember that Reagents placed as Protective Wards also count toward that card's activation requirements — every resource has more than one job.
+3. **Cauldron Drops Are Permanent:** Each activated Crucible Card drops its Molten Coal into a Cauldron, permanently lowering that Cauldron's Crafting Threshold by 5 RP. Think ahead: fuel the Cauldron for the Reagent type you'll need most. (See Correspondence table.)
 
-- **Only One Card Can Be Fired At A Time:** You can Activate multiple Crucible Cards, but only one can be Fired and in the Forge. Plan your activations so you're never caught with an unready Crucible Card when you reach the Forge.
+4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to meet the Threshold. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
 
-- **Cauldron Drops Are Permanent — Plan Them:** Each activated Crucible Card drops its Molten Coal into a Cauldron, permanently lowering that Cauldron's Refinement Threshold by 5 RP. Think ahead: fuel the Cauldron for the Reagent type you'll need most for upcoming Fuel Costs.
+5. **Astral Houses Are Your Anchor:** Build Astral Houses early. Each House acts as a permanent Alignment source for Harvesting Bonus cards every Spring for the rest of the game. A House built in round one compounds its advantage over every subsequent Age. A House built in the final round is barely worth the cost.
 
-- **Ward Up Before You Enter the Forge:** Setting even 1–2 Reagents as Protective Wards when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card's requirements.
+6. **Adept Cards Synergies:** Your Arcanum has two Adept slots that, as a pair, permanently add their Sign, Planet, and Element to all calculations. A strong pair spans multiple Aspect types, preserving bonuses even as the Cosmic Age shifts. When a new Adept appears, consider how it complements your existing one. Overlapping Aspects with your Astral Houses create a strong Alignment advantage that rivals can't disrupt.
 
-- **The Offering Rewards Everyone — Coordinate:** The Offering to the Age is a shared opportunity. Even rivals benefit from a successful Offering. If the Threshold looks reachable, contribute cards and nudge others to do the same — the 2-for-1 Refinement bonus is worth the cooperation.
+7. **Protect Your Progress with Wards:** Setting even 1–2 Reagents as Ward Reagents when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card's requirements.
+
+8. **The Offering Rewards Everyone:** The Offering to the Age is a shared opportunity. Even rivals benefit from a successful Offering. If the Threshold looks reachable, contribute cards and nudge others to do the same — the 2-for-1 Crafting bonus is worth the cooperation.

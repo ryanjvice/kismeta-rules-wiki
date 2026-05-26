@@ -1,7 +1,7 @@
 {
 	"id": "autumn-flow",
 	"mode": "fixedSequence",
-	"intro": "Step through your Autumn turn. Start by telling us where your Stone is, then follow the prompts for Leave Stasis, Opposition, Temper, and Fire.",
+	"intro": "Take a moment to survey the Forge and note where every Stone sits before you begin. Then step through your Autumn turn — the guide shows only the steps that apply to your Stone's current position.",
 	"learnMoreHash": "phase-3-autumn",
 	"root": {
 		"id": "autumn-sequence",
@@ -31,7 +31,7 @@
 								"id": "forge-open",
 								"label": "Forge spot open",
 								"kind": "choice",
-								"body": "Return your Stone to the Forge. You may re-arm a Protective Ward on the spot."
+								"body": "Return your Stone to the Forge position it previously held. You may re-arm a Ward Reagent on the 🛡️ symbol beside your Stone."
 							},
 							{
 								"id": "forge-occupied",
@@ -48,7 +48,7 @@
 										"id": "stasis-opposition",
 										"label": "Challenge — Stasis Opposition in step 2",
 										"kind": "optional",
-										"body": "Declare Stasis Opposition on your turn in Pass 1, step 2.",
+										"body": "Declare Stasis Opposition on your turn in Pass 1, step 2. If you win, the two Stones swap — your Stone enters the Forge and the Defender goes to Stasis. If you lose, you remain in Stasis.",
 										"learnMoreHash": "pass-1-2-opposition"
 									}
 								]
@@ -68,7 +68,7 @@
 							"all"
 						],
 						"condition": "You may challenge a rival Forging Stone, or defend if you are Forging",
-						"body": "Alignment contest — you may declare Opposition against eligible Stones on the Forge.",
+						"body": "Alignment contest — declare Opposition against an eligible Forging Stone. Pay the Defender's Ward Reagent entry fee; play cards; roll dice; highest Alignment Points wins. Defender's Stone moves to Stasis on a Challenger win.",
 						"learnMoreHash": "pass-1-2-opposition"
 					}
 				]
@@ -90,7 +90,7 @@
 							"all"
 						],
 						"condition": "Forging since last round; not if you returned from Stasis this Autumn",
-						"body": "Advance your Stone to the next Mantle Ring position; discard the Crucible Card and burn remaining Wards.",
+						"body": "Advance your Stone from the Forge to the next Mantle Ring position. Discard the Crucible Card — the Stage is complete. Remaining Ward Reagents are burned and returned to the supply.",
 						"learnMoreHash": "pass-2-3-temper-the-stone"
 					},
 					{
@@ -104,7 +104,7 @@
 							"all"
 						],
 						"condition": "Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis",
-						"body": "Formula met on an Active Crucible Card — move your Stone into the Forge and Fire the card.",
+						"body": "Satisfy an Active Crucible Card's Alchemical Formula (Alignment cards + Reagents). Discard the cards and Reagents, turn the Crucible Card sideways, move your Stone into the Forge. Optionally place Ward Reagents on the 🛡️ symbol to raise the entry fee for Oppositions.",
 						"learnMoreHash": "pass-2-4-fire-the-stone"
 					}
 				]
