@@ -57,9 +57,8 @@ function initContextPanel(root: HTMLElement) {
 	const desktopEmpty = root.querySelector<HTMLElement>('[data-context-empty]')!;
 	const desktopLink = root.querySelector<HTMLAnchorElement>('[data-context-link]')!;
 
-	// Mobile trigger refs
+	// Mobile trigger ref
 	const trigger = root.querySelector<HTMLButtonElement>('[data-context-trigger]');
-	const triggerActive = root.querySelector<HTMLElement>('[data-context-trigger-active]');
 
 	// Mobile modal refs
 	const modal = root.querySelector<HTMLElement>('[data-context-modal]');
@@ -97,16 +96,6 @@ function initContextPanel(root: HTMLElement) {
 		const titleText = section?.title || labels.title;
 		desktopTitle.textContent = titleText;
 		if (modalTitle) modalTitle.textContent = titleText;
-
-		// Update the trigger's active section indicator
-		if (triggerActive) {
-			if (section?.title) {
-				triggerActive.textContent = section.title;
-				triggerActive.hidden = false;
-			} else {
-				triggerActive.hidden = true;
-			}
-		}
 
 		if (section?.html) {
 			desktopBody.innerHTML = section.html;

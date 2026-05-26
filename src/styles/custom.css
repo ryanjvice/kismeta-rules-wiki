@@ -1738,15 +1738,14 @@ main:has(.kismeta-lore) h1#_top,
 	z-index: 100;
 	display: inline-flex;
 	align-items: center;
-	gap: 0.45rem;
-	padding: 0.6rem 1rem 0.6rem 0.8rem;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	padding: 0;
 	background: var(--sl-color-accent);
 	color: var(--kismeta-on-accent);
 	border: none;
-	border-radius: 2rem;
-	font-family: var(--kismeta-font-heading);
-	font-size: 0.88rem;
-	font-weight: 600;
+	border-radius: 50%;
 	cursor: pointer;
 	box-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
 	transition: background 0.15s, box-shadow 0.15s;
@@ -1758,29 +1757,6 @@ main:has(.kismeta-lore) h1#_top,
 	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
 	outline: 2px solid var(--sl-color-accent-high);
 	outline-offset: 2px;
-}
-
-.context-rules-panel__trigger-icon {
-	flex-shrink: 0;
-}
-
-.context-rules-panel__trigger-label {
-	white-space: nowrap;
-}
-
-.context-rules-panel__trigger-active {
-	max-width: 9rem;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	padding: 0.1rem 0.45rem;
-	background: rgba(0, 0, 0, 0.22);
-	border-radius: 1rem;
-	font-size: 0.78rem;
-}
-
-.context-rules-panel__trigger-active[hidden] {
-	display: none;
 }
 
 /* Mobile: bottom-sheet modal */
