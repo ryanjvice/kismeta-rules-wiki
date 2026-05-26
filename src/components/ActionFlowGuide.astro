@@ -45,6 +45,7 @@ const labels = {
 	processionLabel: t('flow.processionLabel'),
 	passLikelySkip: t('flow.passLikelySkip'),
 	wizardBack: t('flow.wizardBack'),
+	wizardNext: t('flow.wizardNext'),
 	wizardContinue: t('flow.wizardContinue'),
 	wizardDone: t('flow.wizardDone'),
 	wizardStepOf: t('flow.wizardStepOf'),
@@ -523,17 +524,21 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 				</>
 			)}
 
-			{/* ── Shared wizard navigation ─────────────────────────────── */}
-			<div class="action-flow__wizard-nav" data-wizard-nav hidden>
-				<button
-					type="button"
-					class="action-flow__wizard-btn action-flow__wizard-btn--back"
-					data-wizard-back
-					hidden
-				>
-					{labels.wizardBack}
-				</button>
-				<div class="action-flow__wizard-nav-right">
+		{/* ── Shared wizard navigation ─────────────────────────────── */}
+		<div class="action-flow__wizard-nav" data-wizard-nav hidden>
+			<button
+				type="button"
+				class="action-flow__wizard-btn action-flow__wizard-btn--back"
+				data-wizard-back
+				hidden
+			>
+				{labels.wizardBack}
+			</button>
+			<div class="action-flow__wizard-next-preview" data-wizard-next-preview hidden>
+				<span class="action-flow__wizard-next-label">{labels.wizardNext}</span>
+				<span class="action-flow__wizard-next-title" data-wizard-next-title></span>
+			</div>
+			<div class="action-flow__wizard-nav-right">
 					<button
 						type="button"
 						class="action-flow__wizard-btn action-flow__wizard-btn--gate-no"
@@ -684,6 +689,8 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 		const continueBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-continue]');
 		const gateYesBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-gate-yes]');
 		const gateNoBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-gate-no]');
+		const nextPreviewEl = wizardEl.querySelector<HTMLElement>('[data-wizard-next-preview]');
+		const nextTitleEl = wizardEl.querySelector<HTMLElement>('[data-wizard-next-title]');
 
 		if (!navEl || !backBtn || !continueBtn || !gateYesBtn || !gateNoBtn) return;
 
@@ -753,6 +760,25 @@ const resetNode = winterChildren.find((n) => n.id === 'reset') ?? null;
 					: (labels.wizardContinue || 'Continue');
 				gateYesBtn!.hidden = true;
 				gateNoBtn!.hidden = true;
+			}
+
+			// Next step preview label
+			if (nextPreviewEl && nextTitleEl) {
+				const hasNext = !isLast && !isDone;
+				if (hasNext) {
+					const nextPanelId = sequence[index + 1];
+					const nextPanelEl = getPanelEl(nextPanelId);
+					const nextLabel =
+						nextPanelEl?.querySelector('.action-flow__wizard-step-label')?.textContent?.trim() ?? '';
+					if (nextLabel) {
+						nextTitleEl.textContent = nextLabel;
+						nextPreviewEl.hidden = false;
+					} else {
+						nextPreviewEl.hidden = true;
+					}
+				} else {
+					nextPreviewEl.hidden = true;
+				}
 			}
 		}
 

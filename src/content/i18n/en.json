@@ -69,6 +69,7 @@
   "flow.processionLabel": "Two passes around the table",
   "flow.passLikelySkip": "Likely skip this pass.",
   "flow.wizardBack": "Back",
+  "flow.wizardNext": "Next",
   "flow.wizardContinue": "Continue",
   "flow.wizardDone": "Done",
   "flow.wizardStepOf": "Step {current} of {total}",

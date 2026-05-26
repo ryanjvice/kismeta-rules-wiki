@@ -1340,17 +1340,49 @@ main:has(.kismeta-lore) h1#_top,
 .action-flow__wizard-nav {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	margin-top: 1.25rem;
-	padding-top: 1rem;
-	border-top: 1px solid var(--sl-color-hairline);
-	gap: 0.5rem;
+	margin-top: 1rem;
+	padding: 0.45rem 0.9rem 0.55rem;
+	border: var(--kismeta-panel-border);
+	border-radius: var(--kismeta-panel-radius);
+	background: var(--kismeta-panel-bg);
+	gap: 0.6rem;
 }
 
 .action-flow__wizard-nav-right {
 	display: flex;
 	gap: 0.5rem;
 	margin-left: auto;
+}
+
+/* Next step preview label (inside the nav card) */
+.action-flow__wizard-next-preview {
+	flex: 1;
+	min-width: 0;
+}
+
+.action-flow__wizard-next-preview[hidden] {
+	display: none;
+}
+
+.action-flow__wizard-next-label {
+	display: block;
+	font-size: 0.72rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--sl-color-gray-3);
+	margin-bottom: 0.1rem;
+}
+
+.action-flow__wizard-next-title {
+	display: block;
+	font-size: 0.88rem;
+	font-weight: 600;
+	font-family: var(--kismeta-font-heading);
+	color: var(--sl-color-gray-1);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .action-flow__wizard-btn {
