@@ -30,7 +30,11 @@ const rulesPlayPaths = ['/play/setup/', '/play/round-overview/'];
 							  pathname.includes('/reference/')
 							: pathname.includes('/learn/') || pathname.includes('/rules/') || rulesPlayPaths.some((path) => pathname.includes(path));
 			return (
-				<a href={href} class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}>
+				<a
+					href={href}
+					class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}
+					aria-current={active ? 'page' : undefined}
+				>
 					{t(tab.key)}
 				</a>
 			);

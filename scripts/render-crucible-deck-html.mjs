@@ -21,6 +21,7 @@ const LABELS = {
 			standard: 'Standard Game',
 			magnus: 'Magnus Alchemist',
 		},
+		modeLabel: 'Game mode',
 		players: (n, total) => `${n} players (${total} cards)`,
 		drawFrom: 'Draw from each group:',
 	},
@@ -56,7 +57,9 @@ function renderModePanel(mode, labels, prefix) {
 	const rows = PLAYER_COUNTS.map((n) =>
 		renderPlayerRow(n, modeBuilds[String(n)], labels)
 	).join('\n');
-	return `<div class="crucible-deck__panel" id="${prefix}-panel-${mode}" role="tabpanel" aria-labelledby="${prefix}-tab-${mode}">
+	// No role="tabpanel" — panels are shown/hidden by CSS :has() on the radio
+	// group above; a tabpanel role requires JS-managed ARIA state we don't have.
+	return `<div class="crucible-deck__panel" id="${prefix}-panel-${mode}">
   <ul class="crucible-deck__rows">${rows}</ul>
 </div>`;
 }
@@ -68,15 +71,13 @@ function renderModePanel(mode, labels, prefix) {
 export function renderCrucibleDeckHtml(_locale = 'en', prefix = 'crucible') {
 	const labels = LABELS.en;
 
-	const radios = GAME_MODES.map((mode, i) => {
+	// Interleave each radio + label as adjacent siblings so that
+	// `.crucible-deck__tab-input:checked + .crucible-deck__tab-label` in CSS
+	// correctly highlights the active tab.
+	const tabItems = GAME_MODES.map((mode, i) => {
 		const checked = i === 0 ? ' checked' : '';
-		return `<input type="radio" name="${prefix}-mode" id="${prefix}-tab-${mode}" class="crucible-deck__tab-input"${checked} />`;
+		return `<input type="radio" name="${prefix}-mode" id="${prefix}-tab-${mode}" class="crucible-deck__tab-input"${checked} /><label for="${prefix}-tab-${mode}" class="crucible-deck__tab-label">${escapeHtml(labels.tabs[mode])}</label>`;
 	}).join('\n');
-
-	const tabLabels = GAME_MODES.map(
-		(mode) =>
-			`<label for="${prefix}-tab-${mode}" class="crucible-deck__tab-label">${escapeHtml(labels.tabs[mode])}</label>`
-	).join('\n');
 
 	const panels = GAME_MODES.map((mode) => renderModePanel(mode, labels, prefix)).join('\n');
 
@@ -86,8 +87,7 @@ export function renderCrucibleDeckHtml(_locale = 'en', prefix = 'crucible') {
 
 	return `<div class="crucible-deck" data-locale="en">
 <p class="crucible-deck__intro">${escapeHtml(labels.curatedIntro)}</p>
-${radios}
-<div class="crucible-deck__tab-strip" role="tablist">${tabLabels}</div>
+<div class="crucible-deck__tab-strip" role="radiogroup" aria-label="${escapeHtml(labels.modeLabel)}">${tabItems}</div>
 ${panels}
 <details class="crucible-deck__random">
 <summary>${escapeHtml(labels.randomTitle)}</summary>

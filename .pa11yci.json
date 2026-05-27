@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 30000,
+    "wait": 1000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    }
+  },
+  "urls": [
+    "http://localhost:4321/",
+    "http://localhost:4321/play/guided/",
+    "http://localhost:4321/play/setup/",
+    "http://localhost:4321/rules/game-overview/",
+    "http://localhost:4321/lore/"
+  ]
+}

@@ -770,7 +770,6 @@ main:has(.kismeta-lore) h1#_top,
     background 0.15s,
     color 0.15s,
     border-color 0.15s;
-  order: 1;
 }
 
 .crucible-deck__tab-input:focus-visible + .crucible-deck__tab-label,
@@ -790,12 +789,14 @@ main:has(.kismeta-lore) h1#_top,
   margin-bottom: 0.75rem;
 }
 
-#setup-crucible-tab-quickplay:checked ~ #setup-crucible-panel-quickplay,
-#setup-crucible-tab-standard:checked ~ #setup-crucible-panel-standard,
-#setup-crucible-tab-magnus:checked ~ #setup-crucible-panel-magnus,
-#crucible-tab-quickplay:checked ~ #crucible-panel-quickplay,
-#crucible-tab-standard:checked ~ #crucible-panel-standard,
-#crucible-tab-magnus:checked ~ #crucible-panel-magnus {
+/* Inputs are now inside .crucible-deck__tab-strip; use :has() to reach panels
+   that are siblings of the strip rather than siblings of the inputs. */
+.crucible-deck:has(#setup-crucible-tab-quickplay:checked) #setup-crucible-panel-quickplay,
+.crucible-deck:has(#setup-crucible-tab-standard:checked) #setup-crucible-panel-standard,
+.crucible-deck:has(#setup-crucible-tab-magnus:checked) #setup-crucible-panel-magnus,
+.crucible-deck:has(#crucible-tab-quickplay:checked) #crucible-panel-quickplay,
+.crucible-deck:has(#crucible-tab-standard:checked) #crucible-panel-standard,
+.crucible-deck:has(#crucible-tab-magnus:checked) #crucible-panel-magnus {
   display: block;
 }
 
@@ -988,7 +989,8 @@ main:has(.kismeta-lore) h1#_top,
 }
 
 @media print {
-  .crucible-deck__tab-input:checked ~ .crucible-deck__panel {
+  /* Show all mode panels when printing. */
+  .crucible-deck .crucible-deck__panel {
     display: block !important;
   }
 }
@@ -2138,5 +2140,20 @@ main:has(.kismeta-lore) h1#_top,
   /* Flip chevron to point right when collapsed */
   html[data-kismeta-sidebar-collapsed="true"] .kismeta-sidebar-toggle__icon {
     transform: rotate(180deg);
+  }
+}
+
+/* ── Reduced-motion ──────────────────────────────────────────────────────── */
+/* Honor the OS "reduce motion" preference. Transition durations are set to
+   near-zero so visual state changes are instant, not animated. This covers
+   all custom transitions in this file: progress-fill, tab/segment hovers,
+   sidebar toggle, panel open/close, etc. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

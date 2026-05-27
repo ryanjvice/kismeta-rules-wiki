@@ -57,15 +57,16 @@ const uiLabels = JSON.stringify({
 				<span class="crucible-deck__control-label" id="crucible-build-type-label">
 					{t('guided.crucible.buildType')}
 				</span>
-				<div class="crucible-deck__segmented" role="group" aria-labelledby="crucible-build-type-label">
-					<button
+		<div class="crucible-deck__segmented" role="group" aria-labelledby="crucible-build-type-label">
+				<button
 						type="button"
 						class="crucible-deck__segment crucible-deck__segment--active"
+						aria-pressed="true"
 						data-build-type="curated"
 					>
 						{labels.buildCurated}
 					</button>
-					<button type="button" class="crucible-deck__segment" data-build-type="random">
+					<button type="button" class="crucible-deck__segment" aria-pressed="false" data-build-type="random">
 						{labels.buildRandom}
 					</button>
 				</div>
@@ -77,6 +78,7 @@ const uiLabels = JSON.stringify({
 						<button
 							type="button"
 							class="crucible-deck__segment"
+							aria-pressed="false"
 							data-game-mode={mode}
 						>
 							{labels.tabs[mode]}
@@ -96,6 +98,7 @@ const uiLabels = JSON.stringify({
 								'crucible-deck__segment',
 								{ 'crucible-deck__segment--active': n === 4 },
 							]}
+							aria-pressed={n === 4 ? 'true' : 'false'}
 							data-player-count={n}
 						>
 							{n}
@@ -176,6 +179,7 @@ const uiLabels = JSON.stringify({
 			root.querySelectorAll<HTMLElement>(selector).forEach((el) => {
 				const match = el.getAttribute(attr) === value;
 				el.classList.toggle('crucible-deck__segment--active', match);
+				el.setAttribute('aria-pressed', String(match));
 			});
 		};
 

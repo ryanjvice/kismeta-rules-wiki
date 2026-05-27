@@ -8,7 +8,8 @@
     "build": "npm run sync && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sync": "node scripts/sync-guide.mjs"
+    "sync": "node scripts/sync-guide.mjs",
+    "a11y:check": "npx pa11y-ci --config .pa11yci.json"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.39.2",

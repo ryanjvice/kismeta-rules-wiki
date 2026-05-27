@@ -152,6 +152,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 								<button
 									type="button"
 									class="action-flow__wizard-stone-btn"
+									aria-pressed="false"
 									data-wizard-stone={opt.id}
 								>
 									{opt.label}
@@ -783,16 +784,26 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			}
 		}
 
-		function showPanel(panelId: string, index: number): void {
-			// Hide every panel
-			wizardEl!.querySelectorAll<HTMLElement>('[data-wizard-panel]').forEach((p) => {
-				p.hidden = true;
-			});
+	function showPanel(panelId: string, index: number, moveFocus = false): void {
+		// Hide every panel
+		wizardEl!.querySelectorAll<HTMLElement>('[data-wizard-panel]').forEach((p) => {
+			p.hidden = true;
+		});
 
-			// Reveal the active panel
-			const panelEl = getPanelEl(panelId);
-			if (panelEl) {
-				panelEl.hidden = false;
+		// Reveal the active panel
+		const panelEl = getPanelEl(panelId);
+		if (panelEl) {
+			panelEl.hidden = false;
+
+			// When triggered by user interaction (not initial load), move focus
+			// into the new panel so keyboard users don't have to re-Tab past nav.
+			if (moveFocus) {
+				const heading = panelEl.querySelector<HTMLElement>('.action-flow__wizard-step-label, .action-flow__wizard-stone-title');
+				if (heading) {
+					heading.setAttribute('tabindex', '-1');
+					heading.focus();
+				}
+			}
 
 				// Gate content visibility reflects the stored answer
 				if (isGatePanel(panelId)) {
@@ -805,10 +816,9 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 				// Highlight the previously-chosen stone when returning to the picker
 				if (panelId === 'autumn-stone-pick' && autumnState.stone) {
 					panelEl.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]').forEach((btn) => {
-						btn.classList.toggle(
-							'action-flow__wizard-stone-btn--active',
-							btn.dataset.wizardStone === autumnState.stone
-						);
+						const active = btn.dataset.wizardStone === autumnState.stone;
+						btn.classList.toggle('action-flow__wizard-stone-btn--active', active);
+						btn.setAttribute('aria-pressed', String(active));
 					});
 				}
 			}
@@ -837,23 +847,23 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			);
 		}
 
-		function navigate(delta: number): void {
-			const state = getState();
-			const targetIndex = state.index + delta;
-			if (targetIndex < 0 || targetIndex >= sequence.length) return;
+	function navigate(delta: number): void {
+		const state = getState();
+		const targetIndex = state.index + delta;
+		if (targetIndex < 0 || targetIndex >= sequence.length) return;
 
-			// Navigating Back through a gate resets it so the player can re-answer
-			if (delta < 0) {
-				const targetPanel = sequence[targetIndex];
-				if (isGatePanel(targetPanel)) {
-					delete state.gateAnswers[targetPanel];
-				}
+		// Navigating Back through a gate resets it so the player can re-answer
+		if (delta < 0) {
+			const targetPanel = sequence[targetIndex];
+			if (isGatePanel(targetPanel)) {
+				delete state.gateAnswers[targetPanel];
 			}
-
-			state.index = targetIndex;
-			saveState();
-			showPanel(sequence[targetIndex], targetIndex);
 		}
+
+		state.index = targetIndex;
+		saveState();
+		showPanel(sequence[targetIndex], targetIndex, true);
+	}
 
 		// Back
 		backBtn.addEventListener('click', () => navigate(-1));
@@ -906,14 +916,16 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 					autumnState.index = 1;
 					saveAutumnState(autumnState);
 
-					// Highlight selection
-					wizardEl!
+				// Highlight selection
+				wizardEl!
 						.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]')
-						.forEach((b) =>
-							b.classList.toggle('action-flow__wizard-stone-btn--active', b === btn)
-						);
+						.forEach((b) => {
+							const active = b === btn;
+							b.classList.toggle('action-flow__wizard-stone-btn--active', active);
+							b.setAttribute('aria-pressed', String(active));
+						});
 
-					showPanel(sequence[1], 1);
+					showPanel(sequence[1], 1, true);
 				});
 			});
 
@@ -927,11 +939,14 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 					sequence = ['autumn-stone-pick'];
 					saveAutumnState(autumnState);
 
-					wizardEl!
-						.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]')
-						.forEach((b) => b.classList.remove('action-flow__wizard-stone-btn--active'));
+				wizardEl!
+					.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]')
+					.forEach((b) => {
+						b.classList.remove('action-flow__wizard-stone-btn--active');
+						b.setAttribute('aria-pressed', 'false');
+					});
 
-					showPanel('autumn-stone-pick', 0);
+				showPanel('autumn-stone-pick', 0, true);
 				});
 			}
 		}
