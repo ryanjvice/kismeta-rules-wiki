@@ -231,7 +231,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "summer",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>The Sun shines brightly as you work to outpace your rivals, bartering over trades, initiating duels, and risking your luck in gambits.</p>",
+    body: "<p>The Sun shines brightly as you work to craft resources and consort with your rivals, bartering over trades, initiating duels, and risking your luck in gambits.</p>",
     embed: "summer-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "trade-build-prepare",
