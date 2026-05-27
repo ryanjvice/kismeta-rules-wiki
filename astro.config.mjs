@@ -21,7 +21,7 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      title: "Kismeta Rules",
+      title: "Game Rules",
       description:
         "Official rules reference for Kismeta: Alchemists of the Great Year — a GOODMAGIK game.",
       logo: {
