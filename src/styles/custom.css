@@ -2048,6 +2048,25 @@ main:has(.kismeta-lore) h1#_top,
 	color: var(--sl-color-gray-3);
 }
 
+/* Home page — kismetaChart watermark centered in the content area */
+.page:has(.kismeta-home-intro) .main-frame {
+	position: relative;
+	isolation: isolate;
+}
+
+.page:has(.kismeta-home-intro) .main-frame::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image: url('../assets/kismetaChart.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: min(90vw, 56rem) auto;
+	opacity: 0.07;
+	pointer-events: none;
+	z-index: -1;
+}
+
 /* ── Collapsible left sidebar ───────────────────────────────────────── */
 
 :root {
