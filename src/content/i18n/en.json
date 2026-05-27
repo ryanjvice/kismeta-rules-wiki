@@ -80,5 +80,14 @@
   "flow.autumnTemperPrompt": "Do you want to Temper your Stone this turn?",
   "flow.autumnFirePrompt": "Do you want to Fire your Stone this turn?",
   "flow.winterOfferingPrompt": "Perform Offering to the Age this round?",
-  "flow.winterWagerPrompt": "Take a Fateful Wager this round?"
+  "flow.winterWagerPrompt": "Take a Fateful Wager this round?",
+  "a11y.menuLabel": "Accessibility settings",
+  "a11y.themeLabel": "Theme",
+  "a11y.themeDark": "Dark",
+  "a11y.themeLight": "Light",
+  "a11y.themeSystem": "System",
+  "a11y.fontSizeLabel": "Text size",
+  "a11y.fontDefault": "Default",
+  "a11y.fontLarge": "Large",
+  "a11y.fontLarger": "Larger"
 }

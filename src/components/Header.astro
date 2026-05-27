@@ -16,6 +16,13 @@ import TabNav from './TabNav.astro';
 			document.documentElement.dataset.kismetaSidebarCollapsed = 'true';
 		}
 	} catch (_) {}
+	// Apply stored font-size preference before first paint to prevent flash.
+	try {
+		var _fs = localStorage.getItem('kismeta-font-size');
+		if (_fs && _fs !== 'default') {
+			document.documentElement.dataset.kismetaFontSize = _fs;
+		}
+	} catch (_) {}
 </script>
 
 <script>

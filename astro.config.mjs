@@ -33,6 +33,7 @@ export default defineConfig({
       customCss: ["./src/styles/custom.css"],
       components: {
         Header: "./src/components/Header.astro",
+        ThemeSelect: "./src/components/AccessibilityMenu.astro",
         PageSidebar: "./src/components/PageSidebar.astro",
         Hero: "./src/components/Hero.astro",
         Sidebar: "./src/components/Sidebar.astro",
