@@ -32,7 +32,7 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 | 🟢 Green                                                          | Earth       | 🪙 Pentacles  | Vitriol     | Green        |
 | 🟡 Yellow                                                         | Air         | ⚔️ Swords     | Quicksilver | Yellow       |
 
-## KISMETA CARDS
+## Kismeta Cards
 
 The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 134 cards divide into two types.
 
@@ -58,7 +58,7 @@ Three concepts you'll use constantly:
 - **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
-## YOUR INVENTORY: Spread, Hand & Arcanum Zones
+## Your Inventory: Spread, Hand & Arcanum Zones
 
 You always manage your inventory of Kismeta Cards across three zones.
 

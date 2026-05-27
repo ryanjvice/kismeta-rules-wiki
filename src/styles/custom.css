@@ -64,6 +64,32 @@ h1#_top,
 	letter-spacing: 0.02em;
 }
 
+@media (max-width: 50rem) {
+	.kismeta-header-wrap .header,
+	.kismeta-header-wrap .site-title {
+		gap: 0.5rem;
+	}
+
+	.kismeta-header-wrap .site-title {
+		font-size: clamp(1rem, 4vw, var(--sl-text-h4));
+	}
+
+	.kismeta-header-wrap .site-title img {
+		max-width: clamp(4.75rem, 26vw, 7.5rem);
+	}
+}
+
+@media (max-width: 23rem) {
+	.kismeta-header-wrap .site-title {
+		gap: 0.4rem;
+		font-size: 0.95rem;
+	}
+
+	.kismeta-header-wrap .site-title img {
+		max-width: 4.25rem;
+	}
+}
+
 /* Splash hero subtitle — under KISMETA logo */
 .hero-subtitle {
 	margin: 0;
