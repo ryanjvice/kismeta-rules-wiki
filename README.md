@@ -7,7 +7,7 @@ Official rules reference site for **Kismeta: Alchemists of the Great Year** (GOO
 - **Two tabs** — Play (guided walkthrough), Learn (lore, game overview, glossary, quick reference, quick tips, rules 1.0–1.14)
 - **Full-text search** — Ctrl+K / ⌘K (Pagefind, works offline after install)
 - **PWA** — Install as an app for table-side use without Wi‑Fi
-- **Game mode modifiers** — Toggle Quickplay / Magnus ⚙️ callouts in the header
+- **Game mode modifiers** — Choose Quickplay / Standard / Magnus in Guided Play; ⚙️ callouts in the guide follow your selection
 - **Deep links** — Share URLs to specific rules or headings
 
 ## Quick start

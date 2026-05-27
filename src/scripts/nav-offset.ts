@@ -1,7 +1,7 @@
 /**
  * Measures the fixed header height and writes it to --kismeta-nav-offset so that
  * main-frame padding, sidebar overlay, and mobile TOC all stay in sync with the real
- * stacked header height regardless of viewport width or modifiers panel open/close state.
+ * stacked header height regardless of viewport width.
  */
 
 function updateNavOffset() {
@@ -26,10 +26,6 @@ function initNavOffset() {
 	const header = wrap.closest<HTMLElement>('.page > .header');
 	if (header) ro.observe(header);
 	ro.observe(wrap);
-
-	// Re-measure when the game-mode-toggle <details> opens or closes
-	const modifiersDetails = wrap.querySelector<HTMLDetailsElement>('details.game-mode-toggle');
-	modifiersDetails?.addEventListener('toggle', updateNavOffset);
 }
 
 document.addEventListener('astro:page-load', initNavOffset);

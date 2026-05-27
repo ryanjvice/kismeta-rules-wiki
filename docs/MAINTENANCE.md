@@ -61,12 +61,12 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
   `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.play`, `tab.rules`, `tab.lore` · styles: `src/styles/custom.css` (`.tab-nav`)  
   **Play** is active for `/play/*` except `/play/setup/` and `/play/round-overview/` (and the home page `/`), `/glossary/`, `/reference/*`. **Rules** is active for `/learn/*`, `/rules/*`, `/play/setup/`, `/play/round-overview/`. **Lore** is active for `/lore/*`.
 
-- **Game mode toggles** (Quickplay / Magnus)  
-  `src/components/GameModeToggle.astro` · labels: i18n `gameMode.*`  
-  Rule callouts: `.game-mode-callout` in synced markdown (see [Game mode callouts](#game-mode-callouts-in-rules)).
+- **Game mode callouts** (Quickplay / Magnus ⚙️ in rules)  
+  Set in Guided Play at start; persisted in `localStorage` (`kismeta-game-modes`).  
+  Applied site-wide by [`src/scripts/game-modes.ts`](../src/scripts/game-modes.ts) (see [Game mode callouts](#game-mode-callouts-in-rules)).
 
-- **Header** (search, theme, locale + tabs + toggles)  
-  `src/components/Header.astro` — wraps Starlight header + `TabNav` + `GameModeToggle`.
+- **Header** (search, theme, locale + tabs)  
+  `src/components/Header.astro` — wraps Starlight header + `TabNav`.
 
 - **Left sidebar** (page list, order, labels)  
   `astro.config.mjs` → `starlight.sidebar`  
@@ -230,7 +230,7 @@ Lines with ⚙️ in the guide are converted during sync to:
 <div class="game-mode-callout" data-modes="quickplay magnus">...</div>
 ```
 
-- **Show/hide:** [`GameModeToggle.astro`](../src/components/GameModeToggle.astro) toggles elements by `data-modes` (`quickplay`, `magnus`).
+- **Show/hide:** [`src/scripts/game-modes.ts`](../src/scripts/game-modes.ts) toggles elements by `data-modes` (`quickplay`, `magnus`) from Guided Play’s stored mode.
 - **Generation logic:** [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs).
 - **Styling:** [`src/styles/custom.css`](../src/styles/custom.css) → `.game-mode-callout`.
 
@@ -295,7 +295,7 @@ Interactive walkthrough for new players at the table — **not** synced from the
 
 **When to update:** After changing **Components**, **Setup**, or **Round** sections in `Kismeta_GameGuide.md`, review matching steps in `guided-steps.ts`.
 
-**Game mode:** The mode picker writes `kismeta-game-modes` in `localStorage` (same key as [`GameModeToggle.astro`](../src/components/GameModeToggle.astro)). `ActionFlowGuide` reads mode for Quickplay/Magnus callouts.
+**Game mode:** Guided Play’s mode step writes `kismeta-game-modes` in `localStorage`. [`game-modes.ts`](../src/scripts/game-modes.ts) applies ⚙️ callouts site-wide; `ActionFlowGuide` reads mode for flow-specific notes.
 
 ### Context rules sidebar (Guided Play only)
 
@@ -377,7 +377,7 @@ scripts/translate-locale.mjs  # optional locale translation (see docs/i18n.md)
 astro.config.mjs              # Starlight: sidebar, locales, logo, PWA, site URL
 src/content/docs/             # Pages (most generated; index + glossary are manual)
 src/content/i18n/             # UI strings (tabs, home cards, glossary intro)
-src/components/               # Header, TabNav, GameModeToggle, HomeCards, Glossary*
+src/components/               # Header, TabNav, HomeCards, Glossary*
 src/styles/custom.css         # Theme and layout overrides
 src/data/glossary.json        # Glossary entries (generated)
 public/                       # favicon, brand/, fonts/, registerSW.js

@@ -1,13 +1,11 @@
 ---
 import DefaultHeader from '@astrojs/starlight/components/Header.astro';
 import TabNav from './TabNav.astro';
-import GameModeToggle from './GameModeToggle.astro';
 ---
 
 <div class="kismeta-header-wrap">
 	<DefaultHeader {...Astro.props} />
 	<TabNav />
-	<GameModeToggle />
 </div>
 
 <script is:inline>
@@ -21,5 +19,6 @@ import GameModeToggle from './GameModeToggle.astro';
 </script>
 
 <script>
+	import '../scripts/game-modes.ts';
 	import '../scripts/nav-offset.ts';
 </script>

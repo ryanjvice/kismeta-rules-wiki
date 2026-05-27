@@ -1,3 +1,5 @@
+import { applyGameModeCallouts } from './game-modes';
+
 export type ContextPanelLabels = {
 	title: string;
 	empty: string;
@@ -17,26 +19,6 @@ export type ContextDetail = {
 	hash?: string;
 	title?: string;
 };
-
-function getGameModes() {
-	const quickplay =
-		document.querySelector<HTMLInputElement>('.game-mode-toggle input[data-mode="quickplay"]')
-			?.checked ?? true;
-	const magnus =
-		document.querySelector<HTMLInputElement>('.game-mode-toggle input[data-mode="magnus"]')
-			?.checked ?? true;
-	return { quickplay, magnus };
-}
-
-function applyGameModeCallouts(scope: ParentNode) {
-	const { quickplay, magnus } = getGameModes();
-	scope.querySelectorAll<HTMLElement>('.game-mode-callout').forEach((el) => {
-		const modes = (el.dataset.modes || '').split(/\s+/).filter(Boolean);
-		const show =
-			(modes.includes('quickplay') && quickplay) || (modes.includes('magnus') && magnus);
-		el.hidden = !show;
-	});
-}
 
 function buildPageUrl(_locale: string, pagePath: string, hash: string) {
 	const base = `/${pagePath}/`.replace(/\/{2,}/g, '/');

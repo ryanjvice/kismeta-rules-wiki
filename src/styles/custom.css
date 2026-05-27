@@ -127,8 +127,7 @@ h1#_top,
 .sl-markdown-content :is(h2, h3, h4, h5, h6):not(:where(.not-content *)),
 .sl-markdown-content .sl-heading-wrapper:not(:where(.not-content *)),
 .starlight-aside__title,
-.tab-nav__link,
-.game-mode-toggle__label {
+.tab-nav__link {
   font-family: var(--kismeta-font-heading);
   font-weight: 600;
 }
@@ -204,24 +203,24 @@ main:has(.kismeta-lore) h1#_top,
   width: 100%;
 }
 
-/* Starlight defaults .header to --sl-nav-height (title row only); grow for tabs + modifiers */
+/* Starlight defaults .header to --sl-nav-height (title row only); grow for tabs row */
 .page > .header {
   height: auto !important;
 }
 
 /*
- * Full stacked header height (title + tabs + modifiers). Do not override --sl-nav-height —
+ * Full stacked header height (title + tabs). Do not override --sl-nav-height —
  * Starlight uses it for the inner title row and grid; inflating it breaks layout.
  * These are CSS fallback values only; nav-offset.ts sets the variable precisely via
  * ResizeObserver so content, sidebar, and TOC track the real measured height.
  */
 :root:has(.kismeta-header-wrap) {
-  --kismeta-nav-offset: calc(3.5rem + 5rem);
+  --kismeta-nav-offset: calc(3.5rem + 3.25rem);
 }
 
 @media (min-width: 50rem) {
   :root:has(.kismeta-header-wrap) {
-    --kismeta-nav-offset: calc(4rem + 6.375rem);
+    --kismeta-nav-offset: calc(4rem + 3.5rem);
   }
 }
 
@@ -289,95 +288,6 @@ main:has(.kismeta-lore) h1#_top,
 .tab-nav__link--active {
   color: var(--kismeta-on-accent);
   background: var(--sl-color-accent);
-}
-
-/* Game mode toggle — collapsible <details> on mobile, flat flex row on desktop */
-.game-mode-toggle {
-  font-size: 0.82rem;
-  background: var(--sl-color-bg-nav);
-  border-bottom: 1px solid var(--sl-color-hairline);
-}
-
-/* Remove native disclosure marker */
-.game-mode-toggle > summary {
-  list-style: none;
-}
-
-.game-mode-toggle > summary::-webkit-details-marker {
-  display: none;
-}
-
-.game-mode-toggle__summary {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 1rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.game-mode-toggle__label {
-  font-weight: 600;
-  color: var(--sl-color-gray-3);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.game-mode-toggle__chevron {
-  margin-inline-start: auto;
-  color: var(--sl-color-gray-3);
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
-}
-
-.game-mode-toggle[open] .game-mode-toggle__chevron {
-  transform: rotate(90deg);
-}
-
-.game-mode-toggle__controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.25rem 1rem 0.55rem;
-}
-
-.game-mode-toggle__option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  cursor: pointer;
-  color: var(--sl-color-gray-2);
-}
-
-.game-mode-toggle__option input {
-  accent-color: var(--sl-color-accent);
-}
-
-/* Desktop: always-open flex row — summary becomes a non-interactive label */
-@media (min-width: 50rem) {
-  .game-mode-toggle {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    padding: 0;
-  }
-
-  .game-mode-toggle__summary {
-    pointer-events: none;
-    cursor: default;
-    padding: 0.4rem 0 0.4rem 1rem;
-    flex-shrink: 0;
-  }
-
-  .game-mode-toggle__chevron {
-    display: none;
-  }
-
-  .game-mode-toggle__controls {
-    padding: 0.4rem 1rem 0.4rem 0.75rem;
-  }
 }
 
 /* Game mode callouts in content */
@@ -454,7 +364,6 @@ main:has(.kismeta-lore) h1#_top,
 /* Print-friendly quick reference */
 @media print {
   .tab-nav,
-  .game-mode-toggle,
   .guided-play__footer,
   .kismeta-header-wrap :global(header) {
     display: none !important;
@@ -466,7 +375,7 @@ main:has(.kismeta-lore) h1#_top,
   }
 }
 
-/* Mobile: compact single-row scrollable tab bar + collapsed modifiers */
+/* Mobile: compact single-row scrollable tab bar */
 @media (max-width: 50rem) {
   /* Compact scrollable tab row — no wrapping, horizontal scroll */
   .tab-nav {

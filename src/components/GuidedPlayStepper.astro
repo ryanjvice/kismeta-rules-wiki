@@ -191,6 +191,7 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'rules/round-at-a-glance')
 </div>
 
 <script>
+	import { applyGameModeCallouts } from '../scripts/game-modes';
 	import {
 		GAME_MODE_STORAGE_KEY,
 		GUIDED_PROGRESS_KEY,
@@ -235,40 +236,10 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'rules/round-at-a-glance')
 		stepIndex: number;
 	};
 
-	function applyGameModesFromStorage() {
-		const saved = localStorage.getItem(GAME_MODE_STORAGE_KEY);
-		let quickplay = true;
-		let magnus = true;
-		if (saved) {
-			try {
-				const parsed = JSON.parse(saved);
-				quickplay = parsed.quickplay ?? true;
-				magnus = parsed.magnus ?? true;
-			} catch {
-				/* ignore */
-			}
-		}
-		document.querySelectorAll<HTMLElement>('.game-mode-callout').forEach((el) => {
-			const modes = (el.dataset.modes || '').split(/\s+/).filter(Boolean);
-			const show =
-				(modes.includes('quickplay') && quickplay) ||
-				(modes.includes('magnus') && magnus);
-			el.hidden = !show;
-		});
-		const q = document.querySelector<HTMLInputElement>(
-			'.game-mode-toggle input[data-mode="quickplay"]'
-		);
-		const m = document.querySelector<HTMLInputElement>(
-			'.game-mode-toggle input[data-mode="magnus"]'
-		);
-		if (q) q.checked = quickplay;
-		if (m) m.checked = magnus;
-	}
-
 	function setGameMode(mode: GameMode) {
 		localStorage.setItem(GAME_MODE_STORAGE_KEY, JSON.stringify(gameModeToStorage(mode)));
 		window.dispatchEvent(new CustomEvent('kismeta-game-modes-changed'));
-		applyGameModesFromStorage();
+		applyGameModeCallouts();
 	}
 
 	function loadProgress(): ProgressState | null {
