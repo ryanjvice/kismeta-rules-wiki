@@ -11,16 +11,16 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 | ----------- | ----------- | ---------- | ------- | ----------------------------------------- |
 | COSMIC AGES | Aries       | Mars       | Fire    | +1 Base Harvest Card each round           |
 |             | Taurus      | Venus      | Earth   | Court Cards of Pentacles are a Wild Suit. |
-|             | Gemini      | Mercury    | Air     | −3 RP to Craft Quicksilver                |
+|             | Gemini      | Mercury    | Air     | Craft Quicksilver with 2 Swords cards (Cauldron must be lit). |
 |             | Cancer      | Sun /Moon  | Water   | +1 Base Harvest Card each round           |
 |             | Leo         | Sun / Moon | Fire    | Court Cards of Wands are a Wild Suit.     |
-|             | Virgo       | Mercury    | Earth   | −3 RP to Craft Vitriol                    |
+|             | Virgo       | Mercury    | Earth   | Craft Vitriol with 2 Pentacles cards (Cauldron must be lit).  |
 |             | Libra       | Venus      | Air     | +1 Base Harvest Card each round           |
 |             | Scorpio     | Mars       | Water   | Court Cards of Cups are a Wild Suit.      |
-|             | Sagittarius | Jupiter    | Fire    | −3 RP to Craft Sulphur                    |
+|             | Sagittarius | Jupiter    | Fire    | Craft Sulphur with 2 Wands cards (Cauldron must be lit).      |
 |             | Capricorn   | Saturn     | Earth   | +1 Base Harvest Card each round           |
 |             | Aquarius    | Saturn     | Air     | Court Cards of Swords are a Wild Suit.    |
-|             | Pisces      | Jupiter    | Water   | −3 RP to Craft Aqua Regia                 |
+|             | Pisces      | Jupiter    | Water   | Craft Aqua Regia with 2 Cups cards (Cauldron must be lit).    |
 
 ## Correspondence
 
@@ -54,7 +54,7 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used when Crafting Reagents and in other contexts.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Offering to the Age, Cauldron Codex card sets, and other contexts.
 - **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
@@ -97,29 +97,16 @@ You always manage your inventory of Kismeta Cards across three zones.
 | Hand Cards            | Optional       | Cards contributed from the Hand are discarded after the Opposition resolves.           |
 | Arcanum: Major Arcana | Yes (effects)  | Active effects apply; check individual card text. Some Fate cards affect both players. |
 
-## Reagent Thresholds
+## Crafting Reagents
 
-**Quickplay / 1st Playthrough**
+**Cost:** 3 matching-Suit cards matching the color of the Reagent you wish to craft. The matching Cauldron must be lit before you can craft the corresponding Reagent.
 
-| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
-| ----------------------------------------------------------- | ---------------- |
-| **MOLTEN COALS IN ANY CAULDRON**                            | **RP THRESHOLD** |
-| 0                                                           | ≥ 25 RP          |
-| 1                                                           | ≥ 20 RP          |
-| 2                                                           | ≥ 15 RP          |
-| 3                                                           | ≥ 10 RP          |
-| 4                                                           | ≥ 5 RP           |
-
-**Standard & Magnus Alchemist**
-
-| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
-| ----------------------------------------------------------- | ---------------- |
-| **MOLTEN COALS IN ONE CAULDRON**                            | **RP THRESHOLD** |
-| 0                                                           | ≥ 30 RP          |
-| 1                                                           | ≥ 25 RP          |
-| 2                                                           | ≥ 20 RP          |
-| 3                                                           | ≥ 15 RP          |
-| 4                                                           | ≥ 10 RP          |
+| CAULDRON       | REAGENT     | SUIT          | UNLOCK                      |
+| -------------- | ----------- | ------------- | --------------------------- |
+| 🔴 Red         | Sulphur     | 🪄 Wands      | Place Coal in Red Cauldron  |
+| 🔵 Blue        | Aqua Regia  | 🍷 Cups       | Place Coal in Blue Cauldron |
+| 🟢 Green       | Vitriol     | 🪙 Pentacles  | Place Coal in Green Cauldron|
+| 🟡 Yellow      | Quicksilver | ⚔️ Swords     | Place Coal in Yellow Cauldron|
 
 ## Crucible: The Transmutation Pathway
 

@@ -49,11 +49,11 @@
   },
   {
     "term": "Cauldron",
-    "definition": "A colored refining station on each player's Cauldron Codex (Red, Blue, Green, Yellow). Each Cauldron corresponds to a specific Reagent type and Element via the Correspondence table. Molten Coals placed in a Cauldron permanently lower its RP Threshold by 5 per Coal, making Reagent Crafting cheaper over time."
+    "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by a Molten Coal. See the Correspondence table."
   },
   {
     "term": "Cauldron Catalyst",
-    "definition": "A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent refining in the Cauldron it is placed in for the full following round. Only one Catalyst may be active per Cauldron at a time."
+    "definition": "A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent crafting in the Cauldron it is placed in for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time."
   },
   {
     "term": "Cauldron Codex",
@@ -125,11 +125,11 @@
   },
   {
     "term": "Molten Coal",
-    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is moved by the activating player into any Cauldron of their choice, permanently reducing that Cauldron's RP Threshold by 5. Molten Coals cannot be moved once placed."
+    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Molten Coals cannot be moved once placed."
   },
   {
     "term": "Offering to the Age",
-    "definition": "A collective Winter action in which players contribute Aligned cards toward a shared RP Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round."
+    "definition": "A collective Winter action in which players contribute Aligned cards toward a shared Rank Point Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round."
   },
   {
     "term": "Opposition",
@@ -145,15 +145,15 @@
   },
   {
     "term": "Rank",
-    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points when refining Reagents. Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Offering to the Age and Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Rank Points (RP)",
-    "definition": "The numerical value of a card based on its Rank. Used to meet Cauldron Thresholds when refining Reagents. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical value of a card based on its Rank. Used for the Offering to the Age, Cauldron Codex card sets, and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Reagent",
-    "definition": "A Crafted resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are Crafted by discarding matching-Suit cards that meet a Cauldron's RP Threshold."
+    "definition": "A Crafted resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are Crafted by discarding 3 matching-Suit cards into a lit Cauldron."
   },
   {
     "term": "Spread",
@@ -165,7 +165,7 @@
   },
   {
     "term": "Suit",
-    "definition": "One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when refining Reagents or fulfilling certain Alchemical Formula requirements."
+    "definition": "One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when crafting Reagents or fulfilling certain Alchemical Formula requirements."
   },
   {
     "term": "Tempering",

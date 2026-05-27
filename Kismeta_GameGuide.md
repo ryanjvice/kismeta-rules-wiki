@@ -38,7 +38,7 @@
   - [YOUR INVENTORY: Spread, Hand & Arcanum Zones](#your-inventory-spread-hand--arcanum-zones)
   - [Alignment Scoring](#alignment-scoring)
   - [Alignment Point Sources](#alignment-point-sources)
-  - [Reagent Thresholds](#reagent-thresholds)
+  - [Crafting Reagents](#crafting-reagents)
   - [Crucible: The Transmutation Pathway](#crucible-the-transmutation-pathway)
   - [Philosopher's Stone States](#philosophers-stone-states)
   - [Crucible Card States](#crucible-card-states)
@@ -166,7 +166,7 @@ _Recommended for first playthroughs._
 
 - **Crucible Deck:** Use the Quickplay deck build.
 - **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
-- **Cauldron Thresholds:** Each Molten Coal placed in any Cauldron reduces the Crafting cost for all Reagents BY 5 RP. The Base RP Threshold to start is 25 RP.
+- **Reagent Crafting:** Light a Cauldron by placing a Molten Coal in it, then discard 3 matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.
 
 ### 2️⃣ STANDARD GAME
 
@@ -272,7 +272,7 @@ Each Cosmic Age (round) moves through four seasons in order: Spring, Summer, Aut
 | ☀️ **SUMMER** Trade, Build & Prepare                        |          | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                                                                                               |
 |                                                             |  **1**   | **Activate Crucible Card:** Collect Card sets listed on the Codex & discard to activate.                                                                                              |
 |                                                             |  **2**   | **Build Astral House:** Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                                                                 |
-|                                                             |  **3**   | **Craft Reagent:** Collect Suited cards exceeding the current RP Threshold to Craft Reagents.                                                                                         |
+|                                                             |  **3**   | **Craft Reagent:** Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have a Molten Coal in it first.                                            |
 |                                                             |          | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                                                                                           |
 |                                                             |  **4**   | **Trade:** Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                                                                         |
 |                                                             |  **5**   | **Duel:** Wager cards and roll dice against a rival to steal a card from their Spread.                                                                                                |
@@ -400,7 +400,7 @@ The Sun shines brightly as you and your fellow Alchemists focus on your plans. S
 |                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                      |
 | **1. Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                 |
 | **2. Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                |
-| **3. Craft Reagent**          | Collect Suited cards exceeding the current RP Threshold to Craft Reagents.                                   |
+| **3. Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have a Molten Coal in it first.                                      |
 |                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                  |
 | **4. Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                           |
 | **5. Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                 |
@@ -415,7 +415,7 @@ Your Cauldron Codex holds four Formulae - one per card position (I–IV). Activa
 - **Consult your Codex:** Follow the Codex for formulas of card sets you'll need to collect.
 - **Assemble the card set:** Collect the required cards in your Spread.
 - **Discard the card set:** Remove all cards in the set from your Spread.
-- **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice.
+- **Light a Cauldron:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron is now lit — its Reagent type can be crafted for the rest of the game.
 - **Activate the Crucible Card:** Flip the card face-up to Activate it. Each Crucible card reveals an Alchemical Formula that is necessary to advance your Philosopher's Stone one step closer to the Altar of Kismeta.
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
@@ -440,20 +440,18 @@ _⚙️ **Game Mode Modifier (Quickplay):** Cost reduced to 1 card matching the 
 
 ### 3️⃣ Craft Reagents
 
-Reagents are the fuels needed to Fire your Stone. You can craft them using cards from your Spread or Hand. The color of the card's Suit matches the color of the Reagent you can craft with it. Add up the ranks of the cards you collect, then compare the total to your current Reagent RP Threshold. If the total meets or exceeds the RP Threshold, you can trade the cards in to take a Reagent from the supply.
-
-The starting Base RP Threshold is 30 RP in Standard & Magnus Alchemist Mode, and 25 RP in Quickplay. You can reduce the RP Threshold for crafting Reagents by activating your Crucible cards and moving the Molten Coal from the Crucible Card into one of your four Crucible Cauldrons. Each Molten Coal placed in a Crucible Cauldron reduces the cost to craft a Reagent by 5 RP.
+Reagents are the fuels needed to Fire your Stone. Each Reagent type is crafted from cards of its corresponding Suit, following the Correspondence table. Before you can craft a Reagent, its Cauldron must be lit — a Molten Coal must have been placed in it. Once a Cauldron is lit, it remains lit for the rest of the game, and you may craft its Reagent as many times as you have cards to pay for it.
 
 #### How to Craft:
 
-- **Choose a Reagent type:** Select which of the four Reagents you want to Craft. See Correspondence Table.
-- **Gather cards:** Collect cards of the matching suit from your Spread and/or Hand.
-- **Check the Threshold:** Confirm the combined RP meets or exceeds the current Threshold, based on the number of Molten Coals you have in your Cauldrons. The starting Base Threshold is 30 RP in the Standard and Magnus Alchemist Mode, and 25 RP in Quickplay.
-- **Exchange:** Discard the cards and take 1 Reagent token from the supply.
+- **Check the Cauldron:** Confirm the matching Cauldron is lit. If not, that Reagent cannot be crafted yet.
+- **Choose a Reagent type:** Select which of the four Reagents you want to craft. See the Correspondence table.
+- **Gather cards:** Collect 3 cards of the matching Suit from your Spread and/or Hand.
+- **Exchange:** Discard the 3 cards and take 1 Reagent token from the supply.
 
-💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur. (Wands → Fire → Red Cauldron → Sulphur.)
+💡 **Example:** Your Red Cauldron is lit. You discard a 4 of Wands + 7 of Wands + King of Wands from your Spread. Take 1 Sulphur from the supply.
 
-_⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified Threshold. Each Coal placed in any Cauldron reduces the cost for all Reagents regardless of color. Base RP is 25, going down to 5 RP with four Molten Coals._
+_⚙️ **Game Mode Modifier (Quickplay):** No modifier. Reagent crafting rules are the same across all game modes: light a Cauldron with a Molten Coal, then discard 3 matching-Suit cards to craft 1 Reagent._
 
 ### 4️⃣ Trade
 
@@ -712,7 +710,7 @@ Cards are now unlocked. Move cards freely between your Hand and Spread before ta
 
 ### 2️⃣ Offering to the Age
 
-The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent refining boost for the full following round.
+The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent crafting boost for the full following round.
 
 #### How to Call the Offering:
 
@@ -733,7 +731,7 @@ The Agekeeper convenes all Alchemists to make a collective Offering to the concl
 
 #### The Reward: Cauldron Catalyst
 
-A Cauldron Catalyst grants 2-for-1 Reagent refining for the Cauldron it is placed in, for the full following round. When you would normally refine 1 Reagent by meeting the Threshold, you receive 2 instead. The Threshold still applies as normal. Only one Catalyst may be active per Cauldron at a time.
+A Cauldron Catalyst grants 2-for-1 Reagent crafting for the Cauldron it is placed in, for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time.
 
 | OFFERING RESULTS  |                                                                                                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -800,9 +798,9 @@ Keep these principles in mind as you find your footing across the first few roun
 
 2. **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
 
-3. **Cauldron Drops Are Permanent:** Each activated Crucible Card drops its Molten Coal into a Cauldron, permanently lowering that Cauldron's Crafting Threshold by 5 RP. Think ahead: fuel the Cauldron for the Reagent type you'll need most. (See Correspondence table.)
+3. **Light the Right Cauldron First:** Each activated Crucible Card lets you place its Molten Coal into a Cauldron of your choice, permanently lighting it. Think ahead — light the Cauldron for the Reagent type you'll need most, as early as possible. (See Correspondence table.)
 
-4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to meet the Threshold. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
+4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to pay the 3-card cost. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
 
 5. **Astral Houses Are Your Anchor:** Build Astral Houses early. Each House acts as a permanent Alignment source for Harvesting Bonus cards every Spring for the rest of the game. A House built in round one compounds its advantage over every subsequent Age. A House built in the final round is barely worth the cost.
 
@@ -824,16 +822,16 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 | ----------- | ----------- | ---------- | ------- | ----------------------------------------- |
 | COSMIC AGES | Aries       | Mars       | Fire    | +1 Base Harvest Card each round           |
 |             | Taurus      | Venus      | Earth   | Court Cards of Pentacles are a Wild Suit. |
-|             | Gemini      | Mercury    | Air     | −3 RP to Craft Quicksilver                |
+|             | Gemini      | Mercury    | Air     | Craft Quicksilver with 2 Swords cards (Cauldron must be lit). |
 |             | Cancer      | Sun /Moon  | Water   | +1 Base Harvest Card each round           |
 |             | Leo         | Sun / Moon | Fire    | Court Cards of Wands are a Wild Suit.     |
-|             | Virgo       | Mercury    | Earth   | −3 RP to Craft Vitriol                    |
+|             | Virgo       | Mercury    | Earth   | Craft Vitriol with 2 Pentacles cards (Cauldron must be lit).  |
 |             | Libra       | Venus      | Air     | +1 Base Harvest Card each round           |
 |             | Scorpio     | Mars       | Water   | Court Cards of Cups are a Wild Suit.      |
-|             | Sagittarius | Jupiter    | Fire    | −3 RP to Craft Sulphur                    |
+|             | Sagittarius | Jupiter    | Fire    | Craft Sulphur with 2 Wands cards (Cauldron must be lit).      |
 |             | Capricorn   | Saturn     | Earth   | +1 Base Harvest Card each round           |
 |             | Aquarius    | Saturn     | Air     | Court Cards of Swords are a Wild Suit.    |
-|             | Pisces      | Jupiter    | Water   | −3 RP to Craft Aqua Regia                 |
+|             | Pisces      | Jupiter    | Water   | Craft Aqua Regia with 2 Cups cards (Cauldron must be lit).    |
 
 ## Correspondence
 
@@ -867,7 +865,7 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used when Crafting Reagents and in other contexts.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Offering to the Age, Cauldron Codex card sets, and other contexts.
 - **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
@@ -910,29 +908,16 @@ You always manage your inventory of Kismeta Cards across three zones.
 | Hand Cards            | Optional       | Cards contributed from the Hand are discarded after the Opposition resolves.           |
 | Arcanum: Major Arcana | Yes (effects)  | Active effects apply; check individual card text. Some Fate cards affect both players. |
 
-## Reagent Thresholds
+## Crafting Reagents
 
-**Quickplay / 1st Playthrough**
+**Cost:** 3 matching-Suit cards matching the color of the Reagent you wish to craft. The matching Cauldron must be lit before you can craft the corresponding Reagent.
 
-| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
-| ----------------------------------------------------------- | ---------------- |
-| **MOLTEN COALS IN ANY CAULDRON**                            | **RP THRESHOLD** |
-| 0                                                           | ≥ 25 RP          |
-| 1                                                           | ≥ 20 RP          |
-| 2                                                           | ≥ 15 RP          |
-| 3                                                           | ≥ 10 RP          |
-| 4                                                           | ≥ 5 RP           |
-
-**Standard & Magnus Alchemist**
-
-| IGNITING CAULDRONS: REDUCING RP THRESHOLD TO CRAFT REAGENTS |                  |
-| ----------------------------------------------------------- | ---------------- |
-| **MOLTEN COALS IN ONE CAULDRON**                            | **RP THRESHOLD** |
-| 0                                                           | ≥ 30 RP          |
-| 1                                                           | ≥ 25 RP          |
-| 2                                                           | ≥ 20 RP          |
-| 3                                                           | ≥ 15 RP          |
-| 4                                                           | ≥ 10 RP          |
+| CAULDRON       | REAGENT     | SUIT          | UNLOCK                      |
+| -------------- | ----------- | ------------- | --------------------------- |
+| 🔴 Red         | Sulphur     | 🪄 Wands      | Place Coal in Red Cauldron  |
+| 🔵 Blue        | Aqua Regia  | 🍷 Cups       | Place Coal in Blue Cauldron |
+| 🟢 Green       | Vitriol     | 🪙 Pentacles  | Place Coal in Green Cauldron|
+| 🟡 Yellow      | Quicksilver | ⚔️ Swords     | Place Coal in Yellow Cauldron|
 
 ## Crucible: The Transmutation Pathway
 
@@ -986,8 +971,8 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Astral House**          | A permanent structure built on the Zodiac Wheel. Each grants an ongoing Alignment source (Sign, Planet, Element) and two additional benefits. Only one player may build on any given Sign.                                                                                                                                                                                                                                      |
 | **Besieged Bonus**        | An automatic bonus that's awarded to a Defender who wins an Opposition. Each successive win against different Challengers in the same round grants the Defender +1 cumulative Alignment Points for all further Oppositions that round.                                                                                                                                                                                          |
 | **Card Sets**             | Groups of cards organized by Rank and Suit, following poker-hand conventions (pairs, three of a kind, straights, flushes, and so on). Assembled in a player's Spread to satisfy Alchemical Formulas on Crucible Cards.                                                                                                                                                                                                          |
-| **Cauldron**              | A colored refining station on each player's Cauldron Codex (Red, Blue, Green, Yellow). Each Cauldron corresponds to a specific Reagent type and Element via the Correspondence table. Molten Coals placed in a Cauldron permanently lower its RP Threshold by 5 per Coal, making Reagent Crafting cheaper over time.                                                                                                            |
-| **Cauldron Catalyst**     | A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent refining in the Cauldron it is placed in for the full following round. Only one Catalyst may be active per Cauldron at a time.                                                                                                                                                                                                               |
+| **Cauldron**              | One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by a Molten Coal. See the Correspondence table.                                                                                                                                                                                    |
+| **Cauldron Catalyst**     | A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent crafting in the Cauldron it is placed in for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time.                                                                                                                               |
 | **Correspondence**        | The fixed relationship between an Element, Card Suit, Reagent, Cauldron, and Color. See the Correspondence table in the Appendix.                                                                                                                                                                                                                                                                                               |
 | **Cosmic Age**            | One complete round of play, defined by the Zodiac Sign rolled by the Agekeeper in Spring. Its three Aspects govern Harvest bonuses, Alignment scoring, and the active Cosmic Effect for that round.                                                                                                                                                                                                                             |
 | **Cosmic Effect**         | Each Sign's Cosmic Effect operates on two levels. The Cosmic Age Effect, set by the Agekeeper's roll, applies to all players for the entire round. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If a player's Sign matches the Cosmic Age, the effect is simply active — it does not apply twice. See the Cosmic Ages & Effects table in the Reference Appendix. |
@@ -1005,18 +990,18 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Major Arcana**          | The 22 special cards in the Kismeta Deck, divided into Adept Cards (11) and Fate Cards (11). Major Arcana are held in the Arcanum zone and carry unique persistent or one-time effects. They cannot be used for Crucible Card activation, Alignments, Duels, Trades, or Wagers.                                                                                                                                                 |
 | **Mantle Ring**           | The four safe positions (0, 2, 4, 6) on the Transmutation Path between Forge stages. A Stone resting on the Mantle Ring cannot be targeted by Opposition.                                                                                                                                                                                                                                                                       |
 | **Minor Arcana**          | The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers.                                                                                                                                                  |
-| **Molten Coal**           | A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is moved by the activating player into any Cauldron of their choice, permanently reducing that Cauldron's RP Threshold by 5. Molten Coals cannot be moved once placed.                                                                                                                                             |
-| **Offering to the Age**   | A collective Winter action in which players contribute Aligned cards toward a shared RP Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round.                                                                                                                                                                                                                     |
+| **Molten Coal**           | A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Molten Coals cannot be moved once placed.                                                                                                                    |
+| **Offering to the Age**   | A collective Winter action in which players contribute Aligned cards toward a shared Rank Point Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round.                                                                                                                                                                                                              |
 | **Opposition**            | An Alignment contest declared in Phase 3: Autumn against a rival whose Stone is currently Forging. Alignment Points are compared; a Challenger victory sends the Defender's Stone to Stasis.                                                                                                                                                                                                                                    |
 | **Opposition Age**        | The Cosmic Age Sign in effect at the moment an Opposition is declared. All Alignment Points in that contest are scored against this Sign's Aspects.                                                                                                                                                                                                                                                                             |
 | **Philosopher's Stone**   | Each player's primary game piece, representing the material being transformed through the Great Work. Begins at position 0 (Mantle Ring) on the Transmutation Path and must reach the Altar of Kismeta (position 8) to win. May be Forging, Tempering, or in Stasis at any given time.                                                                                                                                          |
 | **Ward Reagent**          | A Reagent placed on the shield symbol beside a Forging Stone or Active Crucible Card. Acts as a mandatory entry cost that any Challenger must pay before declaring Opposition or a Gambit against that position.                                                                                                                                                                                                                |
-| **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points when refining Reagents. Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                                      |
-| **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used to meet Cauldron Thresholds when refining Reagents. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                                        |
-| **Reagent**               | A Crafted resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are Crafted by discarding matching-Suit cards that meet a Cauldron's RP Threshold.                                                                            |
+| **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Offering to the Age and Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                             |
+| **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used for the Offering to the Age, Cauldron Codex card sets, and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                  |
+| **Reagent**               | A Crafted resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are Crafted by discarding 3 matching-Suit cards into a lit Cauldron.                                                                                          |
 | **Spread**                | One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end.                                                                                                                    |
 | **Stasis**                | The frozen state of a Philosopher's Stone after losing an Opposition. A Stone in Stasis cannot Temper or take Stone actions until the following Autumn, when it may attempt to return to the Forge.                                                                                                                                                                                                                             |
-| **Suit**                  | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when refining Reagents or fulfilling certain Alchemical Formula requirements.                                                                                                                           |
+| **Suit**                  | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when crafting Reagents or fulfilling certain Alchemical Formula requirements.                                                                                                                           |
 | **Tempering**             | The Autumn action of advancing a Stone that has completed a full round of Forging. The Stone moves from the Forge to the next Mantle Ring position, and its Crucible Card is discarded.                                                                                                                                                                                                                                         |
 | **Trade**                 | A Summer action in which two players freely exchange Kismeta Cards, Reagents, or Active Crucible Cards. Trading is the only way to transfer Reagents and Active Crucible Cards between players — they cannot be won in Duels or moved any other way. In Magnus Alchemist mode, Misaligned players must trade 2:1 in favor of the non-initiating player.                                                                         |
 | **Transmutation**         | The overarching process of advancing the Philosopher's Stone from its starting position through all four Forge stages to the Altar of Kismeta. Completing Transmutation wins the game.                                                                                                                                                                                                                                          |

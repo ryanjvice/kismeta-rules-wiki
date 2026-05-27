@@ -111,7 +111,7 @@ The Sun shines brightly as you and your fellow Alchemists focus on your plans. S
 |                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                      |
 | **1. Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                 |
 | **2. Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                |
-| **3. Craft Reagent**          | Collect Suited cards exceeding the current RP Threshold to Craft Reagents.                                   |
+| **3. Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have a Molten Coal in it first.                                      |
 |                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                  |
 | **4. Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                           |
 | **5. Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                 |
@@ -126,7 +126,7 @@ Your Cauldron Codex holds four Formulae - one per card position (I–IV). Activa
 - **Consult your Codex:** Follow the Codex for formulas of card sets you'll need to collect.
 - **Assemble the card set:** Collect the required cards in your Spread.
 - **Discard the card set:** Remove all cards in the set from your Spread.
-- **Drop the Molten Coal:** Move the Coal from the Crucible Card into any Cauldron of your choice.
+- **Light a Cauldron:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron is now lit — its Reagent type can be crafted for the rest of the game.
 - **Activate the Crucible Card:** Flip the card face-up to Activate it. Each Crucible card reveals an Alchemical Formula that is necessary to advance your Philosopher's Stone one step closer to the Altar of Kismeta.
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
@@ -154,21 +154,19 @@ _⚙️ **Game Mode Modifier (Quickplay):** Cost reduced to 1 card matching the 
 
 ### 3️⃣ Craft Reagents {#3-craft-reagents}
 
-Reagents are the fuels needed to Fire your Stone. You can craft them using cards from your Spread or Hand. The color of the card's Suit matches the color of the Reagent you can craft with it. Add up the ranks of the cards you collect, then compare the total to your current Reagent RP Threshold. If the total meets or exceeds the RP Threshold, you can trade the cards in to take a Reagent from the supply.
-
-The starting Base RP Threshold is 30 RP in Standard & Magnus Alchemist Mode, and 25 RP in Quickplay. You can reduce the RP Threshold for crafting Reagents by activating your Crucible cards and moving the Molten Coal from the Crucible Card into one of your four Crucible Cauldrons. Each Molten Coal placed in a Crucible Cauldron reduces the cost to craft a Reagent by 5 RP.
+Reagents are the fuels needed to Fire your Stone. Each Reagent type is crafted from cards of its corresponding Suit, following the Correspondence table. Before you can craft a Reagent, its Cauldron must be lit — a Molten Coal must have been placed in it. Once a Cauldron is lit, it remains lit for the rest of the game, and you may craft its Reagent as many times as you have cards to pay for it.
 
 #### How to Craft:
 
-- **Choose a Reagent type:** Select which of the four Reagents you want to Craft. See Correspondence Table.
-- **Gather cards:** Collect cards of the matching suit from your Spread and/or Hand.
-- **Check the Threshold:** Confirm the combined RP meets or exceeds the current Threshold, based on the number of Molten Coals you have in your Cauldrons. The starting Base Threshold is 30 RP in the Standard and Magnus Alchemist Mode, and 25 RP in Quickplay.
-- **Exchange:** Discard the cards and take 1 Reagent token from the supply.
+- **Check the Cauldron:** Confirm the matching Cauldron is lit. If not, that Reagent cannot be crafted yet.
+- **Choose a Reagent type:** Select which of the four Reagents you want to craft. See the Correspondence table.
+- **Gather cards:** Collect 3 cards of the matching Suit from your Spread and/or Hand.
+- **Exchange:** Discard the 3 cards and take 1 Reagent token from the supply.
 
-💡 **Example:** Your Red Cauldron has 2 Coals (Threshold: 20 RP). You discard a 6 of Wands (6 RP) + 8 of Wands (8 RP) + Knight of Wands (11 RP) = 25 RP. Threshold met - take 1 Sulphur. (Wands → Fire → Red Cauldron → Sulphur.)
+💡 **Example:** Your Red Cauldron is lit. You discard a 4 of Wands + 7 of Wands + King of Wands from your Spread. Take 1 Sulphur from the supply.
 
 <div class="game-mode-callout" data-modes="quickplay">
-_⚙️ **Game Mode Modifier (Quickplay):** All Cauldrons share one simplified Threshold. Each Coal placed in any Cauldron reduces the cost for all Reagents regardless of color. Base RP is 25, going down to 5 RP with four Molten Coals._
+_⚙️ **Game Mode Modifier (Quickplay):** No modifier. Reagent crafting rules are the same across all game modes: light a Cauldron with a Molten Coal, then discard 3 matching-Suit cards to craft 1 Reagent._
 
 </div>
 
@@ -439,7 +437,7 @@ Cards are now unlocked. Move cards freely between your Hand and Spread before ta
 
 ### 2️⃣ Offering to the Age {#2-offering-to-the-age}
 
-The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent refining boost for the full following round.
+The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent crafting boost for the full following round.
 
 #### How to Call the Offering:
 
@@ -460,7 +458,7 @@ The Agekeeper convenes all Alchemists to make a collective Offering to the concl
 
 #### The Reward: Cauldron Catalyst
 
-A Cauldron Catalyst grants 2-for-1 Reagent refining for the Cauldron it is placed in, for the full following round. When you would normally refine 1 Reagent by meeting the Threshold, you receive 2 instead. The Threshold still applies as normal. Only one Catalyst may be active per Cauldron at a time.
+A Cauldron Catalyst grants 2-for-1 Reagent crafting for the Cauldron it is placed in, for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time.
 
 | OFFERING RESULTS  |                                                                                                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |

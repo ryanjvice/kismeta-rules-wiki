@@ -17,7 +17,7 @@
 						"id": "activate",
 						"label": "Activate Crucible Card",
 						"kind": "optional",
-						"body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and drop the Molten Coal into a Cauldron. Flip the Crucible Card face-up — it is now Active.",
+						"body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and light a Cauldron by placing the Molten Coal in it — that Reagent type can now be crafted for the rest of the game. Flip the Crucible Card face-up — it is now Active.",
 						"learnMoreHash": "1-activate-crucible-cards"
 					},
 					{
@@ -35,7 +35,7 @@
 						"id": "craft-reagent",
 						"label": "Craft Reagent",
 						"kind": "optional",
-						"body": "Collect suited cards from your Spread and/or Hand whose combined Rank Points meet or exceed your current Cauldron RP Threshold. Discard the cards and take 1 Reagent token.",
+						"body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply.",
 						"learnMoreHash": "3-craft-reagents"
 					}
 				]

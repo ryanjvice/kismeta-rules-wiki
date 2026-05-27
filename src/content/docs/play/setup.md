@@ -40,7 +40,7 @@ _Recommended for first playthroughs._
 
 - **Crucible Deck:** Use the Quickplay deck build.
 - **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
-- **Cauldron Thresholds:** Each Molten Coal placed in any Cauldron reduces the Crafting cost for all Reagents BY 5 RP. The Base RP Threshold to start is 25 RP.
+- **Reagent Crafting:** Light a Cauldron by placing a Molten Coal in it, then discard 3 matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.
 
 ### 2️⃣ STANDARD GAME
 

@@ -95,7 +95,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     body: "<p>You chose a game mode at the start of guided play. Confirm these rules apply to your table.</p>",
     modeBody: {
       quickplay:
-        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Common Card matching your current Sign's Planet.</li><li>Cauldron thresholds: each Molten Coal in any Cauldron reduces the Crafting cost for <strong>all</strong> Reagents by 5 RP (base threshold 25 RP).</li></ul>",
+        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Common Card matching your current Sign's Planet.</li><li>Reagent Crafting: Light a Cauldron by placing a Molten Coal in it, then discard <strong>3</strong> matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.</li></ul>",
       standard:
         "<p><strong>Standard Game</strong> — full rules once you know the flow.</p><ul><li>Play as written in the guide; ignore ⚙️ Game Mode Modifiers.</li><li>Use the <strong>Standard</strong> Crucible deck build.</li></ul>",
       magnus:
