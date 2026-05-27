@@ -9,7 +9,7 @@ Keep these principles in mind as you find your footing across the first few roun
 
 2. **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
 
-3. **Light the Right Cauldron First:** Each activated Crucible Card lets you place its Molten Coal into a Cauldron of your choice, permanently lighting it. Think ahead — light the Cauldron for the Reagent type you'll need most, as early as possible. (See Correspondence table.)
+3. **Light the Right Cauldron First:** Each activated Crucible Card lets you place its Ember into a Cauldron of your choice, permanently lighting it. Think ahead — light the Cauldron for the Reagent type you'll need most, as early as possible. (See Correspondence table.)
 
 4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to pay the 3-card cost. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
 

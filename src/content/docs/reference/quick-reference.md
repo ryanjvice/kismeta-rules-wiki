@@ -32,6 +32,8 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 | 🟢 Green                                                          | Earth       | 🪙 Pentacles  | Vitriol     | Green        |
 | 🟡 Yellow                                                         | Air         | ⚔️ Swords     | Quicksilver | Yellow       |
 
+🧂 **Salt** does not appear in the Correspondence table. It carries no Element, Suit, or Cauldron. Craft Salt by discarding any 3 Kismeta Cards — no Cauldron required. See *Crafting Salt*.
+
 ## Kismeta Cards
 
 The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 134 cards divide into two types.
@@ -43,7 +45,15 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 - **Planet** - one of seven planets; used for Aspect Alignments
 - **Card Effects** - special effects that activate under conditions printed on the card
 
-**Major Arcana (22 cards) - two varieties:**
+**Major Arcana (22 cards) - two varieties: Adepts & Fates.**
+
+#### Adept Cards
+
+When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries all three Aspects (Sign, Planet, and Element), contributing them to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck.
+
+#### Fate Cards
+
+The Fates themselves will visit you throughout the course of the game to test your resolve, give gifts, and otherwise shake things up. There are 11 Fate Cards. They are played as soon as they are drawn.
 
 | Specialist Cards (11)                                                   | Fate Cards (11)                                |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
@@ -103,10 +113,10 @@ You always manage your inventory of Kismeta Cards across three zones.
 
 | CAULDRON       | REAGENT     | SUIT          | UNLOCK                      |
 | -------------- | ----------- | ------------- | --------------------------- |
-| 🔴 Red         | Sulphur     | 🪄 Wands      | Place Coal in Red Cauldron  |
-| 🔵 Blue        | Aqua Regia  | 🍷 Cups       | Place Coal in Blue Cauldron |
-| 🟢 Green       | Vitriol     | 🪙 Pentacles  | Place Coal in Green Cauldron|
-| 🟡 Yellow      | Quicksilver | ⚔️ Swords     | Place Coal in Yellow Cauldron|
+| 🔴 Red         | Sulphur     | 🪄 Wands      | Place Ember in Red Cauldron  |
+| 🔵 Blue        | Aqua Regia  | 🍷 Cups       | Place Ember in Blue Cauldron |
+| 🟢 Green       | Vitriol     | 🪙 Pentacles  | Place Ember in Green Cauldron|
+| 🟡 Yellow      | Quicksilver | ⚔️ Swords     | Place Ember in Yellow Cauldron|
 
 ## Crucible: The Transmutation Pathway
 
@@ -136,8 +146,8 @@ You always manage your inventory of Kismeta Cards across three zones.
 | CRUCIBLE CARD STATES |                            |                                                                                             |
 | -------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
 | **STATE**            | **APPEARANCE**             | **NOTES**                                                                                   |
-| Dormant              | Face-down; Coal on top     | Formula hidden; awaiting activation.                                                        |
-| Active               | Face-up; Coal removed      | Formula revealed; working toward requirements. Multiple cards may be Active simultaneously. |
+| Dormant              | Face-down; Ember on top     | Formula hidden; awaiting activation.                                                        |
+| Active               | Face-up; Ember removed      | Formula revealed; working toward requirements. Multiple cards may be Active simultaneously. |
 | Fired                | Face-up; Turned sideways   | Formula executed; Stone is in the Forge. Only one card may be Fired at a time.              |
 | Arrested             | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.         |
 | Discarded            | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                  |

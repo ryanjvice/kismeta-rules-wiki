@@ -25,7 +25,7 @@
 							"all"
 						],
 						"condition": "Your Stone is in Stasis",
-						"learnMoreHash": "4-leave-stasis",
+						"learnMoreHash": "3-crucible-actions",
 						"children": [
 							{
 								"id": "forge-open",

@@ -49,11 +49,11 @@
   },
   {
     "term": "Cauldron",
-    "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by a Molten Coal. See the Correspondence table."
+    "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by an Ember. See the Correspondence table."
   },
   {
     "term": "Cauldron Catalyst",
-    "definition": "A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent crafting in the Cauldron it is placed in for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time."
+    "definition": "A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent refining in the Cauldron it is placed in for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time."
   },
   {
     "term": "Cauldron Codex",
@@ -61,7 +61,7 @@
   },
   {
     "term": "Correspondence",
-    "definition": "The fixed relationship between an Element, Card Suit, Reagent, Cauldron, and Color. See the Correspondence table in the Appendix."
+    "definition": "The fixed relationship between an Element, Card Suit, Reagent, Cauldron, and Color governing the four elemental Reagents. Salt is not part of the Correspondence system — it carries no Element, Suit, or Cauldron. See the Correspondence table in the Appendix."
   },
   {
     "term": "Cosmic Age",
@@ -74,6 +74,10 @@
   {
     "term": "Duel",
     "definition": "A Summer action in which a player challenges a rival to steal a single targeted card from their Spread. The Challenger names their target, then pays an Ante Card from their own Spread as the entry fee. Both players roll their Zodiac Dice; the higher roll wins. The Challenger wins the targeted card on a win, or loses their Ante Card on a loss."
+  },
+  {
+    "term": "Ember",
+    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Ember is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Embers cannot be moved once placed."
   },
   {
     "term": "Fate Card",
@@ -124,10 +128,6 @@
     "definition": "The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers."
   },
   {
-    "term": "Molten Coal",
-    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Molten Coals cannot be moved once placed."
-  },
-  {
     "term": "Offering to the Age",
     "definition": "A collective Winter action in which players contribute Aligned cards toward a shared Rank Point Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round."
   },
@@ -153,7 +153,11 @@
   },
   {
     "term": "Reagent",
-    "definition": "A Crafted resource token used to Fire the Philosopher's Stone. The four types — Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), and Quicksilver (Yellow) — each correspond to an Element, Card Suit, and Cauldron color via the Correspondence table. Reagents are Crafted by discarding 3 matching-Suit cards into a lit Cauldron."
+    "definition": "A Crafted resource token used to Fire the Philosopher's Stone and to set Ward Reagents. There are five types: Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), Quicksilver (Yellow), and Salt (White). The four elemental Reagents are crafted by discarding 3 matching-Suit cards into a lit Cauldron. Salt is crafted by discarding any 3 Kismeta Cards with no Cauldron required. See Correspondence and Crafting Salt."
+  },
+  {
+    "term": "Salt",
+    "definition": "A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. The Cauldron Catalyst never applies to Salt. Transfers between players via Trade only."
   },
   {
     "term": "Spread",
@@ -185,6 +189,6 @@
   },
   {
     "term": "Ward Reagent",
-    "definition": "A Reagent placed on the shield symbol beside a Forging Stone or Active Crucible Card. Acts as a mandatory entry cost that any Challenger must pay before declaring Opposition or a Gambit against that position."
+    "definition": "A Reagent placed on the 🛡️ symbol beside a Forging Stone or Active Crucible Card. Sets the entry fee any Challenger must pay before declaring Opposition or a Gambit against that position. Challengers pay a number of Reagents equal to the Ward — of any type or combination. Type-matching is not required. Salt may be used as a Ward Reagent."
   }
 ]

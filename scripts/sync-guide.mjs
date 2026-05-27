@@ -38,7 +38,7 @@ const SKIP = new Set([
 ]);
 
 const SECTION_META = {
-  'LORE: ALCHEMISTS OF THE GREAT YEAR': {
+  'LORE: PROLOGUE': {
     slug: 'lore/index',
     title: 'Lore: Alchemists of the Great Year',
     description: 'The mythic backdrop of Kismeta and the Great Work.',
@@ -125,6 +125,22 @@ function extractRoundAtAGlance(body) {
   const glance = lines.slice(glanceStart, glanceEnd).join('\n').trim();
   const overview = [...lines.slice(0, glanceStart), ...lines.slice(glanceEnd)].join('\n').trim();
   return { overview, glance };
+}
+
+/** Lore prologue lives under APPENDIX as ## LORE: PROLOGUE … */
+function extractLorePrologue(body) {
+  const lines = body.split('\n');
+  const prologueStart = lines.findIndex((l) => /^##\s+LORE:\s*PROLOGUE/i.test(l));
+  if (prologueStart === -1) return { appendix: body, prologue: null };
+
+  const nextSection = lines.findIndex(
+    (l, i) => i > prologueStart && /^##\s+/.test(l) && !/^##\s+LORE:\s*PROLOGUE/i.test(l)
+  );
+  const prologueEnd = nextSection === -1 ? lines.length : nextSection;
+
+  const prologue = lines.slice(prologueStart + 1, prologueEnd).join('\n').trim();
+  const appendix = [...lines.slice(0, prologueStart), ...lines.slice(prologueEnd)].join('\n').trim();
+  return { appendix, prologue };
 }
 
 
@@ -324,8 +340,13 @@ async function main() {
     }
 
     if (title === 'APPENDIX') {
+      const { appendix, prologue } = extractLorePrologue(body);
+      if (prologue) {
+        const loreMeta = SECTION_META['LORE: PROLOGUE'];
+        writePage(loreMeta.slug, loreMeta.title, loreMeta.description, prologue);
+      }
       const meta = SECTION_META.APPENDIX;
-      writePage(meta.slug, meta.title, meta.description, body);
+      writePage(meta.slug, meta.title, meta.description, appendix);
       continue;
     }
 

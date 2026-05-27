@@ -17,11 +17,11 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
 
 ## II. Become an Alchemist {#ii-become-an-alchemist}
 
-Choose a color (Red, Green, Blue, or White) and take the following matching gear:
+Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.
 
 - **4 Astral House Tokens:** Tokens with 🏰 symbol; Keep these nearby.
 - **1 Cauldron Codex:** Dual-sided card; Cauldron Codex & Quick Reference Guide on reverse.
-- **4 Molten Coals:** Small black crystal pieces; Keep these nearby.
+- **4 Embers:** Small black crystal pieces; Keep these nearby.
 - **1 Meeple:** Wooden game piece; Keep this nearby.
 - **1 Philosopher's Stone:** Place this on the "START" space in your section of the Mantle Ring.
 - **1 Zodiac Die:** 12-sided Die, matching your chosen color; Keep this nearby.
@@ -40,7 +40,7 @@ _Recommended for first playthroughs._
 
 - **Crucible Deck:** Use the Quickplay deck build.
 - **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
-- **Reagent Crafting:** Light a Cauldron by placing a Molten Coal in it, then discard 3 matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.
+- **Reagent Crafting:** Light a Cauldron by placing an Ember in it, then discard 3 matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.
 
 ### 2️⃣ STANDARD GAME
 
@@ -55,7 +55,7 @@ _Recommended once you are familiar with the game rules & game flow._
 
 ### 3️⃣ MAGNUS ALCHEMIST (MASTERY)
 
-_For those returning from previous Great Years, seeking an even greater challenge._
+_For those returning from previous Great Years who seek an even greater challenge._
 
 - All rules from the Standard mode apply.
 - Use the Magnus Alchemist deck build.
@@ -121,8 +121,8 @@ The first Agekeeper prepares the Crucible Cards before the game begins.
   - Deal four Crucible Cards face down to each player.
   - Each player places their four Crucible Cards face-down in a single row along their edge of the Great Year board.
 
-- **Lay the Molten Coals:**
-  - Take your four Molten Coals and place one atop each of your Crucible Cards.
+- **Lay the Embers:**
+  - Take your four Embers and place one atop each of your Crucible Cards.
   - The cards are now Dormant, their Formulae hidden.
 
 📌 **Note:** The position of each card (I, II, III, & IV; from left to right) corresponds to a Formula shown on your Cauldron Codex.

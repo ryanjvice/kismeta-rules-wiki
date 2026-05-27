@@ -248,9 +248,9 @@ Word-exported wide tables are replaced with JSON + HTML injection during sync.
 | Guided static embed | [`src/components/GameTableEmbed.astro`](../src/components/GameTableEmbed.astro) |
 | Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.game-table*` |
 
-**Guide placeholders:** `<!-- TABLE:harvest-order -->`, `<!-- TABLE:round-at-a-glance -->` in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). Do not paste mega-tables back into the guide.
+**Guide placeholders removed (as of May 2026):** `<!-- TABLE:harvest-order -->` and `<!-- TABLE:round-at-a-glance -->` no longer exist in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). The guide now carries these as inline markdown tables. The sync script's `injectAllContent()` pass is a no-op for these tables but is harmless. The Guided Play embeds (`harvest-order`, `round-at-a-glance`) continue to read from `src/data/tables/` JSON and are unaffected.
 
-**Phase 2 candidates** (still inline in the guide): Offering threshold grid, Duel/Gambit outcome tables, card limits matrix, harvest bonus example, Cosmic Ages table in the appendix.
+**If you re-add placeholders:** Replace the inline table in the guide with `<!-- TABLE:id -->` and keep the JSON as the source of truth. Do not maintain both.
 
 ---
 
@@ -265,7 +265,7 @@ Summer, Autumn, and Winter use decision-tree JSON — not flat markdown rows.
 | Interactive Guided UI | [`src/components/ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro) |
 | Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.action-flow*` |
 
-**Guide placeholders:** `<!-- FLOW:summer-flow -->`, `<!-- FLOW:autumn-flow -->`, `<!-- FLOW:winter-flow -->`.
+**Guide placeholders removed (as of May 2026):** `<!-- FLOW:summer-flow -->`, `<!-- FLOW:autumn-flow -->`, `<!-- FLOW:winter-flow -->` no longer exist in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). The rules pages show inline phase detail from the guide; Guided Play still uses the JSON flow embeds from `src/data/flows/`.
 
 **When adding branches:** Edit the flow JSON `children` array; link detail rules via `learnMoreHash` on leaf nodes (round-overview anchors), not by inlining every grid in the tree.
 
@@ -325,7 +325,7 @@ Card counts per mode and player count live in one place — **not** in the Word-
 | Interactive Guided UI | [`src/components/CrucibleDeckBuilds.astro`](../src/components/CrucibleDeckBuilds.astro) on Guided Play step IV |
 | Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.crucible-deck*` |
 
-**Guide source:** [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md) § IV must keep the placeholder `<!-- CRUCIBLE_DECK_BUILDS -->` (do not re-paste the old multi-column table from Word).
+**Guide placeholder removed (as of May 2026):** `<!-- CRUCIBLE_DECK_BUILDS -->` no longer exists in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). The guide now shows the deck-build table as an inline markdown table. The `injectAllContent()` pass is a no-op for this section. The Guided Play embed (Setup IV) and the static Setup page HTML both continue to render from `crucible-deck-builds.json` via `render-crucible-deck-html.mjs`.
 
 **When counts change:** Edit `crucible-deck-builds.json`, then `npm run sync` (regenerates Setup crucible deck HTML).
 

@@ -26,7 +26,7 @@ description: "Everything in the box."
 
 **Tokens & Resources**
 
-- **96 Reagent Tokens** (circle punchouts, 24 of each color):
-  🔴 Sulphur (Red) | 🟡 Quicksilver (Yellow) | 🔵 Aqua Regia (Blue) | 🟢 Vitriol (Green)
-- **16 Molten Coals** (4 per player; small black crystal pieces)
+- **Reagent Tokens** (circle punchouts):
+  🔴 Sulphur (Red) | 🟡 Quicksilver (Yellow) | 🔵 Aqua Regia (Blue) | 🟢 Vitriol (Green) | ⬜ Salt (White)
+- **16 Embers** (4 per player; small black crystal pieces)
 - **1 Agekeeper's Key** (black pawn)

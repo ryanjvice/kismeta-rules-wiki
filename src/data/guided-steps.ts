@@ -43,24 +43,24 @@ const GUIDED_STEPS: GuidedStep[] = [
     body: "<p>Unbox and confirm you have everything before setting the table. Group cards and dice so they are easy to reach during setup.</p>",
     checklist: [
       "Great Year Board",
-      "134 Common Cards (blue) and 22 Crucible Cards (red)",
-      "4 Crucible Codex cards (one per player)",
+      "134 Kismeta Cards (blue) and 22 Crucible Cards (red)",
+      "4 Cauldron Codex cards (one per player)",
       "1 Cosmic Age Die (black) and 4 Zodiac Dice (player colors)",
-      "Per player: Philosopher's Stone, Meeple, 4 Astral House tokens, Cauldron Catalyst, 4 Molten Coals",
-      "96 Reagent tokens (24 per color) and 1 Agekeeper's Key",
+      "Per player: Philosopher's Stone, Meeple, 4 Astral House tokens, Cauldron Catalyst, 4 Embers",
+      "Reagent tokens (Sulphur, Quicksilver, Aqua Regia, Vitriol, Salt) and 1 Agekeeper's Key",
     ],
     learnMorePath: "learn/components",
   },
   {
     id: "setup-i",
-    title: "Setup I: Setting the Table",
+    title: "Setup I: Set the Table",
     phase: "setup",
     phaseStep: 2,
     phaseTotal: 7,
     body: "<p>Prepare the shared play area in the center of the table.</p>",
     checklist: [
       "Place the Great Year Board in the center",
-      "Sort cards into Common (blue) and Crucible (red) piles",
+      "Sort Kismeta Cards (blue) and Crucible Cards (red) into separate piles",
       "Shuffle the Common Deck face down beside the board",
       "Place the Crucible pile next to the board (you will build the deck in Setup IV)",
       "Set out the Agekeeper's Key, Cosmic Age Die, and Reagents sorted by color",
@@ -70,7 +70,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   },
   {
     id: "setup-ii",
-    title: "Setup II: Becoming an Alchemist",
+    title: "Setup II: Become an Alchemist",
     phase: "setup",
     phaseStep: 3,
     phaseTotal: 7,
@@ -78,7 +78,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     checklist: [
       "4 Astral House tokens (🏰)",
       "1 Cauldron Codex (dual-sided)",
-      "4 Molten Coals",
+      "4 Embers",
       "1 Meeple",
       "1 Philosopher's Stone on START in your Mantle Ring section",
       "1 Zodiac Die matching your color",
@@ -95,7 +95,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     body: "<p>You chose a game mode at the start of guided play. Confirm these rules apply to your table.</p>",
     modeBody: {
       quickplay:
-        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Common Card matching your current Sign's Planet.</li><li>Reagent Crafting: Light a Cauldron by placing a Molten Coal in it, then discard <strong>3</strong> matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.</li></ul>",
+        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Kismeta Card whose Planet matches your current Zodiac Sign.</li><li>Reagent Crafting: Light a Cauldron by placing an Ember in it, then discard <strong>3</strong> matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.</li></ul>",
       standard:
         "<p><strong>Standard Game</strong> — full rules once you know the flow.</p><ul><li>Play as written in the guide; ignore ⚙️ Game Mode Modifiers.</li><li>Use the <strong>Standard</strong> Crucible deck build.</li></ul>",
       magnus:
@@ -124,7 +124,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   },
   {
     id: "setup-v",
-    title: "Setup V: Selecting the First Agekeeper",
+    title: "Setup V: Determine the First Agekeeper",
     phase: "setup",
     phaseStep: 6,
     phaseTotal: 7,
@@ -139,7 +139,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   },
   {
     id: "setup-vi",
-    title: "Setup VI: Dealing Crucible Cards",
+    title: "Setup VI: Deal the Crucible Cards",
     phase: "setup",
     phaseStep: 7,
     phaseTotal: 7,
@@ -148,8 +148,8 @@ const GUIDED_STEPS: GuidedStep[] = [
       "Shuffle the Crucible Deck; tap twice to cleanse",
       "Deal four Crucible Cards face down to each player",
       "Each player places four cards in a row along their board edge",
-      "Place one Molten Coal on each Crucible Card (cards are Dormant)",
-      "Agekeeper deals one face-up Common Card to each Spread (redeal if Major Arcana)",
+      "Place one Ember on each Crucible Card (cards are Dormant)",
+      "Agekeeper deals one face-up Kismeta Card to each Spread (redeal if Major Arcana)",
     ],
     learnMorePath: "play/setup",
     learnMoreHash: "vi-deal-the-crucible-cards",
@@ -242,7 +242,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "autumn",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to advance your Philosopher's Stone around the Great Year board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta.</p>",
+    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p>",
     embed: "autumn-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-3-autumn",
