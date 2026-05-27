@@ -12,6 +12,10 @@ function link(label, slug, translations) {
 // https://astro.build/config
 export default defineConfig({
   site: "https://kismeta-rules-wiki.vercel.app",
+  redirects: {
+    "/play/game-overview/": "/rules/game-overview/",
+    "/play/round-at-a-glance/": "/rules/round-at-a-glance/",
+  },
   markdown: {
     rehypePlugins: [rehypeWrapTables],
   },
@@ -90,8 +94,6 @@ export default defineConfig({
           label: "Play",
           items: [
             link("Play", "play/guided"),
-            link("Game Overview", "play/game-overview"),
-            link("Round at a Glance", "play/round-at-a-glance"),
             link("Winning the Game", "play/winning"),
             link("Quick Reference", "reference/quick-reference"),
             link("Quick Tips", "reference/quick-tips"),
@@ -110,6 +112,8 @@ export default defineConfig({
           items: [
             link("Components", "learn/components"),
             link("Setup", "play/setup"),
+            link("Game Overview", "rules/game-overview"),
+            link("Round at a Glance", "rules/round-at-a-glance"),
             link("Full Game Rules", "play/round-overview"),
           ],
         },

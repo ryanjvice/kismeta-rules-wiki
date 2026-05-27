@@ -59,7 +59,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 - **Top tabs** (Play / Rules / Lore)  
   `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.play`, `tab.rules`, `tab.lore` · styles: `src/styles/custom.css` (`.tab-nav`)  
-  **Play** is active for `/play/*` except `/play/setup/` and `/play/round-overview/` (and the home page `/`), `/glossary/`, `/reference/*`. **Rules** is active for `/learn/*`, `/play/setup/`, `/play/round-overview/`. **Lore** is active for `/lore/*`.
+  **Play** is active for `/play/*` except `/play/setup/` and `/play/round-overview/` (and the home page `/`), `/glossary/`, `/reference/*`. **Rules** is active for `/learn/*`, `/rules/*`, `/play/setup/`, `/play/round-overview/`. **Lore** is active for `/lore/*`.
 
 - **Game mode toggles** (Quickplay / Magnus)  
   `src/components/GameModeToggle.astro` · labels: i18n `gameMode.*`  
@@ -76,7 +76,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 - **Rules and play pages**  
   `Kismeta_GameGuide.md` → run `npm run sync`  
-  Output: `src/content/docs/learn/`, `play/`, `reference/`. Do not hand-edit those folders unless you accept overwrite on the next sync.
+  Output: `src/content/docs/learn/`, `play/`, `reference/`, `rules/`. Do not hand-edit those folders unless you accept overwrite on the next sync.
 
 - **Sync script** (slugs, draft banners, cross-links, ⚙️ callouts)
   `scripts/sync-guide.mjs` — `SECTION_META`, `DRAFT_NOTICES`, `SEE_LINKS`.
@@ -164,7 +164,7 @@ hero:
     - text: Start learning
       link: /learn/lore/
     - text: Round at a glance
-      link: /play/round-at-a-glance/
+      link: /rules/round-at-a-glance/
       variant: minimal
 ---
 import HomeCards from '../../components/HomeCards.astro';
@@ -180,7 +180,7 @@ import HomeCards from '../../components/HomeCards.astro';
 
 | Safe to edit directly                                                                          | Overwritten by `npm run sync`                                     |
 | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `index.mdx`, `glossary.mdx`, `play/guided.mdx`, `src/data/guided-steps.ts`, `src/data/crucible-deck-builds.json`, `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | Most files under `src/content/docs/learn/`, `play/` (except `guided.mdx`), `reference/` |
+| `index.mdx`, `glossary.mdx`, `play/guided.mdx`, `src/data/guided-steps.ts`, `src/data/crucible-deck-builds.json`, `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | Most files under `src/content/docs/learn/`, `play/` (except `guided.mdx`), `reference/`, `rules/` |
 | `Kismeta_GameGuide.md` (source of truth)                                                       | `src/data/glossary.json`                                          |
 
 **Typical rules workflow:** edit `Kismeta_GameGuide.md` → `npm run sync` → `npm run dev` → preview → `npm run build` for production.
@@ -285,7 +285,7 @@ Interactive walkthrough for new players at the table — **not** synced from the
 | Top tab | [`src/components/TabNav.astro`](../src/components/TabNav.astro) → **Guided** |
 | Sidebar | [`astro.config.mjs`](../astro.config.mjs) → Play → **Guided Play** |
 
-**Flow (17 content steps + completion screen):** Components → Setup I–VI → Round intro → Spring 1–5 → Summer / Autumn / Winter (in-step `ActionFlowGuide`) → Round end → completion CTA to Round at a Glance.
+**Flow (17 content steps + completion screen):** Components → Setup I–VI → Round intro → Spring 1–5 → Summer / Autumn / Winter (in-step `ActionFlowGuide`) → Round end → completion CTA to Round at a Glance (`/rules/round-at-a-glance/`).
 
 **Embeds:** `crucible-deck` (Setup IV), `harvest-order` (Spring 3), `summer-flow` / `autumn-flow` / `winter-flow` (seasonal steps).
 

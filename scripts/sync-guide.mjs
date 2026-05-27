@@ -44,7 +44,7 @@ const SECTION_META = {
     description: 'The mythic backdrop of Kismeta and the Great Work.',
   },
   'GAME OVERVIEW': {
-    slug: 'play/game-overview',
+    slug: 'rules/game-overview',
     title: 'Game Overview',
     description: 'Players, play time, Great Year, Great Work, and winning.',
   },
@@ -59,7 +59,7 @@ const SECTION_META = {
     description: 'Setting the table, game modes, Crucible deck, and first Agekeeper.',
   },
   'ROUND AT A GLANCE': {
-    slug: 'play/round-at-a-glance',
+    slug: 'rules/round-at-a-glance',
     title: 'Round at a Glance',
     description: 'Quick seasonal reference for in-game lookup.',
   },
@@ -267,7 +267,7 @@ function rmSyncOutput() {
     if (fs.existsSync(fp)) preserved.set(rel, fs.readFileSync(fp, 'utf8'));
   }
 
-  for (const sub of ['learn', 'lore', 'play', 'reference']) {
+  for (const sub of ['learn', 'lore', 'play', 'reference', 'rules']) {
     const p = path.join(OUT, sub);
     if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
   }

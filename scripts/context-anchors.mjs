@@ -91,6 +91,6 @@ export const CONTEXT_SOURCE_PAGES = [
 	'learn/components',
 	'play/setup',
 	'play/round-overview',
-	'play/round-at-a-glance',
+	'rules/round-at-a-glance',
 	'play/winning',
 ];

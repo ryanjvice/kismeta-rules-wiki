@@ -159,7 +159,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     title: "Your First Cosmic Age",
     body: "<p>Each round of Kismeta is one <strong>Cosmic Age</strong> of the Great Year.</p><p>Let's walk through your first Cosmic Age step by step.</p>",
     embed: "round-at-a-glance",
-    learnMorePath: "play/round-at-a-glance",
+    learnMorePath: "rules/round-at-a-glance",
   },
   {
     id: "spring-1",
@@ -273,7 +273,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     id: "complete",
     title: "Move swiftly, Dear Alchemist...",
     body: "<p>You have walked through your first Cosmic Age. </p><p>For the next round, repeat <strong>Spring → Summer → Autumn → Winter</strong>.</p><p>Click <strong>Continue Playing</strong> to walk through your next round.</p><p>Click <strong>Open Round at a Glance</strong> to return here.</p><p>Click <strong>Start Over</strong> to start a new game.</p>",
-    learnMorePath: "play/round-at-a-glance",
+    learnMorePath: "rules/round-at-a-glance",
   },
 ];
 
