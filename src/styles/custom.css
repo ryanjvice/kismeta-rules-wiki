@@ -428,6 +428,28 @@ main:has(.kismeta-lore) h1#_top,
   border-color: var(--sl-color-accent);
 }
 
+/* ── Mobile visibility fix ───────────────────────────────────────────────── */
+/* Starlight wraps ThemeSelect (= our button) in a div with class
+   "sl-hidden md:sl-flex" which hides the entire right-group below 50 rem.
+   Starlight styles live inside @layer starlight.core, so these unlayered
+   author rules override them without !important. */
+@media (max-width: calc(50rem - 0.05px)) {
+  /* Show the right-group so our button is always reachable */
+  .kismeta-header-wrap .right-group {
+    display: flex;
+  }
+  /* Social icons are too wide to fit on a phone; hide them.
+     Our button is the only thing in the right-group for this site. */
+  .kismeta-header-wrap .right-group .social-icons {
+    display: none;
+  }
+  /* On narrow screens widen the panel so it doesn't overflow */
+  .a11y-menu__panel {
+    min-width: min(15rem, calc(100vw - 2rem));
+    right: 0.5rem;
+  }
+}
+
 /* Game mode callouts in content */
 .game-mode-callout {
   margin: 1rem 0;
