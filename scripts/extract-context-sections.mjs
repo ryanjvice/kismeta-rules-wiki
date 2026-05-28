@@ -13,6 +13,7 @@ import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
 import rehypeWrapTables from '../src/integrations/rehype-wrap-tables.mjs';
+import remarkContextHeadingIds from '../src/integrations/remark-context-heading-ids.mjs';
 import { CONTEXT_SOURCE_PAGES } from './context-anchors.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -25,6 +26,7 @@ const HEADING_LINE_RE = /^(#{2,3})\s+(.+?)(?:\s+\{#([^}]+)\})?\s*$/;
 const markdownProcessor = unified()
 	.use(remarkParse)
 	.use(remarkGfm)
+	.use(remarkContextHeadingIds)
 	.use(remarkRehype, { allowDangerousHtml: true })
 	.use(rehypeRaw)
 	.use(rehypeWrapTables)

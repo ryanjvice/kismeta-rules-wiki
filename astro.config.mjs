@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import { VitePWA } from "vite-plugin-pwa";
 import rehypeWrapTables from "./src/integrations/rehype-wrap-tables.mjs";
+import remarkContextHeadingIds from "./src/integrations/remark-context-heading-ids.mjs";
 
 /** @param {string} label @param {string} slug @param {Record<string,string>} [translations] */
 function link(label, slug, translations) {
@@ -17,6 +18,7 @@ export default defineConfig({
     "/play/round-at-a-glance/": "/rules/round-at-a-glance/",
   },
   markdown: {
+    remarkPlugins: [remarkContextHeadingIds],
     rehypePlugins: [rehypeWrapTables],
   },
   integrations: [
