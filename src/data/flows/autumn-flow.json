@@ -93,20 +93,34 @@
 						"body": "Advance your Stone from the Forge to the next Mantle Ring position. Discard the Crucible Card — the Stage is complete. Remaining Ward Reagents are burned and returned to the supply.",
 						"learnMoreHash": "3-crucible-actions"
 					},
-					{
-						"id": "fire",
-						"passId": "pass2",
-						"label": "4. Fire",
-						"kind": "sequence",
-						"stoneStates": [
-							"forgingNew",
-							"notInForge",
-							"all"
-						],
-						"condition": "Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis",
-						"body": "Satisfy an Active Crucible Card's Alchemical Formula (Alignment cards + Reagents). Discard the cards and Reagents, turn the Crucible Card sideways, move your Stone into the Forge. Optionally place Ward Reagents on the 🛡️ symbol to raise the entry fee for Oppositions.",
-						"learnMoreHash": "3-crucible-actions"
-					}
+				{
+					"id": "craft",
+					"passId": "pass2",
+					"label": "3b. Craft Reagent (optional)",
+					"kind": "optional",
+					"stoneStates": [
+						"forgingNew",
+						"notInForge",
+						"all"
+					],
+					"condition": "Available freely on your turn — same rules as Summer",
+					"body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. Salt: Discard any 3 cards — no Cauldron needed. Useful for topping up Reagents before you Fire or set Ward Reagents.",
+					"learnMoreHash": "craft-reagents"
+				},
+				{
+					"id": "fire",
+					"passId": "pass2",
+					"label": "4. Fire",
+					"kind": "sequence",
+					"stoneStates": [
+						"forgingNew",
+						"notInForge",
+						"all"
+					],
+					"condition": "Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis",
+					"body": "Satisfy an Active Crucible Card's Alchemical Formula (Alignment cards + Reagents). Discard the cards and Reagents, turn the Crucible Card sideways, move your Stone into the Forge. Optionally place Ward Reagents on the 🛡️ symbol to raise the entry fee for Oppositions.",
+					"learnMoreHash": "3-crucible-actions"
+				}
 				]
 			}
 		]

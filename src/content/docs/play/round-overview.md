@@ -111,7 +111,7 @@ The Sun shines brightly as you busy yourself crafting resources and consorting w
 |                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                            |
 | **🎴 Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
 | **🏰 Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
-| **⚒️ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
+| **⚒️ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have a Coal in it first. |
 |                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                        |
 | **🤝 Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
 | **🤺 Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
@@ -126,7 +126,7 @@ Your Cauldron Codex holds four Formulae - one per card position (I–IV). Activa
 - **Consult your Codex:** Follow the Codex for formulas of card sets you'll need to collect.
 - **Assemble the card set:** Collect the required cards in your Spread.
 - **Discard the card set:** Remove all cards in the set from your Spread.
-- **Light a Cauldron:** Move the Ember from the Crucible Card into any Cauldron of your choice. That Cauldron is now lit — its Reagent type can be crafted for the rest of the game.
+- **Light a Cauldron:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron is now lit — its Reagent type can be crafted for the rest of the game.
 - **Activate the Crucible Card:** Flip the card face-up to Activate it. Each Crucible card reveals an Alchemical Formula that is necessary to advance your Philosopher's Stone one step closer to the Altar of Kismeta.
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
@@ -164,7 +164,7 @@ Salt is the first Reagent players can craft, available from the start of the gam
 
 #### How to Craft Reagents
 
-Before you can craft a Reagent, its Cauldron must be lit — an Ember must have been placed in it by activating a Crucible Card. Once a Cauldron is lit, it remains lit for the rest of the game, and you may craft its Reagent as many times as you have cards to pay for it.
+Before you can craft a Reagent, its Cauldron must be lit — a Coal must have been placed in it by activating a Crucible Card. Once a Cauldron is lit, it remains lit for the rest of the game, and you may craft its Reagent as many times as you have cards to pay for it.
 
 - **Check the Cauldron:** Confirm the matching Cauldron is lit. If not, that Reagent cannot be crafted yet.
 - **Choose a Reagent type:** Select which of the four Reagents you want to craft. See the Correspondence table.
@@ -174,7 +174,7 @@ Before you can craft a Reagent, its Cauldron must be lit — an Ember must have 
 💡 **Example:** Your Red Cauldron is lit. You discard a 4 of Wands + 7 of Wands + King of Wands from your Spread. Take 1 Sulphur from the supply.
 
 <div class="game-mode-callout" data-modes="quickplay">
-_⚙️ **Game Mode Modifier (Quickplay):** No modifier. Reagent crafting rules are the same across all game modes: light a Cauldron with an Ember, then discard 3 matching-Suit cards to craft 1 Reagent._
+_⚙️ **Game Mode Modifier (Quickplay):** No modifier. Reagent crafting rules are the same across all game modes: light a Cauldron with a Coal, then discard 3 matching-Suit cards to craft 1 Reagent._
 
 </div>
 
@@ -187,7 +187,7 @@ Freely exchange resources with any rival during your turn.
 | Kismeta Cards                          | Astral Houses          |
 | Reagents (only transferable via Trade) | Ward Reagents          |
 | Active Crucible Cards (only via Trade) | Dormant Crucible Cards |
-|                                        | Embers                 |
+|                                        | Coals                  |
 
 📌 **Note:** Trading is the only way to transfer Reagents and Active Crucible Cards between players. They cannot be won in Duels or moved any other way.
 
@@ -299,8 +299,8 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 
 | STATE     | APPEARANCE                 | NOTES                                                                                                       |
 | --------- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Dormant   | Face-down; Ember on top    | The Alchemical Formula is hidden. Awaiting activation.                                                      |
-| Active    | Face-up; Ember removed     | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
+| Dormant   | Face-down; Coal on top    | The Alchemical Formula is hidden. Awaiting activation.                                                      |
+| Active    | Face-up; Coal removed     | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
 | Fired     | Face-up; Turned sideways   | The Alchemical Formula executed; the Stone is in the Forge. Only one card may be Fired at a time.           |
 | Arrested  | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.                         |
 | Discarded | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                                  |
@@ -425,24 +425,39 @@ If another player's Stone now holds your previous Forge position, choose one:
 📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
 
 
+### ⚒️ Craft Reagents {#craft-reagents}
+
+Reagent crafting is available freely on your turn during Autumn — the same rules apply as in Summer. You may craft as many times as you have cards to pay for it.
+
+This can be useful when you need a last Reagent to Fire your Stone, or to top up Ward Reagents before entering the Forge. See _Summer: Craft Reagent_ for the full crafting rules, including the Correspondence table and Salt Reagent.
+
+
 ## PHASE 4: ⛰️ WINTER {#phase-4-winter}
 
 ### Final Actions & Reset
 
-Winter closes the Cosmic Age. Unlock cards, place an optional Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.
+Winter closes the Cosmic Age. Unlock cards, craft Reagents from your inventory before limits are enforced, place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.
 
 | **Step**                   | **Action**                                                                         |
 | -------------------------- | ---------------------------------------------------------------------------------- |
 | **1️⃣ Card Unlock**         | Move cards freely between your Hand and Spread.                                    |
-| **2️⃣ Fateful Wager**       | Bet on the next Cosmic Age with cards; double or lose your Wager.                  |
-| **3️⃣ Enforce Card Limits** | Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only.                       |
+| **2️⃣ Winter Activities**   | Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. Craft Reagent: Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. Available freely, before Card Limits are enforced. |
+| **3️⃣ Enforce Card Limits** | Spread 5 cards \| Hand 5 cards \| Arcanum: Adept cards only.                       |
 | **4️⃣ Transit the Age**     | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
 
 ### 1️⃣ Card Unlock: {#1-card-unlock}
 
 Cards are now unlocked. Move cards freely between your Hand and Spread before taking other actions.
 
-### 2️⃣ Fateful Wager {#2-fateful-wager}
+### 2️⃣ Winter Activities {#2-winter-activities}
+
+#### ⚒️ Craft Reagents {#craft-reagents}
+
+Reagent crafting is available freely during Winter on your turn — the same rules apply as in Summer. You may craft as many times as you have cards to pay for it.
+
+Winter is a natural moment to refine: cards you move between Hand and Spread after the Card Unlock, or excess cards you will soon discard when Card Limits are enforced, can be used to craft Reagents before they are lost. Craft before Card Limits are enforced. See _Summer: Craft Reagent_ for the full crafting rules, including the Correspondence table and Salt Reagent.
+
+#### 🃏 Fateful Wager
 
 _(OPTIONAL)_ Before the round ends, any player may wager cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly, and your wager is doubled. Guess wrong, and it is lost to the Fates.
 
@@ -468,7 +483,7 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | CARD LIMITS |                  |                                                                                      |
 | ----------- | ---------------- | ------------------------------------------------------------------------------------ |
 | **ZONE**    | **MAX LIMIT**    | **NOTES**                                                                            |
-| Spread      | 7 cards          | Discard excess cards of your choice down to 7.                                       |
+| Spread      | 5 cards          | Discard excess cards of your choice down to 5.                                       |
 | Hand        | 5 cards          | Discard excess cards of your choice down to 5.                                       |
 | Arcanum     | Adept cards only | All Fate Major Arcana cards must be returned to the Common Deck. Adept cards remain. |
 

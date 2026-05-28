@@ -17,7 +17,7 @@
             "id": "activate",
             "label": "🎴 Activate Crucible Card",
             "kind": "optional",
-            "body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and light a Cauldron by placing the Ember in it — that Reagent type can now be crafted for the rest of the game. Flip the Crucible Card face-up — it is now Active.",
+            "body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and light a Cauldron by placing the Coal in it — that Reagent type can now be crafted for the rest of the game. Flip the Crucible Card face-up — it is now Active.",
             "learnMoreHash": "1-activate-crucible-cards"
           },
           {

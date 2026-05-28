@@ -13,7 +13,7 @@ Kismeta: Alchemists of the Great Year is a strategic card-and-dice game where yo
 
 Each game of Kismeta: Alchemists of the Great Year takes you on a journey through a single Great Year, the grand cycle of the solar system spiraling around the galaxy's core. You experience each Cosmic Age, represented by a Zodiac sign chosen at random at the start of each round by the Agekeeper's dice. These signs hold unique Aspects and Effects that shape resource flow and interactions throughout the cycle. You'll roll your Zodiac dice to determine your own sign for the Age, receiving that Sign's Cosmic Effect as your personal blessing for the round, and work to align your Aspects with the Cosmic Age, gathering valuable Kismeta Cards.
 
-The Cosmic Age unfolds through four Seasons, each offering distinct opportunities to advance your Great Work: Spring sets the Age and gathers resources; Summer is for trading, dueling, and preparing; Autumn fires Stones into the Forge to push your progress; and Winter marks the end, resetting the board for the next cycle. As you traverse these Ages, focus on maximizing your Alignments, managing resources, enduring the Crucible's heat, and outlasting your rivals.
+The Cosmic Age unfolds through four Seasons, each offering distinct opportunities to advance your Great Work: Spring sets the Age and gathers resources; Summer is for crafting, trading, dueling, and preparing; Autumn advances your Stone and offers further crafting; and Winter closes out the Age with crafting, wagers, and reset. As you traverse these Ages, focus on maximizing your Alignments, managing resources, enduring the Crucible's heat, and outlasting your rivals.
 
 ## The Great Work
 
@@ -26,4 +26,4 @@ Keep your Stone protected in the Forge, for opposing Alchemists may challenge yo
 Ultimately, the first Alchemist to complete all four Crucible Cards and carry their Stone through every Stage of Transformation to the Altar of Kismeta will finish the Great Work and claim victory.
 
 All Hail! All Hail!
-The Magnus Alchemista Grandis Illuminatus ex Kismeta!
+The Magnus Alchemist Grandis Illuminatus ex Kismeta!

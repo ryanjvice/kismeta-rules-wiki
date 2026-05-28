@@ -21,11 +21,11 @@ description: "Everything in the box."
 
 - **4 Philosopher's Stones** (1 per player)
 - **4 Meeples** (1 per player; marks your current Zodiac Sign on the board)
-- **12 Astral House Tokens** (3 per player; 🏰 symbol)
+- **12 Astral Houses** (4 per player; Wooden cylinder token)
 
 **Tokens & Resources**
 
 - **Reagent Tokens** (128 circle punchout chips):
-  🔴 Sulphur (Red) — 25 | 🟡 Quicksilver (Yellow) — 25 | 🔵 Aqua Regia (Blue) — 25 | 🟢 Vitriol (Green) — 25 | ⬜ Salt (White) — 28
-- **16 Embers** (4 per player; small black crystal pieces)
+  🔴 Sulphur (Red) — 25 | 🟡 Quicksilver (Yellow) — 25 | 🔵 Aqua Regia (Blue) — 25 | 🟢 Vitriol (Green) — 25 | ⚪ Salt (White) — 28
+- **16 Coals** (4 per player; small black crystal pieces)
 - **1 Agekeeper's Key** (black pawn)

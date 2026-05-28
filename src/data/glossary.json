@@ -49,11 +49,15 @@
   },
   {
     "term": "Cauldron",
-    "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by an Ember. See the Correspondence table."
+    "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by a Coal. See the Correspondence table."
   },
   {
     "term": "Cauldron Codex",
     "definition": "A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance."
+  },
+  {
+    "term": "Coal",
+    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Coals cannot be moved once placed."
   },
   {
     "term": "Correspondence",
@@ -70,10 +74,6 @@
   {
     "term": "Duel",
     "definition": "A Summer action in which a player challenges a rival to steal a single targeted card from their Spread. The Challenger names their target, then pays an Ante Card from their own Spread as the entry fee. Both players roll their Zodiac Dice; the higher roll wins. The Challenger wins the targeted card on a win, or loses their Ante Card on a loss."
-  },
-  {
-    "term": "Ember",
-    "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Ember is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Embers cannot be moved once placed."
   },
   {
     "term": "Fate Card",

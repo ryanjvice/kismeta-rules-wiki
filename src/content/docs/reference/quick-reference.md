@@ -9,17 +9,17 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 
 | 🛞          | SIGN        | PLANET(S)  | ELEMENT | EFFECT                                                        |
 | ----------- | ----------- | ---------- | ------- | ------------------------------------------------------------- |
-| COSMIC AGES | Aries       | Mars       | Fire    | Add +2 cards to Harvest in Fire Signs                         |
-|             | Taurus      | Venus      | Earth   | Add +1 to all Earth Alignments                                |
+| COSMIC AGES | Aries       | Mars       | Fire    | +1 Base Harvest Card each round                               |
+|             | Taurus      | Venus      | Earth   | Court Cards of Pentacles are a Wild Suit.                     |
 |             | Gemini      | Mercury    | Air     | Craft Quicksilver with 2 Swords cards (Cauldron must be lit). |
-|             | Cancer      | Sun /Moon  | Water   | Add +2 Cards to Harvest in Water Signs                        |
-|             | Leo         | Sun / Moon | Fire    | Add +1 to all Fire Alignments                                 |
+|             | Cancer      | Sun /Moon  | Water   | Craft Salt for any 2 cards.                                   |
+|             | Leo         | Sun / Moon | Fire    | Court Cards of Wands are a Wild Suit.                         |
 |             | Virgo       | Mercury    | Earth   | Craft Vitriol with 2 Pentacles cards (Cauldron must be lit).  |
-|             | Libra       | Venus      | Air     | Add +2 Cards to Harvest in Air Signs                          |
-|             | Scorpio     | Mars       | Water   | Add +1 to all Water Alignments                                |
+|             | Libra       | Venus      | Air     | +1 Base Harvest Card each round                               |
+|             | Scorpio     | Mars       | Water   | Court Cards of Cups are a Wild Suit.                          |
 |             | Sagittarius | Jupiter    | Fire    | Craft Sulphur with 2 Wands cards (Cauldron must be lit).      |
-|             | Capricorn   | Saturn     | Earth   | Add +2 Cards to Harvest in Earth Signs                        |
-|             | Aquarius    | Saturn     | Air     | Add +1 to all Air Alignments                                  |
+|             | Capricorn   | Saturn     | Earth   | Craft Salt for any 2 cards.                                   |
+|             | Aquarius    | Saturn     | Air     | Court Cards of Swords are a Wild Suit.                        |
 |             | Pisces      | Jupiter    | Water   | Craft Aqua Regia with 2 Cups cards (Cauldron must be lit).    |
 
 ## Correspondence
@@ -68,7 +68,7 @@ Three concepts you'll use constantly:
 - **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
-## Your Inventory: Spread, Hand & Arcanum Zones
+## Commune: Spread, Hand & Arcanum Zones
 
 You always manage your inventory of Kismeta Cards across three zones.
 
@@ -76,7 +76,7 @@ You always manage your inventory of Kismeta Cards across three zones.
 | ------- | --------------------------------------------- | ---------- | -------- | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- |
 | SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | No card limit during a round | Activating Crucible Cards                                                                   | No restrictions               |
 |         |                                               |            |          |                              | Meeting Forge Alignment                                                                     |                               |
-|         |                                               |            |          | 7-cards; enforced in Winter  | Crafting Reagents                                                                           |                               |
+|         |                                               |            |          | 5-cards; enforced in Winter  | Crafting Reagents                                                                           |                               |
 |         |                                               |            |          |                              | Building Astral Houses                                                                      |                               |
 |         |                                               |            |          |                              | Trading, wagering & targeting in Duels                                                      |                               |
 | HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | Max 5 cards                  | Reagent Crafting alongside Spread cards (discarded after)                                   | Duels                         |
@@ -87,69 +87,3 @@ You always manage your inventory of Kismeta Cards across three zones.
 |         |                                               |            |          |                              | Adept Aspects (Harvest & Alignments)                                                        | Crucible Card activation      |
 |         |                                               |            |          | Fate: No limit               | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
 |         |                                               |            |          |                              | Adept cards: must be purchased to enter; swap by paying the new card's cost                 | Trades, Wagers, Astral Houses |
-
-## Alignment Scoring
-
-| SOURCE               | ASPECTS SCORED                                          | BONUS CARDS                      |
-| -------------------- | ------------------------------------------------------- | -------------------------------- |
-| Zodiac Die: Result   | Sign, Planet, and Element of your rolled Sign           | +3 Sign · +2 Planet · +1 Element |
-| Spread Cards         | Planet and Element of each card (scored individually)   | +2 Planet · +1 Element           |
-| Arcanum: Adept Cards | Sign, Planet, and Element (each card carries all three) | +3 Sign · +2 Planet · +1 Element |
-| Astral Houses        | Sign, Planet, and Element of the built Sign             | +3 Sign · +2 Planet · +1 Element |
-
-## Alignment Point Sources
-
-| SOURCE                | ALWAYS ACTIVE? | NOTES                                                                                  |
-| --------------------- | -------------- | -------------------------------------------------------------------------------------- |
-| Zodiac Die: Result    | Yes            | Aspects of the rolled Sign score against the Opposition Age.                           |
-| Spread Cards          | Yes            | All Aspects of all cards in your Spread. Card effects that modify Oppositions apply.   |
-| Astral Houses         | Yes            | +3 (Sign match), +2 (Planet match), +1 (Element match) against the Opposition Age.     |
-| Hand Cards            | Optional       | Cards contributed from the Hand are discarded after the Opposition resolves.           |
-| Arcanum: Major Arcana | Yes (effects)  | Active effects apply; check individual card text. Some Fate cards affect both players. |
-
-## Crafting Reagents
-
-**Cost:** 3 matching-Suit cards matching the color of the Reagent you wish to craft. The matching Cauldron must be lit before you can craft the corresponding Reagent.
-
-| CAULDRON  | REAGENT     | SUIT         | UNLOCK                         |
-| --------- | ----------- | ------------ | ------------------------------ |
-| 🔴 Red    | Sulphur     | 🪄 Wands     | Place Ember in Red Cauldron    |
-| 🔵 Blue   | Aqua Regia  | 🍷 Cups      | Place Ember in Blue Cauldron   |
-| 🟢 Green  | Vitriol     | 🪙 Pentacles | Place Ember in Green Cauldron  |
-| 🟡 Yellow | Quicksilver | ⚔️ Swords    | Place Ember in Yellow Cauldron |
-
-🧂 **Salt Reagent** carries no Element, Suit, or Cauldron. Craft Salt by discarding any 3 Kismeta Cards — no Cauldron required. See _Crafting Salt_.
-
-## Crucible: The Transmutation Pathway
-
-| POS. | CRUCIBLE LOCATION | STATUS                                      |
-| ---- | ----------------- | ------------------------------------------- |
-| 0    | Mantle Ring       | Starting position. Safe.                    |
-| 1    | Forge (Lead)      | Stage 1 underway. Vulnerable to Opposition. |
-| 2    | Mantle Ring       | Stage 1 complete. Safe.                     |
-| 3    | Forge (Bronze)    | Stage 2 underway. Vulnerable to Opposition. |
-| 4    | Mantle Ring       | Stage 2 complete. Safe.                     |
-| 5    | Forge (Silver)    | Stage 3 underway. Vulnerable to Opposition. |
-| 6    | Mantle Ring       | Stage 3 complete. Safe.                     |
-| 7    | Forge (Gold)      | Stage 4 underway. Vulnerable to Opposition. |
-| 8    | Altar of Kismeta  | Victory. The Great Work is complete.        |
-
-## Philosopher's Stone States
-
-| PHILOSOPHER'S STONE STATES |                          |                                                                                                   |
-| -------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
-| **STATE**                  | **POSITION**             | **WHAT IT MEANS**                                                                                 |
-| Tempering                  | Mantle Ring (0, 2, 4, 6) | Safe. No Crucible Card is Fired. Cannot be targeted by in an Opposition.                          |
-| Forging                    | Forge (1, 3, 5, 7)       | Transmutation underway. Crucible Card is Fired (face-up, sideways). Vulnerable to Opposition.     |
-| In Stasis                  | ❄️ Stasis zone           | Frozen until next Autumn. Crucible Card remains Fired. Cannot Temper or take other Stone actions. |
-
-## Crucible Card States
-
-| CRUCIBLE CARD STATES |                            |                                                                                             |
-| -------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
-| **STATE**            | **APPEARANCE**             | **NOTES**                                                                                   |
-| Dormant              | Face-down; Ember on top    | Formula hidden; awaiting activation.                                                        |
-| Active               | Face-up; Ember removed     | Formula revealed; working toward requirements. Multiple cards may be Active simultaneously. |
-| Fired                | Face-up; Turned sideways   | Formula executed; Stone is in the Forge. Only one card may be Fired at a time.              |
-| Arrested             | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.         |
-| Discarded            | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                  |

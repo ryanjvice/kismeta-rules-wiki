@@ -46,7 +46,7 @@ const GUIDED_STEPS: GuidedStep[] = [
       "134 Kismeta Cards (blue) and 22 Crucible Cards (red)",
       "4 Cauldron Codex cards (one per player)",
       "1 Cosmic Age Die (black) and 4 Zodiac Dice (player colors)",
-      "Per player: Philosopher's Stone, Meeple, 3 Astral House tokens, 4 Embers",
+      "Per player: Philosopher's Stone, Meeple, 3 Astral House tokens, 4 Coals",
       "Reagent tokens (Sulphur, Quicksilver, Aqua Regia, Vitriol, Salt)",
       "1 Agekeeper's Key",
     ],
@@ -77,10 +77,10 @@ const GUIDED_STEPS: GuidedStep[] = [
     phaseTotal: 7,
     body: "<p>Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.</p>",
     checklist: [
-      "3 Astral House tokens (🏰)",
       "1 Cauldron Codex (dual-sided)",
-      "4 Embers",
-      "1 Meeple",
+      "4 Coals",
+      "3 Astral House tokens (matching your color)",
+      "1 Meeple (matching your color)",
       "1 Philosopher's Stone on START in your Mantle Ring section",
       "1 Zodiac Die matching your color",
     ],
@@ -96,7 +96,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     body: "<p>You chose a game mode at the start of guided play. Confirm these rules apply to your table.</p>",
     modeBody: {
       quickplay:
-        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Kismeta Card whose Planet matches your current Zodiac Sign.</li><li>Reagent Crafting: Light a Cauldron by placing an Ember in it, then discard <strong>3</strong> matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.</li></ul>",
+        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Kismeta Card whose Planet matches your current Zodiac Sign.</li><li>Reagent Crafting: Light a Cauldron by placing a Coal in it, then discard <strong>3</strong> matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.</li></ul>",
       standard:
         "<p><strong>Standard Game</strong> — full rules once you know the flow.</p><ul><li>Play as written in the guide; ignore ⚙️ Game Mode Modifiers.</li><li>Use the <strong>Standard</strong> Crucible deck build.</li></ul>",
       magnus:
@@ -149,7 +149,7 @@ const GUIDED_STEPS: GuidedStep[] = [
       "Shuffle the Crucible Deck; tap twice to cleanse",
       "Deal four Crucible Cards face down to each player",
       "Each player places four cards in a row along their board edge",
-      "Place one Ember on each Crucible Card (cards are Dormant)",
+      "Place one Coal on each Crucible Card (cards are Dormant)",
       "Agekeeper deals one face-up Kismeta Card to each Spread (redeal if Major Arcana)",
     ],
     learnMorePath: "play/setup",
@@ -198,7 +198,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 3,
     phaseTotal: 5,
-    body: '<p>All players begin with 2 Kismeta Cards as a gift from the Age. Earn Bonus Cards by aligning your inventory with the Cosmic Age\'s Aspects. Each player calculates their own total first; the Agekeeper then deals the full Harvest.</p><ol class="game-table__steps"><li class="game-table__step"><span class="game-table__step-label">Base Harvest</span><p class="game-table__step-body">All players begin with 2 Kismeta Cards. This is always granted regardless of Alignment.</p></li><li class="game-table__step"><span class="game-table__step-label">Calculate Bonus Cards</span><p class="game-table__step-body">Each player tallies bonus cards from all Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Element Match. Each source scores its single highest-matching Aspect.</p></li><li class="game-table__step"><span class="game-table__step-label">Agekeeper\'s Boon</span><p class="game-table__step-body">If the Agekeeper\'s rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player\'s tally.</p></li><li class="game-table__step"><span class="game-table__step-label">Deal the Harvest</span><p class="game-table__step-body">The Agekeeper deals each player their full Harvest total face-down, one at a time.</p></li></ol><div class="doc-table"><table><thead><tr><th>Bonus Source</th><th>How It Scores</th></tr></thead><tbody><tr><td>Zodiac Die</td><td>Compare your rolled Sign\'s Aspects against the Cosmic Age — score the highest match</td></tr><tr><td>Astral Houses</td><td>Each House is scored independently and stacks with all other sources</td></tr><tr><td>Specialist Cards</td><td>Each active Specialist in your Arcanum is scored independently</td></tr><tr><td>Spread Element Match</td><td>Each Spread card whose suit matches the Cosmic Age Element earns +1</td></tr></tbody></table></div><div class="doc-table"><table><thead><tr><th>Aspect Match</th><th>Bonus Cards</th></tr></thead><tbody><tr><td>Sign</td><td>+3</td></tr><tr><td>Planet</td><td>+2</td></tr><tr><td>Element</td><td>+1</td></tr><tr><td>No Match</td><td>+0</td></tr></tbody></table></div><p><em>Each source scores its single highest-matching Aspect only — do not stack.</em></p>',
+    body: '<p>All players begin with 2 Kismeta Cards as a gift from the Age. Earn Bonus Cards by aligning your inventory with the Cosmic Age\'s Aspects. Each player calculates their own total first; the Agekeeper then deals the full Harvest.</p><ol class="game-table__steps"><li class="game-table__step"><span class="game-table__step-label">Base Harvest</span><p class="game-table__step-body">All players begin with 2 Kismeta Cards. This is always granted regardless of Alignment.</p></li><li class="game-table__step"><span class="game-table__step-label">Calculate Bonus Cards</span><p class="game-table__step-body">Each player tallies bonus cards from all Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Element Match. Each source scores its single highest-matching Aspect.</p></li><li class="game-table__step"><span class="game-table__step-label">Agekeeper\'s Boon</span><p class="game-table__step-body">If the Agekeeper\'s rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player\'s tally.</p></li><li class="game-table__step"><span class="game-table__step-label">Deal the Harvest</span><p class="game-table__step-body">The Agekeeper deals each player their full Harvest total face-down, one at a time.</p></li></ol><div class="doc-table"><table><thead><tr><th>Bonus Source</th><th>How It Scores</th></tr></thead><tbody><tr><td>Zodiac Die</td><td>Compare your rolled Sign\'s Aspects against the Cosmic Age — score the highest match</td></tr><tr><td>Astral Houses</td><td>Each House is scored independently and stacks with all other sources</td></tr><tr><td>Adept Cards</td><td>Each active Adept Card in your Arcanum is scored independently</td></tr><tr><td>Spread Element Match</td><td>Each Spread card whose suit matches the Cosmic Age Element earns +1</td></tr></tbody></table></div><div class="doc-table"><table><thead><tr><th>Aspect Match</th><th>Bonus Cards</th></tr></thead><tbody><tr><td>Sign</td><td>+3</td></tr><tr><td>Planet</td><td>+2</td></tr><tr><td>Element</td><td>+1</td></tr><tr><td>No Match</td><td>+0</td></tr></tbody></table></div><p><em>Each source scores its single highest-matching Aspect only — do not stack.</em></p>',
     learnMorePath: "play/round-overview",
     learnMoreHash: "3-harvest-kismeta-cards",
   },
@@ -243,7 +243,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "autumn",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p>",
+    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p><p>Reagent crafting is also available freely on your turn — same rules as Summer. Craft before you Fire if you need a last Reagent.</p>",
     embed: "autumn-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-3-autumn",
@@ -254,7 +254,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "winter",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>Winter closes the Cosmic Age. Unlock cards, place an optional Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.</p>",
+    body: "<p>Winter closes the Cosmic Age. Unlock cards, craft Reagents from your inventory before limits are enforced, place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.</p>",
     embed: "winter-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-4-winter",
@@ -287,7 +287,7 @@ export const GUIDED_CONTENT_STEP_COUNT = GUIDED_STEPS.length - 1;
 
 export const GAME_MODE_STORAGE_KEY = "kismeta-game-modes";
 export const GUIDED_PROGRESS_KEY = "kismeta-guided-progress";
-export const GUIDED_PROGRESS_VERSION = 3;
+export const GUIDED_PROGRESS_VERSION = 4;
 
 export function gameModeToStorage(mode: GameMode): {
   quickplay: boolean;

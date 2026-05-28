@@ -19,9 +19,12 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
 
 Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.
 
-- **3 Astral House Tokens:** Tokens with 🏰 symbol; Keep these nearby.
 - **1 Cauldron Codex:** Dual-sided card; Cauldron Codex & Quick Reference Guide on reverse.
-- **4 Embers:** Small black crystal pieces; Keep these nearby.
+- **4 Coals:** Small black crystal pieces; Keep these nearby.
+
+### Components of a matching color:
+
+- **3 Astral House Tokens**
 - **1 Meeple:** Wooden game piece; Keep this nearby.
 - **1 Philosopher's Stone:** Place this on the "START" space in your section of the Mantle Ring.
 - **1 Zodiac Die:** 12-sided Die, matching your chosen color; Keep this nearby.
@@ -40,7 +43,7 @@ _Recommended for first playthroughs._
 
 - **Crucible Deck:** Use the Quickplay deck build.
 - **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
-- **Reagent Crafting:** Light a Cauldron by placing an Ember in it, then discard 3 matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.
+- **Reagent Crafting:** Light a Cauldron by placing a Coal in it, then discard 3 matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.
 
 ### 2️⃣ STANDARD GAME
 
@@ -97,36 +100,26 @@ ii. Blindly draw four cards for each player in the game.
 
 ## V. Determine the First Agekeeper {#v-determine-the-first-agekeeper}
 
-The Agekeeper is the curator of the round. You hold the Agekeeper's Key and are responsible for:
+The Agekeeper sets the Cosmic Age, deals the Harvest, oversees Oppositions in Autumn, and passes the Key each round.
+
+- Everyone rolls their Zodiac Die — highest becomes first Agekeeper (reroll ties)
+- First Agekeeper takes the Agekeeper's Key
+- Key passes clockwise at the end of each round
+
+### Agekeeper Roles:
 
 - **Setting the Cosmic Age:** You roll the Cosmic Age Die to start the round.
 - **Managing the Kismeta Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
-- **Facilitate Autumn Turns:** Beginning with yourself, guide each player through their Autumn turn in clockwise order. Each player surveys the Crucible, then resolves Opposition, Crucible Actions (Temper and/or Fire the Stone), and Leave Stasis in that sequence.
 - **Transit the Age:** Prepare the play area for the next Age. Pass the Agekeeper's Key clockwise at the end of every round.
-
-Who starts? Everyone rolls their dice; the highest roller becomes the first Agekeeper and takes the Agekeeper's Key first. Reroll if tied.
-
-The Agekeeper's Key is passed clockwise at the end of each round.
 
 ## VI. Deal the Crucible Cards {#vi-deal-the-crucible-cards}
 
-The first Agekeeper prepares the Crucible Cards before the game begins.
+The first Agekeeper finishes game prep. When this step is done, the first Cosmic Age begins.
 
-- **Build the Crucible Deck:** (If you haven't yet done so) Assemble the Crucible Deck according to player count and chosen difficulty.
+- Shuffle the Crucible Deck; tap twice to cleanse
+- Deal four Crucible Cards face down to each player
+- Each player arranges them in a row along the edge of the Great Year board
+- Place one Molten Coal on each Crucible Card (cards are Dormant)
+- Agekeeper deals one face-up Common Card to each Spread (redeal if Major Arcana)
 
-\*See **Building The Crucible Deck\***
-
-- **Deal the Crucible Cards:**
-  - Shuffle the Crucible Deck. Tap it twice to cleanse it to usher in the new Great Year.
-  - Deal four Crucible Cards face down to each player.
-  - Each player places their four Crucible Cards face-down in a single row along their edge of the Great Year board.
-
-- **Lay the Embers:**
-  - Take your four Embers and place one atop each of your Crucible Cards.
-  - The cards are now Dormant, their Formulae hidden.
-
-📌 **Note:** The position of each card (I, II, III, & IV; from left to right) corresponds to a Formula shown on your Cauldron Codex.
-
-- **Deal Starting Kismeta Cards:** The Agekeeper deals one face-up card from the Common Deck to each player's Spread. If any player receives a Major Arcana, return it to the deck, reshuffle, tap twice to cleanse, and redeal until all players hold a Minor Arcana.
-
-- The first Cosmic Age begins!
+The first Cosmic Age begins!

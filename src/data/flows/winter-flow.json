@@ -16,16 +16,16 @@
       },
       {
         "id": "wager",
-        "label": "2. Fateful Wager (optional)",
+        "label": "2. Winter Activities (optional)",
         "kind": "optional",
-        "body": "Bet cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly and your wager is doubled. Guess wrong and it is lost to the Fates. Wagers resolve at the start of next Spring.",
-        "learnMoreHash": "2-fateful-wager"
+        "body": "Craft Reagents freely — same rules as Summer — before Card Limits are enforced. Also: place a Fateful Wager by betting cards on the next Cosmic Age's Zodiac Sign. Guess correctly and your wager is doubled. Guess wrong and it is lost to the Fates. Wagers resolve at the start of next Spring.",
+        "learnMoreHash": "2-winter-activities"
       },
       {
         "id": "limits",
         "label": "3. Enforce Card Limits",
         "kind": "required",
-        "body": "Discard down to card limits before the next Age: Spread 7 cards · Hand 5 cards · Arcanum: Adept cards only (discard all Fate Major Arcana to the Common Deck).",
+        "body": "Discard down to card limits before the next Age: Spread 5 cards · Hand 5 cards · Arcanum: Adept cards only (discard all Fate Major Arcana to the Common Deck).",
         "learnMoreHash": "3-enforce-card-limits--reset"
       },
       {
