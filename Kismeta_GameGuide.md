@@ -312,7 +312,7 @@ All players earn a base of 2 Kismeta Cards at the start of every Harvest. You ca
 
 - **Zodiac Die** — Compare your rolled Sign's Aspects (Sign, Planet, Element) against the Cosmic Age. Earn the bonus for the highest match.
 - **Astral Houses** — Each Astral House you've built is checked independently. Multiple Astral Houses each earn their own bonus and stack with all other sources.
-- **Specialist Cards** — Each active Specialist Card in your Arcanum carries three Aspects. Each one is scored independently as a Harvest Source.
+- **Adept Cards** — Each active Adept Card in your Arcanum carries three Aspects. Each one is scored independently as a Harvest Source.
 - **Spread Element Match** — Before the Harvest deal, count the cards already in your Spread whose suit matches the Cosmic Age's Element. Each matching card earns +1 card.
 
 ⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-matching Aspect. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, the score is **+3**, not +5.
@@ -330,13 +330,13 @@ All players earn a base of 2 Kismeta Cards at the start of every Harvest. You ca
 
 #### Order of Operations
 
-| STEP                      | ACTION                                                                                                                                                                          |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Base Harvest           | All players begin with 2 cards. This is always granted regardless of Alignment.                                                                                                 |
-| 2. Calculate Bonus Cards  | Each player tallies bonus cards from all applicable Harvest Sources using the Bonus Scoring table above. (Zodiac Die + Astral Houses + Specialist Cards + Spread Element Match) |
-| 3. Agekeeper's Boon       | If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally.                                                                       |
-| 4. Deal the Harvest       | The Agekeeper deals each player their full Harvest total face down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered)                                              |
-| 5. Commune with the Cards | Each player arranges their full hand across their Spread, Hand, and Arcanum zones. Consider your goals for the round.                                                           |
+| STEP                      | ACTION                                                                                                                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Base Harvest           | All players begin with 2 cards. This is always granted regardless of Alignment.                                                                                            |
+| 2. Calculate Bonus Cards  | Each player tallies bonus cards from all applicable Harvest Sources using the Bonus Scoring table above. (Zodiac Die + Astral Houses + Adept Cards + Spread Element Match) |
+| 3. Agekeeper's Boon       | If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally.                                                                  |
+| 4. Deal the Harvest       | The Agekeeper deals each player their full Harvest total face down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered)                                         |
+| 5. Commune with the Cards | Each player arranges their full hand across their Spread, Hand, and Arcanum zones. Consider your goals for the round.                                                      |
 
 #### Aspects & Alignment
 
@@ -349,7 +349,7 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 | Spread: 7 of Cups                               | Element match (Water = Water)                   | +1              |
 | Spread: Knight of Cups                          | Element match (Water = Water)                   | +1              |
 | Astral House: Pisces                            | Element match (Water = Water)                   | +1              |
-| Specialist Card: The High Priestess             | Element match (Moon → Water)                    | +1              |
+| Adept Card: The High Priestess                  | Element match (Moon → Water)                    | +1              |
 | Base Harvest                                    | 2 cards always dealt regardless of Alignment    | +2              |
 | **TOTAL HARVEST**                               |                                                 | **9 cards**     |
 
@@ -870,13 +870,13 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 #### Adept Cards
 
-When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries all three Aspects (Sign, Planet, and Element), contributing them to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck.
+When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries all three Aspects (Sign, Planet, and Element), contributing them to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
 
 #### Fate Cards
 
-The Fates themselves will visit you throughout the course of the game to test your resolve, give gifts, and otherwise shake things up. There are 11 Fate Cards. They are played as soon as they are drawn.
+The Fates themselves will visit you throughout the course of the game to test your resolve, give gifts, and otherwise shake things up. There are 10 Fate Cards. They are played as soon as they are drawn.
 
-| Specialist Cards (11)                                                   | Fate Cards (11)                                |
+| Adept Cards (12)                                                        | Fate Cards (10)                                |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
 | Carries three Aspects; used in Harvest & Alignments                     | No Aspects; effect only                        |
@@ -904,10 +904,10 @@ You always manage your inventory of Kismeta Cards across three zones.
 |         |                                               |            |          |                              |                                                                                             | Crucible Card activation      |
 |         |                                               |            |          |                              | Opposition contributions (discarded after)                                                  | Alignments                    |
 |         |                                               |            |          |                              |                                                                                             | Trades, Wagers, Astral Houses |
-| ARCANUM | MAJOR ARCANA: Fate & Specialist Cards         | Visible    | Active   | Specialist: Max 2 cards      | Active Major Arcana effects                                                                 | Duels                         |
-|         |                                               |            |          |                              | Specialist Aspects (Harvest & Alignments)                                                   | Crucible Card activation      |
+| ARCANUM | MAJOR ARCANA: Fate & Adept Cards              | Visible    | Active   | Adept: Max 2 cards           | Active Major Arcana effects                                                                 | Duels                         |
+|         |                                               |            |          |                              | Adept Aspects (Harvest & Alignments)                                                        | Crucible Card activation      |
 |         |                                               |            |          | Fate: No limit               | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
-|         |                                               |            |          |                              | Specialist cards: must be purchased to enter; swap by paying the new card's cost            | Trades, Wagers, Astral Houses |
+|         |                                               |            |          |                              | Adept cards: must be purchased to enter; swap by paying the new card's cost                 | Trades, Wagers, Astral Houses |
 
 ## Alignment Scoring
 
