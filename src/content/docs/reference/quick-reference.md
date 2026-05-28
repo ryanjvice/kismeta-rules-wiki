@@ -49,13 +49,13 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 #### Adept Cards
 
-When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries all three Aspects (Sign, Planet, and Element), contributing them to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck.
+When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries all three Aspects (Sign, Planet, and Element), contributing them to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
 
 #### Fate Cards
 
-The Fates themselves will visit you throughout the course of the game to test your resolve, give gifts, and otherwise shake things up. There are 11 Fate Cards. They are played as soon as they are drawn.
+The Fates themselves will visit you throughout the course of the game to test your resolve, give gifts, and otherwise shake things up. There are 10 Fate Cards. They are played as soon as they are drawn.
 
-| Specialist Cards (11)                                                   | Fate Cards (11)                                |
+| Adept Cards (12)                                                        | Fate Cards (10)                                |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
 | Carries three Aspects; used in Harvest & Alignments                     | No Aspects; effect only                        |
@@ -64,7 +64,7 @@ The Fates themselves will visit you throughout the course of the game to test yo
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Offering to the Age, Cauldron Codex card sets, and other contexts.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Cauldron Codex card sets and other contexts.
 - **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
@@ -83,10 +83,10 @@ You always manage your inventory of Kismeta Cards across three zones.
 |         |                                               |            |          |                              |                                                                                             | Crucible Card activation      |
 |         |                                               |            |          |                              | Opposition contributions (discarded after)                                                  | Alignments                    |
 |         |                                               |            |          |                              |                                                                                             | Trades, Wagers, Astral Houses |
-| ARCANUM | MAJOR ARCANA: Fate & Specialist Cards         | Visible    | Active   | Specialist: Max 2 cards      | Active Major Arcana effects                                                                 | Duels                         |
-|         |                                               |            |          |                              | Specialist Aspects (Harvest & Alignments)                                                   | Crucible Card activation      |
+| ARCANUM | MAJOR ARCANA: Fate & Adept Cards              | Visible    | Active   | Adept: Max 2 cards           | Active Major Arcana effects                                                                 | Duels                         |
+|         |                                               |            |          |                              | Adept Aspects (Harvest & Alignments)                                                        | Crucible Card activation      |
 |         |                                               |            |          | Fate: No limit               | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end | Alignments                    |
-|         |                                               |            |          |                              | Specialist cards: must be purchased to enter; swap by paying the new card's cost            | Trades, Wagers, Astral Houses |
+|         |                                               |            |          |                              | Adept cards: must be purchased to enter; swap by paying the new card's cost                 | Trades, Wagers, Astral Houses |
 
 ## Alignment Scoring
 

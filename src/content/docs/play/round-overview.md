@@ -42,7 +42,7 @@ All players earn a base of 2 Kismeta Cards at the start of every Harvest. You ca
 
 - **Zodiac Die** — Compare your rolled Sign's Aspects (Sign, Planet, Element) against the Cosmic Age. Earn the bonus for the highest match.
 - **Astral Houses** — Each Astral House you've built is checked independently. Multiple Astral Houses each earn their own bonus and stack with all other sources.
-- **Specialist Cards** — Each active Specialist Card in your Arcanum carries three Aspects. Each one is scored independently as a Harvest Source.
+- **Adept Cards** — Each active Adept Card in your Arcanum carries three Aspects. Each one is scored independently as a Harvest Source.
 - **Spread Element Match** — Before the Harvest deal, count the cards already in your Spread whose suit matches the Cosmic Age's Element. Each matching card earns +1 card.
 
 ⚠️ **Important — Highest Aspect Only Per Source:** Each source scores its single highest-matching Aspect. If your Zodiac Die result matches both the Sign and the Planet of the Cosmic Age, the score is **+3**, not +5.
@@ -60,13 +60,13 @@ All players earn a base of 2 Kismeta Cards at the start of every Harvest. You ca
 
 #### Order of Operations
 
-| STEP                      | ACTION                                                                                                                                                                          |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Base Harvest           | All players begin with 2 cards. This is always granted regardless of Alignment.                                                                                                 |
-| 2. Calculate Bonus Cards  | Each player tallies bonus cards from all applicable Harvest Sources using the Bonus Scoring table above. (Zodiac Die + Astral Houses + Specialist Cards + Spread Element Match) |
-| 3. Agekeeper's Boon       | If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally.                                                                       |
-| 4. Deal the Harvest       | The Agekeeper deals each player their full Harvest total face down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered)                                              |
-| 5. Commune with the Cards | Each player arranges their full hand across their Spread, Hand, and Arcanum zones. Consider your goals for the round.                                                           |
+| STEP                      | ACTION                                                                                                                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Base Harvest           | All players begin with 2 cards. This is always granted regardless of Alignment.                                                                                            |
+| 2. Calculate Bonus Cards  | Each player tallies bonus cards from all applicable Harvest Sources using the Bonus Scoring table above. (Zodiac Die + Astral Houses + Adept Cards + Spread Element Match) |
+| 3. Agekeeper's Boon       | If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally.                                                                  |
+| 4. Deal the Harvest       | The Agekeeper deals each player their full Harvest total face down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered)                                         |
+| 5. Commune with the Cards | Each player arranges their full hand across their Spread, Hand, and Arcanum zones. Consider your goals for the round.                                                      |
 
 #### Aspects & Alignment
 
@@ -79,7 +79,7 @@ Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — 
 | Spread: 7 of Cups                               | Element match (Water = Water)                   | +1              |
 | Spread: Knight of Cups                          | Element match (Water = Water)                   | +1              |
 | Astral House: Pisces                            | Element match (Water = Water)                   | +1              |
-| Specialist Card: The High Priestess             | Element match (Moon → Water)                    | +1              |
+| Adept Card: The High Priestess                  | Element match (Moon → Water)                    | +1              |
 | Base Harvest                                    | 2 cards always dealt regardless of Alignment    | +2              |
 | **TOTAL HARVEST**                               |                                                 | **9 cards**     |
 
@@ -109,13 +109,13 @@ The Sun shines brightly as you busy yourself crafting resources and consorting w
 | **Step**                      | **Action**                                                                                                         |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 |                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                            |
-| **1. Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
-| **2. Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
-| **3. Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
+| **1️⃣ Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
+| **2️⃣ Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
+| **3️⃣ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
 |                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                        |
-| **4. Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
-| **5. Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
-| **6. Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
+| **4️⃣ Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
+| **5️⃣ Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
+| **6️⃣ Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
 
 ### 1️⃣ Activate Crucible Cards {#1-activate-crucible-cards}
 
@@ -159,8 +159,6 @@ Reagents are the fuels needed to Fire your Stone. Each Reagent type is crafted b
 #### Crafting Salt 🧂
 
 Salt is the first Reagent players can craft, available from the start of the game. Discard any three cards from your Spread or Hand. You do not need any Cauldrons lit to craft Salt.
-
-📌 **Note:** The Cauldron Catalyst does not apply to Salt. A Catalyst in a Cauldron never grants 2-for-1 Salt.
 
 💡 **Example:** You discard a 4 of Wands, a 9 of Cups, and a King of Pentacles from your Spread. Take 1 Salt from the supply. No Cauldron is needed.
 
@@ -263,12 +261,12 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 
 | **Step**                   | **Action**                                                                                                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **1. Survey the Crucible** | Take note of everyone's current positions in the Crucible.                                                                                                         |
-| **2. Opposition ⚔️**       | Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. |
+| **1️⃣ Survey the Crucible** | Take note of everyone's current positions in the Crucible.                                                                                                         |
+| **2️⃣ Opposition ⚔️**       | Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. |
 |                            | _**CRUCIBLE ACTIONS**_                                                                                                                                             |
-| **3. Fire the Stone**      | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge.                                                    |
-| **4. Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                       |
-| **5. Leave Stasis ❄️**     | Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
+| **3️⃣ Fire the Stone**      | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge.                                                    |
+| **4️⃣ Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                       |
+| **5️⃣ Leave Stasis ❄️**     | Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
 
 ### 1️⃣ Survey the Crucible: Your Stone's Current Position
 
@@ -431,57 +429,20 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 ### Final Actions & Reset
 
-Winter closes the Cosmic Age. Unlock cards, make an optional Offering to the Age or place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.
+Winter closes the Cosmic Age. Unlock cards, place an optional Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.
 
 | **Step**                   | **Action**                                                                         |
 | -------------------------- | ---------------------------------------------------------------------------------- |
-| **1. Card Unlock**         | Move cards freely between your Hand and Spread.                                    |
-| **2. Offering to the Age** | Offer cards matching the Cosmic Age to earn a Bonus next round.                    |
-| **3. Fateful Wager**       | Bet on the next Cosmic Age with cards; double or lose your Wager.                  |
-| **4. Enforce Card Limits** | Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only.                       |
-| **5. Transit the Age**     | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
+| **1️⃣ Card Unlock**         | Move cards freely between your Hand and Spread.                                    |
+| **2️⃣ Fateful Wager**       | Bet on the next Cosmic Age with cards; double or lose your Wager.                  |
+| **3️⃣ Enforce Card Limits** | Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only.                       |
+| **4️⃣ Transit the Age**     | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
 
 ### 1️⃣ Card Unlock: {#1-card-unlock}
 
 Cards are now unlocked. Move cards freely between your Hand and Spread before taking other actions.
 
-### 2️⃣ Offering to the Age {#2-offering-to-the-age}
-
-_(OPTIONAL)_ The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent crafting boost for the full following round.
-
-#### How to Call the Offering:
-
-| ACCEPTING OFFERINGS |                  |
-| ------------------- | ---------------- |
-| **PLAYERS**         | **RP THRESHOLD** |
-| 2 Players           | 25 RP            |
-| 3 Players           | 35 RP            |
-| 4 Players           | 45 RP            |
-
-- **Return Cauldron Catalysts:** Any Catalysts currently held by players return to the Altar of Kismeta.
-- **Declare contributions:** Going clockwise, each player openly declares how many cards they are offering. Players may negotiate freely.
-- **Check eligibility:** A card is eligible if it shares at least one Aspect with the current Cosmic Age — a Sign, Planet, or Element/Suit match. Rank Points are determined by the card's Rank. Major Arcana cards in the Arcanum are not eligible.
-- **Pool the Rank Points:** Total the combined RP of all contributed cards across all players.
-- **Compare to the Threshold:** Check the table below for the required combined RP based on player count.
-
-⚠️ **Important:** There is no partial success. If the combined RP does not meet the Threshold, no player earns the reward — regardless of individual contribution.
-
-#### The Reward: Cauldron Catalyst
-
-A Cauldron Catalyst grants 2-for-1 Reagent refining for the Cauldron it is placed in, for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time.
-
-| OFFERING RESULTS  |                                                                                                                                                   |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **RESULT**        | **OUTCOME**                                                                                                                                       |
-| Threshold Met     | Each contributing player takes a Cauldron Catalyst from the Altar and places it in the Cauldron of their choice. Contributed cards are discarded. |
-| Threshold Not Met | No Catalysts are awarded. All Cauldron Catalysts remain on the Altar. Cards stay with their owners.                                               |
-
-<div class="game-mode-callout" data-modes="magnus">
-_⚙️ **Game Mode Modifier (Magnus Alchemist):** The Cauldron Catalyst must be placed in the Cauldron that matches the Element of the concluded Cosmic Age._
-
-</div>
-
-### 3️⃣ Fateful Wager {#3-fateful-wager}
+### 2️⃣ Fateful Wager {#2-fateful-wager}
 
 _(OPTIONAL)_ Before the round ends, any player may wager cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly, and your wager is doubled. Guess wrong, and it is lost to the Fates.
 
@@ -498,7 +459,7 @@ _(OPTIONAL)_ Before the round ends, any player may wager cards on a prediction: 
 | Correct: Sign matches          | Your wagered cards are doubled and returned to you. |
 | Incorrect: Sign does not match | Your wagered cards are lost to the Fates.           |
 
-### 4️⃣ Enforce Card Limits & Reset {#4-enforce-card-limits--reset}
+### 3️⃣ Enforce Card Limits & Reset {#3-enforce-card-limits--reset}
 
 Before passing the Agekeeper's Key, enforce card limits and prepare the board for the next Age.
 
@@ -511,7 +472,7 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | Hand        | 5 cards          | Discard excess cards of your choice down to 5.                                       |
 | Arcanum     | Adept cards only | All Fate Major Arcana cards must be returned to the Common Deck. Adept cards remain. |
 
-### 5️⃣ Transit the Age: {#5-transit-the-age}
+### 4️⃣ Transit the Age: {#4-transit-the-age}
 
 - **Shuffle the Common Deck:** The Agekeeper collects all discarded Kismeta Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
 - **Pass the Agekeeper's Key:** The Agekeeper passes the Key clockwise to the next player, who becomes the new Agekeeper.

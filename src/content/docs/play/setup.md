@@ -19,7 +19,7 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
 
 Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.
 
-- **4 Astral House Tokens:** Tokens with 🏰 symbol; Keep these nearby.
+- **3 Astral House Tokens:** Tokens with 🏰 symbol; Keep these nearby.
 - **1 Cauldron Codex:** Dual-sided card; Cauldron Codex & Quick Reference Guide on reverse.
 - **4 Embers:** Small black crystal pieces; Keep these nearby.
 - **1 Meeple:** Wooden game piece; Keep this nearby.

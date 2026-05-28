@@ -35,7 +35,7 @@
 						"id": "craft-reagent",
 						"label": "Craft Reagent",
 						"kind": "optional",
-						"body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. <strong>Salt:</strong> Discard any 3 cards — no Cauldron needed. Cauldron Catalyst does not apply to Salt.",
+						"body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. <strong>Salt:</strong> Discard any 3 cards — no Cauldron needed.",
 						"learnMoreHash": "3-craft-reagents"
 					}
 				]

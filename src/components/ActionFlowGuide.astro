@@ -56,7 +56,6 @@ const labels = {
 	autumnOppositionPrompt: t('flow.autumnOppositionPrompt'),
 	autumnTemperPrompt: t('flow.autumnTemperPrompt'),
 	autumnFirePrompt: t('flow.autumnFirePrompt'),
-	winterOfferingPrompt: t('flow.winterOfferingPrompt'),
 	winterWagerPrompt: t('flow.winterWagerPrompt'),
 };
 
@@ -89,7 +88,6 @@ const fireNode = autumnPass2?.children?.find((n) => n.id === 'fire') ?? null;
 // Winter: extract the specific step nodes used in wizard panels
 const winterChildren = isWinter ? (flow.root.children ?? []) : [];
 const unlockNode = winterChildren.find((n) => n.id === 'unlock') ?? null;
-const offeringNode = winterChildren.find((n) => n.id === 'offering') ?? null;
 const wagerNode = winterChildren.find((n) => n.id === 'wager') ?? null;
 const limitsNode = winterChildren.find((n) => n.id === 'limits') ?? null;
 const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
@@ -398,42 +396,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Offering — optional gate */}
-					{offeringNode && (
-						<div
-							class="action-flow__wizard-panel"
-							data-wizard-panel="winter-offering-gate"
-							data-wizard-panel-type="gate"
-							data-learn-hash={offeringNode.learnMoreHash ?? ''}
-							hidden
-						>
-							<div class="action-flow__wizard-step-head">
-								<span class="action-flow__badge action-flow__badge--optional">{labels.optional}</span>
-								<span class="action-flow__wizard-step-label">
-									{localize(offeringNode.label, contentLocale)}
-								</span>
-							</div>
-							<p class="action-flow__wizard-gate-prompt">{labels.winterOfferingPrompt}</p>
-							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
-								{offeringNode.body && (
-									<p class="action-flow__wizard-step-body">
-										{localize(offeringNode.body, contentLocale)}
-									</p>
-								)}
-								{offeringNode.learnMoreHash && (
-									<a
-										class="action-flow__learn-more"
-										href={`${roundOverviewUrl}#${offeringNode.learnMoreHash}`}
-										target="_blank"
-										rel="noopener"
-									>
-										{labels.readMore}
-									</a>
-								)}
-							</div>
-						</div>
-					)}
-
 					{/* Panel: Fateful Wager — optional gate */}
 					{wagerNode && (
 						<div
@@ -619,7 +581,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 
 	const WINTER_SEQUENCE = [
 		'winter-unlock',
-		'winter-offering-gate',
 		'winter-wager-gate',
 		'winter-limits',
 		'winter-reset',

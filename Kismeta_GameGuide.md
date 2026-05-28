@@ -77,13 +77,12 @@ Kismeta: Alchemists of the Great Year is a strategic card-and-dice game where yo
 
 - **4 Philosopher's Stones** (1 per player)
 - **4 Meeples** (1 per player; marks your current Zodiac Sign on the board)
-- **16 Astral House Tokens** (4 per player; 🏰 symbol)
-- **1 Cauldron Catalyst** per player (4 total)
+- **12 Astral House Tokens** (3 per player; 🏰 symbol)
 
 **Tokens & Resources**
 
-- **Reagent Tokens** (circle punchouts):
-  🔴 Sulphur (Red) | 🟡 Quicksilver (Yellow) | 🔵 Aqua Regia (Blue) | 🟢 Vitriol (Green) | ⬜ Salt (White)
+- **Reagent Tokens** (128 circle punchout chips):
+  🔴 Sulphur (Red) — 25 | 🟡 Quicksilver (Yellow) — 25 | 🔵 Aqua Regia (Blue) — 25 | 🟢 Vitriol (Green) — 25 | ⬜ Salt (White) — 28
 - **16 Embers** (4 per player; small black crystal pieces)
 - **1 Agekeeper's Key** (black pawn)
 
@@ -130,7 +129,7 @@ The Magnus Alchemista Grandis Illuminatus ex Kismeta!
 
 Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.
 
-- **4 Astral House Tokens:** Tokens with 🏰 symbol; Keep these nearby.
+- **3 Astral House Tokens:** Tokens with 🏰 symbol; Keep these nearby.
 - **1 Cauldron Codex:** Dual-sided card; Cauldron Codex & Quick Reference Guide on reverse.
 - **4 Embers:** Small black crystal pieces; Keep these nearby.
 - **1 Meeple:** Wooden game piece; Keep this nearby.
@@ -266,10 +265,9 @@ Each Cosmic Age (round) moves through four seasons in order: Spring, Summer, Aut
 |                                                             |  **4**   | **Temper:** (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                              |
 |                                                             |  **5**   | **Leave Stasis ❄️:** Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                    |
 | ⛰️ **WINTER** Final Actions of the Cosmic Age & Reset Board |  **1**   | **Card Unlock:** Move cards freely between your Hand and Spread.                                                                                                                      |
-|                                                             |  **2**   | **Offering to the Age:** Offer cards matching the Cosmic Age to earn a Bonus next round.                                                                                              |
-|                                                             |  **3**   | **Fateful Wager:** Bet on the next Cosmic Age with cards; double or lose your Wager.                                                                                                  |
-|                                                             |  **4**   | **Enforce Card Limits:** Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only.                                                                                                 |
-|                                                             |  **5**   | **Transit the Age:** Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round.                                                                                   |
+|                                                             |  **2**   | **Fateful Wager:** Bet on the next Cosmic Age with cards; double or lose your Wager.                                                                                                  |
+|                                                             |  **3**   | **Enforce Card Limits:** Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only.                                                                                                 |
+|                                                             |  **4**   | **Transit the Age:** Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round.                                                                                   |
 
 📌 _Return to this table during play as a quick reference._
 
@@ -380,13 +378,13 @@ The Sun shines brightly as you busy yourself crafting resources and consorting w
 | **Step**                      | **Action**                                                                                                         |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 |                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                            |
-| **1. Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
-| **2. Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
-| **3. Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
+| **1️⃣ Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
+| **2️⃣ Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
+| **3️⃣ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
 |                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                        |
-| **4. Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
-| **5. Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
-| **6. Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
+| **4️⃣ Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
+| **5️⃣ Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
+| **6️⃣ Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
 
 ### 1️⃣ Activate Crucible Cards
 
@@ -427,8 +425,6 @@ Reagents are the fuels needed to Fire your Stone. Each Reagent type is crafted b
 #### Crafting Salt 🧂
 
 Salt is the first Reagent players can craft, available from the start of the game. Discard any three cards from your Spread or Hand. You do not need any Cauldrons lit to craft Salt.
-
-📌 **Note:** The Cauldron Catalyst does not apply to Salt. A Catalyst in a Cauldron never grants 2-for-1 Salt.
 
 💡 **Example:** You discard a 4 of Wands, a 9 of Cups, and a King of Pentacles from your Spread. Take 1 Salt from the supply. No Cauldron is needed.
 
@@ -520,12 +516,12 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 
 | **Step**                   | **Action**                                                                                                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **1. Survey the Crucible** | Take note of everyone's current positions in the Crucible.                                                                                                         |
-| **2. Opposition ⚔️**       | Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. |
+| **1️⃣ Survey the Crucible** | Take note of everyone's current positions in the Crucible.                                                                                                         |
+| **2️⃣ Opposition ⚔️**       | Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. |
 |                            | _**CRUCIBLE ACTIONS**_                                                                                                                                             |
-| **3. Fire the Stone**      | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge.                                                    |
-| **4. Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                       |
-| **5. Leave Stasis ❄️**     | Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
+| **3️⃣ Fire the Stone**      | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge.                                                    |
+| **4️⃣ Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                       |
+| **5️⃣ Leave Stasis ❄️**     | Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
 
 ### 1️⃣ Survey the Crucible: Your Stone's Current Position
 
@@ -686,54 +682,20 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 ### Final Actions & Reset
 
-Winter closes the Cosmic Age. Unlock cards, make an optional Offering to the Age or place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.
+Winter closes the Cosmic Age. Unlock cards, place an optional Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.
 
 | **Step**                   | **Action**                                                                         |
 | -------------------------- | ---------------------------------------------------------------------------------- |
-| **1. Card Unlock**         | Move cards freely between your Hand and Spread.                                    |
-| **2. Offering to the Age** | Offer cards matching the Cosmic Age to earn a Bonus next round.                    |
-| **3. Fateful Wager**       | Bet on the next Cosmic Age with cards; double or lose your Wager.                  |
-| **4. Enforce Card Limits** | Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only.                       |
-| **5. Transit the Age**     | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
+| **1️⃣ Card Unlock**         | Move cards freely between your Hand and Spread.                                    |
+| **2️⃣ Fateful Wager**       | Bet on the next Cosmic Age with cards; double or lose your Wager.                  |
+| **3️⃣ Enforce Card Limits** | Spread 7 cards \| Hand 5 cards \| Arcanum: Adept cards only.                       |
+| **4️⃣ Transit the Age**     | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
 
 ### 1️⃣ Card Unlock:
 
 Cards are now unlocked. Move cards freely between your Hand and Spread before taking other actions.
 
-### 2️⃣ Offering to the Age
-
-_(OPTIONAL)_ The Agekeeper convenes all Alchemists to make a collective Offering to the concluding Cosmic Age. If the group's combined contribution reaches the RP Threshold, every contributing player earns a Cauldron Catalyst — a 2-for-1 Reagent crafting boost for the full following round.
-
-#### How to Call the Offering:
-
-| ACCEPTING OFFERINGS |                  |
-| ------------------- | ---------------- |
-| **PLAYERS**         | **RP THRESHOLD** |
-| 2 Players           | 25 RP            |
-| 3 Players           | 35 RP            |
-| 4 Players           | 45 RP            |
-
-- **Return Cauldron Catalysts:** Any Catalysts currently held by players return to the Altar of Kismeta.
-- **Declare contributions:** Going clockwise, each player openly declares how many cards they are offering. Players may negotiate freely.
-- **Check eligibility:** A card is eligible if it shares at least one Aspect with the current Cosmic Age — a Sign, Planet, or Element/Suit match. Rank Points are determined by the card's Rank. Major Arcana cards in the Arcanum are not eligible.
-- **Pool the Rank Points:** Total the combined RP of all contributed cards across all players.
-- **Compare to the Threshold:** Check the table below for the required combined RP based on player count.
-
-⚠️ **Important:** There is no partial success. If the combined RP does not meet the Threshold, no player earns the reward — regardless of individual contribution.
-
-#### The Reward: Cauldron Catalyst
-
-A Cauldron Catalyst grants 2-for-1 Reagent refining for the Cauldron it is placed in, for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time.
-
-| OFFERING RESULTS  |                                                                                                                                                   |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **RESULT**        | **OUTCOME**                                                                                                                                       |
-| Threshold Met     | Each contributing player takes a Cauldron Catalyst from the Altar and places it in the Cauldron of their choice. Contributed cards are discarded. |
-| Threshold Not Met | No Catalysts are awarded. All Cauldron Catalysts remain on the Altar. Cards stay with their owners.                                               |
-
-_⚙️ **Game Mode Modifier (Magnus Alchemist):** The Cauldron Catalyst must be placed in the Cauldron that matches the Element of the concluded Cosmic Age._
-
-### 3️⃣ Fateful Wager
+### 2️⃣ Fateful Wager
 
 _(OPTIONAL)_ Before the round ends, any player may wager cards on a prediction: which Zodiac Sign will rule the next Cosmic Age. Guess correctly, and your wager is doubled. Guess wrong, and it is lost to the Fates.
 
@@ -750,7 +712,7 @@ _(OPTIONAL)_ Before the round ends, any player may wager cards on a prediction: 
 | Correct: Sign matches          | Your wagered cards are doubled and returned to you. |
 | Incorrect: Sign does not match | Your wagered cards are lost to the Fates.           |
 
-### 4️⃣ Enforce Card Limits & Reset
+### 3️⃣ Enforce Card Limits & Reset
 
 Before passing the Agekeeper's Key, enforce card limits and prepare the board for the next Age.
 
@@ -763,7 +725,7 @@ Before passing the Agekeeper's Key, enforce card limits and prepare the board fo
 | Hand        | 5 cards          | Discard excess cards of your choice down to 5.                                       |
 | Arcanum     | Adept cards only | All Fate Major Arcana cards must be returned to the Common Deck. Adept cards remain. |
 
-### 5️⃣ Transit the Age:
+### 4️⃣ Transit the Age:
 
 - **Shuffle the Common Deck:** The Agekeeper collects all discarded Kismeta Cards and shuffles them into the deck. Tap it twice to cleanse it for the new Age.
 - **Pass the Agekeeper's Key:** The Agekeeper passes the Key clockwise to the next player, who becomes the new Agekeeper.
@@ -799,8 +761,6 @@ Keep these principles in mind as you find your footing across the first few roun
 6. **Adept Cards Synergies:** Your Arcanum has two Adept slots that, as a pair, permanently add their Sign, Planet, and Element to all calculations. A strong pair spans multiple Aspect types, preserving bonuses even as the Cosmic Age shifts. When a new Adept appears, consider how it complements your existing one. Overlapping Aspects with your Astral Houses create a strong Alignment advantage that rivals can't disrupt.
 
 7. **Protect Your Progress with Wards:** Setting even 1–2 Reagents as Ward Reagents when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card's requirements.
-
-8. **The Offering Rewards Everyone:** The Offering to the Age is a shared opportunity. Even rivals benefit from a successful Offering. If the Threshold looks reachable, contribute cards and nudge others to do the same — the 2-for-1 Crafting bonus is worth the cooperation.
 
 ---
 
@@ -885,7 +845,7 @@ The Fates themselves will visit you throughout the course of the game to test yo
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Offering to the Age, Cauldron Codex card sets, and other contexts.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Cauldron Codex card sets and other contexts.
 - **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
@@ -994,7 +954,6 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Besieged Bonus**        | An automatic bonus that's awarded to a Defender who wins an Opposition. Each successive win against different Challengers in the same round grants the Defender +1 cumulative Alignment Points for all further Oppositions that round.                                                                                                                                                                                          |
 | **Card Sets**             | Groups of cards organized by Rank and Suit, following poker-hand conventions (pairs, three of a kind, straights, flushes, and so on). Assembled in a player's Spread to satisfy Alchemical Formulas on Crucible Cards.                                                                                                                                                                                                          |
 | **Cauldron**              | One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by an Ember. See the Correspondence table.                                                                                                                                                                                        |
-| **Cauldron Catalyst**     | A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent refining in the Cauldron it is placed in for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time.                                                                                                                               |
 | **Correspondence**        | The fixed relationship between an Element, Card Suit, Reagent, Cauldron, and Color governing the four elemental Reagents. Salt is not part of the Correspondence system — it carries no Element, Suit, or Cauldron. See the Correspondence table in the Appendix.                                                                                                                                                               |
 | **Cosmic Age**            | One complete round of play, defined by the Zodiac Sign rolled by the Agekeeper in Spring. Its three Aspects govern Harvest bonuses, Alignment scoring, and the active Cosmic Effect for that round.                                                                                                                                                                                                                             |
 | **Cosmic Effect**         | Each Sign's Cosmic Effect operates on two levels. The Cosmic Age Effect, set by the Agekeeper's roll, applies to all players for the entire round. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If a player's Sign matches the Cosmic Age, the effect is simply active — it does not apply twice. See the Cosmic Ages & Effects table in the Reference Appendix. |
@@ -1013,15 +972,14 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Mantle Ring**           | The four safe positions (0, 2, 4, 6) on the Transmutation Path between Forge stages. A Stone resting on the Mantle Ring cannot be targeted by Opposition.                                                                                                                                                                                                                                                                       |
 | **Minor Arcana**          | The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers.                                                                                                                                                  |
 | **Ember**                 | A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Ember is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Embers cannot be moved once placed.                                                                                                                         |
-| **Offering to the Age**   | A collective Winter action in which players contribute Aligned cards toward a shared Rank Point Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round.                                                                                                                                                                                                             |
 | **Opposition**            | An Alignment contest declared in Phase 3: Autumn against a rival whose Stone is currently Forging. Alignment Points are compared; a Challenger victory sends the Defender's Stone to Stasis.                                                                                                                                                                                                                                    |
 | **Opposition Age**        | The Cosmic Age Sign in effect at the moment an Opposition is declared. All Alignment Points in that contest are scored against this Sign's Aspects.                                                                                                                                                                                                                                                                             |
 | **Philosopher's Stone**   | Each player's primary game piece, representing the material being transformed through the Great Work. Begins at position 0 (Mantle Ring) on the Transmutation Path and must reach the Altar of Kismeta (position 8) to win. May be Forging, Tempering, or in Stasis at any given time.                                                                                                                                          |
 | **Ward Reagent**          | A Reagent placed on the 🛡️ symbol beside a Forging Stone or Active Crucible Card. Sets the entry fee any Challenger must pay before declaring Opposition or a Gambit against that position. Challengers pay a number of Reagents equal to the Ward — of any type or combination. Type-matching is not required. Salt may be used as a Ward Reagent.                                                                             |
-| **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Offering to the Age and Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                             |
-| **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used for the Offering to the Age, Cauldron Codex card sets, and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                 |
+| **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                     |
+| **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used for the Cauldron Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                                       |
 | **Reagent**               | A Crafted resource token used to Fire the Philosopher's Stone and to set Ward Reagents. There are five types: Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), Quicksilver (Yellow), and Salt (White). The four elemental Reagents are crafted by discarding 3 matching-Suit cards into a lit Cauldron. Salt is crafted by discarding any 3 Kismeta Cards with no Cauldron required. See Correspondence and Crafting Salt.    |
-| **Salt**                  | A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. The Cauldron Catalyst never applies to Salt. Transfers between players via Trade only.    |
+| **Salt**                  | A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. Transfers between players via Trade only.                                                 |
 | **Spread**                | One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end.                                                                                                                    |
 | **Stasis**                | The frozen state of a Philosopher's Stone after losing an Opposition. A Stone in Stasis cannot Temper or take Stone actions until the following Autumn, when it may attempt to return to the Forge.                                                                                                                                                                                                                             |
 | **Suit**                  | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when crafting Reagents or fulfilling certain Alchemical Formula requirements.                                                                                                                           |

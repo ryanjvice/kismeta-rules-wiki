@@ -18,5 +18,3 @@ Keep these principles in mind as you find your footing across the first few roun
 6. **Adept Cards Synergies:** Your Arcanum has two Adept slots that, as a pair, permanently add their Sign, Planet, and Element to all calculations. A strong pair spans multiple Aspect types, preserving bonuses even as the Cosmic Age shifts. When a new Adept appears, consider how it complements your existing one. Overlapping Aspects with your Astral Houses create a strong Alignment advantage that rivals can't disrupt.
 
 7. **Protect Your Progress with Wards:** Setting even 1–2 Reagents as Ward Reagents when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card's requirements.
-
-8. **The Offering Rewards Everyone:** The Offering to the Age is a shared opportunity. Even rivals benefit from a successful Offering. If the Threshold looks reachable, contribute cards and nudge others to do the same — the 2-for-1 Crafting bonus is worth the cooperation.

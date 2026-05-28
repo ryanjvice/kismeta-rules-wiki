@@ -96,7 +96,6 @@ export const collections = {
 				'flow.autumnOppositionPrompt': z.string(),
 				'flow.autumnTemperPrompt': z.string(),
 				'flow.autumnFirePrompt': z.string(),
-			'flow.winterOfferingPrompt': z.string(),
 			'flow.winterWagerPrompt': z.string(),
 			'a11y.menuLabel': z.string(),
 			'a11y.themeLabel': z.string(),

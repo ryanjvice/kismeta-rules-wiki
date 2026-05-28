@@ -46,8 +46,9 @@ const GUIDED_STEPS: GuidedStep[] = [
       "134 Kismeta Cards (blue) and 22 Crucible Cards (red)",
       "4 Cauldron Codex cards (one per player)",
       "1 Cosmic Age Die (black) and 4 Zodiac Dice (player colors)",
-      "Per player: Philosopher's Stone, Meeple, 4 Astral House tokens, Cauldron Catalyst, 4 Embers",
-      "Reagent tokens (Sulphur, Quicksilver, Aqua Regia, Vitriol, Salt) and 1 Agekeeper's Key",
+      "Per player: Philosopher's Stone, Meeple, 3 Astral House tokens, 4 Embers",
+      "Reagent tokens (Sulphur, Quicksilver, Aqua Regia, Vitriol, Salt)",
+      "1 Agekeeper's Key",
     ],
     learnMorePath: "learn/components",
   },
@@ -76,7 +77,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phaseTotal: 7,
     body: "<p>Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.</p>",
     checklist: [
-      "4 Astral House tokens (🏰)",
+      "3 Astral House tokens (🏰)",
       "1 Cauldron Codex (dual-sided)",
       "4 Embers",
       "1 Meeple",
@@ -197,7 +198,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 3,
     phaseTotal: 5,
-    body: '<p>All players begin with 2 Kismeta Cards as a gift from the Age. Earn Bonus Cards by aligning your inventory with the Cosmic Age\'s Aspects. Each player calculates their own total first; the Agekeeper then deals the full Harvest.</p><ol class="game-table__steps"><li class="game-table__step"><span class="game-table__step-label">Base Harvest</span><p class="game-table__step-body">All players begin with 2 Kismeta Cards. This is always granted regardless of Alignment.</p></li><li class="game-table__step"><span class="game-table__step-label">Calculate Bonus Cards</span><p class="game-table__step-body">Each player tallies bonus cards from all Harvest Sources: Zodiac Die, Astral Houses, Specialist Cards, and Spread Element Match. Each source scores its single highest-matching Aspect.</p></li><li class="game-table__step"><span class="game-table__step-label">Agekeeper\'s Boon</span><p class="game-table__step-body">If the Agekeeper\'s rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player\'s tally.</p></li><li class="game-table__step"><span class="game-table__step-label">Deal the Harvest</span><p class="game-table__step-body">The Agekeeper deals each player their full Harvest total face-down, one at a time.</p></li></ol><div class="doc-table"><table><thead><tr><th>Bonus Source</th><th>How It Scores</th></tr></thead><tbody><tr><td>Zodiac Die</td><td>Compare your rolled Sign\'s Aspects against the Cosmic Age — score the highest match</td></tr><tr><td>Astral Houses</td><td>Each House is scored independently and stacks with all other sources</td></tr><tr><td>Specialist Cards</td><td>Each active Specialist in your Arcanum is scored independently</td></tr><tr><td>Spread Element Match</td><td>Each Spread card whose suit matches the Cosmic Age Element earns +1</td></tr></tbody></table></div><div class="doc-table"><table><thead><tr><th>Aspect Match</th><th>Bonus Cards</th></tr></thead><tbody><tr><td>Sign</td><td>+3</td></tr><tr><td>Planet</td><td>+2</td></tr><tr><td>Element</td><td>+1</td></tr><tr><td>No Match</td><td>+0</td></tr></tbody></table></div><p><em>Each source scores its single highest-matching Aspect only — do not stack.</em></p>',
+    body: '<p>All players begin with 2 Kismeta Cards as a gift from the Age. Earn Bonus Cards by aligning your inventory with the Cosmic Age\'s Aspects. Each player calculates their own total first; the Agekeeper then deals the full Harvest.</p><ol class="game-table__steps"><li class="game-table__step"><span class="game-table__step-label">Base Harvest</span><p class="game-table__step-body">All players begin with 2 Kismeta Cards. This is always granted regardless of Alignment.</p></li><li class="game-table__step"><span class="game-table__step-label">Calculate Bonus Cards</span><p class="game-table__step-body">Each player tallies bonus cards from all Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Element Match. Each source scores its single highest-matching Aspect.</p></li><li class="game-table__step"><span class="game-table__step-label">Agekeeper\'s Boon</span><p class="game-table__step-body">If the Agekeeper\'s rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player\'s tally.</p></li><li class="game-table__step"><span class="game-table__step-label">Deal the Harvest</span><p class="game-table__step-body">The Agekeeper deals each player their full Harvest total face-down, one at a time.</p></li></ol><div class="doc-table"><table><thead><tr><th>Bonus Source</th><th>How It Scores</th></tr></thead><tbody><tr><td>Zodiac Die</td><td>Compare your rolled Sign\'s Aspects against the Cosmic Age — score the highest match</td></tr><tr><td>Astral Houses</td><td>Each House is scored independently and stacks with all other sources</td></tr><tr><td>Specialist Cards</td><td>Each active Specialist in your Arcanum is scored independently</td></tr><tr><td>Spread Element Match</td><td>Each Spread card whose suit matches the Cosmic Age Element earns +1</td></tr></tbody></table></div><div class="doc-table"><table><thead><tr><th>Aspect Match</th><th>Bonus Cards</th></tr></thead><tbody><tr><td>Sign</td><td>+3</td></tr><tr><td>Planet</td><td>+2</td></tr><tr><td>Element</td><td>+1</td></tr><tr><td>No Match</td><td>+0</td></tr></tbody></table></div><p><em>Each source scores its single highest-matching Aspect only — do not stack.</em></p>',
     learnMorePath: "play/round-overview",
     learnMoreHash: "3-harvest-kismeta-cards",
   },
@@ -253,7 +254,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "winter",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>Winter closes the Cosmic Age. Unlock cards, make an optional Offering to the Age or place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.</p>",
+    body: "<p>Winter closes the Cosmic Age. Unlock cards, place an optional Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.</p>",
     embed: "winter-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-4-winter",
@@ -286,7 +287,7 @@ export const GUIDED_CONTENT_STEP_COUNT = GUIDED_STEPS.length - 1;
 
 export const GAME_MODE_STORAGE_KEY = "kismeta-game-modes";
 export const GUIDED_PROGRESS_KEY = "kismeta-guided-progress";
-export const GUIDED_PROGRESS_VERSION = 2;
+export const GUIDED_PROGRESS_VERSION = 3;
 
 export function gameModeToStorage(mode: GameMode): {
   quickplay: boolean;

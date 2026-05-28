@@ -52,10 +52,6 @@
     "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by an Ember. See the Correspondence table."
   },
   {
-    "term": "Cauldron Catalyst",
-    "definition": "A bonus token earned from a successful Offering to the Age. Grants 2-for-1 Reagent refining in the Cauldron it is placed in for the full following round. When you craft a Reagent by paying the normal cost, you receive 2 instead of 1. Only one Catalyst may be active per Cauldron at a time."
-  },
-  {
     "term": "Cauldron Codex",
     "definition": "A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance."
   },
@@ -128,10 +124,6 @@
     "definition": "The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers."
   },
   {
-    "term": "Offering to the Age",
-    "definition": "A collective Winter action in which players contribute Aligned cards toward a shared Rank Point Threshold. If the Threshold is met, every contributing player receives a Cauldron Catalyst for the following round."
-  },
-  {
     "term": "Opposition",
     "definition": "An Alignment contest declared in Phase 3: Autumn against a rival whose Stone is currently Forging. Alignment Points are compared; a Challenger victory sends the Defender's Stone to Stasis."
   },
@@ -145,11 +137,11 @@
   },
   {
     "term": "Rank",
-    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Offering to the Age and Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Rank Points (RP)",
-    "definition": "The numerical value of a card based on its Rank. Used for the Offering to the Age, Cauldron Codex card sets, and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical value of a card based on its Rank. Used for the Cauldron Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Reagent",
@@ -157,7 +149,7 @@
   },
   {
     "term": "Salt",
-    "definition": "A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. The Cauldron Catalyst never applies to Salt. Transfers between players via Trade only."
+    "definition": "A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. Transfers between players via Trade only."
   },
   {
     "term": "Spread",
