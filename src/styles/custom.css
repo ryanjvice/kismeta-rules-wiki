@@ -301,6 +301,30 @@ main:has(.kismeta-lore) h1#_top,
   background: var(--sl-color-accent);
 }
 
+/* ── Game-branded header button borders ──────────────────────────────────── */
+/* Both the search button and the accessibility trigger get the same
+   semi-transparent gold border used on panels and the home card. */
+
+/* Search — mobile default (icon-only, no border in Starlight's UA).
+   Our unlayered CSS overrides Starlight's @layer starlight.core rules. */
+site-search button[data-open-modal] {
+  border: 1px solid color-mix(in srgb, var(--kismeta-gold) 35%, transparent);
+  border-radius: 0.5rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+site-search button[data-open-modal]:hover {
+  border-color: color-mix(in srgb, var(--kismeta-gold) 75%, transparent);
+  color: var(--sl-color-white);
+}
+
+/* Search — desktop expanded bar: keep the dark bg but add a purple tint */
+@media (min-width: 50rem) {
+  site-search button[data-open-modal] {
+    background-color: color-mix(in srgb, var(--kismeta-purple-mid) 30%, var(--sl-color-black));
+  }
+}
+
 /* ── Accessibility settings menu ─────────────────────────────────────────── */
 
 /* Trigger button — lives in Starlight's .right-group flex row */
@@ -318,8 +342,8 @@ main:has(.kismeta-lore) h1#_top,
   height: 2rem;
   padding: 0;
   background: none;
-  border: 1px solid transparent;
-  border-radius: 0.375rem;
+  border: 1px solid color-mix(in srgb, var(--kismeta-gold) 35%, transparent);
+  border-radius: 0.5rem;
   color: var(--sl-color-gray-1);
   cursor: pointer;
   transition:
@@ -329,7 +353,8 @@ main:has(.kismeta-lore) h1#_top,
 }
 
 .a11y-menu__trigger:hover {
-  background: color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+  background: color-mix(in srgb, var(--kismeta-gold) 10%, transparent);
+  border-color: color-mix(in srgb, var(--kismeta-gold) 75%, transparent);
   color: var(--sl-color-accent-high);
 }
 

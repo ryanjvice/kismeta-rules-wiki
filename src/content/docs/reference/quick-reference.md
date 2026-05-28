@@ -7,19 +7,19 @@ description: "Cosmic Ages, elements, inventory zones, alignment, reagents, and C
 
 Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect applies to all players. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If your rolled Sign matches the Cosmic Age, the effect is simply active. It doesn't apply twice.
 
-| 🛞          | SIGN        | PLANET(S)  | ELEMENT | EFFECT                                    |
-| ----------- | ----------- | ---------- | ------- | ----------------------------------------- |
-| COSMIC AGES | Aries       | Mars       | Fire    | +1 Base Harvest Card each round           |
-|             | Taurus      | Venus      | Earth   | Court Cards of Pentacles are a Wild Suit. |
+| 🛞          | SIGN        | PLANET(S)  | ELEMENT | EFFECT                                                        |
+| ----------- | ----------- | ---------- | ------- | ------------------------------------------------------------- |
+| COSMIC AGES | Aries       | Mars       | Fire    | Add +2 cards to Harvest in Fire Signs                         |
+|             | Taurus      | Venus      | Earth   | Add +1 to all Earth Alignments                                |
 |             | Gemini      | Mercury    | Air     | Craft Quicksilver with 2 Swords cards (Cauldron must be lit). |
-|             | Cancer      | Sun /Moon  | Water   | +1 Base Harvest Card each round           |
-|             | Leo         | Sun / Moon | Fire    | Court Cards of Wands are a Wild Suit.     |
+|             | Cancer      | Sun /Moon  | Water   | Add +2 Cards to Harvest in Water Signs                        |
+|             | Leo         | Sun / Moon | Fire    | Add +1 to all Fire Alignments                                 |
 |             | Virgo       | Mercury    | Earth   | Craft Vitriol with 2 Pentacles cards (Cauldron must be lit).  |
-|             | Libra       | Venus      | Air     | +1 Base Harvest Card each round           |
-|             | Scorpio     | Mars       | Water   | Court Cards of Cups are a Wild Suit.      |
+|             | Libra       | Venus      | Air     | Add +2 Cards to Harvest in Air Signs                          |
+|             | Scorpio     | Mars       | Water   | Add +1 to all Water Alignments                                |
 |             | Sagittarius | Jupiter    | Fire    | Craft Sulphur with 2 Wands cards (Cauldron must be lit).      |
-|             | Capricorn   | Saturn     | Earth   | +1 Base Harvest Card each round           |
-|             | Aquarius    | Saturn     | Air     | Court Cards of Swords are a Wild Suit.    |
+|             | Capricorn   | Saturn     | Earth   | Add +2 Cards to Harvest in Earth Signs                        |
+|             | Aquarius    | Saturn     | Air     | Add +1 to all Air Alignments                                  |
 |             | Pisces      | Jupiter    | Water   | Craft Aqua Regia with 2 Cups cards (Cauldron must be lit).    |
 
 ## Correspondence
@@ -32,7 +32,7 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 | 🟢 Green                                                          | Earth       | 🪙 Pentacles  | Vitriol     | Green        |
 | 🟡 Yellow                                                         | Air         | ⚔️ Swords     | Quicksilver | Yellow       |
 
-🧂 **Salt** does not appear in the Correspondence table. It carries no Element, Suit, or Cauldron. Craft Salt by discarding any 3 Kismeta Cards — no Cauldron required. See *Crafting Salt*.
+🧂 **Salt Reagent** carries no Element, Suit, or Cauldron. Craft Salt by discarding any 3 Kismeta Cards — no Cauldron required. See _Crafting Salt_.
 
 ## Kismeta Cards
 
@@ -111,12 +111,14 @@ You always manage your inventory of Kismeta Cards across three zones.
 
 **Cost:** 3 matching-Suit cards matching the color of the Reagent you wish to craft. The matching Cauldron must be lit before you can craft the corresponding Reagent.
 
-| CAULDRON       | REAGENT     | SUIT          | UNLOCK                      |
-| -------------- | ----------- | ------------- | --------------------------- |
-| 🔴 Red         | Sulphur     | 🪄 Wands      | Place Ember in Red Cauldron  |
-| 🔵 Blue        | Aqua Regia  | 🍷 Cups       | Place Ember in Blue Cauldron |
-| 🟢 Green       | Vitriol     | 🪙 Pentacles  | Place Ember in Green Cauldron|
-| 🟡 Yellow      | Quicksilver | ⚔️ Swords     | Place Ember in Yellow Cauldron|
+| CAULDRON  | REAGENT     | SUIT         | UNLOCK                         |
+| --------- | ----------- | ------------ | ------------------------------ |
+| 🔴 Red    | Sulphur     | 🪄 Wands     | Place Ember in Red Cauldron    |
+| 🔵 Blue   | Aqua Regia  | 🍷 Cups      | Place Ember in Blue Cauldron   |
+| 🟢 Green  | Vitriol     | 🪙 Pentacles | Place Ember in Green Cauldron  |
+| 🟡 Yellow | Quicksilver | ⚔️ Swords    | Place Ember in Yellow Cauldron |
+
+🧂 **Salt Reagent** carries no Element, Suit, or Cauldron. Craft Salt by discarding any 3 Kismeta Cards — no Cauldron required. See _Crafting Salt_.
 
 ## Crucible: The Transmutation Pathway
 
@@ -146,8 +148,8 @@ You always manage your inventory of Kismeta Cards across three zones.
 | CRUCIBLE CARD STATES |                            |                                                                                             |
 | -------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
 | **STATE**            | **APPEARANCE**             | **NOTES**                                                                                   |
-| Dormant              | Face-down; Ember on top     | Formula hidden; awaiting activation.                                                        |
-| Active               | Face-up; Ember removed      | Formula revealed; working toward requirements. Multiple cards may be Active simultaneously. |
+| Dormant              | Face-down; Ember on top    | Formula hidden; awaiting activation.                                                        |
+| Active               | Face-up; Ember removed     | Formula revealed; working toward requirements. Multiple cards may be Active simultaneously. |
 | Fired                | Face-up; Turned sideways   | Formula executed; Stone is in the Forge. Only one card may be Fired at a time.              |
 | Arrested             | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.         |
 | Discarded            | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                  |

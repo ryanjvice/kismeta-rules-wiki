@@ -106,16 +106,16 @@ Once the players have finished arranging their cards for the round, all cards ar
 
 The Sun shines brightly as you busy yourself crafting resources and consorting with your rivals, bartering over trades, initiating duels, and risking your luck in gambits.
 
-| **Step**                      | **Action**                                                                                                   |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------ |
-|                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                      |
-| **1. Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                 |
-| **2. Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                |
-| **3. Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first.                                      |
-|                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                  |
-| **4. Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                           |
-| **5. Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                 |
-| **6. Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it. |
+| **Step**                      | **Action**                                                                                                         |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+|                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                            |
+| **1. Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
+| **2. Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
+| **3. Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
+|                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                        |
+| **4. Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
+| **5. Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
+| **6. Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
 
 ### 1️⃣ Activate Crucible Cards {#1-activate-crucible-cards}
 
@@ -189,7 +189,7 @@ Freely exchange resources with any rival during your turn.
 | Kismeta Cards                          | Astral Houses          |
 | Reagents (only transferable via Trade) | Ward Reagents          |
 | Active Crucible Cards (only via Trade) | Dormant Crucible Cards |
-|                                        | Embers           |
+|                                        | Embers                 |
 
 📌 **Note:** Trading is the only way to transfer Reagents and Active Crucible Cards between players. They cannot be won in Duels or moved any other way.
 
@@ -267,7 +267,7 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 | **2. Opposition ⚔️**       | Attempt to send an opponent's Forging Stone into Stasis in an Alignment contest. If a player loses an Opposition with their Stone in the Forge, move it to Stasis. |
 |                            | _**CRUCIBLE ACTIONS**_                                                                                                                                             |
 | **3. Fire the Stone**      | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge.                                                    |
-| **4. Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                                    |
+| **4. Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                       |
 | **5. Leave Stasis ❄️**     | Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
 
 ### 1️⃣ Survey the Crucible: Your Stone's Current Position
@@ -301,8 +301,8 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 
 | STATE     | APPEARANCE                 | NOTES                                                                                                       |
 | --------- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Dormant   | Face-down; Ember on top     | The Alchemical Formula is hidden. Awaiting activation.                                                      |
-| Active    | Face-up; Ember removed      | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
+| Dormant   | Face-down; Ember on top    | The Alchemical Formula is hidden. Awaiting activation.                                                      |
+| Active    | Face-up; Ember removed     | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
 | Fired     | Face-up; Turned sideways   | The Alchemical Formula executed; the Stone is in the Forge. Only one card may be Fired at a time.           |
 | Arrested  | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.                         |
 | Discarded | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                                  |
@@ -320,10 +320,10 @@ An Opposition is an Alignment contest against a rival whose Stone is currently F
 
 #### Outcomes
 
-| RESULT          | OUTCOME                                                                                                                                                                 |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESULT          | OUTCOME                                                                                                     |
+| --------------- | ----------------------------------------------------------------------------------------------------------- |
 | Challenger Wins | Defender's Stone moves to the nearest ❄️ Stasis zone. Ward Reagents discarded. Crucible Card remains Fired. |
-| Defender Wins   | Stone stays in the Forge. Challenger cannot challenge the same Defender again this round.                                                                |
+| Defender Wins   | Stone stays in the Forge. Challenger cannot challenge the same Defender again this round.                   |
 
 #### Multiple Oppositions Against the Same Stone
 
