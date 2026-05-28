@@ -1,76 +1,76 @@
 {
-	"id": "summer-flow",
-	"mode": "playerTurn",
-	"intro": "On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like.",
-	"learnMoreHash": "phase-2-summer",
-	"root": {
-		"id": "turn",
-		"label": "Your turn",
-		"kind": "group",
-		"children": [
-			{
-				"id": "craft",
-				"label": "Craft Resources",
-				"kind": "group",
-				"children": [
-					{
-						"id": "activate",
-						"label": "Activate Crucible Card",
-						"kind": "optional",
-						"body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and light a Cauldron by placing the Ember in it — that Reagent type can now be crafted for the rest of the game. Flip the Crucible Card face-up — it is now Active.",
-						"learnMoreHash": "1-activate-crucible-cards"
-					},
-					{
-						"id": "houses",
-						"label": "Build Astral House",
-						"kind": "optional",
-						"body": "Pay Planet-matching Kismeta Cards; place 🏰 on a Zodiac Sign. Each House is a permanent Alignment source for every future Harvest.",
-						"learnMoreHash": "2-build-astral-houses",
-						"gameModeNote": {
-							"quickplay": "Quickplay: 1 matching card.",
-							"magnus": null
-						}
-					},
-					{
-						"id": "craft-reagent",
-						"label": "Craft Reagent",
-						"kind": "optional",
-						"body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. <strong>Salt:</strong> Discard any 3 cards — no Cauldron needed.",
-						"learnMoreHash": "3-craft-reagents"
-					}
-				]
-			},
-			{
-				"id": "consort",
-				"label": "Consort with Rivals",
-				"kind": "group",
-				"children": [
-					{
-						"id": "trade",
-						"label": "Trade",
-						"kind": "optional",
-						"body": "Freely exchange Kismeta Cards, Reagents, or Active Crucible Cards with any rival. Trading is the only way to transfer Reagents and Active Crucible Cards between players.",
-						"learnMoreHash": "4-trade",
-						"gameModeNote": {
-							"magnus": "Misaligned players trade 2:1 in favor of the non-initiating player."
-						}
-					},
-					{
-						"id": "duel",
-						"label": "Duel",
-						"kind": "optional",
-						"body": "Wager a card from your Spread; roll dice against a rival — winner steals the targeted card from the Defender's Spread.",
-						"learnMoreHash": "5-duel"
-					},
-					{
-						"id": "gambit",
-						"label": "Gambit",
-						"kind": "optional",
-						"body": "Summer only. Show your Spread satisfies a rival's Active Crucible Card Alignment; pay any Ward Reagent entry fee; roll dice — winner swaps the two Active Crucible Cards.",
-						"learnMoreHash": "6-gambit"
-					}
-				]
-			}
-		]
-	}
+  "id": "summer-flow",
+  "mode": "playerTurn",
+  "intro": "On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like.",
+  "learnMoreHash": "phase-2-summer",
+  "root": {
+    "id": "turn",
+    "label": "Your turn",
+    "kind": "group",
+    "children": [
+      {
+        "id": "craft",
+        "label": "Craft Resources",
+        "kind": "group",
+        "children": [
+          {
+            "id": "activate",
+            "label": "🎴 Activate Crucible Card",
+            "kind": "optional",
+            "body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and light a Cauldron by placing the Ember in it — that Reagent type can now be crafted for the rest of the game. Flip the Crucible Card face-up — it is now Active.",
+            "learnMoreHash": "1-activate-crucible-cards"
+          },
+          {
+            "id": "houses",
+            "label": "🏰 Build Astral House",
+            "kind": "optional",
+            "body": "Pay Planet-matching Kismeta Cards; place an Astral House token on a Zodiac Sign. Each House is a permanent Alignment source for every future Harvest.",
+            "learnMoreHash": "2-build-astral-houses",
+            "gameModeNote": {
+              "quickplay": "Quickplay: 1 matching card.",
+              "magnus": null
+            }
+          },
+          {
+            "id": "craft-reagent",
+            "label": "⚒️ Craft Reagent",
+            "kind": "optional",
+            "body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. <strong>Salt:</strong> Discard any 3 cards — no Cauldron needed.",
+            "learnMoreHash": "3-craft-reagents"
+          }
+        ]
+      },
+      {
+        "id": "consort",
+        "label": "Consort with Rivals",
+        "kind": "group",
+        "children": [
+          {
+            "id": "trade",
+            "label": "🤝 Trade",
+            "kind": "optional",
+            "body": "Freely exchange Kismeta Cards, Reagents, or Active Crucible Cards with any rival. Trading is the only way to transfer Reagents and Active Crucible Cards between players.",
+            "learnMoreHash": "4-trade",
+            "gameModeNote": {
+              "magnus": "Misaligned players trade 2:1 in favor of the non-initiating player."
+            }
+          },
+          {
+            "id": "duel",
+            "label": "🤺 Duel",
+            "kind": "optional",
+            "body": "Wager a card from your Spread; roll dice against a rival — winner steals the targeted card from the Defender's Spread.",
+            "learnMoreHash": "5-duel"
+          },
+          {
+            "id": "gambit",
+            "label": "🎲 Gambit",
+            "kind": "optional",
+            "body": "Summer only. Show your Spread satisfies a rival's Active Crucible Card Alignment; pay any Ward Reagent entry fee; roll dice — winner swaps the two Active Crucible Cards.",
+            "learnMoreHash": "6-gambit"
+          }
+        ]
+      }
+    ]
+  }
 }

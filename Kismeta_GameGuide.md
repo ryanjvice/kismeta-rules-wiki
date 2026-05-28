@@ -378,15 +378,15 @@ The Sun shines brightly as you busy yourself crafting resources and consorting w
 | **Step**                      | **Action**                                                                                                         |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 |                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                            |
-| **1️⃣ Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
-| **2️⃣ Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
-| **3️⃣ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
+| **🎴 Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
+| **🏰 Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
+| **⚒️ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have an Ember in it first. |
 |                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                        |
-| **4️⃣ Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
-| **5️⃣ Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
-| **6️⃣ Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
+| **🤝 Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
+| **🤺 Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
+| **🎲 Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
 
-### 1️⃣ Activate Crucible Cards
+### 🎴 Activate Crucible Card
 
 Your Cauldron Codex holds four Formulae - one per card position (I–IV). Activate each card by collecting and discarding the matching card set. You may activate any number in any order, and may do so in Phase 2: Summer or Phase 3: Autumn.
 
@@ -400,7 +400,7 @@ Your Cauldron Codex holds four Formulae - one per card position (I–IV). Activa
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
-### 2️⃣ Build Astral Houses
+### 🏰 Build Astral House
 
 Astral Houses are permanent structures built on the Zodiac Wheel. Each provides three ongoing benefits and cannot be moved once placed. Only one player may build on any given Sign - but other players may still land on or Align with that Sign.
 
@@ -418,7 +418,7 @@ Astral Houses are permanent structures built on the Zodiac Wheel. Each provides 
 
 _⚙️ **Game Mode Modifier (Quickplay):** Cost reduced to 1 card matching the Sign's Planet._
 
-### 3️⃣ Craft Reagents
+### ⚒️ Craft Reagent
 
 Reagents are the fuels needed to Fire your Stone. Each Reagent type is crafted by discarding 3 cards of its corresponding Suit, following the Correspondence table.
 
@@ -441,7 +441,7 @@ Before you can craft a Reagent, its Cauldron must be lit — an Ember must have 
 
 _⚙️ **Game Mode Modifier (Quickplay):** No modifier. Reagent crafting rules are the same across all game modes: light a Cauldron with an Ember, then discard 3 matching-Suit cards to craft 1 Reagent._
 
-### 4️⃣ Trade
+### 🤝 Trade
 
 Freely exchange resources with any rival during your turn.
 
@@ -456,7 +456,7 @@ Freely exchange resources with any rival during your turn.
 
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** Misaligned players must trade 2:1 in favor of the non-initiating player._
 
-### 5️⃣ Duel
+### 🤺 Duel
 
 Challenge a rival to steal a single card from their Spread. Only the Challenger pays an entry fee; the Defender does not.
 
@@ -476,7 +476,7 @@ Challenge a rival to steal a single card from their Spread. Only the Challenger 
 
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your target, add +1 to your dice roll. The Defender receives no bonus._
 
-### 6️⃣ Gambit
+### 🎲 Gambit
 
 A Gambit lets you seize a rival's Active Crucible Card by proving you have already mastered its Alignment requirements - at the cost of one of your own. Gambits may only be declared during Phase 2: Summer, and only when your Spread fully satisfies the target card's complete Alignment requirement at the moment of declaration.
 
