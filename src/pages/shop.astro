@@ -1,0 +1,48 @@
+﻿---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { shopLinks } from '../data/shop';
+import { siteT } from '../utils/site-i18n';
+
+const title = siteT('shop.title');
+const description = siteT('shop.intro');
+
+function isExternalShopUrl(href: string) {
+	return href.startsWith('http://') || href.startsWith('https://');
+}
+---
+
+<SiteLayout {title} {description}>
+	<section class="site-section shop-page" aria-labelledby="shop-heading">
+		<h1 id="shop-heading" class="site-section__heading">{title}</h1>
+		<p class="shop-page__intro">{description}</p>
+
+		<ul class="shop-links">
+			{
+				shopLinks.map((link) => (
+					<li class="shop-links__item">
+						{isExternalShopUrl(link.href) ? (
+							<a
+								class="shop-links__card"
+								href={link.href}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<h2 class="shop-links__title">{siteT(link.labelKey)}</h2>
+								<p class="shop-links__desc">{siteT(link.descriptionKey)}</p>
+								<span class="shop-links__cta">{siteT('shop.linkCta')}</span>
+							</a>
+						) : (
+							<div class="shop-links__card shop-links__card--pending">
+								<h2 class="shop-links__title">{siteT(link.labelKey)}</h2>
+								<p class="shop-links__desc">{siteT(link.descriptionKey)}</p>
+								<p class="shop-links__pending">{siteT('site.gameStatus.comingSoon')}</p>
+							</div>
+						)}
+					</li>
+				))
+			}
+		</ul>
+
+		<p class="shop-page__note">{siteT('shop.externalNote')}</p>
+	</section>
+</SiteLayout>

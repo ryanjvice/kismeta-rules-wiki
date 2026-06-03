@@ -13,7 +13,7 @@ Code-level audit conducted May 2026 before the accessibility patch. Use this as 
 | Modal / dialog | `src/components/ContextRulesPanel.astro` + `src/scripts/context-panel.ts` | `role="dialog"`, `aria-modal`, `aria-labelledby`, focus-on-open, focus-restore-on-close, Escape key, Tab trap |
 | Guided stepper | `src/components/GuidedPlayStepper.astro` | `role="progressbar"`, `aria-live="polite"`, real `<button>` controls, heading focus on step change |
 | Focus styles | `src/styles/custom.css` | `:focus-visible` on crucible tab labels, context panel trigger + close, sidebar toggle |
-| Labelled nav | `src/components/HomeLanding.astro`, `src/components/TabNav.astro` | `sr-only` headings, `<nav aria-label="...">` |
+| Labelled nav | `src/layouts/SiteLayout.astro`, `src/components/TabNav.astro`, `src/components/GameMarketingHero.astro` | Skip link, `<nav aria-label="...">`, labelled hero sections |
 | Sidebar toggle | `src/components/Sidebar.astro` + `src/scripts/sidebar-collapse.ts` | `aria-expanded` kept in sync with collapsed state |
 | Live regions | `src/components/GuidedPlayStepper.astro`, `src/components/ActionFlowGuide.astro`, `src/components/CrucibleDeckBuilds.astro` | `aria-live="polite"` on result and step containers |
 

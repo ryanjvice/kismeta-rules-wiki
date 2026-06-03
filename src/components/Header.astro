@@ -1,10 +1,22 @@
 ---
 import DefaultHeader from '@astrojs/starlight/components/Header.astro';
 import TabNav from './TabNav.astro';
+import { getWikiNav } from '../data/wiki-nav';
+
+const wikiConfig = getWikiNav(Astro.url.pathname);
 ---
 
 <div class="kismeta-header-wrap">
 	<DefaultHeader {...Astro.props} />
+	{
+		wikiConfig && (
+			<div class="wiki-breadcrumb">
+				<a href="/" class="wiki-breadcrumb__home">Kismeta</a>
+				<span class="wiki-breadcrumb__sep" aria-hidden="true">›</span>
+				<span class="wiki-breadcrumb__game">{wikiConfig.gameLabel}</span>
+			</div>
+		)
+	}
 	<TabNav />
 </div>
 

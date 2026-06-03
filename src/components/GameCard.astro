@@ -1,0 +1,53 @@
+﻿---
+import type { Game } from '../data/games';
+import { siteT } from '../utils/site-i18n';
+
+interface Props {
+	game: Game;
+}
+
+const { game } = Astro.props;
+---
+
+<article class="game-card">
+	<div class="game-card__header">
+		<h2 class="game-card__title">
+			<a href={game.marketingPath}>{game.title}</a>
+		</h2>
+		<p class="game-card__subtitle">{game.subtitle}</p>
+		{
+			game.status === 'coming-soon' && (
+				<p class="game-card__status">{siteT('site.gameStatus.comingSoon')}</p>
+			)
+		}
+	</div>
+
+	<p class="game-card__summary">{siteT(game.summaryKey)}</p>
+
+	{
+		(game.playersKey || game.playTimeKey) && (
+			<dl class="game-card__meta">
+				{
+					game.playersKey && (
+						<div class="game-card__meta-item">
+							<dt>{siteT('site.meta.players')}</dt>
+							<dd>{siteT(game.playersKey)}</dd>
+						</div>
+					)
+				}
+				{
+					game.playTimeKey && (
+						<div class="game-card__meta-item">
+							<dt>{siteT('site.meta.playTime')}</dt>
+							<dd set:html={siteT(game.playTimeKey)} />
+						</div>
+					)
+				}
+			</dl>
+		)
+	}
+
+	<a class="game-card__cta" href={game.marketingPath}>
+		{siteT(game.status === 'coming-soon' ? 'site.gameCta.learnMore' : 'site.gameCta.explore')}
+	</a>
+</article>

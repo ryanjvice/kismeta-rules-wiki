@@ -1,19 +1,26 @@
-﻿{
+{
   "defaults": {
     "standard": "WCAG2AA",
     "timeout": 30000,
     "wait": 1000,
     "chromeLaunchConfig": {
-      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+      ]
     }
   },
   "urls": [
     "http://localhost:4321/",
+    "http://localhost:4321/shop/",
     "http://localhost:4321/games/alchemists-of-the-great-year/",
+    "http://localhost:4321/games/the-veiled-ascent/",
     "http://localhost:4321/games/alchemists-of-the-great-year/play/guided/",
-    "http://localhost:4321/games/alchemists-of-the-great-year/play/setup/",
-    "http://localhost:4321/games/alchemists-of-the-great-year/rules/game-overview/",
-    "http://localhost:4321/games/alchemists-of-the-great-year/lore/",
+    "http://localhost:4321/games/the-veiled-ascent/play/guided/",
+    "http://localhost:4321/games/the-veiled-ascent/rules/overview/",
+    "http://localhost:4321/games/the-veiled-ascent/reference/round-outcomes/",
+    "http://localhost:4321/games/the-veiled-ascent/lore/",
+    "http://localhost:4321/games/the-veiled-ascent/glossary/",
     "http://localhost:4321/play/guided/"
   ]
 }

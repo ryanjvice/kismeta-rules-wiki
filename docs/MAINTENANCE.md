@@ -1,6 +1,6 @@
 ﻿# Maintainer guide: where to update what
 
-Task-oriented map for the Kismeta Rules Wiki. Use this when you need to change layout, navigation, styling, rules text, translations, or deploy settings — without hunting through the repo.
+Task-oriented map for the Kismeta site (franchise hub + AGY and TVA rules wikis). Use this when you need to change layout, navigation, styling, rules text, translations, or deploy settings — without hunting through the repo.
 
 **Stack:**
 [Astro](https://astro.build) 6 +
@@ -10,23 +10,32 @@ Custom UI overrides Starlight via `astro.config.mjs` → `components.Header`.
 ```mermaid
 flowchart TB
   subgraph content [Rules content]
-    Guide[Kismeta_GameGuide.md]
-    Sync[scripts/sync-guide.mjs]
-    Docs[src/content/docs/]
-    Guide --> Sync --> Docs
+    AGYGuide[Kismeta_GameGuide.md]
+    TVAGuide[Kismeta_VeiledAscent_gameplayGuide.md]
+    SyncAGY[scripts/sync-guide.mjs]
+    SyncTVA[scripts/sync-tva-guide.mjs]
+    AGYDocs[src/content/docs/games/alchemists-of-the-great-year/]
+    TVADocs[src/content/docs/games/the-veiled-ascent/]
+    AGYGuide --> SyncAGY --> AGYDocs
+    TVAGuide --> SyncTVA --> TVADocs
+    AGYDocs -->|lore mirror| TVADocs
   end
-  subgraph shell [Site chrome and layout]
-    Config[astro.config.mjs]
+  subgraph marketing [Marketing pages]
+    Pages[src/pages/]
+    SiteLayout[src/layouts/SiteLayout.astro]
+    I18nMarketing[src/content/i18n/en.json site.* game.* shop.*]
+  end
+  subgraph shell [Wiki chrome]
+    Config[astro.config.mjs sidebar]
     Header[src/components/Header.astro]
+    WikiNav[src/data/wiki-nav.ts]
+    TabNav[src/components/TabNav.astro]
     CSS[src/styles/custom.css]
-    Index[src/content/docs/index.mdx]
   end
-  subgraph ui [UI copy]
-    I18n[src/content/i18n/en.json]
-  end
-  Config --> Header
-  Index --> HomeCards[src/components/HomeCards.astro]
-  HomeCards --> I18n
+  Config --> Header --> TabNav
+  WikiNav --> TabNav
+  Pages --> SiteLayout
+  SiteLayout --> I18nMarketing
 ```
 
 ---
@@ -43,23 +52,27 @@ flowchart TB
 
 Paths are repo-relative. Details for the home page, sync workflow, and new pages are in the sections below.
 
-### Home & landing page
+### Franchise hub & marketing pages
 
-- **Hero** (tagline, logo, CTA buttons)  
-  `src/content/docs/index.mdx`  
-  Edit `hero:` in frontmatter (`splash` template). Buttons: `hero.actions`.
+- **Franchise homepage** (`/`)  
+  `src/pages/index.astro` · copy: `site.home.*`, `site.tagline` in `src/content/i18n/en.json`
 
-- **Feature cards** (“How to use this site”)  
-  Layout: `src/components/HomeCards.astro`  
-  Copy: `src/content/i18n/en.json` (`home.card.*`; keys in `src/content.config.ts`).
+- **Shop** (`/shop/`)  
+  `src/pages/shop.astro` · links: `src/data/shop.ts` · copy: `shop.*`
 
-→ More detail: [Home page layout](#home-page-layout)
+- **Game marketing** (e.g. `/games/alchemists-of-the-great-year/`)  
+  `src/pages/games/*.astro` · layout: `GameMarketingHero.astro` · metadata: `src/data/games.ts` · copy: `game.agy.*`, `game.tva.*`
+
+→ More detail: [Marketing pages](#marketing-pages)
 
 ### Navigation & chrome
 
 - **Top tabs** (Play / Rules / Lore)  
-  `src/components/TabNav.astro` (URLs in `tabs` array) · labels: i18n `tab.play`, `tab.rules`, `tab.lore` · styles: `src/styles/custom.css` (`.tab-nav`)  
-  **Play** is active for `/play/*` except `/play/setup/` and `/play/round-overview/` (and the home page `/`), `/glossary/`, `/reference/*`. **Rules** is active for `/learn/*`, `/rules/*`, `/play/setup/`, `/play/round-overview/`. **Lore** is active for `/lore/*`.
+  `src/components/TabNav.astro` (config-driven) · tab config: `src/data/wiki-nav.ts` · labels: i18n `tab.play`, `tab.rules`, `tab.lore` · styles: `src/styles/custom.css` (`.tab-nav`)  
+  `TabNav` detects which wiki the current URL belongs to via `getWikiNav()` and applies the matching tab set and active-state rules. To change which paths activate which tab for a given wiki, edit `rulesPrefixes` / `playExtraPrefixes` in `wiki-nav.ts`.
+
+- **Header game breadcrumb** (e.g. `Kismeta › The Veiled Ascent`)  
+  `src/components/Header.astro` — shown automatically when `getWikiNav()` returns a config. Label comes from `gameLabel` in `wiki-nav.ts`.
 
 - **Game mode callouts** (Quickplay / Magnus ⚙️ in rules)  
   Set in Guided Play at start; persisted in `localStorage` (`kismeta-game-modes`).  
@@ -74,28 +87,38 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ### Rules content
 
-- **Rules and play pages**  
-  `Kismeta_GameGuide.md` → run `npm run sync`  
-  Output: `src/content/docs/learn/`, `play/`, `reference/`, `rules/`. Do not hand-edit those folders unless you accept overwrite on the next sync.
+- **AGY rules pages**  
+  `Kismeta_GameGuide.md` → run `npm run sync:gy`  
+  Output: `src/content/docs/games/alchemists-of-the-great-year/` (`learn/`, `play/`, `reference/`, `rules/`). Do not hand-edit those folders unless you accept overwrite.
 
-- **Sync script** (slugs, draft banners, cross-links, ⚙️ callouts)
+- **TVA rules pages**  
+  `Kismeta_VeiledAscent_gameplayGuide.md` → run `npm run sync:tva`  
+  Output: `src/content/docs/games/the-veiled-ascent/` (`lore/`, `play/`, `reference/`, `rules/`). Hand-maintained pages (`play/guided.mdx`, `glossary.mdx`) are preserved.
+
+- **AGY sync script** (slugs, draft banners, cross-links, ⚙️ callouts)  
   `scripts/sync-guide.mjs` — `SECTION_META`, `DRAFT_NOTICES`, `SEE_LINKS`.
+
+- **TVA sync script** (section-to-slug mapping, lore mirror)  
+  `scripts/sync-tva-guide.mjs` — `SECTION_META`, `SEE_LINKS`. Lore is mirrored from the AGY epilogue during each TVA sync.
 
 → Workflow: [Generated vs hand-edited](#generated-vs-hand-edited-content) · New page: [Adding a sidebar page](#adding-a-new-sidebar-page)
 
 ### Glossary
 
+**AGY glossary:**
+
 - **Term definitions** (auto-generated)  
-  `src/data/glossary.json` via `npm run sync`
+  `src/data/glossary.json` via `npm run sync:gy`
+- **Glossary page** `src/content/docs/games/alchemists-of-the-great-year/glossary.md` · `src/components/GlossaryList.astro`
+- **Link a term to a rules page** `src/components/GlossaryList.astro` → `termLinks`
+- **Glossary intro text** i18n `glossary.intro`
 
-- **Glossary page layout**  
-  `src/content/docs/glossary.mdx` · `src/components/GlossaryList.astro`
+**TVA glossary:**
 
-- **Link a term to a rules page**  
-  `src/components/GlossaryList.astro` → `termLinks`
-
-- **Glossary intro text**  
-  i18n `glossary.intro` · `src/components/GlossaryIntro.astro`
+- **Term definitions** (auto-generated from `## GLOSSARY OF TERMS` in the TVA guide)  
+  `src/data/glossary-tva.json` via `npm run sync:tva`
+- **Glossary page** `src/content/docs/games/the-veiled-ascent/glossary.mdx` · `src/components/GlossaryListTva.astro`
+- **Add/edit terms** Add rows to the `## GLOSSARY OF TERMS` table in `Kismeta_VeiledAscent_gameplayGuide.md`, then re-run `npm run sync:tva`.
 
 ### Translations
 
@@ -129,61 +152,36 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ---
 
-## Home page layout
+## Marketing pages
 
-The landing page uses Starlight’s **splash** template.
-| ----------------------------------------------------------------------------------- |
-| ++ TEMPLATE ++ -------------------------------------------------------------------- |
-| + Area ---------------------------------------------------------------------------- |
-| + File ---------------------------------------------------------------------------- |
-| + What to edit -------------------------------------------------------------------- |
-| ----------------------------------------------------------------------------------- |
-| + Hero title, tagline, logo, CTA buttons ------------------------------------------ |
-| + `src/content/docs/index.mdx` --------------------------------------------------- |
-| + Frontmatter: `template: splash`, `hero.tagline`, `hero.image`, `hero.actions` --- |
-| ----------------------------------------------------------------------------------- |
-| + Feature cards below hero -------------------------------------------------------- |
-| + `src/components/HomeCards.astro` ------------------------------------------------ |
-| + Grid layout and which cards appear ---------------------------------------------- |
-| ----------------------------------------------------------------------------------- |
-| + Card text ----------------------------------------------------------------------- |
-| + `src/content/i18n/en.json` ------------------------------------------------------ |
-| + Keys `home.sectionTitle`, `home.card.*`, `home.footer` -------------------------- |
-| ----------------------------------------------------------------------------------- |
-**Hero example (English):**
+Marketing pages live in `src/pages/` and use [`SiteLayout`](../src/layouts/SiteLayout.astro) (not Starlight chrome).
 
-```yaml
----
-title: Kismeta Rules
-template: splash
-hero:
-  tagline: Alchemists of the Great Year — rules wiki for players at the table.
-  image:
-    file: ../../assets/logo.svg
-  actions:
-    - text: Start learning
-      link: /learn/lore/
-    - text: Round at a glance
-      link: /rules/round-at-a-glance/
-      variant: minimal
----
-import HomeCards from '../../components/HomeCards.astro';
+| Page | File | Copy keys |
+|------|------|-----------|
+| Franchise hub `/` | `src/pages/index.astro` | `site.home.*`, `site.tagline` |
+| Shop `/shop/` | `src/pages/shop.astro` | `shop.*` |
+| AGY marketing | `src/pages/games/alchemists-of-the-great-year.astro` | `game.agy.*` |
+| Veiled Ascent marketing | `src/pages/games/the-veiled-ascent.astro` | `game.tva.*` |
 
-<HomeCards />
-```
+Game cards on the hub read from [`src/data/games.ts`](../src/data/games.ts). External shop URLs: [`src/data/shop.ts`](../src/data/shop.ts).
 
-**Important:** `en.json` also defines `home.tagline` and `home.action.learn` / `home.action.round`, but the hero currently reads from **frontmatter**, not those i18n keys. When changing hero copy, edit **both** locale `index.mdx` files (or refactor hero to use i18n — not done today).
+Use [`siteT()`](../src/utils/site-i18n.ts) for marketing copy (loads `src/content/i18n/en.json`).
 
 ---
 
 ## Generated vs hand-edited content
 
-| Safe to edit directly                                                                          | Overwritten by `npm run sync`                                     |
-| ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `index.mdx`, `glossary.mdx`, `play/guided.mdx`, `src/data/guided-steps.ts`, `src/data/crucible-deck-builds.json`, `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | Most files under `src/content/docs/learn/`, `play/` (except `guided.mdx`), `reference/`, `rules/` |
-| `Kismeta_GameGuide.md` (source of truth)                                                       | `src/data/glossary.json`                                          |
+| Safe to edit directly | Overwritten by sync |
+|-----------------------|---------------------|
+| `src/pages/*` | AGY: `learn/`, `play/` (except `guided.mdx`), `reference/`, `rules/` under `alchemists-of-the-great-year/` |
+| `src/data/guided-steps.ts`, `src/data/tva-guided-steps.ts` | TVA: `lore/`, `play/` (except `guided.mdx`), `reference/`, `rules/` under `the-veiled-ascent/` |
+| `src/data/games.ts`, `src/data/shop.ts`, `src/data/wiki-base.ts`, `src/data/wiki-nav.ts` | `src/data/glossary.json` (AGY sync) |
+| `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | `src/data/glossary-tva.json` (TVA sync) |
+| `Kismeta_GameGuide.md`, `Kismeta_VeiledAscent_gameplayGuide.md` (sources of truth) | TVA `lore/index.md` (mirrored from AGY epilogue) |
 
-**Typical rules workflow:** edit `Kismeta_GameGuide.md` → `npm run sync` → `npm run dev` → preview → `npm run build` for production.
+**Typical AGY workflow:** edit `Kismeta_GameGuide.md` → `npm run sync:gy` → `npm run dev` → preview → `npm run build`.
+
+**Typical TVA workflow:** edit `Kismeta_VeiledAscent_gameplayGuide.md` → `npm run sync:tva` → `npm run dev` → preview → `npm run build`.
 
 ---
 
@@ -359,28 +357,38 @@ After changing icons or manifest fields, run `npm run build` and confirm install
 
 ## Commands
 
-| Command               | Purpose                                                              |
-| --------------------- | -------------------------------------------------------------------- |
-| `npm run dev`         | Local dev server ([http://localhost:4321](http://localhost:4321))    |
-| `npm run sync`        | `Kismeta_GameGuide.md` → English pages + `glossary.json`             |
-| `npm run build`       | Runs `sync`, then production build → `dist/`                         |
-| `npm run preview`     | Preview production build locally                                     |
+| Command               | Purpose                                                                        |
+| --------------------- | ------------------------------------------------------------------------------ |
+| `npm run dev`         | Local dev server ([http://localhost:4321](http://localhost:4321))               |
+| `npm run sync`        | Runs AGY sync, then TVA sync (both guides → pages + glossary JSON)              |
+| `npm run sync:gy`     | AGY only: `Kismeta_GameGuide.md` → `alchemists-of-the-great-year/` + `glossary.json` |
+| `npm run sync:tva`    | TVA only: `Kismeta_VeiledAscent_gameplayGuide.md` → `the-veiled-ascent/` + `glossary-tva.json` + lore mirror |
+| `npm run build`       | Runs `sync` (both), then production build → `dist/`                            |
+| `npm run preview`     | Preview production build locally                                                |
 
 ---
 
 ## Repo map (high level)
 
 ```
-Kismeta_GameGuide.md          # Canonical rules — edit first
-scripts/sync-guide.mjs        # Guide → Starlight markdown + glossary JSON
-scripts/translate-locale.mjs  # optional locale translation (see docs/i18n.md)
-astro.config.mjs              # Starlight: sidebar, locales, logo, PWA, site URL
-src/content/docs/             # Pages (most generated; index + glossary are manual)
-src/content/i18n/             # UI strings (tabs, home cards, glossary intro)
-src/components/               # Header, TabNav, HomeCards, Glossary*
-src/styles/custom.css         # Theme and layout overrides
-src/data/glossary.json        # Glossary entries (generated)
-public/                       # favicon, brand/, fonts/, registerSW.js
+Kismeta_GameGuide.md                          # AGY canonical rules
+Kismeta_VeiledAscent_gameplayGuide.md         # TVA canonical rules
+scripts/sync-guide.mjs                        # AGY guide → Starlight pages + glossary.json
+scripts/sync-tva-guide.mjs                    # TVA guide → Starlight pages + glossary-tva.json
+scripts/translate-locale.mjs                  # optional locale translation (see docs/i18n.md)
+astro.config.mjs                              # Starlight: sidebars (AGY + TVA), locales, PWA
+src/content/docs/games/alchemists-of-the-great-year/  # AGY wiki (sync output)
+src/content/docs/games/the-veiled-ascent/     # TVA wiki (sync output + hand pages)
+src/content/i18n/                             # UI strings (tabs, guided, glossary, marketing)
+src/data/wiki-base.ts                         # AGY + TVA slug helpers
+src/data/wiki-nav.ts                          # Tab nav config per game (active-state rules)
+src/data/guided-steps.ts                      # AGY 17-step guided play content
+src/data/tva-guided-steps.ts                  # TVA 3-step guided play content
+src/data/glossary.json                        # AGY glossary entries (generated)
+src/data/glossary-tva.json                    # TVA glossary entries (generated)
+src/components/                               # Header, TabNav, GuidedPlay, Glossary, Marketing
+src/styles/custom.css                         # Theme and layout overrides
+public/                                       # favicon, brand/, fonts/, registerSW.js
 ```
 
 ---

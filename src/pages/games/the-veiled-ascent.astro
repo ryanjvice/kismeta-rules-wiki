@@ -1,0 +1,53 @@
+﻿---
+import GameMarketingHero from '../../components/GameMarketingHero.astro';
+import { getGame } from '../../data/games';
+import { TVA_WIKI_PATH } from '../../data/wiki-base';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { siteT } from '../../utils/site-i18n';
+
+const game = getGame('the-veiled-ascent');
+if (!game) throw new Error('Missing Veiled Ascent game config');
+
+const title = game.title;
+const description = siteT('game.tva.pageDescription');
+
+const actions = [
+	{
+		href: `${TVA_WIKI_PATH}play/guided/`,
+		label: siteT('game.tva.action.play'),
+		variant: 'primary' as const,
+	},
+	{
+		href: `${TVA_WIKI_PATH}rules/overview/`,
+		label: siteT('game.tva.action.rules'),
+		variant: 'secondary' as const,
+	},
+	{
+		href: `${TVA_WIKI_PATH}reference/round-outcomes/`,
+		label: siteT('game.tva.action.roundOutcomes'),
+		variant: 'secondary' as const,
+	},
+	{
+		href: `${TVA_WIKI_PATH}lore/`,
+		label: siteT('game.tva.action.lore'),
+		variant: 'minimal' as const,
+	},
+	{
+		href: '/shop/',
+		label: siteT('game.tva.action.shop'),
+		variant: 'minimal' as const,
+	},
+];
+---
+
+<SiteLayout {title} {description}>
+	<GameMarketingHero
+		title={title}
+		subtitle={game.subtitle}
+		tagline={siteT('game.tva.tagline')}
+		summary={siteT(game.summaryKey)}
+		playersLabel={siteT('site.meta.players')}
+		playersValue={siteT('game.tva.players')}
+		{actions}
+	/>
+</SiteLayout>

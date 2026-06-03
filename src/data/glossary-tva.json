@@ -1,0 +1,62 @@
+[
+  {
+    "term": "Aether Token",
+    "definition": "A reward token gained by reaching certain Chakra milestones. Used to remove Corruption Marks or as indicated by the board."
+  },
+  {
+    "term": "Aethereal Veil",
+    "definition": "The chaotic, shifting energy that surrounds the players. If you reach 6 Corruption Marks, the Veil has overtaken you and you lose."
+  },
+  {
+    "term": "Ascension Zone",
+    "definition": "Gradient spaces between Chakras on the Veil Progression Board. Players pass through these on the way to each Chakra milestone."
+  },
+  {
+    "term": "Chakra",
+    "definition": "A core milestone space on the Veil Progression Board. Reaching a Chakra may grant rewards (Aether Tokens or Corruption removal). Players never fall below their highest Chakra reached."
+  },
+  {
+    "term": "Corruption",
+    "definition": "The measure of how much the Aethereal Veil is consuming you. Each Corruption Mark brings you closer to defeat. Reaching 6 Corruption Marks ends your game."
+  },
+  {
+    "term": "Corruption Mark",
+    "definition": "A token placed on your Corruption Track when you lose a round or land in a Corruption Zone."
+  },
+  {
+    "term": "Corruption Zone",
+    "definition": "Dark spaces on the Veil Progression Board. Landing here adds 1 Corruption Mark. You remain in the Corruption Zone until you win a round."
+  },
+  {
+    "term": "Crown Chakra",
+    "definition": "The seventh and final Chakra milestone at the top of the Veil Progression Board. Reaching it wins the game."
+  },
+  {
+    "term": "Dealer",
+    "definition": "The player (or AI in solo play) who deals the Table's hand each round. In multiplayer, one player acts as Dealer and resolves the Table hand."
+  },
+  {
+    "term": "Major Arcana",
+    "definition": "The 22 special (trump) cards in a Tarot deck. Each carries a Roman numeral that can be used as its point value."
+  },
+  {
+    "term": "Minor Arcana",
+    "definition": "The 56 numbered suit cards in a Tarot deck (Wands, Cups, Swords, Pentacles). Point values match face value, with court cards worth 11–14."
+  },
+  {
+    "term": "Overreach",
+    "definition": "Going over the 50-point threshold with your Spread total, resulting in an automatic loss for that round."
+  },
+  {
+    "term": "Pattern Bonus",
+    "definition": "A scoring bonus applied when your 3-card Spread forms a qualifying pattern: Flush, Straight, Three of a Kind, Straight Flush, or Royal Flush. Only one bonus applies per round."
+  },
+  {
+    "term": "Spread",
+    "definition": "Your final 3-card hand: 2 face-up cards plus your hidden face-down card. Revealed during Reveal & Resolve."
+  },
+  {
+    "term": "The Table",
+    "definition": "The dealer's 3-card hand (1 face-up, 2 face-down) that all players must try to outscore without Overreaching."
+  }
+]

@@ -1,0 +1,214 @@
+---
+/**
+ * A simplified 3-step guided play stepper for Kismeta: The Veiled Ascent.
+ * No game-mode selector, no context rules panel — just the three gameplay steps
+ * with navigation and optional "learn more" links.
+ */
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { tvaSlug } from '../data/wiki-base';
+import TVA_GUIDED_STEPS from '../data/tva-guided-steps';
+
+const locale = Astro.currentLocale ?? 'root';
+const t = Astro.locals.t;
+
+const steps = TVA_GUIDED_STEPS.map((step) => ({
+	...step,
+	learnMoreUrl: step.learnMorePath
+		? getRelativeLocaleUrl(locale, tvaSlug(step.learnMorePath))
+		: undefined,
+}));
+
+const totalSteps = steps.length;
+---
+
+<div
+	class="tva-guided-play"
+	data-steps={JSON.stringify(steps)}
+	data-total={totalSteps}
+>
+	{/* Step cards rendered server-side; JS toggles visibility */}
+	{
+		steps.map((step, idx) => (
+			<div
+				class="tva-guided-play__step"
+				data-step-idx={idx}
+				hidden={idx !== 0}
+			>
+				<p class="tva-guided-play__progress">
+					Step {idx + 1} of {totalSteps}
+				</p>
+				<h2 class="tva-guided-play__title">
+					{step.title}
+					{step.subtitle && (
+						<span class="tva-guided-play__subtitle"> — {step.subtitle}</span>
+					)}
+				</h2>
+				<div class="tva-guided-play__body" set:html={step.body} />
+				{step.checklist && step.checklist.length > 0 && (
+					<ul class="tva-guided-play__checklist">
+						{step.checklist.map((item) => (
+							<li>{item}</li>
+						))}
+					</ul>
+				)}
+				{step.learnMoreUrl && (
+					<a
+						href={step.learnMoreUrl}
+						class="tva-guided-play__learn-more"
+					>
+						{t('guided.learnMore')}
+					</a>
+				)}
+			</div>
+		))
+	}
+
+	<div class="tva-guided-play__footer">
+		<button
+			type="button"
+			class="tva-guided-play__btn tva-guided-play__btn--back"
+			aria-label={t('guided.back')}
+			hidden
+		>
+			{t('guided.back')}
+		</button>
+		<button
+			type="button"
+			class="tva-guided-play__btn tva-guided-play__btn--next"
+			aria-label={t('guided.next')}
+		>
+			{t('guided.next')}
+		</button>
+	</div>
+</div>
+
+<script>
+	function initTvaStepper(el: HTMLElement) {
+		const steps = el.querySelectorAll<HTMLElement>('.tva-guided-play__step');
+		const backBtn = el.querySelector<HTMLButtonElement>('.tva-guided-play__btn--back');
+		const nextBtn = el.querySelector<HTMLButtonElement>('.tva-guided-play__btn--next');
+		const total = steps.length;
+		let current = 0;
+
+		function showStep(idx: number) {
+			steps.forEach((s, i) => {
+				s.hidden = i !== idx;
+			});
+			if (backBtn) backBtn.hidden = idx === 0;
+			if (nextBtn) nextBtn.hidden = idx === total - 1;
+			current = idx;
+			el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+
+		backBtn?.addEventListener('click', () => showStep(Math.max(0, current - 1)));
+		nextBtn?.addEventListener('click', () => showStep(Math.min(total - 1, current + 1)));
+
+		showStep(0);
+	}
+
+	document.addEventListener('astro:page-load', () => {
+		document.querySelectorAll<HTMLElement>('.tva-guided-play').forEach(initTvaStepper);
+	});
+	document.querySelectorAll<HTMLElement>('.tva-guided-play').forEach(initTvaStepper);
+</script>
+
+<style>
+	.tva-guided-play {
+		max-width: 44rem;
+		margin: 0 auto;
+	}
+
+	.tva-guided-play__step {
+		padding: 1.5rem 0 1rem;
+	}
+
+	.tva-guided-play__progress {
+		font-size: 0.8rem;
+		color: var(--sl-color-text-accent);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		margin-bottom: 0.4rem;
+	}
+
+	.tva-guided-play__title {
+		font-family: var(--kismeta-font-heading);
+		font-size: clamp(1.2rem, 3vw, 1.6rem);
+		margin-bottom: 0.75rem;
+	}
+
+	.tva-guided-play__subtitle {
+		font-size: 0.8em;
+		color: var(--sl-color-text-accent);
+		font-weight: 400;
+	}
+
+	.tva-guided-play__body {
+		line-height: 1.7;
+		margin-bottom: 1rem;
+	}
+
+	.tva-guided-play__checklist {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.tva-guided-play__checklist li {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.6rem;
+		padding: 0.45rem 0.7rem;
+		background: color-mix(in srgb, var(--sl-color-accent) 8%, transparent);
+		border-radius: 0.35rem;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.tva-guided-play__checklist li::before {
+		content: '›';
+		color: var(--sl-color-accent-high);
+		flex-shrink: 0;
+		font-weight: 700;
+	}
+
+	.tva-guided-play__learn-more {
+		display: inline-block;
+		font-size: 0.9rem;
+		color: var(--sl-color-text-accent);
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+		margin-bottom: 0.75rem;
+	}
+
+	.tva-guided-play__footer {
+		display: flex;
+		gap: 0.75rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--sl-color-hairline);
+	}
+
+	.tva-guided-play__btn {
+		padding: 0.5rem 1.25rem;
+		border-radius: 0.35rem;
+		border: 1px solid var(--sl-color-accent);
+		background: transparent;
+		color: var(--sl-color-accent-high);
+		font-family: var(--kismeta-font-heading);
+		font-size: 0.9rem;
+		cursor: pointer;
+		transition: background 0.15s;
+	}
+
+	.tva-guided-play__btn--next {
+		background: var(--sl-color-accent);
+		color: var(--kismeta-on-accent, #fff);
+	}
+
+	.tva-guided-play__btn:hover {
+		background: color-mix(in srgb, var(--sl-color-accent) 80%, transparent);
+		color: var(--kismeta-on-accent, #fff);
+	}
+</style>

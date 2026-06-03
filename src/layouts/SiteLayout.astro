@@ -1,0 +1,40 @@
+﻿---
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/custom.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = '' } = Astro.props;
+const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#1a0f2e" />
+		<title>{pageTitle}</title>
+		{description && <meta name="description" content={description} />}
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Amarante&family=Germania+One&display=swap"
+		/>
+	</head>
+	<body class="site-layout">
+		<a class="site-layout__skip" href="#main-content">Skip to content</a>
+		<SiteHeader />
+		<main id="main-content" class="site-layout__main">
+			<slot />
+		</main>
+		<SiteFooter />
+	</body>
+</html>

@@ -1,0 +1,35 @@
+---
+import glossaryTva from '../data/glossary-tva.json';
+
+const glossary = glossaryTva as Array<{ term: string; definition: string }>;
+---
+
+<div class="glossary-list">
+	{
+		glossary.map((entry) => (
+			<section
+				class="glossary-entry"
+				id={entry.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+			>
+				<h2>{entry.term}</h2>
+				<p>{entry.definition}</p>
+			</section>
+		))
+	}
+</div>
+
+<style>
+	.glossary-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.glossary-entry h2 {
+		font-size: var(--sl-text-h3);
+		margin-bottom: 0.35rem;
+	}
+	.glossary-entry p {
+		margin: 0;
+		line-height: 1.6;
+	}
+</style>

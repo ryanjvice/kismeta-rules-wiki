@@ -1,0 +1,96 @@
+﻿---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.svg';
+
+export type MarketingAction = {
+	href: string;
+	label: string;
+	variant?: 'primary' | 'secondary' | 'minimal';
+};
+
+interface Props {
+	title: string;
+	subtitle: string;
+	tagline: string;
+	summary: string;
+	playersLabel?: string;
+	playersValue?: string;
+	playTimeLabel?: string;
+	playTimeValue?: string;
+	statusLabel?: string;
+	actions: MarketingAction[];
+}
+
+const {
+	title,
+	subtitle,
+	tagline,
+	summary,
+	playersLabel,
+	playersValue,
+	playTimeLabel,
+	playTimeValue,
+	statusLabel,
+	actions,
+} = Astro.props;
+
+const showMeta = Boolean(playersValue || playTimeValue);
+---
+
+<section class="game-marketing-hero" aria-labelledby="game-marketing-title">
+	<div class="game-marketing-hero__brand">
+		<Image src={logo} alt="" width={280} height={112} loading="eager" class="game-marketing-hero__logo" />
+		<p class="game-marketing-hero__subtitle">{subtitle}</p>
+		{statusLabel && <p class="game-marketing-hero__status">{statusLabel}</p>}
+	</div>
+
+	<div class="game-marketing-hero__copy">
+		<h1 id="game-marketing-title" class="game-marketing-hero__title">{title}</h1>
+		<p class="game-marketing-hero__tagline">{tagline}</p>
+	</div>
+
+	{
+		actions.length > 0 && (
+			<div class="game-marketing-hero__actions">
+				{
+					actions.map(({ href, label, variant = 'primary' }) => (
+						<a
+							href={href}
+							class:list={[
+								'game-marketing-hero__action',
+								`game-marketing-hero__action--${variant}`,
+							]}
+						>
+							{label}
+						</a>
+					))
+				}
+			</div>
+		)
+	}
+
+	<p class="game-marketing-hero__summary">{summary}</p>
+
+	{
+		showMeta && (
+			<dl class="game-marketing-hero__meta">
+				{
+					playersValue && playersLabel && (
+						<div class="game-marketing-hero__meta-item">
+							<dt>{playersLabel}</dt>
+							<dd>{playersValue}</dd>
+						</div>
+					)
+				}
+				{
+					playTimeValue && playTimeLabel && (
+						<div class="game-marketing-hero__meta-item">
+							<dt>{playTimeLabel}</dt>
+							<dd set:html={playTimeValue} />
+						</div>
+					)
+				}
+			</dl>
+		)
+	}
+</section>

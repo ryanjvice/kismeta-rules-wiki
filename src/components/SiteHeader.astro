@@ -1,0 +1,46 @@
+﻿---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.svg';
+import { siteT } from '../utils/site-i18n';
+
+interface Props {
+	currentPath?: string;
+}
+
+const { currentPath = Astro.url.pathname } = Astro.props;
+
+const navItems = [
+	{ href: '/', labelKey: 'site.nav.home' as const, match: (path: string) => path === '/' },
+	{ href: '/shop/', labelKey: 'site.nav.shop' as const, match: (path: string) => path.startsWith('/shop') },
+] as const;
+---
+
+<header class="site-header">
+	<div class="site-header__inner">
+		<a class="site-header__brand" href="/">
+			<Image src={logo} alt={siteT('site.brandAlt')} width={120} height={48} loading="eager" />
+			<span class="site-header__wordmark">{siteT('site.wordmark')}</span>
+		</a>
+
+		<nav class="site-header__nav" aria-label={siteT('site.nav.aria')}>
+			<ul>
+				{
+					navItems.map(({ href, labelKey, match }) => {
+						const active = match(currentPath);
+						return (
+							<li>
+								<a
+									href={href}
+									class:list={['site-header__link', { 'site-header__link--active': active }]}
+									aria-current={active ? 'page' : undefined}
+								>
+									{siteT(labelKey)}
+								</a>
+							</li>
+						);
+					})
+				}
+			</ul>
+		</nav>
+	</div>
+</header>

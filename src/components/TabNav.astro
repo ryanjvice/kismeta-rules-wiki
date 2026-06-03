@@ -1,57 +1,57 @@
 ﻿---
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { AGY_WIKI_BASE, AGY_WIKI_PATH, wikiSlug } from '../data/wiki-base';
+import { getWikiNav } from '../data/wiki-nav';
 
 const locale = Astro.currentLocale ?? 'root';
 const t = Astro.locals.t;
 
-const tabs = [
-	{ key: 'tab.play', path: wikiSlug('play/guided') },
-	{ key: 'tab.rules', path: wikiSlug('learn/components') },
-	{ key: 'tab.lore', path: wikiSlug('lore') },
-] as const;
-
 const pathname = Astro.url.pathname;
-const wikiPrefix = `/${AGY_WIKI_BASE}/`;
+const config = getWikiNav(pathname);
 
-const rulesPlayPaths = [
-	`${wikiPrefix}play/setup/`,
-	`${wikiPrefix}play/round-overview/`,
-];
+type ResolvedTab = { href: string; label: string; active: boolean };
+let resolvedTabs: ResolvedTab[] = [];
 
-const isWikiHome =
-	pathname === AGY_WIKI_PATH ||
-	pathname === AGY_WIKI_PATH.slice(0, -1) ||
-	pathname === `/${locale}${AGY_WIKI_PATH}` ||
-	pathname === `/${locale}${AGY_WIKI_PATH.slice(0, -1)}`;
+if (config) {
+	const prefix = `/${config.base}/`;
+	const isHome = pathname === prefix || pathname === prefix.slice(0, -1);
+	// Relative path from wiki root, e.g. "play/guided/"
+	const relPath = isHome ? '' : pathname.slice(prefix.length);
+
+	const isLore = relPath.startsWith('lore/');
+	const isRules =
+		!isHome && config.rulesPrefixes.some((p) => relPath.startsWith(p));
+	const isPlay =
+		isHome ||
+		(!isRules &&
+			!isLore &&
+			(relPath.startsWith('play/') ||
+				config.playExtraPrefixes.some((p) => relPath.startsWith(p))));
+
+	resolvedTabs = config.tabs.map((tab) => ({
+		href: getRelativeLocaleUrl(locale, `${config.base}/${tab.path}`),
+		label: t(tab.key),
+		active:
+			tab.key === 'tab.lore'
+				? isLore
+				: tab.key === 'tab.rules'
+					? isRules
+					: isPlay,
+	}));
+}
 ---
 
-<nav class="tab-nav" aria-label="Rules sections">
-	{
-		tabs.map((tab) => {
-			const href = getRelativeLocaleUrl(locale, tab.path);
-			const active =
-				isWikiHome
-					? tab.key === 'tab.play'
-					: tab.key === 'tab.lore'
-						? pathname.includes(`${wikiPrefix}lore/`)
-						: tab.key === 'tab.play'
-							? (pathname.includes(`${wikiPrefix}play/`) &&
-									!rulesPlayPaths.some((path) => pathname.includes(path))) ||
-							  pathname.includes(`${wikiPrefix}glossary/`) ||
-							  pathname.includes(`${wikiPrefix}reference/`)
-							: pathname.includes(`${wikiPrefix}learn/`) ||
-							  pathname.includes(`${wikiPrefix}rules/`) ||
-							  rulesPlayPaths.some((path) => pathname.includes(path));
-			return (
+{
+	config && (
+		<nav class="tab-nav" aria-label="Rules sections">
+			{resolvedTabs.map(({ href, label, active }) => (
 				<a
 					href={href}
 					class:list={['tab-nav__link', { 'tab-nav__link--active': active }]}
 					aria-current={active ? 'page' : undefined}
 				>
-					{t(tab.key)}
+					{label}
 				</a>
-			);
-		})
-	}
-</nav>
+			))}
+		</nav>
+	)
+}

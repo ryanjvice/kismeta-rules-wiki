@@ -1,0 +1,27 @@
+﻿---
+import { siteT } from '../utils/site-i18n';
+
+/** Replace href values when real social URLs are available. */
+const socialLinks = [
+	{ id: 'instagram', href: '#', labelKey: 'site.social.instagram' as const },
+	{ id: 'facebook', href: '#', labelKey: 'site.social.facebook' as const },
+	{ id: 'youtube', href: '#', labelKey: 'site.social.youtube' as const },
+];
+---
+
+<footer class="kismeta-site-footer site-layout__footer">
+	<nav class="kismeta-site-footer__social" aria-label={siteT('site.social.aria')}>
+		<ul>
+			{
+				socialLinks.map(({ id, href, labelKey }) => (
+					<li>
+						<a href={href} data-social={id}>
+							{siteT(labelKey)}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+	<p class="kismeta-site-footer__copyright">{siteT('site.copyright')}</p>
+</footer>

@@ -6,18 +6,28 @@ import rehypeWrapTables from "./src/integrations/rehype-wrap-tables.mjs";
 import remarkContextHeadingIds from "./src/integrations/remark-context-heading-ids.mjs";
 
 const AGY_WIKI = "games/alchemists-of-the-great-year";
+const TVA_WIKI = "games/the-veiled-ascent";
 
-/** @param {string} label @param {string} slug @param {Record<string,string>} [translations] */
+/** @param {string} base @param {string} label @param {string} slug */
+function wikiLink(base, label, slug) {
+  return { label, slug: `${base}/${slug}` };
+}
+
+/** Shorthand for an AGY wiki link. */
 function link(label, slug, translations) {
   const prefixed = `${AGY_WIKI}/${slug}`;
   return translations ? { label, slug: prefixed, translations } : { label, slug: prefixed };
+}
+
+/** Shorthand for a TVA wiki link. */
+function tvaLink(label, slug) {
+  return wikiLink(TVA_WIKI, label, slug);
 }
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://kismeta-rules-wiki.vercel.app",
   redirects: {
-    "/": `/${AGY_WIKI}/`,
     "/play/guided/": `/${AGY_WIKI}/play/guided/`,
     "/play/setup/": `/${AGY_WIKI}/play/setup/`,
     "/play/round-overview/": `/${AGY_WIKI}/play/round-overview/`,
@@ -41,7 +51,7 @@ export default defineConfig({
     starlight({
       title: "Alchemists of the Great Year",
       description:
-        "Official rules reference for Kismeta: Alchemists of the Great Year — a GOODMAGIK game.",
+        "Official rules reference for Kismeta: Alchemists of the Great Year.",
       logo: {
         src: "./src/assets/logo.svg",
         alt: "Kismeta",
@@ -110,30 +120,74 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "Play",
+          label: "Alchemists of the Great Year",
+          collapsed: true,
           items: [
-            link("Play", "play/guided"),
-            link("Winning the Game", "play/winning"),
-            link("Quick Reference", "reference/quick-reference"),
-            link("Quick Tips", "reference/quick-tips"),
-            link("Glossary", "glossary"),
+            {
+              label: "Play",
+              items: [
+                link("Guided Play", "play/guided"),
+                link("Winning the Game", "play/winning"),
+                link("Quick Reference", "reference/quick-reference"),
+                link("Quick Tips", "reference/quick-tips"),
+                link("Glossary", "glossary"),
+              ],
+            },
+            {
+              label: "Lore",
+              items: [
+                link("Prologue", "lore"),
+                link("Epilogue: The Veil Stirs", "lore/epilogue"),
+              ],
+            },
+            {
+              label: "Rules",
+              items: [
+                link("Components", "learn/components"),
+                link("Setup", "play/setup"),
+                link("Game Overview", "rules/game-overview"),
+                link("Round at a Glance", "rules/round-at-a-glance"),
+                link("Full Game Rules", "play/round-overview"),
+              ],
+            },
           ],
         },
         {
-          label: "Lore",
+          label: "The Veiled Ascent",
+          collapsed: true,
           items: [
-            link("Lore", "lore"),
-            link("Lore: Epilogue", "lore/epilogue"),
-          ],
-        },
-        {
-          label: "Rules",
-          items: [
-            link("Components", "learn/components"),
-            link("Setup", "play/setup"),
-            link("Game Overview", "rules/game-overview"),
-            link("Round at a Glance", "rules/round-at-a-glance"),
-            link("Full Game Rules", "play/round-overview"),
+            {
+              label: "Play",
+              items: [
+                tvaLink("Guided Play", "play/guided"),
+                tvaLink("Setup", "play/setup"),
+                tvaLink("Gameplay Steps", "play/gameplay"),
+                tvaLink("Winning the Game", "play/winning"),
+                tvaLink("Glossary", "glossary"),
+              ],
+            },
+            {
+              label: "Reference",
+              items: [
+                tvaLink("Card Values & Scoring", "reference/card-values"),
+                tvaLink("Round Outcomes", "reference/round-outcomes"),
+                tvaLink("Pattern Bonuses", "reference/pattern-bonuses"),
+              ],
+            },
+            {
+              label: "Rules",
+              items: [
+                tvaLink("Objective", "rules/overview"),
+                tvaLink("Multiplayer Rules", "rules/multiplayer"),
+                tvaLink("Veil Progression Board", "reference/progression-board"),
+              ],
+            },
+            {
+              label: "Lore",
+              items: [
+                tvaLink("The Veil Stirs", "lore"),
+              ],
+            },
           ],
         },
       ],
@@ -146,10 +200,10 @@ export default defineConfig({
         injectRegister: false,
         includeAssets: ["favicon.svg", "brand/**/*"],
         manifest: {
-          name: "Kismeta Rules",
+          name: "Kismeta",
           short_name: "Kismeta",
           description:
-            "Rules reference for Kismeta: Alchemists of the Great Year",
+          "Kismeta — games of fate, alchemy, and the Great Year.",
           theme_color: "#1a0f2e",
           background_color: "#0d0818",
           display: "standalone",
@@ -174,3 +228,4 @@ export default defineConfig({
     ],
   },
 });
+
