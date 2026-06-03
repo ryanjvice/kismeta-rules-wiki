@@ -1,4 +1,4 @@
-{
+﻿{
   "defaults": {
     "standard": "WCAG2AA",
     "timeout": 30000,
@@ -9,9 +9,11 @@
   },
   "urls": [
     "http://localhost:4321/",
-    "http://localhost:4321/play/guided/",
-    "http://localhost:4321/play/setup/",
-    "http://localhost:4321/rules/game-overview/",
-    "http://localhost:4321/lore/"
+    "http://localhost:4321/games/alchemists-of-the-great-year/",
+    "http://localhost:4321/games/alchemists-of-the-great-year/play/guided/",
+    "http://localhost:4321/games/alchemists-of-the-great-year/play/setup/",
+    "http://localhost:4321/games/alchemists-of-the-great-year/rules/game-overview/",
+    "http://localhost:4321/games/alchemists-of-the-great-year/lore/",
+    "http://localhost:4321/play/guided/"
   ]
 }

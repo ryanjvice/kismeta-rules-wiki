@@ -1,21 +1,37 @@
-// @ts-check
+﻿// @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import { VitePWA } from "vite-plugin-pwa";
 import rehypeWrapTables from "./src/integrations/rehype-wrap-tables.mjs";
 import remarkContextHeadingIds from "./src/integrations/remark-context-heading-ids.mjs";
 
+const AGY_WIKI = "games/alchemists-of-the-great-year";
+
 /** @param {string} label @param {string} slug @param {Record<string,string>} [translations] */
 function link(label, slug, translations) {
-  return translations ? { label, slug, translations } : { label, slug };
+  const prefixed = `${AGY_WIKI}/${slug}`;
+  return translations ? { label, slug: prefixed, translations } : { label, slug: prefixed };
 }
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://kismeta-rules-wiki.vercel.app",
   redirects: {
-    "/play/game-overview/": "/rules/game-overview/",
-    "/play/round-at-a-glance/": "/rules/round-at-a-glance/",
+    "/": `/${AGY_WIKI}/`,
+    "/play/guided/": `/${AGY_WIKI}/play/guided/`,
+    "/play/setup/": `/${AGY_WIKI}/play/setup/`,
+    "/play/round-overview/": `/${AGY_WIKI}/play/round-overview/`,
+    "/play/winning/": `/${AGY_WIKI}/play/winning/`,
+    "/learn/components/": `/${AGY_WIKI}/learn/components/`,
+    "/rules/game-overview/": `/${AGY_WIKI}/rules/game-overview/`,
+    "/rules/round-at-a-glance/": `/${AGY_WIKI}/rules/round-at-a-glance/`,
+    "/lore/": `/${AGY_WIKI}/lore/`,
+    "/lore/epilogue/": `/${AGY_WIKI}/lore/epilogue/`,
+    "/reference/quick-reference/": `/${AGY_WIKI}/reference/quick-reference/`,
+    "/reference/quick-tips/": `/${AGY_WIKI}/reference/quick-tips/`,
+    "/glossary/": `/${AGY_WIKI}/glossary/`,
+    "/play/game-overview/": `/${AGY_WIKI}/rules/game-overview/`,
+    "/play/round-at-a-glance/": `/${AGY_WIKI}/rules/round-at-a-glance/`,
   },
   markdown: {
     remarkPlugins: [remarkContextHeadingIds],
@@ -23,7 +39,7 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      title: "Game Rules",
+      title: "Alchemists of the Great Year",
       description:
         "Official rules reference for Kismeta: Alchemists of the Great Year — a GOODMAGIK game.",
       logo: {

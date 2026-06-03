@@ -1,18 +1,29 @@
----
+﻿---
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { AGY_WIKI_BASE, AGY_WIKI_PATH, wikiSlug } from '../data/wiki-base';
 
 const locale = Astro.currentLocale ?? 'root';
 const t = Astro.locals.t;
 
 const tabs = [
-	{ key: 'tab.play',  path: 'play/guided' },
-	{ key: 'tab.rules', path: 'learn/components' },
-	{ key: 'tab.lore',  path: 'lore' },
+	{ key: 'tab.play', path: wikiSlug('play/guided') },
+	{ key: 'tab.rules', path: wikiSlug('learn/components') },
+	{ key: 'tab.lore', path: wikiSlug('lore') },
 ] as const;
 
 const pathname = Astro.url.pathname;
+const wikiPrefix = `/${AGY_WIKI_BASE}/`;
 
-const rulesPlayPaths = ['/play/setup/', '/play/round-overview/'];
+const rulesPlayPaths = [
+	`${wikiPrefix}play/setup/`,
+	`${wikiPrefix}play/round-overview/`,
+];
+
+const isWikiHome =
+	pathname === AGY_WIKI_PATH ||
+	pathname === AGY_WIKI_PATH.slice(0, -1) ||
+	pathname === `/${locale}${AGY_WIKI_PATH}` ||
+	pathname === `/${locale}${AGY_WIKI_PATH.slice(0, -1)}`;
 ---
 
 <nav class="tab-nav" aria-label="Rules sections">
@@ -20,15 +31,18 @@ const rulesPlayPaths = ['/play/setup/', '/play/round-overview/'];
 		tabs.map((tab) => {
 			const href = getRelativeLocaleUrl(locale, tab.path);
 			const active =
-				pathname === '/' || pathname === `/${locale}/`
+				isWikiHome
 					? tab.key === 'tab.play'
 					: tab.key === 'tab.lore'
-						? pathname.includes('/lore/')
+						? pathname.includes(`${wikiPrefix}lore/`)
 						: tab.key === 'tab.play'
-							? (pathname.includes('/play/') && !rulesPlayPaths.some((path) => pathname.includes(path))) ||
-							  pathname.includes('/glossary/') ||
-							  pathname.includes('/reference/')
-							: pathname.includes('/learn/') || pathname.includes('/rules/') || rulesPlayPaths.some((path) => pathname.includes(path));
+							? (pathname.includes(`${wikiPrefix}play/`) &&
+									!rulesPlayPaths.some((path) => pathname.includes(path))) ||
+							  pathname.includes(`${wikiPrefix}glossary/`) ||
+							  pathname.includes(`${wikiPrefix}reference/`)
+							: pathname.includes(`${wikiPrefix}learn/`) ||
+							  pathname.includes(`${wikiPrefix}rules/`) ||
+							  rulesPlayPaths.some((path) => pathname.includes(path));
 			return (
 				<a
 					href={href}

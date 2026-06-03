@@ -6,7 +6,6 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
 ## I. Set the Table {#i-set-the-table}
 
 - Place the Great Year Board game board in the center of the play area.
-- Select a Game Mode before continuing. _(Next page)_
 - Sort the Kismeta cards into two piles, Kismeta Cards (Blue) and Crucible Cards (Red).
 - Common Deck (Blue): Shuffle all cards and place them face down by the game board.
 - Crucible Deck (Red): Place next to the Great Year board. You'll build the Deck in step _IV. Build the Crucible Deck._

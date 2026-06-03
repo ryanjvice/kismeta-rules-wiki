@@ -8,7 +8,7 @@
   "play/setup": {
     "i-set-the-table": {
       "title": "I. Set the Table",
-      "html": "<h2>I. Set the Table</h2>\n<ul>\n<li>Place the Great Year Board game board in the center of the play area.</li>\n<li>Select a Game Mode before continuing. <em>(Next page)</em></li>\n<li>Sort the Kismeta cards into two piles, Kismeta Cards (Blue) and Crucible Cards (Red).</li>\n<li>Common Deck (Blue): Shuffle all cards and place them face down by the game board.</li>\n<li>Crucible Deck (Red): Place next to the Great Year board. You'll build the Deck in step <em>IV. Build the Crucible Deck.</em></li>\n<li>Set the following components within easy reach:\n<ul>\n<li>1 Agekeeper's Key: 1 black pawn game piece; <em>(or a magical trinket from your home.)</em></li>\n<li>1 Cosmic Age Dice: (12-sided Die, black)</li>\n<li>Reagents: Sort by color and keep nearby.</li>\n</ul>\n</li>\n</ul>"
+      "html": "<h2>I. Set the Table</h2>\n<ul>\n<li>Place the Great Year Board game board in the center of the play area.</li>\n<li>Sort the Kismeta cards into two piles, Kismeta Cards (Blue) and Crucible Cards (Red).</li>\n<li>Common Deck (Blue): Shuffle all cards and place them face down by the game board.</li>\n<li>Crucible Deck (Red): Place next to the Great Year board. You'll build the Deck in step <em>IV. Build the Crucible Deck.</em></li>\n<li>Set the following components within easy reach:\n<ul>\n<li>1 Agekeeper's Key: 1 black pawn game piece; <em>(or a magical trinket from your home.)</em></li>\n<li>1 Cosmic Age Dice: (12-sided Die, black)</li>\n<li>Reagents: Sort by color and keep nearby.</li>\n</ul>\n</li>\n</ul>"
     },
     "ii-become-an-alchemist": {
       "title": "II. Become an Alchemist",

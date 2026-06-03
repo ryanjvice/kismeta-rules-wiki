@@ -1,12 +1,13 @@
----
+﻿---
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { wikiSlug } from '../data/wiki-base';
 import glossaryEn from '../data/glossary.json';
 
 const locale = Astro.currentLocale ?? 'root';
 const glossary = glossaryEn;
 
 function pathFor(slug: string) {
-	return getRelativeLocaleUrl(locale, slug);
+	return getRelativeLocaleUrl(locale, wikiSlug(slug));
 }
 
 const termLinks: Record<string, string> = {

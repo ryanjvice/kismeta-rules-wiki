@@ -106,16 +106,16 @@ Once the players have finished arranging their cards for the round, all cards ar
 
 The Sun shines brightly as you busy yourself crafting resources and consorting with your rivals, bartering over trades, initiating duels, and risking your luck in gambits.
 
-| **Step**                      | **Action**                                                                                                         |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-|                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                            |
-| **🎴 Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                       |
-| **🏰 Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                      |
+| **Step**                      | **Action**                                                                                                       |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+|                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                          |
+| **🎴 Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                     |
+| **🏰 Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                    |
 | **⚒️ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have a Coal in it first. |
-|                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                        |
-| **🤝 Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                 |
-| **🤺 Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                       |
-| **🎲 Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.       |
+|                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                      |
+| **🤝 Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                               |
+| **🤺 Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                     |
+| **🎲 Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.     |
 
 ### 🎴 Activate Crucible Card
 
@@ -299,8 +299,8 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 
 | STATE     | APPEARANCE                 | NOTES                                                                                                       |
 | --------- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Dormant   | Face-down; Coal on top    | The Alchemical Formula is hidden. Awaiting activation.                                                      |
-| Active    | Face-up; Coal removed     | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
+| Dormant   | Face-down; Coal on top     | The Alchemical Formula is hidden. Awaiting activation.                                                      |
+| Active    | Face-up; Coal removed      | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
 | Fired     | Face-up; Turned sideways   | The Alchemical Formula executed; the Stone is in the Forge. Only one card may be Fired at a time.           |
 | Arrested  | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.                         |
 | Discarded | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                                  |
@@ -438,12 +438,12 @@ This can be useful when you need a last Reagent to Fire your Stone, or to top up
 
 Winter closes the Cosmic Age. Unlock cards, craft Reagents from your inventory before limits are enforced, place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.
 
-| **Step**                   | **Action**                                                                         |
-| -------------------------- | ---------------------------------------------------------------------------------- |
-| **1️⃣ Card Unlock**         | Move cards freely between your Hand and Spread.                                    |
+| **Step**                   | **Action**                                                                                                                                                                                                               |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1️⃣ Card Unlock**         | Move cards freely between your Hand and Spread.                                                                                                                                                                          |
 | **2️⃣ Winter Activities**   | Fateful Wager: Bet on the next Cosmic Age with cards; double or lose your Wager. Craft Reagent: Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. Available freely, before Card Limits are enforced. |
-| **3️⃣ Enforce Card Limits** | Spread 5 cards \| Hand 5 cards \| Arcanum: Adept cards only.                       |
-| **4️⃣ Transit the Age**     | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round. |
+| **3️⃣ Enforce Card Limits** | Spread 5 cards \| Hand 5 cards \| Arcanum: Adept cards only.                                                                                                                                                             |
+| **4️⃣ Transit the Age**     | The Agekeeper shuffles the Common Deck; passes the Key clockwise to end the round.                                                                                                                                       |
 
 ### 1️⃣ Card Unlock: {#1-card-unlock}
 

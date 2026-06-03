@@ -1,8 +1,9 @@
----
+﻿---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import ActionFlowGuide from './ActionFlowGuide.astro';
 import CrucibleDeckBuilds from './CrucibleDeckBuilds.astro';
 import GameTableEmbed from './GameTableEmbed.astro';
+import { wikiSlug } from '../data/wiki-base';
 import {
 	getGuidedSteps,
 	GUIDED_CONTENT_STEP_COUNT,
@@ -17,7 +18,7 @@ const steps = getGuidedSteps(locale === 'root' ? 'en' : locale);
 
 function resolveLearnMore(step: GuidedStep): string | undefined {
 	if (!step.learnMorePath) return undefined;
-	const base = getRelativeLocaleUrl(locale, step.learnMorePath);
+	const base = getRelativeLocaleUrl(locale, wikiSlug(step.learnMorePath));
 	return step.learnMoreHash ? `${base}#${step.learnMoreHash}` : base;
 }
 
@@ -36,7 +37,7 @@ const completePayload = completeStep
 		}
 	: { title: '', body: '' };
 
-const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'rules/round-at-a-glance');
+const roundAtGlanceUrl = getRelativeLocaleUrl(locale, wikiSlug('rules/round-at-a-glance'));
 ---
 
 <div
@@ -539,7 +540,7 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'rules/round-at-a-glance')
 		setText('[data-action="start-over"]', labels.startOver);
 		setText('[data-action="continue-playing"]', labels.continuePlaying);
 
-		// Index of the first Spring step (1-based) — the loop re-entry point
+		// Index of the first Spring step (1-based) â€” the loop re-entry point
 		const springStepIndex = steps.findIndex((s) => s.id === 'spring-1') + 1 || 1;
 
 		root.querySelector<HTMLButtonElement>('[data-action="resume"]')!.addEventListener('click', () => {
@@ -640,3 +641,4 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, 'rules/round-at-a-glance')
 	document.addEventListener('astro:page-load', initGuidedPlay);
 	initGuidedPlay();
 </script>
+

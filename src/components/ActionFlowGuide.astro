@@ -1,4 +1,4 @@
----
+﻿---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import {
 	getFlow,
@@ -7,6 +7,7 @@ import {
 	type FlowNode,
 	type StoneState,
 } from '../data/content-registry';
+import { wikiSlug } from '../data/wiki-base';
 import { resolveContentLocale } from '../utils/locale';
 
 interface Props {
@@ -19,7 +20,7 @@ const contentLocale = resolveContentLocale(starlightLocale);
 const t = Astro.locals.t;
 const flow = getFlow(flowId);
 const intro = localize(flow.intro, contentLocale);
-const learnPath = 'play/round-overview';
+const learnPath = wikiSlug('play/round-overview');
 const roundOverviewUrl = getRelativeLocaleUrl(starlightLocale, learnPath);
 
 const isSummer = flow.mode === 'playerTurn';
@@ -59,7 +60,7 @@ const labels = {
 	winterWagerPrompt: t('flow.winterWagerPrompt'),
 };
 
-// Wizard stone options — the four real states (no "show all")
+// Wizard stone options â€” the four real states (no "show all")
 const wizardStoneOptions: Array<{ id: Exclude<StoneState, 'all'>; label: string }> = [
 	{ id: 'stasis', label: labels.stoneStasis },
 	{ id: 'forgingNew', label: labels.stoneForgingNew },
@@ -139,7 +140,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 		<div class="action-flow__wizard" data-flow-wizard>
 			<div class="action-flow__wizard-progress" data-wizard-progress aria-live="polite"></div>
 
-			{/* ── Autumn wizard panels ─────────────────────────────────── */}
+			{/* â”€â”€ Autumn wizard panels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
 			{isAutumn && (
 				<>
 				{/* Panel 1: Stone state picker */}
@@ -159,7 +160,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					</div>
 
-					{/* Panel: Leave Stasis — only shown for stasis stone */}
+					{/* Panel: Leave Stasis â€” only shown for stasis stone */}
 					{leaveStasisNode && (
 						<div class="action-flow__wizard-panel" data-wizard-panel="autumn-leave-stasis" data-learn-hash={leaveStasisNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
@@ -222,7 +223,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Opposition gate — shown for all stone states */}
+					{/* Panel: Opposition gate â€” shown for all stone states */}
 					{oppositionNode && (
 						<div
 							class="action-flow__wizard-panel"
@@ -265,7 +266,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Temper gate — only shown for forgingReady */}
+					{/* Panel: Temper gate â€” only shown for forgingReady */}
 					{temperNode && (
 						<div
 							class="action-flow__wizard-panel"
@@ -308,7 +309,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Fire gate — only shown for forgingNew / notInForge */}
+					{/* Panel: Fire gate â€” only shown for forgingNew / notInForge */}
 					{fireNode && (
 						<div
 							class="action-flow__wizard-panel"
@@ -366,10 +367,10 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 				</>
 			)}
 
-			{/* ── Winter wizard panels ─────────────────────────────────── */}
+			{/* â”€â”€ Winter wizard panels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
 			{isWinter && (
 				<>
-					{/* Panel 1: Card Unlock — required */}
+					{/* Panel 1: Card Unlock â€” required */}
 					{unlockNode && (
 						<div class="action-flow__wizard-panel" data-wizard-panel="winter-unlock" data-learn-hash={unlockNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
@@ -396,7 +397,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Fateful Wager — optional gate */}
+					{/* Panel: Fateful Wager â€” optional gate */}
 					{wagerNode && (
 						<div
 							class="action-flow__wizard-panel"
@@ -432,7 +433,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Enforce Card Limits — required */}
+					{/* Panel: Enforce Card Limits â€” required */}
 					{limitsNode && (
 						<div class="action-flow__wizard-panel" data-wizard-panel="winter-limits" data-learn-hash={limitsNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
@@ -459,7 +460,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 						</div>
 					)}
 
-					{/* Panel: Reset & Pass Key — required, last */}
+					{/* Panel: Reset & Pass Key â€” required, last */}
 					{resetNode && (
 						<div class="action-flow__wizard-panel" data-wizard-panel="winter-reset" data-learn-hash={resetNode.learnMoreHash ?? ''} hidden>
 							<div class="action-flow__wizard-step-head">
@@ -488,7 +489,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 				</>
 			)}
 
-		{/* ── Shared wizard navigation ─────────────────────────────── */}
+		{/* â”€â”€ Shared wizard navigation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
 		<div class="action-flow__wizard-nav" data-wizard-nav hidden>
 			<button
 				type="button"
@@ -534,7 +535,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 </div>
 
 <script>
-	// ── Helpers ────────────────────────────────────────────────────────────
+	// â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 	function getGuidedGameMode(): 'quickplay' | 'standard' | 'magnus' {
 		const raw = localStorage.getItem('kismeta-guided-progress');
@@ -561,7 +562,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 		return 'standard';
 	}
 
-	// ── Wizard state types & storage ───────────────────────────────────────
+	// â”€â”€ Wizard state types & storage â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 	const AUTUMN_WIZARD_KEY = 'kismeta-autumn-wizard';
 	const WINTER_WIZARD_KEY = 'kismeta-winter-wizard';
@@ -639,7 +640,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 		sessionStorage.setItem(WINTER_WIZARD_KEY, JSON.stringify(s));
 	}
 
-	// ── Wizard initialiser ─────────────────────────────────────────────────
+	// â”€â”€ Wizard initialiser â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 	function initWizard(root: HTMLElement): void {
 		const isAutumn = root.classList.contains('action-flow--autumn');
@@ -841,7 +842,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			}
 		});
 
-		// Gate Yes — reveal content in current panel, switch to Continue
+		// Gate Yes â€” reveal content in current panel, switch to Continue
 		gateYesBtn.addEventListener('click', () => {
 			const state = getState();
 			const panelId = sequence[state.index];
@@ -855,7 +856,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			updateNav(panelId, state.index);
 		});
 
-		// Gate No — store answer and advance to the next panel
+		// Gate No â€” store answer and advance to the next panel
 		gateNoBtn.addEventListener('click', () => {
 			const state = getState();
 			const panelId = sequence[state.index];
@@ -864,7 +865,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			navigate(1);
 		});
 
-		// Stone selection (autumn only) — rebuilds sequence and advances
+		// Stone selection (autumn only) â€” rebuilds sequence and advances
 		if (isAutumn) {
 			wizardEl.querySelectorAll<HTMLButtonElement>('[data-wizard-stone]').forEach((btn) => {
 				btn.addEventListener('click', () => {
@@ -912,7 +913,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			}
 		}
 
-	// Restore from session storage — clamp index in case sequence length changed
+	// Restore from session storage â€” clamp index in case sequence length changed
 	const initialState = getState();
 	initialState.index = Math.min(initialState.index, sequence.length - 1);
 	showPanel(sequence[initialState.index], initialState.index);
@@ -928,7 +929,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 	});
 }
 
-	// ── Action-detail dispatch (branch pick buttons) ───────────────────────
+	// â”€â”€ Action-detail dispatch (branch pick buttons) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 	function initActionFlowGuides() {
 		document.querySelectorAll<HTMLElement>('.action-flow--interactive').forEach((root) => {
@@ -997,3 +998,4 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 	document.addEventListener('astro:page-load', initActionFlowGuides);
 	initActionFlowGuides();
 </script>
+

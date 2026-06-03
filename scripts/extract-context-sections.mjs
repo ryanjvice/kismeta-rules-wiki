@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Extracts h2/h3 sections from guided-play source pages into JSON for the context sidebar.
  * Run via sync-guide.mjs after markdown is written.
  */
@@ -18,7 +18,7 @@ import { CONTEXT_SOURCE_PAGES } from './context-anchors.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
-const DOCS = path.join(ROOT, 'src', 'content', 'docs');
+const DOCS = path.join(ROOT, 'src', 'content', 'docs', 'games', 'alchemists-of-the-great-year');
 const OUT_DIR = path.join(ROOT, 'src', 'data', 'context-sections');
 
 const HEADING_LINE_RE = /^(#{2,3})\s+(.+?)(?:\s+\{#([^}]+)\})?\s*$/;
@@ -110,3 +110,4 @@ export async function extractContextSections() {
 	fs.writeFileSync(path.join(OUT_DIR, 'en.json'), JSON.stringify(en, null, 2), 'utf8');
 	console.log(`Wrote context sections: en (${Object.keys(en).length} pages).`);
 }
+

@@ -1,3 +1,4 @@
+﻿import { wikiSlug } from '../data/wiki-base';
 import { applyGameModeCallouts } from './game-modes';
 
 export type ContextPanelLabels = {
@@ -21,7 +22,7 @@ export type ContextDetail = {
 };
 
 function buildPageUrl(_locale: string, pagePath: string, hash: string) {
-	const base = `/${pagePath}/`.replace(/\/{2,}/g, '/');
+	const base = `/${wikiSlug(pagePath)}/`.replace(/\/{2,}/g, '/');
 	return hash ? `${base}#${hash}` : base;
 }
 
@@ -172,3 +173,4 @@ export function initContextPanels() {
 
 document.addEventListener('astro:page-load', initContextPanels);
 initContextPanels();
+

@@ -18,7 +18,9 @@ const EN_CONTEXT_ANCHORS = getContextAnchorHashes('en');
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const GUIDE = path.join(ROOT, 'Kismeta_GameGuide.md');
-const OUT = path.join(ROOT, 'src', 'content', 'docs');
+const WIKI_SEGMENT = 'games/alchemists-of-the-great-year';
+const WIKI_URL_PREFIX = '/games/alchemists-of-the-great-year';
+const OUT = path.join(ROOT, 'src', 'content', 'docs', WIKI_SEGMENT);
 const GLOSSARY_JSON = path.join(ROOT, 'src', 'data', 'glossary.json');
 
 /** Hand-maintained pages under synced folders — preserved when `play/` etc. are rebuilt. */
@@ -93,8 +95,8 @@ const SECTION_META = {
 const DRAFT_NOTICES = {};
 
 const SEE_LINKS = [
-  [/See GAME MODES: Quickplay/gi, 'See [Setup — Quickplay](/play/setup/#️⃣-quickplay--first-play)'],
-  [/See GAME MODES: Magnus Alchemist/gi, 'See [Setup — Magnus Alchemist](/play/setup/#️⃣-magnus-alchemist-mastery)'],
+  [/See GAME MODES: Quickplay/gi, `See [Setup — Quickplay](${WIKI_URL_PREFIX}/play/setup/#️⃣-quickplay--first-play)`],
+  [/See GAME MODES: Magnus Alchemist/gi, `See [Setup — Magnus Alchemist](${WIKI_URL_PREFIX}/play/setup/#️⃣-magnus-alchemist-mastery)`],
   [/pg\. 1/gi, ''],
 ];
 
@@ -368,3 +370,5 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
+
