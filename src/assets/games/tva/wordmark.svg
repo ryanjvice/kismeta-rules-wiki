@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" width="440" height="100" role="img" aria-label="The Veiled Ascent">
+  <defs>
+    <linearGradient id="tva-silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f4"/>
+      <stop offset="45%" stop-color="#9b8ec4"/>
+      <stop offset="100%" stop-color="#c9d1e0"/>
+    </linearGradient>
+  </defs>
+  <!-- ornamental rules -->
+  <line x1="24" y1="14" x2="186" y2="14" stroke="url(#tva-silver)" stroke-width="0.75" opacity="0.5"/>
+  <line x1="254" y1="14" x2="416" y2="14" stroke="url(#tva-silver)" stroke-width="0.75" opacity="0.5"/>
+  <!-- center crescent / ascent mark -->
+  <polygon points="220,9 225,14 220,19 215,14" fill="url(#tva-silver)" opacity="0.8"/>
+  <!-- primary title line -->
+  <text x="220" y="53" font-family="'Germania One', serif" font-size="30" fill="url(#tva-silver)" text-anchor="middle" letter-spacing="2">The Veiled</text>
+  <!-- subtitle line -->
+  <text x="220" y="82" font-family="'Germania One', serif" font-size="22" fill="url(#tva-silver)" text-anchor="middle" letter-spacing="6" opacity="0.88">ASCENT</text>
+  <!-- bottom rule -->
+  <line x1="48" y1="96" x2="392" y2="96" stroke="url(#tva-silver)" stroke-width="0.5" opacity="0.3"/>
+</svg>

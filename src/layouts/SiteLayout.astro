@@ -6,9 +6,10 @@ import '../styles/custom.css';
 interface Props {
 	title: string;
 	description?: string;
+	gameSlug?: string;
 }
 
-const { title, description = '' } = Astro.props;
+const { title, description = '', gameSlug } = Astro.props;
 const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 ---
 
@@ -29,7 +30,7 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 			href="https://fonts.googleapis.com/css2?family=Amarante&family=Germania+One&display=swap"
 		/>
 	</head>
-	<body class="site-layout">
+	<body class="site-layout" data-game={gameSlug}>
 		<a class="site-layout__skip" href="#main-content">Skip to content</a>
 		<SiteHeader />
 		<main id="main-content" class="site-layout__main">

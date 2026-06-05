@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" width="440" height="100" role="img" aria-label="Alchemists of the Great Year">
+  <defs>
+    <linearGradient id="agy-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe86c"/>
+      <stop offset="35%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#f89925"/>
+    </linearGradient>
+  </defs>
+  <!-- ornamental rules -->
+  <line x1="24" y1="14" x2="196" y2="14" stroke="url(#agy-gold)" stroke-width="0.75" opacity="0.55"/>
+  <line x1="244" y1="14" x2="416" y2="14" stroke="url(#agy-gold)" stroke-width="0.75" opacity="0.55"/>
+  <!-- center diamond -->
+  <polygon points="220,9 225,14 220,19 215,14" fill="url(#agy-gold)" opacity="0.85"/>
+  <!-- primary title line -->
+  <text x="220" y="55" font-family="'Germania One', serif" font-size="30" fill="url(#agy-gold)" text-anchor="middle" letter-spacing="1.5">Alchemists</text>
+  <!-- subtitle line -->
+  <text x="220" y="82" font-family="'Germania One', serif" font-size="17" fill="url(#agy-gold)" text-anchor="middle" letter-spacing="3.5" opacity="0.82">of the Great Year</text>
+  <!-- bottom rule -->
+  <line x1="48" y1="96" x2="392" y2="96" stroke="url(#agy-gold)" stroke-width="0.5" opacity="0.35"/>
+</svg>

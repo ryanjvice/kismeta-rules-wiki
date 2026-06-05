@@ -1,5 +1,6 @@
 ﻿---
 import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import logo from '../assets/logo.svg';
 
 export type MarketingAction = {
@@ -19,6 +20,9 @@ interface Props {
 	playTimeValue?: string;
 	statusLabel?: string;
 	actions: MarketingAction[];
+	heroImage?: ImageMetadata;
+	heroImageMobile?: ImageMetadata;
+	wordmarkImage?: ImageMetadata;
 }
 
 const {
@@ -32,65 +36,121 @@ const {
 	playTimeValue,
 	statusLabel,
 	actions,
+	heroImage,
+	heroImageMobile,
+	wordmarkImage,
 } = Astro.props;
 
 const showMeta = Boolean(playersValue || playTimeValue);
+const hasHero = Boolean(heroImage);
 ---
 
-<section class="game-marketing-hero" aria-labelledby="game-marketing-title">
-	<div class="game-marketing-hero__brand">
-		<Image src={logo} alt="" width={280} height={112} loading="eager" class="game-marketing-hero__logo" />
-		<p class="game-marketing-hero__subtitle">{subtitle}</p>
-		{statusLabel && <p class="game-marketing-hero__status">{statusLabel}</p>}
+<section
+	class:list={['game-marketing-hero', { 'game-marketing-hero--has-hero': hasHero }]}
+	aria-labelledby="game-marketing-title"
+>
+	{hasHero && (
+		<>
+			<Image
+				src={heroImage!}
+				alt=""
+				class="game-marketing-hero__hero-img"
+				widths={[768, 1280, 1920]}
+				sizes="100vw"
+				loading="eager"
+			/>
+			{heroImageMobile && (
+				<Image
+					src={heroImageMobile}
+					alt=""
+					class="game-marketing-hero__hero-img game-marketing-hero__hero-img--mobile"
+					widths={[480, 768]}
+					sizes="100vw"
+					loading="eager"
+				/>
+			)}
+			<div class="game-marketing-hero__scrim" aria-hidden="true"></div>
+		</>
+	)}
+
+	<div class="game-marketing-hero__content">
+		<div class="game-marketing-hero__brand">
+			{wordmarkImage ? (
+				<>
+					<Image
+						src={logo}
+						alt=""
+						width={160}
+						height={64}
+						loading="eager"
+						class="game-marketing-hero__logo game-marketing-hero__logo--small"
+					/>
+					<Image
+						src={wordmarkImage}
+						alt={subtitle}
+						width={380}
+						height={86}
+						loading="eager"
+						class="game-marketing-hero__wordmark"
+					/>
+				</>
+			) : (
+				<>
+					<Image src={logo} alt="" width={280} height={112} loading="eager" class="game-marketing-hero__logo" />
+					<p class="game-marketing-hero__subtitle">{subtitle}</p>
+				</>
+			)}
+			{statusLabel && <p class="game-marketing-hero__status">{statusLabel}</p>}
+		</div>
+
+		<div class="game-marketing-hero__copy">
+			<h1 id="game-marketing-title" class="game-marketing-hero__title">{title}</h1>
+			<p class="game-marketing-hero__tagline">{tagline}</p>
+		</div>
+
+		{
+			actions.length > 0 && (
+				<div class="game-marketing-hero__actions">
+					{
+						actions.map(({ href, label, variant = 'primary' }) => (
+							<a
+								href={href}
+								class:list={[
+									'game-marketing-hero__action',
+									`game-marketing-hero__action--${variant}`,
+								]}
+							>
+								{label}
+							</a>
+						))
+					}
+				</div>
+			)
+		}
+
+		<p class="game-marketing-hero__summary">{summary}</p>
+
+		{
+			showMeta && (
+				<dl class="game-marketing-hero__meta">
+					{
+						playersValue && playersLabel && (
+							<div class="game-marketing-hero__meta-item">
+								<dt>{playersLabel}</dt>
+								<dd>{playersValue}</dd>
+							</div>
+						)
+					}
+					{
+						playTimeValue && playTimeLabel && (
+							<div class="game-marketing-hero__meta-item">
+								<dt>{playTimeLabel}</dt>
+								<dd set:html={playTimeValue} />
+							</div>
+						)
+					}
+				</dl>
+			)
+		}
 	</div>
-
-	<div class="game-marketing-hero__copy">
-		<h1 id="game-marketing-title" class="game-marketing-hero__title">{title}</h1>
-		<p class="game-marketing-hero__tagline">{tagline}</p>
-	</div>
-
-	{
-		actions.length > 0 && (
-			<div class="game-marketing-hero__actions">
-				{
-					actions.map(({ href, label, variant = 'primary' }) => (
-						<a
-							href={href}
-							class:list={[
-								'game-marketing-hero__action',
-								`game-marketing-hero__action--${variant}`,
-							]}
-						>
-							{label}
-						</a>
-					))
-				}
-			</div>
-		)
-	}
-
-	<p class="game-marketing-hero__summary">{summary}</p>
-
-	{
-		showMeta && (
-			<dl class="game-marketing-hero__meta">
-				{
-					playersValue && playersLabel && (
-						<div class="game-marketing-hero__meta-item">
-							<dt>{playersLabel}</dt>
-							<dd>{playersValue}</dd>
-						</div>
-					)
-				}
-				{
-					playTimeValue && playTimeLabel && (
-						<div class="game-marketing-hero__meta-item">
-							<dt>{playTimeLabel}</dt>
-							<dd set:html={playTimeValue} />
-						</div>
-					)
-				}
-			</dl>
-		)
-	}
 </section>

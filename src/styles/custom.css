@@ -2372,6 +2372,52 @@ site-search button[data-open-modal]:hover {
   }
 }
 
+/* ── Per-game theming ─────────────────────────────────────────────────────── */
+/* Game slugs are stamped as data-game on <body> by SiteLayout.astro.
+   Each block sets game-specific CSS variables and overrides the page
+   background color so the whole shell takes on the game's palette. */
+
+[data-game="alchemists-of-the-great-year"] {
+  --kismeta-game-accent:       #c9a227;
+  --kismeta-game-accent-high:  #ffe86c;
+  --kismeta-game-secondary:    #d4782a;
+  --kismeta-game-bg-depth:     #1a0820;
+  --kismeta-game-bg-mid:       #2a1838;
+  --kismeta-game-hairline:     rgba(255, 200, 80, 0.15);
+  --kismeta-game-text-muted:   #c8b87a;
+  background: #120820;
+}
+
+[data-game="the-veiled-ascent"] {
+  --kismeta-game-accent:       #9b8ec4;
+  --kismeta-game-accent-high:  #e2e8f4;
+  --kismeta-game-secondary:    #c9d1e0;
+  --kismeta-game-bg-depth:     #0f1420;
+  --kismeta-game-bg-mid:       #1a2235;
+  --kismeta-game-hairline:     rgba(155, 142, 196, 0.2);
+  --kismeta-game-text-muted:   #8899bb;
+  background: #0a1020;
+}
+
+/* TVA primary and minimal actions use the game's accent color instead of gold */
+[data-game="the-veiled-ascent"] .game-marketing-hero__action--primary {
+  background: #9b8ec4;
+  color: #0a1020;
+}
+
+[data-game="the-veiled-ascent"] .game-marketing-hero__action--primary:hover {
+  background: #e2e8f4;
+}
+
+[data-game="the-veiled-ascent"] .game-marketing-hero__action--minimal {
+  color: #9b8ec4;
+  border-color: color-mix(in srgb, #9b8ec4 45%, transparent);
+}
+
+[data-game="the-veiled-ascent"] .game-marketing-hero__action--minimal:hover {
+  background: color-mix(in srgb, #9b8ec4 12%, transparent);
+}
+
 /* ── Marketing site shell (SiteLayout) ───────────────────────────────────── */
 
 .site-layout {
@@ -2615,6 +2661,34 @@ site-search button[data-open-modal]:hover {
 
 .game-card__cta:hover {
   background: var(--sl-color-accent-high);
+}
+
+/* Thumbnail image header on game cards */
+.game-card--has-thumb {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.game-card__thumb {
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  margin-inline: -1.25rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.game-card__thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.game-card:hover .game-card__thumb-img {
+  transform: scale(1.03);
 }
 
 .site-merch-teaser {
@@ -2887,4 +2961,103 @@ a.shop-links__card:hover {
 	font-size: 0.9rem;
 	line-height: 1.5;
 	color: color-mix(in srgb, var(--kismeta-cream) 65%, transparent);
+}
+
+/* ── Game marketing hero — content wrapper ───────────────────────────────── */
+/* In the no-hero case, __content inherits centering from the section.
+   In the has-hero case, __content provides its own centered, padded column. */
+
+.game-marketing-hero__content {
+	text-align: inherit;
+}
+
+/* ── Game marketing hero — full-bleed layout (has hero image) ──────────────── */
+/* Classic "full bleed inside a centered container" pattern:
+   width: 100vw + left: 50% + margin-left: -50vw pushes the section to the
+   viewport edges regardless of the parent's max-width. */
+
+.game-marketing-hero--has-hero {
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	margin-left: -50vw;
+	margin-top: -2rem;
+	max-width: none;
+	min-height: 88vh;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	text-align: center;
+}
+
+.game-marketing-hero__hero-img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	z-index: 0;
+}
+
+/* Mobile-specific image — hide by default, swap in at small sizes */
+.game-marketing-hero__hero-img--mobile {
+	display: none;
+}
+
+@media (max-width: 47.9375rem) {
+	.game-marketing-hero__hero-img:not(.game-marketing-hero__hero-img--mobile) {
+		display: none;
+	}
+	.game-marketing-hero__hero-img--mobile {
+		display: block;
+	}
+}
+
+/* Gradient scrim: darken top and bottom, leaving centre semi-transparent
+   so the artwork reads while ensuring text contrast on both ends. */
+.game-marketing-hero__scrim {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(
+		to bottom,
+		color-mix(in srgb, #0a0516 65%, transparent) 0%,
+		color-mix(in srgb, #0a0516 20%, transparent) 30%,
+		color-mix(in srgb, #0a0516 45%, transparent) 65%,
+		color-mix(in srgb, #0a0516 88%, transparent) 100%
+	);
+}
+
+[data-game="the-veiled-ascent"] .game-marketing-hero__scrim {
+	background: linear-gradient(
+		to bottom,
+		color-mix(in srgb, #060b14 65%, transparent) 0%,
+		color-mix(in srgb, #060b14 20%, transparent) 30%,
+		color-mix(in srgb, #060b14 45%, transparent) 65%,
+		color-mix(in srgb, #060b14 88%, transparent) 100%
+	);
+}
+
+.game-marketing-hero--has-hero .game-marketing-hero__content {
+	position: relative;
+	z-index: 2;
+	width: min(52rem, 100%);
+	margin: 0 auto;
+	padding: 5rem 1.5rem 3.5rem;
+}
+
+/* Smaller franchise logo when a game wordmark is also present */
+.game-marketing-hero__logo--small {
+	width: min(8rem, 40%);
+	height: auto;
+	margin: 0 auto 0.5rem;
+	opacity: 0.7;
+}
+
+/* Game wordmark image */
+.game-marketing-hero__wordmark {
+	width: min(22rem, 85%);
+	height: auto;
+	margin: 0 auto 0.25rem;
 }

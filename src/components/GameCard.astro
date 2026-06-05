@@ -1,15 +1,29 @@
 ﻿---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import type { Game } from '../data/games';
 import { siteT } from '../utils/site-i18n';
 
 interface Props {
 	game: Game;
+	thumbImage?: ImageMetadata;
 }
 
-const { game } = Astro.props;
+const { game, thumbImage } = Astro.props;
 ---
 
-<article class="game-card">
+<article class:list={['game-card', { 'game-card--has-thumb': thumbImage }]}>
+	{thumbImage && (
+		<a class="game-card__thumb" href={game.marketingPath} tabindex="-1" aria-hidden="true">
+			<Image
+				src={thumbImage}
+				alt=""
+				width={600}
+				height={800}
+				class="game-card__thumb-img"
+			/>
+		</a>
+	)}
 	<div class="game-card__header">
 		<h2 class="game-card__title">
 			<a href={game.marketingPath}>{game.title}</a>

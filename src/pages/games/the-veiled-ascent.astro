@@ -4,6 +4,9 @@ import { getGame } from '../../data/games';
 import { TVA_WIKI_PATH } from '../../data/wiki-base';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { siteT } from '../../utils/site-i18n';
+import tvaHero from '../../assets/games/tva/hero.png';
+import tvaHeroMobile from '../../assets/games/tva/hero-mobile.png';
+import tvaWordmark from '../../assets/games/tva/wordmark.svg';
 
 const game = getGame('the-veiled-ascent');
 if (!game) throw new Error('Missing Veiled Ascent game config');
@@ -40,7 +43,7 @@ const actions = [
 ];
 ---
 
-<SiteLayout {title} {description}>
+<SiteLayout {title} {description} gameSlug={game.slug}>
 	<GameMarketingHero
 		title={title}
 		subtitle={game.subtitle}
@@ -48,6 +51,9 @@ const actions = [
 		summary={siteT(game.summaryKey)}
 		playersLabel={siteT('site.meta.players')}
 		playersValue={siteT('game.tva.players')}
+		heroImage={tvaHero}
+		heroImageMobile={tvaHeroMobile}
+		wordmarkImage={tvaWordmark}
 		{actions}
 	/>
 </SiteLayout>

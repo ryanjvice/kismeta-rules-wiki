@@ -1,0 +1,37 @@
+{
+  "franchise": {
+    "goldAccent": "#c9a227",
+    "goldHigh": "#ffe86c",
+    "goldLow": "#f89925",
+    "goldDim": "#8a7020",
+    "purpleDeep": "#1a0f2e",
+    "purpleMid": "#2d1b4e",
+    "bgDark": "#0d0818",
+    "cream": "#f4efe6",
+    "onAccent": "#0d0818"
+  },
+  "games": {
+    "alchemists-of-the-great-year": {
+      "note": "Alchemical warmth — gold, ember, cosmic purple",
+      "accent": "#c9a227",
+      "accentHigh": "#ffe86c",
+      "secondaryAccent": "#d4782a",
+      "bgDepth": "#1a0820",
+      "bgMid": "#2a1838",
+      "bgPage": "#120820",
+      "hairline": "#4d2a10",
+      "textMuted": "#c8b87a"
+    },
+    "the-veiled-ascent": {
+      "note": "Veiled mystery — silver, indigo, pale violet",
+      "accent": "#9b8ec4",
+      "accentHigh": "#e2e8f4",
+      "secondaryAccent": "#c9d1e0",
+      "bgDepth": "#0f1420",
+      "bgMid": "#1a2235",
+      "bgPage": "#0a1020",
+      "hairline": "#2d3a5c",
+      "textMuted": "#8899bb"
+    }
+  }
+}
