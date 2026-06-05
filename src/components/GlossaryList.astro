@@ -1,18 +1,19 @@
 ﻿---
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { wikiSlug } from '../data/wiki-base';
 import glossaryEn from '../data/glossary.json';
 
 const locale = Astro.currentLocale ?? 'root';
 const glossary = glossaryEn;
 
 function pathFor(slug: string) {
-	return getRelativeLocaleUrl(locale, wikiSlug(slug));
+	return getRelativeLocaleUrl(locale, slug);
 }
 
 const termLinks: Record<string, string> = {
 	Opposition: pathFor('play/round-overview') + '#2-opposition',
 	Gambit: pathFor('play/round-overview') + '#6-gambit',
+	'Arcanum Gambit': pathFor('play/round-overview') + '#6-gambit',
+	Arrested: pathFor('play/round-overview') + '#6-gambit',
 	Harvest: pathFor('play/round-overview') + '#3-harvest-kismeta-cards',
 	'Alignment Points': pathFor('reference/quick-reference') + '#alignment-point-sources',
 	'Alignment Bonus': pathFor('reference/quick-reference') + '#alignment-scoring',

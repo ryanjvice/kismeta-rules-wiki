@@ -115,7 +115,7 @@ The Sun shines brightly as you busy yourself crafting resources and consorting w
 |                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                      |
 | **🤝 Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                               |
 | **🤺 Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                     |
-| **🎲 Gambit**                 | Match a rival's Active Crucible Card Alignment in your Spread, pay any Ward cost, and roll dice to seize it.     |
+| **🎲 Gambit**                 | Pay any Ward cost and roll dice to seize a rival's Active Crucible Card or Adept card, wagering one of your own in exchange.                                                     |
 
 ### 🎴 Activate Crucible Card
 
@@ -221,31 +221,36 @@ _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with your targe
 
 ### 🎲 Gambit
 
-A Gambit lets you seize a rival's Active Crucible Card by proving you have already mastered its Alignment requirements - at the cost of one of your own. Gambits may only be declared during Phase 2: Summer, and only when your Spread fully satisfies the target card's complete Alignment requirement at the moment of declaration.
+Challenge a rival to seize a card from their inventory by wagering one of your own in a dice roll showdown. A Gambit may target either an opponent's Active Crucible Card (**Crucible Gambit**) or an opponent's Adept card (**Arcanum Gambit**). Both follow the same procedure.
 
-#### How to Instigate a Gambit:
+#### How to Declare a Gambit:
 
-- **Identify the target:** Point to the rival's Active Crucible Card your Spread satisfies. Demonstrate that your Spread meets its full Alignment requirement.
-- **Name your offer:** Declare which of your own Active Crucible Cards you are putting up in exchange.
+- **Name Your Target:**
+  - *Crucible Gambit:* Choose an Active Crucible Card in a rival's inventory.
+  - *Arcanum Gambit:* Choose any Adept card in a rival's Arcanum — Active, Arrested, or face-down.
+- **Name Your Offer:**
+  - *Crucible Gambit:* Declare one of your own Active Crucible Cards as your stake.
+  - *Arcanum Gambit:* Declare one of your own Active Adept cards as your stake. An Arrested Adept cannot be offered.
 - **Pay the entry fee:** Pay Reagents from your supply equal in number to the Defender's Ward on the targeted card. You may pay with any Reagent types in any combination — type-matching is not required. No Ward = no fee.
 - **Roll:** Both players roll their Zodiac Dice. Apply any card effects that modify Gambits before comparing results.
 - **Resolve:** See outcomes below.
 
-| GAMBIT RESULTS   |                                                                                                                                                     |                             |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **Result**       | **Challenger**                                                                                                                                      | **Defender**                |
-| Challenger Wins  | The two Active Crucible Cards swap positions.                                                                                                       | Ward Reagents are spent.    |
-| Challenger Loses | Offered card is Arrested (face-down, sideways; cannot Fire this round; resets to Active next round). Cannot re-Gambit the same Defender this round. | Ward Reagents are returned. |
+| GAMBIT RESULTS   |                                                                                                                                                                                    |                                                             |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Result**       | **Challenger**                                                                                                                                                                     | **Defender**                                                |
+| Challenger Wins  | The two cards swap. If the targeted card was Arrested or face-down, it arrives Active in the Challenger's inventory — no Salt cost applies.                                        | Receives the Challenger's offered card. Ward Reagents are spent. |
+| Challenger Loses | The offered card is Arrested (face-down, sideways; effect inactive; pay 1 Salt during your Summer turn to free it). Cannot re-Gambit the same Defender this round. | Ward Reagents are returned.                                 |
 
-#### Ward Reagents on Crucible Cards
+#### Ward Reagents on Gambits
 
-During your turn in Phase 2, you may place Reagents directly on any Active Crucible Card as Ward Reagents. These set the entry fee that any Challenger must pay to Gambit for that card.
+During your Summer turn, you may place Reagents directly onto any of your Active Crucible Cards or Adept cards as Ward Reagents. These set the entry fee any Challenger must pay to Gambit for that card.
 
 - Wards may not be placed reactively once a Gambit has been declared.
 - No limit to the number of Reagents placed on a single card.
 - Ward Reagents are spent if the Challenger wins; returned if the Challenger loses.
-- Wards are permanent once placed and cannot be moved until the card is Fired.
-- Ward Reagents CAN be used to satisfy the card's own Alchemical Formula requirements.
+- Wards on Crucible Cards are permanent once placed and cannot be moved until the card is Fired.
+- Ward Reagents on Adept cards do not travel with the card when it changes hands — they are always spent or returned at resolution.
+- Ward Reagents on a Crucible Card can be used to satisfy that card's own Alchemical Formula requirements.
 
 <div class="game-mode-callout" data-modes="magnus">
 _⚙️ **Game Mode Modifier (Magnus Alchemist):** If Misaligned with the Defender at declaration, add +1 to the Challenger's dice roll. The Defender receives no bonus._
@@ -302,7 +307,7 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 | Dormant   | Face-down; Coal on top     | The Alchemical Formula is hidden. Awaiting activation.                                                      |
 | Active    | Face-up; Coal removed      | The Alchemical Formula is revealed; working toward completion. Multiple cards may be Active simultaneously. |
 | Fired     | Face-up; Turned sideways   | The Alchemical Formula executed; the Stone is in the Forge. Only one card may be Fired at a time.           |
-| Arrested  | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired this round. Resets to Active next round.                         |
+| Arrested  | Face-down; Turned sideways | Result of a failed Gambit. Cannot be Fired. Pay 1 Salt during your Summer turn to free it.                  |
 | Discarded | Removed from play          | Card discarded when Stone Tempers to the next Mantle Ring. Stage complete.                                  |
 
 ### 2️⃣ Opposition ⚔️ {#2-opposition}

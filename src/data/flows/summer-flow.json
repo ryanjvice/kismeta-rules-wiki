@@ -66,7 +66,7 @@
             "id": "gambit",
             "label": "🎲 Gambit",
             "kind": "optional",
-            "body": "Summer only. Show your Spread satisfies a rival's Active Crucible Card Alignment; pay any Ward Reagent entry fee; roll dice — winner swaps the two Active Crucible Cards.",
+            "body": "Name a rival's Active Crucible Card (Crucible Gambit) or Adept card (Arcanum Gambit) as your target, and declare one of your own as your stake; pay any Ward entry fee; roll dice — a Challenger win swaps the two cards, a Challenger loss Arrests your offered card (pay 1 Salt on a future Summer turn to free it).",
             "learnMoreHash": "6-gambit"
           }
         ]

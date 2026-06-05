@@ -28,8 +28,12 @@
     "definition": "One of three card zones in a player's inventory. Holds Major Arcana cards only. Adept cards reside here permanently (up to 2) with persistent effects active across rounds. Fate cards are placed here immediately when drawn, resolve their effect, and are discarded at round's end. Cannot be used for Duels, Trades, Crucible activation, Alignments, or Wagers."
   },
   {
+    "term": "Arcanum Gambit",
+    "definition": "A Summer action to seize a rival's Adept card by wagering one of your own Active Adept cards. See Gambit."
+  },
+  {
     "term": "Arrested",
-    "definition": "The state of an Active Crucible Card after its owner loses a Gambit challenge. The card is placed face-down and sideways — it cannot be Fired this round. It automatically resets to Active at the start of the following round."
+    "definition": "The state of a card after its owner loses a Gambit. Placed face-down and sideways — effect inactive, no Aspects contributed. Pay 1 Salt during your Summer turn to free it."
   },
   {
     "term": "Aspects",
@@ -93,7 +97,7 @@
   },
   {
     "term": "Gambit",
-    "definition": "A Summer action to seize a rival's Active Crucible Card by demonstrating your Spread satisfies its Alignment, at the cost of surrendering one of your own Active Crucible Cards."
+    "definition": "A Summer dice roll challenge to seize a rival's card by wagering one of your own. Targets either an Active Crucible Card (Crucible Gambit) or an Adept card (Arcanum Gambit)."
   },
   {
     "term": "Great Work",
@@ -181,6 +185,6 @@
   },
   {
     "term": "Ward Reagent",
-    "definition": "A Reagent placed on the 🛡️ symbol beside a Forging Stone or Active Crucible Card. Sets the entry fee any Challenger must pay before declaring Opposition or a Gambit against that position. Challengers pay a number of Reagents equal to the Ward — of any type or combination. Type-matching is not required. Salt may be used as a Ward Reagent."
+    "definition": "A Reagent placed on the 🛡️ symbol beside a Forging Stone, Active Crucible Card, or Adept card. Sets the entry fee any Challenger must pay before declaring Opposition or a Gambit against that target. Challengers pay a number of Reagents equal to the Ward — of any type or combination. Type-matching is not required. Salt may be used as a Ward Reagent."
   }
 ]
