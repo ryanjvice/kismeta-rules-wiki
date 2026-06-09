@@ -92,8 +92,24 @@ h1#_top,
     gap: 0.5rem;
   }
 
+  /* Stack game title under the Kismeta logo so it is not clipped by search controls */
+  .kismeta-header-wrap .title-wrapper {
+    overflow: visible;
+  }
+
   .kismeta-header-wrap .site-title {
-    font-size: clamp(1rem, 4vw, var(--sl-text-h4));
+    flex-direction: column;
+    align-items: flex-start;
+    white-space: normal;
+    font-size: inherit;
+    gap: 0.15rem;
+  }
+
+  .kismeta-header-wrap .site-title span {
+    overflow: visible;
+    white-space: normal;
+    line-height: 1.15;
+    font-size: clamp(0.75rem, 3.2vw, 0.95rem);
   }
 
   .kismeta-header-wrap .site-title img {
