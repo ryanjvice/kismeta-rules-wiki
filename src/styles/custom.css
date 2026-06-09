@@ -2420,6 +2420,13 @@ site-search button[data-open-modal]:hover {
 
 /* ── Marketing site shell (SiteLayout) ───────────────────────────────────── */
 
+.site-layout,
+.site-layout *,
+.site-layout *::before,
+.site-layout *::after {
+  box-sizing: border-box;
+}
+
 .site-layout {
   min-height: 100dvh;
   display: flex;
@@ -2428,6 +2435,8 @@ site-search button[data-open-modal]:hover {
   background: var(--kismeta-purple-deep);
   color: var(--kismeta-cream);
   font-family: var(--kismeta-font-body);
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .site-layout__skip {
@@ -2563,6 +2572,10 @@ site-search button[data-open-modal]:hover {
   gap: 1.25rem;
 }
 
+.site-games-grid > * {
+  min-width: 0;
+}
+
 .game-card {
   display: flex;
   flex-direction: column;
@@ -2579,6 +2592,7 @@ site-search button[data-open-modal]:hover {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
+  overflow-wrap: break-word;
 }
 
 .game-card__title a {
@@ -2620,7 +2634,7 @@ site-search button[data-open-modal]:hover {
 
 .game-card__meta {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
   gap: 0.75rem 1rem;
   margin: 0;
 }
@@ -2973,14 +2987,15 @@ a.shop-links__card:hover {
 
 /* ── Game marketing hero — full-bleed layout (has hero image) ──────────────── */
 /* Classic "full bleed inside a centered container" pattern:
-   width: 100vw + left: 50% + margin-left: -50vw pushes the section to the
-   viewport edges regardless of the parent's max-width. */
+   width: 100dvw + left: 50% + margin-left: -50dvw pushes the section to the
+   viewport edges regardless of the parent's max-width. dvw excludes the
+   scrollbar width, preventing horizontal overflow on desktop. */
 
 .game-marketing-hero--has-hero {
 	position: relative;
-	width: 100vw;
+	width: 100dvw;
 	left: 50%;
-	margin-left: -50vw;
+	margin-left: -50dvw;
 	margin-top: -2rem;
 	max-width: none;
 	min-height: 88vh;
