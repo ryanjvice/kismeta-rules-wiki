@@ -10,7 +10,7 @@ export const shopLinks: ShopLink[] = [
 	{
 		id: "official",
 		labelKey: "shop.link.official",
-		href: "#",
+		href: "https://kismeta.printful.me/",
 		descriptionKey: "shop.link.officialDesc",
 	},
 ];
