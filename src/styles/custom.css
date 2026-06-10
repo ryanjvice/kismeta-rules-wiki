@@ -318,10 +318,12 @@ main:has(.kismeta-lore) h1#_top,
 .tab-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.25rem;
   padding: 0.5rem 1rem;
   background: var(--sl-color-bg-nav);
   border-bottom: 1px solid var(--sl-color-hairline);
+  transition: padding 0.2s ease;
 }
 
 .tab-nav__link {
@@ -344,6 +346,51 @@ main:has(.kismeta-lore) h1#_top,
 .tab-nav__link--active {
   color: var(--kismeta-on-accent);
   background: var(--sl-color-accent);
+}
+
+/* Tab nav toggle button */
+.tab-nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: var(--sl-color-gray-3);
+  transition: color 0.15s, background 0.15s;
+}
+
+.tab-nav__toggle:hover,
+.tab-nav__toggle:focus-visible {
+  color: var(--sl-color-text);
+  background: color-mix(in srgb, var(--sl-color-accent) 15%, transparent);
+  outline: 2px solid var(--sl-color-accent);
+  outline-offset: 1px;
+}
+
+.tab-nav__toggle-icon {
+  transition: transform 0.2s ease;
+}
+
+/* Collapsed state — hide tabs, keep the toggle button visible */
+.tab-nav[data-collapsed] {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  flex-wrap: nowrap;
+}
+
+.tab-nav[data-collapsed] .tab-nav__link {
+  display: none;
+}
+
+.tab-nav[data-collapsed] .tab-nav__toggle-icon {
+  transform: rotate(180deg);
 }
 
 /* ── Game-branded header button borders ──────────────────────────────────── */
@@ -629,6 +676,18 @@ site-search button[data-open-modal]:hover {
     display: inline-flex;
     align-items: center;
     font-size: 0.85rem;
+  }
+
+  /* Collapsed: restore compact padding override */
+  .tab-nav[data-collapsed] {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    overflow-x: hidden;
+  }
+
+  /* Ensure collapsed links stay hidden on mobile despite inline-flex override above */
+  .tab-nav[data-collapsed] .tab-nav__link {
+    display: none;
   }
 }
 

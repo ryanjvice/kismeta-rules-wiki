@@ -74,6 +74,8 @@
   "flow.wizardStepOf": "Step {current} of {total}",
   "sidebar.collapse": "Collapse sidebar",
   "sidebar.expand": "Expand sidebar",
+  "tabnav.collapse": "Collapse navigation tabs",
+  "tabnav.expand": "Expand navigation tabs",
   "flow.yes": "Yes",
   "flow.noSkip": "No, skip",
   "flow.autumnDoneMessage": "You've completed your Autumn turn.",

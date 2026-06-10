@@ -42,7 +42,13 @@ if (config) {
 
 {
 	config && (
-		<nav class="tab-nav" aria-label="Rules sections">
+		<nav
+			class="tab-nav"
+			aria-label="Rules sections"
+			data-tab-nav
+			data-label-collapse={t('tabnav.collapse')}
+			data-label-expand={t('tabnav.expand')}
+		>
 			{resolvedTabs.map(({ href, label, active }) => (
 				<a
 					href={href}
@@ -52,6 +58,68 @@ if (config) {
 					{label}
 				</a>
 			))}
+			<button
+				type="button"
+				class="tab-nav__toggle"
+				data-tab-nav-toggle
+				aria-expanded="true"
+				aria-label={t('tabnav.collapse')}
+			>
+				<svg
+					class="tab-nav__toggle-icon"
+					aria-hidden="true"
+					width="14"
+					height="14"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M18 15l-6-6-6 6"/>
+				</svg>
+			</button>
 		</nav>
 	)
 }
+
+<script>
+	const STORAGE_KEY = 'kismeta-tabnav-collapsed';
+
+	function applyTabNavState(nav: HTMLElement, collapsed: boolean) {
+		if (collapsed) {
+			nav.dataset.collapsed = 'true';
+		} else {
+			delete nav.dataset.collapsed;
+		}
+		const btn = nav.querySelector<HTMLButtonElement>('[data-tab-nav-toggle]');
+		if (btn) {
+			btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+			btn.setAttribute(
+				'aria-label',
+				collapsed ? (nav.dataset.labelExpand ?? '') : (nav.dataset.labelCollapse ?? '')
+			);
+		}
+	}
+
+	function initTabNav() {
+		const nav = document.querySelector<HTMLElement>('[data-tab-nav]');
+		if (!nav || nav.dataset.bound === 'true') return;
+		nav.dataset.bound = 'true';
+
+		const stored = localStorage.getItem(STORAGE_KEY) === 'true';
+		applyTabNavState(nav, stored);
+
+		const btn = nav.querySelector<HTMLButtonElement>('[data-tab-nav-toggle]');
+		btn?.addEventListener('click', () => {
+			const isCollapsed = nav.dataset.collapsed === 'true';
+			const next = !isCollapsed;
+			applyTabNavState(nav, next);
+			localStorage.setItem(STORAGE_KEY, String(next));
+		});
+	}
+
+	document.addEventListener('astro:page-load', initTabNav);
+	initTabNav();
+</script>

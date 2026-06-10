@@ -35,6 +35,13 @@ const wikiConfig = getWikiNav(Astro.url.pathname);
 			document.documentElement.dataset.kismetaFontSize = _fs;
 		}
 	} catch (_) {}
+	// Apply stored tab-nav-collapsed state before first paint to prevent flash.
+	try {
+		if (localStorage.getItem('kismeta-tabnav-collapsed') === 'true') {
+			var _nav = document.querySelector('[data-tab-nav]');
+			if (_nav) { _nav.dataset.collapsed = 'true'; }
+		}
+	} catch (_) {}
 </script>
 
 <script>
