@@ -12,18 +12,18 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
 - Set the following components within easy reach:
   - 1 Agekeeper's Key: 1 black pawn game piece; _(or a magical trinket from your home.)_
   - 1 Cosmic Age Dice: (12-sided Die, black)
-  - Reagents: Sort by color and keep nearby.
+  - Reagents: Keep nearby.
 
 ## II. Become an Alchemist {#ii-become-an-alchemist}
 
 Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.
 
-- **1 Cauldron Codex:** Dual-sided card; Cauldron Codex & Quick Reference Guide on reverse.
+- **1 Crucible Codex:** Dual-sided card; Crucible Codex & Quick Reference Guide on reverse.
 - **4 Coals:** Small black crystal pieces; Keep these nearby.
 
 ### Components of a matching color:
 
-- **3 Astral House Tokens**
+- **4 Astral House Tokens**
 - **1 Meeple:** Wooden game piece; Keep this nearby.
 - **1 Philosopher's Stone:** Place this on the "START" space in your section of the Mantle Ring.
 - **1 Zodiac Die:** 12-sided Die, matching your chosen color; Keep this nearby.
@@ -85,9 +85,9 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 | GAME MODE ➡️             | 1️⃣ QUICKPLAY BEGINNER |       |       |       | 2️⃣ STANDARD BALANCED |       |       |       | 3️⃣ MAGNUS ALCHEMIST MASTERY |       |       |       |
 | ------------------------ | --------------------- | ----- | ----- | ----- | -------------------- | ----- | ----- | ----- | --------------------------- | ----- | ----- | ----- |
 | **PLAYERS ⬇️**           | **A**                 | **B** | **C** | **D** | **A**                | **B** | **C** | **D** | **A**                       | **B** | **C** | **D** |
-| **2 PLAYERS (8 Cards)**  | 4                     | 3     | 1     | 0     | 1                    | 3     | 3     | 1     | 1                           | 2     | 3     | 2     |
-| **3 PLAYERS (12 Cards)** | 4                     | 6     | 2     | 0     | 2                    | 4     | 4     | 2     | 1                           | 3     | 5     | 3     |
-| **4 PLAYERS (16 Cards)** | 4                     | 7     | 5     | 0     | 2                    | 6     | 6     | 2     | 1                           | 5     | 6     | 4     |
+| **2 PLAYERS (8 Cards)**  | 3                     | 4     | 1     | 0     | 1                    | 4     | 2     | 1     | 0                           | 2     | 4     | 2     |
+| **3 PLAYERS (12 Cards)** | 3                     | 6     | 3     | 0     | 2                    | 5     | 4     | 1     | 0                           | 3     | 6     | 3     |
+| **4 PLAYERS (16 Cards)** | 4                     | 7     | 5     | 0     | 2                    | 7     | 5     | 2     | 0                           | 5     | 7     | 4     |
 
 **II. RANDOM BUILDS: Let The Fates Decide (Random Difficulty)**
 

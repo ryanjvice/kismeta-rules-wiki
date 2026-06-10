@@ -64,8 +64,8 @@ The Fates themselves will visit you throughout the course of the game to test yo
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Cauldron Codex card sets and other contexts.
-- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Crucible Codex card sets and other contexts.
+- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
 ## Commune: Spread, Hand & Arcanum Zones

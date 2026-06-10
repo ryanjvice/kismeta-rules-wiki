@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { logos } from 'virtual:starlight/user-images';
 import config from 'virtual:starlight/user-config';
 import { getWikiNav } from '../data/wiki-nav';
@@ -12,20 +13,22 @@ const displayTitle = wikiConfig?.gameLabel ?? siteTitle;
 	{
 		config.logo && logos.dark && (
 			<>
-				<img
+				<Image
 					class:list={{ 'light:sl-hidden print:hidden': !('src' in config.logo) }}
 					alt={config.logo.alt}
-					src={logos.dark.src}
+					src={logos.dark}
 					width={logos.dark.width}
 					height={logos.dark.height}
+					loading="eager"
 				/>
-				{!('src' in config.logo) && (
-					<img
+				{!('src' in config.logo) && logos.light && (
+					<Image
 						class="dark:sl-hidden print:block"
 						alt={config.logo.alt}
-						src={logos.light?.src}
-						width={logos.light?.width}
-						height={logos.light?.height}
+						src={logos.light}
+						width={logos.light.width}
+						height={logos.light.height}
+						loading="eager"
 					/>
 				)}
 			</>

@@ -56,10 +56,6 @@
     "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by a Coal. See the Correspondence table."
   },
   {
-    "term": "Cauldron Codex",
-    "definition": "A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance."
-  },
-  {
     "term": "Coal",
     "definition": "A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Coals cannot be moved once placed."
   },
@@ -74,6 +70,10 @@
   {
     "term": "Cosmic Effect",
     "definition": "Each Sign's Cosmic Effect operates on two levels. The Cosmic Age Effect, set by the Agekeeper's roll, applies to all players for the entire round. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If a player's Sign matches the Cosmic Age, the effect is simply active — it does not apply twice. See the Cosmic Ages & Effects table in the Reference Appendix."
+  },
+  {
+    "term": "Crucible Codex",
+    "definition": "A player's personal card listing the four Activation Formulas (one per Crucible Card) and which Cauldron each Coal lights — separate from the Alchemical Formula used later to Fire. See Setup; Summer: Activate Crucible Card."
   },
   {
     "term": "Duel",
@@ -141,11 +141,11 @@
   },
   {
     "term": "Rank",
-    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Crucible Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Rank Points (RP)",
-    "definition": "The numerical value of a card based on its Rank. Used for the Cauldron Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical value of a card based on its Rank. Used for the Crucible Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Reagent",

@@ -26,4 +26,4 @@ Keep your Stone protected in the Forge, for opposing Alchemists may challenge yo
 Ultimately, the first Alchemist to complete all four Crucible Cards and carry their Stone through every Stage of Transformation to the Altar of Kismeta will finish the Great Work and claim victory.
 
 All Hail! All Hail!
-The Magnus Alchemist Grandis Illuminatus ex Kismeta!
+The Magnus Alchemista Grandis Illuminatus ex Kismeta!

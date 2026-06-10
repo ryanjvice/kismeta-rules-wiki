@@ -58,9 +58,9 @@ Kismeta: Alchemists of the Great Year is a strategic card-and-dice game where yo
 **Board & Cards**
 
 - **1 Great Year Board**
-- **Kismeta Card Deck** (134 Cards: 112 Minor Arcana + 22 Major Arcana: 11 Adept, 11 Fate)
+- **Kismeta Card Deck** (134 Cards: 112 Minor Arcana + 22 Major Arcana: 12 Adept, 10 Fate)
 - **Crucible Card Deck** (22 Cards: Groups A, B, C, D; 4 per player; per game)
-- **4 Cauldron Codex Cards** (1 per player; dual-sided: Codex + Quick Reference Guide)
+- **4 Crucible Codex Cards** (1 per player; dual-sided: Codex + Quick Reference Guide)
 
 **Dice**
 
@@ -101,7 +101,7 @@ Keep your Stone protected in the Forge, for opposing Alchemists may challenge yo
 Ultimately, the first Alchemist to complete all four Crucible Cards and carry their Stone through every Stage of Transformation to the Altar of Kismeta will finish the Great Work and claim victory.
 
 All Hail! All Hail!
-The Magnus Alchemist Grandis Illuminatus ex Kismeta!
+The Magnus Alchemista Grandis Illuminatus ex Kismeta!
 
 ---
 
@@ -116,18 +116,18 @@ The Magnus Alchemist Grandis Illuminatus ex Kismeta!
 - Set the following components within easy reach:
   - 1 Agekeeper's Key: 1 black pawn game piece; _(or a magical trinket from your home.)_
   - 1 Cosmic Age Dice: (12-sided Die, black)
-  - Reagents: Sort by color and keep nearby.
+  - Reagents: Keep nearby.
 
 ## II. Become an Alchemist
 
 Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.
 
-- **1 Cauldron Codex:** Dual-sided card; Cauldron Codex & Quick Reference Guide on reverse.
+- **1 Crucible Codex:** Dual-sided card; Crucible Codex & Quick Reference Guide on reverse.
 - **4 Coals:** Small black crystal pieces; Keep these nearby.
 
 ### Components of a matching color:
 
-- **3 Astral House Tokens**
+- **4 Astral House Tokens**
 - **1 Meeple:** Wooden game piece; Keep this nearby.
 - **1 Philosopher's Stone:** Place this on the "START" space in your section of the Mantle Ring.
 - **1 Zodiac Die:** 12-sided Die, matching your chosen color; Keep this nearby.
@@ -183,9 +183,9 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 | GAME MODE ➡️             | 1️⃣ QUICKPLAY BEGINNER |       |       |       | 2️⃣ STANDARD BALANCED |       |       |       | 3️⃣ MAGNUS ALCHEMIST MASTERY |       |       |       |
 | ------------------------ | --------------------- | ----- | ----- | ----- | -------------------- | ----- | ----- | ----- | --------------------------- | ----- | ----- | ----- |
 | **PLAYERS ⬇️**           | **A**                 | **B** | **C** | **D** | **A**                | **B** | **C** | **D** | **A**                       | **B** | **C** | **D** |
-| **2 PLAYERS (8 Cards)**  | 4                     | 3     | 1     | 0     | 1                    | 3     | 3     | 1     | 1                           | 2     | 3     | 2     |
-| **3 PLAYERS (12 Cards)** | 4                     | 6     | 2     | 0     | 2                    | 4     | 4     | 2     | 1                           | 3     | 5     | 3     |
-| **4 PLAYERS (16 Cards)** | 4                     | 7     | 5     | 0     | 2                    | 6     | 6     | 2     | 1                           | 5     | 6     | 4     |
+| **2 PLAYERS (8 Cards)**  | 3                     | 4     | 1     | 0     | 1                    | 4     | 2     | 1     | 0                           | 2     | 4     | 2     |
+| **3 PLAYERS (12 Cards)** | 3                     | 6     | 3     | 0     | 2                    | 5     | 4     | 1     | 0                           | 3     | 6     | 3     |
+| **4 PLAYERS (16 Cards)** | 4                     | 7     | 5     | 0     | 2                    | 7     | 5     | 2     | 0                           | 5     | 7     | 4     |
 
 **II. RANDOM BUILDS: Let The Fates Decide (Random Difficulty)**
 
@@ -290,7 +290,7 @@ Each player receives the Cosmic Effect listed for their own rolled Sign, active 
 
 ### 3️⃣ Harvest Kismeta Cards
 
-All players earn a base of 2 Kismeta Cards at the start of every Harvest. You can earn additional Bonus Cards by aligning items from your inventory with the Cosmic Age's Aspects. Each player calculates their own total; the Agekeeper confirms and deals the full Harvest.
+All players earn a base of 3 Kismeta Cards at the start of every Harvest. You can earn additional Bonus Cards by aligning items from your inventory with the Cosmic Age's Aspects. Each player calculates their own total; the Agekeeper confirms and deals the full Harvest.
 
 #### Harvest Sources
 
@@ -316,7 +316,7 @@ All players earn a base of 2 Kismeta Cards at the start of every Harvest. You ca
 
 | STEP                      | ACTION                                                                                                                                                                     |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Base Harvest           | All players begin with 2 cards. This is always granted regardless of Alignment.                                                                                            |
+| 1. Base Harvest           | All players begin with 3 cards. This is always granted regardless of Alignment.                                                                                            |
 | 2. Calculate Bonus Cards  | Each player tallies bonus cards from all applicable Harvest Sources using the Bonus Scoring table above. (Zodiac Die + Astral Houses + Adept Cards + Spread Element Match) |
 | 3. Agekeeper's Boon       | If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally.                                                                  |
 | 4. Deal the Harvest       | The Agekeeper deals each player their full Harvest total face down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered)                                         |
@@ -326,20 +326,20 @@ All players earn a base of 2 Kismeta Cards at the start of every Harvest. You ca
 
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
-| 💡 EXAMPLE: SCORPIO AGE (Scorpio, Pluto, Water) |                                                 |                 |
+| 💡 EXAMPLE: SCORPIO AGE (Scorpio, Mars, Water) |                                                 |                 |
 | ----------------------------------------------- | ----------------------------------------------- | --------------- |
 | **SOURCE**                                      | **ASPECT MATCHED**                              | **BONUS CARDS** |
 | Zodiac Die: Scorpio                             | Sign match (Scorpio = Scorpio) → highest Aspect | +3              |
-| Spread: 7 of Cups                               | Element match (Water = Water)                   | +1              |
+| Spread: 7 of Pentacles                          | Planet match (Mars = Mars)                      | +2              |
 | Spread: Knight of Cups                          | Element match (Water = Water)                   | +1              |
 | Astral House: Pisces                            | Element match (Water = Water)                   | +1              |
-| Adept Card: The High Priestess                  | Element match (Moon → Water)                    | +1              |
-| Base Harvest                                    | 2 cards always dealt regardless of Alignment    | +2              |
-| **TOTAL HARVEST**                               |                                                 | **9 cards**     |
+| Adept Card: The Hierophant                      | Sign match (Scorpio = Scorpio)                  | +3              |
+| Base Harvest                                    | 3 cards always dealt regardless of Alignment    | +3              |
+| **TOTAL HARVEST**                               |                                                 | **13 cards**    |
 
 ### 4️⃣ Commune with the Kismeta Cards
 
-Now that you have your Kismeta Cards for the Age, it's time to commune with them. Cards you place in your Spread will have active effects that influence gameplay in many ways. Spread cards can be used to complete card sets for your Cauldron Codex and Crucible cards' Alchemical Formulas, or to craft Reagents. They are vulnerable to being lost in duels and serve other functions in the game.
+Now that you have your Kismeta Cards for the Age, it's time to commune with them. Cards you place in your Spread will have active effects that influence gameplay in many ways. Spread cards can be used to complete card sets for your Crucible Codex and Crucible cards' Alchemical Formulas, or to craft Reagents. They are vulnerable to being lost in duels and serve other functions in the game.
 
 The cards you hold privately are your Hand cards. They can be used to craft Reagents and in Oppositions, but do not have active effects and cannot be used to complete card sets. They cannot be lost in duels.
 
@@ -374,15 +374,22 @@ The Sun shines brightly as you busy yourself crafting resources and consorting w
 
 ### 🎴 Activate Crucible Card
 
-Your Cauldron Codex holds four Formulae - one per card position (I–IV). Activate each card by collecting and discarding the matching card set. You may activate any number in any order, and may do so in Phase 2: Summer or Phase 3: Autumn.
+Your Crucible Codex holds four Activation Formulas — one for each of your four Crucible Cards. Each Formula is a card set you collect in your Spread and then discard to Activate the matching Crucible Card (flipping it face-up). Each Formula sits beside a colored Cauldron icon (🔴 Red, 🔵 Blue, 🟢 Green, 🟡 Yellow), telling you which Cauldron you must light when you Activate that card. You may activate any number in any order, and may do so in Phase 2: Summer or Phase 3: Autumn.
 
 #### How to Activate:
 
-- **Consult your Codex:** Follow the Codex for formulas of card sets you'll need to collect.
+- **Consult your Codex:** Find the Activation Formula for the Crucible Card you want to Activate and note its Cauldron color.
 - **Assemble the card set:** Collect the required cards in your Spread.
 - **Discard the card set:** Remove all cards in the set from your Spread.
-- **Light a Cauldron:** Move the Coal from the Crucible Card into any Cauldron of your choice. That Cauldron is now lit — its Reagent type can be crafted for the rest of the game.
+- **Light a Cauldron:** Move the Coal from the Crucible Card into the Cauldron whose color is shown beside that Formula on your Codex. That Cauldron is now lit — its Reagent type can be crafted for the rest of the game.
 - **Activate the Crucible Card:** Flip the card face-up to Activate it. Each Crucible card reveals an Alchemical Formula that is necessary to advance your Philosopher's Stone one step closer to the Altar of Kismeta.
+
+| CAULDRON  | CODEX A                    | CODEX B               | CODEX C               | CODEX D                    |
+| --------- | -------------------------- | --------------------- | --------------------- | -------------------------- |
+| 🔴 Red    | Any Three Mars             | 25 Total Ranks · Wands     | Any Three Mars        | 25 Total Ranks · Wands     |
+| 🔵 Blue   | Any Three Venus            | 25 Total Ranks · Cups      | 25 Total Ranks · Cups | Any Three Venus            |
+| 🟢 Green  | 25 Total Ranks · Pentacles | Any Three Jupiter     | Any Three Jupiter     | 25 Total Ranks · Pentacles |
+| 🟡 Yellow | 25 Total Ranks · Swords    | Any Three Saturn      | 25 Total Ranks · Swords | Any Three Saturn         |
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
@@ -512,13 +519,13 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 |                            | _**CRUCIBLE ACTIONS**_                                                                                                                                             |
 | **3️⃣ Fire the Stone**      | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge.                                                    |
 | **4️⃣ Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                       |
-| **5️⃣ Leave Stasis ❄️**     | Move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
+| **5️⃣ Leave Stasis ❄️**     | Pay 2 Salt to move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
 
 ### 1️⃣ Survey the Crucible: Your Stone's Current Position
 
 - When your Stone is on the **Mantle Ring** (even-numbered positions: 0, 2, 4, 6), it is **Tempering**. It is safe from attack but does not advance. While there, focus on activating and firing your Crucible Cards.
 - When you **Fire** a Crucible Card, you may move your Stone into the **Forge**. While in the Forge, your Stone is **Forging**, working on one step of the Transmutation process from Lead into Gold. If you complete a full round in the Forge, you may advance to the next Mantle Ring position or the Altar of Kismeta.
-- If your Stone is in a **Stasis zone** (marked with a snowflake ❄️), it has stalled, and you must choose how to get back on track.
+- If your Stone is in a **Stasis zone** (marked with a snowflake ❄️), it has stalled, and you must choose how to get back on track: either pay 2 Salt or challenge an opponent to swap spaces with them.
 
 | POS. | CRUCIBLE LOCATION | STATUS    | SAFE? |
 | ---- | ----------------- | --------- | ----- |
@@ -539,7 +546,7 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 | Tempering | Mantle Ring (0, 2, 4, 6) | Safe. No Crucible Card is Fired. Cannot be targeted by an Opposition. Focus on Activating and Firing Crucible Cards at this time.               |
 | Forging   | Forge (1, 3, 5, 7)       | Transmutation underway. Crucible Card is Fired (face-up, sideways). Vulnerable to Opposition. Focus on Protecting your Stone at this time.      |
 | In Stasis | ❄️ Stasis zone           | Frozen until next Autumn. Crucible Card remains Fired. Cannot Temper or take other Stone actions. Focus on returning to the Forge at this time. |
-| Complete  | Altar of Kismeta         | You have finished all four stages of Transmutation and won the game! All hail! All hail! The Magnus Alchemist!                                  |
+| Complete  | Altar of Kismeta         | You have finished all four stages of Transmutation and won the game! All hail! All hail! The Magnus Alchemista!                                  |
 
 #### Crucible Card States
 
@@ -641,11 +648,12 @@ A Stone that has been Forging since the previous round and has survived all Oppo
 
 #### Leave Stasis ❄️
 
-Players whose Stone is currently in the Stasis zone may return it to the Forge this Autumn.
+If your Stone has been in Stasis since the previous round, you may leave by paying 2 Salt and returning to your old Forge position. If that position is occupied, you instead choose to Wait in Stasis or declare a Stasis Opposition.
 
 #### Steps to Leave Stasis
 
-- **Move your Stone:** Return it to the Forge position it previously held.
+- **Pay 2 Salt:** Discard 2 Salt to the supply to rekindle your Stone. If you cannot pay 2 Salt, your Stone remains in Stasis this round.
+- **Move your Stone:** Return it to the Forge position it previously held. (If that position is occupied, see below.)
 - **Re-arm your Ward Reagent:** Place Reagents on the 🛡️ symbol beside your Stone (optional but recommended).
 - **Resume Forging:** Your Crucible Card remains Fired. You must complete a full round in the Forge before you may Temper.
 
@@ -655,8 +663,8 @@ If another player's Stone now holds your previous Forge position, choose one:
 
 | OPTION                    | HOW IT WORKS                                                                                                                                                                  |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wait in Stasis            | Remain in Stasis another round. Attempt to return next Autumn. No action required.                                                                                            |
-| Declare Stasis Opposition | Challenge the occupying Stone during Step 2: Opposition. Follows all standard Opposition rules, but with a different outcome (position swap, not send-to-Stasis). See Step 2. |
+| Wait in Stasis            | Remain in Stasis another round. Attempt to return next Autumn. No Salt is spent and no action is required.                                                                                            |
+| Declare Stasis Opposition | Challenge the occupying Stone during Step 2: Opposition. This is the alternative to paying 2 Salt — you do not pay the 2 Salt; instead you pay the standard Opposition entry fee (Reagents equal to the Defender's Ward). Follows all standard Opposition rules, but with a different outcome (position swap, not send-to-Stasis). See Step 2. |
 
 #### Stasis Opposition outcomes:
 
@@ -747,7 +755,7 @@ Once a player reaches Gold in the Forge (position 7), they are one round from wi
 Ultimately, the first Alchemist to complete all four Crucible Cards and carry their Stone through every Stage of Transformation to the Altar of Kismeta will finish the Great Work and claim victory.
 
 All Hail! All Hail!
-The Magnus Alchemist Grandis Illuminatus ex Kismeta!
+The Magnus Alchemista Grandis Illuminatus ex Kismeta!
 
 ---
 
@@ -852,8 +860,8 @@ The Fates themselves will visit you throughout the course of the game to test yo
 
 Three concepts you'll use constantly:
 
-- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Cauldron Codex card sets and other contexts.
-- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Cauldron Codex Formulas and other requirements.
+- **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Crucible Codex card sets and other contexts.
+- **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
 ## Commune: Spread, Hand & Arcanum Zones
@@ -900,7 +908,7 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Correspondence**        | The fixed relationship between an Element, Card Suit, Reagent, Cauldron, and Color governing the four elemental Reagents. Salt is not part of the Correspondence system — it carries no Element, Suit, or Cauldron. See the Correspondence table in the Appendix.                                                                                                                                                               |
 | **Cosmic Age**            | One complete round of play, defined by the Zodiac Sign rolled by the Agekeeper in Spring. Its three Aspects govern Harvest bonuses, Alignment scoring, and the active Cosmic Effect for that round.                                                                                                                                                                                                                             |
 | **Cosmic Effect**         | Each Sign's Cosmic Effect operates on two levels. The Cosmic Age Effect, set by the Agekeeper's roll, applies to all players for the entire round. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If a player's Sign matches the Cosmic Age, the effect is simply active — it does not apply twice. See the Cosmic Ages & Effects table in the Reference Appendix. |
-| **Cauldron Codex**        | A player's personal set of four Crucible Cards, one per Stage of Transmutation (I–IV). Each card must be activated and its Alchemical Formula satisfied before the corresponding Stone stage can advance.                                                                                                                                                                                                                       |
+| **Crucible Codex**        | A player's personal card listing the four Activation Formulas (one per Crucible Card) and which Cauldron each Coal lights — separate from the Alchemical Formula used later to Fire. See Setup; Summer: Activate Crucible Card.                                                                                                                                                                                                  |
 | **Duel**                  | A Summer action in which a player challenges a rival to steal a single targeted card from their Spread. The Challenger names their target, then pays an Ante Card from their own Spread as the entry fee. Both players roll their Zodiac Dice; the higher roll wins. The Challenger wins the targeted card on a win, or loses their Ante Card on a loss.                                                                        |
 | **Fate Card**             | A Major Arcana card with a one-time effect. Must be placed into the Arcanum immediately when drawn; its effect resolves at once and the card is discarded at round's end. Fate cards carry no Aspects and require no purchase cost.                                                                                                                                                                                             |
 | **Fateful Wager**         | A Winter action in which a player bets cards on which Sign will rule the next Cosmic Age. A correct prediction doubles the wager; an incorrect one forfeits all wagered cards to the Fates.                                                                                                                                                                                                                                     |
@@ -919,8 +927,8 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Opposition Age**        | The Cosmic Age Sign in effect at the moment an Opposition is declared. All Alignment Points in that contest are scored against this Sign's Aspects.                                                                                                                                                                                                                                                                             |
 | **Philosopher's Stone**   | Each player's primary game piece, representing the material being transformed through the Great Work. Begins at position 0 (Mantle Ring) on the Transmutation Path and must reach the Altar of Kismeta (position 8) to win. May be Forging, Tempering, or in Stasis at any given time.                                                                                                                                          |
 | **Ward Reagent**          | A Reagent placed on the 🛡️ symbol beside a Forging Stone, Active Crucible Card, or Adept card. Sets the entry fee any Challenger must pay before declaring Opposition or a Gambit against that target. Challengers pay a number of Reagents equal to the Ward — of any type or combination. Type-matching is not required. Salt may be used as a Ward Reagent.                                                                  |
-| **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Cauldron Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                     |
-| **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used for the Cauldron Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                                       |
+| **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Crucible Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                     |
+| **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used for the Crucible Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                                       |
 | **Reagent**               | A Crafted resource token used to Fire the Philosopher's Stone and to set Ward Reagents. There are five types: Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), Quicksilver (Yellow), and Salt (White). The four elemental Reagents are crafted by discarding 3 matching-Suit cards into a lit Cauldron. Salt is crafted by discarding any 3 Kismeta Cards with no Cauldron required. See Correspondence and Crafting Salt.    |
 | **Salt**                  | A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. Transfers between players via Trade only.                                                 |
 | **Spread**                | One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end.                                                                                                                    |
