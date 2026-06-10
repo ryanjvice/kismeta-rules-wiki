@@ -2793,12 +2793,6 @@ site-search button[data-open-modal]:hover {
   height: 2.5rem;
 }
 
-.site-header__wordmark {
-  font-family: var(--kismeta-font-title);
-  font-size: var(--site-text-display);
-  letter-spacing: 0.04em;
-}
-
 .site-header__nav ul {
   display: flex;
   flex-wrap: wrap;
