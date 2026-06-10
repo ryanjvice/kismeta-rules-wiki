@@ -43,12 +43,13 @@ const {
 
 const showMeta = Boolean(playersValue || playTimeValue);
 const hasHero = Boolean(heroImage);
+const hasWordmark = Boolean(wordmarkImage);
 const heroIsSvg = heroImage?.format === 'svg';
 const heroImageMobileIsSvg = heroImageMobile?.format === 'svg';
 ---
 
 <section
-	class:list={['game-marketing-hero', { 'game-marketing-hero--has-hero': hasHero }]}
+	class:list={['game-marketing-hero', { 'game-marketing-hero--has-hero': hasHero, 'game-marketing-hero--has-wordmark': hasWordmark }]}
 	aria-labelledby="game-marketing-title"
 >
 	{hasHero && (
@@ -123,10 +124,14 @@ const heroImageMobileIsSvg = heroImageMobile?.format === 'svg';
 			{statusLabel && <p class="game-marketing-hero__status">{statusLabel}</p>}
 		</div>
 
-		<div class="game-marketing-hero__copy">
-			<h1 id="game-marketing-title" class="game-marketing-hero__title">{title}</h1>
-			<p class="game-marketing-hero__tagline">{tagline}</p>
-		</div>
+		{hasWordmark ? (
+			<h1 id="game-marketing-title" class="sr-only">{title}</h1>
+		) : (
+			<div class="game-marketing-hero__copy">
+				<h1 id="game-marketing-title" class="game-marketing-hero__title">{title}</h1>
+				<p class="game-marketing-hero__tagline">{tagline}</p>
+			</div>
+		)}
 
 		{
 			actions.length > 0 && (

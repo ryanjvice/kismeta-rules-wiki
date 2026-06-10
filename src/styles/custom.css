@@ -3405,3 +3405,39 @@ a.shop-links__card:hover {
   height: auto;
   margin: 0 auto 0.25rem;
 }
+
+/* Responsive wordmark + logo scale-up, layout shift, and spacing for tablet and desktop */
+@media (min-width: 50rem) {
+  .game-marketing-hero--has-wordmark .game-marketing-hero__logo--small {
+    width: min(11rem, 45%);
+  }
+  .game-marketing-hero--has-wordmark .game-marketing-hero__wordmark {
+    width: min(30rem, 92%);
+  }
+
+  /* Shift content to upper third on tablet+ */
+  .game-marketing-hero--has-hero.game-marketing-hero--has-wordmark {
+    align-items: flex-start;
+  }
+  .game-marketing-hero--has-hero.game-marketing-hero--has-wordmark .game-marketing-hero__content {
+    padding-top: clamp(2.5rem, 12vh, 7rem);
+    padding-bottom: 2.5rem;
+  }
+
+  /* Tighten spacing between wordmark and action buttons */
+  .game-marketing-hero--has-wordmark .game-marketing-hero__brand {
+    margin-bottom: 0.75rem;
+  }
+  .game-marketing-hero--has-wordmark .game-marketing-hero__actions {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 72rem) {
+  .game-marketing-hero--has-wordmark .game-marketing-hero__logo--small {
+    width: min(13rem, 42%);
+  }
+  .game-marketing-hero--has-wordmark .game-marketing-hero__wordmark {
+    width: min(38rem, 95%);
+  }
+}
