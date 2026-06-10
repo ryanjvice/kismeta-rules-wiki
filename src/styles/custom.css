@@ -3398,7 +3398,7 @@ a.shop-links__card:hover {
 }
 
 @media (max-width: 47.9375rem) {
-  .game-marketing-hero__hero-img:not(.game-marketing-hero__hero-img--mobile) {
+  .game-marketing-hero--has-mobile-hero .game-marketing-hero__hero-img:not(.game-marketing-hero__hero-img--mobile) {
     display: none;
   }
   .game-marketing-hero__hero-img--mobile {
