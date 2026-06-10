@@ -96,45 +96,45 @@ const heroImageMobileIsSvg = heroImageMobile?.format === 'svg';
 	)}
 
 	<div class="game-marketing-hero__content">
-		<div class="game-marketing-hero__brand">
-			{wordmarkImage ? (
-				<>
-					<Image
-						src={logo}
-						alt=""
-						width={160}
-						height={64}
-						loading="eager"
-						class="game-marketing-hero__logo game-marketing-hero__logo--small"
-					/>
-					<Image
-						src={wordmarkImage}
-						alt={subtitle}
-						width={380}
-						height={86}
-						loading="eager"
-						class="game-marketing-hero__wordmark"
-					/>
-				</>
-			) : (
-				<>
-					<Image src={logo} alt="" width={280} height={112} loading="eager" class="game-marketing-hero__logo" />
-					<p class="game-marketing-hero__subtitle">{subtitle}</p>
-				</>
-			)}
-			{statusLabel && <p class="game-marketing-hero__status">{statusLabel}</p>}
-		</div>
-
-		{hasWordmark ? (
-			<h1 id="game-marketing-title" class="sr-only">{title}</h1>
-		) : (
-			<div class="game-marketing-hero__copy">
-				<h1 id="game-marketing-title" class="game-marketing-hero__title">{title}</h1>
-				<p class="game-marketing-hero__tagline">{tagline}</p>
-			</div>
-		)}
-
 		<div class="game-marketing-hero__card">
+			<div class="game-marketing-hero__brand">
+				{wordmarkImage ? (
+					<>
+						<Image
+							src={logo}
+							alt=""
+							width={160}
+							height={64}
+							loading="eager"
+							class="game-marketing-hero__logo game-marketing-hero__logo--small"
+						/>
+						<Image
+							src={wordmarkImage}
+							alt={subtitle}
+							width={380}
+							height={86}
+							loading="eager"
+							class="game-marketing-hero__wordmark"
+						/>
+					</>
+				) : (
+					<>
+						<Image src={logo} alt="" width={280} height={112} loading="eager" class="game-marketing-hero__logo" />
+						<p class="game-marketing-hero__subtitle">{subtitle}</p>
+					</>
+				)}
+				{statusLabel && <p class="game-marketing-hero__status">{statusLabel}</p>}
+			</div>
+
+			{hasWordmark ? (
+				<h1 id="game-marketing-title" class="sr-only">{title}</h1>
+			) : (
+				<div class="game-marketing-hero__copy">
+					<h1 id="game-marketing-title" class="game-marketing-hero__title">{title}</h1>
+					<p class="game-marketing-hero__tagline">{tagline}</p>
+				</div>
+			)}
+
 			{
 				actions.length > 0 && (
 					<div class="game-marketing-hero__actions">

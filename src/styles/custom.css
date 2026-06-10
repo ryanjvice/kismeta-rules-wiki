@@ -3232,7 +3232,6 @@ site-search button[data-open-modal]:hover {
 .game-marketing-hero__card .game-marketing-hero__actions {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  justify-content: flex-start;
 }
 
 .game-marketing-hero__card .game-marketing-hero__summary {
@@ -3471,13 +3470,6 @@ a.shop-links__card:hover {
     padding-bottom: 2.5rem;
   }
 
-  /* Tighten spacing between wordmark and action buttons */
-  .game-marketing-hero--has-wordmark .game-marketing-hero__brand {
-    margin-bottom: 0.75rem;
-  }
-  .game-marketing-hero--has-wordmark .game-marketing-hero__actions {
-    margin-top: 1rem;
-  }
 }
 
 @media (min-width: 72rem) {
