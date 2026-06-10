@@ -2654,6 +2654,7 @@ site-search button[data-open-modal]:hover {
   --site-color-text: #1a1028;
   --site-color-text-muted: #6b5a85;
   --site-color-heading: #1a1028;
+  --kismeta-game-bg-mid: var(--site-color-bg-elevated);
 }
 
 :root[data-theme="light"] [data-game="the-veiled-ascent"] {
@@ -2663,6 +2664,7 @@ site-search button[data-open-modal]:hover {
   --site-color-text: #1a1028;
   --site-color-text-muted: #4a3d6b;
   --site-color-heading: #1a1028;
+  --kismeta-game-bg-mid: var(--site-color-bg-elevated);
 }
 
 /* ── Marketing site shell (SiteLayout) ───────────────────────────────────── */
@@ -3189,6 +3191,27 @@ site-search button[data-open-modal]:hover {
 
 .game-marketing-hero__meta-item dd em {
   font-style: italic;
+}
+
+/* Info card wrapping actions, summary, and meta on game landing pages */
+.game-marketing-hero__card {
+  width: min(44rem, 100%);
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  border: 1px solid var(--kismeta-game-hairline, var(--sl-color-hairline));
+  border-radius: var(--kismeta-radius-md);
+  background: var(--kismeta-game-bg-mid);
+  text-align: left;
+}
+
+.game-marketing-hero__card .game-marketing-hero__actions {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+}
+
+.game-marketing-hero__card .game-marketing-hero__summary {
+  margin-bottom: 1.5rem;
 }
 
 /* ── Shop page ─────────────────────────────────────────────────────────────── */

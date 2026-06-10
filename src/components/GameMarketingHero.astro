@@ -133,49 +133,51 @@ const heroImageMobileIsSvg = heroImageMobile?.format === 'svg';
 			</div>
 		)}
 
-		{
-			actions.length > 0 && (
-				<div class="game-marketing-hero__actions">
-					{
-						actions.map(({ href, label, variant = 'primary' }) => (
-							<a
-								href={href}
-								class:list={[
-									'game-marketing-hero__action',
-									`game-marketing-hero__action--${variant}`,
-								]}
-							>
-								{label}
-							</a>
-						))
-					}
-				</div>
-			)
-		}
+		<div class="game-marketing-hero__card">
+			{
+				actions.length > 0 && (
+					<div class="game-marketing-hero__actions">
+						{
+							actions.map(({ href, label, variant = 'primary' }) => (
+								<a
+									href={href}
+									class:list={[
+										'game-marketing-hero__action',
+										`game-marketing-hero__action--${variant}`,
+									]}
+								>
+									{label}
+								</a>
+							))
+						}
+					</div>
+				)
+			}
 
-		<p class="game-marketing-hero__summary">{summary}</p>
+			<p class="game-marketing-hero__summary">{summary}</p>
 
-		{
-			showMeta && (
-				<dl class="game-marketing-hero__meta">
-					{
-						playersValue && playersLabel && (
-							<div class="game-marketing-hero__meta-item">
-								<dt>{playersLabel}</dt>
-								<dd>{playersValue}</dd>
-							</div>
-						)
-					}
-					{
-						playTimeValue && playTimeLabel && (
-							<div class="game-marketing-hero__meta-item">
-								<dt>{playTimeLabel}</dt>
-								<dd set:html={playTimeValue} />
-							</div>
-						)
-					}
-				</dl>
-			)
-		}
+			{
+				showMeta && (
+					<dl class="game-marketing-hero__meta">
+						{
+							playersValue && playersLabel && (
+								<div class="game-marketing-hero__meta-item">
+									<dt>{playersLabel}</dt>
+									<dd>{playersValue}</dd>
+								</div>
+							)
+						}
+						{
+							playTimeValue && playTimeLabel && (
+								<div class="game-marketing-hero__meta-item">
+									<dt>{playTimeLabel}</dt>
+									<dd set:html={playTimeValue} />
+								</div>
+							)
+						}
+					</dl>
+				)
+			}
+		</div>
 	</div>
 </section>
