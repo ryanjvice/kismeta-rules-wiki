@@ -557,7 +557,7 @@ site-search button[data-open-modal]:hover {
   position: fixed;
   top: calc(var(--kismeta-nav-offset, 6.75rem) + 0.5rem);
   right: var(--sl-nav-pad-x, 1rem);
-  z-index: var(--sl-z-index-navbar, 2);
+  z-index: 1000;
   min-width: 15rem;
   padding: 1rem 1.1rem;
   background: var(--sl-color-bg-nav);
@@ -2698,7 +2698,10 @@ site-search button[data-open-modal]:hover {
 }
 
 /* Stacking: push all shell chrome above the fixed wheel */
-.site-layout--chart-wheel .site-header,
+.site-layout--chart-wheel .site-header {
+  z-index: 10;
+}
+
 .site-layout--chart-wheel .site-layout__main,
 .site-layout--chart-wheel .site-layout__footer {
   position: relative;
@@ -2768,6 +2771,8 @@ site-search button[data-open-modal]:hover {
 }
 
 .site-header {
+  position: relative;
+  z-index: 10;
   border-bottom: var(--site-elev-border);
   background: var(--site-color-bg-elevated);
 }
