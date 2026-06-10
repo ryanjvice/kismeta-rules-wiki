@@ -1,11 +1,10 @@
-﻿---
+---
 import GameMarketingHero from '../../components/GameMarketingHero.astro';
 import { getGame } from '../../data/games';
 import { AGY_WIKI_PATH } from '../../data/wiki-base';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { siteT } from '../../utils/site-i18n';
-import agyHero from '../../assets/games/agy/hero.png';
-import agyHeroMobile from '../../assets/games/agy/hero-mobile.png';
+import agyHeroBg from '../../assets/games/agy/gameBox_noText.png';
 import agyWordmark from '../../assets/games/agy/wordmark.svg';
 
 const game = getGame('alchemists-of-the-great-year');
@@ -48,8 +47,7 @@ const actions = [
 		playersValue={siteT('game.agy.players')}
 		playTimeLabel={siteT('site.meta.playTime')}
 		playTimeValue={siteT('game.agy.playTime')}
-		heroImage={agyHero}
-		heroImageMobile={agyHeroMobile}
+		heroImage={agyHeroBg}
 		wordmarkImage={agyWordmark}
 		{actions}
 	/>
