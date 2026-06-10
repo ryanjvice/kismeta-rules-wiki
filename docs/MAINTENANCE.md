@@ -55,7 +55,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 ### Franchise hub & marketing pages
 
 - **Franchise homepage** (`/`)  
-  `src/pages/index.astro` · copy: `site.home.*`, `site.tagline` in `src/content/i18n/en.json`
+  `src/pages/index.astro` · copy: `site.home.*` in `src/content/i18n/en.json` — hero uses `site.home.welcomeHeadline`, `site.home.welcomeTagline`, and `site.home.metaDescription`
 
 - **Shop** (`/shop/`)  
   `src/pages/shop.astro` · links: `src/data/shop.ts` · copy: `shop.*`
@@ -158,7 +158,7 @@ Marketing pages live in `src/pages/` and use [`SiteLayout`](../src/layouts/SiteL
 
 | Page | File | Copy keys |
 |------|------|-----------|
-| Franchise hub `/` | `src/pages/index.astro` | `site.home.*`, `site.tagline` |
+| Franchise hub `/` | `src/pages/index.astro` | `site.home.*` (`welcomeHeadline`, `welcomeTagline`, `metaDescription`) |
 | Shop `/shop/` | `src/pages/shop.astro` | `shop.*` |
 | AGY marketing | `src/pages/games/alchemists-of-the-great-year.astro` | `game.agy.*` |
 | Veiled Ascent marketing | `src/pages/games/the-veiled-ascent.astro` | `game.tva.*` |

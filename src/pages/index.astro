@@ -15,15 +15,17 @@ const thumbMap: Record<string, ImageMetadata> = {
 };
 
 
-const title = siteT('site.home.heroTitle');
-const description = siteT('site.tagline');
+const title = siteT('site.home.pageTitle');
+const description = siteT('site.home.metaDescription');
+const welcomeHeadline = siteT('site.home.welcomeHeadline');
+const welcomeTagline = siteT('site.home.welcomeTagline');
 ---
 
 <SiteLayout {title} {description}>
 	<section class="site-hero" aria-labelledby="franchise-hero-title">
 		<Image class="site-hero__logo" src={logo} alt={siteT('site.brandAlt')} width={320} height={128} loading="eager" />
-		<h1 id="franchise-hero-title" class="site-hero__title">{title}</h1>
-		<p class="site-hero__tagline">{description}</p>
+		<h1 id="franchise-hero-title" class="site-hero__title">{welcomeHeadline}</h1>
+		<p class="site-hero__tagline">{welcomeTagline}</p>
 	</section>
 
 	<section class="site-section" id="games" aria-labelledby="games-heading">
