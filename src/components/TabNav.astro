@@ -89,9 +89,9 @@ if (config) {
 
 	function applyTabNavState(nav: HTMLElement, collapsed: boolean) {
 		if (collapsed) {
-			nav.dataset.collapsed = 'true';
+			document.documentElement.dataset.kismetaTabnavCollapsed = 'true';
 		} else {
-			delete nav.dataset.collapsed;
+			delete document.documentElement.dataset.kismetaTabnavCollapsed;
 		}
 		const btn = nav.querySelector<HTMLButtonElement>('[data-tab-nav-toggle]');
 		if (btn) {
@@ -113,7 +113,7 @@ if (config) {
 
 		const btn = nav.querySelector<HTMLButtonElement>('[data-tab-nav-toggle]');
 		btn?.addEventListener('click', () => {
-			const isCollapsed = nav.dataset.collapsed === 'true';
+			const isCollapsed = document.documentElement.dataset.kismetaTabnavCollapsed === 'true';
 			const next = !isCollapsed;
 			applyTabNavState(nav, next);
 			localStorage.setItem(STORAGE_KEY, String(next));

@@ -38,8 +38,7 @@ const wikiConfig = getWikiNav(Astro.url.pathname);
 	// Apply stored tab-nav-collapsed state before first paint to prevent flash.
 	try {
 		if (localStorage.getItem('kismeta-tabnav-collapsed') === 'true') {
-			var _nav = document.querySelector('[data-tab-nav]');
-			if (_nav) { _nav.dataset.collapsed = 'true'; }
+			document.documentElement.dataset.kismetaTabnavCollapsed = 'true';
 		}
 	} catch (_) {}
 </script>

@@ -378,19 +378,27 @@ main:has(.kismeta-lore) h1#_top,
   transition: transform 0.2s ease;
 }
 
-/* Collapsed state — hide tabs, keep the toggle button visible */
-.tab-nav[data-collapsed] {
+/* Collapsed state — hide tabs and mobile TOC, keep the toggle button visible */
+html[data-kismeta-tabnav-collapsed] .tab-nav {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   flex-wrap: nowrap;
 }
 
-.tab-nav[data-collapsed] .tab-nav__link {
+html[data-kismeta-tabnav-collapsed] .tab-nav__link {
   display: none;
 }
 
-.tab-nav[data-collapsed] .tab-nav__toggle-icon {
+html[data-kismeta-tabnav-collapsed] .tab-nav__toggle-icon {
   transform: rotate(180deg);
+}
+
+html[data-kismeta-tabnav-collapsed] mobile-starlight-toc nav {
+  display: none;
+}
+
+html[data-kismeta-tabnav-collapsed] {
+  --sl-mobile-toc-height: 0px;
 }
 
 /* ── Game-branded header button borders ──────────────────────────────────── */
@@ -679,14 +687,14 @@ site-search button[data-open-modal]:hover {
   }
 
   /* Collapsed: restore compact padding override */
-  .tab-nav[data-collapsed] {
+  html[data-kismeta-tabnav-collapsed] .tab-nav {
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     overflow-x: hidden;
   }
 
   /* Ensure collapsed links stay hidden on mobile despite inline-flex override above */
-  .tab-nav[data-collapsed] .tab-nav__link {
+  html[data-kismeta-tabnav-collapsed] .tab-nav__link {
     display: none;
   }
 }
