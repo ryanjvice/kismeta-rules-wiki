@@ -43,6 +43,8 @@ const {
 
 const showMeta = Boolean(playersValue || playTimeValue);
 const hasHero = Boolean(heroImage);
+const heroIsSvg = heroImage?.format === 'svg';
+const heroImageMobileIsSvg = heroImageMobile?.format === 'svg';
 ---
 
 <section
@@ -51,23 +53,41 @@ const hasHero = Boolean(heroImage);
 >
 	{hasHero && (
 		<>
-			<Image
-				src={heroImage!}
-				alt=""
-				class="game-marketing-hero__hero-img"
-				widths={[768, 1280, 1920]}
-				sizes="100vw"
-				loading="eager"
-			/>
-			{heroImageMobile && (
+			{heroIsSvg ? (
 				<Image
-					src={heroImageMobile}
+					src={heroImage!}
 					alt=""
-					class="game-marketing-hero__hero-img game-marketing-hero__hero-img--mobile"
-					widths={[480, 768]}
+					class="game-marketing-hero__hero-img"
+					loading="eager"
+				/>
+			) : (
+				<Image
+					src={heroImage!}
+					alt=""
+					class="game-marketing-hero__hero-img"
+					widths={[768, 1280, 1920]}
 					sizes="100vw"
 					loading="eager"
 				/>
+			)}
+			{heroImageMobile && (
+				heroImageMobileIsSvg ? (
+					<Image
+						src={heroImageMobile}
+						alt=""
+						class="game-marketing-hero__hero-img game-marketing-hero__hero-img--mobile"
+						loading="eager"
+					/>
+				) : (
+					<Image
+						src={heroImageMobile}
+						alt=""
+						class="game-marketing-hero__hero-img game-marketing-hero__hero-img--mobile"
+						widths={[480, 768]}
+						sizes="100vw"
+						loading="eager"
+					/>
+				)
 			)}
 			<div class="game-marketing-hero__scrim" aria-hidden="true"></div>
 		</>

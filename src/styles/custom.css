@@ -2793,6 +2793,12 @@ site-search button[data-open-modal]:hover {
   height: 2.5rem;
 }
 
+.site-header__wordmark {
+  font-family: var(--kismeta-font-title);
+  font-size: var(--site-text-display);
+  letter-spacing: 0.04em;
+}
+
 .site-header__nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -3044,28 +3050,8 @@ site-search button[data-open-modal]:hover {
 
 @media (max-width: 40rem) {
   .site-header__inner {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    align-items: center;
-    gap: 0.35rem 1rem;
-  }
-
-  .site-header__brand {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .site-header__inner > .a11y-menu {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: end;
-    align-self: center;
-  }
-
-  .site-header__nav {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
