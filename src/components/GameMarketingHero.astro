@@ -72,6 +72,29 @@ const hasHero = Boolean(heroImage);
 			<div class="game-marketing-hero__scrim" aria-hidden="true"></div>
 		</>
 	)}
+	// #region agent log
+	<script is:inline>
+	(function(){
+		function dbg(msg,data,hyp){fetch('http://127.0.0.1:7483/ingest/382e3d08-77a0-4016-bf03-5e63c2b6e1d4',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'5b4d2f'},body:JSON.stringify({sessionId:'5b4d2f',hypothesisId:hyp,location:'GameMarketingHero.astro:instrumentation',message:msg,data:data,timestamp:Date.now()})}).catch(()=>{});}
+		var section = document.querySelector('.game-marketing-hero');
+		var desktopImg = section && section.querySelector('.game-marketing-hero__hero-img:not(.game-marketing-hero__hero-img--mobile)');
+		var mobileImg = section && section.querySelector('.game-marketing-hero__hero-img--mobile');
+		var vw = window.innerWidth;
+		var hasHeroClass = section && section.classList.contains('game-marketing-hero--has-hero');
+		dbg('hero section state',{viewportWidth:vw,hasHeroClass:!!hasHeroClass,desktopImgFound:!!desktopImg,mobileImgFound:!!mobileImg},'B+C');
+		if(desktopImg){
+			var st = window.getComputedStyle(desktopImg);
+			dbg('desktop img computed style',{display:st.display,visibility:st.visibility,opacity:st.opacity,zIndex:st.zIndex},'A');
+		}
+		if(!desktopImg){
+			dbg('desktop img NOT in DOM',{viewportWidth:vw},'A');
+		}
+		if(!mobileImg){
+			dbg('mobile img NOT in DOM — no fallback',{viewportWidth:vw},'A');
+		}
+	})();
+	</script>
+	// #endregion agent log
 
 	<div class="game-marketing-hero__content">
 		<div class="game-marketing-hero__brand">
