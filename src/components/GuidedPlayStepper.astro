@@ -73,6 +73,8 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, wikiSlug('rules/round-at-a
 		completeCta: t('guided.complete.cta'),
 		continuePlaying: t('guided.complete.continuePlaying'),
 		startOver: t('guided.startOver'),
+		actionContextCollapse: t('guided.actionContext.collapse'),
+		actionContextExpand: t('guided.actionContext.expand'),
 	})}
 >
 	<div class="guided-play__resume" hidden>
@@ -155,18 +157,44 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, wikiSlug('rules/round-at-a
 		</article>
 
 		<footer class="guided-play__footer">
-			<div class="guided-play__action-context" data-action-context hidden aria-live="polite">
-				<p class="guided-play__action-context-body" data-action-context-body></p>
-				<p class="guided-play__action-context-meta" data-action-context-condition hidden></p>
-				<p class="guided-play__action-context-meta" data-action-context-mode hidden></p>
-				<a
-					class="guided-play__action-context-link"
-					data-action-context-learn
-					hidden
-					href="#"
-					target="_blank"
-					rel="noopener"
-				></a>
+			<div class="guided-play__action-context" data-action-context hidden>
+				<div class="guided-play__action-context-header">
+					<span class="guided-play__action-context-title" data-action-context-title></span>
+					<button
+						type="button"
+						class="guided-play__action-context-toggle"
+						data-action-context-toggle
+						aria-expanded="true"
+					>
+						<svg
+							class="guided-play__action-context-toggle-icon"
+							aria-hidden="true"
+							width="14"
+							height="14"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M18 15l-6-6-6 6"/>
+						</svg>
+					</button>
+				</div>
+				<div class="guided-play__action-context-content" data-action-context-content aria-live="polite">
+					<p class="guided-play__action-context-body" data-action-context-body></p>
+					<p class="guided-play__action-context-meta" data-action-context-condition hidden></p>
+					<p class="guided-play__action-context-meta" data-action-context-mode hidden></p>
+					<a
+						class="guided-play__action-context-link"
+						data-action-context-learn
+						hidden
+						href="#"
+						target="_blank"
+						rel="noopener"
+					></a>
+				</div>
 			</div>
 			<div class="guided-play__footer-nav">
 				<span class="guided-play__footer-nav-label" data-footer-nav-label></span>
@@ -229,6 +257,8 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, wikiSlug('rules/round-at-a
 		completeCta: string;
 		continuePlaying: string;
 		startOver: string;
+		actionContextCollapse: string;
+		actionContextExpand: string;
 	};
 
 	type ProgressState = {
@@ -325,25 +355,49 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, wikiSlug('rules/round-at-a
 		};
 
 		const actionContext = root.querySelector<HTMLElement>('[data-action-context]')!;
+		const actionContextTitle = root.querySelector<HTMLElement>('[data-action-context-title]')!;
+		const actionContextToggle = root.querySelector<HTMLButtonElement>('[data-action-context-toggle]')!;
+		const actionContextContent = root.querySelector<HTMLElement>('[data-action-context-content]')!;
 		const actionContextBody = root.querySelector<HTMLElement>('[data-action-context-body]')!;
 		const actionContextCondition = root.querySelector<HTMLElement>('[data-action-context-condition]')!;
 		const actionContextMode = root.querySelector<HTMLElement>('[data-action-context-mode]')!;
 		const actionContextLearn = root.querySelector<HTMLAnchorElement>('[data-action-context-learn]')!;
 
+		let actionContextExpanded = true;
+
+		const syncToggle = (expanded: boolean) => {
+			actionContextToggle.setAttribute('aria-expanded', String(expanded));
+			actionContextToggle.setAttribute(
+				'aria-label',
+				expanded ? labels.actionContextCollapse : labels.actionContextExpand
+			);
+			actionContextContent.hidden = !expanded;
+			actionContext.classList.toggle('guided-play__action-context--collapsed', !expanded);
+		};
+
+		actionContextToggle.addEventListener('click', () => {
+			actionContextExpanded = !actionContextExpanded;
+			syncToggle(actionContextExpanded);
+		});
+
 		const clearActionContext = () => {
 			actionContext.hidden = true;
+			actionContextTitle.textContent = '';
 			actionContextBody.textContent = '';
 			actionContextCondition.hidden = true;
 			actionContextCondition.textContent = '';
 			actionContextMode.hidden = true;
 			actionContextMode.textContent = '';
 			actionContextLearn.hidden = true;
+			actionContextExpanded = true;
+			syncToggle(true);
 			root.querySelectorAll('.action-flow__pick--active').forEach((el) => {
 				el.classList.remove('action-flow__pick--active');
 			});
 		};
 
 		const showActionContext = (detail: {
+			title?: string;
 			body?: string;
 			condition?: string;
 			modeNote?: string;
@@ -356,6 +410,7 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, wikiSlug('rules/round-at-a
 				return;
 			}
 
+			actionContextTitle.textContent = detail.title || '';
 			actionContextBody.textContent = detail.body || '';
 			if (detail.condition) {
 				actionContextCondition.hidden = false;
@@ -381,6 +436,9 @@ const roundAtGlanceUrl = getRelativeLocaleUrl(locale, wikiSlug('rules/round-at-a
 				actionContextLearn.hidden = true;
 			}
 
+			// Always expand when new content arrives
+			actionContextExpanded = true;
+			syncToggle(true);
 			actionContext.hidden = false;
 		};
 

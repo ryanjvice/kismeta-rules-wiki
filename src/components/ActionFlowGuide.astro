@@ -971,6 +971,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 				window.dispatchEvent(
 					new CustomEvent('kismeta:action-detail', {
 						detail: {
+							title: btn.textContent?.trim() || '',
 							body: body || btn.textContent?.trim() || '',
 							condition,
 							modeNote,
