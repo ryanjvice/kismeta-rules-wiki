@@ -2580,6 +2580,40 @@ site-search button[data-open-modal]:hover {
   overflow-x: clip;
 }
 
+/* Stacking: push all shell chrome above the fixed wheel */
+.site-layout--chart-wheel .site-header,
+.site-layout--chart-wheel .site-layout__main,
+.site-layout--chart-wheel .site-layout__footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fixed rotating decorative wheel */
+.site-chart-wheel {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.site-chart-wheel__graphic {
+  width: min(90vw, 72rem);
+  height: auto;
+  aspect-ratio: 1;
+  opacity: 0.2;
+  transform-origin: center center;
+  animation: site-chart-wheel-spin 120s linear infinite;
+}
+
+@keyframes site-chart-wheel-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 .site-layout__skip {
   position: absolute;
   left: -9999px;

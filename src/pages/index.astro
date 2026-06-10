@@ -21,7 +21,7 @@ const welcomeHeadline = siteT('site.home.welcomeHeadline');
 const welcomeTagline = siteT('site.home.welcomeTagline');
 ---
 
-<SiteLayout {title} {description}>
+<SiteLayout {title} {description} showChartWheel>
 	<section class="site-hero" aria-labelledby="franchise-hero-title">
 		<Image class="site-hero__logo" src={logo} alt={siteT('site.brandAlt')} width={320} height={128} loading="eager" />
 		<h1 id="franchise-hero-title" class="site-hero__title">{welcomeHeadline}</h1>

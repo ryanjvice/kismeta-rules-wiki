@@ -1,15 +1,17 @@
 ﻿---
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import kismetaChart from '../assets/kismetaChart.svg';
 import '../styles/custom.css';
 
 interface Props {
 	title: string;
 	description?: string;
 	gameSlug?: string;
+	showChartWheel?: boolean;
 }
 
-const { title, description = '', gameSlug } = Astro.props;
+const { title, description = '', gameSlug, showChartWheel = false } = Astro.props;
 const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 ---
 
@@ -30,8 +32,21 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 			href="https://fonts.googleapis.com/css2?family=Amarante&family=Germania+One&display=swap"
 		/>
 	</head>
-	<body class="site-layout" data-game={gameSlug}>
+	<body class:list={['site-layout', { 'site-layout--chart-wheel': showChartWheel }]} data-game={gameSlug}>
 		<a class="site-layout__skip" href="#main-content">Skip to content</a>
+		{showChartWheel && (
+			<div class="site-chart-wheel" aria-hidden="true">
+				<img
+					class="site-chart-wheel__graphic"
+					src={kismetaChart.src}
+					alt=""
+					width={2160}
+					height={2160}
+					loading="lazy"
+					decoding="async"
+				/>
+			</div>
+		)}
 		<SiteHeader />
 		<main id="main-content" class="site-layout__main">
 			<slot />
