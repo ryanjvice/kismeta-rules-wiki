@@ -3050,8 +3050,28 @@ site-search button[data-open-modal]:hover {
 
 @media (max-width: 40rem) {
   .site-header__inner {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 0.35rem 1rem;
+  }
+
+  .site-header__brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .site-header__inner > .a11y-menu {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .site-header__nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 }
 
