@@ -104,24 +104,6 @@ function initA11yMenu(): void {
 	const trigger = menu.querySelector<HTMLButtonElement>('[data-a11y-trigger]')!;
 	const panel = menu.querySelector<HTMLElement>('[data-a11y-panel]')!;
 
-	// #region agent log
-	const headerInner = menu.closest('.site-header__inner');
-	if (headerInner) {
-		const innerStyle = getComputedStyle(headerInner);
-		const brand = headerInner.querySelector('.site-header__brand');
-		const nav = headerInner.querySelector('.site-header__nav');
-		const triggerRect = trigger.getBoundingClientRect();
-		const brandRect = brand?.getBoundingClientRect();
-		const navRect = nav?.getBoundingClientRect();
-		const viewportWidth = window.innerWidth;
-		const isMobileBreakpoint = viewportWidth <= 640;
-		const a11yBelowBrand = brandRect ? triggerRect.top > brandRect.bottom - 1 : null;
-		const a11yBelowNav = navRect ? triggerRect.top > navRect.bottom - 1 : null;
-		const a11yRightAligned = triggerRect.right >= viewportWidth - 40;
-		fetch('http://127.0.0.1:7483/ingest/382e3d08-77a0-4016-bf03-5e63c2b6e1d4',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'4bdb0e'},body:JSON.stringify({sessionId:'4bdb0e',location:'accessibility.ts:initA11yMenu',message:'site header a11y layout',data:{viewportWidth,isMobileBreakpoint,innerFlexDirection:innerStyle.flexDirection,innerAlignItems:innerStyle.alignItems,a11yTop:triggerRect.top,a11yRight:triggerRect.right,brandBottom:brandRect?.bottom,navBottom:navRect?.bottom,a11yBelowBrand,a11yBelowNav,a11yRightAligned,menuPosition:getComputedStyle(menu).position},timestamp:Date.now(),hypothesisId:'H1-H5',runId:'pre-fix'})}).catch(()=>{});
-	}
-	// #endregion
-
 	// Sync button states to stored preferences on init
 	syncThemeButtons(loadTheme());
 	syncFontSizeButtons(loadFontSize());
