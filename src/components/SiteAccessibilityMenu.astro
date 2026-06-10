@@ -1,0 +1,74 @@
+---
+import { siteT } from '../utils/site-i18n';
+---
+
+<!--
+	Accessibility settings menu for the marketing site shell (SiteLayout).
+	Reuses the same .a11y-menu CSS classes and initA11yMenu() runtime from
+	accessibility.ts, which is loaded via SiteLayout.astro.
+	Uses siteT() instead of Astro.locals.t (no Starlight context here).
+-->
+<div class="a11y-menu">
+	<button
+		type="button"
+		class="a11y-menu__trigger"
+		data-a11y-trigger
+		aria-expanded="false"
+		aria-controls="kismeta-a11y-panel"
+		aria-label={siteT('a11y.menuLabel')}
+	>
+		<svg
+			class="a11y-menu__icon"
+			viewBox="0 0 24 24"
+			width="18"
+			height="18"
+			fill="currentColor"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<circle cx="12" cy="4.5" r="2.25"/>
+			<path d="M17.5 8.5H6.5a.75.75 0 0 0 0 1.5h4.25v2.72l-2.47 5.94a.75.75 0 1 0 1.39.58L12 14l2.33 5.24a.75.75 0 0 0 1.39-.58L13.25 12.72V10h4.25a.75.75 0 0 0 0-1.5z"/>
+		</svg>
+	</button>
+
+	<div
+		id="kismeta-a11y-panel"
+		class="a11y-menu__panel"
+		data-a11y-panel
+		hidden
+	>
+		<div class="a11y-menu__group" role="group" aria-labelledby="site-a11y-theme-heading">
+			<span class="a11y-menu__group-label" id="site-a11y-theme-heading">
+				{siteT('a11y.themeLabel')}
+			</span>
+			<div class="a11y-menu__options">
+				<button type="button" class="a11y-menu__option" aria-pressed="false" data-a11y-theme="dark">
+					{siteT('a11y.themeDark')}
+				</button>
+				<button type="button" class="a11y-menu__option" aria-pressed="false" data-a11y-theme="light">
+					{siteT('a11y.themeLight')}
+				</button>
+				<button type="button" class="a11y-menu__option" aria-pressed="true" data-a11y-theme="auto">
+					{siteT('a11y.themeSystem')}
+				</button>
+			</div>
+		</div>
+
+		<div class="a11y-menu__group" role="group" aria-labelledby="site-a11y-fontsize-heading">
+			<span class="a11y-menu__group-label" id="site-a11y-fontsize-heading">
+				{siteT('a11y.fontSizeLabel')}
+			</span>
+			<div class="a11y-menu__options">
+				<button type="button" class="a11y-menu__option" aria-pressed="true" data-a11y-fontsize="default">
+					{siteT('a11y.fontDefault')}
+				</button>
+				<button type="button" class="a11y-menu__option" aria-pressed="false" data-a11y-fontsize="lg">
+					{siteT('a11y.fontLarge')}
+				</button>
+				<button type="button" class="a11y-menu__option" aria-pressed="false" data-a11y-fontsize="xl">
+					{siteT('a11y.fontLarger')}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

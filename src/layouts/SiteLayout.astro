@@ -16,7 +16,7 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,6 +31,20 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Amarante&family=Germania+One&display=swap"
 		/>
+		{/* Inline FOUC-prevention script: sets data-theme before first paint,
+		    mirroring Starlight's own approach. Reads the same localStorage key
+		    so theme persists across marketing ↔ docs navigation. */}
+		<script is:inline>
+			(function () {
+				var stored = '';
+				try { stored = localStorage.getItem('starlight-theme') || ''; } catch (_) {}
+				var theme = stored === 'light' ? 'light'
+				           : stored === 'dark'  ? 'dark'
+				           : window.matchMedia('(prefers-color-scheme: light)').matches ? 'light'
+				           : 'dark';
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 	</head>
 	<body class:list={['site-layout', { 'site-layout--chart-wheel': showChartWheel }]} data-game={gameSlug}>
 		<a class="site-layout__skip" href="#main-content">Skip to content</a>
@@ -52,5 +66,8 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 			<slot />
 		</main>
 		<SiteFooter />
+		<script>
+			import '../scripts/accessibility';
+		</script>
 	</body>
 </html>

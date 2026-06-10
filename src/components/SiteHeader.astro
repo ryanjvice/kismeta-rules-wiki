@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.svg';
 import { siteT } from '../utils/site-i18n';
+import SiteAccessibilityMenu from './SiteAccessibilityMenu.astro';
 
 interface Props {
 	currentPath?: string;
@@ -42,5 +43,6 @@ const navItems = [
 				}
 			</ul>
 		</nav>
+		<SiteAccessibilityMenu />
 	</div>
 </header>
