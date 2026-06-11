@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import type { StoreProduct } from "../data/store-products";
+import { siteT } from "../utils/site-i18n";
+
+interface Props {
+	product: StoreProduct;
+}
+
+const { product } = Astro.props;
+---
+
+<a
+	class="product-card"
+	href={product.href}
+	target="_blank"
+	rel="noopener noreferrer"
+>
+	<div class="product-card__thumb">
+		<Image
+			src={product.image}
+			alt={product.imageAlt}
+			width={600}
+			height={600}
+			class="product-card__thumb-img"
+		/>
+	</div>
+	<div class="product-card__body">
+		<h3 class="product-card__title">{siteT(product.titleKey)}</h3>
+		{product.descriptionKey && (
+			<p class="product-card__desc">{siteT(product.descriptionKey)}</p>
+		)}
+		<p class="product-card__price">{product.price}</p>
+		<span class="product-card__cta">{siteT("shop.productCta")}</span>
+	</div>
+</a>

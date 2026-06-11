@@ -58,7 +58,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
   `src/pages/index.astro` · copy: `site.home.*` in `src/content/i18n/en.json` — hero uses `site.home.welcomeHeadline`, `site.home.welcomeTagline`, and `site.home.metaDescription`
 
 - **Shop** (`/shop/`)  
-  `src/pages/shop.astro` · links: `src/data/shop.ts` · copy: `shop.*`
+  `src/pages/shop.astro` · store links: `src/data/shop.ts` · featured products: `src/data/store-products.ts` · product card: `src/components/ProductCard.astro` · copy: `shop.*` · placeholder images: `src/assets/games/` (swap for real product mockups in `src/assets/shop/` when available)
 
 - **Game marketing** (e.g. `/games/alchemists-of-the-great-year/`)  
   `src/pages/games/*.astro` · layout: `GameMarketingHero.astro` · metadata: `src/data/games.ts` · copy: `game.agy.*`, `game.tva.*`
@@ -159,7 +159,7 @@ Marketing pages live in `src/pages/` and use [`SiteLayout`](../src/layouts/SiteL
 | Page | File | Copy keys |
 |------|------|-----------|
 | Franchise hub `/` | `src/pages/index.astro` | `site.home.*` (`welcomeHeadline`, `welcomeTagline`, `metaDescription`) |
-| Shop `/shop/` | `src/pages/shop.astro` | `shop.*` |
+| Shop `/shop/` | `src/pages/shop.astro`, `src/data/store-products.ts`, `src/components/ProductCard.astro` | `shop.*` |
 | AGY marketing | `src/pages/games/alchemists-of-the-great-year.astro` | `game.agy.*` |
 | Veiled Ascent marketing | `src/pages/games/the-veiled-ascent.astro` | `game.tva.*` |
 

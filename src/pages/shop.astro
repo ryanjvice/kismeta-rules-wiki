@@ -1,6 +1,8 @@
 ﻿---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { shopLinks } from '../data/shop';
+import { featuredProducts } from '../data/store-products';
+import ProductCard from '../components/ProductCard.astro';
 import { siteT } from '../utils/site-i18n';
 
 const title = siteT('shop.title');
@@ -15,6 +17,15 @@ function isExternalShopUrl(href: string) {
 	<section class="site-section shop-page" aria-labelledby="shop-heading">
 		<h1 id="shop-heading" class="site-section__heading">{title}</h1>
 		<p class="shop-page__intro">{description}</p>
+
+		<div class="shop-featured">
+			<h2 class="shop-featured__heading">{siteT('shop.featuredHeading')}</h2>
+			<div class="shop-products">
+				{featuredProducts.map((product) => (
+					<ProductCard {product} />
+				))}
+			</div>
+		</div>
 
 		<ul class="shop-links">
 			{
