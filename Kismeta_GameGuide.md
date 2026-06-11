@@ -858,6 +858,8 @@ The Fates themselves will visit you throughout the course of the game to test yo
 | Played into the Arcanum; hold up to 2                                   | Played into the Arcanum immediately when drawn |
 | Must buy immediately when drawn, or discard - cannot hold and buy later | No purchase required; resolves automatically   |
 
+For a full list of every Adept and Fate card's effects, see the [Major Arcana card reference](/games/alchemists-of-the-great-year/rules/major-arcana/).
+
 Three concepts you'll use constantly:
 
 - **Rank Points (RP)** - A card's numeric Rank. Add them together to find the combined Rank Sum of a card set, used for the Crucible Codex card sets and other contexts.

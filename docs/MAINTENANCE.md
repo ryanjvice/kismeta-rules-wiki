@@ -88,8 +88,11 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 ### Rules content
 
 - **AGY rules pages**  
-  `Kismeta_GameGuide.md` → run `npm run sync:gy`  
-  Output: `src/content/docs/games/alchemists-of-the-great-year/` (`learn/`, `play/`, `reference/`, `rules/`). Do not hand-edit those folders unless you accept overwrite.
+  Two canonical sources — both written by `npm run sync:gy`:
+  - `Kismeta_GameGuide.md` → `scripts/sync-guide.mjs` → `learn/`, `play/`, `reference/`, and most of `rules/`
+  - `Kismeta_CardReference.md` → `scripts/sync-card-reference.mjs` → `rules/major-arcana.md`, `rules/crucible-cards.md`, `rules/minor-arcana.md`
+
+  `sync-guide.mjs` deletes the entire `rules/` directory before writing; `sync-card-reference.mjs` runs after it and restores the three Card Reference pages. Do not hand-edit those folders unless you accept overwrite.
 
 - **TVA rules pages**  
   `Kismeta_VeiledAscent_gameplayGuide.md` → run `npm run sync:tva`  
@@ -97,6 +100,9 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 - **AGY sync script** (slugs, draft banners, cross-links, ⚙️ callouts)  
   `scripts/sync-guide.mjs` — `SECTION_META`, `DRAFT_NOTICES`, `SEE_LINKS`.
+
+- **AGY card reference sync script** (Major Arcana, Crucible Cards, Minor Arcana pages)  
+  `scripts/sync-card-reference.mjs` — `SECTION_META`. Must run after `sync-guide.mjs`.
 
 - **TVA sync script** (section-to-slug mapping, lore mirror)  
   `scripts/sync-tva-guide.mjs` — `SECTION_META`, `SEE_LINKS`. Lore is mirrored from the AGY epilogue during each TVA sync.
@@ -177,9 +183,9 @@ Use [`siteT()`](../src/utils/site-i18n.ts) for marketing copy (loads `src/conten
 | `src/data/guided-steps.ts`, `src/data/tva-guided-steps.ts` | TVA: `lore/`, `play/` (except `guided.mdx`), `reference/`, `rules/` under `the-veiled-ascent/` |
 | `src/data/games.ts`, `src/data/shop.ts`, `src/data/wiki-base.ts`, `src/data/wiki-nav.ts` | `src/data/glossary.json` (AGY sync) |
 | `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | `src/data/glossary-tva.json` (TVA sync) |
-| `Kismeta_GameGuide.md`, `Kismeta_VeiledAscent_gameplayGuide.md` (sources of truth) | TVA `lore/index.md` (mirrored from AGY epilogue) |
+| `Kismeta_GameGuide.md`, `Kismeta_CardReference.md`, `Kismeta_VeiledAscent_gameplayGuide.md` (sources of truth) | TVA `lore/index.md` (mirrored from AGY epilogue) |
 
-**Typical AGY workflow:** edit `Kismeta_GameGuide.md` → `npm run sync:gy` → `npm run dev` → preview → `npm run build`.
+**Typical AGY workflow:** edit `Kismeta_GameGuide.md` or `Kismeta_CardReference.md` → `npm run sync:gy` → `npm run dev` → preview → `npm run build`.
 
 **Typical TVA workflow:** edit `Kismeta_VeiledAscent_gameplayGuide.md` → `npm run sync:tva` → `npm run dev` → preview → `npm run build`.
 

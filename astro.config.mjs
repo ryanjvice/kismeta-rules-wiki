@@ -149,6 +149,21 @@ export default defineConfig({
                 link("Game Overview", "rules/game-overview"),
                 link("Round at a Glance", "rules/round-at-a-glance"),
                 link("Full Game Rules", "play/round-overview"),
+                {
+                  label: "Card Reference",
+                  items: [
+                    link("Crucible Cards", "rules/crucible-cards"),
+                    {
+                      label: "Major Arcana",
+                      items: [
+                        link("Overview", "rules/major-arcana"),
+                        { label: "Fate Cards", link: `/${AGY_WIKI}/rules/major-arcana/#fate-cards` },
+                        { label: "Adept Cards", link: `/${AGY_WIKI}/rules/major-arcana/#adept-cards` },
+                      ],
+                    },
+                    link("Minor Arcana", "rules/minor-arcana"),
+                  ],
+                },
               ],
             },
           ],

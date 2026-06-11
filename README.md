@@ -38,14 +38,20 @@ Open [http://localhost:4321](http://localhost:4321).
 
 ### AGY (Alchemists of the Great Year)
 
-1. Edit [`Kismeta_GameGuide.md`](./Kismeta_GameGuide.md) (canonical source).
-2. Regenerate:
+AGY has two canonical source files:
 
-   ```bash
-   npm run sync:gy
-   ```
+| Source | Covers | Sync script |
+|--------|--------|-------------|
+| [`Kismeta_GameGuide.md`](./Kismeta_GameGuide.md) | Full rules, setup, lore, glossary | `scripts/sync-guide.mjs` |
+| [`Kismeta_CardReference.md`](./Kismeta_CardReference.md) | Major Arcana, Crucible Cards, Minor Arcana detail | `scripts/sync-card-reference.mjs` |
 
-The sync writes to `src/content/docs/games/alchemists-of-the-great-year/` and rebuilds `src/data/glossary.json`. Do not hand-edit generated markdown under `learn/`, `play/`, `reference/`, or `rules/` — it is overwritten on the next sync.
+To regenerate all AGY pages after editing either file:
+
+```bash
+npm run sync:gy
+```
+
+`sync:gy` runs both scripts in order — `sync-guide.mjs` (which clears `rules/`) then `sync-card-reference.mjs` (which writes the three Card Reference pages). Do not hand-edit generated markdown under `learn/`, `play/`, `reference/`, or `rules/` — it is overwritten on the next sync.
 
 ### TVA (The Veiled Ascent)
 
