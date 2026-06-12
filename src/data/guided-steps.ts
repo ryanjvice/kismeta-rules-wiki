@@ -44,7 +44,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     checklist: [
       "Great Year Board",
       "134 Kismeta Cards (blue) and 22 Crucible Cards (red)",
-      "4 Cauldron Codex cards (one per player)",
+      "4 Crucible Codex cards (one per player)",
       "1 Cosmic Age Die (black) and 4 Zodiac Dice (player colors)",
       "Per player: Philosopher's Stone, Meeple, 3 Astral House tokens, 4 Coals",
       "Reagent tokens (Sulphur, Quicksilver, Aqua Regia, Vitriol, Salt)",
@@ -77,7 +77,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phaseTotal: 7,
     body: "<p>Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.</p>",
     checklist: [
-      "1 Cauldron Codex (dual-sided)",
+      "1 Crucible Codex (dual-sided)",
       "4 Coals",
       "3 Astral House tokens (matching your color)",
       "1 Meeple (matching your color)",
@@ -198,7 +198,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 3,
     phaseTotal: 5,
-    body: '<p>All players begin with 2 Kismeta Cards as a gift from the Age. Earn Bonus Cards by aligning your inventory with the Cosmic Age\'s Aspects. Each player calculates their own total first; the Agekeeper then deals the full Harvest.</p><ol class="game-table__steps"><li class="game-table__step"><span class="game-table__step-label">Base Harvest</span><p class="game-table__step-body">All players begin with 2 Kismeta Cards. This is always granted regardless of Alignment.</p></li><li class="game-table__step"><span class="game-table__step-label">Calculate Bonus Cards</span><p class="game-table__step-body">Each player tallies bonus cards from all Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Element Match. Each source scores its single highest-matching Aspect.</p></li><li class="game-table__step"><span class="game-table__step-label">Agekeeper\'s Boon</span><p class="game-table__step-body">If the Agekeeper\'s rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player\'s tally.</p></li><li class="game-table__step"><span class="game-table__step-label">Deal the Harvest</span><p class="game-table__step-body">The Agekeeper deals each player their full Harvest total face-down, one at a time.</p></li></ol><div class="doc-table"><table><thead><tr><th>Bonus Source</th><th>How It Scores</th></tr></thead><tbody><tr><td>Zodiac Die</td><td>Compare your rolled Sign\'s Aspects against the Cosmic Age — score the highest match</td></tr><tr><td>Astral Houses</td><td>Each House is scored independently and stacks with all other sources</td></tr><tr><td>Adept Cards</td><td>Each active Adept Card in your Arcanum is scored independently</td></tr><tr><td>Spread Element Match</td><td>Each Spread card whose suit matches the Cosmic Age Element earns +1</td></tr></tbody></table></div><div class="doc-table"><table><thead><tr><th>Aspect Match</th><th>Bonus Cards</th></tr></thead><tbody><tr><td>Sign</td><td>+3</td></tr><tr><td>Planet</td><td>+2</td></tr><tr><td>Element</td><td>+1</td></tr><tr><td>No Match</td><td>+0</td></tr></tbody></table></div><p><em>Each source scores its single highest-matching Aspect only — do not stack.</em></p>',
+    body: '<p>All players begin with 3 Kismeta Cards. Earn Bonus Cards by aligning your inventory with the Cosmic Age\'s Aspects. Each player calculates their own total first; the Agekeeper then deals the full Harvest.</p><ol class="game-table__steps"><li class="game-table__step"><span class="game-table__step-label">Base Harvest</span><p class="game-table__step-body">All players begin with 3 Kismeta Cards. This is always granted regardless of Alignment.</p></li><li class="game-table__step"><span class="game-table__step-label">Calculate Bonus Cards</span><p class="game-table__step-body">Each player tallies bonus cards from all Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Element Match. Each source scores its single highest-matching Aspect.</p></li><li class="game-table__step"><span class="game-table__step-label">Agekeeper\'s Boon</span><p class="game-table__step-body">If the Agekeeper\'s rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player\'s tally.</p></li><li class="game-table__step"><span class="game-table__step-label">Deal the Harvest</span><p class="game-table__step-body">The Agekeeper deals each player their full Harvest total face-down, one at a time.</p></li></ol><div class="doc-table"><table><thead><tr><th>Bonus Source</th><th>How It Scores</th></tr></thead><tbody><tr><td>Zodiac Die</td><td>Compare your rolled Sign\'s Aspects against the Cosmic Age — score the highest match</td></tr><tr><td>Astral Houses</td><td>Each House is scored independently and stacks with all other sources</td></tr><tr><td>Adept Cards</td><td>Each active Adept Card in your Arcanum is scored independently</td></tr><tr><td>Spread Element Match</td><td>Each Spread card whose suit matches the Cosmic Age Element earns +1</td></tr></tbody></table></div><div class="doc-table"><table><thead><tr><th>Aspect Match</th><th>Bonus Cards</th></tr></thead><tbody><tr><td>Sign</td><td>+3</td></tr><tr><td>Planet</td><td>+2</td></tr><tr><td>Element</td><td>+1</td></tr><tr><td>No Match</td><td>+0</td></tr></tbody></table></div><p><em>Each source scores its single highest-matching Aspect only — do not stack.</em></p>',
     learnMorePath: "play/round-overview",
     learnMoreHash: "3-harvest-kismeta-cards",
   },
@@ -208,7 +208,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 4,
     phaseTotal: 5,
-    body: "<p>Now that you have your Kismeta Cards, build your Spread, Hand, and Arcanum zones. Cards in your Spread have active effects and count toward Alignment, Crucible activation, and Crafting, but they can be lost in Duels. Cards in your Hand are hidden and can be used for Crafting and Oppositions but have no active effects. Any Major Arcana cards go to your Arcanum zone. Fate cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Adept cards must be purchased and can be added in up to two at a time.</p>",
+    body: "<p>Arrange your Kismeta Cards across three zones. <strong>Spread</strong> — place Minor Arcana face-up in front of you. These cards have active effects, count toward Alignment, and can be used to activate Crucible Cards and craft Reagents — but they are visible to rivals and can be lost in Duels. <strong>Hand</strong> — keep remaining Minor Arcana hidden. Hand cards are safe from Duels and can contribute to Reagent Crafting and Oppositions, but they have no active effects and cannot satisfy Crucible Codex card sets or Alchemical Formulas. <strong>Arcanum</strong> — any Major Arcana go here. Fate cards are always placed face-up in the Arcanum immediately when drawn, even mid-Harvest. Adept cards must be purchased when drawn (or discarded); you may hold up to two at a time. See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept card effects</a>.</p><p>📌 <strong>Your Spread is your engine</strong> — cards here drive Alignment, Crucible activation, and Crafting. Your Hand is your hidden reserve, safe from theft but invisible to the game's scoring.</p>",
     checklist: [
       "Build your Spread, Hand, and Arcanum zones",
       "Consider your goals for this round",
@@ -222,7 +222,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 5,
     phaseTotal: 5,
-    body: "<p>Once Commune is complete, all cards are locked in their current zones until Phase 4: Winter. Any new cards you gain in Summer or Autumn are automatically added to your Spread.</p>",
+    body: "<p>Once Commune is complete, all cards are locked in their current zones until Phase 4: Winter. Any new cards you gain in Summer or Autumn are automatically added to your Spread.</p><p>📌 <em>Tip: Think before you lock — over-fill your Spread and rivals can steal in Duels; hide too much in Hand and your Crucible engine stalls.</em></p>",
     learnMorePath: "play/round-overview",
     learnMoreHash: "5-card-lock",
   },
@@ -243,7 +243,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "autumn",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p><p>Reagent crafting is also available freely on your turn — same rules as Summer. Craft before you Fire if you need a last Reagent.</p>",
+    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p><p>Reagent crafting is also available freely on your turn — same rules as Summer. Craft before you Fire if you need a last Reagent.</p><p>📌 <em>Tip: When you Fire, set 1–2 Reagents as Ward Reagents beside your Stone — an unprotected Stone in the Forge is a free target for Opposition.</em></p>",
     embed: "autumn-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-3-autumn",
@@ -273,7 +273,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   {
     id: "complete",
     title: "Move swiftly, Dear Alchemist...",
-    body: "<p>You have walked through your first Cosmic Age. </p><p>For the next round, repeat <strong>Spring → Summer → Autumn → Winter</strong>.</p><p>Click <strong>Continue Playing</strong> to walk through your next round.</p><p>Click <strong>Open Round at a Glance</strong> to return here.</p><p>Click <strong>Start Over</strong> to start a new game.</p>",
+    body: "<p>You have walked through your first Cosmic Age. </p><p>For the next round, repeat <strong>Spring → Summer → Autumn → Winter</strong>.</p><p>Click <strong>Continue Playing</strong> to walk through your next round.</p><p>Click <strong>Open Round at a Glance</strong> to return here.</p><p>Click <strong>Start Over</strong> to start a new game.</p><p>Ready to sharpen your play? See <a href='/games/alchemists-of-the-great-year/reference/quick-tips/'>Quick Tips</a> for practical advice on Alignments, Cauldrons, and Wards.</p>",
     learnMorePath: "rules/round-at-a-glance",
   },
 ];
@@ -287,7 +287,7 @@ export const GUIDED_CONTENT_STEP_COUNT = GUIDED_STEPS.length - 1;
 
 export const GAME_MODE_STORAGE_KEY = "kismeta-game-modes";
 export const GUIDED_PROGRESS_KEY = "kismeta-guided-progress";
-export const GUIDED_PROGRESS_VERSION = 4;
+export const GUIDED_PROGRESS_VERSION = 5;
 
 export function gameModeToStorage(mode: GameMode): {
   quickplay: boolean;

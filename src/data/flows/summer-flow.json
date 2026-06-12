@@ -17,14 +17,14 @@
             "id": "activate",
             "label": "🎴 Activate Crucible Card",
             "kind": "optional",
-            "body": "Consult your Cauldron Codex for the Formula, assemble the card set in your Spread, discard the set, and light a Cauldron by placing the Coal in it — that Reagent type can now be crafted for the rest of the game. Flip the Crucible Card face-up — it is now Active.",
+            "body": "Consult your Crucible Codex for the Formula, assemble the card set in your Spread, discard the set, and light a Cauldron by placing the Coal in it — that Reagent type can now be crafted for the rest of the game. Flip the Crucible Card face-up — it is now Active. <em>Tip: Light the Cauldron for the Reagent type you'll need soonest — lighting the wrong one early can bottleneck your whole game.</em>",
             "learnMoreHash": "1-activate-crucible-cards"
           },
           {
             "id": "houses",
             "label": "🏰 Build Astral House",
             "kind": "optional",
-            "body": "Pay Planet-matching Kismeta Cards; place an Astral House token on a Zodiac Sign. Each House is a permanent Alignment source for every future Harvest.",
+            "body": "Pay Planet-matching Kismeta Cards; place an Astral House token on a Zodiac Sign. Each House is a permanent Alignment source for every future Harvest. <em>Tip: Houses built early pay off every Spring Harvest for the rest of the game — a late-game House barely earns back its cost.</em>",
             "learnMoreHash": "2-build-astral-houses",
             "gameModeNote": {
               "quickplay": "Quickplay: 1 matching card.",
@@ -35,7 +35,7 @@
             "id": "craft-reagent",
             "label": "⚒️ Craft Reagent",
             "kind": "optional",
-            "body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. <strong>Salt:</strong> Discard any 3 cards — no Cauldron needed.",
+            "body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. <strong>Salt:</strong> Discard any 3 cards — no Cauldron needed. <em>Tip: Craft from your Hand when you can — it preserves the card sets and Alignments sitting in your Spread.</em>",
             "learnMoreHash": "3-craft-reagents"
           }
         ]

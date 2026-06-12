@@ -80,10 +80,15 @@ const SECTION_META = {
     title: 'Quick Reference',
     description: 'Cosmic Ages, elements, inventory zones, alignment, reagents, and Crucible at a glance.',
   },
-  'QUICK TIPS & STRATEGY': {
+  'QUICK TIPS': {
     slug: 'reference/quick-tips',
-    title: 'Quick Tips & Strategy',
+    title: 'Quick Tips',
     description: 'Practical advice for new and returning alchemists.',
+  },
+  'STRATEGY GUIDE': {
+    slug: 'reference/strategy-guide',
+    title: 'Strategy Guide',
+    description: 'Deep strategic analysis — engine building, resource management, risk, and game modes.',
   },
   'LORE: EPILOGUE - The Veil Stirs…': {
     slug: 'lore/epilogue',

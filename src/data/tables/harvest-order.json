@@ -4,7 +4,7 @@
 		{
 			"id": "base",
 			"label": "Base Harvest",
-			"body": "All players begin with 2 Kismeta Cards. This is always granted regardless of Alignment."
+			"body": "All players begin with 3 Kismeta Cards. This is always granted regardless of Alignment."
 		},
 		{
 			"id": "calculate",

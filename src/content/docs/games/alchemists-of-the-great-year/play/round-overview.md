@@ -73,15 +73,15 @@ All players earn a base of 3 Kismeta Cards at the start of every Harvest. You ca
 Each Cosmic Age has three Aspects — **Sign**, **Planet**, and **Element** — that define which cards, dice results, and structures Align with it. The closer your Alignment, the more cards you earn in the Harvest. Every Harvest Bonus source in your possession is scored against the current Cosmic Age's three Aspects. Each source earns bonus cards based on its highest matching Aspect.
 
 | 💡 EXAMPLE: SCORPIO AGE (Scorpio, Mars, Water) |                                                 |                 |
-| ----------------------------------------------- | ----------------------------------------------- | --------------- |
-| **SOURCE**                                      | **ASPECT MATCHED**                              | **BONUS CARDS** |
-| Zodiac Die: Scorpio                             | Sign match (Scorpio = Scorpio) → highest Aspect | +3              |
-| Spread: 7 of Pentacles                          | Planet match (Mars = Mars)                      | +2              |
-| Spread: Knight of Cups                          | Element match (Water = Water)                   | +1              |
-| Astral House: Pisces                            | Element match (Water = Water)                   | +1              |
-| Adept Card: The Hierophant                      | Sign match (Scorpio = Scorpio)                  | +3              |
-| Base Harvest                                    | 3 cards always dealt regardless of Alignment    | +3              |
-| **TOTAL HARVEST**                               |                                                 | **13 cards**    |
+| ---------------------------------------------- | ----------------------------------------------- | --------------- |
+| **SOURCE**                                     | **ASPECT MATCHED**                              | **BONUS CARDS** |
+| Zodiac Die: Scorpio                            | Sign match (Scorpio = Scorpio) → highest Aspect | +3              |
+| Spread: 7 of Pentacles                         | Planet match (Mars = Mars)                      | +2              |
+| Spread: Knight of Cups                         | Element match (Water = Water)                   | +1              |
+| Astral House: Pisces                           | Element match (Water = Water)                   | +1              |
+| Adept Card: The Hierophant                     | Sign match (Scorpio = Scorpio)                  | +3              |
+| Base Harvest                                   | 3 cards always dealt regardless of Alignment    | +3              |
+| **TOTAL HARVEST**                              |                                                 | **13 cards**    |
 
 ### 4️⃣ Commune with the Kismeta Cards {#4-commune-with-the-kismeta-cards}
 
@@ -106,16 +106,16 @@ Once the players have finished arranging their cards for the round, all cards ar
 
 The Sun shines brightly as you busy yourself crafting resources and consorting with your rivals, bartering over trades, initiating duels, and risking your luck in gambits.
 
-| **Step**                      | **Action**                                                                                                       |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-|                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                          |
-| **🎴 Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                     |
-| **🏰 Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                    |
-| **⚒️ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have a Coal in it first. |
-|                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                      |
-| **🤝 Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                               |
-| **🤺 Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                     |
-| **🎲 Gambit**                 | Pay any Ward cost and roll dice to seize a rival's Active Crucible Card or Adept card, wagering one of your own in exchange.                                                     |
+| **Step**                      | **Action**                                                                                                                   |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+|                               | _**CRAFT RESOURCES — TAKE ANY ACTION**_                                                                                      |
+| **🎴 Activate Crucible Card** | Collect Card sets listed on the Codex & discard to activate.                                                                 |
+| **🏰 Build Astral House**     | Pay Planet-matching cards to permanently claim a Zodiac Sign.                                                                |
+| **⚒️ Craft Reagent**          | Discard 3 matching-Suit cards into a lit Cauldron to craft 1 Reagent. The Cauldron must have a Coal in it first.             |
+|                               | _**CONSORT WITH RIVALS — TAKE ANY ACTION**_                                                                                  |
+| **🤝 Trade**                  | Exchange Kismeta Cards, Reagents, or Active Crucible Cards freely.                                                           |
+| **🤺 Duel**                   | Wager cards and roll dice against a rival to steal a card from their Spread.                                                 |
+| **🎲 Gambit**                 | Pay any Ward cost and roll dice to seize a rival's Active Crucible Card or Adept card, wagering one of your own in exchange. |
 
 ### 🎴 Activate Crucible Card
 
@@ -129,12 +129,12 @@ Your Crucible Codex holds four Activation Formulas — one for each of your four
 - **Light a Cauldron:** Move the Coal from the Crucible Card into the Cauldron whose color is shown beside that Formula on your Codex. That Cauldron is now lit — its Reagent type can be crafted for the rest of the game.
 - **Activate the Crucible Card:** Flip the card face-up to Activate it. Each Crucible card reveals an Alchemical Formula that is necessary to advance your Philosopher's Stone one step closer to the Altar of Kismeta.
 
-| CAULDRON  | CODEX A                    | CODEX B               | CODEX C               | CODEX D                    |
-| --------- | -------------------------- | --------------------- | --------------------- | -------------------------- |
-| 🔴 Red    | Any Three Mars             | 25 Total Ranks · Wands     | Any Three Mars        | 25 Total Ranks · Wands     |
-| 🔵 Blue   | Any Three Venus            | 25 Total Ranks · Cups      | 25 Total Ranks · Cups | Any Three Venus            |
-| 🟢 Green  | 25 Total Ranks · Pentacles | Any Three Jupiter     | Any Three Jupiter     | 25 Total Ranks · Pentacles |
-| 🟡 Yellow | 25 Total Ranks · Swords    | Any Three Saturn      | 25 Total Ranks · Swords | Any Three Saturn         |
+| CAULDRON  | CODEX A                    | CODEX B                | CODEX C                 | CODEX D                    |
+| --------- | -------------------------- | ---------------------- | ----------------------- | -------------------------- |
+| 🔴 Red    | Any Three Mars             | 25 Total Ranks · Wands | Any Three Mars          | 25 Total Ranks · Wands     |
+| 🔵 Blue   | Any Three Venus            | 25 Total Ranks · Cups  | 25 Total Ranks · Cups   | Any Three Venus            |
+| 🟢 Green  | 25 Total Ranks · Pentacles | Any Three Jupiter      | Any Three Jupiter       | 25 Total Ranks · Pentacles |
+| 🟡 Yellow | 25 Total Ranks · Swords    | Any Three Saturn       | 25 Total Ranks · Swords | Any Three Saturn           |
 
 ⚠️ **Important:** You may only have one Crucible Card Fired at a time. If your Stone is already Forging, you must Temper it before Firing again.
 
@@ -233,20 +233,20 @@ Challenge a rival to seize a card from their inventory by wagering one of your o
 #### How to Declare a Gambit:
 
 - **Name Your Target:**
-  - *Crucible Gambit:* Choose an Active Crucible Card in a rival's inventory.
-  - *Arcanum Gambit:* Choose any Adept card in a rival's Arcanum — Active, Arrested, or face-down.
+  - _Crucible Gambit:_ Choose an Active Crucible Card in a rival's inventory.
+  - _Arcanum Gambit:_ Choose any Adept card in a rival's Arcanum — Active, Arrested, or face-down.
 - **Name Your Offer:**
-  - *Crucible Gambit:* Declare one of your own Active Crucible Cards as your stake.
-  - *Arcanum Gambit:* Declare one of your own Active Adept cards as your stake. An Arrested Adept cannot be offered.
+  - _Crucible Gambit:_ Declare one of your own Active Crucible Cards as your stake.
+  - _Arcanum Gambit:_ Declare one of your own Active Adept cards as your stake. An Arrested Adept cannot be offered.
 - **Pay the entry fee:** Pay Reagents from your supply equal in number to the Defender's Ward on the targeted card. You may pay with any Reagent types in any combination — type-matching is not required. No Ward = no fee.
 - **Roll:** Both players roll their Zodiac Dice. Apply any card effects that modify Gambits before comparing results.
 - **Resolve:** See outcomes below.
 
-| GAMBIT RESULTS   |                                                                                                                                                                                    |                                                             |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **Result**       | **Challenger**                                                                                                                                                                     | **Defender**                                                |
-| Challenger Wins  | The two cards swap. If the targeted card was Arrested or face-down, it arrives Active in the Challenger's inventory — no Salt cost applies.                                        | Receives the Challenger's offered card. Ward Reagents are spent. |
-| Challenger Loses | The offered card is Arrested (face-down, sideways; effect inactive; pay 1 Salt during your Summer turn to free it). Cannot re-Gambit the same Defender this round. | Ward Reagents are returned.                                 |
+| GAMBIT RESULTS   |                                                                                                                                                                    |                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| **Result**       | **Challenger**                                                                                                                                                     | **Defender**                                                     |
+| Challenger Wins  | The two cards swap. If the targeted card was Arrested or face-down, it arrives Active in the Challenger's inventory — no Salt cost applies.                        | Receives the Challenger's offered card. Ward Reagents are spent. |
+| Challenger Loses | The offered card is Arrested (face-down, sideways; effect inactive; pay 1 Salt during your Summer turn to free it). Cannot re-Gambit the same Defender this round. | Ward Reagents are returned.                                      |
 
 #### Ward Reagents on Gambits
 
@@ -278,7 +278,7 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 |                            | _**CRUCIBLE ACTIONS**_                                                                                                                                             |
 | **3️⃣ Fire the Stone**      | (Begin Transmutation; complete next round) Complete an active Crucible card and move your Stone into the Forge.                                                    |
 | **4️⃣ Temper**              | (Complete Transmutation from previous round) After a full round in the Forge, move your Stone to the next Mantle Ring space.                                       |
-| **5️⃣ Leave Stasis ❄️**     | Pay 2 Salt to move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.                      |
+| **5️⃣ Leave Stasis ❄️**     | Pay 2 Salt to move your Stone out of Stasis and back to its previous Forge spot. If that spot is occupied, wait or declare Stasis Opposition to reclaim it.        |
 
 ### 1️⃣ Survey the Crucible: Your Stone's Current Position
 
@@ -305,7 +305,7 @@ As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to a
 | Tempering | Mantle Ring (0, 2, 4, 6) | Safe. No Crucible Card is Fired. Cannot be targeted by an Opposition. Focus on Activating and Firing Crucible Cards at this time.               |
 | Forging   | Forge (1, 3, 5, 7)       | Transmutation underway. Crucible Card is Fired (face-up, sideways). Vulnerable to Opposition. Focus on Protecting your Stone at this time.      |
 | In Stasis | ❄️ Stasis zone           | Frozen until next Autumn. Crucible Card remains Fired. Cannot Temper or take other Stone actions. Focus on returning to the Forge at this time. |
-| Complete  | Altar of Kismeta         | You have finished all four stages of Transmutation and won the game! All hail! All hail! The Magnus Alchemista!                                  |
+| Complete  | Altar of Kismeta         | You have finished all four stages of Transmutation and won the game! All hail! All hail! The Magnus Alchemista!                                 |
 
 #### Crucible Card States
 
@@ -423,9 +423,9 @@ If your Stone has been in Stasis since the previous round, you may leave by payi
 
 If another player's Stone now holds your previous Forge position, choose one:
 
-| OPTION                    | HOW IT WORKS                                                                                                                                                                  |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wait in Stasis            | Remain in Stasis another round. Attempt to return next Autumn. No Salt is spent and no action is required.                                                                                            |
+| OPTION                    | HOW IT WORKS                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wait in Stasis            | Remain in Stasis another round. Attempt to return next Autumn. No Salt is spent and no action is required.                                                                                                                                                                                                                                     |
 | Declare Stasis Opposition | Challenge the occupying Stone during Step 2: Opposition. This is the alternative to paying 2 Salt — you do not pay the 2 Salt; instead you pay the standard Opposition entry fee (Reagents equal to the Defender's Ward). Follows all standard Opposition rules, but with a different outcome (position swap, not send-to-Stasis). See Step 2. |
 
 #### Stasis Opposition outcomes:

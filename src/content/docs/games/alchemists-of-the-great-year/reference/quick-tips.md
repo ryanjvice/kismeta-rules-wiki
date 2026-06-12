@@ -1,5 +1,5 @@
 ---
-title: "Quick Tips & Strategy"
+title: "Quick Tips"
 description: "Practical advice for new and returning alchemists."
 ---
 
