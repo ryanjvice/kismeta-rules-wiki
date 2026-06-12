@@ -2,8 +2,9 @@ import type { ImageMetadata } from "astro";
 import type { SiteI18nKey } from "../utils/site-i18n";
 
 import agyBox from "../assets/games/agy/kismeta_AGY_cover.jpg";
-import agyBoard from "../assets/games/agy/kismeta_AGY_gameBoard.jpg";
-import tvaCard from "../assets/games/tva/Kismeta_Veil_gameBoard_final.png";
+import agyHoodie from "../assets/merch/hoodie.jpg";
+import agyCard from "../assets/merch/poster.jpg";
+import agyTwillCap from "../assets/merch/twillCap.jpg";
 
 export type StoreProduct = {
   id: string;
@@ -27,27 +28,36 @@ export const featuredProducts: StoreProduct[] = [
     id: "agy-game",
     titleKey: "shop.product.agy-game.title",
     descriptionKey: "shop.product.agy-game.description",
-    price: "$49.99",
+    price: "$60",
     href: "https://kismeta.printful.me/",
     image: agyBox,
     imageAlt: "Kismeta: Alchemists of the Great Year board game box",
   },
   {
-    id: "agy-tshirt",
-    titleKey: "shop.product.agy-tshirt.title",
-    descriptionKey: "shop.product.agy-tshirt.description",
-    price: "$29.99",
+    id: "agy-hoodie",
+    titleKey: "shop.product.agy-hoodie.title",
+    descriptionKey: "shop.product.agy-hoodie.description",
+    price: "$50.00",
     href: "https://kismeta.printful.me/",
-    image: agyBoard,
-    imageAlt: "Kismeta alchemist tee shirt mockup",
+    image: agyHoodie,
+    imageAlt: "Navy Kismeta logo hoodie mockup",
+  },
+  {
+    id: "kismeta-cap",
+    titleKey: "shop.product.kismeta-cap.title",
+    descriptionKey: "shop.product.kismeta-cap.description",
+    price: "$25.00",
+    href: "https://kismeta.printful.me/",
+    image: agyTwillCap,
+    imageAlt: "Black vintage twill cap with embroidered Kismeta lettering",
   },
   {
     id: "agy-poster",
     titleKey: "shop.product.agy-poster.title",
     descriptionKey: "shop.product.agy-poster.description",
-    price: "$19.99",
+    price: "$20",
     href: "https://kismeta.printful.me/",
-    image: tvaCard,
+    image: agyCard,
     imageAlt: "Great Year board art print",
   },
 ];
