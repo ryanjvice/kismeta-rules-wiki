@@ -28,7 +28,7 @@ const { game, thumbImage } = Astro.props;
 		<h2 class="game-card__title">
 			<a href={game.marketingPath}>{game.title}</a>
 		</h2>
-		<p class="game-card__subtitle">{game.subtitle}</p>
+		<p class="game-card__subtitle">{game.cardSubtitle ?? game.subtitle}</p>
 		{
 			game.status === 'coming-soon' && (
 				<p class="game-card__status">{siteT('site.gameStatus.comingSoon')}</p>

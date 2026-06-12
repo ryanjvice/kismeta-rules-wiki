@@ -17,6 +17,7 @@ export type Game = {
 	subtitle: string;
 	summaryKey: "game.agy.summary" | "game.tva.summary";
 	shortDescKey?: "game.agy.shortDesc" | "game.tva.shortDesc";
+	cardSubtitle?: string;
 	marketingPath: string;
 	status: GameStatus;
 	playersKey?: "game.agy.players" | "game.tva.players";
@@ -31,6 +32,7 @@ export const games: Game[] = [
 		subtitle: "Alchemists of the Great Year",
 		summaryKey: "game.agy.summary",
 		shortDescKey: "game.agy.shortDesc",
+		cardSubtitle: "Board Game",
 		marketingPath: "/games/alchemists-of-the-great-year/",
 		status: "available",
 		playersKey: "game.agy.players",
@@ -52,6 +54,7 @@ export const games: Game[] = [
 		subtitle: "The Veiled Ascent",
 		summaryKey: "game.tva.summary",
 		shortDescKey: "game.tva.shortDesc",
+		cardSubtitle: "Card Game & Mobile Game",
 		marketingPath: "/games/the-veiled-ascent/",
 		status: "available",
 		playersKey: "game.tva.players",
