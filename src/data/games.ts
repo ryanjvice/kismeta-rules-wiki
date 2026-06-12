@@ -16,10 +16,11 @@ export type Game = {
 	title: string;
 	subtitle: string;
 	summaryKey: "game.agy.summary" | "game.tva.summary";
+	shortDescKey?: "game.agy.shortDesc" | "game.tva.shortDesc";
 	marketingPath: string;
 	status: GameStatus;
 	playersKey?: "game.agy.players" | "game.tva.players";
-	playTimeKey?: "game.agy.playTime";
+	playTimeKey?: "game.agy.playTime" | "game.tva.playTime";
 	theme?: GameTheme;
 };
 
@@ -29,6 +30,7 @@ export const games: Game[] = [
 		title: "Kismeta: Alchemists of the Great Year",
 		subtitle: "Alchemists of the Great Year",
 		summaryKey: "game.agy.summary",
+		shortDescKey: "game.agy.shortDesc",
 		marketingPath: "/games/alchemists-of-the-great-year/",
 		status: "available",
 		playersKey: "game.agy.players",
@@ -49,9 +51,11 @@ export const games: Game[] = [
 		title: "Kismeta: The Veiled Ascent",
 		subtitle: "The Veiled Ascent",
 		summaryKey: "game.tva.summary",
+		shortDescKey: "game.tva.shortDesc",
 		marketingPath: "/games/the-veiled-ascent/",
 		status: "available",
 		playersKey: "game.tva.players",
+		playTimeKey: "game.tva.playTime",
 		theme: {
 			accentColor: "#9b8ec4",
 			accentHigh: "#e2e8f4",
