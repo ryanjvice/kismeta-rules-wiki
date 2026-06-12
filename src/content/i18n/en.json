@@ -127,8 +127,7 @@
   "game.agy.players": "2–4",
   "game.agy.playTime": "1-3+ hrs.",
   "game.agy.action.play": "Play",
-  "game.agy.action.learn": "Learn",
-  "game.agy.action.round": "Round at a Glance",
+  "game.agy.action.lore": "Lore",
   "game.agy.action.shop": "Shop",
 
   "game.tva.summary": "Kismeta: The Veiled Ascent is a tarot card game where you ascend through the Aethereal Veil. Each round, build a three-card spread and try to outscore the Table's hand without going over 50 — victories move you upward through seven chakras while defeats deepen your corruption. Reach enlightenment before corruption overwhelms you. Coming soon as a physical game and on Google Play.",
@@ -138,8 +137,6 @@
   "game.tva.players": "1-2",
   "game.tva.playTime": "10–20 min.",
   "game.tva.action.play": "Play",
-  "game.tva.action.rules": "Rules",
-  "game.tva.action.roundOutcomes": "Round Outcomes",
   "game.tva.action.lore": "Lore",
   "game.tva.action.shop": "Shop",
 
