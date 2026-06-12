@@ -8,13 +8,17 @@ interface Props {
 }
 
 const { product } = Astro.props;
+const isComingSoon = product.comingSoon ?? false;
+const Tag = isComingSoon ? "div" : "a";
 ---
 
-<a
-	class="product-card"
-	href={product.href}
-	target="_blank"
-	rel="noopener noreferrer"
+<Tag
+	class:list={["product-card", { "product-card--coming-soon": isComingSoon }]}
+	{...(!isComingSoon && {
+		href: product.href,
+		target: "_blank",
+		rel: "noopener noreferrer",
+	})}
 >
 	<div class="product-card__thumb">
 		<Image
@@ -31,6 +35,10 @@ const { product } = Astro.props;
 			<p class="product-card__desc">{siteT(product.descriptionKey)}</p>
 		)}
 		<p class="product-card__price">{product.price}</p>
-		<span class="product-card__cta">{siteT("shop.productCta")}</span>
+		{isComingSoon ? (
+			<p class="product-card__pending">{siteT("site.gameStatus.comingSoon")}</p>
+		) : (
+			<span class="product-card__cta">{siteT("shop.productCta")}</span>
+		)}
 	</div>
-</a>
+</Tag>

@@ -3370,6 +3370,15 @@ a.shop-links__card:hover {
   background: var(--site-color-bg-elevated);
 }
 
+.product-card--coming-soon {
+  cursor: default;
+}
+
+.product-card--coming-soon:hover {
+  border-color: var(--kismeta-panel-border);
+  background: var(--kismeta-panel-bg);
+}
+
 .product-card__thumb {
   aspect-ratio: 1 / 1;
   overflow: hidden;
@@ -3387,6 +3396,10 @@ a.shop-links__card:hover {
 
 .product-card:hover .product-card__thumb-img {
   transform: scale(1.04);
+}
+
+.product-card--coming-soon:hover .product-card__thumb-img {
+  transform: none;
 }
 
 .product-card__body {
@@ -3433,6 +3446,15 @@ a.shop-links__card:hover {
   text-transform: uppercase;
   color: var(--kismeta-on-accent);
   background: var(--site-color-accent);
+}
+
+.product-card__pending {
+  margin: auto 0 0;
+  font-size: var(--site-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--site-color-accent);
 }
 
 .game-marketing-hero__status {

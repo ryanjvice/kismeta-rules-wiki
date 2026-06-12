@@ -16,6 +16,8 @@ export type StoreProduct = {
   href: string;
   image: ImageMetadata;
   imageAlt: string;
+  /** When true, the card is shown but not linked to the storefront. */
+  comingSoon?: boolean;
 };
 
 /**
@@ -32,6 +34,7 @@ export const featuredProducts: StoreProduct[] = [
     href: "https://kismeta.printful.me/",
     image: agyBox,
     imageAlt: "Kismeta: Alchemists of the Great Year board game box",
+    comingSoon: true,
   },
   {
     id: "agy-hoodie",
