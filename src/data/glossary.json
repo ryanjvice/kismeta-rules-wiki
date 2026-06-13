@@ -113,11 +113,11 @@
   },
   {
     "term": "Harvest",
-    "definition": "The card-drawing phase of Spring. Each player receives 2 Base Harvest cards plus Bonus Cards determined by their Aspect Alignments with the current Cosmic Age."
+    "definition": "The card-drawing phase of Spring. Each player receives 3 Base Harvest cards plus Bonus Cards determined by their Aspect Alignments with the current Cosmic Age."
   },
   {
     "term": "Major Arcana",
-    "definition": "The 22 special cards in the Kismeta Deck, divided into Adept Cards (11) and Fate Cards (11). Major Arcana are held in the Arcanum zone and carry unique persistent or one-time effects. They cannot be used for Crucible Card activation, Alignments, Duels, Trades, or Wagers."
+    "definition": "The 22 special cards in the Kismeta Deck, divided into Adept Cards (12) and Fate Cards (10). Major Arcana are held in the Arcanum zone and carry unique persistent or one-time effects. They cannot be used for Crucible Card activation, Alignments, Duels, Trades, or Wagers."
   },
   {
     "term": "Mantle Ring",
@@ -141,11 +141,11 @@
   },
   {
     "term": "Rank",
-    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Crucible Codex card sets). Numbered cards equal their face value (2–10). Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Crucible Codex card sets). Numbered cards equal their face value (2–10). Court card values: Princess = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Rank Points (RP)",
-    "definition": "The numerical value of a card based on its Rank. Used for the Crucible Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Page = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
+    "definition": "The numerical value of a card based on its Rank. Used for the Crucible Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Princess = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card."
   },
   {
     "term": "Reagent",

@@ -9,7 +9,7 @@ When your final 3-card Spread forms certain patterns, you unlock powerful bonuse
 
 ### 3-Card Flush
 *3 cards in the same Suit (any Rank)*
-**Example:** 5, 8, & Page of Wands
+**Example:** 5, 8, & Princess of Wands
 
 **Bonus: Add +3 to your total**
 
@@ -40,7 +40,7 @@ When your final 3-card Spread forms certain patterns, you unlock powerful bonuse
 ---
 
 ### Royal Flush
-*A Straight Flush with Court Cards (Page, Knight, Queen, King)*
+*A Straight Flush with Court Cards (Princess, Knight, Queen, King)*
 **Example:** Knight–Queen–King of Pentacles
 
 **Bonus: Add +11 to your total**
