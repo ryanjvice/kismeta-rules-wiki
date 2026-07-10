@@ -13,6 +13,12 @@ export type TvaGuidedStep = {
 	learnMorePath?: string;
 };
 
+export type TvaNavSection = {
+	id: string;
+	label: string;
+	stepIndex: number;
+};
+
 const TVA_GUIDED_STEPS: TvaGuidedStep[] = [
 	{
 		id: 'deal-the-veil',
@@ -54,5 +60,13 @@ const TVA_GUIDED_STEPS: TvaGuidedStep[] = [
 		learnMorePath: 'reference/round-outcomes',
 	},
 ];
+
+export function getTvaNavSections(): TvaNavSection[] {
+	return TVA_GUIDED_STEPS.map((step, index) => ({
+		id: step.id,
+		label: step.title,
+		stepIndex: index + 1,
+	}));
+}
 
 export default TVA_GUIDED_STEPS;

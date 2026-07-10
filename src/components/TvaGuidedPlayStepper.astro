@@ -6,7 +6,7 @@
  */
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { tvaSlug } from '../data/wiki-base';
-import TVA_GUIDED_STEPS from '../data/tva-guided-steps';
+import TVA_GUIDED_STEPS, { getTvaNavSections } from '../data/tva-guided-steps';
 
 const locale = Astro.currentLocale ?? 'root';
 const t = Astro.locals.t;
@@ -18,6 +18,7 @@ const steps = TVA_GUIDED_STEPS.map((step) => ({
 		: undefined,
 }));
 
+const navSections = getTvaNavSections();
 const totalSteps = steps.length;
 ---
 
@@ -25,7 +26,53 @@ const totalSteps = steps.length;
 	class="tva-guided-play"
 	data-steps={JSON.stringify(steps)}
 	data-total={totalSteps}
+	data-nav-sections={JSON.stringify(navSections)}
+	data-labels={JSON.stringify({
+		navTrigger: t('guided.nav.trigger'),
+		navTitle: t('guided.nav.title'),
+		progress: t('guided.progress'),
+	})}
 >
+	<div class="tva-guided-play__header">
+		<p class="tva-guided-play__progress" data-tva-progress>
+			{t('guided.progress').replace('{current}', '1').replace('{total}', String(totalSteps))}
+		</p>
+		<div class="guided-play__nav">
+			<button
+				type="button"
+				class="guided-play__nav-trigger"
+				data-nav-trigger
+				aria-expanded="false"
+				aria-controls="tva-guided-play-nav-panel"
+				aria-label={t('guided.nav.trigger')}
+			>
+				{t('guided.nav.trigger')}
+			</button>
+			<div
+				id="tva-guided-play-nav-panel"
+				class="guided-play__nav-panel"
+				data-nav-panel
+				role="menu"
+				aria-label={t('guided.nav.title')}
+				hidden
+			>
+				{
+					navSections.map((section) => (
+						<button
+							type="button"
+							class="guided-play__nav-item"
+							role="menuitem"
+							data-nav-section={section.id}
+							data-nav-step={section.stepIndex}
+						>
+							{section.label}
+						</button>
+					))
+				}
+			</div>
+		</div>
+	</div>
+
 	{/* Step cards rendered server-side; JS toggles visibility */}
 	{
 		steps.map((step, idx) => (
@@ -34,9 +81,6 @@ const totalSteps = steps.length;
 				data-step-idx={idx}
 				hidden={idx !== 0}
 			>
-				<p class="tva-guided-play__progress">
-					Step {idx + 1} of {totalSteps}
-				</p>
 				<h2 class="tva-guided-play__title">
 					{step.title}
 					{step.subtitle && (
@@ -83,12 +127,94 @@ const totalSteps = steps.length;
 </div>
 
 <script>
+	type NavSection = {
+		id: string;
+		label: string;
+		stepIndex: number;
+	};
+
+	type Labels = {
+		navTrigger: string;
+		navTitle: string;
+		progress: string;
+	};
+
 	function initTvaStepper(el: HTMLElement) {
+		if (el.dataset.bound === 'true') return;
+		el.dataset.bound = 'true';
+
 		const steps = el.querySelectorAll<HTMLElement>('.tva-guided-play__step');
 		const backBtn = el.querySelector<HTMLButtonElement>('.tva-guided-play__btn--back');
 		const nextBtn = el.querySelector<HTMLButtonElement>('.tva-guided-play__btn--next');
+		const progressEl = el.querySelector<HTMLElement>('[data-tva-progress]')!;
+		const navTrigger = el.querySelector<HTMLButtonElement>('[data-nav-trigger]')!;
+		const navPanel = el.querySelector<HTMLElement>('[data-nav-panel]')!;
+		const navSections = JSON.parse(el.dataset.navSections || '[]') as NavSection[];
+		const labels = JSON.parse(el.dataset.labels || '{}') as Labels;
 		const total = steps.length;
 		let current = 0;
+		let navOpen = false;
+
+		const getCurrentSectionId = (index: number): string => {
+			return navSections[index]?.id ?? navSections[0]?.id ?? '';
+		};
+
+		const syncNavActive = () => {
+			const activeId = getCurrentSectionId(current);
+			el.querySelectorAll<HTMLButtonElement>('[data-nav-section]').forEach((btn) => {
+				const isActive = btn.dataset.navSection === activeId;
+				btn.setAttribute('aria-current', isActive ? 'true' : 'false');
+				btn.classList.toggle('guided-play__nav-item--active', isActive);
+			});
+		};
+
+		const closeNavPanel = () => {
+			navOpen = false;
+			navPanel.hidden = true;
+			navTrigger.setAttribute('aria-expanded', 'false');
+		};
+
+		const openNavPanel = () => {
+			navOpen = true;
+			navPanel.hidden = false;
+			navTrigger.setAttribute('aria-expanded', 'true');
+			syncNavActive();
+			navPanel.querySelector<HTMLElement>('[data-nav-section]')?.focus();
+		};
+
+		navTrigger.addEventListener('click', () => {
+			if (navOpen) {
+				closeNavPanel();
+				navTrigger.focus();
+			} else {
+				openNavPanel();
+			}
+		});
+
+		navPanel.addEventListener('keydown', (e: KeyboardEvent) => {
+			if (e.key === 'Escape') {
+				e.stopPropagation();
+				closeNavPanel();
+				navTrigger.focus();
+			}
+		});
+
+		document.addEventListener('click', (e: MouseEvent) => {
+			const nav = el.querySelector('.guided-play__nav');
+			if (navOpen && nav && !nav.contains(e.target as Node)) {
+				closeNavPanel();
+			}
+		});
+
+		el.querySelectorAll<HTMLButtonElement>('[data-nav-section]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const target = Number(btn.dataset.navStep);
+				if (!target) return;
+				showStep(target - 1);
+				closeNavPanel();
+				navTrigger.focus();
+			});
+		});
 
 		function showStep(idx: number) {
 			steps.forEach((s, i) => {
@@ -97,6 +223,10 @@ const totalSteps = steps.length;
 			if (backBtn) backBtn.hidden = idx === 0;
 			if (nextBtn) nextBtn.hidden = idx === total - 1;
 			current = idx;
+			progressEl.textContent = labels.progress
+				.replace('{current}', String(idx + 1))
+				.replace('{total}', String(total));
+			syncNavActive();
 			el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 
@@ -118,16 +248,27 @@ const totalSteps = steps.length;
 		margin: 0 auto;
 	}
 
-	.tva-guided-play__step {
-		padding: 1.5rem 0 1rem;
+	.tva-guided-play__header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 0.75rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.tva-guided-play__progress {
-		font-size: 0.8rem;
-		color: var(--sl-color-text-accent);
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--sl-color-gray-3);
 		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		margin-bottom: 0.4rem;
+		letter-spacing: 0.04em;
+		margin: 0;
+		flex: 1;
+		min-width: 0;
+	}
+
+	.tva-guided-play__step {
+		padding: 0.5rem 0 1rem;
 	}
 
 	.tva-guided-play__title {

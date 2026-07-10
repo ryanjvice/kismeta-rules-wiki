@@ -279,8 +279,57 @@ const GUIDED_STEPS: GuidedStep[] = [
   },
 ];
 
+export type GuidedNavSection = {
+  id: string;
+  labelKey: string;
+  stepIndex: number;
+};
+
+const PHASE_LABEL_KEYS: Record<GuidedPhase, string> = {
+  setup: "guided.phase.setup",
+  spring: "guided.phase.spring",
+  summer: "guided.phase.summer",
+  autumn: "guided.phase.autumn",
+  winter: "guided.phase.winter",
+};
+
 export function getGuidedSteps(_locale?: string): GuidedStep[] {
   return GUIDED_STEPS;
+}
+
+/** Phase-level jump targets for Guided Play navigation (excludes completion screen). */
+export function getGuidedNavSections(): GuidedNavSection[] {
+  const contentSteps = GUIDED_STEPS.slice(0, -1);
+  const sections: GuidedNavSection[] = [];
+  let lastPhase: GuidedPhase | undefined;
+
+  contentSteps.forEach((step, index) => {
+    const stepIndex = index + 1;
+
+    if (step.phase) {
+      if (step.phase !== lastPhase) {
+        sections.push({
+          id: step.phase,
+          labelKey: PHASE_LABEL_KEYS[step.phase],
+          stepIndex,
+        });
+        lastPhase = step.phase;
+      }
+      return;
+    }
+
+    const labelKey =
+      step.id === "round-intro"
+        ? "guided.nav.roundIntro"
+        : step.id === "round-end"
+          ? "guided.nav.roundEnd"
+          : step.id;
+
+    sections.push({ id: step.id, labelKey, stepIndex });
+    lastPhase = undefined;
+  });
+
+  return sections;
 }
 
 /** Steps shown in the stepper (excludes the completion screen). */
