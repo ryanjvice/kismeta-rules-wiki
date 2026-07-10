@@ -9,7 +9,7 @@
 		{
 			"id": "calculate",
 			"label": "Calculate Bonus Cards",
-			"body": "Each player tallies bonus cards from all applicable Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Element Match. Each source scores its single highest-matching Aspect — Sign (+3), Planet (+2), Element (+1)."
+			"body": "Each player tallies bonus cards from all applicable Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Cards. Each source scores its single highest-matching Aspect — Sign (+3), Planet (+2), Element (+1). Spread Cards: check each card against Cosmic Age Aspects (Planet and Suit/Element) for its highest match."
 		},
 		{
 			"id": "boon",

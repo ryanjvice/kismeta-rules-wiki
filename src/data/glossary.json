@@ -1,7 +1,7 @@
 [
   {
     "term": "Adept Card",
-    "definition": "A Major Arcana card with a persistent effect that carries all three Aspects (Sign, Planet, and Element). Must be purchased immediately when drawn or discarded — you cannot hold it and decide later. Once purchased, it enters your Arcanum and its effect remains active across rounds. A player may hold a maximum of 2 Adept cards simultaneously."
+    "definition": "A Major Arcana card with a persistent effect that carries a Zodiac Sign Aspect. Must be purchased immediately when drawn or discarded — you cannot hold it and decide later. Once purchased, it enters your Arcanum and its effect remains active across rounds. A player may hold a maximum of 2 Adept cards simultaneously."
   },
   {
     "term": "Agekeeper",
@@ -73,7 +73,7 @@
   },
   {
     "term": "Crucible Codex",
-    "definition": "A player's personal card listing the four Activation Formulas (one per Crucible Card) and which Cauldron each Coal lights — separate from the Alchemical Formula used later to Fire. See Setup; Summer: Activate Crucible Card."
+    "definition": "A player's personal card listing the four Activation Formulas (one per Crucible Card) and which Cauldron each Coal lights — separate from the Alchemical Formula used later to Fire. See Setup; Autumn: Light Cauldrons."
   },
   {
     "term": "Duel",
@@ -129,7 +129,7 @@
   },
   {
     "term": "Opposition",
-    "definition": "An Alignment contest declared in Phase 3: Autumn against a rival whose Stone is currently Forging. Alignment Points are compared; a Challenger victory sends the Defender's Stone to Stasis."
+    "definition": "An Alignment contest declared in Phase 3: Autumn against a rival whose Stone is currently Forging. Players play card sets in rounds, each scored against the Cosmic Age's Aspects, until a winner is determined; a Challenger victory sends the Defender's Stone to Stasis."
   },
   {
     "term": "Opposition Age",
@@ -166,6 +166,10 @@
   {
     "term": "Suit",
     "definition": "One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when crafting Reagents or fulfilling certain Alchemical Formula requirements."
+  },
+  {
+    "term": "Tableau",
+    "definition": "A player's full personal inventory of Kismeta Cards, arranged across the Spread, Hand, and Arcanum zones. Built each round during Spring's Commune With Your Tableau step."
   },
   {
     "term": "Tempering",

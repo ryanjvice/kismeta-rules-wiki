@@ -49,7 +49,7 @@ The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 13
 
 #### Adept Cards
 
-When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries all three Aspects (Sign, Planet, and Element), contributing them to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
+When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries a Zodiac Sign Aspect, contributing it to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
 
 #### Fate Cards
 
@@ -58,7 +58,7 @@ The Fates themselves will visit you throughout the course of the game to test yo
 | Adept Cards (12)                                                        | Fate Cards (10)                                |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
-| Carries three Aspects; used in Harvest & Alignments                     | No Aspects; effect only                        |
+| Carries a Zodiac Sign Aspect; used in Harvest & Alignments               | No Aspects; effect only                        |
 | Played into the Arcanum; hold up to 2                                   | Played into the Arcanum immediately when drawn |
 | Must buy immediately when drawn, or discard - cannot hold and buy later | No purchase required; resolves automatically   |
 
@@ -70,9 +70,9 @@ Three concepts you'll use constantly:
 - **Card Sets** - Poker-style groupings of Kismeta Cards (Pairs, Three of a Kind, Flushes, Straights, etc.) assembled in your Spread to fulfill Crucible Codex Formulas and other requirements.
 - **Alchemical Alignments** - Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.
 
-## Commune: Spread, Hand & Arcanum Zones
+## Tableau: Spread, Hand & Arcanum Zones
 
-You always manage your inventory of Kismeta Cards across three zones.
+You always manage your Tableau — your inventory of Kismeta Cards — across three zones.
 
 | ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS  | MAX LIMIT                    | USED FOR                                                                                    | CANNOT BE USED FOR            |
 | ------- | --------------------------------------------- | ---------- | -------- | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- |

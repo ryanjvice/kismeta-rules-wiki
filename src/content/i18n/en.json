@@ -81,6 +81,7 @@
   "flow.autumnDoneMessage": "You've completed your Autumn turn.",
   "flow.autumnRestartLabel": "Change stone state",
   "flow.autumnOppositionPrompt": "Do you want to declare Opposition this turn?",
+  "flow.autumnLightCauldronsPrompt": "Do you want to Light a Cauldron this turn?",
   "flow.autumnTemperPrompt": "Do you want to Temper your Stone this turn?",
   "flow.autumnFirePrompt": "Do you want to Fire your Stone this turn?",
   "flow.winterWagerPrompt": "Take any Winter Activities (craft Reagents or Fateful Wager) this round?",

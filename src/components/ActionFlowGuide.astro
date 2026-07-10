@@ -54,6 +54,7 @@ const labels = {
 	autumnDoneMessage: t('flow.autumnDoneMessage'),
 	autumnRestartLabel: t('flow.autumnRestartLabel'),
 	autumnOppositionPrompt: t('flow.autumnOppositionPrompt'),
+	autumnLightCauldronsPrompt: t('flow.autumnLightCauldronsPrompt'),
 	autumnTemperPrompt: t('flow.autumnTemperPrompt'),
 	autumnFirePrompt: t('flow.autumnFirePrompt'),
 	winterWagerPrompt: t('flow.winterWagerPrompt'),
@@ -82,6 +83,7 @@ const autumnPass2 = isAutumn
 	: null;
 const leaveStasisNode = autumnPass1?.children?.find((n) => n.id === 'leave-stasis') ?? null;
 const oppositionNode = autumnPass1?.children?.find((n) => n.id === 'opposition') ?? null;
+const lightCauldronsNode = autumnPass2?.children?.find((n) => n.id === 'light-cauldrons') ?? null;
 const temperNode = autumnPass2?.children?.find((n) => n.id === 'temper') ?? null;
 const fireNode = autumnPass2?.children?.find((n) => n.id === 'fire') ?? null;
 
@@ -219,6 +221,49 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 									{labels.readMore}
 								</a>
 							)}
+						</div>
+					)}
+
+					{/* Panel: Light Cauldrons gate — only shown for notInForge */}
+					{lightCauldronsNode && (
+						<div
+							class="action-flow__wizard-panel"
+							data-wizard-panel="autumn-light-cauldrons-gate"
+							data-wizard-panel-type="gate"
+							data-learn-hash={lightCauldronsNode.learnMoreHash ?? ''}
+							hidden
+						>
+							<div class="action-flow__wizard-step-head">
+								<span class="action-flow__badge action-flow__badge--sequence">{labels.sequence}</span>
+								<span class="action-flow__wizard-step-label">
+									{localize(lightCauldronsNode.label, contentLocale)}
+								</span>
+							</div>
+							{lightCauldronsNode.condition && (
+								<p class="action-flow__wizard-step-condition">
+									<em>
+										{labels.appliesWhen} {localize(lightCauldronsNode.condition, contentLocale)}
+									</em>
+								</p>
+							)}
+							<p class="action-flow__wizard-gate-prompt">{labels.autumnLightCauldronsPrompt}</p>
+							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
+								{lightCauldronsNode.body && (
+									<p class="action-flow__wizard-step-body">
+										{localize(lightCauldronsNode.body, contentLocale)}
+									</p>
+								)}
+								{lightCauldronsNode.learnMoreHash && (
+									<a
+										class="action-flow__learn-more"
+										href={`${roundOverviewUrl}#${lightCauldronsNode.learnMoreHash}`}
+										target="_blank"
+										rel="noopener"
+									>
+										{labels.readMore}
+									</a>
+								)}
+							</div>
 						</div>
 					)}
 
@@ -589,6 +634,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 	function buildAutumnSequence(stone: AutumnStone): string[] {
 		const seq: string[] = ['autumn-stone-pick'];
 		if (stone === 'stasis') seq.push('autumn-leave-stasis');
+		if (stone === 'notInForge') seq.push('autumn-light-cauldrons-gate');
 		seq.push('autumn-opposition-gate');
 		if (stone !== 'stasis') {
 			if (stone === 'forgingReady') seq.push('autumn-temper-gate');
