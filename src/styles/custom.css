@@ -1655,6 +1655,7 @@ site-search button[data-open-modal]:hover {
 
 /* Each panel is hidden until the wizard makes it active */
 .action-flow__wizard-panel[hidden],
+.action-flow__wizard-gate[hidden],
 .action-flow__wizard-gate-content[hidden],
 .action-flow__wizard-btn[hidden],
 .action-flow__wizard-nav[hidden] {
@@ -1739,7 +1740,30 @@ site-search button[data-open-modal]:hover {
   color: var(--sl-color-gray-2);
 }
 
-/* Gate panel */
+/* Gate decision card — question + Yes/No grouped together */
+.action-flow__wizard-gate {
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem 1rem;
+  border: var(--kismeta-panel-border);
+  border-radius: var(--kismeta-panel-radius);
+  background: color-mix(in srgb, var(--sl-color-accent) 6%, var(--kismeta-panel-bg));
+  border-left: 3px solid var(--sl-color-accent);
+}
+
+.action-flow__wizard-gate-question {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.action-flow__wizard-gate-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Gate panel (legacy prompt in panel — unused; gate question lives in gate card) */
 .action-flow__wizard-gate-prompt {
   margin: 0.75rem 0 0;
   font-size: 0.95rem;
@@ -1791,7 +1815,7 @@ site-search button[data-open-modal]:hover {
 .action-flow__wizard-nav {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.65rem;
   padding: 0.45rem 0.9rem 0.55rem;
   border: var(--kismeta-panel-border);
   border-radius: var(--kismeta-panel-radius);

@@ -230,6 +230,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="autumn-light-cauldrons-gate"
 							data-wizard-panel-type="gate"
+							data-gate-prompt={labels.autumnLightCauldronsPrompt}
 							data-learn-hash={lightCauldronsNode.learnMoreHash ?? ''}
 							hidden
 						>
@@ -246,7 +247,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 									</em>
 								</p>
 							)}
-							<p class="action-flow__wizard-gate-prompt">{labels.autumnLightCauldronsPrompt}</p>
 							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
 								{lightCauldronsNode.body && (
 									<p class="action-flow__wizard-step-body">
@@ -273,6 +273,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="autumn-opposition-gate"
 							data-wizard-panel-type="gate"
+							data-gate-prompt={labels.autumnOppositionPrompt}
 							data-learn-hash={oppositionNode.learnMoreHash ?? ''}
 							hidden
 						>
@@ -289,7 +290,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 									</em>
 								</p>
 							)}
-							<p class="action-flow__wizard-gate-prompt">{labels.autumnOppositionPrompt}</p>
 							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
 								{oppositionNode.body && (
 									<p class="action-flow__wizard-step-body">
@@ -316,6 +316,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="autumn-temper-gate"
 							data-wizard-panel-type="gate"
+							data-gate-prompt={labels.autumnTemperPrompt}
 							data-learn-hash={temperNode.learnMoreHash ?? ''}
 							hidden
 						>
@@ -332,7 +333,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 									</em>
 								</p>
 							)}
-							<p class="action-flow__wizard-gate-prompt">{labels.autumnTemperPrompt}</p>
 							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
 								{temperNode.body && (
 									<p class="action-flow__wizard-step-body">
@@ -359,6 +359,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="autumn-fire-gate"
 							data-wizard-panel-type="gate"
+							data-gate-prompt={labels.autumnFirePrompt}
 							data-learn-hash={fireNode.learnMoreHash ?? ''}
 							hidden
 						>
@@ -375,7 +376,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 									</em>
 								</p>
 							)}
-							<p class="action-flow__wizard-gate-prompt">{labels.autumnFirePrompt}</p>
 							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
 								{fireNode.body && (
 									<p class="action-flow__wizard-step-body">
@@ -447,6 +447,7 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 							class="action-flow__wizard-panel"
 							data-wizard-panel="winter-wager-gate"
 							data-wizard-panel-type="gate"
+							data-gate-prompt={labels.winterWagerPrompt}
 							data-learn-hash={wagerNode.learnMoreHash ?? ''}
 							hidden
 						>
@@ -456,7 +457,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 									{localize(wagerNode.label, contentLocale)}
 								</span>
 							</div>
-							<p class="action-flow__wizard-gate-prompt">{labels.winterWagerPrompt}</p>
 							<div class="action-flow__wizard-gate-content" data-wizard-gate-content hidden>
 								{wagerNode.body && (
 									<p class="action-flow__wizard-step-body">
@@ -533,6 +533,27 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 				</>
 			)}
 
+		{/* ── Gate decision (question + Yes/No) ─────────────────────── */}
+		<div class="action-flow__wizard-gate" data-wizard-gate hidden>
+			<p class="action-flow__wizard-gate-question" data-wizard-gate-question></p>
+			<div class="action-flow__wizard-gate-actions">
+				<button
+					type="button"
+					class="action-flow__wizard-btn action-flow__wizard-btn--gate-no"
+					data-wizard-gate-no
+				>
+					{labels.noSkip}
+				</button>
+				<button
+					type="button"
+					class="action-flow__wizard-btn action-flow__wizard-btn--gate-yes"
+					data-wizard-gate-yes
+				>
+					{labels.yes}
+				</button>
+			</div>
+		</div>
+
 		{/* ── Shared wizard navigation ─────────────────────────────── */}
 		<div class="action-flow__wizard-nav" data-wizard-nav hidden>
 			<button
@@ -548,22 +569,6 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 				<span class="action-flow__wizard-next-title" data-wizard-next-title></span>
 			</div>
 			<div class="action-flow__wizard-nav-right">
-					<button
-						type="button"
-						class="action-flow__wizard-btn action-flow__wizard-btn--gate-no"
-						data-wizard-gate-no
-						hidden
-					>
-						{labels.noSkip}
-					</button>
-					<button
-						type="button"
-						class="action-flow__wizard-btn action-flow__wizard-btn--gate-yes"
-						data-wizard-gate-yes
-						hidden
-					>
-						{labels.yes}
-					</button>
 					<button
 						type="button"
 						class="action-flow__wizard-btn action-flow__wizard-btn--continue"
@@ -693,6 +698,8 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 		if (!wizardEl) return;
 
 		const progressEl = wizardEl.querySelector<HTMLElement>('[data-wizard-progress]');
+		const gateEl = wizardEl.querySelector<HTMLElement>('[data-wizard-gate]');
+		const gateQuestionEl = wizardEl.querySelector<HTMLElement>('[data-wizard-gate-question]');
 		const navEl = wizardEl.querySelector<HTMLElement>('[data-wizard-nav]');
 		const backBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-back]');
 		const continueBtn = wizardEl.querySelector<HTMLButtonElement>('[data-wizard-continue]');
@@ -748,32 +755,33 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			const isLast = index === sequence.length - 1;
 			const isGate = isGatePanel(panelId);
 			const gateAnswer = getState().gateAnswers[panelId];
+			const gateUnanswered = isGate && gateAnswer === undefined;
+			const panelEl = getPanelEl(panelId);
+
+			if (gateEl) {
+				gateEl.hidden = isStone || isDone || !gateUnanswered;
+				if (gateUnanswered && gateQuestionEl && panelEl) {
+					gateQuestionEl.textContent = panelEl.dataset.gatePrompt ?? '';
+				}
+			}
 
 			navEl!.hidden = isStone;
 			if (isStone) return;
 
 			backBtn!.hidden = isFirst;
 
-			if (isDone) {
+			if (isDone || gateUnanswered) {
 				continueBtn!.hidden = true;
-				gateYesBtn!.hidden = true;
-				gateNoBtn!.hidden = true;
-			} else if (isGate && gateAnswer === undefined) {
-				continueBtn!.hidden = true;
-				gateYesBtn!.hidden = false;
-				gateNoBtn!.hidden = false;
 			} else {
 				continueBtn!.hidden = false;
 				continueBtn!.textContent = isLast
 					? (labels.wizardDone || 'Done')
 					: (labels.wizardContinue || 'Continue');
-				gateYesBtn!.hidden = true;
-				gateNoBtn!.hidden = true;
 			}
 
-			// Next step preview label
+			// Next step preview label — hidden while a gate question is unanswered
 			if (nextPreviewEl && nextTitleEl) {
-				const hasNext = !isLast && !isDone;
+				const hasNext = !isLast && !isDone && !gateUnanswered;
 				if (hasNext) {
 					const nextPanelId = sequence[index + 1];
 					const nextPanelEl = getPanelEl(nextPanelId);
@@ -805,10 +813,16 @@ const resetNode = winterChildren.find((n) => n.id === 'transit') ?? null;
 			// When triggered by user interaction (not initial load), move focus
 			// into the new panel so keyboard users don't have to re-Tab past nav.
 			if (moveFocus) {
-				const heading = panelEl.querySelector<HTMLElement>('.action-flow__wizard-step-label, .action-flow__wizard-stone-title');
-				if (heading) {
-					heading.setAttribute('tabindex', '-1');
-					heading.focus();
+				const gateUnanswered =
+					isGatePanel(panelId) && getState().gateAnswers[panelId] === undefined;
+				const focusTarget = gateUnanswered && gateQuestionEl
+					? gateQuestionEl
+					: panelEl.querySelector<HTMLElement>(
+							'.action-flow__wizard-step-label, .action-flow__wizard-stone-title'
+						);
+				if (focusTarget) {
+					focusTarget.setAttribute('tabindex', '-1');
+					focusTarget.focus();
 				}
 			}
 
