@@ -7,11 +7,11 @@ Keep these principles in mind as you find your footing across the first few roun
 
 1. **Your Alignments Shape the Round:** Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from the Aspect Alignments between the Cosmic Age and each of your inventory items.
 
-2. **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
+2. **Your Spread Is Your Engine:** Cards in your Spread contribute Planet charge and can form Stelliums, and they count toward Alignment. Cards in your Hand are hidden and contribute no charge. Build your Spread deliberately each round — what's visible is what rivals can read and target.
 
 3. **Light the Right Cauldron First:** Each activated Crucible Card lets you place its Coal into a Cauldron of your choice, permanently lighting it. Think ahead — light the Cauldron for the Reagent type you'll need most, as early as possible. (See Correspondence table.)
 
-4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to pay the 3-card cost. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
+4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to pay the 3-card cost. By crafting from your Hand, you keep your Spread's Stellium charge intact and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
 
 5. **Astral Houses Are Your Anchor:** Build Astral Houses early. Each House acts as a permanent Alignment source for Harvesting Bonus cards every Spring for the rest of the game. A House built in round one compounds its advantage over every subsequent Age. A House built in the final round is barely worth the cost.
 

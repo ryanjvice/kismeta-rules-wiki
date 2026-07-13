@@ -34,7 +34,7 @@ const SECTION_META = {
   'MINOR ARCANA': {
     slug: 'minor-arcana',
     title: 'Minor Arcana',
-    description: 'All four suits — Card 1 active effects and Card 2 wildcard links.',
+    description: 'Planet charge, Stelliums, Wild Charge, Court/Ace Riders, and rank reference.',
   },
 };
 

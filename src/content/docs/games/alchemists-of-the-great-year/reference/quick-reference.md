@@ -38,18 +38,19 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 
 The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 134 cards divide into two types.
 
-**Minor Arcana** (112 cards) - the building blocks of the Great Work. Each card has four traits:
+**Minor Arcana** (112 cards) - the building blocks of the Great Work. Each card has three traits:
 
 - **Rank** - 2–10, plus Princess (11), Knight (12), Queen (13), King (14), Ace (1 or 15)
 - **Suit** - Wands (Fire/Red), Cups (Water/Blue), Pentacles (Earth/Green), Swords (Air/Yellow)
-- **Planet** - one of seven planets; used for Aspect Alignments
-- **Card Effects** - special effects that activate under conditions printed on the card
+- **Planet** - one of seven planets; used for Aspect Alignments and Spread charge toward Stelliums
+
+Minor Arcana carry no printed effect text. Power comes from Planet **charge** in your Spread forming **Stelliums** (Codex-level effects) plus **Court Card Riders** and **Ace Wild Charge**. See the [Minor Arcana card reference](/games/alchemists-of-the-great-year/rules/minor-arcana/).
 
 **Major Arcana (22 cards) - two varieties: Adepts & Fates.**
 
 #### Adept Cards
 
-When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries a Zodiac Sign Aspect, contributing it to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
+When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously (3 with The Hermit). Each Adept carries a Zodiac Sign Aspect, contributing it to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
 
 #### Fate Cards
 
@@ -59,7 +60,7 @@ The Fates themselves will visit you throughout the course of the game to test yo
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
 | Carries a Zodiac Sign Aspect; used in Harvest & Alignments              | No Aspects; effect only                        |
-| Played into the Arcanum; hold up to 2                                   | Played into the Arcanum immediately when drawn |
+| Played into the Arcanum; hold up to 2 (3 with Hermit)                 | Played into the Arcanum immediately when drawn |
 | Must buy immediately when drawn, or discard - cannot hold and buy later | No purchase required; resolves automatically   |
 
 For a full list of every Adept and Fate card's effects, see the [Major Arcana card reference](/games/alchemists-of-the-great-year/rules/major-arcana/).
@@ -74,14 +75,14 @@ Three concepts you'll use constantly:
 
 You always manage your Tableau — your inventory of Kismeta Cards — across three zones.
 
-| ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS  | MAX LIMIT                    | USED FOR                                                                                    | CANNOT BE USED FOR            |
-| ------- | --------------------------------------------- | ---------- | -------- | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- |
-| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | No card limit during a round | Activating Crucible Cards                                                                   | No restrictions               |
-|         |                                               |            |          |                              | Meeting Forge Alignment                                                                     |                               |
-|         |                                               |            |          | 5-cards; enforced in Winter  | Crafting Reagents                                                                           |                               |
-|         |                                               |            |          |                              | Building Astral Houses                                                                      |                               |
-|         |                                               |            |          |                              | Trading, wagering & targeting in Duels                                                      |                               |
-| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | Max 5 cards                  | Reagent Crafting alongside Spread cards (discarded after)                                   | Duels                         |
+| ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS              | MAX LIMIT                    | USED FOR                                                                                    | CANNOT BE USED FOR            |
+| ------- | --------------------------------------------- | ---------- | -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- |
+| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Charge / Stelliums   | No card limit during a round | Activating Crucible Cards                                                                   | No restrictions               |
+|         |                                               |            |                      |                              | Meeting Forge Alignment                                                                     |                               |
+|         |                                               |            |                      | 5 cards; enforced in Winter  | Crafting Reagents                                                                           |                               |
+|         |                                               |            |                      |                              | Building Astral Houses                                                                      |                               |
+|         |                                               |            |                      |                              | Trading, wagering & targeting in Duels                                                      |                               |
+| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | No charge            | Max 5 cards                  | Reagent Crafting alongside Spread cards (discarded after)                                   | Duels                         |
 |         |                                               |            |          |                              |                                                                                             | Crucible Card activation      |
 |         |                                               |            |          |                              | Opposition contributions (discarded after)                                                  | Alignments                    |
 |         |                                               |            |          |                              |                                                                                             | Trades, Wagers, Astral Houses |

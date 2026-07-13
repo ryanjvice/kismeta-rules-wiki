@@ -19,7 +19,7 @@ The Cosmic Age unfolds through four Seasons, each offering distinct opportunitie
 
 Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. All your actions across the seasons serve this goal. The journey spans many Cosmic Ages — some spent building up your engine, others focused on progressing your Stone through the Crucible.
 
-In early rounds, focus on building a powerful engine for your Great Work. Review your Tableau of Kismeta Cards, check each card's Aspects and Effects, and craft Reagents. Buy Adept Cards, build Astral Houses, and Light Cauldrons. Salt Reagents can be made from any three cards from the start of the game, but Elemental Reagents require their matching Cauldron to be lit first.
+In early rounds, focus on building a powerful engine for your Great Work. Review your Tableau of Kismeta Cards, check your Spread for Stellium charge and Alignments, and craft Reagents. Buy Adept Cards, build Astral Houses, and Light Cauldrons. Salt Reagents can be made from any three cards from the start of the game, but Elemental Reagents require their matching Cauldron to be lit first.
 
 ## Transmutation Process
 

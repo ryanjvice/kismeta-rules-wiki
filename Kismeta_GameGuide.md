@@ -95,7 +95,7 @@ The Cosmic Age unfolds through four Seasons, each offering distinct opportunitie
 
 Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. All your actions across the seasons serve this goal. The journey spans many Cosmic Ages — some spent building up your engine, others focused on progressing your Stone through the Crucible.
 
-In early rounds, focus on building a powerful engine for your Great Work. Review your Tableau of Kismeta Cards, check each card's Aspects and Effects, and craft Reagents. Buy Adept Cards, build Astral Houses, and Light Cauldrons. Salt Reagents can be made from any three cards from the start of the game, but Elemental Reagents require their matching Cauldron to be lit first.
+In early rounds, focus on building a powerful engine for your Great Work. Review your Tableau of Kismeta Cards, check your Spread for Stellium charge and Alignments, and craft Reagents. Buy Adept Cards, build Astral Houses, and Light Cauldrons. Salt Reagents can be made from any three cards from the start of the game, but Elemental Reagents require their matching Cauldron to be lit first.
 
 ## Transmutation Process
 
@@ -355,20 +355,30 @@ Now that you have your Kismeta Cards for the Age, it's time to commune with them
 
 #### Spread
 
-Cards you place in your Spread are visible to every player and carry active effects. They're the cards you'll draw from to Light Cauldrons, Fire your Stone, Craft Reagents, and meet Forge Alignment requirements — but because they're out in the open, they're also the only cards a rival can target in a Duel.
+Cards you place in your Spread are visible to every player and contribute **Planet charge** toward **Stelliums**. They're the cards you'll draw from to Light Cauldrons, Fire your Stone, Craft Reagents, and meet Forge Alignment requirements — but because they're out in the open, they're also the only cards a rival can target in a Duel.
 
 #### Hand
 
-Cards you hold privately are your Hand cards. They're hidden from other players, and their effects stay inactive. They can be used to Craft Reagents alongside your Spread cards and to contribute to an Opposition, but they cannot be traded, wagered, or targeted in a Duel.
+Cards you hold privately are your Hand cards. They're hidden from other players and contribute **no charge** — only Spread cards count toward Stelliums. They can be used to Craft Reagents alongside your Spread cards and to contribute to an Opposition, but they cannot be traded, wagered, or targeted in a Duel.
 
 #### Arcanum
 
-Any Major Arcana card (Adept Card or Fate Card) is played into a separate zone, the Arcanum. Fate Cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Adept Cards must be purchased before they can be added, and you may hold up to two at a time.
+Any Major Arcana card (Adept Card or Fate Card) is played into a separate zone, the Arcanum. Fate Cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Adept Cards must be purchased before they can be added, and you may hold up to two at a time (three with The Hermit).
 
 - **Fate Cards:** Effects activate instantly and last for the duration of the current round.
-- **Adept Cards:** Must be purchased immediately or returned to the deck; once purchased, they remain with you for the rest of the game, though a rival may Arrest them in a Gambit (pay the card's Bail to Free it). Each Adept Card has a Base Effect (on purchase) and an Attuned Effect (unlocked when the card's Zodiac Sign is matched via your Zodiac Die or Astral Houses).
+- **Adept Cards:** Must be purchased immediately or returned to the deck; once purchased, they remain with you for the rest of the game, though a rival may Arrest them in a Gambit (pay the card's Bail to Free it). Each Adept Card has a Base Effect (on purchase) and a Resonant Effect (unlocked when the card's Zodiac Sign is matched via your Zodiac Die or Astral Houses). Adepts are Sign-keyed and independent of Minor Arcana Stellium charge.
 
-📌 **Note:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Crafting. Your Hand is your reserve, useful for Oppositions and Crafting but invisible to rivals.
+📌 **Note:** Your Spread is your engine — cards here count toward Planet charge, Stelliums, Alignment, Crucible activation, and Crafting. Your Hand is your reserve, useful for Oppositions and Crafting but invisible to rivals.
+
+### Stelliums
+
+Minor Arcana power comes from **Stelliums** — holding enough Planet **charge** in your Spread to trigger a Codex-level effect. See the [Minor Arcana card reference](/games/alchemists-of-the-great-year/rules/minor-arcana/) for the full Planet Stellium Codex, Court Card Riders, and Ace Rider.
+
+- **Charge:** Each Minor Arcana card in your Spread contributes 1 charge to its printed Planet. Charge updates continuously as cards enter or leave your Spread.
+- **Threshold:** Forming a Stellium requires **3 charge** of one Planet (baseline; printed on the Crucible Codex). During a Cosmic Age, the ruling Planet's threshold drops to **2**; during a Leo/Sun Age, every Planet's threshold drops to **2**.
+- **Wild Charge:** Aces (Sun cards) may count as 1 charge toward any one other Planet, freely reassignable. At most **one Ace** may count toward any single Stellium.
+- **Court & Ace Riders:** Court cards and Aces serving as Wild Charge carry conditional bonuses that activate only while their Planet's Stellium is active (or, for Aces, while serving Wild Charge for an active Stellium).
+- **Spread limit is 5** (enforced at Winter). Committing 3 slots to one Stellium is a deliberate trade-off against Alignments and crafting.
 
 ### 5️⃣ Card Lock 🔒
 
@@ -459,7 +469,7 @@ Challenge a rival to a straight dice roll to steal a single card from their Spre
 #### How to Declare a Duel:
 
 - **Declare:** Name your opponent and the specific card you are targeting in their Spread.
-- **Check Spreads:** Both players review their Spread for any relevant card effects.
+- **Check Spreads:** Both players review their Spread for active Stelliums, Court/Ace Riders, and any Adept effects that modify Duels.
 - **Roll:** Both players roll their Zodiac Dice. Higher roll wins. Reroll all ties until resolved.
 - **Resolve:** See outcomes below.
 
@@ -485,7 +495,7 @@ When a Gambit resolves, the loser's asset is **Arrested**. Arrested cards are tu
   - Choose an Active Crucible Card in a rival's inventory. Dormant, Fired, and Arrested Crucible Cards cannot be targeted.
   - Choose an Active Adept card in a rival's Arcanum. An Arrested Adept cannot be targeted.
 - **Name Your Stake:** Declare one of your own assets **of the same type** as the target. If you have no eligible asset of that type, you cannot declare that Gambit.
-- **Roll:** Both players roll their Zodiac Dice. Apply any card effects that modify Gambits before comparing results. Reroll all ties until resolved.
+- **Roll:** Both players roll their Zodiac Dice. Apply any Stellium bonuses, Court/Ace Riders, and Adept effects that modify Gambits before comparing results. Reroll all ties until resolved.
 - **Resolve:** See outcomes below.
 
 | GAMBIT RESULTS   |                                                                                                |                                               |
@@ -698,7 +708,7 @@ If another player's Stone now holds your previous Forge position, choose one:
 | Challenger Wins  | The two Stones swap positions. Challenger's Stone moves into the Forge; Defender's Stone is sent to the nearest Stasis zone. Defender's Wards discarded; Crucible Card remains Fired. |
 | Challenger Loses | Challenger's Stone remains in Stasis for another round.                                                                                                                               |
 
-📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
+📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and Stellium bonuses, Riders, and Adept effects resolve before scores are compared.
 
 ---
 
@@ -790,11 +800,11 @@ Keep these principles in mind as you find your footing across the first few roun
 
 1. **Your Alignments Shape the Round:** Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from the Aspect Alignments between the Cosmic Age and each of your inventory items.
 
-2. **Your Spread Is Your Engine:** Cards in your Spread have active effects and count toward Alignment. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
+2. **Your Spread Is Your Engine:** Cards in your Spread contribute Planet charge and can form Stelliums, and they count toward Alignment. Cards in your Hand are hidden and contribute no charge. Build your Spread deliberately each round — what's visible is what rivals can read and target.
 
 3. **Light the Right Cauldron First:** Each activated Crucible Card lets you place its Coal into a Cauldron of your choice, permanently lighting it. Think ahead — light the Cauldron for the Reagent type you'll need most, as early as possible. (See Correspondence table.)
 
-4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to pay the 3-card cost. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
+4. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to pay the 3-card cost. By crafting from your Hand, you keep your Spread's Stellium charge intact and ready to complete a card set from your Codex or an Alignment for a Crucible Card.
 
 5. **Astral Houses Are Your Anchor:** Build Astral Houses early. Each House acts as a permanent Alignment source for Harvesting Bonus cards every Spring for the rest of the game. A House built in round one compounds its advantage over every subsequent Age. A House built in the final round is barely worth the cost.
 
@@ -828,15 +838,15 @@ The separation of card utility between your **Spread** and your **Hand** creates
 
 ### The Spread (The Visible Engine)
 
-Cards placed in your open Spread drive active effects, generate extra cards during the Harvest, and satisfy the poker-style "Card Sets" needed to activate your Crucible cards. However, everything in your Spread is fully visible and completely vulnerable to being stolen by opponents via Summer Duels.
+Cards placed in your open Spread build Planet charge toward Stelliums, count toward Harvest Alignments, and satisfy the poker-style "Card Sets" needed to activate your Crucible cards. However, everything in your Spread is fully visible and completely vulnerable to being stolen by opponents via Summer Duels — stealing a key Planet card or Ace can break a Stellium outright.
 
 ### The Hand (The Hidden Reserve)
 
-Cards in your Hand are safe from Duels and keep your long-term strategies secret. You are incentivized to craft Reagents directly from your Hand so you don't break up the high-value sets or alignments sitting out in your Spread.
+Cards in your Hand are safe from Duels and keep your long-term strategies secret. You are incentivized to craft Reagents directly from your Hand so you don't break up the Planet charge and Stelliums sitting out in your Spread.
 
 ### The Card Lock Constraint
 
-Because cards are frozen between these two zones from Spring until Winter, players must make high-stakes commitments during the Spring "Commune With Your Tableau" phase. Over-committing to your Spread leaves you open to theft; under-committing starves your active engine.
+Because cards are frozen between these two zones from Spring until Winter, players must make high-stakes commitments during the Spring "Commune With Your Tableau" phase. Over-committing to your Spread leaves you open to theft and Stellium-breaking Duels; under-committing starves your engine.
 
 ## 3. The Cosmic Age System
 
@@ -945,18 +955,19 @@ Each Sign's Cosmic Effect works on two levels each round. The Cosmic Age Effect 
 
 The Kismeta Deck (blue cover) is your primary tool across the Great Year. Its 134 cards divide into two types.
 
-**Minor Arcana** (112 cards) - the building blocks of the Great Work. Each card has four traits:
+**Minor Arcana** (112 cards) - the building blocks of the Great Work. Each card has three traits:
 
 - **Rank** - 2–10, plus Princess (11), Knight (12), Queen (13), King (14), Ace (1 or 15)
 - **Suit** - Wands (Fire/Red), Cups (Water/Blue), Pentacles (Earth/Green), Swords (Air/Yellow)
-- **Planet** - one of seven planets; used for Aspect Alignments
-- **Card Effects** - special effects that activate under conditions printed on the card
+- **Planet** - one of seven planets; used for Aspect Alignments and Spread charge toward Stelliums
+
+Minor Arcana carry no printed effect text. Power comes from Planet **charge** in your Spread forming **Stelliums** (Codex-level effects) plus **Court Card Riders** and **Ace Wild Charge**. See the [Minor Arcana card reference](/games/alchemists-of-the-great-year/rules/minor-arcana/).
 
 **Major Arcana (22 cards) - two varieties: Adepts & Fates.**
 
 #### Adept Cards
 
-When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously. Each Adept carries a Zodiac Sign Aspect, contributing it to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
+When drawn, an Adept card must be purchased immediately or discarded. You cannot hold it and decide later. Once purchased, it enters your Arcanum and its persistent effect activates for all future rounds. You may hold a maximum of 2 Adept cards simultaneously (3 with The Hermit). Each Adept carries a Zodiac Sign Aspect, contributing it to your Harvest and Alignment scoring. To swap an Adept, pay the incoming card's purchase cost, and return the outgoing card to the Common Deck. There are 12 Adept Cards in total.
 
 #### Fate Cards
 
@@ -966,7 +977,7 @@ The Fates themselves will visit you throughout the course of the game to test yo
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
 | Carries a Zodiac Sign Aspect; used in Harvest & Alignments              | No Aspects; effect only                        |
-| Played into the Arcanum; hold up to 2                                   | Played into the Arcanum immediately when drawn |
+| Played into the Arcanum; hold up to 2 (3 with Hermit)                 | Played into the Arcanum immediately when drawn |
 | Must buy immediately when drawn, or discard - cannot hold and buy later | No purchase required; resolves automatically   |
 
 For a full list of every Adept and Fate card's effects, see the [Major Arcana card reference](/games/alchemists-of-the-great-year/rules/major-arcana/).
@@ -981,14 +992,14 @@ Three concepts you'll use constantly:
 
 You always manage your Tableau — your inventory of Kismeta Cards — across three zones.
 
-| ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS  | MAX LIMIT                    | USED FOR                                                                                    | CANNOT BE USED FOR            |
-| ------- | --------------------------------------------- | ---------- | -------- | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- |
-| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | No card limit during a round | Activating Crucible Cards                                                                   | No restrictions               |
-|         |                                               |            |          |                              | Meeting Forge Alignment                                                                     |                               |
-|         |                                               |            |          | 5-cards; enforced in Winter  | Crafting Reagents                                                                           |                               |
-|         |                                               |            |          |                              | Building Astral Houses                                                                      |                               |
-|         |                                               |            |          |                              | Trading, wagering & targeting in Duels                                                      |                               |
-| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | Max 5 cards                  | Reagent Crafting alongside Spread cards (discarded after)                                   | Duels                         |
+| ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS              | MAX LIMIT                    | USED FOR                                                                                    | CANNOT BE USED FOR            |
+| ------- | --------------------------------------------- | ---------- | -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- |
+| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Charge / Stelliums   | No card limit during a round | Activating Crucible Cards                                                                   | No restrictions               |
+|         |                                               |            |                      |                              | Meeting Forge Alignment                                                                     |                               |
+|         |                                               |            |                      | 5 cards; enforced in Winter  | Crafting Reagents                                                                           |                               |
+|         |                                               |            |                      |                              | Building Astral Houses                                                                      |                               |
+|         |                                               |            |                      |                              | Trading, wagering & targeting in Duels                                                      |                               |
+| HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | No charge            | Max 5 cards                  | Reagent Crafting alongside Spread cards (discarded after)                                   | Duels                         |
 |         |                                               |            |          |                              |                                                                                             | Crucible Card activation      |
 |         |                                               |            |          |                              | Opposition contributions (discarded after)                                                  | Alignments                    |
 |         |                                               |            |          |                              |                                                                                             | Trades, Wagers, Astral Houses |
@@ -1004,7 +1015,7 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 
 | Term                      | Definition                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Adept Card**            | A Major Arcana card with a persistent effect that carries a Zodiac Sign Aspect. Must be purchased immediately when drawn or discarded — you cannot hold it and decide later. Once purchased, it enters your Arcanum and its effect remains active across rounds. A player may hold a maximum of 2 Adept cards simultaneously.                                                                                                   |
+| **Adept Card**            | A Major Arcana card with a persistent effect that carries a Zodiac Sign Aspect. Must be purchased immediately when drawn or discarded — you cannot hold it and decide later. Once purchased, it enters your Arcanum and its effect remains active across rounds. A player may hold a maximum of 2 Adept cards simultaneously (3 with The Hermit). Adepts are Sign-keyed and independent of Minor Arcana Stellium charge.                                                                                                   |
 | **Agekeeper**             | The rotating role held by one player each round. The Agekeeper rolls the Cosmic Age Die, deals Harvest cards to all players, facilitates Autumn turns in clockwise order, and passes the Agekeeper's Key at round's end. The Key passes clockwise after each round.                                                                                                                                                             |
 | **Agekeeper's Boon**      | A +2-card bonus to everyone's Harvest total that is applied when the Agekeeper rolls the same sign for the Cosmic Age as for their Zodiac Sign.                                                                                                                                                                                                                                                                                 |
 | **Alchemical Alignments** | Precise card configurations specifying suits, planets, ranks, or combinations thereof that you must achieve in your Spread to satisfy an Alchemical Formula.                                                                                                                                                                                                                                                                    |
@@ -1019,6 +1030,7 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Besieged Bonus**        | An automatic bonus that's awarded to a Defender who wins an Opposition. Each successive win against different Challengers in the same round grants the Defender +1 cumulative Alignment Points for all further Oppositions that round.                                                                                                                                                                                          |
 | **Card Sets**             | Groups of cards organized by Rank and Suit, following poker-hand conventions (pairs, three of a kind, straights, flushes, and so on). Assembled in a player's Spread to satisfy Alchemical Formulas on Crucible Cards.                                                                                                                                                                                                          |
 | **Cauldron**              | One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by a Coal. See the Correspondence table.                                                                                                                                                                                          |
+| **Charge**                | Planet tally from Minor Arcana cards in your Spread. Each card contributes 1 charge to its printed Planet. Charge is counted continuously and is fully public. Hand and Arcanum cards never contribute charge.                                                                                                                                                                                                                    |
 | **Correspondence**        | The fixed relationship between an Element, Card Suit, Reagent, Cauldron, and Color governing the four elemental Reagents. Salt is not part of the Correspondence system — it carries no Element, Suit, or Cauldron. See the Correspondence table in the Appendix.                                                                                                                                                               |
 | **Cosmic Age**            | One complete round of play, defined by the Zodiac Sign rolled by the Agekeeper in Spring. Its three Aspects govern Harvest bonuses, Alignment scoring, and the active Cosmic Effect for that round.                                                                                                                                                                                                                             |
 | **Cosmic Effect**         | Each Sign's Cosmic Effect operates on two levels. The Cosmic Age Effect, set by the Agekeeper's roll, applies to all players for the entire round. Each player also receives a personal Cosmic Effect from their own Zodiac Die result, active for them alone. If a player's Sign matches the Cosmic Age, the effect is simply active — it does not apply twice. See the Cosmic Ages & Effects table in the Reference Appendix. |
@@ -1036,18 +1048,21 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Harvest**               | The card-drawing phase of Spring. Each player receives 3 Base Harvest cards plus Bonus Cards determined by their Aspect Alignments with the current Cosmic Age.                                                                                                                                                                                                                                                                 |
 | **Major Arcana**          | The 22 special cards in the Kismeta Deck, divided into Adept Cards (12) and Fate Cards (10). Major Arcana are held in the Arcanum zone and carry unique persistent or one-time effects. They cannot be used for Crucible Card activation, Alignments, Duels, Trades, or Wagers.                                                                                                                                                 |
 | **Mantle Ring**           | The four safe positions (0, 2, 4, 6) on the Transmutation Path between Forge stages. A Stone resting on the Mantle Ring cannot be targeted by Opposition.                                                                                                                                                                                                                                                                       |
-| **Minor Arcana**          | The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers.                                                                                                                                                  |
+| **Minor Arcana**          | The 112 standard cards in the Kismeta Deck. Each carries three traits: Rank, Suit, and Planet. Minor Arcana carry no printed effect text — power comes from Planet charge in your Spread forming Stelliums. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers.                                                                                                                                                  |
 | **Coal**                  | A small black token that begins atop each Dormant Crucible Card. When a Crucible Card is activated, its Coal is placed by the activating player into any Cauldron of their choice, permanently lighting it and unlocking crafting of that Cauldron's Reagent type. Coals cannot be moved once placed.                                                                                                                           |
 | **Opposition**            | An Alignment contest declared in Phase 3: Autumn against a rival whose Stone is currently Forging. Players play card sets in rounds, each scored against the Cosmic Age's Aspects, until a winner is determined; a Challenger victory sends the Defender's Stone to Stasis.                                                                                                                                                     |
 | **Opposition Age**        | The Cosmic Age Sign in effect at the moment an Opposition is declared. All Alignment Points in that contest are scored against this Sign's Aspects.                                                                                                                                                                                                                                                                             |
 | **Philosopher's Stone**   | Each player's primary game piece, representing the material being transformed through the Great Work. Begins at position 0 (Mantle Ring) on the Transmutation Path and must reach the Altar of Kismeta (position 8) to win. May be Forging, Tempering, or in Stasis at any given time.                                                                                                                                          |
 | **Ward Reagent**          | A Reagent placed on the 🛡️ symbol beside a Forging Stone. Sets the entry fee any Challenger must pay before declaring an Opposition against that Stone. Challengers pay a number of Reagents equal to the Ward — of any type or combination. Type-matching is not required. Salt may be used as a Ward Reagent.                                                                                                                 |
+| **Wild Charge**           | An Ace (Sun card) in your Spread may count as 1 charge toward any one other Planet, freely reassignable. At most one Ace may count toward any single Stellium. While serving Wild Charge for an active Stellium, the Ace Rider grants +1 bonus Harvest card that round.                                                                                                                                                          |
 | **Rank**                  | The numerical or face value of a Kismeta card, used to calculate Rank Points (e.g. for the Crucible Codex card sets). Numbered cards equal their face value (2–10). Court card values: Princess = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                 |
 | **Rank Points (RP)**      | The numerical value of a card based on its Rank. Used for the Crucible Codex card sets and other contexts. Numbered cards equal their face value. Court card values: Princess = 11, Knight = 12, Queen = 13, King = 14. Aces may count as 1 or 15 — the player chooses when playing the card.                                                                                                                                   |
-| **Reagent**               | A Crafted resource token used to Fire the Philosopher's Stone and to set Ward Reagents. There are five types: Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), Quicksilver (Yellow), and Salt (White). The four elemental Reagents are crafted by discarding 3 matching-Suit cards into a lit Cauldron. Salt is crafted by discarding any 3 Kismeta Cards with no Cauldron required. See Correspondence and Crafting Salt.    |
-| **Salt**                  | A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. Transfers between players via Trade only.                                                 |
-| **Spread**                | One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end.                                                                                                                    |
+| **Reagent**               | A Crafted resource token used to Fire the Philosopher's Stone and to set Ward Reagents. There are five types: Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), Quicksilver (Yellow), and Salt (White). The four elemental Reagents are crafted by discarding 3 matching-Suit cards into a lit Cauldron. Salt is crafted by discarding any 3 Kismeta Cards with no Cauldron required. A Jupiter Stellium reduces crafting to 2 matching cards. See Correspondence and Crafting Salt.    |
+| **Rider**                 | A conditional bonus on Court cards (Princess, Knight, Queen, King) or on Aces serving as Wild Charge. Riders activate only while their associated Planet's Stellium is active (or, for Aces, while serving Wild Charge for an active Stellium). See the Minor Arcana card reference.                                                                                                                                           |
+| **Salt**                  | A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on Adept effects. A Jupiter Stellium lets you craft Salt for 2 matching cards instead of 3. Transfers between players via Trade only.                                                 |
+| **Spread**                | One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards contribute Planet charge toward Stelliums, count toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 5 cards at round's end.                                                                                                                    |
 | **Stasis**                | The frozen state of a Philosopher's Stone after losing an Opposition. A Stone in Stasis cannot Temper or take Stone actions until the following Autumn, when it may attempt to return to the Forge.                                                                                                                                                                                                                             |
+| **Stellium**              | Holding enough Planet charge of one Planet in your Spread to meet the threshold (baseline 3; reduced to 2 during relevant Cosmic Ages). Grants the Codex-level effect for that Planet. Binary — you either have it or you don't. See the Minor Arcana card reference.                                                                                                                                                          |
 | **Suit**                  | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each Suit corresponds to an Element, Reagent type, and Cauldron color via the Correspondence table. Cards must match the required Suit when crafting Reagents or fulfilling certain Alchemical Formula requirements.                                                                                                                           |
 | **Tableau**               | A player's full personal inventory of Kismeta Cards, arranged across the Spread, Hand, and Arcanum zones. Built each round during Spring's Commune With Your Tableau step.                                                                                                                                                                                                                                                      |
 | **Tempering**             | The Autumn action of advancing a Stone that has completed a full round of Forging. The Stone moves from the Forge to the next Mantle Ring position, and its Crucible Card is discarded.                                                                                                                                                                                                                                         |

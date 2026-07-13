@@ -97,20 +97,30 @@ Now that you have your Kismeta Cards for the Age, it's time to commune with them
 
 #### Spread
 
-Cards you place in your Spread are visible to every player and carry active effects. They're the cards you'll draw from to Light Cauldrons, Fire your Stone, Craft Reagents, and meet Forge Alignment requirements — but because they're out in the open, they're also the only cards a rival can target in a Duel.
+Cards you place in your Spread are visible to every player and contribute **Planet charge** toward **Stelliums**. They're the cards you'll draw from to Light Cauldrons, Fire your Stone, Craft Reagents, and meet Forge Alignment requirements — but because they're out in the open, they're also the only cards a rival can target in a Duel.
 
 #### Hand
 
-Cards you hold privately are your Hand cards. They're hidden from other players, and their effects stay inactive. They can be used to Craft Reagents alongside your Spread cards and to contribute to an Opposition, but they cannot be traded, wagered, or targeted in a Duel.
+Cards you hold privately are your Hand cards. They're hidden from other players and contribute **no charge** — only Spread cards count toward Stelliums. They can be used to Craft Reagents alongside your Spread cards and to contribute to an Opposition, but they cannot be traded, wagered, or targeted in a Duel.
 
 #### Arcanum
 
-Any Major Arcana card (Adept Card or Fate Card) is played into a separate zone, the Arcanum. Fate Cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Adept Cards must be purchased before they can be added, and you may hold up to two at a time.
+Any Major Arcana card (Adept Card or Fate Card) is played into a separate zone, the Arcanum. Fate Cards are always placed face-up in the Arcanum immediately when drawn, even if dealt as part of a private face-down Harvest. Adept Cards must be purchased before they can be added, and you may hold up to two at a time (three with The Hermit).
 
 - **Fate Cards:** Effects activate instantly and last for the duration of the current round.
-- **Adept Cards:** Must be purchased immediately or returned to the deck; once purchased, they remain with you for the rest of the game, though a rival may Arrest them in a Gambit (pay the card's Bail to Free it). Each Adept Card has a Base Effect (on purchase) and an Attuned Effect (unlocked when the card's Zodiac Sign is matched via your Zodiac Die or Astral Houses).
+- **Adept Cards:** Must be purchased immediately or returned to the deck; once purchased, they remain with you for the rest of the game, though a rival may Arrest them in a Gambit (pay the card's Bail to Free it). Each Adept Card has a Base Effect (on purchase) and a Resonant Effect (unlocked when the card's Zodiac Sign is matched via your Zodiac Die or Astral Houses). Adepts are Sign-keyed and independent of Minor Arcana Stellium charge.
 
-📌 **Note:** Your Spread is your engine — cards here count toward Alignment, Crucible activation, and Crafting. Your Hand is your reserve, useful for Oppositions and Crafting but invisible to rivals.
+📌 **Note:** Your Spread is your engine — cards here count toward Planet charge, Stelliums, Alignment, Crucible activation, and Crafting. Your Hand is your reserve, useful for Oppositions and Crafting but invisible to rivals.
+
+### Stelliums
+
+Minor Arcana power comes from **Stelliums** — holding enough Planet **charge** in your Spread to trigger a Codex-level effect. See the [Minor Arcana card reference](/games/alchemists-of-the-great-year/rules/minor-arcana/) for the full Planet Stellium Codex, Court Card Riders, and Ace Rider.
+
+- **Charge:** Each Minor Arcana card in your Spread contributes 1 charge to its printed Planet. Charge updates continuously as cards enter or leave your Spread.
+- **Threshold:** Forming a Stellium requires **3 charge** of one Planet (baseline; printed on the Crucible Codex). During a Cosmic Age, the ruling Planet's threshold drops to **2**; during a Leo/Sun Age, every Planet's threshold drops to **2**.
+- **Wild Charge:** Aces (Sun cards) may count as 1 charge toward any one other Planet, freely reassignable. At most **one Ace** may count toward any single Stellium.
+- **Court & Ace Riders:** Court cards and Aces serving as Wild Charge carry conditional bonuses that activate only while their Planet's Stellium is active (or, for Aces, while serving Wild Charge for an active Stellium).
+- **Spread limit is 5** (enforced at Winter). Committing 3 slots to one Stellium is a deliberate trade-off against Alignments and crafting.
 
 ### 5️⃣ Card Lock 🔒 {#5-card-lock}
 
@@ -209,7 +219,7 @@ Challenge a rival to a straight dice roll to steal a single card from their Spre
 #### How to Declare a Duel:
 
 - **Declare:** Name your opponent and the specific card you are targeting in their Spread.
-- **Check Spreads:** Both players review their Spread for any relevant card effects.
+- **Check Spreads:** Both players review their Spread for active Stelliums, Court/Ace Riders, and any Adept effects that modify Duels.
 - **Roll:** Both players roll their Zodiac Dice. Higher roll wins. Reroll all ties until resolved.
 - **Resolve:** See outcomes below.
 
@@ -238,7 +248,7 @@ When a Gambit resolves, the loser's asset is **Arrested**. Arrested cards are tu
   - Choose an Active Crucible Card in a rival's inventory. Dormant, Fired, and Arrested Crucible Cards cannot be targeted.
   - Choose an Active Adept card in a rival's Arcanum. An Arrested Adept cannot be targeted.
 - **Name Your Stake:** Declare one of your own assets **of the same type** as the target. If you have no eligible asset of that type, you cannot declare that Gambit.
-- **Roll:** Both players roll their Zodiac Dice. Apply any card effects that modify Gambits before comparing results. Reroll all ties until resolved.
+- **Roll:** Both players roll their Zodiac Dice. Apply any Stellium bonuses, Court/Ace Riders, and Adept effects that modify Gambits before comparing results. Reroll all ties until resolved.
 - **Resolve:** See outcomes below.
 
 | GAMBIT RESULTS   |                                                                                                |                                               |
@@ -456,7 +466,7 @@ If another player's Stone now holds your previous Forge position, choose one:
 | Challenger Wins  | The two Stones swap positions. Challenger's Stone moves into the Forge; Defender's Stone is sent to the nearest Stasis zone. Defender's Wards discarded; Crucible Card remains Fired. |
 | Challenger Loses | Challenger's Stone remains in Stasis for another round.                                                                                                                               |
 
-📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and card effects resolve before scores are compared.
+📌 **Note:** All other Opposition rules apply to a Stasis Opposition: pay the Defender's Ward cost as the entry fee, Spread cards are active, Hand cards are optional, and Stellium bonuses, Riders, and Adept effects resolve before scores are compared.
 
 
 ### ⚒️ Craft Reagents {#craft-reagents}

@@ -1,7 +1,7 @@
 [
   {
     "term": "Adept Card",
-    "definition": "A Major Arcana card with a persistent effect that carries a Zodiac Sign Aspect. Must be purchased immediately when drawn or discarded — you cannot hold it and decide later. Once purchased, it enters your Arcanum and its effect remains active across rounds. A player may hold a maximum of 2 Adept cards simultaneously."
+    "definition": "A Major Arcana card with a persistent effect that carries a Zodiac Sign Aspect. Must be purchased immediately when drawn or discarded — you cannot hold it and decide later. Once purchased, it enters your Arcanum and its effect remains active across rounds. A player may hold a maximum of 2 Adept cards simultaneously (3 with The Hermit). Adepts are Sign-keyed and independent of Minor Arcana Stellium charge."
   },
   {
     "term": "Agekeeper",
@@ -58,6 +58,10 @@
   {
     "term": "Cauldron",
     "definition": "One of four colored refining stations (Red, Blue, Green, Yellow) on the Great Year Board. Each Cauldron corresponds to a Reagent type that can only be crafted once the Cauldron has been lit by a Coal. See the Correspondence table."
+  },
+  {
+    "term": "Charge",
+    "definition": "Planet tally from Minor Arcana cards in your Spread. Each card contributes 1 charge to its printed Planet. Charge is counted continuously and is fully public. Hand and Arcanum cards never contribute charge."
   },
   {
     "term": "Coal",
@@ -133,7 +137,7 @@
   },
   {
     "term": "Minor Arcana",
-    "definition": "The 112 standard cards in the Kismeta Deck. Each carries four traits: Rank, Suit, Planet, and a Card Effect. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers."
+    "definition": "The 112 standard cards in the Kismeta Deck. Each carries three traits: Rank, Suit, and Planet. Minor Arcana carry no printed effect text — power comes from Planet charge in your Spread forming Stelliums. Minor Arcana are the primary cards used for Harvest Alignments, Reagent Crafting, Crucible Card activation, Astral House construction, Duels, Trades, and Wagers."
   },
   {
     "term": "Opposition",
@@ -157,19 +161,27 @@
   },
   {
     "term": "Reagent",
-    "definition": "A Crafted resource token used to Fire the Philosopher's Stone and to set Ward Reagents. There are five types: Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), Quicksilver (Yellow), and Salt (White). The four elemental Reagents are crafted by discarding 3 matching-Suit cards into a lit Cauldron. Salt is crafted by discarding any 3 Kismeta Cards with no Cauldron required. See Correspondence and Crafting Salt."
+    "definition": "A Crafted resource token used to Fire the Philosopher's Stone and to set Ward Reagents. There are five types: Sulphur (Red), Aqua Regia (Blue), Vitriol (Green), Quicksilver (Yellow), and Salt (White). The four elemental Reagents are crafted by discarding 3 matching-Suit cards into a lit Cauldron. Salt is crafted by discarding any 3 Kismeta Cards with no Cauldron required. A Jupiter Stellium reduces crafting to 2 matching cards. See Correspondence and Crafting Salt."
+  },
+  {
+    "term": "Rider",
+    "definition": "A conditional bonus on Court cards (Princess, Knight, Queen, King) or on Aces serving as Wild Charge. Riders activate only while their associated Planet's Stellium is active (or, for Aces, while serving Wild Charge for an active Stellium). See the Minor Arcana card reference."
   },
   {
     "term": "Salt",
-    "definition": "A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on card effects. Transfers between players via Trade only."
+    "definition": "A Reagent crafted by discarding any 3 Kismeta Cards from your Spread and/or Hand. No Cauldron is required. Salt carries no elemental correspondence and is available to craft from the first round of the game. May be used as a Ward Reagent, to satisfy Salt requirements on Crucible Cards, and to pay Salt costs on Adept effects. A Jupiter Stellium lets you craft Salt for 2 matching cards instead of 3. Transfers between players via Trade only."
   },
   {
     "term": "Spread",
-    "definition": "One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards are active, counting toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 7 cards at round's end."
+    "definition": "One of three card zones in a player's inventory. Cards placed here are face-up and visible to all players. Spread cards contribute Planet charge toward Stelliums, count toward Harvest Alignments, Crucible Card activation, Reagent Crafting, Astral House construction, Duels, Trades, and Wagers. Limited to 5 cards at round's end."
   },
   {
     "term": "Stasis",
     "definition": "The frozen state of a Philosopher's Stone after losing an Opposition. A Stone in Stasis cannot Temper or take Stone actions until the following Autumn, when it may attempt to return to the Forge."
+  },
+  {
+    "term": "Stellium",
+    "definition": "Holding enough Planet charge of one Planet in your Spread to meet the threshold (baseline 3; reduced to 2 during relevant Cosmic Ages). Grants the Codex-level effect for that Planet. Binary — you either have it or you don't. See the Minor Arcana card reference."
   },
   {
     "term": "Suit",
@@ -198,5 +210,9 @@
   {
     "term": "Ward Reagent",
     "definition": "A Reagent placed on the 🛡️ symbol beside a Forging Stone. Sets the entry fee any Challenger must pay before declaring an Opposition against that Stone. Challengers pay a number of Reagents equal to the Ward — of any type or combination. Type-matching is not required. Salt may be used as a Ward Reagent."
+  },
+  {
+    "term": "Wild Charge",
+    "definition": "An Ace (Sun card) in your Spread may count as 1 charge toward any one other Planet, freely reassignable. At most one Ace may count toward any single Stellium. While serving Wild Charge for an active Stellium, the Ace Rider grants +1 bonus Harvest card that round."
   }
 ]

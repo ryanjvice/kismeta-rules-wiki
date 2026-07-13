@@ -25,15 +25,15 @@ The separation of card utility between your **Spread** and your **Hand** creates
 
 ### The Spread (The Visible Engine)
 
-Cards placed in your open Spread drive active effects, generate extra cards during the Harvest, and satisfy the poker-style "Card Sets" needed to activate your Crucible cards. However, everything in your Spread is fully visible and completely vulnerable to being stolen by opponents via Summer Duels.
+Cards placed in your open Spread build Planet charge toward Stelliums, count toward Harvest Alignments, and satisfy the poker-style "Card Sets" needed to activate your Crucible cards. However, everything in your Spread is fully visible and completely vulnerable to being stolen by opponents via Summer Duels — stealing a key Planet card or Ace can break a Stellium outright.
 
 ### The Hand (The Hidden Reserve)
 
-Cards in your Hand are safe from Duels and keep your long-term strategies secret. You are incentivized to craft Reagents directly from your Hand so you don't break up the high-value sets or alignments sitting out in your Spread.
+Cards in your Hand are safe from Duels and keep your long-term strategies secret. You are incentivized to craft Reagents directly from your Hand so you don't break up the Planet charge and Stelliums sitting out in your Spread.
 
 ### The Card Lock Constraint
 
-Because cards are frozen between these two zones from Spring until Winter, players must make high-stakes commitments during the Spring "Commune With Your Tableau" phase. Over-committing to your Spread leaves you open to theft; under-committing starves your active engine.
+Because cards are frozen between these two zones from Spring until Winter, players must make high-stakes commitments during the Spring "Commune With Your Tableau" phase. Over-committing to your Spread leaves you open to theft and Stellium-breaking Duels; under-committing starves your engine.
 
 ## 3. The Cosmic Age System
 

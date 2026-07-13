@@ -14,7 +14,7 @@ The 22 Major Arcana cards are divided into two sets.
 | **Effect Duration** | Single round — discarded at end          | Persistent across rounds                      |
 | **Aspects**         | None — effect only                       | Carry all 3 Aspects (Sign, Planet, Element)   |
 | **Entry**           | Drawn in Harvest — resolves immediately  | Must be purchased when drawn, or discarded    |
-| **Arcanum Limit**   | No limit while active                    | Max 2 cards (3 with Hierophant, if confirmed) |
+| **Arcanum Limit**   | No limit while active                    | Max 2 cards (3 with Hermit)                   |
 | **Player Agency**   | Low — forced on all or the drawer        | High — player chooses to buy in               |
 | **Design Role**     | Disruption, equalization, social moments | Specialization, optimization, identity        |
 
@@ -46,7 +46,7 @@ Each Adept card lists a **Bail** cost — the Salt its owner must pay to Free it
 | Card           | Sign        | Bail 🧂 | Base / Resonant | Summary                                                                                      |
 | -------------- | ----------- | ------- | --------------- | -------------------------------------------------------------------------------------------- |
 | Magician       | Gemini      | 2       | Base            | Ignore Card Lock. Swap cards freely between Hand and Spread.                                 |
-|                |             |         | Resonant        | Nullify "Reversed" effects in your Spread.                                                   |
+|                |             |         | Resonant        | Once per round, look at any one rival's Hand.                                                |
 | High Priestess | Pisces      | 2       | Base            | Draw your Harvest directly from the Deck and +2 cards. Return any two after reviewing all.   |
 |                |             |         | Resonant        | Expand your maximum Hand limit to 7 cards.                                                   |
 | Empress        | Taurus      | 3       | Base            | Craft One Reagent type 2-for-1. Mark the matching Cauldron with Salt.                        |
