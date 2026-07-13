@@ -17,4 +17,4 @@ Keep these principles in mind as you find your footing across the first few roun
 
 6. **Adept Cards Synergies:** Your Arcanum has two Adept slots that, as a pair, permanently add their Zodiac Sign Aspects to all calculations. A strong pair spans two different Signs, preserving bonuses even as the Cosmic Age shifts. When a new Adept appears, consider how it complements your existing one. Overlapping Signs with your Astral Houses create a strong Alignment advantage that rivals can't disrupt.
 
-7. **Protect Your Progress with Wards:** Setting even 1–2 Reagents as Ward Reagents when you Fire makes opponents pay to challenge you. An unprotected Stone is a free target. Remember: Ward Reagents placed on a Crucible Card can also count toward satisfying that card's requirements.
+7. **Protect Your Progress with Wards:** Setting even 1–2 Reagents as Ward Reagents beside your Forging Stone makes opponents pay to declare an Opposition against you. An unprotected Stone is a free target. Defend your Crucible and Adept cards by winning the Gambits declared against them, and keep Salt in reserve to pay Bail if one is Arrested.

@@ -58,7 +58,7 @@ The Fates themselves will visit you throughout the course of the game to test yo
 | Adept Cards (12)                                                        | Fate Cards (10)                                |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Persistent effect lasting across rounds                                 | One-time effect; discarded at round's end      |
-| Carries a Zodiac Sign Aspect; used in Harvest & Alignments               | No Aspects; effect only                        |
+| Carries a Zodiac Sign Aspect; used in Harvest & Alignments              | No Aspects; effect only                        |
 | Played into the Arcanum; hold up to 2                                   | Played into the Arcanum immediately when drawn |
 | Must buy immediately when drawn, or discard - cannot hold and buy later | No purchase required; resolves automatically   |
 
@@ -87,6 +87,6 @@ You always manage your Tableau — your inventory of Kismeta Cards — across th
 |         |                                               |            |          |                              |                                                                                             | Trades, Wagers, Astral Houses |
 | ARCANUM | MAJOR ARCANA: Fate & Adept Cards              | Visible    | Active   | Adept: Max 2 cards           | Active Major Arcana effects                                                                 | Duels                         |
 |         |                                               |            |          |                              | Adept Aspects (Harvest & Alignments)                                                        | Crucible Card activation      |
-|         |                                               |            |          |                              | Placing Ward Reagents on Adept cards                                                        | Alignments                    |
+|         |                                               |            |          |                              | Staking & targeting in Arcanum Gambits                                                      | Alignments                    |
 |         |                                               |            |          | Fate: No limit               | Fate cards: Random Effects activated immediately upon being drawn; discarded at round's end | Trades, Wagers, Astral Houses |
-|         |                                               |            |          |                              | Adept cards: enter by purchase or Arcanum Gambit; leave by purchase swap or Arcanum Gambit  |                               |
+|         |                                               |            |          |                              | Adept cards: enter by purchase; may be Arrested in a Gambit and Freed by paying Bail        |                               |

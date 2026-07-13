@@ -29,7 +29,7 @@ description: "All four suits — Card 1 active effects and Card 2 wildcard links
 | **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Cups cards.                                          |
 | **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Wands** — Your Hand limit is reduced by 1 at round end.      |
 | **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Wands** — Your opponent gains a Reroll in Duels against you. |
-| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Wands** — Your Opponent Chooses Your Ante Card.              |
+| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Wands** — Bail costs on your Arrested cards are +1 Salt.     |
 | **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Aqua Regia.                                 |
 | **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Aqua Regia by -1 card (minimum 1).                 |
 | **9**        | 9      | _Venus_    | _Social_     | Draw 1 Kismeta Card for each successful Trade this round.                   |
@@ -107,8 +107,8 @@ description: "All four suits — Card 1 active effects and Card 2 wildcard links
 | **Ace**      | 1      | _Sun_      | _Entry Fee_  | Discard to build an Astral House when your Zodiac die is on an Air sign.            |
 | **2**        | 2      | _Moon_     | _Harvest_    | Astral Houses on Air signs earn double at Harvest.                                  |
 | **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Swords cards.                                                |
-| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Cups** — You must offer 2 Ante Cards (instead of 1) to begin a Duel. |
-| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Cups** — Pay an extra +1 Salt to start any Opposition or Gambit.     |
+| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Cups** — If you lose a Duel you initiated, the Defender steals 1 card of their choice from your Spread. |
+| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Cups** — Pay 1 Salt to declare any Opposition or Gambit.             |
 | **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Cups** — Duels you start are a best-of-3 dice roll.                  |
 | **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Quicksilver.                                        |
 | **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Quicksilver by -1 card (minimum 1).                        |

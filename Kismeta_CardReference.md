@@ -36,7 +36,7 @@ The 22 Major Arcana cards are divided into two sets.
 
 | Card Name        | Summary                                                                                                                                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tower            | Turn all Adept cards face down. Players will have to pay 1 salt to refresh.                                                                                                                                               |
+| Tower            | All Adept cards in play are Arrested. Owners must pay each card's Bail to Free it.                                                                                                                                        |
 | Death            | All Hands are returned to the deck. The Agekeeper shuffles the deck.                                                                                                                                                      |
 | Sun              | All players receive one of each Reagent.                                                                                                                                                                                  |
 | Judgement        | Draw 1 card for each Cauldron you have lit.                                                                                                                                                                               |
@@ -49,32 +49,34 @@ The 22 Major Arcana cards are divided into two sets.
 
 ### ADEPT CARDS
 
-| Card           | Sign        | Base / Resonant | Summary                                                                                      |
-| -------------- | ----------- | --------------- | -------------------------------------------------------------------------------------------- |
-| Magician       | Gemini      | Base            | Ignore Card Lock. Swap cards freely between Hand and Spread.                                 |
-|                |             | Resonant        | Nullify "Reversed" effects in your Spread.                                                   |
-| High Priestess | Pisces      | Base            | Draw your Harvest directly from the Deck and +2 cards. Return any two after reviewing all.   |
-|                |             | Resonant        | Expand your maximum Hand limit to 7 cards.                                                   |
-| Empress        | Taurus      | Base            | Craft One Reagent type 2-for-1. Mark the matching Cauldron with Salt.                        |
-|                |             | Resonant        | Apply 2-for-1 to any two Reagent types.                                                      |
-| Emperor        | Aries       | Base            | Protect any 2 Spread cards from being lost in Duels or Gambits. Activate during Spring.      |
-|                |             | Resonant        | Protect any 2 cards from any type of attack. Protection lasts until Winter transit.          |
-| Hierophant     | Scorpio     | Base            | Shift your Zodiac Dice roll ±1 Sign on the Zodiac Wheel for Harvest or Opposition.           |
-|                |             | Resonant        | Shift your Zodiac Dice roll ±2. Apply this effect during any Opposition.                     |
-| Devil          | Capricorn   | Base            | Sacrifice any card to steal any one card from an opponent's Spread.                          |
-|                |             | Resonant        | Sacrifice this card to Banish an opponent's Adept card. Both cards are returned to the deck. |
-| Chariot        | Leo         | Base            | Initiate Duels without an Ante card.                                                         |
-|                |             | Resonant        | Gain a reroll in any duel.                                                                   |
-| Strength       | Sagittarius | Base            | +1 to Duel dice rolls.                                                                       |
-|                |             | Resonant        | +2 to Duel & Gambit dice rolls.                                                              |
-| Hermit         | Virgo       | Base            | Hold up to 3 Adept cards.                                                                    |
-|                |             | Resonant        | All elemental Aspect alignments are doubled. (Fire, Air, Water, Earth)                       |
-| Temperance     | Libra       | Base            | Craft Salt for any Two Cards.                                                                |
-|                |             | Resonant        | Salt is a Wild Reagent for one other type. Mark the matching Cauldron with Salt.             |
-| The Star       | Aquarius    | Base            | Anytime you lose a Duel, Gambit or Opposition, draw two cards.                               |
-|                |             | Resonant        | Nullify an Adept or Fate card effect in play. Pay 1 Salt to refresh.                         |
-| The World      | Cancer      | Base            | Your Ward Reagents remain with you after successful Transmutations.                          |
-|                |             | Resonant        | This card is a Wildcard for any Crucible card. Flip to activate. Refresh for 1 Salt.         |
+Each Adept card lists a **Bail** cost — the Salt its owner must pay to Free it if it is Arrested in a lost Gambit. Bail scales with the card's power.
+
+| Card           | Sign        | Bail 🧂 | Base / Resonant | Summary                                                                                      |
+| -------------- | ----------- | ------- | --------------- | -------------------------------------------------------------------------------------------- |
+| Magician       | Gemini      | 2       | Base            | Ignore Card Lock. Swap cards freely between Hand and Spread.                                 |
+|                |             |         | Resonant        | Nullify "Reversed" effects in your Spread.                                                   |
+| High Priestess | Pisces      | 2       | Base            | Draw your Harvest directly from the Deck and +2 cards. Return any two after reviewing all.   |
+|                |             |         | Resonant        | Expand your maximum Hand limit to 7 cards.                                                   |
+| Empress        | Taurus      | 3       | Base            | Craft One Reagent type 2-for-1. Mark the matching Cauldron with Salt.                        |
+|                |             |         | Resonant        | Apply 2-for-1 to any two Reagent types.                                                      |
+| Emperor        | Aries       | 2       | Base            | Protect any 2 Spread cards from being stolen in Duels. Activate during Spring.               |
+|                |             |         | Resonant        | Protect any 2 cards from any type of attack. Protection lasts until Winter transit.          |
+| Hierophant     | Scorpio     | 2       | Base            | Shift your Zodiac Dice roll ±1 Sign on the Zodiac Wheel for Harvest or Opposition.           |
+|                |             |         | Resonant        | Shift your Zodiac Dice roll ±2. Apply this effect during any Opposition.                     |
+| Devil          | Capricorn   | 3       | Base            | Sacrifice any card to steal any one card from an opponent's Spread.                          |
+|                |             |         | Resonant        | Sacrifice this card to Banish an opponent's Adept card. Both cards are returned to the deck. |
+| Chariot        | Leo         | 1       | Base            | Duel each rival up to twice per round.                                                       |
+|                |             |         | Resonant        | Gain a reroll in any duel.                                                                   |
+| Strength       | Sagittarius | 2       | Base            | +1 to Duel dice rolls.                                                                       |
+|                |             |         | Resonant        | +2 to Duel & Gambit dice rolls.                                                              |
+| Hermit         | Virgo       | 1       | Base            | Hold up to 3 Adept cards.                                                                    |
+|                |             |         | Resonant        | All elemental Aspect alignments are doubled. (Fire, Air, Water, Earth)                       |
+| Temperance     | Libra       | 2       | Base            | Craft Salt for any Two Cards.                                                                |
+|                |             |         | Resonant        | Salt is a Wild Reagent for one other type. Mark the matching Cauldron with Salt.             |
+| The Star       | Aquarius    | 1       | Base            | Anytime you lose a Duel, Gambit or Opposition, draw two cards.                               |
+|                |             |         | Resonant        | Nullify an Adept or Fate card effect in play. Pay 1 Salt to refresh.                         |
+| The World      | Cancer      | 3       | Base            | Your Ward Reagents remain with you after successful Transmutations.                          |
+|                |             |         | Resonant        | This card is a Wildcard for any Crucible card. Flip to activate. Refresh for 1 Salt.         |
 
 ## CRUCIBLE CARDS
 
@@ -86,6 +88,15 @@ The 22 Major Arcana cards are divided into two sets.
 | **Group B** | (4–10)     | _Standard_     | 7 cards   | Core of Standard and Magnus Alchemist builds.                          |
 | **Group C** | (11–17)    | _Advanced_     | 7 cards   | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
 | **Group D** | (18–21)    | _Mastery_      | 4 cards   | Magnus Alchemist builds only.                                          |
+
+**Bail Costs** — the Salt an owner pays to Free an Arrested Crucible Card, printed on each card and scaled by Group:
+
+| **Group**   | **Bail** 🧂 |
+| ----------- | ----------- |
+| **Group A** | 1 Salt      |
+| **Group B** | 2 Salt      |
+| **Group C** | 2 Salt      |
+| **Group D** | 3 Salt      |
 
 ### GROUP A · Beginner · Lead Stage · 4 Cards · Arcana 0–3
 
@@ -161,7 +172,7 @@ The 22 Major Arcana cards are divided into two sets.
 | **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Cups cards.                                          |
 | **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Wands** — Your Hand limit is reduced by 1 at round end.      |
 | **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Wands** — Your opponent gains a Reroll in Duels against you. |
-| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Wands** — Your Opponent Chooses Your Ante Card.              |
+| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Wands** — Bail costs on your Arrested cards are +1 Salt.     |
 | **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Aqua Regia.                                 |
 | **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Aqua Regia by -1 card (minimum 1).                 |
 | **9**        | 9      | _Venus_    | _Social_     | Draw 1 Kismeta Card for each successful Trade this round.                   |
@@ -239,8 +250,8 @@ The 22 Major Arcana cards are divided into two sets.
 | **Ace**      | 1      | _Sun_      | _Entry Fee_  | Discard to build an Astral House when your Zodiac die is on an Air sign.            |
 | **2**        | 2      | _Moon_     | _Harvest_    | Astral Houses on Air signs earn double at Harvest.                                  |
 | **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Swords cards.                                                |
-| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Cups** — You must offer 2 Ante Cards (instead of 1) to begin a Duel. |
-| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Cups** — Pay an extra +1 Salt to start any Opposition or Gambit.     |
+| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Cups** — If you lose a Duel you initiated, the Defender steals 1 card of their choice from your Spread. |
+| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Cups** — Pay 1 Salt to declare any Opposition or Gambit.             |
 | **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Cups** — Duels you start are a best-of-3 dice roll.                  |
 | **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Quicksilver.                                        |
 | **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Quicksilver by -1 card (minimum 1).                        |

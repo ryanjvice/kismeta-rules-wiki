@@ -52,15 +52,21 @@
             "id": "duel",
             "label": "🤺 Duel",
             "kind": "optional",
-            "body": "Wager a card from your Spread; roll dice against a rival — winner steals the targeted card from the Defender's Spread.",
-            "learnMoreHash": "-duel"
+            "body": "Name your opponent and a specific card in their Spread; both roll Zodiac Dice — higher roll wins. Challenger wins: steal the targeted card. Limit one Duel per rival per round, win or lose.",
+            "learnMoreHash": "-duel",
+            "gameModeNote": {
+              "magnus": "If Misaligned with your target, add +1 to your dice roll."
+            }
           },
           {
             "id": "gambit",
             "label": "🎲 Gambit",
             "kind": "optional",
-            "body": "Name a rival's Active Crucible Card (Crucible Gambit) or Adept card (Arcanum Gambit) as your target, and declare one of your own as your stake; pay any Ward entry fee; roll dice — a Challenger win swaps the two cards, a Challenger loss Arrests your offered card (pay 1 Salt on a future Summer turn to free it).",
-            "learnMoreHash": "-gambit"
+            "body": "Target a rival's Active Crucible Card or Adept card and stake one of your own of the same type; both roll Zodiac Dice. Challenger wins: the target is Arrested. Challenger loses: your stake is Arrested — pay its printed Bail in Salt during a future Summer turn to Free it.",
+            "learnMoreHash": "-gambit",
+            "gameModeNote": {
+              "magnus": "If Misaligned with the Defender at declaration, add +1 to your dice roll."
+            }
           }
         ]
       }

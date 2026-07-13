@@ -55,7 +55,7 @@ Moving your Philosopher's Stone into a "Forge" position means you are actively f
 
 ### Economic War Chests (Ward Reagents)
 
-To mitigate risk, players can place crafted Reagents onto their active cards or their forging Stone as "Wards". These act as aggressive tollbooths—opponents _can_ still challenge you to stop your progress, but they must pay a steep entry fee equal to your Ward to even attempt it. Deciding whether to utilize your hard-earned Reagents to advance your own stone or to pool them into defense mechanisms introduces deep psychological and economic tension.
+To mitigate risk, players can place crafted Reagents beside their Forging Stone as "Wards". These act as aggressive tollbooths—opponents _can_ still declare an Opposition to stop your progress, but they must pay a steep entry fee equal to your Ward to even attempt it. Deciding whether to utilize your hard-earned Reagents to advance your own stone or to pool them into defense mechanisms introduces deep psychological and economic tension.
 
 ### Catch-Up Mechanics (Besieged Bonus & Fates)
 
@@ -71,7 +71,7 @@ Curated to teach basic card sets and resource conversion, bypassing complex caul
 
 ### Standard Game (Medium-High Depth)
 
-The full cognitive load of the game—balancing card locks, building houses, managing cauldrons, warding cards, and wading through the Forge.
+The full cognitive load of the game—balancing card locks, building houses, managing cauldrons, warding your Stone, and wading through the Forge.
 
 ### Magnus Alchemist Mode (Expert Depth)
 
