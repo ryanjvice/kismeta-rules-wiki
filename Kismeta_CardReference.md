@@ -6,7 +6,7 @@ Alchemists of the Great Year
 
 ## KISMETA CARD REFERENCE
 
-Major Arcana Design Document — v2
+Card Design Document — v3
 
 A Goodmagik Game · Working Document
 
@@ -22,7 +22,7 @@ The 22 Major Arcana cards are divided into two sets.
 | **Effect Duration** | Single round — discarded at end          | Persistent across rounds                      |
 | **Aspects**         | None — effect only                       | Carry all 3 Aspects (Sign, Planet, Element)   |
 | **Entry**           | Drawn in Harvest — resolves immediately  | Must be purchased when drawn, or discarded    |
-| **Arcanum Limit**   | No limit while active                    | Max 2 cards (3 with Hierophant, if confirmed) |
+| **Arcanum Limit**   | No limit while active                    | Max 2 cards (3 with the Hermit)              |
 | **Player Agency**   | Low — forced on all or the drawer        | High — player chooses to buy in               |
 | **Design Role**     | Disruption, equalization, social moments | Specialization, optimization, identity        |
 
@@ -34,9 +34,11 @@ The 22 Major Arcana cards are divided into two sets.
 
 ### Fate Cards
 
+A Fate card is a one-time cosmic event, resolved the instant it's drawn. It carries no Aspects and requires no purchase — its effect triggers immediately, and the card is discarded at the end of the round.
+
 | Card Name        | Summary                                                                                                                                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tower            | Turn all Adept cards face down. Players will have to pay 1 salt to refresh.                                                                                                                                               |
+| Tower            | All Adept cards in play are Arrested. Owners must pay each card's Bail to Free it.                                                                                                                                        |
 | Death            | All Hands are returned to the deck. The Agekeeper shuffles the deck.                                                                                                                                                      |
 | Sun              | All players receive one of each Reagent.                                                                                                                                                                                  |
 | Judgement        | Draw 1 card for each Cauldron you have lit.                                                                                                                                                                               |
@@ -49,34 +51,40 @@ The 22 Major Arcana cards are divided into two sets.
 
 ### ADEPT CARDS
 
-| Card           | Sign        | Base / Resonant | Summary                                                                                      |
-| -------------- | ----------- | --------------- | -------------------------------------------------------------------------------------------- |
-| Magician       | Gemini      | Base            | Ignore Card Lock. Swap cards freely between Hand and Spread.                                 |
-|                |             | Resonant        | Nullify "Reversed" effects in your Spread.                                                   |
-| High Priestess | Pisces      | Base            | Draw your Harvest directly from the Deck and +2 cards. Return any two after reviewing all.   |
-|                |             | Resonant        | Expand your maximum Hand limit to 7 cards.                                                   |
-| Empress        | Taurus      | Base            | Craft One Reagent type 2-for-1. Mark the matching Cauldron with Salt.                        |
-|                |             | Resonant        | Apply 2-for-1 to any two Reagent types.                                                      |
-| Emperor        | Aries       | Base            | Protect any 2 Spread cards from being lost in Duels or Gambits. Activate during Spring.      |
-|                |             | Resonant        | Protect any 2 cards from any type of attack. Protection lasts until Winter transit.          |
-| Hierophant     | Scorpio     | Base            | Shift your Zodiac Dice roll ±1 Sign on the Zodiac Wheel for Harvest or Opposition.           |
-|                |             | Resonant        | Shift your Zodiac Dice roll ±2. Apply this effect during any Opposition.                     |
-| Devil          | Capricorn   | Base            | Sacrifice any card to steal any one card from an opponent's Spread.                          |
-|                |             | Resonant        | Sacrifice this card to Banish an opponent's Adept card. Both cards are returned to the deck. |
-| Chariot        | Leo         | Base            | Initiate Duels without an Ante card.                                                         |
-|                |             | Resonant        | Gain a reroll in any duel.                                                                   |
-| Strength       | Sagittarius | Base            | +1 to Duel dice rolls.                                                                       |
-|                |             | Resonant        | +2 to Duel & Gambit dice rolls.                                                              |
-| Hermit         | Virgo       | Base            | Hold up to 3 Adept cards.                                                                    |
-|                |             | Resonant        | All elemental Aspect alignments are doubled. (Fire, Air, Water, Earth)                       |
-| Temperance     | Libra       | Base            | Craft Salt for any Two Cards.                                                                |
-|                |             | Resonant        | Salt is a Wild Reagent for one other type. Mark the matching Cauldron with Salt.             |
-| The Star       | Aquarius    | Base            | Anytime you lose a Duel, Gambit or Opposition, draw two cards.                               |
-|                |             | Resonant        | Nullify an Adept or Fate card effect in play. Pay 1 Salt to refresh.                         |
-| The World      | Cancer      | Base            | Your Ward Reagents remain with you after successful Transmutations.                          |
-|                |             | Resonant        | This card is a Wildcard for any Crucible card. Flip to activate. Refresh for 1 Salt.         |
+Adept cards are permanent enhancements, each attuned to a single Zodiac Sign. A Base effect is active as soon as you acquire the card; a Resonant effect unlocks whenever you match its Sign through your Zodiac Die or an Astral House.
+
+Each Adept card also lists a **Bail** cost — the Salt its owner must pay to Free it if it is Arrested in a lost Gambit. Bail scales with the card's power.
+
+| Card           | Sign        | Bail 🧂 | Base / Resonant | Summary                                                                                      |
+| -------------- | ----------- | ------- | --------------- | -------------------------------------------------------------------------------------------- |
+| Magician       | Gemini      | 2       | Base            | Ignore Card Lock. Swap cards freely between Hand and Spread.                                 |
+|                |             |         | Resonant        | Once per round, look at any one rival's Hand.                                                |
+| High Priestess | Pisces      | 2       | Base            | Draw your Harvest directly from the Deck and +2 cards. Return any two after reviewing all.   |
+|                |             |         | Resonant        | Expand your maximum Hand limit to 7 cards.                                                   |
+| Empress        | Taurus      | 3       | Base            | Craft One Reagent type 2-for-1. Mark the matching Cauldron with Salt.                        |
+|                |             |         | Resonant        | Apply 2-for-1 to any two Reagent types.                                                      |
+| Emperor        | Aries       | 2       | Base            | Protect any 2 Spread cards from being stolen in Duels. Activate during Spring.               |
+|                |             |         | Resonant        | Protect any 2 cards from any type of attack. Protection lasts until Winter transit.          |
+| Hierophant     | Scorpio     | 2       | Base            | Shift your Zodiac Dice roll ±1 Sign on the Zodiac Wheel for Harvest or Opposition.           |
+|                |             |         | Resonant        | Shift your Zodiac Dice roll ±2. Apply this effect during any Opposition.                     |
+| Devil          | Capricorn   | 3       | Base            | Sacrifice any card to steal any one card from an opponent's Spread.                          |
+|                |             |         | Resonant        | Sacrifice this card to Banish an opponent's Adept card. Both cards are returned to the deck. |
+| Chariot        | Leo         | 1       | Base            | Duel each rival up to twice per round.                                                       |
+|                |             |         | Resonant        | Gain a reroll in any duel.                                                                   |
+| Strength       | Sagittarius | 2       | Base            | +1 to Duel dice rolls.                                                                       |
+|                |             |         | Resonant        | +2 to Duel & Gambit dice rolls.                                                              |
+| Hermit         | Virgo       | 1       | Base            | Hold up to 3 Adept cards.                                                                    |
+|                |             |         | Resonant        | All elemental Aspect alignments are doubled. (Fire, Air, Water, Earth)                       |
+| Temperance     | Libra       | 2       | Base            | Craft Salt for any Two Cards.                                                                |
+|                |             |         | Resonant        | Salt is a Wild Reagent for one other type. Mark the matching Cauldron with Salt.             |
+| The Star       | Aquarius    | 1       | Base            | Anytime you lose a Duel, Gambit or Opposition, draw two cards.                               |
+|                |             |         | Resonant        | Nullify an Adept or Fate card effect in play. Pay 1 Salt to refresh.                         |
+| The World      | Cancer      | 3       | Base            | Your Ward Reagents remain with you after successful Transmutations.                          |
+|                |             |         | Resonant        | This card is a Wildcard for any Crucible card. Flip to activate. Refresh for 1 Salt.         |
 
 ## CRUCIBLE CARDS
+
+A Crucible Card is one of the four stage-cards an Alchemist works through to complete the Great Work. Each reveals an Alchemical Formula — Reagents and an Alignment — once activated, and lists a Bail cost, the Salt its owner pays to Free it if Arrested in a lost Gambit.
 
 **Group Structure**
 
@@ -86,6 +94,15 @@ The 22 Major Arcana cards are divided into two sets.
 | **Group B** | (4–10)     | _Standard_     | 7 cards   | Core of Standard and Magnus Alchemist builds.                          |
 | **Group C** | (11–17)    | _Advanced_     | 7 cards   | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
 | **Group D** | (18–21)    | _Mastery_      | 4 cards   | Magnus Alchemist builds only.                                          |
+
+**Bail Costs** — the Salt an owner pays to Free an Arrested Crucible Card, printed on each card and scaled by Group:
+
+| **Group**   | **Bail** 🧂 |
+| ----------- | ----------- |
+| **Group A** | 1 Salt      |
+| **Group B** | 2 Salt      |
+| **Group C** | 2 Salt      |
+| **Group D** | 3 Salt      |
 
 ### GROUP A · Beginner · Lead Stage · 4 Cards · Arcana 0–3
 
@@ -136,12 +153,11 @@ The 22 Major Arcana cards are divided into two sets.
 
 ## MINOR ARCANA _112 Cards · Four Suits · 14 Ranks · Two Cards Per Rank/Suit_
 
-| **Card 1 — Active Effect**                                                                            | **Card 2 — Wildcard Link + Active Effect**                                                                |
-| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Carries a base Active Effect (always on while in Spread or Hand as applicable)                        | Carries a Wildcard Link to a specific Major Arcana card; may substitute for that card in all requirements |
-| Curse cards (Ranks 4, 5, 6) have negative Active Effects; their Alignment conditions negate the curse | Carries a standalone Active Effect of its own, independent of the Wildcard function                       |
+Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Your power grows from what you hold in your **Spread**: each card's Planet contributes **charge**, and three matching charges form a **Stellium** — its effect is printed on the Crucible Codex. **Adept cards** carry their own identity, keyed to a **Zodiac Sign** and unlocked through your Zodiac Die and Astral Houses.
 
-**Suit Correspondence**
+### Suit Correspondence
+
+Suit determines which Reagent a card crafts, and which Cauldron unlocks it.
 
 | **Color**    | **Suit**      | **Element** | **Reagent** | **Cauldron** | **Wild Reagent (Queens)** |
 | ------------ | ------------- | ----------- | ----------- | ------------ | ------------------------- |
@@ -150,162 +166,42 @@ The 22 Major Arcana cards are divided into two sets.
 | **■ Green**  | **Pentacles** | Earth       | Vitriol     | Green        | Vitriol                   |
 | **■ Yellow** | **Swords**    | Air         | Quicksilver | Yellow       | Quicksilver               |
 
-## Cups · Water · Aqua Regia · Blue Cauldron
+### Rank & Planet
 
-### Card 1 — Active Effect
+Every card of a given Rank carries the same Planet, across all four Suits. Court ranks each carry a Rider that activates while their Planet's Stellium is active in your Spread.
 
-| **Rank**     | **CV** | **Planet** | **Type**     | **Effect**                                                                  |
-| ------------ | ------ | ---------- | ------------ | --------------------------------------------------------------------------- |
-| **Ace**      | 1      | _Sun_      | _Entry Fee_  | Discard to build an Astral House when your Zodiac die is on a Water sign.   |
-| **2**        | 2      | _Moon_     | _Harvest_    | Astral Houses on Water signs earn double at Harvest.                        |
-| **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Cups cards.                                          |
-| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Wands** — Your Hand limit is reduced by 1 at round end.      |
-| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Wands** — Your opponent gains a Reroll in Duels against you. |
-| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Wands** — Your Opponent Chooses Your Ante Card.              |
-| **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Aqua Regia.                                 |
-| **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Aqua Regia by -1 card (minimum 1).                 |
-| **9**        | 9      | _Venus_    | _Social_     | Draw 1 Kismeta Card for each successful Trade this round.                   |
-| **10**       | 10     | _Saturn_   | _Opposition_ | This card counts as a Wild Suit in Oppositions.                             |
-| **Princess** | 11     | _Mercury_  | _Gambit_     | +1 to Dice Rolls when Defending in Gambits.                                 |
-| **Knight**   | 12     | _Mars_     | _Duel_       | +1 to Dice Rolls when Defending in Duels.                                   |
-| **Queen**    | 13     | _Moon_     | _Forge_      | Aqua Regia is Wild for Alchemical Formulas.                                 |
-| **King**     | 14     | _Saturn_   | _Craft_      | Discard to craft 1 Aqua Regia.                                              |
+| **Rank**     | **CV** | **Planet** | **Rider (while that Planet's Stellium is active)**                          |
+| ------------ | ------ | ---------- | ----------------------------------------------------------------------------- |
+| **Ace**      | 1      | ☉ Sun (Wild) | Draw 1 bonus Kismeta Card at Harvest while this card serves as Wild Charge for a Stellium |
+| **2**        | 2      | ☽ Moon     | —                                                                              |
+| **3**        | 3      | ♃ Jupiter  | —                                                                              |
+| **4**        | 4      | ♀ Venus    | —                                                                              |
+| **5**        | 5      | ☿ Mercury  | —                                                                              |
+| **6**        | 6      | ♄ Saturn   | —                                                                              |
+| **7**        | 7      | ♂ Mars     | —                                                                              |
+| **8**        | 8      | ♃ Jupiter  | —                                                                              |
+| **9**        | 9      | ♀ Venus    | —                                                                              |
+| **10**       | 10     | ♄ Saturn   | —                                                                              |
+| **Princess** | 11     | ☿ Mercury  | Your Mercury Stellium bonus also applies when defending Gambits                |
+| **Knight**   | 12     | ♂ Mars     | Your Mars Stellium bonus also applies when defending Duels                     |
+| **Queen**    | 13     | ☽ Moon     | Your Suit's Reagent becomes Wild for Alchemical Formulas                       |
+| **King**     | 14     | ♄ Saturn   | Cards of your Suit cannot be targeted in Duels (the King itself remains vulnerable) |
 
-### Card 2 — Wildcard Link + Active Effect
+### The Sun — Wild Charge
 
-| **Rank**     | **CV** | **Planet** | **Wildcard Link**  | **#** | **Active Effect**                                              |
-| ------------ | ------ | ---------- | ------------------ | ----- | -------------------------------------------------------------- |
-| **Ace**      | 1      | Sun        | —                  |       | +2 Bonus Harvest Cards when the Cosmic Age's Element is Water. |
-| **2**        | 2      | Moon       | The High Priestess | 2     | Wildcard for The High Priestess.                               |
-| **3**        | 3      | Jupiter    | Wheel of Fortune   | 10    | Wildcard for Wheel of Fortune.                                 |
-| **4**        | 4      | Venus      | The Chariot        | 7     | Wildcard for The Chariot.                                      |
-| **5**        | 5      | Mercury    | The Sun            | 19    | Wildcard for The Sun.                                          |
-| **6**        | 6      | Saturn     | The Lovers         | 6     | Wildcard for The Lovers.                                       |
-| **7**        | 7      | Mars       | The Fool           | 0     | Wildcard for The Fool.                                         |
-| **8**        | 8      | Jupiter    | Wheel of Fortune   | 10    | Wildcard for Wheel of Fortune.                                 |
-| **9**        | 9      | Venus      | The Chariot        | 7     | Wildcard for The Chariot.                                      |
-| **10**       | 10     | Saturn     | The Hanged Man     | 12    | Wildcard for The Hanged Man.                                   |
-| **Princess** | 11     | Mercury    | The Moon           | 18    | Wildcard for The Moon.                                         |
-| **Knight**   | 12     | Mars       | The Star           | 17    | Wildcard for The Star.                                         |
-| **Queen**    | 13     | Moon       | —                  |       | Increase your Hand Limit by +1 at Round end.                   |
-| **King**     | 14     | Saturn     | —                  |       | Cups are protected from Duels. This card remains vulnerable.   |
+Aces carry the Sun and count as **1 charge toward any single other Planet** — chosen freely, reassignable at any time. At most one Ace may count toward any one Stellium. While serving as Wild Charge, an Ace also earns its Rider (see table above).
 
-## Pentacles · Earth · Vitriol · Green Cauldron
+### Planet Stellium Codex
 
-### Card 1 — Active Effect
+Holding 3 charge of the same Planet in your Spread forms a Stellium. Each Planet's Stellium grants the effect below for as long as you hold it.
 
-| **Rank**     | **CV** | **Planet** | **Type**     | **Effect**                                                                             |
-| ------------ | ------ | ---------- | ------------ | -------------------------------------------------------------------------------------- |
-| **Ace**      | 1      | _Sun_      | _Entry Fee_  | Discard to build an Astral House when your Zodiac die is on an Earth sign.             |
-| **2**        | 2      | _Moon_     | _Harvest_    | Astral Houses on Earth signs earn double at Harvest.                                   |
-| **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Pentacles cards.                                                |
-| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Swords** — You must offer +2 Resources for every +1 Received in Trades. |
-| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Swords** — All Reagents cost an additional +1 Card to Craft.            |
-| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Swords** — Adept cards cost an additional +1 card to purchase.          |
-| **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Vitriol.                                               |
-| **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Vitriol by -1 card (minimum 1).                               |
-| **9**        | 9      | _Venus_    | _Social_     | Draw +2 Cards for each successful Gambit this round.                                   |
-| **10**       | 10     | _Saturn_   | _Opposition_ | This card counts as a Wild Suit in Oppositions.                                        |
-| **Princess** | 11     | _Mercury_  | _Gambit_     | +1 to Dice Rolls when Defending in Gambits.                                            |
-| **Knight**   | 12     | _Mars_     | _Duel_       | +1 to Dice Rolls when Defending in Duels.                                              |
-| **Queen**    | 13     | _Moon_     | _Forge_      | Vitriol is Wild for Alchemical Formulas.                                               |
-| **King**     | 14     | _Saturn_   | _Craft_      | Discard to craft 1 Vitriol.                                                            |
+| Planet | Cards in Deck | Stellium Effect (3 charge) |
+|---|---|---|
+| ☽ **Moon** | 16 | Your Hand limit and Spread limit are each +1 |
+| ☿ **Mercury** | 16 | +1 to your dice rolls when attacking in Gambits |
+| ♀ **Venus** | 16 | +1 to your dice rolls when defending in Duels and Gambits |
+| ♂ **Mars** | 16 | +1 to your dice rolls when attacking in Duels |
+| ♃ **Jupiter** | 16 | Craft Salt, or any one Reagent type, for 2 matching cards instead of 3 |
+| ♄ **Saturn** | 24 | Bail costs on your Arrested cards are −1 Salt (minimum 1) |
 
-### Card 2 — Wildcard Link + Active Effect
-
-| **Rank**     | **CV** | **Planet** | **Wildcard Link** | **#** | **Active Effect**                                                 |
-| ------------ | ------ | ---------- | ----------------- | ----- | ----------------------------------------------------------------- |
-| **Ace**      | 1      | Sun        | —                 |       | +2 Bonus Harvest Cards when the Cosmic Age's Element is Earth.    |
-| **2**        | 2      | Moon       | The Hierophant    | 5     | Wildcard for The Hierophant.                                      |
-| **3**        | 3      | Jupiter    | The Empress       | 3     | Wildcard for The Empress.                                         |
-| **4**        | 4      | Venus      | The Hermit        | 9     | Wildcard for The Hermit.                                          |
-| **5**        | 5      | Mercury    | The Devil         | 15    | Wildcard for The Devil.                                           |
-| **6**        | 6      | Saturn     | The Hierophant    | 5     | Wildcard for The Hierophant.                                      |
-| **7**        | 7      | Mars       | Death             | 13    | Wildcard for Death.                                               |
-| **8**        | 8      | Jupiter    | The Empress       | 3     | Wildcard for The Empress.                                         |
-| **9**        | 9      | Venus      | The Devil         | 15    | Wildcard for The Devil.                                           |
-| **10**       | 10     | Saturn     | The Hermit        | 9     | Wildcard for The Hermit.                                          |
-| **Princess** | 11     | Mercury    | Judgement         | 20    | Wildcard for Judgement.                                           |
-| **Knight**   | 12     | Mars       | The Moon          | 18    | Wildcard for The Moon.                                            |
-| **Queen**    | 13     | Moon       | —                 |       | Increase your Hand Limit by +1 at Round end.                      |
-| **King**     | 14     | Saturn     | —                 |       | Pentacles are protected from Duels. This card remains vulnerable. |
-
-## Swords · Air · Quicksilver · Yellow Cauldron
-
-### Card 1 — Active Effect
-
-| **Rank**     | **CV** | **Planet** | **Type**     | **Effect**                                                                          |
-| ------------ | ------ | ---------- | ------------ | ----------------------------------------------------------------------------------- |
-| **Ace**      | 1      | _Sun_      | _Entry Fee_  | Discard to build an Astral House when your Zodiac die is on an Air sign.            |
-| **2**        | 2      | _Moon_     | _Harvest_    | Astral Houses on Air signs earn double at Harvest.                                  |
-| **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Swords cards.                                                |
-| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Cups** — You must offer 2 Ante Cards (instead of 1) to begin a Duel. |
-| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Cups** — Pay an extra +1 Salt to start any Opposition or Gambit.     |
-| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Cups** — Duels you start are a best-of-3 dice roll.                  |
-| **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Quicksilver.                                        |
-| **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Quicksilver by -1 card (minimum 1).                        |
-| **9**        | 9      | _Venus_    | _Social_     | Draw +2 Cards for each successful Duel this round.                                  |
-| **10**       | 10     | _Saturn_   | _Opposition_ | This card counts as a Wild Suit in Oppositions.                                     |
-| **Princess** | 11     | _Mercury_  | _Gambit_     | +1 to Dice Rolls when Attacking in Gambits.                                         |
-| **Knight**   | 12     | _Mars_     | _Duel_       | +1 to Dice Rolls when Attacking in Duels.                                           |
-| **Queen**    | 13     | _Moon_     | _Forge_      | Quicksilver is Wild for Alchemical Formulas.                                        |
-| **King**     | 14     | _Saturn_   | _Craft_      | Discard to craft 1 Quicksilver.                                                     |
-
-### Card 2 — Wildcard Link + Active Effect
-
-| **Rank**     | **CV** | **Planet** | **Wildcard Link**  | **#** | **Active Effect**                                              |
-| ------------ | ------ | ---------- | ------------------ | ----- | -------------------------------------------------------------- |
-| **Ace**      | 1      | Sun        | —                  |       | +2 Bonus Harvest Cards when the Cosmic Age's Element is Air.   |
-| **2**        | 2      | Moon       | The High Priestess | 2     | Wildcard for The High Priestess.                               |
-| **3**        | 3      | Jupiter    | Justice            | 11    | Wildcard for Justice.                                          |
-| **4**        | 4      | Venus      | Justice            | 11    | Wildcard for Justice.                                          |
-| **5**        | 5      | Mercury    | The World          | 21    | Wildcard for The World.                                        |
-| **6**        | 6      | Saturn     | Strength           | 8     | Wildcard for Strength.                                         |
-| **7**        | 7      | Mars       | Strength           | 8     | Wildcard for Strength.                                         |
-| **8**        | 8      | Jupiter    | Death              | 13    | Wildcard for Death.                                            |
-| **9**        | 9      | Venus      | The Tower          | 16    | Wildcard for The Tower.                                        |
-| **10**       | 10     | Saturn     | The Tower          | 16    | Wildcard for The Tower.                                        |
-| **Princess** | 11     | Mercury    | The Sun            | 19    | Wildcard for The Sun.                                          |
-| **Knight**   | 12     | Mars       | The Star           | 17    | Wildcard for The Star.                                         |
-| **Queen**    | 13     | Moon       | —                  |       | Increase your Spread Limit by +1 at Round end.                 |
-| **King**     | 14     | Saturn     | —                  |       | Swords are protected from Duels. This card remains vulnerable. |
-
-## Wands · Fire · Sulphur · Red Cauldron
-
-### Card 1 — Active Effect
-
-| **Rank**     | **CV** | **Planet** | **Type**     | **Effect**                                                                                       |
-| ------------ | ------ | ---------- | ------------ | ------------------------------------------------------------------------------------------------ |
-| **Ace**      | 1      | _Sun_      | _Entry Fee_  | Discard to build an Astral House when your Zodiac die is on a Fire sign.                         |
-| **2**        | 2      | _Moon_     | _Harvest_    | Astral Houses on Fire signs earn double at Harvest.                                              |
-| **3**        | 3      | _Jupiter_  | _Build_      | Craft Salt for any two Wands cards.                                                              |
-| **4** ⚠      | 4      | _Venus_    | _Reversed_   | **Nullify 5 of Pentacles** — Your opponent draws 2 Kismeta Cards if they win a Duel against you. |
-| **5** ⚠      | 5      | _Mercury_  | _Reversed_   | **Nullify 6 of Pentacles** — -1 to Dice rolls when you defend in Duels.                          |
-| **6** ⚠      | 6      | _Saturn_   | _Reversed_   | **Nullify 4 of Pentacles** — -1 to dice rolls when you attack in Duels.                          |
-| **7**        | 7      | _Mars_     | _Forge_      | When you Fire the Stone, gain 1 Sulphur.                                                         |
-| **8**        | 8      | _Jupiter_  | _Craft_      | Reduce the cost to craft Sulphur by -1 card (minimum 1).                                         |
-| **9**        | 9      | _Venus_    | _Social_     | Draw 1 Kismeta Card for each successful Opposition this round.                                   |
-| **10**       | 10     | _Saturn_   | _Opposition_ | This card counts as a Wild Suit in Oppositions.                                                  |
-| **Princess** | 11     | _Mercury_  | _Gambit_     | +1 to Dice Rolls when Attacking in a Gambit.                                                     |
-| **Knight**   | 12     | _Mars_     | _Duel_       | +1 to Dice Rolls when Attacking in a Duel.                                                       |
-| **Queen**    | 13     | _Moon_     | _Forge_      | Sulphur is Wild for Alchemical Formulas.                                                         |
-| **King**     | 14     | _Saturn_   | _Craft_      | Discard to craft 1 Sulphur.                                                                      |
-
-### Card 2 — Wildcard Link + Active Effect
-
-| **Rank**     | **CV** | **Planet** | **Wildcard Link** | **#** | **Active Effect**                                             |
-| ------------ | ------ | ---------- | ----------------- | ----- | ------------------------------------------------------------- |
-| **Ace**      | 1      | Sun        | —                 |       | +2 Bonus Harvest Cards when the Cosmic Age's Element is Fire. |
-| **2**        | 2      | Moon       | The Lovers        | 6     | Wildcard for The Lovers.                                      |
-| **3**        | 3      | Jupiter    | The Magician      | 1     | Wildcard for The Magician.                                    |
-| **4**        | 4      | Venus      | The Hanged Man    | 12    | Wildcard for The Hanged Man.                                  |
-| **5**        | 5      | Mercury    | Temperance        | 14    | Wildcard for Temperance.                                      |
-| **6**        | 6      | Saturn     | The Emperor       | 4     | Wildcard for The Emperor.                                     |
-| **7**        | 7      | Mars       | The Fool          | 0     | Wildcard for The Fool.                                        |
-| **8**        | 8      | Jupiter    | The Magician      | 1     | Wildcard for The Magician.                                    |
-| **9**        | 9      | Venus      | Temperance        | 14    | Wildcard for Temperance.                                      |
-| **10**       | 10     | Saturn     | The Emperor       | 4     | Wildcard for The Emperor.                                     |
-| **Princess** | 11     | Mercury    | Judgement         | 20    | Wildcard for Judgement.                                       |
-| **Knight**   | 12     | Mars       | The World         | 21    | Wildcard for The World.                                       |
-| **Queen**    | 13     | Moon       | —                 |       | Increase your Spread Limit by +1 at Round end.                |
-| **King**     | 14     | Saturn     | —                 |       | Wands are protected from Duels. This card remains vulnerable. |
+A Cosmic Age's ruling Planet lowers that Planet's threshold to 2 charge for the round. See the _Cosmic Ages & Effects_ table in the Game Guide.

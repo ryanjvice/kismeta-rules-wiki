@@ -4,6 +4,8 @@ description: "Groups A–D, reagent costs, and alignment requirements."
 ---
 
 
+A Crucible Card is one of the four stage-cards an Alchemist works through to complete the Great Work. Each reveals an Alchemical Formula — Reagents and an Alignment — once activated, and lists a Bail cost, the Salt its owner pays to Free it if Arrested in a lost Gambit.
+
 **Group Structure**
 
 | **Group**   | **Arcana** | **Difficulty** | **Cards** | **Game Modes**                                                         |
@@ -12,6 +14,15 @@ description: "Groups A–D, reagent costs, and alignment requirements."
 | **Group B** | (4–10)     | _Standard_     | 7 cards   | Core of Standard and Magnus Alchemist builds.                          |
 | **Group C** | (11–17)    | _Advanced_     | 7 cards   | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
 | **Group D** | (18–21)    | _Mastery_      | 4 cards   | Magnus Alchemist builds only.                                          |
+
+**Bail Costs** — the Salt an owner pays to Free an Arrested Crucible Card, printed on each card and scaled by Group:
+
+| **Group**   | **Bail** 🧂 |
+| ----------- | ----------- |
+| **Group A** | 1 Salt      |
+| **Group B** | 2 Salt      |
+| **Group C** | 2 Salt      |
+| **Group D** | 3 Salt      |
 
 ### GROUP A · Beginner · Lead Stage · 4 Cards · Arcana 0–3
 

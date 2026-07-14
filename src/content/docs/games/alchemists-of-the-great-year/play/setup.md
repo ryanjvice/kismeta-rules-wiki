@@ -75,6 +75,8 @@ Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppo
 
 ## IV. Build the Crucible Deck {#iv-build-the-crucible-deck}
 
+Each Crucible Card is one of the four stage-cards you'll work through this game to complete the Great Work, revealing an Alchemical Formula once activated.
+
 - **Card Groups:** Crucible Cards are organized into four Card Groups: A, B, C, and D. Each card has a small letter in the lower left corner of the face side indicating its Card Group.
 - Sort the Crucible Cards into Groups A-D. Shuffle each group separately.
 - Choose the Game Mode you want to play (I. Curated Builds, or II. Random Build). Follow the Table below to determine the number of cards needed from each Card Group per number of players in the game.
