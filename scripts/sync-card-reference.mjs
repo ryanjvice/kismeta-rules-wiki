@@ -34,7 +34,7 @@ const SECTION_META = {
   'MINOR ARCANA': {
     slug: 'minor-arcana',
     title: 'Minor Arcana',
-    description: 'Planet charge, Stelliums, Wild Charge, Court/Ace Riders, and rank reference.',
+    description: 'Active Effects, Wildcard Links, curses, and rank reference.',
   },
 };
 

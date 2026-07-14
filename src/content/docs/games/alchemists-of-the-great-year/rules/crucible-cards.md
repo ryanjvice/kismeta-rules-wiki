@@ -13,15 +13,6 @@ description: "Groups A–D, reagent costs, and alignment requirements."
 | **Group C** | (11–17)    | _Advanced_     | 7 cards   | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
 | **Group D** | (18–21)    | _Mastery_      | 4 cards   | Magnus Alchemist builds only.                                          |
 
-**Bail Costs** — the Salt an owner pays to Free an Arrested Crucible Card, printed on each card and scaled by Group:
-
-| **Group**   | **Bail** 🧂 |
-| ----------- | ----------- |
-| **Group A** | 1 Salt      |
-| **Group B** | 2 Salt      |
-| **Group C** | 2 Salt      |
-| **Group D** | 3 Salt      |
-
 ### GROUP A · Beginner · Lead Stage · 4 Cards · Arcana 0–3
 
 | **Group**                                        | **Card**           | **SP** | **AR** | **V** | **Q** | **S** | **Tot.** | **Alignment Requirement**               |

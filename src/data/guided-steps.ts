@@ -46,7 +46,7 @@ const GUIDED_STEPS: GuidedStep[] = [
       "134 Kismeta Cards (blue) and 22 Crucible Cards (red)",
       "4 Crucible Codex cards (one per player)",
       "1 Cosmic Age Die (black) and 4 Zodiac Dice (player colors)",
-      "Per player: Philosopher's Stone, Meeple, 3 Astral House tokens, 4 Coals",
+      "Per player: Philosopher's Stone, Meeple, 4 Astral House tokens, 4 Coals",
       "Reagent tokens (Sulphur, Quicksilver, Aqua Regia, Vitriol, Salt)",
       "1 Agekeeper's Key",
     ],
@@ -79,7 +79,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     checklist: [
       "1 Crucible Codex (dual-sided)",
       "4 Coals",
-      "3 Astral House tokens (matching your color)",
+      "4 Astral House tokens (matching your color)",
       "1 Meeple (matching your color)",
       "1 Philosopher's Stone on START in your Mantle Ring section",
       "1 Zodiac Die matching your color",
@@ -100,7 +100,7 @@ const GUIDED_STEPS: GuidedStep[] = [
       standard:
         "<p><strong>Standard Game</strong> — full rules once you know the flow.</p><ul><li>Play as written in the guide; ignore ⚙️ Game Mode Modifiers.</li><li>Use the <strong>Standard</strong> Crucible deck build.</li></ul>",
       magnus:
-        "<p><strong>Magnus Alchemist</strong> — mastery mode for returning players.</p><ul><li>All Standard rules apply; use the <strong>Magnus</strong> deck build.</li><li>Player Alignments affect Trades, Duels, Gambits, and Oppositions.</li><li>Misaligned trades are 2:1 in favor of the non-initiating player; Misaligned challengers gain +1 on Duels, Gambits, and Oppositions.</li></ul>",
+        "<p><strong>Magnus Alchemist</strong> — mastery mode for returning players.</p><ul><li>All Standard rules apply; use the <strong>Magnus</strong> deck build.</li><li>Player Alignments affect Trades, Duels, Gambits, and Oppositions.</li><li>Misaligned trades are 2:1 in favor of the non-initiating player.</li><li>Misaligned challengers gain +1 to dice rolls in Duels and Gambits, or +1 Alignment Points in Oppositions.</li></ul>",
     },
     learnMorePath: "play/setup",
     learnMoreHash: "iii-select-a-game-mode",
@@ -209,7 +209,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 4,
     phaseTotal: 5,
-    body: "<p>Your <strong>Tableau</strong> is your full personal inventory of Kismeta Cards, arranged across three zones. <strong>Spread</strong> — place Minor Arcana face-up in front of you. These cards contribute Planet charge toward Stelliums, count toward Alignment, and can be used to Light Cauldrons, Fire your Stone, and craft Reagents — but they are visible to rivals and can be lost in Duels. <strong>Hand</strong> — keep remaining Minor Arcana hidden. Hand cards are safe from Duels and can contribute to Reagent Crafting and Oppositions, but they contribute no charge and cannot satisfy Crucible Codex card sets or Alchemical Formulas. <strong>Arcanum</strong> — any Major Arcana go here. Fate Cards are always placed face-up in the Arcanum immediately when drawn, even mid-Harvest. Adept Cards must be purchased when drawn (or discarded); you may hold up to two at a time (three with The Hermit). See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept cards</a> and <a href='/games/alchemists-of-the-great-year/rules/minor-arcana/'>Stelliums</a>.</p><p>📌 <strong>Your Spread is your engine</strong> — cards here build Stellium charge, drive Alignment, Crucible activation, and Crafting. Your Hand is your hidden reserve, safe from theft but invisible to rivals.</p>",
+    body: "<p>Your <strong>Tableau</strong> is your full personal inventory of Kismeta Cards, arranged across three zones.</p><p><strong>Spread</strong> — place Minor Arcana face-up in front of you. Spread cards carry active effects: they count toward Alignment and can Light Cauldrons, Fire your Stone, and craft Reagents — but they are visible to rivals and can be lost in Duels.</p><p><strong>Hand</strong> — keep remaining Minor Arcana hidden. Hand cards stay inactive; they can contribute to Reagent Crafting and Oppositions, but cannot be traded, wagered, or targeted in a Duel.</p><p><strong>Arcanum</strong> — any Major Arcana go here. Fate Cards are placed face-up immediately when drawn, even mid-Harvest. Adept Cards must be purchased when drawn (or discarded); you may hold up to two at a time (three with The Hermit). See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept cards</a> and <a href='/games/alchemists-of-the-great-year/rules/minor-arcana/'>Minor Arcana</a>.</p><p>📌 <strong>Your Spread is your engine</strong> — cards here drive Alignment, Crucible activation, and Crafting. Your Hand is your hidden reserve, safe from theft but invisible to rivals.</p>",
     checklist: [
       "Build your Tableau: Spread, Hand, and Arcanum zones",
       "Consider your goals for this round",
@@ -244,7 +244,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "autumn",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to light Cauldrons, contest rivals for Alignment supremacy, and advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p><p>Reagent crafting is also available freely on your turn — same rules as Summer. Craft before you Fire if you need a last Reagent.</p><p>📌 <em>Tip: When you Fire, set 1–2 Reagents as Ward Reagents beside your Stone — an unprotected Stone in the Forge is a free target for Opposition.</em></p>",
+    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to light Cauldrons, contest rivals for Alignment supremacy, and advance your Philosopher's Stone across the game board — weaving between the safety of the Mantle Ring and the fiery Forge, where your Stone is vulnerable to attack. Each of your four Crucible Cards holds an Alchemical Formula (Reagents and a card set) that must be satisfied to Fire your Stone. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p><p>Reagent crafting is also available freely on your turn — same rules as Summer. Craft before you Fire if you need a last Reagent.</p><p>📌 <em>Tip: When you Fire, set 1–2 Reagents as Ward Reagents beside your Stone — an unprotected Stone in the Forge is a free target for Opposition.</em></p>",
     embed: "autumn-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-3-autumn",
@@ -337,7 +337,7 @@ export const GUIDED_CONTENT_STEP_COUNT = GUIDED_STEPS.length - 1;
 
 export const GAME_MODE_STORAGE_KEY = "kismeta-game-modes";
 export const GUIDED_PROGRESS_KEY = "kismeta-guided-progress";
-export const GUIDED_PROGRESS_VERSION = 5;
+export const GUIDED_PROGRESS_VERSION = 7;
 
 export function gameModeToStorage(mode: GameMode): {
   quickplay: boolean;

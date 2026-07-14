@@ -21,6 +21,7 @@
             "learnMoreHash": "-build-astral-house",
             "gameModeNote": {
               "quickplay": "Quickplay: 1 matching card.",
+              "standard": "Standard: 2 Planet-matching cards.",
               "magnus": null
             }
           },
@@ -52,7 +53,7 @@
             "id": "duel",
             "label": "🤺 Duel",
             "kind": "optional",
-            "body": "Name your opponent and a specific card in their Spread; both roll Zodiac Dice — higher roll wins. Challenger wins: steal the targeted card. Limit one Duel per rival per round, win or lose.",
+            "body": "Name your opponent and a specific card in their Spread; pay an Ante Card from your Spread as the entry fee. Both roll Zodiac Dice — higher roll wins. Challenger wins: steal the targeted card. Challenger loses: your Ante Card goes to the Common Deck. Limit one Duel per rival per round, win or lose.",
             "learnMoreHash": "-duel",
             "gameModeNote": {
               "magnus": "If Misaligned with your target, add +1 to your dice roll."
@@ -62,7 +63,7 @@
             "id": "gambit",
             "label": "🎲 Gambit",
             "kind": "optional",
-            "body": "Target a rival's Active Crucible Card or Adept card and stake one of your own of the same type; both roll Zodiac Dice. Challenger wins: the target is Arrested. Challenger loses: your stake is Arrested — pay its printed Bail in Salt during a future Summer turn to Free it.",
+            "body": "Target a rival's Active Crucible Card or Adept card and stake one of your own of the same type; pay any Ward entry fee on the target; both roll Zodiac Dice. Challenger wins: the two cards swap. Challenger loses: your stake is Arrested — pay 1 Salt during your Summer turn to free it. Cannot re-Gambit the same Defender this round.",
             "learnMoreHash": "-gambit",
             "gameModeNote": {
               "magnus": "If Misaligned with the Defender at declaration, add +1 to your dice roll."

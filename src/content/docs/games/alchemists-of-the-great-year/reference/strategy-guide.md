@@ -25,15 +25,15 @@ The separation of card utility between your **Spread** and your **Hand** creates
 
 ### The Spread (The Visible Engine)
 
-Cards placed in your open Spread build Planet charge toward Stelliums, count toward Harvest Alignments, and satisfy the poker-style "Card Sets" needed to activate your Crucible cards. However, everything in your Spread is fully visible and completely vulnerable to being stolen by opponents via Summer Duels — stealing a key Planet card or Ace can break a Stellium outright.
+Cards placed in your open Spread drive active effects, generate extra cards during the Harvest, and satisfy the poker-style "Card Sets" needed to activate your Crucible cards. However, everything in your Spread is fully visible and completely vulnerable to being stolen by opponents via Summer Duels.
 
 ### The Hand (The Hidden Reserve)
 
-Cards in your Hand are safe from Duels and keep your long-term strategies secret. You are incentivized to craft Reagents directly from your Hand so you don't break up the Planet charge and Stelliums sitting out in your Spread.
+Cards in your Hand are safe from Duels and keep your long-term strategies secret. You are incentivized to craft Reagents directly from your Hand so you don't break up the high-value sets or alignments sitting out in your Spread.
 
 ### The Card Lock Constraint
 
-Because cards are frozen between these two zones from Spring until Winter, players must make high-stakes commitments during the Spring "Commune With Your Tableau" phase. Over-committing to your Spread leaves you open to theft and Stellium-breaking Duels; under-committing starves your engine.
+Because cards are frozen between these two zones from Spring until Winter, players must make high-stakes commitments during the Spring "Commune With Your Tableau" phase. Over-committing to your Spread leaves you open to theft; under-committing starves your active engine.
 
 ## 3. The Cosmic Age System
 
@@ -55,7 +55,7 @@ Moving your Philosopher's Stone into a "Forge" position means you are actively f
 
 ### Economic War Chests (Ward Reagents)
 
-To mitigate risk, players can place crafted Reagents beside their Forging Stone as "Wards". These act as aggressive tollbooths—opponents _can_ still declare an Opposition to stop your progress, but they must pay a steep entry fee equal to your Ward to even attempt it. Deciding whether to utilize your hard-earned Reagents to advance your own stone or to pool them into defense mechanisms introduces deep psychological and economic tension.
+To mitigate risk, players can place crafted Reagents onto their active cards or their forging Stone as "Wards". These act as aggressive tollbooths—opponents _can_ still challenge you to stop your progress, but they must pay a steep entry fee equal to your Ward to even attempt it. Deciding whether to utilize your hard-earned Reagents to advance your own stone or to pool them into defense mechanisms introduces deep psychological and economic tension.
 
 ### Catch-Up Mechanics (Besieged Bonus & Fates)
 
@@ -71,7 +71,7 @@ Curated to teach basic card sets and resource conversion, bypassing complex caul
 
 ### Standard Game (Medium-High Depth)
 
-The full cognitive load of the game—balancing card locks, building houses, managing cauldrons, warding your Stone, and wading through the Forge.
+The full cognitive load of the game—balancing card locks, building houses, managing cauldrons, warding cards, and wading through the Forge.
 
 ### Magnus Alchemist Mode (Expert Depth)
 

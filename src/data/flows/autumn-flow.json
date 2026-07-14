@@ -68,8 +68,11 @@
 							"all"
 						],
 						"condition": "You may challenge a rival Forging Stone, or defend if you are Forging",
-						"body": "Alignment contest — declare Opposition against an eligible Forging Stone. Pay the Defender's Ward Reagent entry fee. Play a set of up to 5 cards (Arcanum, Hand, and Spread) and score them against the Cosmic Age's Aspects, along with your Zodiac Die and Astral Houses — same scoring as the Spring Harvest. The Defender must beat your score; repeat in rounds until a winner is determined. Hand and Spread cards are turned over after each round and cannot be reused. Defender keeps the entry fee on a win; Defender's Stone moves to Stasis on a Challenger win.",
-						"learnMoreHash": "2-opposition"
+						"body": "Alignment contest — declare Opposition against an eligible Forging Stone. Pay the Defender's Ward Reagent entry fee. Play a set of up to 5 cards (Arcanum, Hand, and Spread) and score them against the Cosmic Age's Aspects, along with your Zodiac Die and Astral Houses — same scoring as the Spring Harvest. The Defender must beat your score; repeat in rounds until a winner is determined. Hand and Spread cards are turned over after each round and cannot be reused. Defender keeps the entry fee on a win; Defender's Stone moves to Stasis on a Challenger win. <strong>Important:</strong> A Stone Fired into the Forge this Autumn cannot be targeted by Opposition this round — only Stones already Forging at the start of Autumn are eligible.",
+						"learnMoreHash": "2-opposition",
+						"gameModeNote": {
+							"magnus": "If Misaligned with the Defender at declaration, add +1 to your final Alignment Points total."
+						}
 					}
 				]
 			},
@@ -131,7 +134,7 @@
 							"all"
 						],
 						"condition": "Stone in a Mantle Ring (0, 2, 4, or 6) — not Forging or in Stasis",
-						"body": "Satisfy an Active Crucible Card's Alchemical Formula (Alignment cards + Reagents). Discard the cards and Reagents, turn the Crucible Card sideways, move your Stone into the Forge. Optionally place Ward Reagents on the 🛡️ symbol to raise the entry fee for Oppositions.",
+						"body": "Satisfy an Active Crucible Card's Alchemical Formula (Alignment cards + Reagents). Discard the cards and Reagents, turn the Crucible Card sideways, move your Stone into the Forge. Optionally place Ward Reagents on the 🛡️ symbol to raise the entry fee for Oppositions. <strong>Note:</strong> A Stone Fired this Autumn cannot be targeted by Opposition until next round.",
 						"learnMoreHash": "3-crucible-actions"
 					}
 				]
