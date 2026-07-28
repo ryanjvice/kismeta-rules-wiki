@@ -63,6 +63,7 @@ export default defineConfig({
       components: {
         Header: "./src/components/Header.astro",
         SiteTitle: "./src/components/SiteTitle.astro",
+        ThemeProvider: "./src/components/ThemeProvider.astro",
         ThemeSelect: "./src/components/AccessibilityMenu.astro",
         PageSidebar: "./src/components/PageSidebar.astro",
         Hero: "./src/components/Hero.astro",

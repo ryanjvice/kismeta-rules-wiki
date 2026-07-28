@@ -5,6 +5,8 @@
  *  - Disclosure panel open/close (with Escape + click-outside)
  *  - Theme selection (dark / light / auto), synced with Starlight's
  *    starlight-theme localStorage key and data-theme on <html>
+ *    Default when unset: dark (not OS preference). Explicit "auto"
+ *    still follows prefers-color-scheme.
  *  - Font-size selection (default / lg / xl), applied via
  *    data-kismeta-font-size on <html>
  *  - aria-pressed state on all option buttons
@@ -31,9 +33,12 @@ function parseFontSize(value: unknown): FontSize {
 
 function loadTheme(): Theme {
 	try {
-		return parseTheme(localStorage.getItem(STORAGE_THEME));
+		const raw = localStorage.getItem(STORAGE_THEME);
+		// null = never chosen → site default is dark (not OS preference)
+		if (raw === null) return 'dark';
+		return parseTheme(raw);
 	} catch {
-		return 'auto';
+		return 'dark';
 	}
 }
 
@@ -105,8 +110,18 @@ function initA11yMenu(): void {
 	const panel = menu.querySelector<HTMLElement>('[data-a11y-panel]')!;
 
 	// Sync button states to stored preferences on init
-	syncThemeButtons(loadTheme());
+	const theme = loadTheme();
+	syncThemeButtons(theme);
 	syncFontSizeButtons(loadFontSize());
+	// Persist the site default so first-time visitors keep dark across sessions
+	// instead of falling through to OS preference on later navigations.
+	if (theme === 'dark') {
+		try {
+			if (localStorage.getItem(STORAGE_THEME) === null) {
+				localStorage.setItem(STORAGE_THEME, 'dark');
+			}
+		} catch { /* ignore */ }
+	}
 
 	const openPanel = (): void => {
 		panel.hidden = false;

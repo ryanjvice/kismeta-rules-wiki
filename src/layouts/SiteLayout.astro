@@ -17,7 +17,7 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,17 +32,18 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Amarante&family=Germania+One&display=swap"
 		/>
-		{/* Inline FOUC-prevention script: sets data-theme before first paint,
-		    mirroring Starlight's own approach. Reads the same localStorage key
-		    so theme persists across marketing ↔ docs navigation. */}
+		{/* Inline FOUC-prevention script: sets data-theme before first paint.
+		    Reads the same starlight-theme key as docs pages. Missing key → dark
+		    (site default). Empty string / "auto" → follow OS preference. */}
 		<script is:inline>
 			(function () {
-				var stored = '';
-				try { stored = localStorage.getItem('starlight-theme') || ''; } catch (_) {}
-				var theme = stored === 'light' ? 'light'
-				           : stored === 'dark'  ? 'dark'
-				           : window.matchMedia('(prefers-color-scheme: light)').matches ? 'light'
-				           : 'dark';
+				var stored = null;
+				try { stored = localStorage.getItem('starlight-theme'); } catch (_) {}
+				var theme = stored === 'light' || stored === 'dark'
+					? stored
+					: stored === '' || stored === 'auto'
+						? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+						: 'dark';
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
