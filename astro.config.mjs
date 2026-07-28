@@ -60,6 +60,18 @@ export default defineConfig({
       },
       favicon: "/favicon.svg",
       customCss: ["./src/styles/custom.css"],
+      social: [
+        {
+          icon: "x.com",
+          label: "X",
+          href: "https://x.com/kismeta_game",
+        },
+        {
+          icon: "discord",
+          label: "Discord",
+          href: "https://discord.gg/qEe2UYSnt",
+        },
+      ],
       components: {
         Header: "./src/components/Header.astro",
         SiteTitle: "./src/components/SiteTitle.astro",

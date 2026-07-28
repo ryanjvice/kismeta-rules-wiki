@@ -3037,8 +3037,12 @@ site-search button[data-open-modal]:hover {
   animation: site-enter-fade-up 1s ease 0.55s both;
 }
 
-.site-enter__panel--playtest {
+.site-enter__panel--discord {
   animation-delay: 0.7s;
+}
+
+.site-enter__panel--mailing {
+  animation-delay: 0.85s;
 }
 
 :root[data-theme="light"] .site-enter__panel {

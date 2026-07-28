@@ -8,6 +8,7 @@ import { siteT } from '../utils/site-i18n';
 
 const title = siteT('site.enter.pageTitle');
 const description = siteT('site.enter.metaDescription');
+const discordUrl = 'https://discord.gg/qEe2UYSnt';
 ---
 
 <SiteLayout {title} {description} showChartWheel hideChrome>
@@ -24,14 +25,6 @@ const description = siteT('site.enter.metaDescription');
 		<p class="site-enter__tagline">{siteT('site.enter.tagline')}</p>
 		<a class="site-enter__cta" href="/home/">{siteT('site.enter.cta')}</a>
 
-		<aside class="site-enter__panel" aria-labelledby="mailing-heading">
-			<h2 id="mailing-heading" class="site-enter__panel-heading">
-				{siteT('site.enter.mailingHeading')}
-			</h2>
-			<p class="site-enter__panel-summary">{siteT('site.enter.mailingSummary')}</p>
-			<MailingListSignup />
-		</aside>
-
 		<aside class="site-enter__panel site-enter__panel--playtest" aria-labelledby="playtest-heading">
 			<h2 id="playtest-heading" class="site-enter__panel-heading">
 				{siteT('site.enter.playtestHeading')}
@@ -40,6 +33,29 @@ const description = siteT('site.enter.metaDescription');
 			<a class="site-enter__panel-cta" href={agyPlaytestConfig.path}>
 				{siteT('site.enter.playtestCta')}
 			</a>
+		</aside>
+
+		<aside class="site-enter__panel site-enter__panel--discord" aria-labelledby="discord-heading">
+			<h2 id="discord-heading" class="site-enter__panel-heading">
+				{siteT('site.enter.discordHeading')}
+			</h2>
+			<p class="site-enter__panel-summary">{siteT('site.enter.discordSummary')}</p>
+			<a
+				class="site-enter__panel-cta"
+				href={discordUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{siteT('site.enter.discordCta')}
+			</a>
+		</aside>
+
+		<aside class="site-enter__panel site-enter__panel--mailing" aria-labelledby="mailing-heading">
+			<h2 id="mailing-heading" class="site-enter__panel-heading">
+				{siteT('site.enter.mailingHeading')}
+			</h2>
+			<p class="site-enter__panel-summary">{siteT('site.enter.mailingSummary')}</p>
+			<MailingListSignup />
 		</aside>
 	</section>
 </SiteLayout>

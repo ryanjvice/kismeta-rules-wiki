@@ -1,11 +1,9 @@
 ﻿---
 import { siteT } from '../utils/site-i18n';
 
-/** Replace href values when real social URLs are available. */
 const socialLinks = [
-	{ id: 'instagram', href: '#', labelKey: 'site.social.instagram' as const },
-	{ id: 'facebook', href: '#', labelKey: 'site.social.facebook' as const },
-	{ id: 'youtube', href: '#', labelKey: 'site.social.youtube' as const },
+	{ id: 'x', href: 'https://x.com/kismeta_game', labelKey: 'site.social.x' as const },
+	{ id: 'discord', href: 'https://discord.gg/qEe2UYSnt', labelKey: 'site.social.discord' as const },
 ];
 ---
 
@@ -15,7 +13,7 @@ const socialLinks = [
 			{
 				socialLinks.map(({ id, href, labelKey }) => (
 					<li>
-						<a href={href} data-social={id}>
+						<a href={href} data-social={id} target="_blank" rel="noopener noreferrer">
 							{siteT(labelKey)}
 						</a>
 					</li>
