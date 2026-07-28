@@ -9,9 +9,10 @@ interface Props {
 	description?: string;
 	gameSlug?: string;
 	showChartWheel?: boolean;
+	hideChrome?: boolean;
 }
 
-const { title, description = '', gameSlug, showChartWheel = false } = Astro.props;
+const { title, description = '', gameSlug, showChartWheel = false, hideChrome = false } = Astro.props;
 const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 ---
 
@@ -46,7 +47,14 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 			})();
 		</script>
 	</head>
-	<body class:list={['site-layout', { 'site-layout--chart-wheel': showChartWheel }]} data-game={gameSlug}>
+	<body
+		class:list={[
+			'site-layout',
+			{ 'site-layout--chart-wheel': showChartWheel },
+			{ 'site-layout--enter': hideChrome },
+		]}
+		data-game={gameSlug}
+	>
 		<a class="site-layout__skip" href="#main-content">Skip to content</a>
 		{showChartWheel && (
 			<div class="site-chart-wheel" aria-hidden="true">
@@ -61,11 +69,11 @@ const pageTitle = title.includes('Kismeta') ? title : `${title} | Kismeta`;
 				/>
 			</div>
 		)}
-		<SiteHeader />
+		{!hideChrome && <SiteHeader />}
 		<main id="main-content" class="site-layout__main">
 			<slot />
 		</main>
-		<SiteFooter />
+		{!hideChrome && <SiteFooter />}
 		<script>
 			import '../scripts/accessibility';
 		</script>

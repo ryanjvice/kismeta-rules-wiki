@@ -1,45 +1,45 @@
 ---
 import { Image } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
-import GameCard from '../components/GameCard.astro';
-import { games } from '../data/games';
+import MailingListSignup from '../components/MailingListSignup.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import logo from '../assets/logo.svg';
-import agyThumb from '../assets/games/agy/kismeta_AGY_gameBoard.jpg';
-import tvaThumb from '../assets/games/tva/Kismeta_Veil_gameBoard_final.png';
+import { agyPlaytestConfig } from '../data/playtest';
 import { siteT } from '../utils/site-i18n';
 
-const thumbMap: Record<string, ImageMetadata> = {
-	'alchemists-of-the-great-year': agyThumb,
-	'the-veiled-ascent': tvaThumb,
-};
-
-
-const title = siteT('site.home.pageTitle');
-const description = siteT('site.home.metaDescription');
-const welcomeHeadline = siteT('site.home.welcomeHeadline');
-const welcomeTagline = siteT('site.home.welcomeTagline');
+const title = siteT('site.enter.pageTitle');
+const description = siteT('site.enter.metaDescription');
 ---
 
-<SiteLayout {title} {description} showChartWheel>
-	<section class="site-hero" aria-labelledby="franchise-hero-title">
-		<Image class="site-hero__logo" src={logo} alt={siteT('site.brandAlt')} width={320} height={128} loading="eager" />
-		<h1 id="franchise-hero-title" class="site-hero__title">{welcomeHeadline}</h1>
-		<p class="site-hero__tagline">{welcomeTagline}</p>
-	</section>
+<SiteLayout {title} {description} showChartWheel hideChrome>
+	<section class="site-enter" aria-labelledby="enter-title">
+		<Image
+			class="site-enter__logo"
+			src={logo}
+			alt=""
+			width={400}
+			height={160}
+			loading="eager"
+		/>
+		<h1 id="enter-title" class="sr-only">{siteT('site.enter.title')}</h1>
+		<p class="site-enter__tagline">{siteT('site.enter.tagline')}</p>
+		<a class="site-enter__cta" href="/home/">{siteT('site.enter.cta')}</a>
 
-	<section class="site-section" id="games" aria-labelledby="games-heading">
-		<h2 id="games-heading" class="site-section__heading">{siteT('site.home.gamesHeading')}</h2>
-		<div class="site-games-grid">
-			{games.map((game) => <GameCard {game} thumbImage={thumbMap[game.slug]} />)}
-		</div>
-	</section>
+		<aside class="site-enter__panel" aria-labelledby="mailing-heading">
+			<h2 id="mailing-heading" class="site-enter__panel-heading">
+				{siteT('site.enter.mailingHeading')}
+			</h2>
+			<p class="site-enter__panel-summary">{siteT('site.enter.mailingSummary')}</p>
+			<MailingListSignup />
+		</aside>
 
-	<section class="site-section" id="merch" aria-labelledby="merch-heading">
-		<h2 id="merch-heading" class="site-section__heading">{siteT('site.home.merchHeading')}</h2>
-		<div class="site-merch-teaser">
-			<p>{siteT('site.home.merchSummary')}</p>
-			<a href="/shop/">{siteT('site.home.merchCta')}</a>
-		</div>
+		<aside class="site-enter__panel site-enter__panel--playtest" aria-labelledby="playtest-heading">
+			<h2 id="playtest-heading" class="site-enter__panel-heading">
+				{siteT('site.enter.playtestHeading')}
+			</h2>
+			<p class="site-enter__panel-summary">{siteT('site.enter.playtestSummary')}</p>
+			<a class="site-enter__panel-cta" href={agyPlaytestConfig.path}>
+				{siteT('site.enter.playtestCta')}
+			</a>
+		</aside>
 	</section>
 </SiteLayout>

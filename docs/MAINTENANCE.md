@@ -54,8 +54,14 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ### Franchise hub & marketing pages
 
-- **Franchise homepage** (`/`)  
-  `src/pages/index.astro` · copy: `site.home.*` in `src/content/i18n/en.json` — hero uses `site.home.welcomeHeadline`, `site.home.welcomeTagline`, and `site.home.metaDescription`
+- **Enter gate** (`/`)  
+  `src/pages/index.astro` · layout: `SiteLayout` with `hideChrome` · copy: `site.enter.*` in `src/content/i18n/en.json` · mailing list: `MailingListSignup.astro` · form action: `src/data/mailing-list.ts` · playtest CTA: `/games/alchemists-of-the-great-year/playtest/`
+
+- **AGY playtest** (`/games/alchemists-of-the-great-year/playtest/`)  
+  `src/pages/games/alchemists-of-the-great-year/playtest.astro` · gate: `PlaytestGate.astro` · password config: `src/data/playtest.ts` · copy: `playtest.agy.*`
+
+- **Franchise homepage** (`/home/`)  
+  `src/pages/home.astro` · copy: `site.home.*` in `src/content/i18n/en.json` — hero uses `site.home.welcomeHeadline`, `site.home.welcomeTagline`, and `site.home.metaDescription`
 
 - **Shop** (`/shop/`)  
   `src/pages/shop.astro` · store links: `src/data/shop.ts` · featured products: `src/data/store-products.ts` · product card: `src/components/ProductCard.astro` · copy: `shop.*` · placeholder images: `src/assets/games/` (swap for real product mockups in `src/assets/shop/` when available)
@@ -164,7 +170,8 @@ Marketing pages live in `src/pages/` and use [`SiteLayout`](../src/layouts/SiteL
 
 | Page | File | Copy keys |
 |------|------|-----------|
-| Franchise hub `/` | `src/pages/index.astro` | `site.home.*` (`welcomeHeadline`, `welcomeTagline`, `metaDescription`) |
+| Enter gate `/` | `src/pages/index.astro` | `site.enter.*` (`title`, `tagline`, `metaDescription`, `cta`) |
+| Franchise hub `/home/` | `src/pages/home.astro` | `site.home.*` (`welcomeHeadline`, `welcomeTagline`, `metaDescription`) |
 | Shop `/shop/` | `src/pages/shop.astro`, `src/data/store-products.ts`, `src/components/ProductCard.astro` | `shop.*` |
 | AGY marketing | `src/pages/games/alchemists-of-the-great-year.astro` | `game.agy.*` |
 | Veiled Ascent marketing | `src/pages/games/the-veiled-ascent.astro` | `game.tva.*` |

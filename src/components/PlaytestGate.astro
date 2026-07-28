@@ -1,0 +1,42 @@
+---
+import { siteT } from '../utils/site-i18n';
+---
+
+<div class="playtest-gate" data-playtest-gate>
+	<div class="playtest-gate__lock" data-playtest-lock>
+		<form class="playtest-gate__form" data-playtest-form novalidate>
+			<p class="playtest-gate__prompt">{siteT('playtest.agy.gatePrompt')}</p>
+			<div class="site-form-fields">
+				<label class="site-form-fields__label" for="playtest-password">
+					<span class="sr-only">{siteT('playtest.agy.passwordLabel')}</span>
+					<input
+						class="site-form-fields__input"
+						type="password"
+						id="playtest-password"
+						name="password"
+						placeholder={siteT('playtest.agy.passwordPlaceholder')}
+						autocomplete="current-password"
+						required
+						data-playtest-password
+					/>
+				</label>
+				<button class="site-form-fields__submit" type="submit">
+					{siteT('playtest.agy.submit')}
+				</button>
+			</div>
+			<p class="playtest-gate__error" hidden data-playtest-error role="alert">
+				{siteT('playtest.agy.error')}
+			</p>
+		</form>
+	</div>
+
+	<div class="playtest-gate__content" hidden data-playtest-content>
+		<slot />
+	</div>
+</div>
+
+<script>
+	import { initPlaytestGate } from '../scripts/playtest-gate';
+
+	initPlaytestGate();
+</script>

@@ -11,14 +11,14 @@ interface Props {
 const { currentPath = Astro.url.pathname } = Astro.props;
 
 const navItems = [
-	{ href: '/', labelKey: 'site.nav.home' as const, match: (path: string) => path === '/' },
+	{ href: '/home/', labelKey: 'site.nav.home' as const, match: (path: string) => path === '/home/' || path === '/home' },
 	{ href: '/shop/', labelKey: 'site.nav.shop' as const, match: (path: string) => path.startsWith('/shop') },
 ] as const;
 ---
 
 <header class="site-header">
 	<div class="site-header__inner">
-		<a class="site-header__brand" href="/">
+		<a class="site-header__brand" href="/home/">
 			<Image src={logo} alt={siteT('site.brandAlt')} width={120} height={48} loading="eager" />
 		</a>
 

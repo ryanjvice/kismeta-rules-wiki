@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import GameCard from '../components/GameCard.astro';
+import { games } from '../data/games';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import logo from '../assets/logo.svg';
+import agyThumb from '../assets/games/agy/kismeta_AGY_gameBoard.jpg';
+import tvaThumb from '../assets/games/tva/Kismeta_Veil_gameBoard_final.png';
+import { siteT } from '../utils/site-i18n';
+
+const thumbMap: Record<string, ImageMetadata> = {
+	'alchemists-of-the-great-year': agyThumb,
+	'the-veiled-ascent': tvaThumb,
+};
+
+const title = siteT('site.home.pageTitle');
+const description = siteT('site.home.metaDescription');
+const welcomeHeadline = siteT('site.home.welcomeHeadline');
+const welcomeTagline = siteT('site.home.welcomeTagline');
+---
+
+<SiteLayout {title} {description} showChartWheel>
+	<section class="site-hero" aria-labelledby="franchise-hero-title">
+		<Image class="site-hero__logo" src={logo} alt={siteT('site.brandAlt')} width={320} height={128} loading="eager" />
+		<h1 id="franchise-hero-title" class="site-hero__title">{welcomeHeadline}</h1>
+		<p class="site-hero__tagline">{welcomeTagline}</p>
+	</section>
+
+	<section class="site-section" id="games" aria-labelledby="games-heading">
+		<h2 id="games-heading" class="site-section__heading">{siteT('site.home.gamesHeading')}</h2>
+		<div class="site-games-grid">
+			{games.map((game) => <GameCard {game} thumbImage={thumbMap[game.slug]} />)}
+		</div>
+	</section>
+
+	<section class="site-section" id="merch" aria-labelledby="merch-heading">
+		<h2 id="merch-heading" class="site-section__heading">{siteT('site.home.merchHeading')}</h2>
+		<div class="site-merch-teaser">
+			<p>{siteT('site.home.merchSummary')}</p>
+			<a href="/shop/">{siteT('site.home.merchCta')}</a>
+		</div>
+	</section>
+</SiteLayout>

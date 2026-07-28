@@ -1,0 +1,36 @@
+---
+import { mailingListConfig } from '../data/mailing-list';
+import { siteT } from '../utils/site-i18n';
+
+const { action, method, emailFieldName } = mailingListConfig;
+---
+
+<form
+	class="mailing-list-signup"
+	action={action || undefined}
+	method={action ? method : undefined}
+>
+	<div class="site-form-fields">
+		<label class="site-form-fields__label" for="mailing-list-email">
+			<span class="sr-only">{siteT('site.enter.mailingEmailLabel')}</span>
+			<input
+				class="site-form-fields__input"
+				type="email"
+				id="mailing-list-email"
+				name={emailFieldName}
+				placeholder={siteT('site.enter.mailingEmailPlaceholder')}
+				autocomplete="email"
+				required
+				disabled={!action}
+			/>
+		</label>
+		<button class="site-form-fields__submit" type="submit" disabled={!action}>
+			{siteT('site.enter.mailingSubmit')}
+		</button>
+	</div>
+	{
+		!action && (
+			<p class="mailing-list-signup__notice">{siteT('site.enter.mailingUnavailable')}</p>
+		)
+	}
+</form>

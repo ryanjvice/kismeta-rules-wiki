@@ -1,0 +1,18 @@
+---
+import PlaytestGate from '../../../components/PlaytestGate.astro';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { siteT } from '../../../utils/site-i18n';
+
+const title = siteT('playtest.agy.pageTitle');
+const description = siteT('playtest.agy.metaDescription');
+---
+
+<SiteLayout {title} {description} gameSlug="alchemists-of-the-great-year">
+	<PlaytestGate>
+		<section class="playtest-page" aria-labelledby="playtest-page-title">
+			<h1 id="playtest-page-title" class="playtest-page__title">{siteT('playtest.agy.pageTitle')}</h1>
+			<p class="playtest-page__intro">{siteT('playtest.agy.intro')}</p>
+			<p class="playtest-page__placeholder">{siteT('playtest.agy.placeholder')}</p>
+		</section>
+	</PlaytestGate>
+</SiteLayout>
