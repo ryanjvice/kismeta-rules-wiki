@@ -6,202 +6,231 @@ Alchemists of the Great Year
 
 ## KISMETA CARD REFERENCE
 
-Card Design Document — v3
+Card Design Document · v4
 
 A Goodmagik Game · Working Document
 
-## MAJOR ARCANA OVERVIEW _The Fates & The Adepts — 22 Cards Total_
+## MAJOR ARCANA OVERVIEW _The Fates & The Adepts · 22 Cards Total_
 
 The 22 Major Arcana cards are divided into two sets.
 
 **Fates** are volatile, disruptive cosmic events that arrive uninvited.
-**Adepts** are persistent enhancements the Alchemist actively acquires and buys into.
+**Adepts** are persistent permissions the Alchemist actively acquires and buys into.
 
-|                     | **FATE CARDS (10)**                      | **ADEPT CARDS (12)**                          |
-| ------------------- | ---------------------------------------- | --------------------------------------------- |
-| **Effect Duration** | Single round — discarded at end          | Persistent across rounds                      |
-| **Aspects**         | None — effect only                       | Carry all 3 Aspects (Sign, Planet, Element)   |
-| **Entry**           | Drawn in Harvest — resolves immediately  | Must be purchased when drawn, or discarded    |
-| **Arcanum Limit**   | No limit while active                    | Max 2 cards (3 with the Hermit)              |
-| **Player Agency**   | Low — forced on all or the drawer        | High — player chooses to buy in               |
-| **Design Role**     | Disruption, equalization, social moments | Specialization, optimization, identity        |
+|                     | **FATE CARDS (10)**                       | **ADEPT CARDS (12)**                        |
+| ------------------- | ----------------------------------------- | ------------------------------------------- |
+| **Effect Duration** | Resolve on draw. Some hold until Transit  | Persistent for as long as the card is held  |
+| **Aspects**         | None, effect only                         | Carry all 3 Aspects (Sign, Element, Planet) |
+| **Entry**           | Resolves the instant it is drawn          | Purchased for 1 Reagent of its Element      |
+| **Tiers**           | Single effect                             | Base and Resonant                           |
+| **Arcanum Limit**   | No limit                                  | Max 2 cards (3 with the Hierophant)         |
+| **Player Agency**   | Low, forced on all or the drawer          | High, player chooses to buy in              |
+| **Design Role**     | Disruption, equalization, social moments  | Specialization, optimization, identity      |
 
 **Arcana Assignment**
 
-| **FATE CARDS**                                                                 | **ADEPT CARDS**                                                                                            |
-| ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Tower Death Sun Judgement Justice Moon Fool Wheel of Fortune Hanged Man Lovers | Magician High Priestess Empress Emperor Hierophant Devil Chariot Strength Hermit Temperance Star The World |
+| **FATE CARDS**                                                                                    | **ADEPT CARDS**                                                                                                          |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Tower Death The Sun Judgement Justice The Moon The Fool Wheel of Fortune The Hanged Man The Lovers | The Magician The High Priestess The Empress The Emperor The Hierophant The Devil The Chariot Strength The Hermit Temperance The Star The World |
 
 ### Fate Cards
 
-A Fate card is a one-time cosmic event, resolved the instant it's drawn. It carries no Aspects and requires no purchase — its effect triggers immediately, and the card is discarded at the end of the round.
+A Fate card is a cosmic event, resolved the instant it is drawn. It carries no Aspects and requires no purchase. Its effect triggers immediately, and some Fates leave an effect standing until Transit.
 
-| Card Name        | Summary                                                                                                                                                                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tower            | All Adept cards in play are Arrested. Owners must pay each card's Bail to Free it.                                                                                                                                        |
-| Death            | All Hands are returned to the deck. The Agekeeper shuffles the deck.                                                                                                                                                      |
-| Sun              | All players receive one of each Reagent.                                                                                                                                                                                  |
-| Judgement        | Draw 1 card for each Cauldron you have lit.                                                                                                                                                                               |
-| Justice          | All Duels and Gambits are resolved via a best-of-3 series until the end of the round.                                                                                                                                     |
-| Moon             | Give a meaningful gift to the player to your right. Receive a meaningful gift from the player to your left. (Kismeta Cards & Reagents only)                                                                               |
-| Fool             | Draw an additional Crucible Card from the remaining pile. Place it on the Altar. The first player to complete the Alchemical Formula on it claims it and can use it in place of any one of their existing Crucible cards. |
-| Wheel of Fortune | All players roll their Zodiac Dice. Highest roll gains 2 Salt. Lowest roll discards 1 card.                                                                                                                               |
-| Hanged Man       | All players pass their Hand cards to the Player to their Left.                                                                                                                                                            |
-| The Lovers       | Pick 1 other player. They choose both for you, either: Draw 2 cards or Gain 1 Reagent of their choice.                                                                                                                    |
+| Card Name        | Summary                                                                                                                                                                                                                                                        |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tower            | All players roll their Zodiac Die. Each player who rolls 7 or lower has one of their Coal Extinguished, their own choice which. Wards apply.                                                                                                                    |
+| Death            | All players return their Hand cards to the Kismeta Deck. The Agekeeper shuffles. Spreads and Arcanums are untouched.                                                                                                                                            |
+| The Sun          | The Furnaces blaze. Until Transit, every player's Heat is raised by 2 in every Element.                                                                                                                                                                         |
+| Judgement        | Until Transit, a Duel challenger must beat the defender's roll by 2 or more to win.                                                                                                                                                                             |
+| Justice          | All players count their Reagents. The player holding the most gives half of them, rounded down, to the player holding the fewest. Ties are broken by turn order from the Agekeeper.                                                                              |
+| The Moon         | A lunar eclipse darkens the Summer sun. No Duels and no Sieges may be declared until Transit.                                                                                                                                                                   |
+| The Fool         | The Agekeeper draws one Crucible Card at random from those unused in setup and places it face up on the table. The first player to assemble its Card Set claims it, and exchanges it for any one of their unfired Crucible Cards, which returns to the box.      |
+| Wheel of Fortune | All players roll their Zodiac Die. The highest roll draws 3 cards from the Kismeta Deck into their Spread. The lowest roll returns half their Hand cards, rounded down, to the Kismeta Deck. Ties are broken by turn order from the Agekeeper.                   |
+| The Hanged Man   | All Adept cards are Severed until Transit. Their printed text does nothing.                                                                                                                                                                                     |
+| The Lovers       | All players roll their Zodiac Die and add the results together. If the total passes the threshold for the player count, every player takes any 3 Reagents from the supply. Thresholds: 2 players 13, 3 players 19, 4 players 26.                                 |
 
 ### ADEPT CARDS
 
-Adept cards are permanent enhancements, each attuned to a single Zodiac Sign. A Base effect is active as soon as you acquire the card; a Resonant effect unlocks whenever you match its Sign through your Zodiac Die or an Astral House.
+An Adept grants a permission, never a bonus. Each Adept carries all three Aspects: a Sign, an Element, and a Planet.
 
-Each Adept card also lists a **Bail** cost — the Salt its owner must pay to Free it if it is Arrested in a lost Gambit. Bail scales with the card's power.
+Buy an Adept when you draw it by paying its **Price**, 1 Reagent of its Element, or discard it. Its **Base** tier is active for as long as you hold the card. Its **Resonant** tier is active while the Cosmic Age shares one of the card's three Aspects.
 
-| Card           | Sign        | Bail 🧂 | Base / Resonant | Summary                                                                                      |
-| -------------- | ----------- | ------- | --------------- | -------------------------------------------------------------------------------------------- |
-| Magician       | Gemini      | 2       | Base            | Ignore Card Lock. Swap cards freely between Hand and Spread.                                 |
-|                |             |         | Resonant        | Once per round, look at any one rival's Hand.                                                |
-| High Priestess | Pisces      | 2       | Base            | Draw your Harvest directly from the Deck and +2 cards. Return any two after reviewing all.   |
-|                |             |         | Resonant        | Expand your maximum Hand limit to 7 cards.                                                   |
-| Empress        | Taurus      | 3       | Base            | Craft One Reagent type 2-for-1. Mark the matching Cauldron with Salt.                        |
-|                |             |         | Resonant        | Apply 2-for-1 to any two Reagent types.                                                      |
-| Emperor        | Aries       | 2       | Base            | Protect any 2 Spread cards from being stolen in Duels. Activate during Spring.               |
-|                |             |         | Resonant        | Protect any 2 cards from any type of attack. Protection lasts until Winter transit.          |
-| Hierophant     | Scorpio     | 2       | Base            | Shift your Zodiac Dice roll ±1 Sign on the Zodiac Wheel for Harvest or Opposition.           |
-|                |             |         | Resonant        | Shift your Zodiac Dice roll ±2. Apply this effect during any Opposition.                     |
-| Devil          | Capricorn   | 3       | Base            | Sacrifice any card to steal any one card from an opponent's Spread.                          |
-|                |             |         | Resonant        | Sacrifice this card to Banish an opponent's Adept card. Both cards are returned to the deck. |
-| Chariot        | Leo         | 1       | Base            | Duel each rival up to twice per round.                                                       |
-|                |             |         | Resonant        | Gain a reroll in any duel.                                                                   |
-| Strength       | Sagittarius | 2       | Base            | +1 to Duel dice rolls.                                                                       |
-|                |             |         | Resonant        | +2 to Duel & Gambit dice rolls.                                                              |
-| Hermit         | Virgo       | 1       | Base            | Hold up to 3 Adept cards.                                                                    |
-|                |             |         | Resonant        | All elemental Aspect alignments are doubled. (Fire, Air, Water, Earth)                       |
-| Temperance     | Libra       | 2       | Base            | Craft Salt for any Two Cards.                                                                |
-|                |             |         | Resonant        | Salt is a Wild Reagent for one other type. Mark the matching Cauldron with Salt.             |
-| The Star       | Aquarius    | 1       | Base            | Anytime you lose a Duel, Gambit or Opposition, draw two cards.                               |
-|                |             |         | Resonant        | Nullify an Adept or Fate card effect in play. Pay 1 Salt to refresh.                         |
-| The World      | Cancer      | 3       | Base            | Your Ward Reagents remain with you after successful Transmutations.                          |
-|                |             |         | Resonant        | This card is a Wildcard for any Crucible card. Flip to activate. Refresh for 1 Salt.         |
+| Card               | Sign        | Element | Planet  | Price       | Tier     | Effect                                                                                                            |
+| ------------------ | ----------- | ------- | ------- | ----------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
+| The Magician       | Gemini      | Air     | Mercury | Quicksilver | Base     | Ignore Card Lock. You may move cards between your Hand and your Spread at any time.                               |
+|                    |             |         |         |             | Resonant | Any Neutralize card in your Spread cancels any one Reversed effect, whatever its suit.                            |
+| The High Priestess | Pisces      | Water   | Jupiter | Aqua Regia  | Base     | Once each Age, Scry 3. Roll your Zodiac Die; on 9 or higher, take one card you saw.                               |
+|                    |             |         |         |             | Resonant | Scry 3, or Scry a rival's Hand. Roll 7 or higher to take any 2 cards.                                             |
+| The Empress        | Taurus      | Earth   | Venus   | Vitriol     | Base     | When you Distill, you may spend Essence of any Elements.                                                          |
+|                    |             |         |         |             | Resonant | Each Summer, declare one Reagent. You may Distill it from any two Essence.                                        |
+| The Emperor        | Aries       | Fire    | Mars    | Sulfur      | Base     | At Card Lock, Ward any 2 cards in your Spread. They cannot be taken in Duels.                                     |
+|                    |             |         |         |             | Resonant | Your Warded cards are also immune to any other card's effects.                                                    |
+| The Hierophant     | Virgo       | Earth   | Mercury | Vitriol     | Base     | You may hold 3 Adept cards.                                                                                       |
+|                    |             |         |         |             | Resonant | While any Adept you hold is Resonant, all of your Adepts gain their Resonant tier.                                |
+| The Devil          | Capricorn   | Earth   | Saturn  | Vitriol     | Base     | Sacrifice this card to banish a rival's Adept to the Kismeta discard pile.                                        |
+|                    |             |         |         |             | Resonant | Sacrifice this card to banish a rival's Adept, or to demolish one Astral House.                                   |
+| The Chariot        | Leo         | Fire    | Sun     | Sulfur      | Base     | You may declare a Siege without paying its Reagent.                                                               |
+|                    |             |         |         |             | Resonant | You win all Duel and Siege ties.                                                                                  |
+| Strength           | Sagittarius | Fire    | Jupiter | Sulfur      | Base     | After rolling your Zodiac Die in Spring, you may shift the result one Sign in either direction on the Wheel.      |
+|                    |             |         |         |             | Resonant | This also applies to your Siege Sign rolls.                                                                       |
+| The Hermit         | Scorpio     | Water   | Mars    | Aqua Regia  | Base     | Neutralize cards in your Spread have wild Suits.                                                                  |
+|                    |             |         |         |             | Resonant | Reversed cards in your Spread have no effect on you.                                                              |
+| Temperance         | Libra       | Air     | Venus   | Quicksilver | Base     | You may exchange Essence 1:1 between any two Elements at any time.                                                |
+|                    |             |         |         |             | Resonant | You may exchange Reagents 1:1 between Elements.                                                                   |
+| The Star           | Aquarius    | Air     | Saturn  | Quicksilver | Base     | Whenever you lose a Duel or a Siege, or your Stone is Seized, draw 2 cards.                                       |
+|                    |             |         |         |             | Resonant | Once each Age, Sever one active Adept card until Transit.                                                         |
+| The World          | Cancer      | Water   | Moon    | Aqua Regia  | Base     | When you Temper your Stone, you may keep the Coal you spent instead of returning it.                              |
+|                    |             |         |         |             | Resonant | Flip this card: your Stone cannot be Seized this Age. Refresh when you Temper.                                    |
 
 ## CRUCIBLE CARDS
 
-A Crucible Card is one of the four stage-cards an Alchemist works through to complete the Great Work. Each reveals an Alchemical Formula — Reagents and an Alignment — once activated, and lists a Bail cost, the Salt its owner pays to Free it if Arrested in a lost Gambit.
+A Crucible Card is one of the four stage-cards an Alchemist works through to complete the Great Work. Each prints an Alchemical Formula in three parts: **Attunement**, **Reagents**, and **Heat**.
+
+Attunement is paid from Spread cards, which are spent, or from Astral Houses, which are not. An Astral House fills one slot of any Aspect it carries, once per Firing.
 
 **Group Structure**
 
-| **Group**   | **Arcana** | **Difficulty** | **Cards** | **Game Modes**                                                         |
-| ----------- | ---------- | -------------- | --------- | ---------------------------------------------------------------------- |
-| **Group A** | (0–3)      | _Beginner_     | 4 cards   | Heavy use in Quickplay; included in all build types at low counts.     |
-| **Group B** | (4–10)     | _Standard_     | 7 cards   | Core of Standard and Magnus Alchemist builds.                          |
-| **Group C** | (11–17)    | _Advanced_     | 7 cards   | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
-| **Group D** | (18–21)    | _Mastery_      | 4 cards   | Magnus Alchemist builds only.                                          |
+| **Group**   | **Arcana** | **Difficulty** | **Stage** | **Cards** | **Game Modes**                                                         |
+| ----------- | ---------- | -------------- | --------- | --------- | ---------------------------------------------------------------------- |
+| **Group A** | (0–3)      | _Beginner_     | Lead      | 4 cards   | Heavy use in Quickplay; included in all build types at low counts.     |
+| **Group B** | (4–10)     | _Standard_     | Bronze    | 7 cards   | Core of Standard and Magnus Alchemist builds.                          |
+| **Group C** | (11–17)    | _Advanced_     | Silver    | 7 cards   | Higher distribution in Standard; heavier presence in Magnus Alchemist. |
+| **Group D** | (18–21)    | _Mastery_      | Gold      | 4 cards   | Magnus Alchemist builds only.                                          |
 
-**Bail Costs** — the Salt an owner pays to Free an Arrested Crucible Card, printed on each card and scaled by Group:
+**Formula Scale**, what a Firing costs at each Group:
 
-| **Group**   | **Bail** 🧂 |
-| ----------- | ----------- |
-| **Group A** | 1 Salt      |
-| **Group B** | 2 Salt      |
-| **Group C** | 2 Salt      |
-| **Group D** | 3 Salt      |
+| **Group**   | **Attunement**                      | **Reagents** | **Heat**            |
+| ----------- | ----------------------------------- | ------------ | ------------------- |
+| **Group A** | 2 slots, single Element             | 2            | 1, one Furnace      |
+| **Group B** | 3 slots, Element or Planet          | 4            | 2, one Furnace      |
+| **Group C** | 4 slots, valid Planet+Element pair  | 6            | 3, one Furnace      |
+| **Group D** | 5 slots, invalid Planet+Element pair | 8           | 3 + 2, two Furnaces |
 
 ### GROUP A · Beginner · Lead Stage · 4 Cards · Arcana 0–3
 
-| **Group**                                        | **Card**           | **SP** | **AR** | **V** | **Q** | **S** | **Tot.** | **Alignment Requirement**               |
-| ------------------------------------------------ | ------------------ | ------ | ------ | ----- | ----- | ----- | -------- | --------------------------------------- |
-| **GROUP A · Beginner · Lead Stage · 2 Reagents** |
-| A                                                | The Fool           | 1      | —      | —     | —     | 1     | 2        | Pair of Swords with the same Rank       |
-| A                                                | The Magician       | —      | —      | —     | 1     | 1     | 2        | Pair of Mercury planets (5s + Princess) |
-| A                                                | The High Priestess | —      | 1      | —     | —     | 1     | 2        | Pair of Moon planets (2s + Queens)      |
-| A                                                | The Empress        | —      | —      | 1     | —     | 1     | 2        | Pair of Venus planets (4s + 9s)         |
-|                                                  |                    | 1      | 1      | 1     | 1     | 4     |          |                                         |
+| **Arcana** | **Card**           | **Attunement** | **Reagents**  | **Heat** |
+| ---------- | ------------------ | -------------- | ------------- | -------- |
+| 0          | The Fool           | 2 Fire         | 2 Sulfur      | 1 Fire   |
+| 1          | The Magician       | 2 Water        | 2 Aqua Regia  | 1 Water  |
+| 2          | The High Priestess | 2 Earth        | 2 Vitriol     | 1 Earth  |
+| 3          | The Empress        | 2 Air          | 2 Quicksilver | 1 Air    |
 
 ### GROUP B · Standard · Bronze Stage · 7 Cards · Arcana 4–10
 
-| **Group** | **Card**         | **SP** | **AR** | **V** | **Q** | **S** | **Tot.** | **Alignment Requirement**                           |
-| --------- | ---------------- | ------ | ------ | ----- | ----- | ----- | -------- | --------------------------------------------------- |
-| B         | The Emperor      | 2      | —      | 1     | —     | —     | 3        | 3-card Wands Straight (Any 3 consecutive ranks)     |
-| B         | The Hierophant   | —      | —      | 2     | —     | 1     | 3        | One Venus + Pair of Pentacles (Same Rank)           |
-| B         | The Lovers       | —      | —      | —     | 2     | 1     | 3        | 3-card Swords Straight (Any 3 consecutive ranks)    |
-| B         | The Chariot      | —      | 2      | —     | —     | 1     | 3        | 3 Moons (2s & Queens)                               |
-| B         | Strength         | 2      | —      | —     | —     | 1     | 3        | One Sun + Pair of Wands (Same Rank)                 |
-| B         | The Hermit       | —      | —      | 1     | 2     | —     | 3        | 3-card Pentacles Straight (Any 3 consecutive ranks) |
-| B         | Wheel of Fortune | —      | 2      | —     | —     | 1     | 3        | 3-card Cups Straight (Any 3 consecutive ranks)      |
-|           |                  | 4      | 4      | 4     | 4     | 5     |          |                                                     |
+| **Arcana** | **Card**         | **Attunement**    | **Reagents**                 | **Heat** |
+| ---------- | ---------------- | ----------------- | ---------------------------- | -------- |
+| 4          | The Emperor      | 3 Fire            | 3 Sulfur + 1 Quicksilver     | 2 Fire   |
+| 5          | The Hierophant   | 3 Water           | 3 Aqua Regia + 1 Vitriol     | 2 Water  |
+| 6          | The Lovers       | 3 Earth           | 3 Vitriol + 1 Sulfur         | 2 Earth  |
+| 7          | The Chariot      | 3 Air             | 3 Quicksilver + 1 Aqua Regia | 2 Air    |
+| 8          | Strength         | 3 Mercury         | 2 Quicksilver + 2 Vitriol    | 2 Air    |
+| 9          | The Hermit       | 3 Venus           | 2 Vitriol + 2 Quicksilver    | 2 Earth  |
+| 10         | Wheel of Fortune | 2 Saturn + 1 Air  | 3 Quicksilver + 1 Vitriol    | 2 Air    |
 
 ### GROUP C · Advanced · Silver Stage · 7 Cards · Arcana 11–17
 
-| **Group** | **Card**       | **SP** | **AR** | **V** | **Q** | **S** | **Tot.** | **Alignment Requirement**                                |
-| --------- | -------------- | ------ | ------ | ----- | ----- | ----- | -------- | -------------------------------------------------------- |
-| C         | Justice        | —      | —      | 1     | 2     | —     | 3        | Two Pairs — Pentacles and Swords Suits only              |
-| C         | The Hanged Man | —      | 3      | —     | —     | —     | 3        | Three Cups (any ranks) + one Sun card (Ace)              |
-| C         | Death          | 2      | 1      | —     | —     | —     | 3        | Three Mars planets (7s + Knights) + Two Cups             |
-| C         | Temperance     | 2      | —      | 1     | —     | —     | 3        | Three Jupiter planets (3s + 8s) + Two Wands              |
-| C         | The Devil      | 1      | —      | 1     | —     | 1     | 3        | Three Saturn planets (6s, 10s, or Kings) + Two Pentacles |
-| C         | The Tower      |        | 1      | 2     |       | —     | 3        | Two Mars planet (7 or Knight) + 3-card Wands straight    |
-| C         | The Star       |        |        | —     | 3     | —     | 3        | 3-card Swords straight + Two Venus cards (3 or 8)        |
-|           |                | 5      | 5      | 5     | 5     | 1     |          |                                                          |
+| **Arcana** | **Card**       | **Attunement**      | **Reagents**                 | **Heat** |
+| ---------- | -------------- | ------------------- | ---------------------------- | -------- |
+| 11         | Justice        | 2 Mars + 2 Water    | 4 Aqua Regia + 2 Sulfur      | 3 Water  |
+| 12         | The Hanged Man | 2 Venus + 2 Earth   | 4 Vitriol + 2 Quicksilver    | 3 Earth  |
+| 13         | Death          | 2 Mercury + 2 Air   | 4 Quicksilver + 2 Vitriol    | 3 Air    |
+| 14         | Temperance     | 2 Jupiter + 2 Fire  | 4 Sulfur + 2 Aqua Regia      | 3 Fire   |
+| 15         | The Devil      | 2 Saturn + 2 Earth  | 4 Vitriol + 2 Sulfur         | 3 Earth  |
+| 16         | The Tower      | 2 Jupiter + 2 Water | 4 Aqua Regia + 2 Quicksilver | 3 Water  |
+| 17         | The Star       | 2 Mars + 2 Fire     | 4 Sulfur + 2 Vitriol         | 3 Fire   |
 
 ### GROUP D · Mastery · Gold Stage · 4 Cards · Arcana 18–21
 
-| **Group** | **Card**  | **SP** | **AR** | **V** | **Q** | **S** | **Tot.** | **Alignment Requirement**                          |
-| --------- | --------- | ------ | ------ | ----- | ----- | ----- | -------- | -------------------------------------------------- |
-| D         | The Moon  | —      | 3      | —     | 1     | —     | 4        | Four Mercury planets (5s + Princesses) + Two Cups  |
-| D         | The Sun   | 3      | —      | 1     | —     | —     | 4        | Four Wands + Two Sun cards (Aces)                  |
-| D         | Judgement | —      | —      | 2     | 2     | —     | 4        | Four Swords + Two Venus planets (4s or 9s)         |
-| D         | The World | 1      | 1      | 1     | 1     | —     | 4        | Four Saturn planets (6s/10s/Kings) + Two Pentacles |
-|           |           | 4      | 4      | 4     | 4     | —     |          |                                                    |
+| **Arcana** | **Card**  | **Attunement**      | **Reagents**                 | **Heat**          |
+| ---------- | --------- | ------------------- | ---------------------------- | ----------------- |
+| 18         | The Moon  | 3 Sun + 2 Water     | 5 Aqua Regia + 3 Sulfur      | 3 Fire + 2 Water  |
+| 19         | The Sun   | 3 Saturn + 2 Fire   | 5 Sulfur + 3 Vitriol         | 3 Earth + 2 Fire  |
+| 20         | Judgement | 3 Mercury + 2 Water | 5 Aqua Regia + 3 Quicksilver | 3 Air + 2 Water   |
+| 21         | The World | 3 Venus + 2 Fire    | 5 Sulfur + 3 Vitriol         | 3 Earth + 2 Air   |
 
 ## MINOR ARCANA _112 Cards · Four Suits · 14 Ranks · Two Cards Per Rank/Suit_
 
-Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Your power grows from what you hold in your **Spread**: each card's Planet contributes **charge**, and three matching charges form a **Stellium** — its effect is printed on the Crucible Codex. **Adept cards** carry their own identity, keyed to a **Zodiac Sign** and unlocked through your Zodiac Die and Astral Houses.
+Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Rank sets the card's Charge Value, its Planet, and its printed effect. Suit sets the Element, Reagent, and Furnace that effect works on. Holding three cards of one **Planet** in your **Spread** forms a **Stellium**, a standing effect listed in the Stellium Codex below. **Adept cards** carry their own identity, keyed to a Sign, an Element, and a Planet.
 
 ### Suit Correspondence
 
-Suit determines which Reagent a card crafts, and which Cauldron unlocks it.
+Suit determines which Reagent a card Distills, which Essence it draws on, and which Furnace it reaches.
 
-| **Color**    | **Suit**      | **Element** | **Reagent** | **Cauldron** | **Wild Reagent (Queens)** |
-| ------------ | ------------- | ----------- | ----------- | ------------ | ------------------------- |
-| **■ Red**    | **Wands**     | Fire        | Sulphur     | Red          | Sulphur                   |
-| **■ Blue**   | **Cups**      | Water       | Aqua Regia  | Blue         | Aqua Regia                |
-| **■ Green**  | **Pentacles** | Earth       | Vitriol     | Green        | Vitriol                   |
-| **■ Yellow** | **Swords**    | Air         | Quicksilver | Yellow       | Quicksilver               |
+| **Color**    | **Suit**      | **Element** | **Essence** | **Reagent** | **Furnace**  |
+| ------------ | ------------- | ----------- | ----------- | ----------- | ------------ |
+| **■ Red**    | **Wands**     | Fire        | Fire        | Sulfur      | Fire Furnace |
+| **■ Blue**   | **Cups**      | Water       | Water       | Aqua Regia  | Water Furnace |
+| **■ Green**  | **Pentacles** | Earth       | Earth       | Vitriol     | Earth Furnace |
+| **■ Yellow** | **Swords**    | Air         | Air         | Quicksilver | Air Furnace  |
 
 ### Rank & Planet
 
-Every card of a given Rank carries the same Planet, across all four Suits. Court ranks each carry a Rider that activates while their Planet's Stellium is active in your Spread.
+Every card of a given Rank carries the same Planet and the same effect across all four Suits. In the table below, read **[Suit]**, **[Element]**, and **[Reagent]** from the Suit Correspondence table above. The 5 of Cups, for example, reads: Discard three Cups from your Spread: Extinguish one Coal in the Water Furnace.
 
-| **Rank**     | **CV** | **Planet** | **Rider (while that Planet's Stellium is active)**                          |
-| ------------ | ------ | ---------- | ----------------------------------------------------------------------------- |
-| **Ace**      | 1      | ☉ Sun (Wild) | Draw 1 bonus Kismeta Card at Harvest while this card serves as Wild Charge for a Stellium |
-| **2**        | 2      | ☽ Moon     | —                                                                              |
-| **3**        | 3      | ♃ Jupiter  | —                                                                              |
-| **4**        | 4      | ♀ Venus    | —                                                                              |
-| **5**        | 5      | ☿ Mercury  | —                                                                              |
-| **6**        | 6      | ♄ Saturn   | —                                                                              |
-| **7**        | 7      | ♂ Mars     | —                                                                              |
-| **8**        | 8      | ♃ Jupiter  | —                                                                              |
-| **9**        | 9      | ♀ Venus    | —                                                                              |
-| **10**       | 10     | ♄ Saturn   | —                                                                              |
-| **Princess** | 11     | ☿ Mercury  | Your Mercury Stellium bonus also applies when defending Gambits                |
-| **Knight**   | 12     | ♂ Mars     | Your Mars Stellium bonus also applies when defending Duels                     |
-| **Queen**    | 13     | ☽ Moon     | Your Suit's Reagent becomes Wild for Alchemical Formulas                       |
-| **King**     | 14     | ♄ Saturn   | Cards of your Suit cannot be targeted in Duels (the King itself remains vulnerable) |
+| **Rank**     | **CV** | **Planet**   | **Type**    | **Copies** | **Effect**                                                                                                         |
+| ------------ | ------ | ------------ | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Ace**      | 1      | ☉ Sun (Wild) | SEED        | 2          | Spend when paying an Alchemical Formula: counts as 1 [Reagent].                                                    |
+| **2**        | 2      | ☽ Moon       | DRAW        | 2          | Burn: Draw 2 cards.                                                                                                |
+| **3**        | 3      | ♃ Jupiter    | CRAFT       | 2          | While in your Spread: Craft Astral Houses for 2 matching cards instead of 3.                                       |
+| **4**        | 4      | ♀ Venus      | BOON        | 2          | Burn: Take 1 [Element] Essence.                                                                                    |
+| **5**        | 5      | ☿ Mercury    | EXTINGUISH  | 2          | Discard three [Suit] from your Spread: Extinguish one Coal in the [Element] Furnace. Its owner returns it to their supply. |
+| **6**        | 6      | ♄ Saturn     | NEUTRALIZE  | 2          | While in your Spread: Neutralize the Reversed effect of a 7 of [Suit] in your Spread.                              |
+| **7**        | 7      | ♂ Mars       | REVERSED    | 1          | Reversed: [Reagent] costs 1 additional [Element] Essence to Distill. Neutralized by 6 of [Suit].                   |
+| **7**        | 7      | ♂ Mars       | REVERSED    | 1          | Reversed: −1 to your Duel rolls. Neutralized by 6 of [Suit].                                                       |
+| **8**        | 8      | ♃ Jupiter    | DEFEND      | 2          | While Defending: +1 to Duel rolls. In a Siege: +2 to your total.                                                   |
+| **9**        | 9      | ♀ Venus      | BOON        | 2          | While your Sign is [Element]: exchange [Element] Essence 1:1 for the next Element's Essence. See The Nines below.  |
+| **10**       | 10     | ♄ Saturn     | BOON        | 2          | When you Temper your Stone: take 2 [Reagent] from the supply.                                                      |
+| **Princess** | 11     | ☿ Mercury    | ENCHANT     | 2          | Enchant: you may also Fuel the [Element] Furnace this Age. Burn: Fuel any Furnace this Age.                        |
+| **Knight**   | 12     | ♂ Mars       | ATTACK      | 2          | While Attacking: +1 to Duel rolls. In a Siege: +2 to your total. Burn: +4 instead.                                 |
+| **Queen**    | 13     | ☽ Moon       | WARD        | 2          | Ward: when your Coal would be Extinguished, roll your Zodiac Die. On 8 or higher the Coal stays. Burn: reroll.     |
+| **King**     | 14     | ♃ Jupiter    | BOON        | 2          | In a Siege, this card scores its CV regardless of the Siege Age.                                                   |
 
-### The Sun — Wild Charge
+Copies are per Suit: two cards of every Rank in every Suit, 28 cards per Suit, 112 in the Kismeta Deck. The two 7s are two different cards, one copy of each.
 
-Aces carry the Sun and count as **1 charge toward any single other Planet** — chosen freely, reassignable at any time. At most one Ace may count toward any one Stellium. While serving as Wild Charge, an Ace also earns its Rider (see table above).
+### The Nines · Essence Exchange
+
+The 9s pass Essence around the elemental cycle. Each one exchanges its own Element for the next.
+
+| **Card**        | **Exchange**                       |
+| --------------- | ---------------------------------- |
+| 9 of Cups       | Water Essence 1:1 for Earth Essence |
+| 9 of Pentacles  | Earth Essence 1:1 for Air Essence   |
+| 9 of Swords     | Air Essence 1:1 for Fire Essence    |
+| 9 of Wands      | Fire Essence 1:1 for Water Essence  |
+
+### The Aces · Sun & Wild Charge
+
+Aces carry the **Sun** and are wild for any one Stellium, chosen freely. At most one Ace may count toward any one Stellium. An Ace is also a **Seed**: spend it when paying an Alchemical Formula and it counts as 1 Reagent of its Suit. There are 8 Aces in the deck, two per Suit.
 
 ### Planet Stellium Codex
 
-Holding 3 charge of the same Planet in your Spread forms a Stellium. Each Planet's Stellium grants the effect below for as long as you hold it.
+Hold three cards of one Planet in your Spread to activate its Stellium. It ends the moment one of those cards is lost.
 
-| Planet | Cards in Deck | Stellium Effect (3 charge) |
-|---|---|---|
-| ☽ **Moon** | 16 | Your Hand limit and Spread limit are each +1 |
-| ☿ **Mercury** | 16 | +1 to your dice rolls when attacking in Gambits |
-| ♀ **Venus** | 16 | +1 to your dice rolls when defending in Duels and Gambits |
-| ♂ **Mars** | 16 | +1 to your dice rolls when attacking in Duels |
-| ♃ **Jupiter** | 16 | Craft Salt, or any one Reagent type, for 2 matching cards instead of 3 |
-| ♄ **Saturn** | 24 | Bail costs on your Arrested cards are −1 Salt (minimum 1) |
+| Planet | Ranks | Cards in Deck | While Active |
+|---|---|---|---|
+| ☽ **Moon** | 2, Queen | 16 | Your Coal cannot be Extinguished. |
+| ☿ **Mercury** | 5, Princess | 16 | You may Fuel any Furnace, not only the one matching your Sign. |
+| ♀ **Venus** | 4, 9 | 16 | At Harvest, take your Essence in any one Element you choose. |
+| ♂ **Mars** | 7, Knight | 16 | Losing a Duel does not bar you from challenging that rival again this Age. |
+| ♃ **Jupiter** | 3, 8, King | 24 | You may build an Astral House on any Sign, not only your own. |
+| ♄ **Saturn** | 6, 10 | 16 | Your Spread limit is 9 instead of 7. |
 
-A Cosmic Age's ruling Planet lowers that Planet's threshold to 2 charge for the round. See the _Cosmic Ages & Effects_ table in the Game Guide.
+An Ace is wild for any one Stellium. One Ace per Stellium.
+
+## CARD EFFECT VERBS
+
+The verbs printed on Kismeta cards, and what each one does.
+
+| Verb | Meaning |
+|---|---|
+| **Burn** | Discard this card to use the effect that follows. |
+| **Extinguish** | Remove one Coal from a Furnace. It returns to its owner's supply and their Heat in that Element drops by 1. A Ward can stop it. |
+| **Neutralize** | Cancel the Reversed effect of a card in your Spread. Both cards remain in play. |
+| **Reversed** | A penalty that applies only while this card is in your Spread. Moving it to your Hand, or Neutralizing it, ends the penalty. |
+| **Ward** | The warded card, Stone, or resource cannot be targeted, as the card states. |
+| **Sever** | Switch off one card's printed text until Transit, as the card states. |
+| **Scry X** | Look at the top X cards of the Kismeta Deck, or a rival's Hand, as the card states. What you learn is yours to keep. |
+| **Distill** | Spend 3 Essence of one Element to take the Reagent of that Element. |
+
+For rules on how these cards are used at the table, see the _Kismeta Game Guide_.

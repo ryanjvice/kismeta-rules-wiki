@@ -139,7 +139,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 ### Theme & brand
 
-- **Colors, fonts, spacing, print**  
+- **Colors, fonts, spacing, print**
   `src/styles/custom.css` — `--kismeta-*`, `--sl-color-*`, `.kismeta-header-wrap`
 
 - **Logo, favicon, fonts in `<head>`**  

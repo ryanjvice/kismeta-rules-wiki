@@ -3,9 +3,11 @@ title: "Winning the Game"
 description: "Completing the Great Work at the Altar of Kismeta."
 ---
 
-Once a player reaches Gold in the Forge (position 7), they are one round from winning. During Step 2: Opposition, opposing players may declare Opposition against the Forging Stone. If the player defends their Philosopher's Stone through the Opposition step, they may then Temper during Step 3: Crucible Actions, moving their Stone to the Altar of Kismeta (position 8). Discarding the last Crucible Card and advancing to the Altar wins the game.
+The first player to advance their Stone to the Altar of Kismeta at the center of the Great Year Board wins the game. You will have completed all four of your Alchemical Formulas and passed through all four Transmutation Stages, successfully transmuting your Lead into Gold.
 
-Ultimately, the first Alchemist to complete all four Crucible Cards and carry their Stone through every Stage of Transformation to the Altar of Kismeta will finish the Great Work and claim victory.
+Once your Stone reaches Gold in the Forge (position 7), you are one Age from winning, and one Summer from your most dangerous moment. Survive that Summer's Sieges and you may Temper to the Altar of Kismeta (position 8) in Autumn.
+
+If two players would reach the Altar in the same Autumn, the one earlier in turn order from the Agekeeper wins.
 
 All Hail! All Hail!
 The Magnus Alchemista Grandis Illuminatus ex Kismeta!

@@ -3,84 +3,79 @@ title: "Strategy Guide"
 description: "Deep strategic analysis — engine building, resource management, risk, and game modes."
 ---
 
-## 1. Engine Building
+## 1. Two Economies, One Bottleneck
 
-The core strategic curve of the game is rooted in permanent infrastructure development versus short-term tactical payouts.
+Kismeta runs a dice economy and a card economy side by side, and your Crucible Cards demand payment in both.
 
-### Astral Houses as Compound Investments
+### The Dice Economy
 
-Building an Astral House requires discarding two valuable cards, but it establishes a permanent anchor on the Zodiac Wheel. Because it yields bonus cards during the Spring Harvest _for the rest of the game_, building these early compounds an exponential card-advantage engine. Doing so late in the game is a waste of capital, requiring players to gauge the game's pacing accurately.
+Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards pay out Essence each Autumn based on how well they align with the Age. Essence distills into Reagents at a fixed 3:1 rate. This economy is broad and forgiving: almost anything you own contributes something, and a strong Alignment can pay out fifteen Essence in a single Autumn.
 
-### The Cauldron Network
+### The Card Economy
 
-Activating a Crucible card rewards you with a Coal token, which you must use to permanently ignite one of your four colored Cauldrons. Because you can only craft elemental Reagents at _lit_ Cauldrons, players must engage in long-term forecasting: _Which Reagents will my upcoming, high-tier Crucible cards require?_ Lighting the wrong Cauldron early can completely bottleneck your resource pipeline.
+Cards convert into Coal (3 of one suit) and Astral Houses (3 of one Planet). This economy is narrow and brutal. You receive only three cards per Age, plus what you steal, draw from effects, or trade for. Every card spent on a Coal is a card not spent on a House, an Attunement, or a Stellium.
 
-### Adept Card Synergies
+### Where They Meet
 
-Managing your Arcanum slots allows you to curate persistent game-bending rules and permanent Zodiac Sign alignments. Finding a pair that spans two different Signs mitigates the luck of the round-by-round Cosmic Age dice roll, smoothing out your resource generation.
+An Alchemical Formula needs Attunement (cards), Reagents (Essence), and Heat (Coal, which is also cards). Cards are the binding constraint in nearly every game. Players who over-invest in Essence find themselves rich and unable to Fire.
 
-## 2. Resource Management
+## 2. The Sign Lottery and How to Beat It
 
-The separation of card utility between your **Spread** and your **Hand** creates a brilliant tactical puzzle every round.
+Your Zodiac Die result each Spring decides which Furnace you may fuel and which Sign you may build on. That is a hard gate on your two most important long-term investments, and it is entirely random.
 
-### The Spread (The Visible Engine)
+Three tools bend it:
 
-Cards placed in your open Spread build Stelliums, generate extra cards during the Harvest, and satisfy the poker-style "Card Sets" needed to activate your Crucible cards. However, everything in your Spread is fully visible and completely vulnerable to being stolen by opponents via Summer Duels — including the cards holding a Stellium together.
+- **The Mercury Stellium** lets you fuel any Furnace, regardless of your Sign.
+- **The Jupiter Stellium** lets you build an Astral House on any Sign.
+- **Strength** (Adept, Sagittarius) lets you shift your roll one Sign in either direction on the Wheel.
 
-### The Hand (The Hidden Reserve)
+Any one of these converts your engine from reactive to deliberate. Acquiring one early is often worth more than a full Age of Harvest income.
 
-Cards in your Hand are safe from Duels and keep your long-term strategies secret. You are incentivized to craft Reagents directly from your Hand so you don't break up the high-value sets or alignments sitting out in your Spread.
+## 3. Spread Versus Hand
 
-### The Card Lock Constraint
+The Card Lock freezes cards between your Spread and Hand from Spring until Winter, so the arrangement you commit to in Spring is the arrangement you live with for the entire Age.
 
-Because cards are frozen between these two zones from Spring until Winter, players must make high-stakes commitments during the Spring "Commune With Your Tableau" phase. Over-committing to your Spread leaves you open to theft; under-committing starves your active engine.
+- **Over-commit to your Spread** and you have a powerful, visible engine and nothing held back for a Siege, with every card exposed to Duels.
+- **Over-commit to your Hand** and you are safe, quiet, and unable to craft, attune, or harvest.
 
-## 3. The Cosmic Age System
+The right split depends on where your Stone is. Resting on the Mantle Ring, load your Spread and build. About to Fire, hold cards back: your Hand is the only thing that wins the Siege that follows.
 
-Strategic depth is heavily amplified by the fact that the "optimal" strategy shifts completely every single round.
+## 4. The Forge Window
 
-- When the Agekeeper rolls the Cosmic Age Die, the entire game board morphs to favor specific Signs, Planets, and Elements.
+The path to victory is a push-your-luck curve. Your Stone is safe on the Mantle Ring and safe at the Altar. It is vulnerable for exactly one Summer per Stage, four Summers across a whole game.
 
-- A player dominating in a "Water" element age might suddenly find themselves starved of card draw when the galaxy rotates into a "Fire" age.
+A Siege costs the attacker 2 Reagents to declare, and those Reagents must match the Cosmic Age's Element, so the window to attack is gated by whichever Element the heavens are paying out that Age. A successful Siege returns 2 Reagents of any Element to the attacker and Seizes your Stone to Stasis, while Rekindling costs you 2 Reagents and an entire Age. A won Siege is close to free for the attacker and expensive for you, which means the defense is not economic, it is informational: a deep Hand your rivals cannot see, committed at the right moment.
 
-- Players cannot rely on a static, repetitive loop; they must constantly pivot, hoard cards of shifting relevancy, and optimize their temporary "Cosmic Blessing" and personal Zodiac sign for that specific round.
+The counter-pressure runs the other way. A failed Siege costs the attacker those 2 Reagents outright and hands the defender 2 free cards, so attackers cannot swing freely.
 
-## 4. High-Stakes Risk Management and Interactivity
+## 5. Denial
 
-The path to victory—the Transmutation Path—is a brilliant push-your-luck mechanic.
+Kismeta gives you three ways to hurt a rival without advancing yourself.
 
-### The Forge Vulnerability
+- **Duels** take a specific card from a Spread. The best targets are not the highest-value cards but the load-bearing ones: the third card of a Stellium, or the last card of an Attunement.
+- **Extinguish** removes a rival's Coal and drops their Heat. Timed just before their Autumn, it can push a Formula out of reach for a whole Age.
+- **Siege** stalls a Stone for an Age.
 
-Moving your Philosopher's Stone into a "Forge" position means you are actively forging a Crucible card. While forging, you are completely unsafe and can be targeted by other players via **Opposition** challenges to freeze your stone into Stasis.
+Each costs you tempo. The judgment call is whether a leader is close enough to the Altar that stalling them is worth an Age of your own progress.
 
-### Economic War Chests (Ward Reagents)
+## 6. Game Modes & Depth
 
-To mitigate risk, players can place crafted Reagents beside their Forging Stone as "Wards". These act as aggressive tollbooths—opponents _can_ still declare an Opposition to stop your progress, but they must pay a steep entry fee equal to your Ward to even attempt it. Deciding whether to utilize your hard-earned Reagents to advance your own stone or to pool them into defense mechanisms introduces deep psychological and economic tension.
-
-### Catch-Up Mechanics (Besieged Bonus & Fates)
-
-If a leading player is targeted by multiple opponents in a single round, the "Besieged Bonus" grants them cumulative advantages for defending successfully, preventing a complete dogpile from ruining a good strategy. Conversely, highly disruptive, uninvited "Fate" cards (like _The Hanged Man_, which forces everyone to pass their entire hand to the left) act as great equalizers that force players to think on their feet.
-
-## 5. Game Modes & Depth of Gameplay
-
-The game elegantly allows players to choose how deep into the strategic rabbit hole they want to go:
+The Crucible Deck build decides how heavy the game is.
 
 ### Quickplay (Low-to-Medium Depth)
 
-Curated to teach basic card sets and resource conversion, bypassing complex cauldron constraints.
+Weighted to Groups A and B: small single-Element Attunements, light Reagent costs, and Heat in one Furnace. Teaches the core loop without the Attunement puzzle.
 
 ### Standard Game (Medium-High Depth)
 
-The full cognitive load of the game—balancing card locks, building houses, managing cauldrons, warding your Stone, and wading through the Forge.
+A balanced spread across the Groups. Full cognitive load: Card Lock, House placement, Furnace competition, and the Forge window.
 
-### Magnus Alchemist Mode (Expert Depth)
+### Magnus Alchemist (Expert Depth)
 
-This mode introduces **Zodiac Alignment and Misalignment** between the actual players. Players whose current signs share an aspect can trade freely, while "Misaligned" players face a 2:1 trade tax. Furthermore, misalignments grant aggressive combat bonuses (+1 to dice rolls or alignment points) during Duels, Gambits, and Oppositions.
-
-This transforms _Kismeta_ into a game of shifting political alliances, table talk, and intense counter-play based purely on who you are sitting next to on the Zodiac wheel.
+Weighted to Groups C and D. Group C demands a valid Planet and Element pair. Group D demands an invalid pair, one that no single Sign carries, so you cannot satisfy it from your Zodiac Die alone. It also demands Heat in two Furnaces at once, which is impossible in a single Age from your Sign alone. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually a Stellium or an Adept to lift the Furnace restriction.
 
 ## Conclusion & Verdict
 
-_Kismeta_ offers an incredibly robust competitive environment. Luck is present via dice rolls, but it acts as a _generator of changing terrain_ rather than the arbiter of victory. A skilled player will consistently outperform an unskilled player by mapping out efficient Cauldron configurations, timing their entry into the vulnerable Forge positions, investing in early-game Astral Houses, and effectively utilizing their Hand to mask their true operational capacity.
+Kismeta offers a robust competitive environment. Luck is present in the dice, but it acts as changing terrain rather than the arbiter of victory. A skilled player consistently outperforms an unskilled one by planning Attunements several Ages ahead, placing Astral Houses early, timing their entry into the Forge, and keeping enough hidden in Hand to survive the Summer that follows.
 
-It heavily rewards forward-planning, flexibility, and sharp defensive management.
+It rewards forward planning, flexibility, and sharp defensive management.

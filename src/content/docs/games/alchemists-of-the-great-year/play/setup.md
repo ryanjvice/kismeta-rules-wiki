@@ -5,82 +5,55 @@ description: "Setting the table, game modes, Crucible deck, and first Agekeeper.
 
 ## I. Set the Table {#i-set-the-table}
 
-- Place the Great Year Board game board in the center of the play area.
-- Sort the Kismeta cards into two piles, Kismeta Cards (Blue) and Crucible Cards (Red).
-- Common Deck (Blue): Shuffle all cards and place them face down by the game board.
-- Crucible Deck (Red): Place next to the Great Year board. You'll build the Deck in step _IV. Build the Crucible Deck._
+- Place the Great Year Board in the center of the play area.
+- Sort the cards into two decks: Kismeta Cards (blue back) and Crucible Cards (red back).
+- **Kismeta Deck:** shuffle all cards and place the deck face down beside the board.
+- **Crucible Deck:** set the Crucible cards beside the board. You build that deck in step _IV. Build the Crucible Deck._
 - Set the following components within easy reach:
-  - 1 Agekeeper's Key: 1 black pawn game piece; _(or a magical trinket from your home.)_
-  - 1 Cosmic Age Dice: (12-sided Die, black)
-  - Reagents: Keep nearby.
+  - 1 Agekeeper's Key: a black pawn game piece, _(or a magical trinket from your home.)_
+  - 1 Cosmic Age Die: 12-sided, black.
+  - Reagent tokens and the Essence bank.
 
 ## II. Become an Alchemist {#ii-become-an-alchemist}
 
 Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.
 
-- **1 Crucible Codex:** Dual-sided card; Crucible Codex & Quick Reference Guide on reverse.
-- **4 Coals:** Small black crystal pieces; Keep these nearby.
+- **8 Essence:** take 2 Essence of each Element (Fire, Earth, Air, and Water).
 
 ### Components of a matching color:
 
-- **4 Astral House Tokens**
-- **1 Meeple:** Wooden game piece; Keep this nearby.
-- **1 Philosopher's Stone:** Place this on the "START" space in your section of the Mantle Ring.
-- **1 Zodiac Die:** 12-sided Die, matching your chosen color; Keep this nearby.
+- **4 Astral Houses:** wooden cylinder tokens.
+- **6 Coal:** wooden discs. Keep these in your personal supply.
+- **1 Meeple:** keep this nearby.
+- **1 Philosopher's Stone:** place it on the START space in your section of the Mantle Ring.
+- **1 Zodiac Die:** 12-sided, matching your chosen color. Each Sign on the Zodiac Wheel carries a number from 1 to 12. Whenever you roll, place the die on the Sign bearing the number you rolled.
 
 ## III. Select a Game Mode {#iii-select-a-game-mode}
 
-Choose your Game Mode before continuing. Each Mode adjusts the starting conditions and the game's economy. The round structure, phases, and rules remain as outlined in this guide for all modes.
-<div class="game-mode-callout" data-modes="quickplay magnus">
-Look for the "⚙️" icon in the Game Guide, highlighting modifiers. Continue to _Build The Crucible Deck._
-
-</div>
+Choose your Game Mode before continuing. The Mode you pick sets the difficulty of the Crucible Deck you build in the next step, and with it the length and weight of the game. The round structure, phases, and rules are identical in all three modes.
 
 ### 1️⃣ QUICKPLAY / FIRST PLAY
 
-_Recommended for first playthroughs._
-
-- **Crucible Deck:** Use the Quickplay deck build.
-- **Astral Houses:** Built by paying 1 Kismeta Card whose Planet matches your current Zodiac Sign.
-- **Reagent Crafting:** Light a Cauldron by placing a Coal in it, then discard 3 matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.
+_Recommended for first playthroughs._ Weighted toward Group A and B Crucible Cards, with their smaller Attunements, lighter Reagent costs, and single-Furnace Heat requirements. Expect 1 to 2 hours.
 
 ### 2️⃣ STANDARD GAME
 
-_Recommended once you are familiar with the game rules & game flow._
-
-- Play the game as written throughout this guide.
-<div class="game-mode-callout" data-modes="quickplay magnus">
-- Ignore all ⚙️ Game Mode Modifiers.
-- Use the Standard deck build.
-
-</div>
+_Recommended once you are familiar with the rules and the flow of an Age._ A balanced spread across all four Card Groups. Expect 2 to 3 hours.
 
 ### 3️⃣ MAGNUS ALCHEMIST (MASTERY)
 
-_For those returning from previous Great Years who seek an even greater challenge._
-
-- All rules from the Standard mode apply.
-- Use the Magnus Alchemist deck build.
-- Alignments between Players influence all Duels, Gambits & Oppositions.
-
-#### Player to Player Alignments:
-
-Players' Zodiac Sign Alignments affect their Trading, Dueling, Gambits, and Oppositions.
-
-- **Aligned:** Players' Zodiac Signs share at least 1 Aspect in common
-- **Misaligned:** Players' Zodiac Signs do not share any Aspects
-- **Trades:** Aligned players trade freely. Misaligned players must trade 2:1 in favor of the non-initiating player.
-- **Duels, Gambits & Oppositions:** Challengers gain +1 to their dice roll (Duels & Gambits) or Alignment Points (Oppositions) when confronting a Misaligned opponent. Misalignment is checked at the start of the challenge using each player's current Zodiac Die result, before the Opponent Age is set.
-- Aligned players have no additional bonus in Duels, Gambits, or Oppositions.
+_For those returning from previous Great Years who seek a greater challenge._ Weighted toward Group C and D Crucible Cards, which demand mixed Planet and Element Attunements, heavy Reagent payments, and Heat in two Furnaces at once. Expect 3 hours or more.
 
 ## IV. Build the Crucible Deck {#iv-build-the-crucible-deck}
 
-Each Crucible Card is one of the four stage-cards you'll work through this game to complete the Great Work, revealing an Alchemical Formula once activated.
+Each Crucible Card is one of the four Stage cards you work through this game to complete the Great Work. Its face shows an Alchemical Formula: an Attunement, a Reagent cost, and a Furnace Heat requirement.
 
-- **Card Groups:** Crucible Cards are organized into four Card Groups: A, B, C, and D. Each card has a small letter in the lower left corner of the face side indicating its Card Group.
-- Sort the Crucible Cards into Groups A-D. Shuffle each group separately.
-- Choose the Game Mode you want to play (I. Curated Builds, or II. Random Build). Follow the Table below to determine the number of cards needed from each Card Group per number of players in the game.
-- Blindly draw the appropriate number of cards from each group, as shown below.
+- **Card Groups:** Crucible Cards are organized into four Card Groups: A, B, C, and D. Each card has a small letter in the lower left corner of its face indicating its Card Group. Groups run from A (lightest) to D (heaviest).
+- Sort the Crucible Cards into Groups A through D. Shuffle each group separately.
+- Choose a builder below (I. Curated Builds, or II. Random Build). Follow the table to determine how many cards to draw from each Group for your player count.
+- Blindly draw the appropriate number of cards from each Group.
+- Shuffle the drawn cards together to form the Crucible Deck and place it beside the board.
+- Return any unused Crucible Cards to the box. They will not be used this game.
 
 **I. CURATED BUILDS (Preset Difficulty Levels)**
 
@@ -96,31 +69,25 @@ Each Crucible Card is one of the four stage-cards you'll work through this game 
 i. Shuffle all 22 Crucible Cards together.
 ii. Blindly draw four cards for each player in the game.
 
-- Once all cards have been drawn, shuffle and form the Crucible Deck for this game. Place the Crucible Deck beside the Great Year board.
-- Return any unused Crucible Cards to the game box; they will not be used in this game.
-
 ## V. Determine the First Agekeeper {#v-determine-the-first-agekeeper}
 
-The Agekeeper sets the Cosmic Age, deals the Harvest, oversees Oppositions in Autumn, and passes the Key each round.
+- Everyone rolls their Zodiac Die. The highest number becomes the first Agekeeper. Reroll ties.
+- The first Agekeeper takes the Agekeeper's Key.
+- The Key passes clockwise at the end of each Age.
 
-- Everyone rolls their Zodiac Die — highest becomes first Agekeeper (reroll ties)
-- First Agekeeper takes the Agekeeper's Key
-- Key passes clockwise at the end of each round
+### The Agekeeper's Responsibilities:
 
-### Agekeeper Roles:
-
-- **Setting the Cosmic Age:** You roll the Cosmic Age Die to start the round.
-- **Managing the Kismeta Card Deck:** You deal the Harvest cards to all players and manage the discard pile.
-- **Transit the Age:** Prepare the play area for the next Age. Pass the Agekeeper's Key clockwise at the end of every round.
+- **Set the Cosmic Age:** roll the Cosmic Age Die at the start of each Age and place it on the Sign bearing that number.
+- **Manage the deck:** deal the Spring cards and manage the Kismeta discard pile.
+- **Reset the Great Year Board:** prepare the play area for the next Age and pass the Agekeeper's Key clockwise.
 
 ## VI. Deal the Crucible Cards {#vi-deal-the-crucible-cards}
 
 The first Agekeeper finishes game prep. When this step is done, the first Cosmic Age begins.
 
-- Shuffle the Crucible Deck; tap twice to cleanse
-- Deal four Crucible Cards face down to each player
-- Each player arranges them in a row along the edge of the Great Year board
-- Place one Molten Coal on each Crucible Card (cards are Dormant)
-- Agekeeper deals one face-up Common Card to each Spread (redeal if Major Arcana)
+- Shuffle the Crucible Deck; tap twice to cleanse.
+- Deal four Crucible Cards **face up** to each player.
+- Each player arranges them in a row along the edge of the Great Year Board. Every card's Formula is visible to all players from the start.
+- The Agekeeper deals one face-up Minor Arcana card from the Kismeta Deck into each player's Spread. Redeal if a Major Arcana card is drawn.
 
 The first Cosmic Age begins!

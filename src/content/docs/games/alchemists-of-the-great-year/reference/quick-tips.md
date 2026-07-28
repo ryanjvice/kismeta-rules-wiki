@@ -3,20 +3,20 @@ title: "Quick Tips"
 description: "Practical advice for new and returning alchemists."
 ---
 
-Keep these principles in mind as you find your footing across the first few rounds.
+Keep these principles in mind as you find your footing across the first few Ages.
 
-1. **Your Alignments Shape the Round:** Every Harvest bonus, Opposition advantage, and Gambit opportunity flows from the Aspect Alignments between the Cosmic Age and each of your inventory items.
+1. **Your Alignments Set Your Income.** Every Essence you earn comes from matching your Harvest Sources against the three Aspects of the Cosmic Age. A source that matches all three at once is worth six times a bare Element match, so chase Perfect Matches wherever you can engineer them.
 
-2. **Your Spread Is Your Engine:** Cards in your Spread count toward Alignment and build your Stelliums. Cards in your Hand are hidden and mostly dormant. Build your Spread deliberately each round — what's visible is what works.
+2. **Your Spread Is Your Engine.** Spread cards have active effects, form Stelliums, craft Coal and Astral Houses, pay Attunements, and score at the Harvest. Hand cards do almost none of that. What is visible is what works, and what is visible is also what a rival can take.
 
-3. **Watch for Stelliums:** Three cards of the same Planet in your Spread form a Stellium, unlocking that Planet's effect for as long as you hold it. Check the Planet Stellium Codex early, and watch your rivals' Spreads — a Duel that breaks a 3-card Stellium is often a bigger swing than stealing any single card for its own sake.
+3. **Watch the Furnace, Not Just the Formula.** A Furnace holds only three Coal for the whole table. If your Formula needs Radiant Heat, you need all three spaces, and every rival who fuels that Furnace first has taken one away from you. Fuel early in an Age when your Sign gives you access.
 
-4. **Light the Right Cauldron First:** Each Crucible Card's Coal lights the Cauldron shown beside its Activation Formula on your Crucible Codex. The color matching also helps you track which Codex card sets you have and haven't collected yet. Think ahead — activate the Crucible Card whose Cauldron unlocks the Reagent type you'll need most, as early as possible. (See Correspondence table.)
+4. **Your Sign Gates Everything for the Age.** Your Zodiac Die roll decides which Furnace you may fuel and where you may build a House. When your roll opens the Furnace you need, drop everything and fuel it. That window may not come again for several Ages.
 
-5. **Crafting Reagents from Your Hand:** Don't overlook your Hand when crafting Reagents. Cards in your Hand can be used alongside Spread cards to pay the 3-card cost. By crafting from your Hand, you keep the cards in your Spread active and ready to complete a card set from your Codex, an Alignment for a Crucible Card, or a Stellium.
+5. **Astral Houses Compound.** A House is a Harvest Source every Autumn for the rest of the game, and it fills an Attunement slot every Firing without ever being spent. A House built in the first Age pays out over and over. A House built in the last Age barely pays at all.
 
-6. **Astral Houses Are Your Anchor:** Build Astral Houses early. Each House acts as a permanent Alignment source for Harvesting Bonus cards every Spring for the rest of the game. A House built in round one compounds its advantage over every subsequent Age. A House built in the final round is barely worth the cost.
+6. **Distill Before You Need It.** Reagents pay Formulas, declare Sieges, buy Adepts, and Rekindle a Seized Stone. Essence sitting in your bank does none of those things. Convert steadily rather than in a panic.
 
-7. **Adept Cards Synergies:** Your Arcanum has two Adept slots (three with the Hermit) that, as a pair, permanently add their Zodiac Sign Aspects to all calculations. A strong pair spans two different Signs, preserving bonuses even as the Cosmic Age shifts. When a new Adept appears, consider how it complements your existing one. Overlapping Signs with your Astral Houses create a strong Alignment advantage that rivals can't disrupt.
+7. **Adept Cards Are Permissions.** An Adept never hands you a bonus, it lifts a restriction: fuel any Furnace, build on any Sign, ignore Card Lock, Siege without paying. Pick the one that unlocks the part of your engine that is jammed, and consider which Sign it keys to, because a Resonant Adept is dramatically stronger.
 
-8. **Protect Your Progress with Wards:** Setting even 1–2 Reagents as Ward Reagents beside your Forging Stone makes opponents pay to declare an Opposition against you. An unprotected Stone is a free target. Defend your Crucible and Adept cards by winning the Gambits declared against them, and keep Salt in reserve to pay Bail if one is Arrested.
+8. **Time Your Entry into the Forge.** Firing is a commitment: your Stone is exposed for exactly one Summer. Fire in an Age when your rivals are short on Reagents, or when your Hand is deep enough to win the Siege that follows. Holding a few cards back in your Hand is your entire defense.
