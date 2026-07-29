@@ -7,7 +7,7 @@ description: "Everything in the box."
 
 **Board & Cards**
 
-- **1 Great Year Board** (includes the Zodiac Wheel, the Mantle Ring, the Forge, Stasis, the Altar of Kismeta, the four shared Furnaces, and a Codex panel for each player showing the Coal and Reagent costs and the six Stellium effects)
+- **1 Great Year Board** (includes the Zodiac Wheel, the Mantle Ring, the Forge, Stasis, the Altar of Kismeta, the four shared Furnaces, the **Bazaar**, and a Codex panel for each player showing the Coal and Reagent costs)
 - **Kismeta Card Deck** (134 cards, blue back: 112 Minor Arcana + 22 Major Arcana: 12 Adept, 10 Fate)
 - **Crucible Card Deck** (22 cards, red back: Groups A, B, C, D; 4 per player, per game)
 
@@ -40,4 +40,5 @@ Every ring of the Great Work is printed on the board. Working from the outside i
 - **The Forge.** Four stations at the heart of the board, passed through in order: Lead (1), Bronze (3), Silver (5), and Gold (7). There is only one of each, so every Alchemist competes for the same four stations. A Stone in the Forge is working through a Transmutation Stage, and is exposed to Siege for the single Summer it spends there.
 - **The Altar of Kismeta.** The center of the board, position 8, marks the end of the Great Work. The first Stone to arrive wins the game.
 - **The Furnaces.** Four rosettes at the corners of the board, one for each suit and Element: Wands and Fire (red), Cups and Water (blue), Swords and Air (yellow), and Pentacles and Earth (green). Coal is placed here to raise your Heat. Each Furnace holds three Coal in total, shared among all players and claimed first come, first served.
-- **Codex Panels.** The four framed panels along the board's edges are your working areas. Your Codex lists the Coal and Reagent costs and the six Stellium effects, and the space around it holds your Tableau: your Spread, your Hand, and your Arcanum.
+- **The Bazaar.** A shared reference area on the board, printed where the Stellium tracker once stood. It lists every fixed exchange rate in the game, so no one has to hunt through the rules mid-turn.
+- **Codex Panels.** The four framed panels along the board's edges are your working areas. Your Codex lists the Coal and Reagent costs, and the space around it holds your Tableau: your Spread, your Hand, and your Arcanum.

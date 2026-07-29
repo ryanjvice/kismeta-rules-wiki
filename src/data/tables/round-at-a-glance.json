@@ -5,29 +5,29 @@
       "id": "spring",
       "icon": "🌸",
       "title": "Spring",
-      "subtitle": "Set the Age & Gather Resources",
-      "summary": "Spring ushers in a new Cosmic Age. Set the Cosmic Age, determine your Zodiac sign, and receive your Harvest. Manage your inventory wisely and prepare for the Age ahead."
+      "subtitle": "Set the Age, Deal the Cards & Build Your Tableau",
+      "summary": "Set the Cosmic Age, take the Gift of the Age, roll your Sign, receive 3 Kismeta cards, build your Tableau, and lock cards until Winter."
     },
     {
       "id": "summer",
       "icon": "☀️",
       "title": "Summer",
-      "subtitle": "Trade, Build & Prepare",
-      "summary": "The Sun shines brightly as you busy yourself crafting resources and consorting with your rivals, bartering over trades, initiating duels, and risking your luck in gambits."
+      "subtitle": "Craft, Distill, Trade & Contest",
+      "summary": "Craft Houses and Mansions, Distill Reagents, trade with rivals, Duel for cards, Extinguish Coal, and Siege exposed Stones."
     },
     {
       "id": "autumn",
       "icon": "🍂",
       "title": "Autumn",
-      "subtitle": "Light Cauldrons, Oppose & Conduct the Great Work",
-      "summary": "As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to light Cauldrons, contest rivals for Alignment supremacy, and advance your Philosopher's Stone across the game board, weaving between the safety of the Mantle Ring and the fiery Forge."
+      "subtitle": "Harvest, Fuel & Conduct the Great Work",
+      "summary": "Harvest Essence by Alignment, fuel Furnaces with Coal, then Fire, Temper, or Rekindle your Stone as the Great Work demands."
     },
     {
       "id": "winter",
       "icon": "⛰️",
       "title": "Winter",
       "subtitle": "Final Actions & Reset",
-      "summary": "Winter closes the Cosmic Age. Unlock cards, craft Reagents from your inventory before limits are enforced, place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise."
+      "summary": "Unlock cards, optionally wager on the next Age, enforce limits, then Transit: shuffle the discard pile and pass the Key."
     }
   ]
 }

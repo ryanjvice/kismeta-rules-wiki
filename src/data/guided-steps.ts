@@ -11,6 +11,8 @@ export type GuidedEmbed =
   | "crucible-deck"
   | "harvest-order"
   | "round-at-a-glance"
+  | "engine-building"
+  | "transmutation-process"
   | "summer-flow"
   | "autumn-flow"
   | "winter-flow";
@@ -23,13 +25,9 @@ export type GuidedStep = {
   learnMorePath?: string;
   learnMoreHash?: string;
   phase?: GuidedPhase;
-  /** Step index within phase (for progress label) */
   phaseStep?: number;
-  /** Total steps in this phase */
   phaseTotal?: number;
-  /** Setup III — body overrides per selected game mode */
   modeBody?: Partial<Record<GameMode, string>>;
-  /** Embedded interactive UI on this step */
   embed?: GuidedEmbed;
 };
 
@@ -42,12 +40,12 @@ const GUIDED_STEPS: GuidedStep[] = [
     phaseTotal: 7,
     body: "<p>Unbox and confirm you have everything before setting the table. Group cards and dice so they are easy to reach during setup.</p>",
     checklist: [
-      "Great Year Board",
+      "Great Year Board (Zodiac Wheel, Mantle Ring, Forge, Furnaces, Bazaar, Codex panels)",
       "134 Kismeta Cards (blue) and 22 Crucible Cards (red)",
-      "4 Crucible Codex cards (one per player)",
       "1 Cosmic Age Die (black) and 4 Zodiac Dice (player colors)",
-      "Per player: Philosopher's Stone, Meeple, 4 Astral House tokens, 4 Coals",
-      "Reagent tokens (Sulphur, Quicksilver, Aqua Regia, Vitriol, Salt)",
+      "Per player: Philosopher's Stone, Meeple, 4 Astral House tokens, 6 Coal",
+      "Reagent tokens (Sulfur, Vitriol, Quicksilver, Aqua Regia)",
+      "Essence bank (four Elements)",
       "1 Agekeeper's Key",
     ],
     learnMorePath: "learn/components",
@@ -62,9 +60,9 @@ const GUIDED_STEPS: GuidedStep[] = [
     checklist: [
       "Place the Great Year Board in the center",
       "Sort Kismeta Cards (blue) and Crucible Cards (red) into separate piles",
-      "Shuffle the Common Deck face down beside the board",
-      "Place the Crucible pile next to the board (you will build the deck in Setup IV)",
-      "Set out the Agekeeper's Key, Cosmic Age Die, and Reagents sorted by color",
+      "Shuffle the Kismeta Deck face down beside the board",
+      "Set the Crucible cards beside the board (you will build the deck in Setup IV)",
+      "Set out the Agekeeper's Key, Cosmic Age Die, Reagent tokens, and Essence bank",
     ],
     learnMorePath: "play/setup",
     learnMoreHash: "i-set-the-table",
@@ -77,10 +75,10 @@ const GUIDED_STEPS: GuidedStep[] = [
     phaseTotal: 7,
     body: "<p>Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.</p>",
     checklist: [
-      "1 Crucible Codex (dual-sided)",
-      "4 Coals",
-      "4 Astral House tokens (matching your color)",
-      "1 Meeple (matching your color)",
+      "8 Essence: 2 of each Element (Fire, Water, Air, Earth)",
+      "6 Coal (wooden discs in your color)",
+      "4 Astral House tokens",
+      "1 Meeple",
       "1 Philosopher's Stone on START in your Mantle Ring section",
       "1 Zodiac Die matching your color",
     ],
@@ -96,11 +94,11 @@ const GUIDED_STEPS: GuidedStep[] = [
     body: "<p>You chose a game mode at the start of guided play. Confirm these rules apply to your table.</p>",
     modeBody: {
       quickplay:
-        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs.</p><ul><li>Use the <strong>Quickplay</strong> Crucible deck build.</li><li>Astral Houses: pay <strong>1</strong> Kismeta Card whose Planet matches your current Zodiac Sign.</li><li>Reagent Crafting: Light a Cauldron by placing a Coal in it, then discard <strong>3</strong> matching-Suit cards to craft 1 Reagent of that type. No Cauldron modifier applies in Quickplay.</li></ul>",
+        "<p><strong>Quickplay / First Play</strong> — recommended for first playthroughs. Use the <strong>Quickplay</strong> Crucible deck build (heavier Groups A and B, lighter C and D).</p>",
       standard:
-        "<p><strong>Standard Game</strong> — full rules once you know the flow.</p><ul><li>Play as written in the guide; ignore ⚙️ Game Mode Modifiers.</li><li>Use the <strong>Standard</strong> Crucible deck build.</li></ul>",
+        "<p><strong>Standard Game</strong> — balanced Crucible deck build across Groups A–D once you know the flow.</p>",
       magnus:
-        "<p><strong>Magnus Alchemist</strong> — mastery mode for returning players.</p><ul><li>All Standard rules apply; use the <strong>Magnus</strong> deck build.</li><li>Player Alignments affect Trades, Duels, Gambits, and Oppositions.</li><li>Misaligned trades are 2:1 in favor of the non-initiating player.</li><li>Misaligned challengers gain +1 to dice rolls in Duels and Gambits, or +1 Alignment Points in Oppositions.</li></ul>",
+        "<p><strong>Magnus Alchemist</strong> — mastery mode for returning players. Use the <strong>Magnus</strong> Crucible deck build (heavier Groups C and D).</p>",
     },
     learnMorePath: "play/setup",
     learnMoreHash: "iii-select-a-game-mode",
@@ -117,7 +115,7 @@ const GUIDED_STEPS: GuidedStep[] = [
       "Sort Crucible Cards into groups A, B, C, and D",
       "Shuffle each group separately",
       "Draw the counts shown in the builder (curated or random)",
-      "Shuffle drawn cards into the Crucible Deck beside the board",
+      "Shuffle drawn cards together to form the Crucible Deck beside the board",
       "Return unused Crucible Cards to the box",
     ],
     learnMorePath: "play/setup",
@@ -129,11 +127,11 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "setup",
     phaseStep: 6,
     phaseTotal: 7,
-    body: "<p>The Agekeeper sets the Cosmic Age, deals the Harvest, oversees Oppositions in Autumn, and passes the Key each round.</p>",
+    body: "<p>The Agekeeper sets the Cosmic Age each Spring, deals Kismeta cards, manages the deck, and resets the board at Transit.</p>",
     checklist: [
       "Everyone rolls their Zodiac Die — highest becomes first Agekeeper (reroll ties)",
       "First Agekeeper takes the Agekeeper's Key",
-      "Key passes clockwise at the end of each round",
+      "Key passes clockwise at the end of each Age",
     ],
     learnMorePath: "play/setup",
     learnMoreHash: "v-determine-the-first-agekeeper",
@@ -147,10 +145,8 @@ const GUIDED_STEPS: GuidedStep[] = [
     body: "<p>The first Agekeeper finishes game prep. When this step is done, the first Cosmic Age begins.</p>",
     checklist: [
       "Shuffle the Crucible Deck; tap twice to cleanse",
-      "Deal four Crucible Cards face down to each player",
-      "Each player places four cards in a row along their board edge",
-      "Place one Molten Coal on each Crucible Card (cards are Dormant)",
-      "Agekeeper deals one face-up Common Card to each Spread (redeal if Major Arcana)",
+      "Deal four Crucible Cards face up to each player along the board edge",
+      "Deal one face-up Minor Arcana card from the Kismeta Deck to each player's Spread (redeal if Major Arcana)",
     ],
     learnMorePath: "play/setup",
     learnMoreHash: "vi-deal-the-crucible-cards",
@@ -164,87 +160,90 @@ const GUIDED_STEPS: GuidedStep[] = [
   },
   {
     id: "spring-1",
-    title: "Spring: Set the Cosmic Age & Gather Resources",
+    title: "Spring: Set the Cosmic Age",
     phase: "spring",
     phaseStep: 1,
     phaseTotal: 5,
-    body: "<p>Spring ushers in a new Cosmic Age. Set the Cosmic Age, determine your Zodiac sign, and receive your Harvest. Manage your inventory wisely and prepare for the Age ahead.</p>",
+    body: "<p>Spring ushers in a new Cosmic Age. The Agekeeper rolls the Cosmic Age Die and announces the Sign, Planet, and Element that govern this Age. Every player takes the Gift of the Age: 1 Essence matching the Cosmic Age's Element.</p>",
     checklist: [
-      "Roll the 12-sided Cosmic Age Die",
-      "Read the Sign and Aspects aloud",
-      "Apply the Cosmic Effect for the entire round",
+      "Agekeeper rolls the Cosmic Age Die onto the matching Sign",
+      "Read the Sign, Planet, and Element aloud",
+      "All players take 1 Essence of the Cosmic Age's Element",
       "Resolve any Fateful Wagers from the previous Winter",
     ],
     learnMorePath: "play/round-overview",
-    learnMoreHash: "1-set-the-cosmic-age",
+    learnMoreHash: "1-set-the-age",
   },
   {
     id: "spring-2",
-    title: "Spring: Determine Your Sign",
+    title: "Spring: Set Your Zodiac Sign",
     phase: "spring",
     phaseStep: 2,
     phaseTotal: 5,
-    body: "<p>Every player rolls their Zodiac Die and moves their Meeple to the rolled Sign. Your Sign is your cosmic identity for this Age. It shapes your Alignments and grants you a personal Cosmic Effect active for the full round.</p>",
+    body: "<p>Every player rolls their Zodiac Die and places their Meeple on the rolled Sign. Your Sign sets which Furnace you may fuel, where you may build an Astral House, and how you Align at Harvest and in Sieges for the rest of the Age.</p>",
     checklist: [
-      "All players roll simultaneously",
-      "Move Meeples to rolled Signs on the Zodiac Wheel",
-      "Note the Cosmic Age's Effect and your Sign's personal Cosmic Effect",
+      "All players roll their Zodiac Die",
+      "Place Meeples on rolled Signs on the Zodiac Wheel",
     ],
     learnMorePath: "play/round-overview",
-    learnMoreHash: "2-determine-your-sign",
+    learnMoreHash: "2-set-your-zodiac-sign",
   },
   {
     id: "spring-3",
-    title: "Spring: Harvest Kismeta Cards",
+    title: "Spring: Deal the Kismeta Cards",
     phase: "spring",
     phaseStep: 3,
     phaseTotal: 5,
-    body: '<p>All players begin with 3 Kismeta Cards. Earn Bonus Cards by aligning your inventory with the Cosmic Age\'s Aspects. Each player calculates their own total first; the Agekeeper then deals the full Harvest.</p><ol class="game-table__steps"><li class="game-table__step"><span class="game-table__step-label">Base Harvest</span><p class="game-table__step-body">All players begin with 3 Kismeta Cards. This is always granted regardless of Alignment.</p></li><li class="game-table__step"><span class="game-table__step-label">Calculate Bonus Cards</span><p class="game-table__step-body">Each player tallies bonus cards from all Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Cards. Each source scores its single highest-matching Aspect.</p></li><li class="game-table__step"><span class="game-table__step-label">Agekeeper\'s Boon</span><p class="game-table__step-body">If the Agekeeper\'s rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player\'s tally.</p></li><li class="game-table__step"><span class="game-table__step-label">Deal the Harvest</span><p class="game-table__step-body">The Agekeeper deals each player their full Harvest total face-down, one at a time.</p></li></ol><div class="doc-table"><table><thead><tr><th>Bonus Source</th><th>How It Scores</th></tr></thead><tbody><tr><td>Zodiac Die</td><td>Compare your rolled Sign\'s Aspects against the Cosmic Age — score the highest match</td></tr><tr><td>Astral Houses</td><td>Each House is scored independently and stacks with all other sources</td></tr><tr><td>Adept Cards</td><td>Each active Adept Card in your Arcanum carries a Zodiac Sign Aspect; scored independently</td></tr><tr><td>Spread Cards</td><td>Each Spread card checked against Cosmic Age Aspects (Planet and Suit/Element) — score its single highest match</td></tr></tbody></table></div><div class="doc-table"><table><thead><tr><th>Aspect Match</th><th>Bonus Cards</th></tr></thead><tbody><tr><td>Sign</td><td>+3</td></tr><tr><td>Planet</td><td>+2</td></tr><tr><td>Element</td><td>+1</td></tr><tr><td>No Match</td><td>+0</td></tr></tbody></table></div><p><em>Each source scores its single highest-matching Aspect only — do not stack.</em></p>',
+    body: "<p>The Agekeeper deals <strong>3 Kismeta cards face-down</strong> to each player. Fate Cards resolve immediately when drawn; Adept Cards may be purchased for <strong>3 Essence, of any type</strong>, or discarded.</p>",
+    checklist: [
+      "Agekeeper deals 3 cards per player, face-down",
+      "Resolve any Fate Cards drawn during the deal",
+    ],
     learnMorePath: "play/round-overview",
-    learnMoreHash: "3-harvest-kismeta-cards",
+    learnMoreHash: "3-deal-the-kismeta-cards",
   },
   {
     id: "spring-4",
-    title: "Spring: Commune With Your Tableau",
+    title: "Spring: Build Your Tableau",
     phase: "spring",
     phaseStep: 4,
     phaseTotal: 5,
-    body: "<p>Your <strong>Tableau</strong> is your full personal inventory of Kismeta Cards, arranged across three zones.</p><p><strong>Spread</strong> — place Minor Arcana face-up in front of you. Spread cards carry active effects: they count toward Alignment and can Light Cauldrons, Fire your Stone, and craft Reagents — but they are visible to rivals and can be lost in Duels.</p><p><strong>Hand</strong> — keep remaining Minor Arcana hidden. Hand cards stay inactive; they can contribute to Reagent Crafting and Oppositions, but cannot be traded, wagered, or targeted in a Duel.</p><p><strong>Arcanum</strong> — any Major Arcana go here. Fate Cards are placed face-up immediately when drawn, even mid-Harvest. Adept Cards must be purchased when drawn (or discarded); you may hold up to two at a time (three with The Hermit). See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept cards</a> and <a href='/games/alchemists-of-the-great-year/rules/minor-arcana/'>Minor Arcana</a>.</p><p>📌 <strong>Your Spread is your engine</strong> — cards here drive Alignment, Crucible activation, and Crafting. Your Hand is your hidden reserve, safe from theft but invisible to rivals.</p>",
+    body: "<p>Your <strong>Tableau</strong> is everything you have in play, arranged across three zones.</p><p><strong>Spread</strong> — Minor Arcana played face-up. Effects are active; cards craft Coal, pay Attunements, form Stelliums, and score at the Harvest. They can be lost in Duels.</p><p><strong>Hand</strong> — Minor Arcana held privately. Effects are inactive; Hand cards are safe from Duels and may be committed in Sieges.</p><p><strong>Arcanum</strong> — Major Arcana (Fates and Adepts). You may hold up to two Adept Cards.</p><p>See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept cards</a> and <a href='/games/alchemists-of-the-great-year/rules/minor-arcana/'>Minor Arcana</a>.</p>",
     checklist: [
-      "Build your Tableau: Spread, Hand, and Arcanum zones",
-      "Consider your goals for this round",
+      "Arrange cards across Spread, Hand, and Arcanum",
+      "Consider your goals for this Age",
     ],
     learnMorePath: "play/round-overview",
-    learnMoreHash: "4️⃣-commune-with-your-tableau",
+    learnMoreHash: "4-build-your-tableau",
   },
   {
     id: "spring-5",
-    title: "Spring: Lock Cards",
+    title: "Spring: Card Lock",
     phase: "spring",
     phaseStep: 5,
     phaseTotal: 5,
-    body: "<p>Once your Tableau is arranged, all cards are locked in their current zones until Phase 4: Winter. Any new cards you gain in Summer or Autumn are automatically added to your Spread.</p><p>📌 <em>Tip: Think before you lock — over-fill your Spread and rivals can steal in Duels; hide too much in Hand and your Crucible engine stalls.</em></p>",
+    body: "<p>Once your Tableau is arranged, cards are locked between Hand and Spread until Winter. New Minor Arcana gained in Summer or Autumn go to your Spread automatically.</p><p>📌 <em>Tip: Your Spread is your engine — visible and active. Your Hand is your reserve for Sieges.</em></p>",
     learnMorePath: "play/round-overview",
     learnMoreHash: "5-card-lock",
   },
   {
     id: "summer",
-    title: "Summer: Trade, Build & Prepare",
+    title: "Summer: Craft, Distill, Trade & Contest",
     phase: "summer",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>The Sun shines brightly as you busy yourself crafting resources and consorting with your rivals, bartering over trades, initiating duels, and risking your luck in gambits.</p>",
+    body: "<p>On your turn, take any Summer actions in any order: craft Houses or Mansions, Distill Reagents, trade with rivals, Duel for cards, Extinguish Coal, or Siege an exposed Stone. Pass when done.</p>",
     embed: "summer-flow",
     learnMorePath: "play/round-overview",
-    learnMoreHash: "trade-build-prepare",
+    learnMoreHash: "phase-2-summer",
   },
   {
     id: "autumn",
-    title: "Autumn: Light Cauldrons, Oppose & Conduct the Great Work",
+    title: "Autumn: Harvest, Fuel & Conduct the Great Work",
     phase: "autumn",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>As the Cosmic Age shifts into Autumn, gather around the Crucible of Kismeta to light Cauldrons, contest rivals for Alignment supremacy, and advance your Philosopher's Stone across the game board — weaving between the safety of the Mantle Ring and the fiery Forge, where your Stone is vulnerable to attack. Each of your four Crucible Cards holds an Alchemical Formula (Reagents and a card set) that must be satisfied to Fire your Stone. Each successful step brings you closer to the Altar of Kismeta. The actions you take during this phase depend on the location of you and your fellow Alchemists' Stones. Take a moment to survey the Forge before you begin.</p><p>Reagent crafting is also available freely on your turn — same rules as Summer. Craft before you Fire if you need a last Reagent.</p><p>📌 <em>Tip: When you Fire, set 1–2 Reagents as Ward Reagents beside your Stone — an unprotected Stone in the Forge is a free target for Opposition.</em></p>",
+    body: "<p>Autumn pays out Essence, fuels Furnaces, and advances the Great Work. Harvest by Aligning your sources with the Cosmic Age, craft Coal to raise Heat, then Fire or Temper your Stone. Rekindle a Seized Stone for 5 Essence if needed.</p><p>📌 <em>Tip: When you Fire, commit up to 3 Reagents as Shield Reagents — rivals must match that number as an Ante to Siege you.</em></p>",
     embed: "autumn-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-3-autumn",
@@ -255,7 +254,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "winter",
     phaseStep: 1,
     phaseTotal: 1,
-    body: "<p>Winter closes the Cosmic Age. Unlock cards, craft Reagents from your inventory before limits are enforced, place a Fateful Wager, enforce card limits, then Transit the Age: shuffle the Common Deck and pass the Agekeeper's Key clockwise.</p>",
+    body: "<p>Winter closes the Cosmic Age. Unlock cards between Hand and Spread, optionally place a Fateful Wager, enforce limits (Spread 7 · Hand 5 · Arcanum 2 Adepts), then Transit: shuffle the discard pile into the Kismeta Deck and pass the Key clockwise.</p>",
     embed: "winter-flow",
     learnMorePath: "play/round-overview",
     learnMoreHash: "phase-4-winter",
@@ -265,7 +264,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     title: "Transit the Age: End of the Round",
     body: "<p>The Agekeeper passes the Key clockwise. A new Cosmic Age begins with Spring unless someone has completed the Great Work.</p>",
     checklist: [
-      "Shuffle the Common Deck (Winter reset)",
+      "Shuffle the Kismeta discard pile back into the deck",
       "Pass the Agekeeper Key to the next player",
       "Start the next Cosmic Age with Spring, or check for a winner",
     ],
@@ -274,7 +273,7 @@ const GUIDED_STEPS: GuidedStep[] = [
   {
     id: "complete",
     title: "Move swiftly, Dear Alchemist...",
-    body: "<p>You have walked through your first Cosmic Age. </p><p>For the next round, repeat <strong>Spring → Summer → Autumn → Winter</strong>.</p><p>Click <strong>Continue Playing</strong> to walk through your next round.</p><p>Click <strong>Open Round at a Glance</strong> to return here.</p><p>Click <strong>Start Over</strong> to start a new game.</p><p>Ready to sharpen your play? See <a href='/games/alchemists-of-the-great-year/reference/quick-tips/'>Quick Tips</a> for practical advice on Alignments, Cauldrons, and Wards.</p>",
+    body: "<p>You have walked through your first Cosmic Age.</p><p>For the next round, repeat <strong>Spring → Summer → Autumn → Winter</strong>.</p><p>Click <strong>Continue Playing</strong> to walk through your next round.</p><p>Click <strong>Open Round at a Glance</strong> to return here.</p><p>Click <strong>Start Over</strong> to start a new game.</p><p>Ready to sharpen your play? See <a href='/games/alchemists-of-the-great-year/reference/quick-tips/'>Quick Tips</a> for practical advice on Alignments, Furnaces, and Sieges.</p>",
     learnMorePath: "rules/round-at-a-glance",
   },
 ];
@@ -295,6 +294,13 @@ const PHASE_LABEL_KEYS: Record<GuidedPhase, string> = {
 
 export function getGuidedSteps(_locale?: string): GuidedStep[] {
   return GUIDED_STEPS;
+}
+
+/** Steps from `startId` through the completion screen (inclusive). */
+export function getGuidedStepsFromId(startId: string): GuidedStep[] {
+  const startIndex = GUIDED_STEPS.findIndex((step) => step.id === startId);
+  if (startIndex === -1) return [];
+  return GUIDED_STEPS.slice(startIndex);
 }
 
 /** Phase-level jump targets for Guided Play navigation (excludes completion screen). */
@@ -337,7 +343,7 @@ export const GUIDED_CONTENT_STEP_COUNT = GUIDED_STEPS.length - 1;
 
 export const GAME_MODE_STORAGE_KEY = "kismeta-game-modes";
 export const GUIDED_PROGRESS_KEY = "kismeta-guided-progress";
-export const GUIDED_PROGRESS_VERSION = 7;
+export const GUIDED_PROGRESS_VERSION = 8;
 
 export function gameModeToStorage(mode: GameMode): {
   quickplay: boolean;

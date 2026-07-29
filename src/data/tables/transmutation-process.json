@@ -1,0 +1,33 @@
+{
+  "intro": "Each Crucible Card drives one Firing. Repeat Attune → Fire → Defend → Temper once per card until your Stone reaches the Altar of Kismeta.",
+  "seasons": [
+    {
+      "id": "fire",
+      "icon": "🔥",
+      "title": "Fire the Stone",
+      "subtitle": "Attune & Enter the Forge",
+      "summary": "Assemble the Attunement on a Crucible Card from your Spread, pay its Reagents and Furnace Heat, and commit up to 3 Shield Reagents. Your Stone leaves the Mantle Ring and enters the Forge."
+    },
+    {
+      "id": "siege",
+      "icon": "⚔️",
+      "title": "Defend Against Siege",
+      "subtitle": "One Summer in the Forge",
+      "summary": "Your Stone is exposed to Siege for the Summer it spends in the Forge. Rivals must match your Shield Reagents as an Ante to attack — the more you commit, the harder you are to Siege."
+    },
+    {
+      "id": "temper",
+      "icon": "⏳",
+      "title": "Temper the Stone",
+      "subtitle": "Advance the Great Work",
+      "summary": "After a full Cosmic Age in the Forge, Temper your Stone to the next Mantle Ring position. Set the spent Crucible Card aside and consume the Coal used for that Stage."
+    },
+    {
+      "id": "rekindle",
+      "icon": "❄️",
+      "title": "Rekindle the Stone",
+      "subtitle": "Recover from Seizure",
+      "summary": "If a rival Seizes your Stone in the Forge, pay 5 Essence of any type to Rekindle it. Your Stone returns to the Mantle Ring so you can Fire again when ready."
+    }
+  ]
+}

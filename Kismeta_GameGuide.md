@@ -16,6 +16,7 @@
   - [The Great Year](#the-great-year)
   - [Alignment](#alignment)
   - [Building Your Engine](#building-your-engine)
+  - [The Bazaar](#the-bazaar)
   - [Transmutation Process](#transmutation-process)
 - [SETUP](#setup)
   - [I. Set the Table](#i-set-the-table)
@@ -34,7 +35,7 @@
 - [QUICK TIPS](#quick-tips)
 - [STRATEGY GUIDE](#strategy-guide)
 - [APPENDIX](#appendix)
-  - [LORE: PROLOGUE - Alchemists Of The Great Year](#lore-prologue---alchemists-of-the-great-year)
+  - [LORE: PROLOGUE ~ Alchemists Of The Great Year](#lore-prologue--alchemists-of-the-great-year)
   - [The Zodiac Wheel](#the-zodiac-wheel)
   - [Correspondence](#correspondence)
   - [KISMETA CARDS](#kismeta-cards)
@@ -63,7 +64,7 @@ Kismeta: Alchemists of the Great Year is a strategic card-and-dice game where yo
 
 **Board & Cards**
 
-- **1 Great Year Board** (includes the Zodiac Wheel, the Mantle Ring, the Forge, Stasis, the Altar of Kismeta, the four shared Furnaces, and a Codex panel for each player showing the Coal and Reagent costs and the six Stellium effects)
+- **1 Great Year Board** (includes the Zodiac Wheel, the Mantle Ring, the Forge, Stasis, the Altar of Kismeta, the four shared Furnaces, the **Bazaar**, and a Codex panel for each player showing the Coal and Reagent costs)
 - **Kismeta Card Deck** (134 cards, blue back: 112 Minor Arcana + 22 Major Arcana: 12 Adept, 10 Fate)
 - **Crucible Card Deck** (22 cards, red back: Groups A, B, C, D; 4 per player, per game)
 
@@ -96,7 +97,8 @@ Every ring of the Great Work is printed on the board. Working from the outside i
 - **The Forge.** Four stations at the heart of the board, passed through in order: Lead (1), Bronze (3), Silver (5), and Gold (7). There is only one of each, so every Alchemist competes for the same four stations. A Stone in the Forge is working through a Transmutation Stage, and is exposed to Siege for the single Summer it spends there.
 - **The Altar of Kismeta.** The center of the board, position 8, marks the end of the Great Work. The first Stone to arrive wins the game.
 - **The Furnaces.** Four rosettes at the corners of the board, one for each suit and Element: Wands and Fire (red), Cups and Water (blue), Swords and Air (yellow), and Pentacles and Earth (green). Coal is placed here to raise your Heat. Each Furnace holds three Coal in total, shared among all players and claimed first come, first served.
-- **Codex Panels.** The four framed panels along the board's edges are your working areas. Your Codex lists the Coal and Reagent costs and the six Stellium effects, and the space around it holds your Tableau: your Spread, your Hand, and your Arcanum.
+- **The Bazaar.** A shared reference area on the board, printed where the Stellium tracker once stood. It lists every fixed exchange rate in the game, so no one has to hunt through the rules mid-turn.
+- **Codex Panels.** The four framed panels along the board's edges are your working areas. Your Codex lists the Coal and Reagent costs, and the space around it holds your Tableau: your Spread, your Hand, and your Arcanum.
 
 ---
 
@@ -121,27 +123,44 @@ The Cosmic Age unfolds through four Seasons, each offering distinct opportunitie
 
 A source that matches more than one Aspect scores every tier it matches. A source that matches all three at once scores the full stack of 6: a **Perfect Match**.
 
+An Astral House upgraded to a **Mansion** doubles its Alignment score, whether at the Harvest or in a Siege. Other doubling effects don't stack with a Mansion's own; the higher of the two applies, not both.
+
 💡 **Example:** the Cosmic Age is Scorpio, whose Aspects are Scorpio, Mars, and Water. A Zodiac Die sitting on Scorpio Aligns on all three and scores 6. An Astral House on Pisces shares only the Element, Water, and scores 1. A Minor Arcana card ruled by Mars shares only the Planet and scores 2.
 
 ## Building Your Engine
 
 You work two economies at once, and they meet at your Crucible Cards.
 
-- **The dice economy.** Your Zodiac Die and your other Harvest Sources pay out **Essence** every Autumn. Distill 3 Essence of one Element to make a **Reagent** of that Element.
-- **The card economy.** Your Kismeta Cards form sets. Spend 3 cards of one suit to craft a **Coal**, and spend 3 cards of one Planet to build an **Astral House**.
+- **The dice economy.** Your Zodiac Die and your other Harvest Sources pay out **Essence** every Autumn. Distill 5 Essence of one Element to make a **Reagent** of that Element.
+- **The card economy.** Your Kismeta Cards form sets. Spend 3 cards of one suit to craft a **Coal**, and spend 3 cards of one Planet to build an **Astral House**. Upgrade a House to an **Astral Mansion** for 2 more cards of that Planet plus a Reagent marker from the supply.
 
 You can push either economy forward on its own, in any Age. They only need to meet when you are ready to Fire your Stone into the Forge.
 
 Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. The journey spans many Cosmic Ages, some spent building your engine, others spent driving your Stone through the Forge. In early Ages, focus on infrastructure: build Astral Houses, buy Adept Cards, hold Stelliums together in your Spread, and bank Essence.
+
+## The Bazaar
+
+A shared reference lives on the board, in the space the old Stellium tracker used to occupy. It lists every fixed exchange rate in the game.
+
+| ITEM | PRICE |
+| :--- | :--- |
+| **Reagent** | 5 Essence of one Element |
+| **Coal** | 3 cards of one suit |
+| **Adept Card** | 3 Essence, of any type |
+| **Rekindle a Stone** | 5 Essence, of any type |
+| **Astral House** | 3 cards of one Planet |
+| **Astral Mansion (upgrade)** | 2 more cards of that Planet, plus a Reagent from the supply |
+
+Formula costs vary by Crucible Card, so check your own for Attunement, Reagents, and Heat.
 
 ## Transmutation Process
 
 | STEP  |     | ACTION               | WHAT HAPPENS                                                                                                                                                                                          |
 | ----- | --- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **1** | 🎴  | **Attune**           | Assemble the Attunement printed on a Crucible Card in your Spread: a count of Element and Planet slots. Spread cards are spent to fill slots. An Astral House fills one slot per Firing and is not spent. |
-| **2** | 🔥  | **Fire the Stone**   | Pay the Crucible Card's full Alchemical Formula: its Attunement, its Reagents, and the Furnace Heat it calls for. Your Stone leaves the Mantle Ring and enters the Forge.                              |
-| **3** | ⚔️  | **Defend the Stone** | Your Stone is exposed to Siege for the single Summer it spends in the Forge. This is when rivals have their clearest chance to stall you.                                                              |
-| **4** | ⏳  | **Temper the Stone** | After a full Age in the Forge, advance your Stone to the next Mantle Ring position. Set the spent Crucible Card aside and consume the Coal used for that Stage.                                        |
+| **2** | 🔥  | **Fire the Stone**   | Pay the Crucible Card's full Alchemical Formula: its Attunement, its Reagents, and the Furnace Heat it calls for. Commit up to 3 Reagents as **Shield Reagents**. Your Stone leaves the Mantle Ring and enters the Forge. |
+| **3** | ⚔️  | **Defend the Stone** | Your Stone is exposed to Siege for the single Summer it spends in the Forge. Rivals must match your Shield Reagents as an Ante to attack. |
+| **4** | ⏳  | **Temper the Stone** | After a full Age in the Forge, advance your Stone to the next Mantle Ring position. Set the spent Crucible Card aside and consume the Coal used for that Stage. |
 
 _Steps 1 through 4 repeat once for each of your four Crucible Cards. Your fourth Tempering advances your Stone to the Altar of Kismeta, completing the Great Work and winning the game._
 
@@ -262,18 +281,19 @@ Each Cosmic Age (round) moves through four Seasons in order: Spring, Summer, Aut
 |                                                           |  **5**   | **Card Lock:** cards are locked between your Hand and Spread until Winter.                                                                             |
 | ☀️ **SUMMER** Craft, Distill, Trade & Contest             |          | _**CRAFT & DISTILL: TAKE ANY ACTION**_                                                                                                               |
 |                                                           |  **1**   | **Craft an Astral House:** spend 3 cards matching your Sign's ruling Planet to build a House on your Sign.                                             |
-|                                                           |  **2**   | **Distill a Reagent:** spend 3 Essence of one Element to take the Reagent of that Element.                                                             |
+|                                                           |  **2**   | **Upgrade to a Mansion:** spend 2 more cards of its Planet and place a Reagent from the supply beneath the House token.                                |
+|                                                           |  **3**   | **Distill a Reagent:** spend 5 Essence of one Element to take the Reagent of that Element.                                                             |
 |                                                           |          | _**CONTEST YOUR RIVALS: TAKE ANY ACTION**_                                                                                                           |
-|                                                           |  **3**   | **Trade:** exchange Adept Cards, Astral Houses, Essence, Kismeta Cards, and Reagents freely.                                                           |
-|                                                           |  **4**   | **Duel:** challenge a rival to a roll of the Zodiac Dice to steal a card from their Spread.                                                            |
-|                                                           |  **5**   | **Extinguish Coal:** use a card effect to remove a rival's Coal from a Furnace and lower their Heat.                                                   |
-|                                                           |  **6**   | **Siege the Forge:** pay 2 Reagents matching the Age's Element to attack a rival's Stone in the Forge.                                                 |
+|                                                           |  **4**   | **Trade:** exchange Adept Cards, Astral Houses, Essence, Kismeta Cards, and Reagents freely.                                                           |
+|                                                           |  **5**   | **Duel:** challenge a rival to a roll of the Zodiac Dice to steal a card from their Spread.                                                            |
+|                                                           |  **6**   | **Extinguish Coal:** use a card effect to remove a rival's Coal from a Furnace and lower their Heat.                                                   |
+|                                                           |  **7**   | **Siege the Forge:** pay an Ante of Reagents equal to the Shield Reagents guarding a rival's Stone in the Forge.                                     |
 | 🍂 **AUTUMN** Harvest, Fuel & Conduct the Great Work      |  **1**   | **Harvest Elemental Essence:** score your Harvest Sources against the Aspects of the Age and take your Essence.                                        |
 |                                                           |  **2**   | **Fuel Your Furnaces:** craft Coal and place it in the Furnace matching your Sign's Element to raise your Heat.                                        |
 |                                                           |          | _**CONDUCT THE GREAT WORK**_                                                                                                                          |
-|                                                           |  **3**   | **Fire the Stone:** complete an Alchemical Formula and send your Stone into the Forge.                                                                 |
+|                                                           |  **3**   | **Fire the Stone:** complete an Alchemical Formula and send your Stone into the Forge. Commit up to 3 Shield Reagents.                               |
 |                                                           |  **4**   | **Temper the Stone:** after a full Age in the Forge, advance your Stone to the next Mantle Ring space.                                                 |
-|                                                           |  **5**   | **Rekindle the Stone ❄️:** pay 2 Reagents to return a Stone from Stasis to its previous Forge position.                                                |
+|                                                           |  **5**   | **Rekindle the Stone ❄️:** pay 5 Essence to return a Stone from Stasis to its previous Forge position.                                                 |
 | ⛰️ **WINTER** Final Actions of the Cosmic Age & Reset     |  **1**   | **Card Unlock:** move cards freely between your Hand and Spread.                                                                                       |
 |                                                           |  **2**   | **Fateful Wager:** bet Cards and Reagents on the next Cosmic Age; double or lose your wager.                                                           |
 |                                                           |  **3**   | **Enforce Card Limits:** Spread 7 cards \| Hand 5 cards \| Arcanum: 2 Adept cards.                                                                     |
@@ -335,7 +355,7 @@ Cards you hold privately are your Hand cards. They are hidden, and their effects
 Any Major Arcana card, Adept or Fate, is played into your Arcanum.
 
 - **Fate Cards:** placed in your Arcanum and resolved at once, even if drawn as part of a face-down deal. Some carry an effect that lasts until Transit; the card states this. Return the card to the Kismeta discard pile at Transit.
-- **Adept Cards:** purchased when drawn. Pay 1 Reagent of the card's Element to add it to your Arcanum, or discard it. Adepts persist across Ages. You may hold two.
+- **Adept Cards:** purchased when drawn. Pay **3 Essence, of any type**, to add it to your Arcanum, or discard it. Adepts persist across Ages. You may hold two.
 
 📌 **Note:** your Spread is your engine. Your Hand is your reserve: invisible to rivals, safe from Duels, and your ammunition in a Siege.
 
@@ -361,12 +381,13 @@ Any of the following activities can be taken in Summer, depending on your goals 
 | -------------------------- | ------------------------------------------------------------------------------------------------------- |
 |                            | _**CRAFT & DISTILL: TAKE ANY ACTION**_                                                                 |
 | **🏰 Craft Astral House**  | Spend 3 cards matching your Sign's ruling Planet to build a House on your Sign.                         |
-| **⚗️ Distill a Reagent**   | Spend 3 Essence of one Element to take the Reagent of that Element.                                     |
+| **🏛️ Upgrade to Mansion**  | Spend 2 more cards of its Planet and place a Reagent from the supply beneath the House token.           |
+| **⚗️ Distill a Reagent**   | Spend 5 Essence of one Element to take the Reagent of that Element.                                     |
 |                            | _**CONTEST YOUR RIVALS: TAKE ANY ACTION**_                                                             |
 | **🤝 Trade**               | Exchange Adept Cards, Astral Houses, Essence, Kismeta Cards, and Reagents freely.                       |
 | **🤺 Duel**                | Challenge a rival to a roll of the Zodiac Dice to steal a card from their Spread.                       |
 | **💨 Extinguish Coal**     | Use a card effect to remove a rival's Coal from a Furnace and lower their Heat.                          |
-| **⚔️ Siege the Forge**     | Pay 2 Reagents matching the Age's Element to attack a rival's Stone in the Forge.                       |
+| **⚔️ Siege the Forge**     | Pay an Ante of Reagents equal to the Shield Reagents guarding a rival's Stone in the Forge.             |
 
 ### 🏰 Craft Astral House
 
@@ -384,16 +405,25 @@ Astral Houses are permanent structures built on the Zodiac Wheel. Only one playe
 | Attunement           | Fills one Attunement slot per Firing, for any Aspect the House carries, and is not spent doing so.                                                          |
 | Permanence           | Once placed, a House stays on the Sign where it was built and keeps working no matter what your Zodiac Die shows in later Ages. Ownership can change hands through Trade, but the House itself never moves. |
 
+### 🏛️ Upgrade to a Mansion
+
+Once a House is built, you may upgrade it to an **Astral Mansion**:
+
+- **Spend 2 more cards** of that Sign's ruling Planet from your Spread.
+- **Place a Reagent token from the supply** beneath the House token to mark the upgrade.
+
+That Reagent is a marker, not a resource: it is never spent from your own stock, never enters your Tableau, and returns to the supply only if the Mansion is ever lost. If a Mansion changes hands through Trade, its Reagent marker and its doubled output go with it. A Mansion doubles its Alignment score at the Harvest and in a Siege.
+
 ### ⚗️ Distill a Reagent
 
-Reagents are refined from Essence, and they pay your Alchemical Formulas, declare your Sieges, and rekindle your Stone.
+Reagents are refined from Essence, and they pay your Alchemical Formulas, shield your Stone, and pay Siege Antes.
 
-- **Spend 3 Essence of one Element** to the bank.
+- **Spend 5 Essence of one Element** to the bank.
 - **Take 1 Reagent** of that Element from the supply.
 
 Distilling is available freely on your turn in Summer, Autumn, and Winter. See the _Correspondence_ table in the Appendix for which Element yields which Reagent.
 
-💡 **Example:** you spend 3 Fire Essence and take 1 Sulfur.
+💡 **Example:** you spend 5 Fire Essence and take 1 Sulfur.
 
 ### 🤝 Trade
 
@@ -438,26 +468,27 @@ _Attack a rival's Stone while it lies exposed._
 
 A Stone is vulnerable while it sits in the Forge. It is exposed for a single Summer, between the Autumn when its owner Fires it and the Autumn when they Temper it.
 
-To declare a Siege, **pay 2 Reagents matching the Cosmic Age's Element** and name a rival whose Stone sits in the Forge. Each Stone may be Sieged only once per Age.
+#### Shield Reagents
 
-#### Resolve in Order
+When you Fire your Stone, commit up to 3 Reagents as **Shield Reagents**. A rival must match them to attack, so a Stone without them stands unguarded.
 
-1. **Roll the Siege Age.** The Agekeeper rolls the Cosmic Age Die to set the Siege Age. Its Sign, Planet, and Element are the Aspects this contest is scored against.
-2. **Open from the Spread.** The Attacker commits up to two Spread cards, sliding them clear of the rest of their Spread, face up. The Defender then commits up to two of their own.
-3. **Roll your Signs.** Both players roll their Zodiac Dice to set their Siege Sign.
-4. **Close from the Hand.** The Defender commits any number of Hand cards face down, then the Attacker does the same.
-5. **Reveal and Score.** Turn all face-down cards up together. Score your Siege Sign against the Siege Age, then add the CV of each committed card whose Planet or Element matches the Siege Age. Siege-related card effects apply in the order they were committed.
-6. **Higher total wins.** The Defender wins ties.
+#### To Declare a Siege
+
+- Choose your target and pay the **Ante** (Reagents equal in number to the Shield Reagents guarding the Stone, in any combination of Elements).
+- Each Alchemist may declare one Siege against a given Stone per Age.
+
+#### Resolve the Siege
+
+1. **Opening Score.** Both players total their current Alignment against the current Cosmic Age (Zodiac Die, Astral Houses, Adept Cards, and Spread Cards).
+2. **Commit from the Hand.** Defender adds Hand cards face down, then Attacker does the same.
+3. **Concede or Continue.** Either player may back out once Hand cards are committed. A conceding Defender moves their Stone to Stasis. A conceding Attacker cannot declare another Siege against this Stone for the rest of its current Transmutation Stage. Nothing committed is lost or burned.
+4. **If Neither Concedes.** Reroll the Cosmic Age Die for a new Siege Age. Turn Hand cards face up, tally again, and the highest total wins (Defender wins ties). The loser burns every Hand card they committed; the winner returns theirs to their Hand.
 
 | SIEGE OUTCOMES |                                                                                                                                                                     |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **RESULT**     | **OUTCOME**                                                                                                                                                         |
-| Attacker Wins  | The Defender's Stone is Seized and moves to a nearby Stasis (❄️) zone. They must pay 2 Reagents to Rekindle it next Autumn. The Attacker claims 2 Reagents of any Element from the supply. |
-| Defender Wins  | The Stone holds and continues its Transmutation. The Defender immediately draws 2 cards into their Hand.                                                             |
-
-#### Ending the Siege
-
-The Cosmic Age Die returns to the Cosmic Age's Sign, and both players return their Zodiac Dice and Meeples to the Signs they held when the Age began. A Siege never changes a player's Sign for the Age. Every committed card returns to the zone it was played from.
+| Attacker Wins  | The Defender's Stone is Seized and moves to their Stasis (❄️) zone. Its Shield Reagents are lost to the supply, and the Attacker takes back their Ante. From the Autumn of the next Age, the Defender may pay 5 Essence to Rekindle the Stone. |
+| Defender Wins  | The Stone holds and continues its Transmutation. Shield Reagents remain intact, and the Attacker's Ante is lost to the supply. The Defender gains a **Besieged Bonus** of +2 for any later Siege against this Stone in its current Stage. |
 
 ---
 
@@ -472,9 +503,9 @@ As the Cosmic Age shifts into Autumn, the heavens pay out, the Furnaces are stok
 | **1️⃣ Harvest Essence**       | Score your Harvest Sources against the Aspects of the Age and take your Essence from the bank.    |
 | **2️⃣ Fuel Your Furnaces**    | Place Coal into the Furnace matching your Sign's Element to raise your Heat.                      |
 |                              | _**CONDUCT THE GREAT WORK**_                                                                      |
-| **3️⃣ Fire the Stone 🔥**     | Complete an Alchemical Formula and send your Stone into the Forge.                                |
+| **3️⃣ Fire the Stone 🔥**     | Complete an Alchemical Formula and send your Stone into the Forge. Commit up to 3 Shield Reagents. |
 | **4️⃣ Temper the Stone ⏳**   | After a full Age in the Forge, advance your Stone to the next Mantle Ring space.                  |
-| **5️⃣ Rekindle the Stone ❄️** | Pay 2 Reagents to return your Stone from Stasis to its previous Forge position.                   |
+| **5️⃣ Rekindle the Stone ❄️** | Pay 5 Essence to return your Stone from Stasis to its previous Forge position.                    |
 
 ### 1️⃣ Harvest Elemental Essence
 
@@ -533,8 +564,9 @@ The four Furnaces prepare your Stone for each Transmutation Stage. Each Furnace 
 _Starting a Transmutation Stage. Available while your Stone is in position 0, 2, 4, or 6._
 
 1. Complete an Alchemical Formula, paying its Attunement, its Reagents, and meeting its Furnace Heat, to send your Stone into the Forge.
-2. A Transmutation Stage takes one full Age. Your Stone is exposed to Siege for the single Summer it spends in the Forge.
-3. The Forge holds one station for each Stage: Lead, Bronze, Silver, and Gold. Every Alchemist competes for the same four, so a station occupied by a rival's Stone is closed to you until it is free.
+2. Commit up to 3 Reagents as **Shield Reagents** beside your Stone in the Forge.
+3. A Transmutation Stage takes one full Age. Your Stone is exposed to Siege for the single Summer it spends in the Forge.
+4. The Forge holds one station for each Stage: Lead, Bronze, Silver, and Gold. Every Alchemist competes for the same four, so a station occupied by a rival's Stone is closed to you until it is free.
 
 #### The Alchemical Formula
 
@@ -560,14 +592,14 @@ _Completing a Transmutation Stage. Available while your Stone is in position 1, 
 
 _Returning to the Forge after Stasis. Available while your Stone is in a Stasis zone ❄️._
 
-1. If your Stone was Seized in a previous Age, pay 2 Reagents to return it to its previous position in the Forge.
+1. From the Autumn of the Age after your Stone was Seized, pay **5 Essence, of any type**, to return it to its previous position in the Forge.
 2. If that position is occupied, you must wait until it is free.
 
 ### Crucible Positions Reference: Your Stone's Current Position
 
 - When your Stone is on the **Mantle Ring** (even positions: 0, 2, 4, 6), it is resting. It is safe from Siege but does not advance. While there, work toward the next Alchemical Formula.
 - When you **Fire** a Crucible Card, your Stone moves into the **Forge**, where it works through one Transmutation Stage. It is exposed to Siege for the single Summer it spends there. After a full Age, you may Temper it to the next Mantle Ring position or to the Altar of Kismeta.
-- If your Stone is in a **Stasis zone** (marked ❄️), it has stalled. Pay 2 Reagents next Autumn to Rekindle it.
+- If your Stone is in a **Stasis zone** (marked ❄️), it has stalled. Pay 5 Essence next Autumn to Rekindle it.
 
 | POS. | LOCATION         | STATE     | SAFE? |
 | ---- | ---------------- | --------- | ----- |
@@ -586,8 +618,8 @@ _Returning to the Forge after Stasis. Available while your Stone is in a Stasis 
 | STATE     | POSITION                 | WHAT IT MEANS                                                                                                                              |
 | --------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Resting   | Mantle Ring (0, 2, 4, 6) | Safe. Cannot be Sieged. Work toward your next Alchemical Formula.                                                                          |
-| Forging   | Forge (1, 3, 5, 7)       | Transmutation underway. Exposed to Siege for one Summer. Protect it.                                                                       |
-| In Stasis | ❄️ Stasis zone           | Seized after a lost Siege. Pay 2 Reagents in Autumn to Rekindle it to its previous Forge position.                                          |
+| Forging   | Forge (1, 3, 5, 7)       | Transmutation underway. Exposed to Siege for one Summer. Protect it with Shield Reagents.                                                  |
+| In Stasis | ❄️ Stasis zone           | Seized after a lost Siege. Pay 5 Essence in Autumn to Rekindle it to its previous Forge position.                                          |
 | Complete  | Altar of Kismeta         | You have finished all four Transmutation Stages and won the game. All hail! All hail! The Magnus Alchemist!                                 |
 
 ---
@@ -670,13 +702,13 @@ Keep these principles in mind as you find your footing across the first few Ages
 
 4. **Your Sign Gates Everything for the Age.** Your Zodiac Die roll decides which Furnace you may fuel and where you may build a House. When your roll opens the Furnace you need, drop everything and fuel it. That window may not come again for several Ages.
 
-5. **Astral Houses Compound.** A House is a Harvest Source every Autumn for the rest of the game, and it fills an Attunement slot every Firing without ever being spent. A House built in the first Age pays out over and over. A House built in the last Age barely pays at all.
+5. **Astral Houses Compound.** A House is a Harvest Source every Autumn for the rest of the game, and it fills an Attunement slot every Firing without ever being spent. Upgrade to a Mansion when you can: the doubled Alignment pays off at every Harvest and in every Siege. A House built in the first Age pays out over and over. A House built in the last Age barely pays at all.
 
-6. **Distill Before You Need It.** Reagents pay Formulas, declare Sieges, buy Adepts, and Rekindle a Seized Stone. Essence sitting in your bank does none of those things. Convert steadily rather than in a panic.
+6. **Distill Before You Need It.** Reagents pay Formulas, declare Siege Antes, and shield your Stone in the Forge. Essence sitting in your bank does none of those things. Convert steadily at 5:1 rather than in a panic.
 
-7. **Adept Cards Are Permissions.** An Adept never hands you a bonus, it lifts a restriction: fuel any Furnace, build on any Sign, ignore Card Lock, Siege without paying. Pick the one that unlocks the part of your engine that is jammed, and consider which Sign it keys to, because a Resonant Adept is dramatically stronger.
+7. **Adept Cards Are Permissions.** An Adept never hands you a bonus, it lifts a restriction: fuel any Furnace, build on the Cosmic Age, ignore Card Lock, Siege without paying an Ante. Pick the one that unlocks the part of your engine that is jammed, and consider which Sign it keys to, because a Resonant Adept is dramatically stronger. Each costs 3 Essence of any type.
 
-8. **Time Your Entry into the Forge.** Firing is a commitment: your Stone is exposed for exactly one Summer. Fire in an Age when your rivals are short on Reagents, or when your Hand is deep enough to win the Siege that follows. Holding a few cards back in your Hand is your entire defense.
+8. **Time Your Entry into the Forge.** Firing is a commitment: your Stone is exposed for exactly one Summer. Fire in an Age when your rivals are short on Reagents, or when your Hand is deep enough to win the Siege that follows. Shield Reagents are your first line of defense; a deep Hand is your second.
 
 ---
 
@@ -688,7 +720,7 @@ Kismeta runs a dice economy and a card economy side by side, and your Crucible C
 
 ### The Dice Economy
 
-Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards pay out Essence each Autumn based on how well they align with the Age. Essence distills into Reagents at a fixed 3:1 rate. This economy is broad and forgiving: almost anything you own contributes something, and a strong Alignment can pay out fifteen Essence in a single Autumn.
+Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards pay out Essence each Autumn based on how well they align with the Age. Essence distills into Reagents at a fixed 5:1 rate. This economy is broad and forgiving: almost anything you own contributes something, and a strong Alignment can pay out fifteen Essence in a single Autumn.
 
 ### The Card Economy
 
@@ -705,8 +737,9 @@ Your Zodiac Die result each Spring decides which Furnace you may fuel and which 
 Three tools bend it:
 
 - **The Mercury Stellium** lets you fuel any Furnace, regardless of your Sign.
-- **The Jupiter Stellium** lets you build an Astral House on any Sign.
-- **Strength** (Adept, Sagittarius) lets you shift your roll one Sign in either direction on the Wheel.
+- **The Jupiter Stellium** lets you build an Astral House on the **Cosmic Age**, not only your own Sign.
+- **The Chariot** (Adept, Leo) lets you shift your Zodiac Die result one Sign in either direction on the Wheel, once per Age.
+- **Strength** (Adept, Sagittarius) lets you declare a Siege without paying the Ante and win any tie in Sieges.
 
 Any one of these converts your engine from reactive to deliberate. Acquiring one early is often worth more than a full Age of Harvest income.
 
@@ -723,9 +756,9 @@ The right split depends on where your Stone is. Resting on the Mantle Ring, load
 
 The path to victory is a push-your-luck curve. Your Stone is safe on the Mantle Ring and safe at the Altar. It is vulnerable for exactly one Summer per Stage, four Summers across a whole game.
 
-A Siege costs the attacker 2 Reagents to declare, and those Reagents must match the Cosmic Age's Element, so the window to attack is gated by whichever Element the heavens are paying out that Age. A successful Siege returns 2 Reagents of any Element to the attacker and Seizes your Stone to Stasis, while Rekindling costs you 2 Reagents and an entire Age. A won Siege is close to free for the attacker and expensive for you, which means the defense is not economic, it is informational: a deep Hand your rivals cannot see, committed at the right moment.
+A Siege costs the attacker an **Ante of Reagents equal to the Shield Reagents** guarding the Stone, so the window to attack is gated by how well the defender invested in protection. A successful Siege Seizes your Stone to Stasis, where Rekindling costs **5 Essence** and an entire Age. A won Siege is close to free for the attacker (they take their Ante back) and expensive for you, which means the defense is not purely economic: a deep Hand your rivals cannot see, committed at the right moment, plus the **Besieged Bonus** of +2 stacking after each successful defense.
 
-The counter-pressure runs the other way. A failed Siege costs the attacker those 2 Reagents outright and hands the defender 2 free cards, so attackers cannot swing freely.
+The counter-pressure runs the other way. A failed Siege costs the attacker their Ante outright (lost to the supply), so attackers cannot swing freely against well-shielded Stones.
 
 ## 5. Denial
 
@@ -751,7 +784,7 @@ A balanced spread across the Groups. Full cognitive load: Card Lock, House place
 
 ### Magnus Alchemist (Expert Depth)
 
-Weighted to Groups C and D. Group C demands a valid Planet and Element pair. Group D demands an invalid pair, one that no single Sign carries, so you cannot satisfy it from your Zodiac Die alone. It also demands Heat in two Furnaces at once, which is impossible in a single Age from your Sign alone. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually a Stellium or an Adept to lift the Furnace restriction.
+Weighted to Groups C and D. Group C demands complex Attunements and card straights. Group D demands the heaviest Reagent payments and Heat spread across multiple Furnaces at once. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually a Stellium or an Adept to lift the Furnace restriction.
 
 ## Conclusion & Verdict
 
@@ -787,20 +820,20 @@ The Crucible of Kismeta awaits.
 
 Every Sign on the Zodiac Wheel carries three Aspects: itself, its ruling Planet, and its Element. Each Sign also carries a number from 1 to 12, which is how the Cosmic Age Die and your Zodiac Die select it.
 
-| # SIGN         | RULING PLANET | ELEMENT | CARD SUIT     |
-| -------------- | ------------- | ------- | ------------- |
-| Aries          | Mars          | Fire    | 🪄 Wands      |
-| Taurus         | Venus         | Earth   | 🪙 Pentacles  |
-| Gemini         | Mercury       | Air     | ⚔️ Swords     |
-| Cancer         | Moon          | Water   | 🍷 Cups       |
-| Leo            | Sun           | Fire    | 🪄 Wands      |
-| Virgo          | Mercury       | Earth   | 🪙 Pentacles  |
-| Libra          | Venus         | Air     | ⚔️ Swords     |
-| Scorpio        | Mars          | Water   | 🍷 Cups       |
-| Sagittarius    | Jupiter       | Fire    | 🪄 Wands      |
-| Capricorn      | Saturn        | Earth   | 🪙 Pentacles  |
-| Aquarius       | Saturn        | Air     | ⚔️ Swords     |
-| Pisces         | Jupiter       | Water   | 🍷 Cups       |
+| # | SIGN         | RULING PLANET | ELEMENT | CARD SUIT     |
+| - | ------------ | ------------- | ------- | ------------- |
+| 1 | Aries        | Mars          | Fire    | 🪄 Wands      |
+| 2 | Taurus       | Venus         | Earth   | 🪙 Pentacles  |
+| 3 | Gemini       | Mercury       | Air     | ⚔️ Swords     |
+| 4 | Cancer       | Moon          | Water   | 🍷 Cups       |
+| 5 | Leo          | Sun           | Fire    | 🪄 Wands      |
+| 6 | Virgo        | Mercury       | Earth   | 🪙 Pentacles  |
+| 7 | Libra        | Venus         | Air     | ⚔️ Swords     |
+| 8 | Scorpio      | Mars          | Water   | 🍷 Cups       |
+| 9 | Sagittarius  | Jupiter       | Fire    | 🪄 Wands      |
+| 10 | Capricorn   | Saturn        | Earth   | 🪙 Pentacles  |
+| 11 | Aquarius    | Saturn        | Air     | ⚔️ Swords     |
+| 12 | Pisces      | Jupiter       | Water   | 🍷 Cups       |
 
 **Harvest values** for each Aspect are printed on the Zodiac Wheel: Sign +3, Planet +2, Element +1, and a Perfect Match (all three at once) scores the full stack of +6. Each point pays 1 Essence.
 
@@ -826,85 +859,33 @@ The Kismeta Deck (blue back) holds 134 cards: 112 Minor Arcana and 22 Major Arca
 
 ### Minor Arcana
 
-112 cards, the building blocks of the Great Work: 28 per suit. Each card carries four traits.
+112 cards, the building blocks of the Great Work: 28 per suit. Each card carries four traits:
 
 - **Rank:** Ace, 2 through 10, Princess, Knight, Queen, King.
-- **CV:** the card's numeric value, from 1 for an Ace to 14 for a King. CV is what you score in a Siege.
+- **CV:** the card's numeric value, from 1 for an Ace to 14 for a King.
 - **Suit:** Cups, Pentacles, Swords, or Wands, each tied to an Element and a Reagent.
 - **Planet:** one of seven ruling Planets. Six of them anchor a Stellium, formed by holding three cards of that Planet in your Spread. The seventh, the Sun, anchors no Stellium and is wild instead.
 - **Effect:** printed on the card, active only while it sits in your Spread.
 
 Each suit runs the same ladder of effects, expressed in that suit's Element. Every rank appears twice per suit, except the 7, which has two distinct single-copy versions.
 
-| RANK     | CV  | PLANET  | TYPE        | COPIES | EFFECT                                                                                                                     |
-| -------- | --- | ------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------- |
-| Ace      | 1   | Sun     | SEED        | 2      | Spend when paying an Alchemical Formula: counts as 1 Reagent of its Element.                                               |
-| 2        | 2   | Moon    | DRAW        | 2      | Burn: Draw 2 cards.                                                                                                        |
-| 3        | 3   | Jupiter | CRAFT       | 2      | While in your Spread: Craft Astral Houses for 2 matching cards instead of 3.                                               |
-| 4        | 4   | Venus   | BOON        | 2      | Burn: Take 1 Essence of its Element.                                                                                       |
-| 5        | 5   | Mercury | EXTINGUISH  | 2      | Discard three cards of its suit from your Spread: Extinguish one Coal in the matching Furnace. Its owner returns it to their supply. |
-| 6        | 6   | Saturn  | NEUTRALIZE  | 2      | While in your Spread: Neutralize the Reversed effect of a 7 of its suit in your Spread.                                    |
-| 7        | 7   | Mars    | REVERSED    | 1      | Reversed: its Reagent costs 1 additional Essence to Distill. Neutralized by the 6 of its suit.                             |
-| 7        | 7   | Mars    | REVERSED    | 1      | Reversed: −1 to your Duel rolls. Neutralized by the 6 of its suit.                                                          |
-| 8        | 8   | Jupiter | DEFEND      | 2      | While Defending: +1 to Duel rolls. In a Siege: +2 to your total.                                                            |
-| 9        | 9   | Venus   | BOON        | 2      | While your Sign matches its Element: exchange that Essence 1:1 for the next Element on the wheel.                           |
-| 10       | 10  | Saturn  | BOON        | 2      | When you Temper your Stone: take 2 Reagents of its Element from the supply.                                                 |
-| Princess | 11  | Mercury | ENCHANT     | 2      | Enchant: you may also fuel its Furnace this Age. Burn: Fuel any Furnace this Age.                                          |
-| Knight   | 12  | Mars    | ATTACK      | 2      | While Attacking: +1 to Duel rolls. In a Siege: +2 to your total. Burn: +4 instead.                                          |
-| Queen    | 13  | Moon    | WARD        | 2      | Ward: when your Coal would be Extinguished, roll your Zodiac Die. On 8 or higher the Coal stays. Burn: reroll.             |
-| King     | 14  | Jupiter | BOON        | 2      | In a Siege, this card scores its CV regardless of the Siege Age.                                                            |
-
-**The 9s exchange in a cycle:** Cups (Water) exchanges for Earth, Pentacles (Earth) for Air, Swords (Air) for Fire, and Wands (Fire) for Water.
+📌 **For the complete Minor Arcana reference** — every rank, effect, and copy count across all four suits — see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
 
 ### Major Arcana
 
 22 cards: 10 Fates and 12 Adepts.
 
-#### Fate Cards
+**Fate Cards** resolve the moment they are drawn: place them in your Arcanum and apply their effect at once. Some carry a duration that lasts until Transit. Return them to the Kismeta discard pile at Transit. Fates carry no Aspects and cost nothing.
 
-A Fate resolves the moment it is drawn: place it in your Arcanum and apply its effect at once. Some carry a duration that lasts until Transit. Return it to the Kismeta discard pile at Transit. Fates carry no Aspects and cost nothing.
+**Adept Cards** are purchased when drawn: pay **3 Essence, of any type**, to add them to your Arcanum, or discard them. You may hold two. Every Adept has two tiers: its **Base** text always applies, and it becomes **Resonant** whenever the Cosmic Age shares one of its three Aspects (Sign, Planet, or Element).
 
-| FATE CARD        | EFFECT                                                                                                                                                                                                          |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| The Tower        | All players roll their Zodiac Die. Each player who rolls 7 or lower has one of their Coal Extinguished, their own choice which. Wards apply.                                                                     |
-| Death            | All players return their Hand cards to the Kismeta Deck. The Agekeeper shuffles. Spreads and Arcanums are untouched.                                                                                              |
-| The Sun          | The Furnaces blaze. Until Transit, every player's Heat is raised by 2 in every Element.                                                                                                                           |
-| Judgement        | Until Transit, a Duel challenger must beat the defender's roll by 2 or more to win.                                                                                                                              |
-| Justice          | All players count their Reagents. The player holding the most gives half of them, rounded down, to the player holding the fewest. Ties are broken by turn order from the Agekeeper.                               |
-| The Moon         | A lunar eclipse darkens the Summer sun. No Duels and no Sieges may be declared until Transit.                                                                                                                     |
-| The Fool         | The Agekeeper draws one Crucible Card at random from those unused in setup and places it face up on the table. The first player to assemble its Card Set claims it, and exchanges it for any one of their unfired Crucible Cards, which returns to the box. |
-| Wheel of Fortune | All players roll their Zodiac Die. The highest roll draws 3 cards from the Kismeta Deck into their Spread. The lowest roll returns half their Hand cards, rounded down, to the Kismeta Deck. Ties are broken by turn order from the Agekeeper. |
-| The Hanged Man   | All Adept cards are Severed until Transit. Their printed text does nothing.                                                                                                                                      |
-| The Lovers       | All players roll their Zodiac Die and add the results together. If the total passes the threshold for the player count, every player takes any 3 Reagents from the supply. Thresholds: 2 players 13, 3 players 19, 4 players 26. |
-
-#### Adept Cards
-
-An Adept is purchased when drawn: pay 1 Reagent of its Element to add it to your Arcanum, or discard it. Adepts persist across Ages, and you may hold two.
-
-An Adept grants a permission, never a bonus. Every Adept has two tiers. Its **Base** text always applies. It becomes **Resonant**, gaining its Resonant text in place of Base, whenever the Cosmic Age shares one of its three Aspects: Sign, Planet, or Element.
-
-| ADEPT              | SIGN        | PLANET  | ELEMENT | PRICE       | BASE                                                                                        | RESONANT                                                                                    |
-| ------------------ | ----------- | ------- | ------- | ----------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| The Magician       | Gemini      | Mercury | Air     | Quicksilver | Ignore Card Lock. You may move cards between your Hand and your Spread at any time.        | Any Neutralize card in your Spread cancels any one Reversed effect, whatever its suit.     |
-| The High Priestess | Pisces      | Jupiter | Water   | Aqua Regia  | Once each Age, Scry 3. Roll your Zodiac Die; on 9 or higher, take one card you saw.         | Scry 3, or Scry a rival's Hand. Roll 7 or higher to take any 2 cards.                       |
-| The Empress        | Taurus      | Venus   | Earth   | Vitriol     | When you Distill, you may spend Essence of any Elements.                                    | Each Summer, declare one Reagent. You may Distill it from any two Essence.                  |
-| The Emperor        | Aries       | Mars    | Fire    | Sulfur      | At Card Lock, Ward any 2 cards in your Spread. They cannot be taken in Duels.               | Your Warded cards are also immune to any other card's effects.                              |
-| The Hierophant     | Virgo       | Mercury | Earth   | Vitriol     | You may hold 3 Adept cards.                                                                 | While any Adept you hold is Resonant, all of your Adepts gain their Resonant tier.          |
-| The Devil          | Capricorn   | Saturn  | Earth   | Vitriol     | Sacrifice this card to banish a rival's Adept to the Kismeta discard pile.                  | Sacrifice this card to banish a rival's Adept, or to demolish one Astral House.             |
-| The Chariot        | Leo         | Sun     | Fire    | Sulfur      | You may declare a Siege without paying its Reagent.                                         | You win all Duel and Siege ties.                                                            |
-| Strength           | Sagittarius | Jupiter | Fire    | Sulfur      | After rolling your Zodiac Die in Spring, you may shift the result one Sign in either direction on the Wheel. | This also applies to your Siege Sign rolls.                                 |
-| The Hermit         | Scorpio     | Mars    | Water   | Aqua Regia  | Neutralize cards in your Spread have wild Suits.                                            | Reversed cards in your Spread have no effect on you.                                        |
-| Temperance         | Libra       | Venus   | Air     | Quicksilver | You may exchange Essence 1:1 between any two Elements at any time.                          | You may exchange Reagents 1:1 between Elements.                                             |
-| The Star           | Aquarius    | Saturn  | Air     | Quicksilver | Whenever you lose a Duel or a Siege, or your Stone is Seized, draw 2 cards.                 | Once each Age, Sever one active Adept card until Transit.                                   |
-| The World          | Cancer      | Moon    | Water   | Aqua Regia  | When you Temper your Stone, you may keep the Coal you spent instead of returning it.        | Flip this card: your Stone cannot be Seized this Age. Refresh when you Temper.              |
+📌 **For the complete Fate and Adept card reference**, see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
 
 ## Stelliums
 
-Every Minor Arcana card carries a Planet. Hold **three cards of one Planet** together in your **Spread** to activate that Planet's **Stellium**. The effect holds only while all three remain: losing one to a Duel switches it off. The six Stellium effects are printed on your Codex panel.
+Every Minor Arcana card carries a Planet. Hold **three cards of one Planet** together in your **Spread** to activate that Planet's **Stellium**. The effect holds only while all three remain: losing one to a Duel switches it off.
 
-Only Spread cards count. Hand cards and Arcanum cards never contribute to a Stellium.
-
-### Planet Stellium Codex
+Only Spread cards count. Hand cards and Arcanum cards never contribute to a Stellium. An Ace is wild for any one Stellium. One Ace per Stellium.
 
 | Planet        | Ranks         | While Active                                                          |
 | ------------- | ------------- | --------------------------------------------------------------------- |
@@ -912,14 +893,10 @@ Only Spread cards count. Hand cards and Arcanum cards never contribute to a Stel
 | ☿ **Mercury** | 5, Princess   | You may fuel any Furnace, not only the one matching your Sign.        |
 | ♀ **Venus**   | 4, 9          | At Harvest, take your Essence in any one Element you choose.          |
 | ♂ **Mars**    | 7, Knight     | Losing a Duel does not bar you from challenging that rival again this Age. |
-| ♃ **Jupiter** | 3, 8, King    | You may build an Astral House on any Sign, not only your own.         |
+| ♃ **Jupiter** | 3, 8, King    | You may build an Astral House on the **Cosmic Age**, not only your own Sign. |
 | ♄ **Saturn**  | 6, 10         | Your Spread limit is 9 instead of 7.                                  |
 
-### The Sun: Wild Charge
-
-Aces carry the Sun. An Ace is wild for any one Stellium and may stand in for that Planet. One Ace per Stellium.
-
-💡 **Example:** your Spread holds 2 Moon cards and 1 Ace. The Ace counts as the third Moon, and your Moon Stellium is active. A rival Duels you and takes one of the Moon cards, and the Stellium switches off.
+📌 **For the full Stellium Codex and suit-specific card effects**, see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
 
 ## Card Effect Verbs
 
@@ -928,7 +905,7 @@ _Shared rules language printed on Minor and Major Arcana cards._
 | VERB            | MEANING                                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **Burn**        | Discard this card to use the effect that follows.                                                                                    |
-| **Distill**     | Spend 3 Essence of one Element to take the Reagent of that Element.                                                                  |
+| **Distill**     | Spend 5 Essence of one Element to take the Reagent of that Element.                                                                  |
 | **Extinguish**  | Remove one Coal from a Furnace. It returns to its owner's supply and their Heat in that Element drops by 1. A Ward can stop it.      |
 | **Neutralize**  | Cancel the Reversed effect of a card in your Spread. Both cards remain in play.                                                      |
 | **Reversed**    | A penalty that applies only while this card is in your Spread. Moving it to your Hand, or Neutralizing it, ends the penalty.         |
@@ -944,39 +921,22 @@ The Crucible Deck (red back) holds 22 cards across four Groups. Each card is one
 
 ### Group Structure
 
-| GROUP | STAGE  | ATTUNEMENT                        | CARDS IN DECK | REAGENTS | HEAT                |
-| ----- | ------ | --------------------------------- | ------------- | -------- | ------------------- |
-| A     | Lead   | 2 slots, single Element           | 4             | 2        | 1, one Furnace      |
-| B     | Bronze | 3 slots, Element or Planet        | 7             | 4        | 2, one Furnace      |
-| C     | Silver | 4 slots, valid Planet+Element pair | 7            | 6        | 3, one Furnace      |
-| D     | Gold   | 5 slots, invalid Planet+Element pair | 4          | 8        | 3 + 2, two Furnaces |
+| GROUP | STAGE  | DIFFICULTY | CARDS IN DECK | TYPICAL DEMANDS                                      |
+| ----- | ------ | ---------- | ------------- | ---------------------------------------------------- |
+| A     | Lead   | Beginner   | 4             | 2-slot Attunement, 2 Reagents, Heat in 2 Furnaces    |
+| B     | Bronze | Standard   | 7             | 3-slot Attunement, mixed Reagents, Heat in 3 Furnaces |
+| C     | Silver | Advanced   | 7             | 3-card straights, heavier Reagents, mixed Heat       |
+| D     | Gold   | Mastery    | 4             | Four Courts Attunement, heaviest Reagents, Heat in 4 Furnaces |
 
-### Full Crucible Card Reference
+Each Formula advances your Philosopher's Stone through one Transmutation Stage and calls for three things:
 
-| CARD | GROUP | STAGE  | ATTUNEMENT          | REAGENTS                     | HEAT              |
-| ---- | ----- | ------ | ------------------- | ---------------------------- | ----------------- |
-| 0    | A     | Lead   | 2 Fire              | 2 Sulfur                     | 1 Fire            |
-| 1    | A     | Lead   | 2 Water             | 2 Aqua Regia                 | 1 Water           |
-| 2    | A     | Lead   | 2 Earth             | 2 Vitriol                    | 1 Earth           |
-| 3    | A     | Lead   | 2 Air               | 2 Quicksilver                | 1 Air             |
-| 4    | B     | Bronze | 3 Fire              | 3 Sulfur + 1 Quicksilver     | 2 Fire            |
-| 5    | B     | Bronze | 3 Water             | 3 Aqua Regia + 1 Vitriol     | 2 Water           |
-| 6    | B     | Bronze | 3 Earth             | 3 Vitriol + 1 Sulfur         | 2 Earth           |
-| 7    | B     | Bronze | 3 Air               | 3 Quicksilver + 1 Aqua Regia | 2 Air             |
-| 8    | B     | Bronze | 3 Mercury           | 2 Quicksilver + 2 Vitriol    | 2 Air             |
-| 9    | B     | Bronze | 3 Venus             | 2 Vitriol + 2 Quicksilver    | 2 Earth           |
-| 10   | B     | Bronze | 2 Saturn + 1 Air    | 3 Quicksilver + 1 Vitriol    | 2 Air             |
-| 11   | C     | Silver | 2 Mars + 2 Water    | 4 Aqua Regia + 2 Sulfur      | 3 Water           |
-| 12   | C     | Silver | 2 Venus + 2 Earth   | 4 Vitriol + 2 Quicksilver    | 3 Earth           |
-| 13   | C     | Silver | 2 Mercury + 2 Air   | 4 Quicksilver + 2 Vitriol    | 3 Air             |
-| 14   | C     | Silver | 2 Jupiter + 2 Fire  | 4 Sulfur + 2 Aqua Regia      | 3 Fire            |
-| 15   | C     | Silver | 2 Saturn + 2 Earth  | 4 Vitriol + 2 Sulfur         | 3 Earth           |
-| 16   | C     | Silver | 2 Jupiter + 2 Water | 4 Aqua Regia + 2 Quicksilver | 3 Water           |
-| 17   | C     | Silver | 2 Mars + 2 Fire     | 4 Sulfur + 2 Vitriol         | 3 Fire            |
-| 18   | D     | Gold   | 3 Sun + 2 Water     | 5 Aqua Regia + 3 Sulfur      | 3 Fire + 2 Water  |
-| 19   | D     | Gold   | 3 Saturn + 2 Fire   | 5 Sulfur + 3 Vitriol         | 3 Earth + 2 Fire  |
-| 20   | D     | Gold   | 3 Mercury + 2 Water | 5 Aqua Regia + 3 Quicksilver | 3 Air + 2 Water   |
-| 21   | D     | Gold   | 3 Venus + 2 Fire    | 5 Sulfur + 3 Vitriol         | 3 Earth + 2 Air   |
+- **Attunement:** a count of Element and Planet slots, paid from your Spread cards, which are spent, or from your Astral Houses, which are not.
+- **Reagents:** a set quantity of Reagent tokens.
+- **Heat:** a required level of Furnace Heat, in one Furnace or in several.
+
+Your four Formulas sit face up from the start of the game, so every rival can see what you are building toward, and you can see theirs.
+
+📌 **For the full Crucible Card reference** — every card's Attunement, Reagents, and Heat — see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
 
 ## Tableau: Spread, Hand & Arcanum Zones
 
@@ -994,71 +954,75 @@ You always manage your Tableau, everything you have in play, across three zones.
 
 _Terms are listed alphabetically. Each entry provides a definition only. For full rules, see the referenced Season or section._
 
-| Term                        | Definition                                                                                                                                                                                                                            |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Adept Card**              | A purchased Major Arcana card. Pay 1 Reagent of its Element when it is drawn to add it to your Arcanum, or discard it. It persists across Ages and counts as a Harvest Source. Limit two, or three with the Hierophant.                |
-| **Age**                     | One full round of play, made of Spring, Summer, Autumn, and Winter.                                                                                                                                                                   |
-| **Agekeeper**               | The player holding the Agekeeper's Key. They set the Cosmic Age, deal the Spring cards, manage the deck, and reset the board. The Key passes clockwise each Age.                                                                       |
-| **Alchemical Formula**      | The recipe printed on a Crucible Card, calling for an Attunement, Reagents, and Furnace Heat. Completing one Fires your Stone into the Forge.                                                                                          |
-| **Alignment**               | The comparison of your Aspects against the Aspects of an Age. Alignment drives both the Harvest and the Siege.                                                                                                                         |
-| **Altar of Kismeta**        | Position 8 at the center of the Great Year Board. The first Stone to reach it wins the game.                                                                                                                                          |
-| **Arcanum**                 | The Tableau zone holding your Major Arcana cards, both Adepts and Fates.                                                                                                                                                              |
-| **Aspects**                 | The Sign, ruling Planet, and Element of an Age, or of any Harvest Source.                                                                                                                                                             |
-| **Astral House**            | A token built on your Sign, crafted from 3 cards matching that Sign's ruling Planet. It is a Harvest Source, and it may fill one Attunement slot per Firing without being spent. It always stays on the Sign where it was built, though ownership can change hands through Trade. |
-| **Attunement**              | A count of Element and Planet slots printed on a Crucible Card. Paid from Spread cards, which are spent, or from Astral Houses, which are not. Required alongside Reagents and Heat to Fire a Formula.                                 |
-| **Burn**                    | To discard a card in order to use the effect printed after the word.                                                                                                                                                                  |
-| **Card Lock**               | The Spring rule freezing cards in their zones. From Card Lock until Winter, cards cannot move between your Hand and your Spread, though they may still be spent, crafted, traded, or committed.                                        |
-| **Coal**                    | A player-colored disc crafted from 3 cards of one suit, matching a Furnace's Element. Each Coal in a Furnace raises its owner's Heat by +1 in that Element.                                                                            |
-| **Codex**                   | The reference panel in front of each player on the Great Year Board. Shows the Coal and Reagent costs and the six Stellium effects.                                                                                                    |
-| **Cosmic Age**              | The Sign set by the Agekeeper at the start of each Age, and the Aspects that follow from it.                                                                                                                                          |
-| **Crucible Card**           | A red-backed card bearing an Alchemical Formula. Each player holds four, dealt face up at setup.                                                                                                                                       |
-| **CV**                      | The numeric value of a Minor Arcana card, from 1 for an Ace to 14 for a King. CV is scored in a Siege.                                                                                                                                |
-| **Distill**                 | To spend 3 Essence of one Element and take the Reagent of that Element. Available on your turn in Summer, Autumn, and Winter.                                                                                                          |
-| **Duel**                    | A Summer contest of Zodiac Dice to steal a card from a rival's Spread. Highest roll wins, and the defender wins ties.                                                                                                                 |
-| **Element**                 | Fire, Earth, Air, or Water. Every Sign, suit, Furnace, Reagent, and Essence has one.                                                                                                                                                  |
-| **Essence**                 | The base currency, paid out at the Harvest in the Element of the Cosmic Age. Three Essence of one Element Distill into one Reagent.                                                                                                    |
-| **Extinguish**              | To remove one Coal from a Furnace. It returns to its owner's supply and their Heat in that Element drops by 1. A Ward can stop it.                                                                                                     |
-| **Fate Card**               | A Major Arcana card that resolves the moment it is drawn. Some carry an effect lasting until Transit. Fates cost nothing, carry no Aspects, and are returned to the discard pile at Transit.                                           |
-| **Fire the Stone**          | The Autumn action of completing an Alchemical Formula to send your Stone from the Mantle Ring into the Forge, beginning a Transmutation Stage.                                                                                         |
-| **Forge**                   | The four stations a Stone occupies during a Transmutation Stage (positions 1, 3, 5, 7): Lead, Bronze, Silver, and Gold. There is one of each, shared by all players. A Stone in the Forge is exposed to Siege for one Summer.                                                                                              |
-| **Furnace**                 | One of four shared Elemental spaces, each holding three Coal. You may fuel only the Furnace matching your Sign's Element.                                                                                                             |
-| **Gift of the Age**         | The 1 Essence every player takes in Spring, matching the Cosmic Age's Element.                                                                                                                                                        |
-| **Great Work**              | The central objective: to be the first Alchemist to advance a Philosopher's Stone through all four Transmutation Stages to the Altar of Kismeta.                                                                                       |
-| **Great Year**              | The full arc of a single game of Kismeta, one grand cosmic cycle. Each round of play is one Cosmic Age within it.                                                                                                                     |
-| **Hand**                    | The private Tableau zone. Hand card effects are inactive and cannot be used in Crafting sets, but Hand cards may be committed in a Siege. Limit 5.                                                                                     |
-| **Harvest**                 | The Autumn payout of Essence, scored by comparing each of your Harvest Sources against the Aspects of the Cosmic Age.                                                                                                                 |
-| **Harvest Source**          | Anything scored at the Harvest: your Zodiac Die, your Astral Houses, your Adept Cards, and your Spread Cards.                                                                                                                         |
-| **Heat**                    | Your personal Heat level in an Element, raised +1 by each Coal you own in that Furnace: 1 is Kindled, 2 is Ablaze, and 3 is Radiant, the maximum. Formulas call for a level of Heat.                                                                               |
-| **Kismeta Card**            | A blue-backed card, either Minor Arcana or Major Arcana.                                                                                                                                                                             |
-| **Major Arcana**            | The 22 special cards in the Kismeta Deck: 12 Adepts and 10 Fates. They are held in the Arcanum.                                                                                                                                       |
-| **Mantle Ring**             | The track your Stone advances along, from START through four Transmutation Stages to the Altar of Kismeta. Its even positions (0, 2, 4, 6) are safe from Siege.                                                                       |
-| **Minor Arcana**            | The 112 standard cards in the Kismeta Deck, 28 per suit. Each carries a Rank, a CV, a Suit, a Planet, and a printed Effect.                                                                                                           |
-| **Neutralize**              | To cancel the Reversed effect of a card in your Spread. Both cards remain in play.                                                                                                                                                   |
-| **Perfect Match**           | When a single source matches all three Aspects of the Cosmic Age at once, Sign, Planet, and Element, it scores the full stack. See Counting the Harvest.                                                                              |
-| **Philosopher's Stone**     | Each player's primary game piece. It begins on START and must reach the Altar of Kismeta to win. It may be Resting, Forging, or in Stasis at any given time.                                                                          |
-| **Reagent**                 | A refined token distilled from 3 Essence of one Element. Reagents pay Formulas, purchase Adepts, declare Sieges, Rekindle a Stone, and back a Fateful Wager. The four types are Sulfur, Vitriol, Quicksilver, and Aqua Regia.                               |
-| **Rekindle**                | The Autumn action of paying 2 Reagents to return a Seized Stone from Stasis to its previous Forge position.                                                                                                                           |
-| **Resonant**                | An Adept's enhanced tier, active while the Cosmic Age shares one of its three Aspects. Use its Resonant text in place of Base while this holds.                                                                                       |
-| **Reversed**                | A penalty that applies only while the card bearing it sits in your Spread. Moving it to your Hand, or Neutralizing it, ends the penalty.                                                                                              |
-| **Scry**                    | To look at the top X cards of the Kismeta Deck, or at a rival's Hand, as the card states. What you learn is yours to keep.                                                                                                            |
-| **Seized**                  | The state of a Stone that lost a Siege. It moves to a nearby Stasis zone and must be Rekindled.                                                                                                                                       |
-| **Sever**                   | To switch off one card's printed text until Transit.                                                                                                                                                                                 |
-| **Siege**                   | A Summer attack on a rival's Stone while it sits in the Forge, declared for 2 Reagents matching the Cosmic Age's Element and resolved by committing cards and comparing Alignment. Each Stone may be Sieged only once per Age.                                           |
-| **Siege Age**               | The Sign rolled by the Agekeeper at the start of a Siege. All scoring in that contest is measured against its Aspects.                                                                                                                |
-| **Siege Sign**              | The Sign each player rolls on their Zodiac Die during a Siege, scored against the Siege Age. It never changes their Sign for the Age.                                                                                                 |
-| **Sign**                    | One of the twelve Zodiac Signs. Your Sign is set each Spring and holds for the Age.                                                                                                                                                   |
-| **Spread**                  | The public Tableau zone. Spread card effects are active, they may be used in Crafting sets and Attunements, they score at the Harvest, and they can be lost in Duels. Limit 7.                                                        |
-| **Stasis**                  | Where a Seized Stone is held. It returns to the Forge by Rekindling. Marked with a ❄️ snowflake symbol.                                                                                                                               |
-| **Stellium**                | A standing effect shown on your Codex panel. Hold three cards of one Planet in your Spread to activate it; it lasts only while all three remain. An Ace is wild for any one Stellium.                                                 |
-| **Suit**                    | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each corresponds to an Element, a Reagent, and a Furnace.                                                                                            |
-| **Tableau**                 | Everything you have in play: your Spread, Hand, and Arcanum.                                                                                                                                                                          |
-| **Temper**                  | The Autumn action of advancing a Stone that has spent a full Age in the Forge to the next Mantle Ring position, setting aside its Crucible Card and consuming the Coal it used.                                                       |
-| **Trade**                   | A Summer action in which players freely exchange Adept Cards, Astral Houses, Essence, Kismeta Cards, and Reagents. Crucible Cards, Fate Cards, and Coal cannot be traded.                                                             |
-| **Transit**                 | The final step of Winter. Duration effects end, Fate Cards are discarded, dice and Meeples are cleared, and the Agekeeper's Key and Cosmic Age Die pass to the next player.                                                           |
-| **Transmutation Stage**     | One step along the Mantle Ring, begun by Firing the Stone and completed by Tempering it.                                                                                                                                              |
-| **Ward**                    | A protection printed on certain cards. The warded card, Stone, or resource cannot be targeted, as the card states.                                                                                                                    |
-| **Zodiac Die**              | Your personal 12-sided die. Roll it in Spring to set your Sign for the Age, in a Duel, and again in a Siege to set your Siege Sign.                                                                                                   |
-| **Zodiac Wheel**            | The ring of twelve Signs on the Great Year Board, showing each Sign's ruling Planet, Element, and Harvest scoring values.                                                                                                             |
+| Term | Definition |
+| :--- | :--------- |
+| **Adept Card** | A purchased Major Arcana card. Pay 3 Essence, of any type, when it is drawn to add it to your Arcanum, or discard it. It persists across Ages and counts as a Harvest Source. Limit two. |
+| **Age** | One complete cycle of play, made of Spring, Summer, Autumn, and Winter. An Age is what other games would call a round. |
+| **Agekeeper** | The player holding the Agekeeper's Key. They set the Cosmic Age, manage the deck, and reset the board. The Key passes clockwise each Age. |
+| **Alchemical Formula** | The recipe printed on a Crucible Card, calling for an Attunement, Reagents, and Furnace Heat. Completing one Fires your Stone into the Forge. |
+| **Alignment** | The comparison of your Aspects against the Aspects of an Age. Alignment drives both the Harvest and the Siege. |
+| **Altar of Kismeta** | Position 8 at the center of the Great Year Board. The first Stone to reach it wins the game. |
+| **Ante** | The price of declaring a Siege: Reagents equal in number to the Shield Reagents guarding the target Stone, in any combination of Elements. An Attacker who loses the Siege forfeits it to the supply. |
+| **Arcanum** | The tableau zone holding your active Major Arcana cards. |
+| **Aspects** | The Sign, ruling Planet, and Element of an Age. |
+| **Astral House** | A token built on your Sign, crafted from 3 cards matching that Sign's ruling Planet. It is a Harvest Source, and it may fill one Attunement slot per Firing without being spent. It may be upgraded to an Astral Mansion. |
+| **Astral Mansion** | An Astral House upgraded for 2 additional cards of its Sign's ruling Planet, marked with a Reagent token from the supply beneath it. Doubles the House's Alignment score at the Harvest and in a Siege; does not stack with other doubling effects. |
+| **Attunement** | A count of Element and Planet slots printed on a Crucible Card. Paid from Spread cards, which are spent, or from Astral Houses, which are not. Required alongside Reagents and Heat to Fire a Formula. |
+| **Bazaar** | A shared reference area on the board listing every fixed exchange rate in the game. Formula costs still vary by Crucible Card. |
+| **Besieged Bonus** | +2 added to a Defender's total in any later Siege against this Stone for the rest of its current Transmutation Stage. Each successful defense adds another +2. |
+| **Burn** | To send a card to the Kismeta discard pile. The loser of a revealed Siege burns every Hand card they committed to it. |
+| **Card Lock** | The Spring rule freezing cards in their zones. From Card Lock until Winter, cards cannot move between your Hand and your Spread, though they may still be spent, crafted, traded, or committed. |
+| **Coal** | A player-colored disc crafted from 3 cards of one suit, matching a Furnace's Element. Each Coal in a Furnace raises its owner's Heat by +1 in that Element. |
+| **Codex** | The reference panel in front of each player on the Great Year Board. Shows the Coal and Reagent costs. |
+| **Cosmic Age** | The Sign set by the Agekeeper at the start of each Age, and the Aspects that follow from it. |
+| **Crafting** | Spending a set of cards from your Spread to produce Coal or an Astral House. Coal takes 3 cards of one suit; an Astral House takes 3 cards of one Planet. The costs are printed on your Codex and the Bazaar. |
+| **Crucible Card** | A red-backed card bearing an Alchemical Formula. Each player holds four. |
+| **CV** | The numeric value of a Minor Arcana card, from 1 for an Ace to 14 for a King. |
+| **Distill** | To spend 5 Essence of one Element and take the Reagent of that Element. Available on your turn in Summer, Autumn, and Winter. |
+| **Duel** | A Summer contest of Zodiac Dice to steal a card from a rival's Spread. |
+| **Element** | Fire, Water, Air, or Earth. Every Sign, suit, Furnace, Reagent, and Essence has one. |
+| **Essence** | The base currency, paid out at the Harvest in the Element of the Cosmic Age. Five Essence of one Element Distill into one Reagent. |
+| **Extinguish** | To remove one Coal from a Furnace. It returns to its owner's supply and their Heat in that Element drops by 1. A Ward can stop it. |
+| **Fate Card** | A Major Arcana card that resolves the moment it is drawn. Some carry an effect lasting until Transit. Fates cost nothing, carry no Aspects, and are returned to the discard pile at Transit. |
+| **Fire the Stone** | The Autumn action of completing an Alchemical Formula to send your Stone from the Mantle Ring into the Forge, beginning a Transmutation Stage. |
+| **Forge** | The space a Stone occupies during a Transmutation Stage. A Stone in the Forge is exposed to Siege for one Summer, guarded by whatever Shield Reagents its owner committed. |
+| **Furnace** | One of four shared Elemental spaces, each holding three Coal. You may fuel only the Furnace matching your Sign's Element. |
+| **Gift of the Age** | The 1 Essence every player takes in Spring, matching the Cosmic Age's Element. |
+| **Great Work** | The central objective: to be the first Alchemist to advance a Philosopher's Stone through all four Transmutation Stages to the Altar of Kismeta. |
+| **Great Year** | The full arc of a single game of Kismeta, one grand cosmic cycle. Each round of play is one Cosmic Age within it. |
+| **Hand** | The private tableau zone. Hand card effects are inactive and cannot be used in Crafting sets, but Hand cards may be committed in a Siege, where the loser of a revealed Siege burns the cards they committed to it. |
+| **Harvest** | The Autumn payout of Essence, scored by comparing each of your Harvest Sources against the Aspects of the Cosmic Age. |
+| **Harvest Source** | Anything you own that Aligns with the Cosmic Age to earn Essence at the Harvest. Your Harvest Sources are your Zodiac Die, your Astral Houses, your Adept Cards, and your Spread Cards. |
+| **Heat** | Your personal Heat level in an Element, raised +1 by each Coal you own in that Furnace, to a maximum of 3 (Radiant). Formulas call for a level of Heat. |
+| **Kismeta Card** | A blue-backed card, either Minor Arcana or Major Arcana. |
+| **Major Arcana** | The 22 special cards in the Kismeta Deck: 12 Adepts and 10 Fates. They are held in the Arcanum. |
+| **Mantle Ring** | The track your Stone advances along, from START through four Transmutation Stages to the Altar of Kismeta. |
+| **Minor Arcana** | The 112 standard cards in the Kismeta Deck, 28 per suit. Each carries a Rank, a CV, a Suit, a Planet, and a printed Effect. |
+| **Neutralize** | To cancel the Reversed effect of a card in your Spread. Both cards remain in play. |
+| **Perfect Match** | When a single source matches all three Aspects of the Cosmic Age at once (Sign, Planet, and Element) it scores the full stack. |
+| **Philosopher's Stone** | Each player's primary game piece. It begins on START and must reach the Altar of Kismeta to win. It may be Resting, Forging, or in Stasis at any given time. |
+| **Reagent** | A refined token distilled from 5 Essence of one Element. Reagents pay Formulas, shield a Stone in the Forge, and pay the Ante to declare a Siege. The four types are Sulfur, Vitriol, Quicksilver, and Aqua Regia. |
+| **Rekindle** | The Autumn action of paying 5 Essence, of any type, to return a Seized Stone from Stasis to its previous Forge position. |
+| **Resonant** | An Adept's enhanced tier, active while the Cosmic Age shares one of its three Aspects. Use its Resonant text in place of Base while this holds. |
+| **Reversed** | A penalty that applies only while the card bearing it sits in your Spread. Moving it to your Hand, or Neutralizing it, ends the penalty. |
+| **Scry** | To look at the top X cards of the Kismeta Deck, or at a rival's Hand, as the card states. What you learn is yours to keep. |
+| **Seized** | The state of a Stone that lost a Siege. It moves to a nearby Stasis zone and must be Rekindled. |
+| **Sever** | To switch off one card's printed text until Transit. |
+| **Shield Reagent** | A Reagent committed to the Forge beside your Stone as you Fire it, up to 3. Rivals must match their number as an Ante to Siege you, and you take them back when you Temper. |
+| **Siege** | A Summer attack on a rival's Stone while it sits in the Forge, resolved by Alignment with a chance for either side to concede before the reveal. |
+| **Sign** | One of the twelve Zodiac Signs. Your Sign is set each Spring and holds for the Age. |
+| **Spread** | The public tableau zone. Spread card effects are active; they may be used in Crafting sets, and they can be lost in Duels. |
+| **Stasis** | Where a Seized Stone is held. From the Autumn of the next Age, its owner may pay 5 Essence to Rekindle it, and it waits there until they can. Marked with a ❄️ snowflake symbol. |
+| **Stellium** | A standing effect activated by holding three cards of one Planet in your Spread. It lasts only while all three remain. An Ace is wild for any one Stellium. |
+| **Suit** | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each corresponds to an Element, a Reagent, and a Furnace. |
+| **Tableau** | Everything you have in play: your Spread, Hand, and Arcanum. |
+| **Temper** | The Autumn action of advancing a Stone that has spent a full Age in the Forge to the next Mantle Ring position, setting aside its Crucible Card and consuming the Coal it used. |
+| **Trade** | A Summer action in which players freely exchange Adept Cards, Astral Houses, Essence, Kismeta Cards, and Reagents. Crucible Cards, Fate Cards, and Coal cannot be traded. |
+| **Transit** | The final step of Winter. Duration effects end, Fate Cards are discarded, and the Agekeeper's Key and Cosmic Age Die pass to the next player. |
+| **Transmutation Stage** | One step along the Mantle Ring, begun by Firing the Stone and completed by Tempering it. |
+| **Ward** | A protection printed on certain cards. The warded card, Stone, or resource cannot be targeted, as the card states. |
+| **Zodiac Die** | Your personal 12-sided die. Roll it in Spring to set your Sign for the Age. That Sign holds for Harvests and Sieges alike until the Age ends. |
+| **Zodiac Wheel** | The ring of twelve Signs on the Great Year Board, showing each Sign's ruling Planet, Element, and Harvest scoring values. |
 
 ---
 

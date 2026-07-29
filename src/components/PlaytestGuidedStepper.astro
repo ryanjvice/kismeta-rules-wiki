@@ -1,0 +1,772 @@
+---
+import ActionFlowGuide from './ActionFlowGuide.astro';
+import GameTableEmbed from './GameTableEmbed.astro';
+import { agyPlaytestConfig } from '../data/playtest';
+import {
+	getPlaytestGuidedSteps,
+	getPlaytestGuidedNavSections,
+	PLAYTEST_GUIDED_CONTENT_STEP_COUNT,
+	type GuidedStep,
+} from '../data/playtest-guided-steps';
+import { wikiSlug } from '../data/wiki-base';
+import { siteT, type SiteI18nKey } from '../utils/site-i18n';
+
+const locale = Astro.currentLocale ?? 'root';
+const steps = getPlaytestGuidedSteps(locale === 'root' ? 'en' : locale);
+
+function resolveLearnMore(step: GuidedStep): string | undefined {
+	if (!step.learnMorePath) return undefined;
+	const base = `/${wikiSlug(step.learnMorePath)}/`.replace(/\/{2,}/g, '/');
+	return step.learnMoreHash ? `${base}#${step.learnMoreHash}` : base;
+}
+
+const contentSteps = steps.slice(0, -1);
+const completeStep = steps[steps.length - 1];
+
+const stepsPayload = contentSteps.map((step) => ({
+	...step,
+	learnMoreUrl: resolveLearnMore(step),
+}));
+
+const completePayload = completeStep
+	? {
+			title: completeStep.title,
+			body: completeStep.body,
+		}
+	: { title: '', body: '' };
+
+const roundOverviewUrl = `${agyPlaytestConfig.path}round-overview/`;
+const feedbackUrl = `${agyPlaytestConfig.path}feedback/`;
+
+const navSections = getPlaytestGuidedNavSections().map((section) => ({
+	id: section.id,
+	stepIndex: section.stepIndex,
+	label: siteT(section.labelKey as SiteI18nKey),
+}));
+---
+
+<div
+	class="guided-play playtest-guided-play"
+	data-playtest-guided
+	data-steps={JSON.stringify(stepsPayload)}
+	data-complete={JSON.stringify(completePayload)}
+	data-step-count={PLAYTEST_GUIDED_CONTENT_STEP_COUNT}
+	data-round-overview-url={roundOverviewUrl}
+	data-feedback-url={feedbackUrl}
+	data-nav-sections={JSON.stringify(navSections)}
+	data-labels={JSON.stringify({
+		progress: siteT('guided.progress'),
+		progressPhase: siteT('guided.progressPhase'),
+		phaseSetup: siteT('guided.phase.setup'),
+		phaseSpring: siteT('guided.phase.spring'),
+		phaseSummer: siteT('guided.phase.summer'),
+		phaseAutumn: siteT('guided.phase.autumn'),
+		phaseWinter: siteT('guided.phase.winter'),
+		back: siteT('guided.back'),
+		next: siteT('guided.next'),
+		learnMore: siteT('guided.learnMore'),
+		resumeTitle: siteT('playtest.agy.guided.resume.title'),
+		resumeBody: siteT('playtest.agy.guided.resume.body'),
+		resumeContinue: siteT('guided.resume.continue'),
+		resumeFresh: siteT('guided.resume.fresh'),
+		completeRoundOverview: siteT('playtest.agy.guided.complete.roundOverview'),
+		completeFeedback: siteT('playtest.agy.guided.complete.feedback'),
+		continuePlaying: siteT('guided.complete.continuePlaying'),
+		startOver: siteT('guided.startOver'),
+		actionContextCollapse: siteT('guided.actionContext.collapse'),
+		actionContextExpand: siteT('guided.actionContext.expand'),
+		navTrigger: siteT('guided.nav.trigger'),
+		navTitle: siteT('guided.nav.title'),
+	})}
+>
+	<div class="guided-play__resume" hidden>
+		<h2 class="guided-play__heading" data-resume-title></h2>
+		<p class="guided-play__intro" data-resume-body></p>
+		<div class="guided-play__resume-actions">
+			<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="resume">
+			</button>
+			<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="fresh">
+			</button>
+		</div>
+	</div>
+
+	<div class="guided-play__main" hidden>
+		<div class="guided-play__progress-wrap" aria-hidden="false">
+			<div class="guided-play__progress-header">
+				<p class="guided-play__progress-text" data-progress-text></p>
+				<div class="guided-play__nav">
+					<button
+						type="button"
+						class="guided-play__nav-trigger"
+						data-nav-trigger
+						aria-expanded="false"
+						aria-controls="playtest-guided-nav-panel"
+						aria-label={siteT('guided.nav.trigger')}
+					>
+						{siteT('guided.nav.trigger')}
+					</button>
+					<div
+						id="playtest-guided-nav-panel"
+						class="guided-play__nav-panel"
+						data-nav-panel
+						role="menu"
+						aria-label={siteT('guided.nav.title')}
+						hidden
+					>
+						{
+							navSections.map((section) => (
+								<button
+									type="button"
+									class="guided-play__nav-item"
+									role="menuitem"
+									data-nav-section={section.id}
+									data-nav-step={section.stepIndex}
+								>
+									{section.label}
+								</button>
+							))
+						}
+					</div>
+				</div>
+			</div>
+			<div
+				class="guided-play__progress-bar"
+				role="progressbar"
+				aria-valuemin="1"
+				aria-valuemax={PLAYTEST_GUIDED_CONTENT_STEP_COUNT}
+			>
+				<div class="guided-play__progress-fill" data-progress-fill></div>
+			</div>
+		</div>
+
+		<article class="guided-play__step" aria-live="polite">
+			<h2 class="guided-play__heading" data-step-title tabindex="-1"></h2>
+			<div class="guided-play__body" data-step-body></div>
+			<ul class="guided-play__checklist" data-step-checklist hidden></ul>
+			<div class="guided-play__embed" data-step-embed hidden>
+				<div class="guided-play__embed-panel" data-embed-panel="harvest-order" hidden>
+					<GameTableEmbed tableId="harvest-order" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="round-at-a-glance" hidden>
+					<GameTableEmbed tableId="round-at-a-glance" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="engine-building" hidden>
+					<GameTableEmbed tableId="engine-building" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="transmutation-process" hidden>
+					<GameTableEmbed tableId="transmutation-process" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="summer-flow" hidden>
+					<ActionFlowGuide flowId="summer-flow" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="autumn-flow" hidden>
+					<ActionFlowGuide flowId="autumn-flow" />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="winter-flow" hidden>
+					<ActionFlowGuide flowId="winter-flow" />
+				</div>
+			</div>
+			<p class="guided-play__learn-more-wrap" data-learn-more-wrap hidden>
+				<button type="button" class="guided-play__learn-more" data-learn-more></button>
+			</p>
+		</article>
+
+		<footer class="guided-play__footer">
+			<div class="guided-play__action-context" data-action-context hidden>
+				<div class="guided-play__action-context-header">
+					<span class="guided-play__action-context-title" data-action-context-title></span>
+					<button
+						type="button"
+						class="guided-play__action-context-toggle"
+						data-action-context-toggle
+						aria-expanded="true"
+					>
+						<svg
+							class="guided-play__action-context-toggle-icon"
+							aria-hidden="true"
+							width="14"
+							height="14"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M18 15l-6-6-6 6"/>
+						</svg>
+					</button>
+				</div>
+				<div class="guided-play__action-context-content" data-action-context-content aria-live="polite">
+					<p class="guided-play__action-context-body" data-action-context-body></p>
+					<p class="guided-play__action-context-meta" data-action-context-condition hidden></p>
+					<p class="guided-play__action-context-meta" data-action-context-mode hidden></p>
+					<a
+						class="guided-play__action-context-link"
+						data-action-context-learn
+						hidden
+						href="#"
+						target="_blank"
+						rel="noopener"
+					></a>
+				</div>
+			</div>
+			<div class="guided-play__footer-nav">
+				<span class="guided-play__footer-nav-label" data-footer-nav-label></span>
+				<div class="guided-play__footer-nav-btns">
+					<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="back"></button>
+					<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="next"></button>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="guided-play__complete" hidden>
+		<article class="guided-play__step" aria-live="polite">
+			<h2 class="guided-play__heading" data-complete-title tabindex="-1"></h2>
+			<div class="guided-play__body" data-complete-body></div>
+		</article>
+		<div class="guided-play__complete-actions">
+			<button type="button" class="guided-play__btn guided-play__btn--primary" data-action="continue-playing"></button>
+			<a class="guided-play__btn guided-play__btn--ghost" data-complete-round-overview href={roundOverviewUrl}></a>
+			<a class="guided-play__btn guided-play__btn--ghost" data-complete-feedback href={feedbackUrl}></a>
+			<button type="button" class="guided-play__btn guided-play__btn--ghost" data-action="start-over"></button>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { applyGameModeCallouts } from '../scripts/game-modes';
+	import {
+		GAME_MODE_STORAGE_KEY,
+		type GameMode,
+		type GuidedPhase,
+		type GuidedStep,
+	} from '../data/guided-steps';
+	import {
+		PLAYTEST_GUIDED_PROGRESS_KEY,
+		PLAYTEST_GUIDED_PROGRESS_VERSION,
+	} from '../data/playtest-guided-steps';
+
+	type Labels = {
+		progress: string;
+		progressPhase: string;
+		phaseSetup: string;
+		phaseSpring: string;
+		phaseSummer: string;
+		phaseAutumn: string;
+		phaseWinter: string;
+		back: string;
+		next: string;
+		learnMore: string;
+		resumeTitle: string;
+		resumeBody: string;
+		resumeContinue: string;
+		resumeFresh: string;
+		completeRoundOverview: string;
+		completeFeedback: string;
+		continuePlaying: string;
+		startOver: string;
+		actionContextCollapse: string;
+		actionContextExpand: string;
+		navTrigger: string;
+		navTitle: string;
+	};
+
+	type NavSection = {
+		id: string;
+		label: string;
+		stepIndex: number;
+	};
+
+	type ProgressState = {
+		version: number;
+		stepIndex: number;
+	};
+
+	type StepPayload = GuidedStep & {
+		learnMoreUrl?: string;
+	};
+
+	function loadGameMode(): GameMode {
+		const raw = localStorage.getItem(GAME_MODE_STORAGE_KEY);
+		if (!raw) return 'standard';
+		try {
+			const data = JSON.parse(raw) as { quickplay?: boolean; magnus?: boolean };
+			if (data.quickplay) return 'quickplay';
+			if (data.magnus) return 'magnus';
+			return 'standard';
+		} catch {
+			return 'standard';
+		}
+	}
+
+	function loadProgress(): ProgressState | null {
+		const raw = localStorage.getItem(PLAYTEST_GUIDED_PROGRESS_KEY);
+		if (!raw) return null;
+		try {
+			const data = JSON.parse(raw) as ProgressState;
+			if (data.version !== PLAYTEST_GUIDED_PROGRESS_VERSION) return null;
+			if (typeof data.stepIndex !== 'number' || data.stepIndex < 1) return null;
+			return data;
+		} catch {
+			return null;
+		}
+	}
+
+	function saveProgress(stepIndex: number) {
+		const state: ProgressState = {
+			version: PLAYTEST_GUIDED_PROGRESS_VERSION,
+			stepIndex,
+		};
+		localStorage.setItem(PLAYTEST_GUIDED_PROGRESS_KEY, JSON.stringify(state));
+	}
+
+	function clearProgress() {
+		localStorage.removeItem(PLAYTEST_GUIDED_PROGRESS_KEY);
+	}
+
+	function initPlaytestGuidedPlay() {
+		const root = document.querySelector<HTMLElement>('[data-playtest-guided]');
+		if (!root || root.dataset.bound === 'true') return;
+		root.dataset.bound = 'true';
+
+		const steps = JSON.parse(root.dataset.steps || '[]') as StepPayload[];
+		const complete = JSON.parse(root.dataset.complete || '{}') as {
+			title: string;
+			body: string;
+		};
+		const stepCount = Number(root.dataset.stepCount) || steps.length;
+		const labels = JSON.parse(root.dataset.labels || '{}') as Labels;
+		const navSections = JSON.parse(root.dataset.navSections || '[]') as NavSection[];
+
+		const resumeEl = root.querySelector<HTMLElement>('.guided-play__resume')!;
+		const mainEl = root.querySelector<HTMLElement>('.guided-play__main')!;
+		const completeEl = root.querySelector<HTMLElement>('.guided-play__complete')!;
+
+		const mode = loadGameMode();
+		let stepIndex = 1;
+
+		const setText = (sel: string, text: string) => {
+			const el = root.querySelector(sel);
+			if (el) el.textContent = text;
+		};
+
+		const setHtml = (sel: string, html: string) => {
+			const el = root.querySelector(sel);
+			if (el) el.innerHTML = html;
+		};
+
+		const hideAll = () => {
+			resumeEl.hidden = true;
+			mainEl.hidden = true;
+			completeEl.hidden = true;
+		};
+
+		const focusHeading = (container: ParentNode) => {
+			const h = container.querySelector<HTMLElement>('.guided-play__heading');
+			h?.focus();
+		};
+
+		const dispatchContext = (path?: string, hash?: string) => {
+			if (!path || !hash) return;
+			window.dispatchEvent(
+				new CustomEvent('kismeta:context', {
+					detail: { path, hash },
+				})
+			);
+		};
+
+		const actionContext = root.querySelector<HTMLElement>('[data-action-context]')!;
+		const actionContextTitle = root.querySelector<HTMLElement>('[data-action-context-title]')!;
+		const actionContextToggle = root.querySelector<HTMLButtonElement>('[data-action-context-toggle]')!;
+		const actionContextContent = root.querySelector<HTMLElement>('[data-action-context-content]')!;
+		const actionContextBody = root.querySelector<HTMLElement>('[data-action-context-body]')!;
+		const actionContextCondition = root.querySelector<HTMLElement>('[data-action-context-condition]')!;
+		const actionContextMode = root.querySelector<HTMLElement>('[data-action-context-mode]')!;
+		const actionContextLearn = root.querySelector<HTMLAnchorElement>('[data-action-context-learn]')!;
+
+		let actionContextExpanded = true;
+
+		const syncToggle = (expanded: boolean) => {
+			actionContextToggle.setAttribute('aria-expanded', String(expanded));
+			actionContextToggle.setAttribute(
+				'aria-label',
+				expanded ? labels.actionContextCollapse : labels.actionContextExpand
+			);
+			actionContextContent.hidden = !expanded;
+			actionContext.classList.toggle('guided-play__action-context--collapsed', !expanded);
+		};
+
+		actionContextToggle.addEventListener('click', () => {
+			actionContextExpanded = !actionContextExpanded;
+			syncToggle(actionContextExpanded);
+		});
+
+		const clearActionContext = () => {
+			actionContext.hidden = true;
+			actionContextTitle.textContent = '';
+			actionContextBody.textContent = '';
+			actionContextCondition.hidden = true;
+			actionContextCondition.textContent = '';
+			actionContextMode.hidden = true;
+			actionContextMode.textContent = '';
+			actionContextLearn.hidden = true;
+			actionContextExpanded = true;
+			syncToggle(true);
+			root.querySelectorAll('.action-flow__pick--active').forEach((el) => {
+				el.classList.remove('action-flow__pick--active');
+			});
+		};
+
+		const showActionContext = (detail: {
+			title?: string;
+			body?: string;
+			condition?: string;
+			modeNote?: string;
+			learnHref?: string;
+			learnLabel?: string;
+			visible?: boolean;
+		}) => {
+			if (!detail.visible) {
+				clearActionContext();
+				return;
+			}
+
+			actionContextTitle.textContent = detail.title || '';
+			actionContextBody.textContent = detail.body || '';
+			if (detail.condition) {
+				actionContextCondition.hidden = false;
+				actionContextCondition.innerHTML = `<em>${detail.condition}</em>`;
+			} else {
+				actionContextCondition.hidden = true;
+				actionContextCondition.textContent = '';
+			}
+
+			if (detail.modeNote) {
+				actionContextMode.hidden = false;
+				actionContextMode.textContent = detail.modeNote;
+			} else {
+				actionContextMode.hidden = true;
+				actionContextMode.textContent = '';
+			}
+
+			if (detail.learnHref) {
+				actionContextLearn.hidden = false;
+				actionContextLearn.href = detail.learnHref;
+				actionContextLearn.textContent = detail.learnLabel || labels.learnMore;
+			} else {
+				actionContextLearn.hidden = true;
+			}
+
+			actionContextExpanded = true;
+			syncToggle(true);
+			actionContext.hidden = false;
+		};
+
+		window.addEventListener('kismeta:action-detail', ((event: CustomEvent) => {
+			showActionContext(event.detail ?? {});
+		}) as EventListener);
+
+		const navTrigger = root.querySelector<HTMLButtonElement>('[data-nav-trigger]')!;
+		const navPanel = root.querySelector<HTMLElement>('[data-nav-panel]')!;
+		let navOpen = false;
+
+		const getCurrentSectionId = (index: number): string => {
+			for (let i = navSections.length - 1; i >= 0; i--) {
+				if (index >= navSections[i]!.stepIndex) {
+					return navSections[i]!.id;
+				}
+			}
+			return navSections[0]?.id ?? '';
+		};
+
+		const syncNavActive = () => {
+			const activeId = getCurrentSectionId(stepIndex);
+			root.querySelectorAll<HTMLButtonElement>('[data-nav-section]').forEach((btn) => {
+				const isActive = btn.dataset.navSection === activeId;
+				btn.setAttribute('aria-current', isActive ? 'true' : 'false');
+				btn.classList.toggle('guided-play__nav-item--active', isActive);
+			});
+		};
+
+		const closeNavPanel = () => {
+			navOpen = false;
+			navPanel.hidden = true;
+			navTrigger.setAttribute('aria-expanded', 'false');
+		};
+
+		const openNavPanel = () => {
+			navOpen = true;
+			navPanel.hidden = false;
+			navTrigger.setAttribute('aria-expanded', 'true');
+			syncNavActive();
+			navPanel.querySelector<HTMLElement>('[data-nav-section]')?.focus();
+		};
+
+		navTrigger.addEventListener('click', () => {
+			if (navOpen) {
+				closeNavPanel();
+				navTrigger.focus();
+			} else {
+				openNavPanel();
+			}
+		});
+
+		navPanel.addEventListener('keydown', (e: KeyboardEvent) => {
+			if (e.key === 'Escape') {
+				e.stopPropagation();
+				closeNavPanel();
+				navTrigger.focus();
+			}
+		});
+
+		document.addEventListener('click', (e: MouseEvent) => {
+			const nav = root.querySelector('.guided-play__nav');
+			if (navOpen && nav && !nav.contains(e.target as Node)) {
+				closeNavPanel();
+			}
+		});
+
+		root.querySelectorAll<HTMLButtonElement>('[data-nav-section]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const target = Number(btn.dataset.navStep);
+				if (!target || target === stepIndex) {
+					closeNavPanel();
+					navTrigger.focus();
+					return;
+				}
+				stepIndex = target;
+				renderStep();
+				closeNavPanel();
+				navTrigger.focus();
+			});
+		});
+
+		const renderStep = () => {
+			const step = steps[stepIndex - 1];
+			if (!step) return;
+
+			clearActionContext();
+
+			setText('[data-step-title]', step.title);
+			let body = step.body;
+			if (step.modeBody && step.modeBody[mode]) {
+				body = step.modeBody[mode]!;
+			}
+			setHtml('[data-step-body]', body);
+
+			const checklist = root.querySelector<HTMLUListElement>('[data-step-checklist]')!;
+			checklist.replaceChildren();
+			if (step.checklist?.length) {
+				checklist.hidden = false;
+				for (const item of step.checklist) {
+					const li = document.createElement('li');
+					li.textContent = item;
+					checklist.append(li);
+				}
+			} else {
+				checklist.hidden = true;
+			}
+
+			const embedEl = root.querySelector<HTMLElement>('[data-step-embed]')!;
+			const embedId = step.embed ?? '';
+			embedEl.hidden = !embedId;
+			root.querySelectorAll<HTMLElement>('[data-embed-panel]').forEach((panel) => {
+				panel.hidden = panel.dataset.embedPanel !== embedId;
+			});
+
+			const phaseLabel = (phase?: GuidedPhase) => {
+				if (!phase) return '';
+				const map: Record<GuidedPhase, string> = {
+					setup: labels.phaseSetup,
+					spring: labels.phaseSpring,
+					summer: labels.phaseSummer,
+					autumn: labels.phaseAutumn,
+					winter: labels.phaseWinter,
+				};
+				return map[phase] ?? '';
+			};
+
+			const learnWrap = root.querySelector<HTMLElement>('[data-learn-more-wrap]')!;
+			const learnBtn = root.querySelector<HTMLButtonElement>('[data-learn-more]')!;
+			if (step.learnMorePath && step.learnMoreHash) {
+				learnWrap.hidden = false;
+				learnBtn.textContent = labels.learnMore;
+				learnBtn.dataset.rulesPath = step.learnMorePath;
+				learnBtn.dataset.rulesHash = step.learnMoreHash;
+			} else if (step.learnMoreUrl) {
+				learnWrap.hidden = false;
+				learnBtn.textContent = labels.learnMore;
+				delete learnBtn.dataset.rulesPath;
+				delete learnBtn.dataset.rulesHash;
+				learnBtn.dataset.learnUrl = step.learnMoreUrl;
+			} else {
+				learnWrap.hidden = true;
+				delete learnBtn.dataset.rulesPath;
+				delete learnBtn.dataset.rulesHash;
+				delete learnBtn.dataset.learnUrl;
+			}
+
+			window.dispatchEvent(new CustomEvent('kismeta:wizard-refocus'));
+
+			let progressText = labels.progress
+				.replace('{current}', String(stepIndex))
+				.replace('{total}', String(stepCount));
+			if (step.phase && step.phaseStep != null && step.phaseTotal != null) {
+				progressText = labels.progressPhase
+					.replace('{phase}', phaseLabel(step.phase))
+					.replace('{current}', String(step.phaseStep))
+					.replace('{total}', String(step.phaseTotal));
+			}
+			setText('[data-progress-text]', progressText);
+
+			const footerNavLabel = root.querySelector<HTMLElement>('[data-footer-nav-label]')!;
+			footerNavLabel.textContent = progressText;
+
+			const bar = root.querySelector<HTMLElement>('[data-progress-fill]')!;
+			const pct = (stepIndex / stepCount) * 100;
+			bar.style.width = `${pct}%`;
+
+			const progressbar = root.querySelector<HTMLElement>('.guided-play__progress-bar')!;
+			progressbar.setAttribute('aria-valuenow', String(stepIndex));
+			progressbar.setAttribute('aria-valuemax', String(stepCount));
+
+			const backBtn = root.querySelector<HTMLButtonElement>('[data-action="back"]')!;
+			const nextBtn = root.querySelector<HTMLButtonElement>('[data-action="next"]')!;
+			backBtn.disabled = stepIndex <= 1;
+			nextBtn.textContent = labels.next;
+
+			saveProgress(stepIndex);
+			syncNavActive();
+			focusHeading(mainEl);
+		};
+
+		const showMain = () => {
+			hideAll();
+			mainEl.hidden = false;
+			renderStep();
+		};
+
+		const showComplete = () => {
+			hideAll();
+			setText('[data-complete-title]', complete.title ?? '');
+			setHtml('[data-complete-body]', complete.body ?? '');
+			completeEl.hidden = false;
+			saveProgress(stepCount + 1);
+			focusHeading(completeEl);
+		};
+
+		const showResume = () => {
+			hideAll();
+			resumeEl.hidden = false;
+			focusHeading(resumeEl);
+		};
+
+		setText('[data-resume-title]', labels.resumeTitle);
+		setText('[data-resume-body]', labels.resumeBody);
+		root.querySelector<HTMLButtonElement>('[data-action="resume"]')!.textContent =
+			labels.resumeContinue;
+		root.querySelector<HTMLButtonElement>('[data-action="fresh"]')!.textContent =
+			labels.resumeFresh;
+
+		setText('[data-action="back"]', labels.back);
+		setText('[data-action="next"]', labels.next);
+		setText('[data-action="start-over"]', labels.startOver);
+		setText('[data-action="continue-playing"]', labels.continuePlaying);
+		setText('[data-complete-round-overview]', labels.completeRoundOverview);
+		setText('[data-complete-feedback]', labels.completeFeedback);
+
+		const springStepIndex = steps.findIndex((s) => s.id === 'spring-1') + 1 || 1;
+
+		root.querySelector<HTMLButtonElement>('[data-learn-more]')!.addEventListener('click', (e) => {
+			const btn = e.currentTarget as HTMLButtonElement;
+			const path = btn.dataset.rulesPath;
+			const hash = btn.dataset.rulesHash;
+			if (path && hash) {
+				dispatchContext(path, hash);
+				return;
+			}
+			const url = btn.dataset.learnUrl;
+			if (url) {
+				window.open(url, '_blank', 'noopener');
+			}
+		});
+
+		root.querySelector<HTMLButtonElement>('[data-action="resume"]')!.addEventListener('click', () => {
+			const saved = loadProgress();
+			if (!saved) {
+				stepIndex = 1;
+				showMain();
+				return;
+			}
+			stepIndex = saved.stepIndex;
+			if (stepIndex > stepCount) {
+				showComplete();
+			} else {
+				showMain();
+			}
+		});
+
+		root.querySelector<HTMLButtonElement>('[data-action="fresh"]')!.addEventListener('click', () => {
+			clearProgress();
+			stepIndex = 1;
+			showMain();
+		});
+
+		root.querySelector<HTMLButtonElement>('[data-action="back"]')!.addEventListener('click', () => {
+			if (stepIndex <= 1) return;
+			stepIndex -= 1;
+			renderStep();
+		});
+
+		root.querySelector<HTMLButtonElement>('[data-action="next"]')!.addEventListener('click', () => {
+			if (stepIndex >= stepCount) {
+				showComplete();
+				return;
+			}
+			stepIndex += 1;
+			renderStep();
+		});
+
+		window.addEventListener('kismeta:guided-advance', () => {
+			if (mainEl.hidden) return;
+			if (stepIndex >= stepCount) {
+				showComplete();
+				return;
+			}
+			stepIndex += 1;
+			renderStep();
+		});
+
+		root.querySelector<HTMLButtonElement>('[data-action="start-over"]')!.addEventListener(
+			'click',
+			() => {
+				clearProgress();
+				stepIndex = 1;
+				showMain();
+			}
+		);
+
+		root.querySelector<HTMLButtonElement>('[data-action="continue-playing"]')?.addEventListener(
+			'click',
+			() => {
+				stepIndex = springStepIndex;
+				showMain();
+			}
+		);
+
+		const saved = loadProgress();
+		if (saved) {
+			stepIndex = saved.stepIndex;
+			showResume();
+		} else {
+			showMain();
+		}
+
+		applyGameModeCallouts();
+	}
+
+	document.addEventListener('astro:page-load', initPlaytestGuidedPlay);
+	initPlaytestGuidedPlay();
+</script>

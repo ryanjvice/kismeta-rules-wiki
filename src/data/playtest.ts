@@ -27,6 +27,13 @@ export type PlaytestModule = {
 /** Hub cards and module routes under `/playtest/`. */
 export const agyPlaytestModules: PlaytestModule[] = [
   {
+    id: "guided",
+    titleKey: "playtest.agy.modules.guided.title",
+    summaryKey: "playtest.agy.modules.guided.summary",
+    path: `${agyPlaytestConfig.path}guided/`,
+    status: "active",
+  },
+  {
     id: "round-overview",
     titleKey: "playtest.agy.modules.roundOverview.title",
     summaryKey: "playtest.agy.modules.roundOverview.summary",

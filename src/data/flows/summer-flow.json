@@ -1,7 +1,7 @@
 {
   "id": "summer-flow",
   "mode": "playerTurn",
-  "intro": "On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like. Activating Crucible Cards (Light Cauldrons) is an Autumn action — see Phase 3: Autumn.",
+  "intro": "On your turn (clockwise from Agekeeper), take any actions below in any order, as many times as you like. Pass when you are done.",
   "learnMoreHash": "phase-2-summer",
   "root": {
     "id": "turn",
@@ -10,64 +10,64 @@
     "children": [
       {
         "id": "craft",
-        "label": "Craft Resources",
+        "label": "Craft & Distill",
         "kind": "group",
         "children": [
           {
             "id": "houses",
-            "label": "🏰 Build Astral House",
+            "label": "Craft Astral House",
             "kind": "optional",
-            "body": "Pay Planet-matching Kismeta Cards; place an Astral House token on a Zodiac Sign. Each House is a permanent Alignment source for every future Harvest. <em>Tip: Houses built early pay off every Spring Harvest for the rest of the game — a late-game House barely earns back its cost.</em>",
-            "learnMoreHash": "-build-astral-house",
-            "gameModeNote": {
-              "quickplay": "Quickplay: 1 matching card.",
-              "standard": "Standard: 2 Planet-matching cards.",
-              "magnus": null
-            }
+            "body": "Spend 3 Spread cards whose Planets match your Sign's ruling Planet. Build the House on your Sign. Each House is a permanent Harvest Source.",
+            "learnMoreHash": "-craft-astral-house"
           },
           {
-            "id": "craft-reagent",
-            "label": "⚒️ Craft Reagent",
+            "id": "mansion",
+            "label": "Upgrade to Mansion",
             "kind": "optional",
-            "body": "Confirm the matching Cauldron is lit, then discard 3 cards of the matching Suit from your Spread and/or Hand. Take 1 Reagent token from the supply. <strong>Salt:</strong> Discard any 3 cards — no Cauldron needed. <em>Tip: Craft from your Hand when you can — it preserves the card sets and Alignments sitting in your Spread.</em>",
-            "learnMoreHash": "️-craft-reagent"
+            "body": "Spend 2 more cards of that Sign's ruling Planet and place a Reagent from the supply beneath the House token as a marker (not spent from your stock).",
+            "learnMoreHash": "-upgrade-to-a-mansion"
+          },
+          {
+            "id": "distill",
+            "label": "Distill a Reagent",
+            "kind": "optional",
+            "body": "Spend 5 Essence of one Element to take 1 Reagent of that Element from the supply.",
+            "learnMoreHash": "️-distill-a-reagent"
           }
         ]
       },
       {
         "id": "consort",
-        "label": "Consort with Rivals",
+        "label": "Contest Your Rivals",
         "kind": "group",
         "children": [
           {
             "id": "trade",
-            "label": "🤝 Trade",
+            "label": "Trade",
             "kind": "optional",
-            "body": "Freely exchange Kismeta Cards, Reagents, or Active Crucible Cards with any rival. Trading is the only way to transfer Reagents and Active Crucible Cards between players.",
-            "learnMoreHash": "-trade",
-            "gameModeNote": {
-              "magnus": "Misaligned players trade 2:1 in favor of the non-initiating player."
-            }
+            "body": "Freely exchange Adept Cards, Astral Houses, Essence, Kismeta Cards, and Reagents with any rival on your turn.",
+            "learnMoreHash": "-trade"
           },
           {
             "id": "duel",
-            "label": "🤺 Duel",
+            "label": "Duel",
             "kind": "optional",
-            "body": "Name your opponent and a specific card in their Spread; pay an Ante Card from your Spread as the entry fee. Both roll Zodiac Dice — higher roll wins. Challenger wins: steal the targeted card. Challenger loses: your Ante Card goes to the Common Deck. Limit one Duel per rival per round, win or lose.",
-            "learnMoreHash": "-duel",
-            "gameModeNote": {
-              "magnus": "If Misaligned with your target, add +1 to your dice roll."
-            }
+            "body": "Challenge a rival to a Zodiac Die roll. Highest roll wins (defender wins ties). Winner takes a card from the loser's Spread.",
+            "learnMoreHash": "-duel"
           },
           {
-            "id": "gambit",
-            "label": "🎲 Gambit",
+            "id": "extinguish",
+            "label": "Extinguish Coal",
             "kind": "optional",
-            "body": "Target a rival's Active Crucible Card or Adept card and stake one of your own of the same type; pay any Ward entry fee on the target; both roll Zodiac Dice. Challenger wins: the two cards swap. Challenger loses: your stake is Arrested — pay 1 Salt during your Summer turn to free it. Cannot re-Gambit the same Defender this round.",
-            "learnMoreHash": "-gambit",
-            "gameModeNote": {
-              "magnus": "If Misaligned with the Defender at declaration, add +1 to your dice roll."
-            }
+            "body": "Use a card effect to remove a rival's Coal from a Furnace, dropping their Heat by 1.",
+            "learnMoreHash": "-extinguish-coal"
+          },
+          {
+            "id": "siege",
+            "label": "Siege the Forge",
+            "kind": "optional",
+            "body": "Attack a rival's Stone while it sits exposed in the Forge. Pay an Ante of Reagents equal to the Shield Reagents guarding that Stone.",
+            "learnMoreHash": "️-siege-the-forge"
           }
         ]
       }

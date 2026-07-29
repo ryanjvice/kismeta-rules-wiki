@@ -9,7 +9,7 @@ Kismeta runs a dice economy and a card economy side by side, and your Crucible C
 
 ### The Dice Economy
 
-Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards pay out Essence each Autumn based on how well they align with the Age. Essence distills into Reagents at a fixed 3:1 rate. This economy is broad and forgiving: almost anything you own contributes something, and a strong Alignment can pay out fifteen Essence in a single Autumn.
+Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards pay out Essence each Autumn based on how well they align with the Age. Essence distills into Reagents at a fixed 5:1 rate. This economy is broad and forgiving: almost anything you own contributes something, and a strong Alignment can pay out fifteen Essence in a single Autumn.
 
 ### The Card Economy
 
@@ -26,8 +26,9 @@ Your Zodiac Die result each Spring decides which Furnace you may fuel and which 
 Three tools bend it:
 
 - **The Mercury Stellium** lets you fuel any Furnace, regardless of your Sign.
-- **The Jupiter Stellium** lets you build an Astral House on any Sign.
-- **Strength** (Adept, Sagittarius) lets you shift your roll one Sign in either direction on the Wheel.
+- **The Jupiter Stellium** lets you build an Astral House on the **Cosmic Age**, not only your own Sign.
+- **The Chariot** (Adept, Leo) lets you shift your Zodiac Die result one Sign in either direction on the Wheel, once per Age.
+- **Strength** (Adept, Sagittarius) lets you declare a Siege without paying the Ante and win any tie in Sieges.
 
 Any one of these converts your engine from reactive to deliberate. Acquiring one early is often worth more than a full Age of Harvest income.
 
@@ -44,9 +45,9 @@ The right split depends on where your Stone is. Resting on the Mantle Ring, load
 
 The path to victory is a push-your-luck curve. Your Stone is safe on the Mantle Ring and safe at the Altar. It is vulnerable for exactly one Summer per Stage, four Summers across a whole game.
 
-A Siege costs the attacker 2 Reagents to declare, and those Reagents must match the Cosmic Age's Element, so the window to attack is gated by whichever Element the heavens are paying out that Age. A successful Siege returns 2 Reagents of any Element to the attacker and Seizes your Stone to Stasis, while Rekindling costs you 2 Reagents and an entire Age. A won Siege is close to free for the attacker and expensive for you, which means the defense is not economic, it is informational: a deep Hand your rivals cannot see, committed at the right moment.
+A Siege costs the attacker an **Ante of Reagents equal to the Shield Reagents** guarding the Stone, so the window to attack is gated by how well the defender invested in protection. A successful Siege Seizes your Stone to Stasis, where Rekindling costs **5 Essence** and an entire Age. A won Siege is close to free for the attacker (they take their Ante back) and expensive for you, which means the defense is not purely economic: a deep Hand your rivals cannot see, committed at the right moment, plus the **Besieged Bonus** of +2 stacking after each successful defense.
 
-The counter-pressure runs the other way. A failed Siege costs the attacker those 2 Reagents outright and hands the defender 2 free cards, so attackers cannot swing freely.
+The counter-pressure runs the other way. A failed Siege costs the attacker their Ante outright (lost to the supply), so attackers cannot swing freely against well-shielded Stones.
 
 ## 5. Denial
 
@@ -72,7 +73,7 @@ A balanced spread across the Groups. Full cognitive load: Card Lock, House place
 
 ### Magnus Alchemist (Expert Depth)
 
-Weighted to Groups C and D. Group C demands a valid Planet and Element pair. Group D demands an invalid pair, one that no single Sign carries, so you cannot satisfy it from your Zodiac Die alone. It also demands Heat in two Furnaces at once, which is impossible in a single Age from your Sign alone. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually a Stellium or an Adept to lift the Furnace restriction.
+Weighted to Groups C and D. Group C demands complex Attunements and card straights. Group D demands the heaviest Reagent payments and Heat spread across multiple Furnaces at once. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually a Stellium or an Adept to lift the Furnace restriction.
 
 ## Conclusion & Verdict
 

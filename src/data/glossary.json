@@ -1,15 +1,15 @@
 [
   {
     "term": "Adept Card",
-    "definition": "A purchased Major Arcana card. Pay 1 Reagent of its Element when it is drawn to add it to your Arcanum, or discard it. It persists across Ages and counts as a Harvest Source. Limit two, or three with the Hierophant."
+    "definition": "A purchased Major Arcana card. Pay 3 Essence, of any type, when it is drawn to add it to your Arcanum, or discard it. It persists across Ages and counts as a Harvest Source. Limit two."
   },
   {
     "term": "Age",
-    "definition": "One full round of play, made of Spring, Summer, Autumn, and Winter."
+    "definition": "One complete cycle of play, made of Spring, Summer, Autumn, and Winter. An Age is what other games would call a round."
   },
   {
     "term": "Agekeeper",
-    "definition": "The player holding the Agekeeper's Key. They set the Cosmic Age, deal the Spring cards, manage the deck, and reset the board. The Key passes clockwise each Age."
+    "definition": "The player holding the Agekeeper's Key. They set the Cosmic Age, manage the deck, and reset the board. The Key passes clockwise each Age."
   },
   {
     "term": "Alchemical Formula",
@@ -24,24 +24,40 @@
     "definition": "Position 8 at the center of the Great Year Board. The first Stone to reach it wins the game."
   },
   {
+    "term": "Ante",
+    "definition": "The price of declaring a Siege: Reagents equal in number to the Shield Reagents guarding the target Stone, in any combination of Elements. An Attacker who loses the Siege forfeits it to the supply."
+  },
+  {
     "term": "Arcanum",
-    "definition": "The Tableau zone holding your Major Arcana cards, both Adepts and Fates."
+    "definition": "The tableau zone holding your active Major Arcana cards."
   },
   {
     "term": "Aspects",
-    "definition": "The Sign, ruling Planet, and Element of an Age, or of any Harvest Source."
+    "definition": "The Sign, ruling Planet, and Element of an Age."
   },
   {
     "term": "Astral House",
-    "definition": "A token built on your Sign, crafted from 3 cards matching that Sign's ruling Planet. It is a Harvest Source, and it may fill one Attunement slot per Firing without being spent. It always stays on the Sign where it was built, though ownership can change hands through Trade."
+    "definition": "A token built on your Sign, crafted from 3 cards matching that Sign's ruling Planet. It is a Harvest Source, and it may fill one Attunement slot per Firing without being spent. It may be upgraded to an Astral Mansion."
+  },
+  {
+    "term": "Astral Mansion",
+    "definition": "An Astral House upgraded for 2 additional cards of its Sign's ruling Planet, marked with a Reagent token from the supply beneath it. Doubles the House's Alignment score at the Harvest and in a Siege; does not stack with other doubling effects."
   },
   {
     "term": "Attunement",
     "definition": "A count of Element and Planet slots printed on a Crucible Card. Paid from Spread cards, which are spent, or from Astral Houses, which are not. Required alongside Reagents and Heat to Fire a Formula."
   },
   {
+    "term": "Bazaar",
+    "definition": "A shared reference area on the board listing every fixed exchange rate in the game. Formula costs still vary by Crucible Card."
+  },
+  {
+    "term": "Besieged Bonus",
+    "definition": "+2 added to a Defender's total in any later Siege against this Stone for the rest of its current Transmutation Stage. Each successful defense adds another +2."
+  },
+  {
     "term": "Burn",
-    "definition": "To discard a card in order to use the effect printed after the word."
+    "definition": "To send a card to the Kismeta discard pile. The loser of a revealed Siege burns every Hand card they committed to it."
   },
   {
     "term": "Card Lock",
@@ -53,35 +69,39 @@
   },
   {
     "term": "Codex",
-    "definition": "The reference panel in front of each player on the Great Year Board. Shows the Coal and Reagent costs and the six Stellium effects."
+    "definition": "The reference panel in front of each player on the Great Year Board. Shows the Coal and Reagent costs."
   },
   {
     "term": "Cosmic Age",
     "definition": "The Sign set by the Agekeeper at the start of each Age, and the Aspects that follow from it."
   },
   {
+    "term": "Crafting",
+    "definition": "Spending a set of cards from your Spread to produce Coal or an Astral House. Coal takes 3 cards of one suit; an Astral House takes 3 cards of one Planet. The costs are printed on your Codex and the Bazaar."
+  },
+  {
     "term": "Crucible Card",
-    "definition": "A red-backed card bearing an Alchemical Formula. Each player holds four, dealt face up at setup."
+    "definition": "A red-backed card bearing an Alchemical Formula. Each player holds four."
   },
   {
     "term": "CV",
-    "definition": "The numeric value of a Minor Arcana card, from 1 for an Ace to 14 for a King. CV is scored in a Siege."
+    "definition": "The numeric value of a Minor Arcana card, from 1 for an Ace to 14 for a King."
   },
   {
     "term": "Distill",
-    "definition": "To spend 3 Essence of one Element and take the Reagent of that Element. Available on your turn in Summer, Autumn, and Winter."
+    "definition": "To spend 5 Essence of one Element and take the Reagent of that Element. Available on your turn in Summer, Autumn, and Winter."
   },
   {
     "term": "Duel",
-    "definition": "A Summer contest of Zodiac Dice to steal a card from a rival's Spread. Highest roll wins, and the defender wins ties."
+    "definition": "A Summer contest of Zodiac Dice to steal a card from a rival's Spread."
   },
   {
     "term": "Element",
-    "definition": "Fire, Earth, Air, or Water. Every Sign, suit, Furnace, Reagent, and Essence has one."
+    "definition": "Fire, Water, Air, or Earth. Every Sign, suit, Furnace, Reagent, and Essence has one."
   },
   {
     "term": "Essence",
-    "definition": "The base currency, paid out at the Harvest in the Element of the Cosmic Age. Three Essence of one Element Distill into one Reagent."
+    "definition": "The base currency, paid out at the Harvest in the Element of the Cosmic Age. Five Essence of one Element Distill into one Reagent."
   },
   {
     "term": "Extinguish",
@@ -97,7 +117,7 @@
   },
   {
     "term": "Forge",
-    "definition": "The four stations a Stone occupies during a Transmutation Stage (positions 1, 3, 5, 7): Lead, Bronze, Silver, and Gold. There is one of each, shared by all players. A Stone in the Forge is exposed to Siege for one Summer."
+    "definition": "The space a Stone occupies during a Transmutation Stage. A Stone in the Forge is exposed to Siege for one Summer, guarded by whatever Shield Reagents its owner committed."
   },
   {
     "term": "Furnace",
@@ -117,7 +137,7 @@
   },
   {
     "term": "Hand",
-    "definition": "The private Tableau zone. Hand card effects are inactive and cannot be used in Crafting sets, but Hand cards may be committed in a Siege. Limit 5."
+    "definition": "The private tableau zone. Hand card effects are inactive and cannot be used in Crafting sets, but Hand cards may be committed in a Siege, where the loser of a revealed Siege burns the cards they committed to it."
   },
   {
     "term": "Harvest",
@@ -125,11 +145,11 @@
   },
   {
     "term": "Harvest Source",
-    "definition": "Anything scored at the Harvest: your Zodiac Die, your Astral Houses, your Adept Cards, and your Spread Cards."
+    "definition": "Anything you own that Aligns with the Cosmic Age to earn Essence at the Harvest. Your Harvest Sources are your Zodiac Die, your Astral Houses, your Adept Cards, and your Spread Cards."
   },
   {
     "term": "Heat",
-    "definition": "Your personal Heat level in an Element, raised +1 by each Coal you own in that Furnace: 1 is Kindled, 2 is Ablaze, and 3 is Radiant, the maximum. Formulas call for a level of Heat."
+    "definition": "Your personal Heat level in an Element, raised +1 by each Coal you own in that Furnace, to a maximum of 3 (Radiant). Formulas call for a level of Heat."
   },
   {
     "term": "Kismeta Card",
@@ -141,7 +161,7 @@
   },
   {
     "term": "Mantle Ring",
-    "definition": "The track your Stone advances along, from START through four Transmutation Stages to the Altar of Kismeta. Its even positions (0, 2, 4, 6) are safe from Siege."
+    "definition": "The track your Stone advances along, from START through four Transmutation Stages to the Altar of Kismeta."
   },
   {
     "term": "Minor Arcana",
@@ -153,7 +173,7 @@
   },
   {
     "term": "Perfect Match",
-    "definition": "When a single source matches all three Aspects of the Cosmic Age at once, Sign, Planet, and Element, it scores the full stack. See Counting the Harvest."
+    "definition": "When a single source matches all three Aspects of the Cosmic Age at once (Sign, Planet, and Element) it scores the full stack."
   },
   {
     "term": "Philosopher's Stone",
@@ -161,11 +181,11 @@
   },
   {
     "term": "Reagent",
-    "definition": "A refined token distilled from 3 Essence of one Element. Reagents pay Formulas, purchase Adepts, declare Sieges, Rekindle a Stone, and back a Fateful Wager. The four types are Sulfur, Vitriol, Quicksilver, and Aqua Regia."
+    "definition": "A refined token distilled from 5 Essence of one Element. Reagents pay Formulas, shield a Stone in the Forge, and pay the Ante to declare a Siege. The four types are Sulfur, Vitriol, Quicksilver, and Aqua Regia."
   },
   {
     "term": "Rekindle",
-    "definition": "The Autumn action of paying 2 Reagents to return a Seized Stone from Stasis to its previous Forge position."
+    "definition": "The Autumn action of paying 5 Essence, of any type, to return a Seized Stone from Stasis to its previous Forge position."
   },
   {
     "term": "Resonant",
@@ -188,16 +208,12 @@
     "definition": "To switch off one card's printed text until Transit."
   },
   {
+    "term": "Shield Reagent",
+    "definition": "A Reagent committed to the Forge beside your Stone as you Fire it, up to 3. Rivals must match their number as an Ante to Siege you, and you take them back when you Temper."
+  },
+  {
     "term": "Siege",
-    "definition": "A Summer attack on a rival's Stone while it sits in the Forge, declared for 2 Reagents matching the Cosmic Age's Element and resolved by committing cards and comparing Alignment. Each Stone may be Sieged only once per Age."
-  },
-  {
-    "term": "Siege Age",
-    "definition": "The Sign rolled by the Agekeeper at the start of a Siege. All scoring in that contest is measured against its Aspects."
-  },
-  {
-    "term": "Siege Sign",
-    "definition": "The Sign each player rolls on their Zodiac Die during a Siege, scored against the Siege Age. It never changes their Sign for the Age."
+    "definition": "A Summer attack on a rival's Stone while it sits in the Forge, resolved by Alignment with a chance for either side to concede before the reveal."
   },
   {
     "term": "Sign",
@@ -205,15 +221,15 @@
   },
   {
     "term": "Spread",
-    "definition": "The public Tableau zone. Spread card effects are active, they may be used in Crafting sets and Attunements, they score at the Harvest, and they can be lost in Duels. Limit 7."
+    "definition": "The public tableau zone. Spread card effects are active; they may be used in Crafting sets, and they can be lost in Duels."
   },
   {
     "term": "Stasis",
-    "definition": "Where a Seized Stone is held. It returns to the Forge by Rekindling. Marked with a ❄️ snowflake symbol."
+    "definition": "Where a Seized Stone is held. From the Autumn of the next Age, its owner may pay 5 Essence to Rekindle it, and it waits there until they can. Marked with a ❄️ snowflake symbol."
   },
   {
     "term": "Stellium",
-    "definition": "A standing effect shown on your Codex panel. Hold three cards of one Planet in your Spread to activate it; it lasts only while all three remain. An Ace is wild for any one Stellium."
+    "definition": "A standing effect activated by holding three cards of one Planet in your Spread. It lasts only while all three remain. An Ace is wild for any one Stellium."
   },
   {
     "term": "Suit",
@@ -237,7 +253,7 @@
   },
   {
     "term": "Transit",
-    "definition": "The final step of Winter. Duration effects end, Fate Cards are discarded, dice and Meeples are cleared, and the Agekeeper's Key and Cosmic Age Die pass to the next player."
+    "definition": "The final step of Winter. Duration effects end, Fate Cards are discarded, and the Agekeeper's Key and Cosmic Age Die pass to the next player."
   },
   {
     "term": "Transmutation Stage",
@@ -249,7 +265,7 @@
   },
   {
     "term": "Zodiac Die",
-    "definition": "Your personal 12-sided die. Roll it in Spring to set your Sign for the Age, in a Duel, and again in a Siege to set your Siege Sign."
+    "definition": "Your personal 12-sided die. Roll it in Spring to set your Sign for the Age. That Sign holds for Harvests and Sieges alike until the Age ends."
   },
   {
     "term": "Zodiac Wheel",

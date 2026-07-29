@@ -1,0 +1,33 @@
+{
+  "intro": "You work two economies at once — dice and cards — and they meet at your Crucible Cards when you are ready to Fire.",
+  "seasons": [
+    {
+      "id": "harvest",
+      "icon": "🌾",
+      "title": "Harvest Essence",
+      "subtitle": "The Dice Economy",
+      "summary": "Each Autumn, Align your Zodiac Die, Spread, and Astral Houses with the Cosmic Age to Harvest Essence. The Gift of the Age and Perfect Matches pay out the most."
+    },
+    {
+      "id": "distill",
+      "icon": "⚗️",
+      "title": "Distill Reagents",
+      "subtitle": "Essence into Power",
+      "summary": "Spend 5 Essence of one Element to Distill a Reagent of that Element. Reagents fuel Attunements and Crucible Formulas when you Fire your Stone."
+    },
+    {
+      "id": "craft-build",
+      "icon": "🏰",
+      "title": "Craft & Build",
+      "subtitle": "The Card Economy",
+      "summary": "Spend 3 cards of one suit to craft Coal. Spend 3 cards of one Planet to build an Astral House. Upgrade to a Mansion with 2 more Planet cards plus a Reagent from the supply."
+    },
+    {
+      "id": "tableau",
+      "icon": "🃏",
+      "title": "Grow Your Tableau",
+      "subtitle": "Spread, Hand & Arcanum",
+      "summary": "Your Spread is your visible engine — active Minor Arcana, Stelliums, and Coal crafting. Your Hand is your Siege reserve. Your Arcanum holds up to two Adept Cards."
+    }
+  ]
+}

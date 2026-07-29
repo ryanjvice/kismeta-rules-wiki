@@ -967,6 +967,20 @@ site-search button[data-open-modal]:hover {
   color: var(--sl-color-accent-high);
 }
 
+button.guided-play__learn-more {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+button.guided-play__learn-more:hover {
+  color: var(--sl-color-accent);
+}
+
 .guided-play__mode-options {
   border: none;
   margin: 0 0 1.25rem;
@@ -3339,6 +3353,17 @@ site-search button[data-open-modal]:hover {
 
 .playtest-module__back:hover {
   text-decoration: underline;
+}
+
+.playtest-guided__intro {
+  margin: 0 0 1.25rem;
+  font-size: var(--site-text-base);
+  line-height: 1.6;
+  color: var(--site-color-text-muted);
+}
+
+.playtest-module .playtest-guided-play {
+  margin-top: 0.5rem;
 }
 
 .playtest-module__stub {

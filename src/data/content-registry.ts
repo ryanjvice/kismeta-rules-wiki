@@ -3,6 +3,8 @@
  */
 import harvestOrder from './tables/harvest-order.json';
 import roundAtAGlance from './tables/round-at-a-glance.json';
+import engineBuilding from './tables/engine-building.json';
+import transmutationProcess from './tables/transmutation-process.json';
 import summerFlow from './flows/summer-flow.json';
 import autumnFlow from './flows/autumn-flow.json';
 import winterFlow from './flows/winter-flow.json';
@@ -58,12 +60,18 @@ export type SeasonCardsTable = {
 	}>;
 };
 
-export type TableId = 'harvest-order' | 'round-at-a-glance';
+export type TableId =
+	| 'harvest-order'
+	| 'round-at-a-glance'
+	| 'engine-building'
+	| 'transmutation-process';
 export type FlowId = 'summer-flow' | 'autumn-flow' | 'winter-flow';
 
 const TABLES: Record<TableId, StepListTable | SeasonCardsTable> = {
 	'harvest-order': harvestOrder as StepListTable,
 	'round-at-a-glance': roundAtAGlance as SeasonCardsTable,
+	'engine-building': engineBuilding as SeasonCardsTable,
+	'transmutation-process': transmutationProcess as SeasonCardsTable,
 };
 
 const FLOWS: Record<FlowId, ActionFlow> = {

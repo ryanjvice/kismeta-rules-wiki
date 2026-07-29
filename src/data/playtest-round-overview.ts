@@ -93,10 +93,19 @@ export const playtestRoundOverview: {
 					group: 'Craft & Distill',
 				},
 				{
+					id: 'upgrade-mansion',
+					label: 'Upgrade to Mansion',
+					blurb:
+						'Spend 2 more Planet-matching Spread cards and place a Reagent marker beneath the House token.',
+					rulesPath: RULES_PATH,
+					rulesHash: '-upgrade-to-a-mansion',
+					group: 'Craft & Distill',
+				},
+				{
 					id: 'distill',
 					label: 'Distill a Reagent',
 					blurb:
-						'Spend 3 Essence of one Element to take the Reagent of that Element.',
+						'Spend 5 Essence of one Element to take the Reagent of that Element.',
 					rulesPath: RULES_PATH,
 					rulesHash: '️-distill-a-reagent',
 					group: 'Craft & Distill',
@@ -132,7 +141,7 @@ export const playtestRoundOverview: {
 					id: 'siege',
 					label: 'Siege the Forge',
 					blurb:
-						'Pay 2 Reagents matching the Age’s Element to attack a Stone in the Forge.',
+						'Pay an Ante of Reagents equal to the Shield Reagents guarding a rival’s exposed Stone.',
 					rulesPath: RULES_PATH,
 					rulesHash: '️-siege-the-forge',
 					group: 'Contest Your Rivals',
@@ -185,7 +194,7 @@ export const playtestRoundOverview: {
 					id: 'rekindle',
 					label: 'Rekindle the Stone',
 					blurb:
-						'Pay 2 Reagents to return a Stone from Stasis to its previous Forge position.',
+						'Pay 5 Essence, of any type, to return a Stone from Stasis to its previous Forge position.',
 					rulesPath: RULES_PATH,
 					rulesHash: '5️⃣-rekindle-the-stone-️',
 					group: 'Conduct the Great Work',

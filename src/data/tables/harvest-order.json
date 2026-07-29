@@ -1,25 +1,25 @@
 {
-	"intro": "Calculate all Bonus Cards before the Agekeeper deals any. Each Harvest Source scores its single highest-matching Aspect.",
-	"steps": [
-		{
-			"id": "base",
-			"label": "Base Harvest",
-			"body": "All players begin with 3 Kismeta Cards. This is always granted regardless of Alignment."
-		},
-		{
-			"id": "calculate",
-			"label": "Calculate Bonus Cards",
-			"body": "Each player tallies bonus cards from all applicable Harvest Sources: Zodiac Die, Astral Houses, Adept Cards, and Spread Cards. Each source scores its single highest-matching Aspect — Sign (+3), Planet (+2), Element (+1). Spread Cards: check each card against Cosmic Age Aspects (Planet and Suit/Element) for its highest match."
-		},
-		{
-			"id": "boon",
-			"label": "Agekeeper's Boon",
-			"body": "If the Agekeeper's rolled Sign exactly matches the Cosmic Age Sign, add +2 cards to every player's tally."
-		},
-		{
-			"id": "deal",
-			"label": "Deal the Harvest",
-			"body": "The Agekeeper deals each player their full Harvest total face-down, one at a time. (Base + Bonus + Agekeeper's Boon, if triggered.)"
-		}
-	]
+  "intro": "Each Harvest Source scores its single highest-matching Aspect against the Cosmic Age. Essence is paid in the Element of the Cosmic Age.",
+  "steps": [
+    {
+      "id": "sources",
+      "label": "Harvest Sources",
+      "body": "Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards each Align independently with the Cosmic Age."
+    },
+    {
+      "id": "tiers",
+      "label": "Scoring Tiers",
+      "body": "Sign Match +3 · Planet Match +2 · Element Match +1. A source that matches all three at once scores +6 (Perfect Match)."
+    },
+    {
+      "id": "gift",
+      "label": "Gift of the Age",
+      "body": "Remember: each player already received 1 Essence of the Cosmic Age's Element in Spring. Autumn Harvest is scored separately."
+    },
+    {
+      "id": "payout",
+      "label": "Take Your Essence",
+      "body": "Total your Alignment score and take that many Essence bills from the bank in the Cosmic Age's Element."
+    }
+  ]
 }

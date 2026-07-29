@@ -10,6 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const FLOWS_DIR = path.join(ROOT, 'src', 'data', 'flows');
 const GUIDED_STEPS = path.join(ROOT, 'src', 'data', 'guided-steps.ts');
+const PLAYTEST_GUIDED_STEPS = path.join(ROOT, 'src', 'data', 'playtest-guided-steps.ts');
 
 const HEADING_RE = /^(#{1,6})\s+(.+?)(?:\s+\{#([^}]+)\})?\s*$/;
 
@@ -39,8 +40,8 @@ function collectHashesFromFlows() {
 	return hashes;
 }
 
-function collectHashesFromGuidedSteps() {
-	const raw = fs.readFileSync(GUIDED_STEPS, 'utf8');
+function collectHashesFromGuidedStepsFile(filePath) {
+	const raw = fs.readFileSync(filePath, 'utf8');
 	const hashes = new Set();
 	for (const m of raw.matchAll(/learnMoreHash:\s*['"]([^'"]+)['"]/g)) {
 		hashes.add(m[1]);
@@ -48,8 +49,20 @@ function collectHashesFromGuidedSteps() {
 	return hashes;
 }
 
+function collectHashesFromGuidedSteps() {
+	return collectHashesFromGuidedStepsFile(GUIDED_STEPS);
+}
+
+function collectHashesFromPlaytestGuidedSteps() {
+	return collectHashesFromGuidedStepsFile(PLAYTEST_GUIDED_STEPS);
+}
+
 export function getContextAnchorHashes(_locale = 'en') {
-	return new Set([...collectHashesFromFlows(), ...collectHashesFromGuidedSteps()]);
+	return new Set([
+		...collectHashesFromFlows(),
+		...collectHashesFromGuidedSteps(),
+		...collectHashesFromPlaytestGuidedSteps(),
+	]);
 }
 
 export function injectContextAnchors(body, anchorHashes) {
@@ -92,5 +105,6 @@ export const CONTEXT_SOURCE_PAGES = [
 	'play/setup',
 	'play/round-overview',
 	'rules/round-at-a-glance',
+	'rules/game-overview',
 	'play/winning',
 ];

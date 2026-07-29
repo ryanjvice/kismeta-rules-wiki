@@ -16,6 +16,10 @@ const { tableId } = Astro.props;
 const locale = resolveContentLocale(Astro.currentLocale);
 const table = getTable(tableId);
 const intro = localize(table.intro, locale);
+const isSeasonCardsTable =
+	tableId === 'round-at-a-glance' ||
+	tableId === 'engine-building' ||
+	tableId === 'transmutation-process';
 ---
 
 {tableId === 'harvest-order' && (
@@ -32,7 +36,7 @@ const intro = localize(table.intro, locale);
 	</div>
 )}
 
-{tableId === 'round-at-a-glance' && (
+{isSeasonCardsTable && (
 	<div class="game-table game-table--season-cards" data-table-id={tableId} data-locale={locale}>
 		{intro && <p class="game-table__intro">{intro}</p>}
 		<div class="game-table__season-grid">
