@@ -19,6 +19,8 @@ export type ContextDetail = {
 	path?: string;
 	hash?: string;
 	title?: string;
+	sectionIds?: string[];
+	pageScope?: boolean;
 };
 
 function buildPageUrl(_locale: string, pagePath: string, hash: string) {

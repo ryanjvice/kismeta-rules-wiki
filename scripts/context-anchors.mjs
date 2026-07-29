@@ -106,5 +106,7 @@ export const CONTEXT_SOURCE_PAGES = [
 	'play/round-overview',
 	'rules/round-at-a-glance',
 	'rules/game-overview',
+	'rules/major-arcana',
+	'rules/minor-arcana',
 	'play/winning',
 ];

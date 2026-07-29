@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { extractContextSections } from './extract-context-sections.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -64,7 +65,7 @@ function writePage(meta, lines) {
   console.log(`  Wrote rules/${meta.slug}.md`);
 }
 
-function main() {
+async function main() {
   if (!fs.existsSync(SOURCE)) {
     console.error(`Source not found: ${SOURCE}`);
     process.exit(1);
@@ -98,6 +99,10 @@ function main() {
   }
 
   console.log('Card reference sync complete.');
+  await extractContextSections();
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

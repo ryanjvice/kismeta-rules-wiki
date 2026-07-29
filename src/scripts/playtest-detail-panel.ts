@@ -4,6 +4,7 @@ import type {
 	ContextDetail,
 	ContextPanelLabels,
 	ContextSectionIndex,
+	ContextSectionRecord,
 } from './context-panel';
 import type { PlaytestDetailPayload } from './playtest-detail';
 
@@ -12,10 +13,48 @@ function buildPageUrl(_locale: string, pagePath: string, hash: string) {
 	return hash ? `${base}#${hash}` : base;
 }
 
+type ContextDetailState = {
+	path: string;
+	hash?: string;
+	title?: string;
+	sectionIds?: string[];
+	pageScope?: boolean;
+};
+
 type DetailState =
-	| { kind: 'context'; path: string; hash: string; title?: string }
+	| { kind: 'context'; context: ContextDetailState }
 	| { kind: 'direct'; title: string; html: string; openFullUrl?: string }
 	| { kind: 'empty' };
+
+function collectContextHtml(
+	pageSections: Record<string, ContextSectionRecord>,
+	context: ContextDetailState
+): string[] {
+	const htmlParts: string[] = [];
+
+	if (context.sectionIds?.length) {
+		for (const id of context.sectionIds) {
+			const section = pageSections[id];
+			if (section?.html) htmlParts.push(section.html);
+		}
+		return htmlParts;
+	}
+
+	if (context.pageScope) {
+		for (const id of Object.keys(pageSections)) {
+			const section = pageSections[id];
+			if (section?.html) htmlParts.push(section.html);
+		}
+		return htmlParts;
+	}
+
+	if (context.hash) {
+		const section = pageSections[context.hash];
+		if (section?.html) htmlParts.push(section.html);
+	}
+
+	return htmlParts;
+}
 
 function initPlaytestDetailPanel(root: HTMLElement) {
 	if (root.dataset.bound === 'true') return;
@@ -76,16 +115,31 @@ function initPlaytestDetailPanel(root: HTMLElement) {
 		}
 
 		if (current.kind === 'context') {
-			const section = sections[current.path]?.[current.hash];
-			modalTitle.textContent = section?.title || current.title || labels.title;
+			const pageSections = sections[current.context.path];
+			const htmlParts = pageSections ? collectContextHtml(pageSections, current.context) : [];
 
-			if (section?.html) {
-				body.innerHTML = section.html;
+			if (htmlParts.length) {
+				const firstSection =
+					current.context.sectionIds?.[0] != null
+						? pageSections[current.context.sectionIds[0]]
+						: current.context.hash
+							? pageSections[current.context.hash]
+							: pageSections[Object.keys(pageSections)[0] ?? ''];
+
+				modalTitle.textContent =
+					current.context.title || firstSection?.title || labels.title;
+				body.innerHTML = htmlParts.join('');
 				body.hidden = false;
 				empty.hidden = true;
 				applyGameModeCallouts(body);
 
-				link.href = buildPageUrl(locale, current.path, current.hash);
+				link.href = buildPageUrl(
+					locale,
+					current.context.path,
+					current.context.pageScope || current.context.sectionIds?.length
+						? ''
+						: (current.context.hash ?? '')
+				);
 				link.textContent = labels.openFull;
 				link.hidden = false;
 				return;
@@ -101,7 +155,8 @@ function initPlaytestDetailPanel(root: HTMLElement) {
 
 	const onContext = (event: Event) => {
 		const detail = (event as CustomEvent<ContextDetail>).detail ?? {};
-		if (!detail.path || !detail.hash) return;
+		if (!detail.path) return;
+		if (!detail.pageScope && !detail.sectionIds?.length && !detail.hash) return;
 
 		if (event.target instanceof HTMLElement && event.target.closest('[data-playtest-rule]')) {
 			lastTrigger = event.target.closest<HTMLElement>('[data-playtest-rule]');
@@ -109,9 +164,13 @@ function initPlaytestDetailPanel(root: HTMLElement) {
 
 		current = {
 			kind: 'context',
-			path: detail.path,
-			hash: detail.hash,
-			title: detail.title,
+			context: {
+				path: detail.path,
+				hash: detail.hash,
+				title: detail.title,
+				sectionIds: detail.sectionIds,
+				pageScope: detail.pageScope,
+			},
 		};
 		render();
 		openModal();

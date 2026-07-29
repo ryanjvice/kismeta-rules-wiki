@@ -11,7 +11,6 @@ import {
 } from './render-crucible-deck-html.mjs';
 import { injectContentBlocks } from './render-content-html.mjs';
 import { getContextAnchorHashes, injectContextAnchors } from './context-anchors.mjs';
-import { extractContextSections } from './extract-context-sections.mjs';
 
 const EN_CONTEXT_ANCHORS = getContextAnchorHashes('en');
 
@@ -367,7 +366,6 @@ async function main() {
 
   fs.mkdirSync(path.dirname(GLOSSARY_JSON), { recursive: true });
   fs.writeFileSync(GLOSSARY_JSON, JSON.stringify(glossaryTerms, null, 2), 'utf8');
-  await extractContextSections();
   console.log(`Wrote ${sections.length} sections, ${glossaryTerms.length} glossary terms.`);
 }
 
