@@ -1,0 +1,61 @@
+---
+import MailingListSignup from './MailingListSignup.astro';
+import { agyPlaytestCommunity } from '../data/playtest';
+import { siteT } from '../utils/site-i18n';
+
+const { feedbackFormUrl, discordUrl } = agyPlaytestCommunity;
+const hasFeedbackForm = Boolean(feedbackFormUrl);
+---
+
+<div class="playtest-feedback">
+	<p class="playtest-feedback__intro">{siteT('playtest.agy.feedback.intro')}</p>
+
+	<section class="playtest-feedback__section" aria-labelledby="playtest-feedback-form-heading">
+		<h2 id="playtest-feedback-form-heading" class="playtest-feedback__heading">
+			{siteT('playtest.agy.feedback.formHeading')}
+		</h2>
+		<p class="playtest-feedback__summary">{siteT('playtest.agy.feedback.formSummary')}</p>
+		{
+			hasFeedbackForm ? (
+				<a
+					class="playtest-feedback__cta"
+					href={feedbackFormUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{siteT('playtest.agy.feedback.formCta')}
+				</a>
+			) : (
+				<>
+					<button class="playtest-feedback__cta" type="button" disabled>
+						{siteT('playtest.agy.feedback.formCta')}
+					</button>
+					<p class="playtest-feedback__notice">{siteT('playtest.agy.feedback.formUnavailable')}</p>
+				</>
+			)
+		}
+	</section>
+
+	<section class="playtest-feedback__section" aria-labelledby="playtest-feedback-discord-heading">
+		<h2 id="playtest-feedback-discord-heading" class="playtest-feedback__heading">
+			{siteT('playtest.agy.feedback.discordHeading')}
+		</h2>
+		<p class="playtest-feedback__summary">{siteT('playtest.agy.feedback.discordSummary')}</p>
+		<a
+			class="playtest-feedback__cta"
+			href={discordUrl}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			{siteT('playtest.agy.feedback.discordCta')}
+		</a>
+	</section>
+
+	<section class="playtest-feedback__section" aria-labelledby="playtest-feedback-mailing-heading">
+		<h2 id="playtest-feedback-mailing-heading" class="playtest-feedback__heading">
+			{siteT('playtest.agy.feedback.mailingHeading')}
+		</h2>
+		<p class="playtest-feedback__summary">{siteT('playtest.agy.feedback.mailingSummary')}</p>
+		<MailingListSignup />
+	</section>
+</div>

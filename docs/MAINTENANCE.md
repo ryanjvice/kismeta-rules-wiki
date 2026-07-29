@@ -58,13 +58,15 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
   `src/pages/index.astro` · layout: `SiteLayout` with `hideChrome` · copy: `site.enter.*` in `src/content/i18n/en.json` · mailing list: `MailingListSignup.astro` · form action: `src/data/mailing-list.ts` · playtest CTA: `/games/alchemists-of-the-great-year/playtest/`
 
 - **AGY playtest** (`/games/alchemists-of-the-great-year/playtest/`)  
-  Hub: `src/pages/games/alchemists-of-the-great-year/playtest/index.astro` · modules: `round-overview`, `glossary`, `cards`, `options` under `playtest/` · shared shell: `PlaytestModuleLayout.astro` · hub cards: `PlaytestHubCard.astro` · module registry: `src/data/playtest.ts` · gate: `PlaytestGate.astro` · copy: `playtest.agy.*`
+  Hub: `src/pages/games/alchemists-of-the-great-year/playtest/index.astro` · modules: `round-overview`, `glossary`, `cards`, `feedback` under `playtest/` · shared shell: `PlaytestModuleLayout.astro` · hub cards: `PlaytestHubCard.astro` · module registry: `src/data/playtest.ts` · gate: `PlaytestGate.astro` · copy: `playtest.agy.*`
 
   **Round Overview module** (`…/playtest/round-overview/`): brief season/step list in `src/data/playtest-round-overview.ts` · UI: `PlaytestRoundOverview.astro` · step taps open `PlaytestDetailPanel.astro`, which loads pre-rendered wiki section HTML from `src/data/context-sections/en.json` (same pipeline as Guided Play). Close the panel to return to the brief overview without leaving playtest.
 
   **Glossary module** (`…/playtest/glossary/`): terms from `src/data/glossary.json` via `src/data/playtest-glossary.ts` · UI: `PlaytestGlossary.astro` · client search/filter in `src/scripts/playtest-glossary.ts` · term taps dispatch `kismeta:playtest-detail` to the shared detail panel.
 
   **Cards module** (`…/playtest/cards/`): card entries in `src/data/playtest-cards.json` (manual extract; no sync script yet) · helpers: `src/data/playtest-cards.ts` · UI: `PlaytestCards.astro` · four-tab browser in `src/scripts/playtest-cards.ts` · card taps dispatch `kismeta:playtest-detail`.
+
+  **Feedback module** (`…/playtest/feedback/`): UI: `PlaytestFeedback.astro` · Google Form URL: `agyPlaytestCommunity.feedbackFormUrl` in `src/data/playtest.ts` · Discord + mailing list reuse `agyPlaytestCommunity.discordUrl` and `MailingListSignup.astro`.
 
 - **Franchise homepage** (`/home/`)  
   `src/pages/home.astro` · copy: `site.home.*` in `src/content/i18n/en.json` — hero uses `site.home.welcomeHeadline`, `site.home.welcomeTagline`, and `site.home.metaDescription`
@@ -174,13 +176,13 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 
 Marketing pages live in `src/pages/` and use [`SiteLayout`](../src/layouts/SiteLayout.astro) (not Starlight chrome).
 
-| Page | File | Copy keys |
-|------|------|-----------|
-| Enter gate `/` | `src/pages/index.astro` | `site.enter.*` (`title`, `tagline`, `metaDescription`, `cta`) |
-| Franchise hub `/home/` | `src/pages/home.astro` | `site.home.*` (`welcomeHeadline`, `welcomeTagline`, `metaDescription`) |
-| Shop `/shop/` | `src/pages/shop.astro`, `src/data/store-products.ts`, `src/components/ProductCard.astro` | `shop.*` |
-| AGY marketing | `src/pages/games/alchemists-of-the-great-year.astro` | `game.agy.*` |
-| Veiled Ascent marketing | `src/pages/games/the-veiled-ascent.astro` | `game.tva.*` |
+| Page                    | File                                                                                     | Copy keys                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Enter gate `/`          | `src/pages/index.astro`                                                                  | `site.enter.*` (`title`, `tagline`, `metaDescription`, `cta`)          |
+| Franchise hub `/home/`  | `src/pages/home.astro`                                                                   | `site.home.*` (`welcomeHeadline`, `welcomeTagline`, `metaDescription`) |
+| Shop `/shop/`           | `src/pages/shop.astro`, `src/data/store-products.ts`, `src/components/ProductCard.astro` | `shop.*`                                                               |
+| AGY marketing           | `src/pages/games/alchemists-of-the-great-year.astro`                                     | `game.agy.*`                                                           |
+| Veiled Ascent marketing | `src/pages/games/the-veiled-ascent.astro`                                                | `game.tva.*`                                                           |
 
 Game cards on the hub read from [`src/data/games.ts`](../src/data/games.ts). External shop URLs: [`src/data/shop.ts`](../src/data/shop.ts).
 
@@ -190,13 +192,13 @@ Use [`siteT()`](../src/utils/site-i18n.ts) for marketing copy (loads `src/conten
 
 ## Generated vs hand-edited content
 
-| Safe to edit directly | Overwritten by sync |
-|-----------------------|---------------------|
-| `src/pages/*` | AGY: `learn/`, `play/` (except `guided.mdx`), `reference/`, `rules/` under `alchemists-of-the-great-year/` |
-| `src/data/guided-steps.ts`, `src/data/tva-guided-steps.ts` | TVA: `lore/`, `play/` (except `guided.mdx`), `reference/`, `rules/` under `the-veiled-ascent/` |
-| `src/data/games.ts`, `src/data/shop.ts`, `src/data/wiki-base.ts`, `src/data/wiki-nav.ts` | `src/data/glossary.json` (AGY sync) |
-| `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON | `src/data/glossary-tva.json` (TVA sync) |
-| `Kismeta_GameGuide.md`, `Kismeta_CardReference.md`, `Kismeta_VeiledAscent_gameplayGuide.md` (sources of truth) | TVA `lore/index.md` (mirrored from AGY epilogue) |
+| Safe to edit directly                                                                                          | Overwritten by sync                                                                                        |
+| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `src/pages/*`                                                                                                  | AGY: `learn/`, `play/` (except `guided.mdx`), `reference/`, `rules/` under `alchemists-of-the-great-year/` |
+| `src/data/guided-steps.ts`, `src/data/tva-guided-steps.ts`                                                     | TVA: `lore/`, `play/` (except `guided.mdx`), `reference/`, `rules/` under `the-veiled-ascent/`             |
+| `src/data/games.ts`, `src/data/shop.ts`, `src/data/wiki-base.ts`, `src/data/wiki-nav.ts`                       | `src/data/glossary.json` (AGY sync)                                                                        |
+| `src/components/*`, `src/styles/*`, `astro.config.mjs`, i18n JSON                                              | `src/data/glossary-tva.json` (TVA sync)                                                                    |
+| `Kismeta_GameGuide.md`, `Kismeta_CardReference.md`, `Kismeta_VeiledAscent_gameplayGuide.md` (sources of truth) | TVA `lore/index.md` (mirrored from AGY epilogue)                                                           |
 
 **Typical AGY workflow:** edit `Kismeta_GameGuide.md` or `Kismeta_CardReference.md` → `npm run sync:gy` → `npm run dev` → preview → `npm run build`.
 
@@ -210,13 +212,13 @@ Use [`siteT()`](../src/utils/site-i18n.ts) for marketing copy (loads `src/conten
 
 The sync script ([`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs)) expects this structure in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md):
 
-| Level | Markdown | Examples |
-| ----- | -------- | -------- |
-| Top-level (one page each) | `# TITLE` | `# SETUP`, `# GAME OVERVIEW`, `# APPENDIX` |
-| Subsections (stay on the same page) | `## …` | `## The Great Year`, `## PHASE 1: SPRING` |
-| Sub-subsections | `### …` | `### 1️⃣ Set the Cosmic Age`, `### 1️⃣ QUICKPLAY` |
-| Detail blocks (not in TOC) | `#### …` | `#### How to Activate:` |
-| Detail blocks (sub-sub-sections) | `#### …` | `#### How to Craft:` |
+| Level                               | Markdown  | Examples                                        |
+| ----------------------------------- | --------- | ----------------------------------------------- |
+| Top-level (one page each)           | `# TITLE` | `# SETUP`, `# GAME OVERVIEW`, `# APPENDIX`      |
+| Subsections (stay on the same page) | `## …`    | `## The Great Year`, `## PHASE 1: SPRING`       |
+| Sub-subsections                     | `### …`   | `### 1️⃣ Set the Cosmic Age`, `### 1️⃣ QUICKPLAY` |
+| Detail blocks (not in TOC)          | `#### …`  | `#### How to Activate:`                         |
+| Detail blocks (sub-sub-sections)    | `#### …`  | `#### How to Craft:`                            |
 
 **Synced output:** `writePage()` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs) preserves `##` / `###` / `####` levels from the guide so Starlight’s “On this page” TOC (h2–h3) lists phase and step headings. Do **not** re-add heading flattening in `writePage()` — an old `demoteHeadings()` pass collapsed everything to `#` (h1) and left only “Overview” in the TOC.
 
@@ -257,13 +259,13 @@ Lines with ⚙️ in the guide are converted during sync to:
 
 Word-exported wide tables are replaced with JSON + HTML injection during sync.
 
-| What | Where |
-| ---- | ----- |
-| Table data | [`src/data/tables/`](../src/data/tables/) (`harvest-order.json`, `round-at-a-glance.json`) |
-| Registry (Astro embeds) | [`src/data/content-registry.ts`](../src/data/content-registry.ts) |
-| HTML renderers | [`scripts/render-content-html.mjs`](../scripts/render-content-html.mjs) — `stepList`, `seasonCards` |
-| Guided static embed | [`src/components/GameTableEmbed.astro`](../src/components/GameTableEmbed.astro) |
-| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.game-table*` |
+| What                    | Where                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------- |
+| Table data              | [`src/data/tables/`](../src/data/tables/) (`harvest-order.json`, `round-at-a-glance.json`)          |
+| Registry (Astro embeds) | [`src/data/content-registry.ts`](../src/data/content-registry.ts)                                   |
+| HTML renderers          | [`scripts/render-content-html.mjs`](../scripts/render-content-html.mjs) — `stepList`, `seasonCards` |
+| Guided static embed     | [`src/components/GameTableEmbed.astro`](../src/components/GameTableEmbed.astro)                     |
+| Styles                  | [`src/styles/custom.css`](../src/styles/custom.css) → `.game-table*`                                |
 
 **Guide placeholders removed (as of May 2026):** `<!-- TABLE:harvest-order -->` and `<!-- TABLE:round-at-a-glance -->` no longer exist in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). The guide now carries these as inline markdown tables. The sync script's `injectAllContent()` pass is a no-op for these tables but is harmless. The Guided Play embeds (`harvest-order`, `round-at-a-glance`) continue to read from `src/data/tables/` JSON and are unaffected.
 
@@ -275,12 +277,12 @@ Word-exported wide tables are replaced with JSON + HTML injection during sync.
 
 Summer, Autumn, and Winter use decision-tree JSON — not flat markdown rows.
 
-| What | Where |
-| ---- | ----- |
-| Flow data | [`src/data/flows/`](../src/data/flows/) (`summer-flow.json`, `autumn-flow.json`, `winter-flow.json`) |
-| Static rules HTML | [`scripts/render-content-html.mjs`](../scripts/render-content-html.mjs) → `decisionTree` |
-| Interactive Guided UI | [`src/components/ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro) |
-| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.action-flow*` |
+| What                  | Where                                                                                                |
+| --------------------- | ---------------------------------------------------------------------------------------------------- |
+| Flow data             | [`src/data/flows/`](../src/data/flows/) (`summer-flow.json`, `autumn-flow.json`, `winter-flow.json`) |
+| Static rules HTML     | [`scripts/render-content-html.mjs`](../scripts/render-content-html.mjs) → `decisionTree`             |
+| Interactive Guided UI | [`src/components/ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro)                    |
+| Styles                | [`src/styles/custom.css`](../src/styles/custom.css) → `.action-flow*`                                |
 
 **Guide placeholders removed (as of May 2026):** `<!-- FLOW:summer-flow -->`, `<!-- FLOW:autumn-flow -->`, `<!-- FLOW:winter-flow -->` no longer exist in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). The rules pages show inline phase detail from the guide; Guided Play still uses the JSON flow embeds from `src/data/flows/`.
 
@@ -292,15 +294,15 @@ Summer, Autumn, and Winter use decision-tree JSON — not flat markdown rows.
 
 Interactive walkthrough for new players at the table — **not** synced from the guide.
 
-| What | Where |
-| ---- | ----- |
-| Step copy | [`src/data/guided-steps.ts`](../src/data/guided-steps.ts) |
-| Stepper UI + progress | [`src/components/GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro) |
-| Pages | [`src/content/docs/play/guided.mdx`](../src/content/docs/play/guided.mdx) |
-| Chrome strings | [`src/content/i18n/en.json`](../src/content/i18n/en.json) (`guided.*`, `guided.phase.*`) |
-| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.guided-play*` |
-| Top tab | [`src/components/TabNav.astro`](../src/components/TabNav.astro) → **Guided** |
-| Sidebar | [`astro.config.mjs`](../astro.config.mjs) → Play → **Guided Play** |
+| What                  | Where                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| Step copy             | [`src/data/guided-steps.ts`](../src/data/guided-steps.ts)                                |
+| Stepper UI + progress | [`src/components/GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro)    |
+| Pages                 | [`src/content/docs/play/guided.mdx`](../src/content/docs/play/guided.mdx)                |
+| Chrome strings        | [`src/content/i18n/en.json`](../src/content/i18n/en.json) (`guided.*`, `guided.phase.*`) |
+| Styles                | [`src/styles/custom.css`](../src/styles/custom.css) → `.guided-play*`                    |
+| Top tab               | [`src/components/TabNav.astro`](../src/components/TabNav.astro) → **Guided**             |
+| Sidebar               | [`astro.config.mjs`](../astro.config.mjs) → Play → **Guided Play**                       |
 
 **Flow (17 content steps + completion screen):** Components → Setup I–VI → Round intro → Spring 1–5 → Summer / Autumn / Winter (in-step `ActionFlowGuide`) → Round end → completion CTA to Round at a Glance (`/rules/round-at-a-glance/`).
 
@@ -318,14 +320,14 @@ Interactive walkthrough for new players at the table — **not** synced from the
 
 On [`play/guided`](src/content/docs/play/guided.mdx), the right sidebar shows **extracted rules sections** instead of the page TOC. It updates when the user changes steps or taps an action in an embedded flow.
 
-| What | Where |
-| ---- | ----- |
-| Sidebar override | [`src/components/PageSidebar.astro`](../src/components/PageSidebar.astro) → [`ContextRulesPanel.astro`](../src/components/ContextRulesPanel.astro) |
-| Client logic | [`src/scripts/context-panel.ts`](../src/scripts/context-panel.ts) listens for `kismeta:context` |
+| What                      | Where                                                                                                                                               |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sidebar override          | [`src/components/PageSidebar.astro`](../src/components/PageSidebar.astro) → [`ContextRulesPanel.astro`](../src/components/ContextRulesPanel.astro)  |
+| Client logic              | [`src/scripts/context-panel.ts`](../src/scripts/context-panel.ts) listens for `kismeta:context`                                                     |
 | Section index (generated) | [`src/data/context-sections/`](../src/data/context-sections/) via [`scripts/extract-context-sections.mjs`](../scripts/extract-context-sections.mjs) |
-| Stable heading IDs | [`scripts/context-anchors.mjs`](../scripts/context-anchors.mjs) injects `{#learnMoreHash}` during `npm run sync` |
-| Event emitters | [`GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro), [`ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro) |
-| i18n | `guided.context.*` in [`en.json`](../src/content/i18n/en.json) |
+| Stable heading IDs        | [`scripts/context-anchors.mjs`](../scripts/context-anchors.mjs) injects `{#learnMoreHash}` during `npm run sync`                                    |
+| Event emitters            | [`GuidedPlayStepper.astro`](../src/components/GuidedPlayStepper.astro), [`ActionFlowGuide.astro`](../src/components/ActionFlowGuide.astro)          |
+| i18n                      | `guided.context.*` in [`en.json`](../src/content/i18n/en.json)                                                                                      |
 
 **When adding steps or flow branches:** Set `learnMorePath` / `learnMoreHash` on the step or flow leaf, then run `npm run sync` (regenerates anchor suffixes and context JSON). Do **not** duplicate rules copy in the panel — content is pulled from synced markdown.
 
@@ -335,12 +337,12 @@ On [`play/guided`](src/content/docs/play/guided.mdx), the right sidebar shows **
 
 Card counts per mode and player count live in one place — **not** in the Word-style markdown table.
 
-| What | Where |
-| ---- | ----- |
-| Canonical counts | [`src/data/crucible-deck-builds.json`](../src/data/crucible-deck-builds.json) + [`crucible-deck-builds.ts`](../src/data/crucible-deck-builds.ts) |
-| Static Setup UI (EN) | [`scripts/render-crucible-deck-html.mjs`](../scripts/render-crucible-deck-html.mjs) injected at `<!-- CRUCIBLE_DECK_BUILDS -->` during `npm run sync` |
-| Interactive Guided UI | [`src/components/CrucibleDeckBuilds.astro`](../src/components/CrucibleDeckBuilds.astro) on Guided Play step IV |
-| Styles | [`src/styles/custom.css`](../src/styles/custom.css) → `.crucible-deck*` |
+| What                  | Where                                                                                                                                                 |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Canonical counts      | [`src/data/crucible-deck-builds.json`](../src/data/crucible-deck-builds.json) + [`crucible-deck-builds.ts`](../src/data/crucible-deck-builds.ts)      |
+| Static Setup UI (EN)  | [`scripts/render-crucible-deck-html.mjs`](../scripts/render-crucible-deck-html.mjs) injected at `<!-- CRUCIBLE_DECK_BUILDS -->` during `npm run sync` |
+| Interactive Guided UI | [`src/components/CrucibleDeckBuilds.astro`](../src/components/CrucibleDeckBuilds.astro) on Guided Play step IV                                        |
+| Styles                | [`src/styles/custom.css`](../src/styles/custom.css) → `.crucible-deck*`                                                                               |
 
 **Guide placeholder removed (as of May 2026):** `<!-- CRUCIBLE_DECK_BUILDS -->` no longer exists in [`Kismeta_GameGuide.md`](../Kismeta_GameGuide.md). The guide now shows the deck-build table as an inline markdown table. The `injectAllContent()` pass is a no-op for this section. The Guided Play embed (Setup IV) and the static Setup page HTML both continue to render from `crucible-deck-builds.json` via `render-crucible-deck-html.mjs`.
 
@@ -376,14 +378,14 @@ After changing icons or manifest fields, run `npm run build` and confirm install
 
 ## Commands
 
-| Command               | Purpose                                                                        |
-| --------------------- | ------------------------------------------------------------------------------ |
-| `npm run dev`         | Local dev server ([http://localhost:4321](http://localhost:4321))               |
-| `npm run sync`        | Runs AGY sync, then TVA sync (both guides → pages + glossary JSON)              |
-| `npm run sync:gy`     | AGY only: `Kismeta_GameGuide.md` → `alchemists-of-the-great-year/` + `glossary.json` |
-| `npm run sync:tva`    | TVA only: `Kismeta_VeiledAscent_gameplayGuide.md` → `the-veiled-ascent/` + `glossary-tva.json` + lore mirror |
-| `npm run build`       | Runs `sync` (both), then production build → `dist/`                            |
-| `npm run preview`     | Preview production build locally                                                |
+| Command            | Purpose                                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `npm run dev`      | Local dev server ([http://localhost:4321](http://localhost:4321))                                            |
+| `npm run sync`     | Runs AGY sync, then TVA sync (both guides → pages + glossary JSON)                                           |
+| `npm run sync:gy`  | AGY only: `Kismeta_GameGuide.md` → `alchemists-of-the-great-year/` + `glossary.json`                         |
+| `npm run sync:tva` | TVA only: `Kismeta_VeiledAscent_gameplayGuide.md` → `the-veiled-ascent/` + `glossary-tva.json` + lore mirror |
+| `npm run build`    | Runs `sync` (both), then production build → `dist/`                                                          |
+| `npm run preview`  | Preview production build locally                                                                             |
 
 ---
 
@@ -434,14 +436,14 @@ Config lives in [`.pa11yci.json`](../.pa11yci.json). Add new routes there when n
 
 ### Established patterns — reuse, don't reinvent
 
-| Need | Pattern to follow | Where |
-|------|-------------------|-------|
-| Modal / dialog | `role="dialog"`, `aria-modal`, focus-on-open (close btn), focus-restore on close, Escape, Tab trap | `ContextRulesPanel.astro` + `context-panel.ts` |
-| Step / wizard | `role="progressbar"`, `aria-live="polite"`, heading focus on panel change | `GuidedPlayStepper.astro`, `ActionFlowGuide.astro` |
-| Toggle button | `aria-pressed="true/false"` updated in JS whenever the active class changes | `CrucibleDeckBuilds.astro` `setActive()` |
-| Active nav link | `aria-current="page"` on the active `<a>` | `TabNav.astro` |
-| Screen-reader-only text | Use the `.sr-only` utility class (defined in `custom.css`) | Any component |
-| Expand/collapse | `aria-expanded` on the trigger button, updated in JS | `Sidebar.astro` + `sidebar-collapse.ts` |
+| Need                    | Pattern to follow                                                                                  | Where                                              |
+| ----------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Modal / dialog          | `role="dialog"`, `aria-modal`, focus-on-open (close btn), focus-restore on close, Escape, Tab trap | `ContextRulesPanel.astro` + `context-panel.ts`     |
+| Step / wizard           | `role="progressbar"`, `aria-live="polite"`, heading focus on panel change                          | `GuidedPlayStepper.astro`, `ActionFlowGuide.astro` |
+| Toggle button           | `aria-pressed="true/false"` updated in JS whenever the active class changes                        | `CrucibleDeckBuilds.astro` `setActive()`           |
+| Active nav link         | `aria-current="page"` on the active `<a>`                                                          | `TabNav.astro`                                     |
+| Screen-reader-only text | Use the `.sr-only` utility class (defined in `custom.css`)                                         | Any component                                      |
+| Expand/collapse         | `aria-expanded` on the trigger button, updated in JS                                               | `Sidebar.astro` + `sidebar-collapse.ts`            |
 
 ### Tab semantics rule
 
