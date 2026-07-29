@@ -1,0 +1,13 @@
+---
+import PlaytestModuleLayout from '../../../../components/PlaytestModuleLayout.astro';
+import { getPlaytestModule } from '../../../../data/playtest';
+import { siteT } from '../../../../utils/site-i18n';
+
+const module = getPlaytestModule('options')!;
+const title = `${siteT(module.titleKey)} — ${siteT('playtest.agy.pageTitle')}`;
+const description = siteT(module.summaryKey);
+---
+
+<PlaytestModuleLayout {title} {description} moduleTitle={siteT(module.titleKey)}>
+	<p class="playtest-module__stub">{siteT('playtest.agy.stubBody')}</p>
+</PlaytestModuleLayout>

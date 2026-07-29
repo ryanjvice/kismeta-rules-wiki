@@ -1,0 +1,35 @@
+---
+import PlaytestGate from './PlaytestGate.astro';
+import PlaytestDetailPanel from './PlaytestDetailPanel.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { agyPlaytestConfig } from '../data/playtest';
+import { siteT } from '../utils/site-i18n';
+
+interface Props {
+	title: string;
+	description: string;
+	moduleTitle: string;
+}
+
+const { title, description, moduleTitle } = Astro.props;
+---
+
+<SiteLayout {title} {description} gameSlug="alchemists-of-the-great-year">
+	<PlaytestGate>
+		<section class="playtest-page playtest-module" aria-labelledby="playtest-module-title">
+			<nav class="playtest-module__nav" aria-label="Playtest navigation">
+				<a class="playtest-module__back" href={agyPlaytestConfig.path}>
+					{siteT('playtest.agy.backToHub')}
+				</a>
+			</nav>
+
+			<h1 id="playtest-module-title" class="playtest-page__title">{moduleTitle}</h1>
+
+			<div class="playtest-module__body">
+				<slot />
+			</div>
+		</section>
+
+		<PlaytestDetailPanel />
+	</PlaytestGate>
+</SiteLayout>

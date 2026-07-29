@@ -1,0 +1,67 @@
+---
+import { agyGlossaryByLetter, slugForTerm } from '../data/playtest-glossary';
+import { siteT } from '../utils/site-i18n';
+---
+
+<div class="playtest-glossary" data-playtest-glossary>
+	<p class="playtest-glossary__intro">{siteT('playtest.agy.glossary.intro')}</p>
+
+	<form class="playtest-glossary__search site-form-fields" data-playtest-glossary-form novalidate>
+		<label class="site-form-fields__label" for="playtest-glossary-search">
+			<span class="sr-only">{siteT('playtest.agy.glossary.searchLabel')}</span>
+			<input
+				class="site-form-fields__input playtest-glossary__search-input"
+				type="search"
+				id="playtest-glossary-search"
+				name="q"
+				placeholder={siteT('playtest.agy.glossary.searchPlaceholder')}
+				autocomplete="off"
+				data-playtest-glossary-input
+			/>
+		</label>
+		<button class="site-form-fields__submit" type="submit">
+			{siteT('playtest.agy.glossary.searchSubmit')}
+		</button>
+	</form>
+
+	<p class="playtest-glossary__no-results" hidden data-playtest-glossary-no-results role="status">
+		{siteT('playtest.agy.glossary.noResults')}
+	</p>
+
+	<div class="playtest-glossary__letters">
+		{
+			agyGlossaryByLetter.map((group) => (
+				<section
+					class="playtest-glossary__letter-group"
+					data-playtest-glossary-letter
+					aria-labelledby={`glossary-letter-${group.letter}`}
+				>
+					<h2 id={`glossary-letter-${group.letter}`} class="playtest-glossary__letter">
+						{group.letter}
+					</h2>
+					<ul class="playtest-glossary__terms">
+						{group.entries.map((entry) => (
+							<li class="playtest-glossary__term-row" data-playtest-glossary-term-row>
+								<button
+									type="button"
+									class="playtest-glossary__term-button"
+									data-playtest-glossary-term
+									data-term={entry.term}
+									data-definition={entry.definition}
+									data-term-slug={slugForTerm(entry.term)}
+									aria-label={`${entry.term}: ${entry.definition}`}
+								>
+									<span class="playtest-glossary__term-label">{entry.term}</span>
+								</button>
+							</li>
+						))}
+					</ul>
+				</section>
+			))
+		}
+	</div>
+</div>
+
+<script>
+	import '../scripts/playtest-glossary.ts';
+</script>

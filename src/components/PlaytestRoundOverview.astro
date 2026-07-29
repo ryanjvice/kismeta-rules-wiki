@@ -1,0 +1,70 @@
+---
+import { playtestRoundOverview } from '../data/playtest-round-overview';
+import type { PlaytestRoundSeason, PlaytestRoundStep } from '../data/playtest-round-overview';
+
+type StepRow =
+	| { kind: 'group'; label: string }
+	| { kind: 'step'; step: PlaytestRoundStep };
+
+function buildStepRows(season: PlaytestRoundSeason): StepRow[] {
+	const rows: StepRow[] = [];
+	let lastGroup: string | undefined;
+
+	for (const step of season.steps) {
+		if (step.group && step.group !== lastGroup) {
+			rows.push({ kind: 'group', label: step.group });
+			lastGroup = step.group;
+		}
+		rows.push({ kind: 'step', step });
+	}
+
+	return rows;
+}
+---
+
+<div class="playtest-round-overview" data-playtest-round-overview>
+	<p class="playtest-round-overview__intro">{playtestRoundOverview.intro}</p>
+
+	{
+		playtestRoundOverview.seasons.map((season) => (
+			<section class="playtest-round-overview__season" aria-labelledby={`season-${season.id}`}>
+				<header class="playtest-round-overview__season-header">
+					<h2 id={`season-${season.id}`} class="playtest-round-overview__season-title">
+						<span class="playtest-round-overview__season-icon" aria-hidden="true">{season.icon}</span>
+						{season.label}
+					</h2>
+					<p class="playtest-round-overview__season-subtitle">{season.subtitle}</p>
+					<p class="playtest-round-overview__season-summary">{season.summary}</p>
+				</header>
+
+				<ol class="playtest-round-overview__steps">
+					{buildStepRows(season).map((row) =>
+						row.kind === 'group' ? (
+							<li class="playtest-round-overview__group" aria-hidden="true">
+								{row.label}
+							</li>
+						) : (
+							<li class="playtest-round-overview__step">
+								<button
+									type="button"
+									class="playtest-round-overview__step-button"
+									data-playtest-rule
+									data-rules-path={row.step.rulesPath}
+									data-rules-hash={row.step.rulesHash}
+									aria-label={`${row.step.label}: ${row.step.blurb}`}
+								>
+									<span class="playtest-round-overview__step-label">{row.step.label}</span>
+									<span class="playtest-round-overview__step-blurb">{row.step.blurb}</span>
+								</button>
+							</li>
+						)
+					)}
+				</ol>
+			</section>
+		))
+	}
+</div>
+
+<script>
+	import '../scripts/playtest-step-links.ts';
+</script>

@@ -1,0 +1,25 @@
+---
+import PlaytestGate from '../../../../components/PlaytestGate.astro';
+import PlaytestHubCard from '../../../../components/PlaytestHubCard.astro';
+import SiteLayout from '../../../../layouts/SiteLayout.astro';
+import { agyPlaytestModules } from '../../../../data/playtest';
+import { siteT } from '../../../../utils/site-i18n';
+
+const title = siteT('playtest.agy.pageTitle');
+const description = siteT('playtest.agy.metaDescription');
+---
+
+<SiteLayout {title} {description} gameSlug="alchemists-of-the-great-year">
+	<PlaytestGate>
+		<section class="playtest-page playtest-hub" aria-labelledby="playtest-page-title">
+			<h1 id="playtest-page-title" class="playtest-page__title">{siteT('playtest.agy.hubTitle')}</h1>
+			<p class="playtest-page__intro">{siteT('playtest.agy.intro')}</p>
+
+			<div class="playtest-hub__grid">
+				{agyPlaytestModules.map((module) => (
+					<PlaytestHubCard {module} />
+				))}
+			</div>
+		</section>
+	</PlaytestGate>
+</SiteLayout>

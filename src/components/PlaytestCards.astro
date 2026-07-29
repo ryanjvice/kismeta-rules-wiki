@@ -1,0 +1,132 @@
+---
+import {
+	groupCardsForTab,
+	playtestCardEntries,
+	playtestCardTabs,
+	wikiCardUrl,
+	type PlaytestCardTabId,
+} from '../data/playtest-cards';
+import { siteT } from '../utils/site-i18n';
+
+const defaultTab: PlaytestCardTabId = 'adept';
+
+const cardIndex = Object.fromEntries(
+	playtestCardEntries.map((card) => [
+		card.id,
+		{
+			label: card.label,
+			detailHtml: card.detailHtml,
+			openFullUrl: wikiCardUrl(card.wikiPath, card.wikiHash),
+		},
+	])
+);
+---
+
+<div class="playtest-cards" data-playtest-cards data-card-index={JSON.stringify(cardIndex)}>
+	<p class="playtest-cards__intro">{siteT('playtest.agy.cards.intro')}</p>
+
+	<form class="playtest-cards__search site-form-fields" data-playtest-cards-form novalidate>
+		<label class="site-form-fields__label" for="playtest-cards-search">
+			<span class="sr-only">{siteT('playtest.agy.cards.searchLabel')}</span>
+			<input
+				class="site-form-fields__input playtest-cards__search-input"
+				type="search"
+				id="playtest-cards-search"
+				name="q"
+				placeholder={siteT('playtest.agy.cards.searchPlaceholder')}
+				autocomplete="off"
+				data-playtest-cards-input
+			/>
+		</label>
+		<button class="site-form-fields__submit" type="submit">
+			{siteT('playtest.agy.cards.searchSubmit')}
+		</button>
+	</form>
+
+	<div
+		class="playtest-cards__tabs"
+		role="tablist"
+		aria-label={siteT('playtest.agy.cards.tablistLabel')}
+		data-playtest-cards-tabs
+	>
+		{
+			playtestCardTabs.map((tab) => (
+				<button
+					type="button"
+					class:list={[
+						'playtest-cards__tab',
+						{ 'playtest-cards__tab--active': tab.id === defaultTab },
+					]}
+					id={`playtest-cards-tab-${tab.id}`}
+					role="tab"
+					aria-selected={tab.id === defaultTab ? 'true' : 'false'}
+					aria-controls={`playtest-cards-panel-${tab.id}`}
+					tabindex={tab.id === defaultTab ? 0 : -1}
+					data-playtest-cards-tab
+					data-tab-id={tab.id}
+				>
+					{siteT(tab.labelKey)}
+				</button>
+			))
+		}
+	</div>
+
+	<div class="playtest-cards__panels">
+		{
+			playtestCardTabs.map((tab) => {
+				const groups = groupCardsForTab(tab.id);
+				const isDefault = tab.id === defaultTab;
+
+				return (
+					<section
+						class="playtest-cards__panel"
+						id={`playtest-cards-panel-${tab.id}`}
+						role="tabpanel"
+						aria-labelledby={`playtest-cards-tab-${tab.id}`}
+						hidden={!isDefault}
+						data-playtest-cards-panel
+						data-tab-id={tab.id}
+					>
+						<p
+							class="playtest-cards__no-results"
+							hidden
+							data-playtest-cards-no-results
+							role="status"
+						>
+							{siteT('playtest.agy.cards.noResults')}
+						</p>
+						{groups.map((group) => (
+							<div class="playtest-cards__group" data-playtest-cards-group>
+								{group.labelKey ? (
+									<h2 class="playtest-cards__group-label">{siteT(group.labelKey)}</h2>
+								) : group.label ? (
+									<h2 class="playtest-cards__group-label">{group.label}</h2>
+								) : null}
+								<ul class="playtest-cards__list">
+									{group.cards.map((card) => (
+										<li class="playtest-cards__item" data-playtest-cards-item>
+											<button
+												type="button"
+												class="playtest-cards__card-button"
+												data-playtest-card
+												data-card-id={card.id}
+												aria-label={`${card.label}: ${card.blurb}`}
+											>
+												<span class="playtest-cards__card-label">{card.label}</span>
+												<span class="playtest-cards__card-blurb">{card.blurb}</span>
+											</button>
+										</li>
+									))}
+								</ul>
+							</div>
+						))}
+					</section>
+				);
+			})
+		}
+	</div>
+</div>
+
+<script>
+	import '../scripts/playtest-cards.ts';
+</script>

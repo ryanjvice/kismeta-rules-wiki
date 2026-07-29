@@ -1,0 +1,14 @@
+---
+import PlaytestModuleLayout from '../../../../components/PlaytestModuleLayout.astro';
+import PlaytestGlossary from '../../../../components/PlaytestGlossary.astro';
+import { getPlaytestModule } from '../../../../data/playtest';
+import { siteT } from '../../../../utils/site-i18n';
+
+const module = getPlaytestModule('glossary')!;
+const title = `${siteT(module.titleKey)} — ${siteT('playtest.agy.pageTitle')}`;
+const description = siteT(module.summaryKey);
+---
+
+<PlaytestModuleLayout {title} {description} moduleTitle={siteT(module.titleKey)}>
+	<PlaytestGlossary />
+</PlaytestModuleLayout>

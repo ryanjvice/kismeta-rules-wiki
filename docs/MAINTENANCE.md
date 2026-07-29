@@ -58,7 +58,13 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
   `src/pages/index.astro` · layout: `SiteLayout` with `hideChrome` · copy: `site.enter.*` in `src/content/i18n/en.json` · mailing list: `MailingListSignup.astro` · form action: `src/data/mailing-list.ts` · playtest CTA: `/games/alchemists-of-the-great-year/playtest/`
 
 - **AGY playtest** (`/games/alchemists-of-the-great-year/playtest/`)  
-  `src/pages/games/alchemists-of-the-great-year/playtest.astro` · gate: `PlaytestGate.astro` · password config: `src/data/playtest.ts` · copy: `playtest.agy.*`
+  Hub: `src/pages/games/alchemists-of-the-great-year/playtest/index.astro` · modules: `round-overview`, `glossary`, `cards`, `options` under `playtest/` · shared shell: `PlaytestModuleLayout.astro` · hub cards: `PlaytestHubCard.astro` · module registry: `src/data/playtest.ts` · gate: `PlaytestGate.astro` · copy: `playtest.agy.*`
+
+  **Round Overview module** (`…/playtest/round-overview/`): brief season/step list in `src/data/playtest-round-overview.ts` · UI: `PlaytestRoundOverview.astro` · step taps open `PlaytestDetailPanel.astro`, which loads pre-rendered wiki section HTML from `src/data/context-sections/en.json` (same pipeline as Guided Play). Close the panel to return to the brief overview without leaving playtest.
+
+  **Glossary module** (`…/playtest/glossary/`): terms from `src/data/glossary.json` via `src/data/playtest-glossary.ts` · UI: `PlaytestGlossary.astro` · client search/filter in `src/scripts/playtest-glossary.ts` · term taps dispatch `kismeta:playtest-detail` to the shared detail panel.
+
+  **Cards module** (`…/playtest/cards/`): card entries in `src/data/playtest-cards.json` (manual extract; no sync script yet) · helpers: `src/data/playtest-cards.ts` · UI: `PlaytestCards.astro` · four-tab browser in `src/scripts/playtest-cards.ts` · card taps dispatch `kismeta:playtest-detail`.
 
 - **Franchise homepage** (`/home/`)  
   `src/pages/home.astro` · copy: `site.home.*` in `src/content/i18n/en.json` — hero uses `site.home.welcomeHeadline`, `site.home.welcomeTagline`, and `site.home.metaDescription`

@@ -1,0 +1,26 @@
+---
+import type { PlaytestModule } from '../data/playtest';
+import { siteT } from '../utils/site-i18n';
+
+interface Props {
+	module: PlaytestModule;
+}
+
+const { module } = Astro.props;
+const isStub = module.status === 'stub';
+---
+
+<a
+	class:list={['playtest-hub-card', { 'playtest-hub-card--stub': isStub }]}
+	href={module.path}
+>
+	<h2 class="playtest-hub-card__title">{siteT(module.titleKey)}</h2>
+	<p class="playtest-hub-card__summary">{siteT(module.summaryKey)}</p>
+	{
+		isStub ? (
+			<p class="playtest-hub-card__status">{siteT('playtest.agy.comingSoon')}</p>
+		) : (
+			<p class="playtest-hub-card__cta">{siteT('playtest.agy.openModule')}</p>
+		)
+	}
+</a>
