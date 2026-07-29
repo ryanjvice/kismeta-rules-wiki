@@ -1,5 +1,5 @@
 {
-  "intro": "Each Crucible Card drives one Firing. Repeat Attune → Fire → Defend → Temper once per card until your Stone reaches the Altar of Kismeta.",
+  "intro": "Each card below is one beat in the Transmutation Process.",
   "seasons": [
     {
       "id": "fire",
@@ -13,7 +13,7 @@
       "icon": "⚔️",
       "title": "Defend Against Siege",
       "subtitle": "One Summer in the Forge",
-      "summary": "Your Stone is exposed to Siege for the Summer it spends in the Forge. Rivals must match your Shield Reagents as an Ante to attack — the more you commit, the harder you are to Siege."
+      "summary": "Your Stone is exposed to Siege for the Summer it spends in the Forge. Rivals must match your Shield Reagents as an Ante to attack. The more you commit, the harder you are to Siege."
     },
     {
       "id": "temper",

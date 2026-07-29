@@ -11,12 +11,12 @@ import {
 } from "./guided-steps";
 
 export const PLAYTEST_GUIDED_PROGRESS_KEY = "kismeta-playtest-guided-progress";
-export const PLAYTEST_GUIDED_PROGRESS_VERSION = 2;
+export const PLAYTEST_GUIDED_PROGRESS_VERSION = 3;
 
 const BRIEFING_STEP: GuidedStep = {
   id: "briefing",
-  title: "Welcome to the Crucible",
-  body: "<p>You are rival Alchemists competing to complete the <strong>Great Work</strong> — transforming your Philosopher's Stone from Lead into Gold across the Cosmic Ages of the Great Year.</p><p>Each Age moves through <strong>Spring → Summer → Autumn → Winter</strong>. Your Game Master has set the table; use this guide to click through each beat as play unfolds.</p><p>When you're ready, continue to learn the shape of a Cosmic Age.</p>",
+  title: "Gather Round the Crucible of Kismeta, Dear Alchemists!",
+  body: "<p>Today, you and your rival Alchemists will race to be the first to complete the <strong>Great Work</strong>, that arcane ritual of transforming your Philosopher's Stone from Lead into Gold. This race takes place across the many Cosmic Ages of the Great Year.</p><p>Each Age moves through <strong>Spring → Summer → Autumn → Winter</strong>. Your Game Master has set the table; use this guide to click through each beat as play unfolds.</p><p>Before we begin, let's learn the shape of a Cosmic Age and how you will achieve the Great Work.</p>",
   checklist: [
     "Complete the Great Work (Lead → Gold) before your rivals",
     "Harvest Essence, fuel Furnaces, and advance your Stone each Autumn",
@@ -29,7 +29,7 @@ const BRIEFING_STEP: GuidedStep = {
 const COSMIC_AGE_OVERVIEW_STEP: GuidedStep = {
   id: "round-intro",
   title: "The Shape of a Cosmic Age",
-  body: "<p>Every round of Kismeta is one <strong>Cosmic Age</strong> of the Great Year — the same four-season pattern repeats until someone completes the Great Work.</p><p>Learn the rhythm now; you'll walk through each season step by step once play begins.</p>",
+  body: "<p>Every round of Kismeta is one <strong>Cosmic Age</strong> of the Great Year. Each Age follows the same four-season pattern, repeating until someone completes the Great Work.</p><p>Learn the rhythm now; you'll walk through each season step by step once play begins.</p>",
   embed: "round-at-a-glance",
   learnMorePath: "rules/round-at-a-glance",
 };
@@ -37,7 +37,7 @@ const COSMIC_AGE_OVERVIEW_STEP: GuidedStep = {
 const ENGINE_BUILDING_STEP: GuidedStep = {
   id: "engine-building",
   title: "Building Your Engine",
-  body: "<p>Between Firings, you grow two economies — Essence from the dice, Coal and Houses from your cards — so you can pay each Crucible Formula when the time comes.</p>",
+  body: "<p>The Great Work is driven by two economies. Essence, which is Harvested from the dice, and Coal and Houses, which are Acquired from your cards. This is how you will pay each Crucible Formula when the time comes.</p>",
   embed: "engine-building",
   learnMorePath: "rules/game-overview",
   learnMoreHash: "building-your-engine",
@@ -46,10 +46,23 @@ const ENGINE_BUILDING_STEP: GuidedStep = {
 const TRANSMUTATION_STEP: GuidedStep = {
   id: "transmutation-process",
   title: "The Transmutation Process",
-  body: "<p>Your Philosopher's Stone advances through four Crucible Cards — Attune, Fire, defend against Siege, then Temper. Rekindle if a rival Seizes your Stone.</p>",
+  body: "<p>You have four Crucible Cards in front of you now. Each one moves your Philosopher's Stone one stage through the Forge: Lead, then Bronze, then Silver, and finally Gold.</p><p>When you are ready to Fire, complete the Alchemical Formula on the card. Turn in a card set, the required Reagents, and Coal in each Furnace.</p>",
   embed: "transmutation-process",
   learnMorePath: "rules/game-overview",
   learnMoreHash: "transmutation-process",
+};
+
+const LAUNCH_STEP: GuidedStep = {
+  id: "launch",
+  title: "Let the Great Work Begin",
+  body: "<p>You have learned the path. Now it is time to play.</p><p>Each Cosmic Age needs an <strong>Agekeeper</strong>. The Agekeeper sets the Cosmic Age each Spring, deals Kismeta cards, manages the deck, and resets the board at Transit.</p><p>Determine who holds the Agekeeper's Key. Then deal the cards and open the first Cosmic Age.</p>",
+  checklist: [
+    "Determine the first Agekeeper",
+    "Deal the opening cards",
+    "Begin Spring together",
+  ],
+  learnMorePath: "play/setup",
+  learnMoreHash: "v-determine-the-first-agekeeper",
 };
 
 const PLAYTEST_COMPLETE_STEP: GuidedStep = {
@@ -66,10 +79,21 @@ function buildPlaytestGuidedSteps(): GuidedStep[] {
     .filter((step) => step.id !== "round-intro")
     .map((step) => {
       if (step.id === "setup-v") {
-        return { ...step, phaseStep: 1, phaseTotal: 2 };
+        return {
+          ...step,
+          title: "Determine the First Agekeeper",
+          body: "<p>Everyone rolls their Zodiac Die. Highest roll becomes the first Agekeeper. Reroll ties.</p>",
+          phaseStep: 1,
+          phaseTotal: 2,
+        };
       }
       if (step.id === "setup-vi") {
-        return { ...step, phaseStep: 2, phaseTotal: 2 };
+        return {
+          ...step,
+          title: "Deal the Crucible Cards",
+          phaseStep: 2,
+          phaseTotal: 2,
+        };
       }
       return step;
     });
@@ -79,6 +103,7 @@ function buildPlaytestGuidedSteps(): GuidedStep[] {
     COSMIC_AGE_OVERVIEW_STEP,
     ENGINE_BUILDING_STEP,
     TRANSMUTATION_STEP,
+    LAUNCH_STEP,
     ...gameplaySteps,
     PLAYTEST_COMPLETE_STEP,
   ];
@@ -103,6 +128,7 @@ const STANDALONE_NAV_LABELS: Record<string, string> = {
   "round-intro": "playtest.agy.guided.nav.overview",
   "engine-building": "playtest.agy.guided.nav.engineBuilding",
   "transmutation-process": "playtest.agy.guided.nav.transmutation",
+  launch: "playtest.agy.guided.nav.launch",
   "round-end": "guided.nav.roundEnd",
 };
 
@@ -138,4 +164,5 @@ export function getPlaytestGuidedNavSections(): GuidedNavSection[] {
 }
 
 /** Steps shown in the playtest stepper (excludes the completion screen). */
-export const PLAYTEST_GUIDED_CONTENT_STEP_COUNT = PLAYTEST_GUIDED_STEPS.length - 1;
+export const PLAYTEST_GUIDED_CONTENT_STEP_COUNT =
+  PLAYTEST_GUIDED_STEPS.length - 1;
