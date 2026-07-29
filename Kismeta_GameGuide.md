@@ -129,12 +129,12 @@ An Astral House upgraded to a **Mansion** doubles its Alignment score, whether a
 
 ## Building Your Engine
 
-You work two economies at once, and they meet at your Crucible Cards.
+The Great Work runs on two core currencies: **Essence** and **Kismeta cards**.
 
-- **The dice economy.** Your Zodiac Die and your other Harvest Sources pay out **Essence** every Autumn. Distill 5 Essence of one Element to make a **Reagent** of that Element.
-- **The card economy.** Your Kismeta Cards form sets. Spend 3 cards of one suit to craft a **Coal**, and spend 3 cards of one Planet to build an **Astral House**. Upgrade a House to an **Astral Mansion** for 2 more cards of that Planet plus a Reagent marker from the supply.
+- **Essence** is Harvested each Autumn. Your Zodiac Die, Spread, Astral Houses, and Adept Cards can each Align with the Cosmic Age. Distill 5 Essence of one Element to make a **Reagent** of that Element.
+- **Kismeta cards** flow from the deck into your Tableau. Spend 3 cards of one suit to craft **Coal**. Spend 3 cards of one Planet to build an **Astral House**. Upgrade a House to an **Astral Mansion** for 2 more cards of that Planet plus a Reagent marker from the supply.
 
-You can push either economy forward on its own, in any Age. They only need to meet when you are ready to Fire your Stone into the Forge.
+Coal and Reagents refine your currencies when a Crucible Formula demands them. Astral Houses, Adept Cards, Stelliums, and card effects tune how much you earn and how efficiently you spend. You can grow either currency across Ages; they converge when you are ready to Fire your Stone into the Forge.
 
 Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. The journey spans many Cosmic Ages, some spent building your engine, others spent driving your Stone through the Forge. In early Ages, focus on infrastructure: build Astral Houses, buy Adept Cards, hold Stelliums together in your Spread, and bank Essence.
 

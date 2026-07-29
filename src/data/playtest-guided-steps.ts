@@ -37,7 +37,7 @@ const COSMIC_AGE_OVERVIEW_STEP: GuidedStep = {
 const ENGINE_BUILDING_STEP: GuidedStep = {
   id: "engine-building",
   title: "Building Your Engine",
-  body: "<p>The Great Work is driven by two economies. Essence, which is Harvested from the dice, and Coal and Houses, which are Acquired from your cards. This is how you will pay each Crucible Formula when the time comes.</p>",
+  body: "<p>The Great Work runs on two currencies: <strong>Essence</strong> and <strong>Kismeta cards</strong>. Harvest Essence each Autumn. Draw and play cards into your Tableau. <strong>Coal</strong> and <strong>Reagents</strong> refine those currencies when you Fire a Crucible Formula. Astral Houses, Adept Cards, and Spread synergies tune how far each one goes.</p>",
   embed: "engine-building",
   learnMorePath: "rules/game-overview",
   learnMoreHash: "building-your-engine",
