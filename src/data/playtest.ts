@@ -10,7 +10,8 @@ export const agyPlaytestConfig = {
 /** External community links surfaced on the playtest feedback page. */
 export const agyPlaytestCommunity = {
   /** Paste Google Form URL when ready. */
-  feedbackFormUrl: "",
+  feedbackFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSdKcsZGyEOyGgRpiOGViWJvvxcyWuaTp4DGC6_0l7yclCLWNw/viewform",
   discordUrl: "https://discord.gg/qEe2UYSnt",
 };
 
