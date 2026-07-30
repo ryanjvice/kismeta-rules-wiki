@@ -46,4 +46,19 @@ const actions = [
 		wordmarkImage={agyWordmark}
 		{actions}
 	/>
+
+	<section class="print-guide-links site-section" aria-labelledby="print-guide-heading">
+		<h2 id="print-guide-heading" class="print-guide-links__heading">
+			{siteT('game.agy.printGuide.heading')}
+		</h2>
+		<p class="print-guide-links__intro">{siteT('game.agy.printGuide.intro')}</p>
+		<ul class="print-guide-links__list">
+			<li>
+				<a href={`${AGY_WIKI_PATH}print/rulebook/`}>{siteT('game.agy.printGuide.rulebook')}</a>
+			</li>
+			<li>
+				<a href={`${AGY_WIKI_PATH}print/reference-appendix/`}>{siteT('game.agy.printGuide.appendix')}</a>
+			</li>
+		</ul>
+	</section>
 </SiteLayout>
