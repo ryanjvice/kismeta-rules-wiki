@@ -280,48 +280,84 @@ On your turn (clockwise from Agekeeper), take any actions below in any order, as
 - **Siege the Forge** *(optional)*
   - Attack a rival's Stone while it sits exposed in the Forge. Pay an Ante of Reagents equal to the Shield Reagents guarding that Stone.
 
-### Step 20: Autumn: Harvest, Fuel & Conduct the Great Work
+### Step 20: Autumn: Harvest Elemental Essence
 
-*Autumn · 1 of 1*
+*Autumn · 1 of 2*
 
-Autumn pays out Essence, fuels Furnaces, and advances the Great Work. Harvest by Aligning your sources with the Cosmic Age, craft Coal to raise Heat, then Fire or Temper your Stone. Rekindle a Seized Stone for 5 Essence if needed.
+Autumn opens with **Harvest**. Each player compares their Harvest Sources — Zodiac Die, Astral Houses, Adept Cards, and Spread Cards — to the Cosmic Age's three Aspects: Sign, Planet, and Element.
+
+Each matching Aspect scores Essence from the bank in the Cosmic Age's Element: Sign +3 · Planet +2 · Element +1. Stack every tier a source matches; match all three on one source for a **Perfect Match (+6)**.
+
+Compare each Harvest Source to the Cosmic Age's Sign, Planet, and Element. Stack every tier a source matches; take your total in Essence of the Cosmic Age's Element.
+
+
+**🍂 Harvest Scoring**
+
+| Aspect Matched | Essence |
+| --- | --- |
+| Sign | +3 |
+| Planet | +2 |
+| Element | +1 |
+| Perfect Match (all three at once) | +6 |
+| No Match | +0 |
+
+**💡 Example: Scorpio Age (Aspects = Scorpio, Mars, Water)**
+
+| Source | Aspect Matched | Essence |
+| --- | --- | --- |
+| Zodiac Die: Scorpio | Sign match (Scorpio), Perfect Match | +6 |
+| Spread: 7 of Pentacles | Planet match (Mars) | +2 |
+| Astral House: Pisces | Element match (Water) | +1 |
+| Adept Card: The Hermit | Sign match (Scorpio), Perfect Match | +6 |
+| **Total Essence Income** | | **15 Water Essence** |
+
+
+Tap the action below for a quick reminder.
+
+**Your turn**
+**Harvest**
+- **Harvest Elemental Essence**
+  - *When:* All players Harvest each Autumn
+  - Compare each Harvest Source (Zodiac Die, Astral Houses, Adept Cards, Spread Cards) to the Cosmic Age's Sign, Planet, and Element. Sign +3 · Planet +2 · Element +1 — stack every tier a source matches. Match all three on one source for a Perfect Match (+6). Take your total in Essence of the Cosmic Age's Element.
+
+### Step 21: Autumn: Fuel & Conduct the Great Work
+
+*Autumn · 2 of 2*
+
+After everyone Harvests, take your Crucible turn. If your Stone was Seized, Rekindle it first — then craft Coal to fuel Furnaces, Fire or Temper your Stone, and Distill Reagents if you need them before Firing.
 
 📌 *Tip: When you Fire, commit up to 3 Reagents as Shield Reagents — rivals must match that number as an Ante to Siege you.*
 
-Work through your Autumn turn in order. The guide shows steps that apply to your Stone's current position.
+After all players finish Harvest, take any Crucible actions below in any order on your turn. Tap an action for a quick reminder.
 
-**Autumn procession**
-**Pass 1 — Rekindle & Harvest** — Each player in turn order (clockwise from the Agekeeper).
-- **1. Rekindle the Stone**
+**Your turn**
+**Crucible Actions**
+- **Rekindle the Stone** *(optional)*
   - *When:* Your Stone is in Stasis
-  - **Pay 5 Essence**
-    - From the Autumn of the Age after your Stone was Seized, pay 5 Essence, of any type, to return it to its previous Forge position. If that station is occupied, wait until it is free.
-- **2. Harvest Elemental Essence**
-  - *When:* All players Harvest each Autumn
-  - Align your Harvest Sources (Zodiac Die, Astral Houses, Adept Cards, Spread Cards) with the Cosmic Age. Each matched Aspect pays 1 Essence; a Perfect Match scores +6.
-**Pass 2 — Fuel, Fire & Temper** — After all players finish Pass 1, repeat turn order for Furnace fuel, Firing, and Tempering.
-- **1. Fuel Your Furnaces**
+  - From the Autumn of the Age after your Stone was Seized, pay 5 Essence, of any type, to return it to its previous Forge position. If that station is occupied, wait until it is free.
+- **Fuel Your Furnaces**
   - *When:* Craft Coal and place it in the Furnace matching your Sign's Element
   - Spend 3 cards of one suit to craft 1 Coal. Place your Coal in the Furnace matching your Sign's Element. Each Coal you own there raises your Heat by +1.
-- **2. Distill a Reagent (optional)**
+- **Distill a Reagent** *(optional)*
   - *When:* Available on your turn — same rules as Summer
   - Spend 5 Essence of one Element to take 1 Reagent of that Element. Useful before you Fire or set Shield Reagents.
-- **3. Fire the Stone**
+- **Fire the Stone**
   - *When:* Stone on the Mantle Ring — complete an Alchemical Formula
   - Pay Attunement, Reagents, and Heat from an unfired Crucible Card. Move your Stone into the Forge. Commit up to 3 Reagents as Shield Reagents beside your Stone.
-- **4. Temper the Stone**
+- **Temper the Stone**
   - *When:* Stone has remained in the Forge for one full Age
   - Advance your Stone to the next Mantle Ring position. Set the completed Formula aside. Consume the Coal used, lowering your Heat.
 
-### Step 21: Winter: Final Actions & Reset
+### Step 22: Winter: Final Actions & Reset
 
 *Winter · 1 of 1*
 
 Winter closes the Cosmic Age. Unlock cards between Hand and Spread, optionally place a Fateful Wager, enforce limits (Spread 7 · Hand 5 · Arcanum 2 Adepts), then Transit: shuffle the discard pile into the Kismeta Deck and pass the Key clockwise.
 
+Complete Winter actions below in any order. Tap an action for a quick reminder.
 
-
-**Winter sequence**
+**Your turn**
+**Winter actions**
 - **1. Card Unlock**
   - Cards are now unlocked. Move cards freely between your Hand and Spread before taking other Winter actions.
 - **2. Fateful Wager (optional)**
@@ -331,7 +367,7 @@ Winter closes the Cosmic Age. Unlock cards between Hand and Spread, optionally p
 - **4. Transit the Age**
   - Return Fate Cards to the discard pile. Clear Zodiac Dice and Meeples. The Agekeeper shuffles the discard pile into the Kismeta Deck, then passes the Key clockwise. Return to Spring.
 
-### Step 22: Transit the Age: End of the Round
+### Step 23: Transit the Age: End of the Round
 
 The Agekeeper passes the Key clockwise. A new Cosmic Age begins with Spring unless someone has completed the Great Work.
 

@@ -30,7 +30,7 @@ description: "Everything in the box."
 - **Essence** (112 paper bills; the game's base currency) in four Elements: Fire, Earth, Air, and Water
 - **1 Agekeeper's Key** (black pawn)
 
-## Anatomy of the Great Year Board
+## Anatomy of the Great Year Board {#anatomy-of-the-great-year-board}
 
 Every ring of the Great Work is printed on the board. Working from the outside in:
 

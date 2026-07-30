@@ -11,17 +11,17 @@ import {
 } from "./guided-steps";
 
 export const PLAYTEST_GUIDED_PROGRESS_KEY = "kismeta-playtest-guided-progress";
-export const PLAYTEST_GUIDED_PROGRESS_VERSION = 4;
+export const PLAYTEST_GUIDED_PROGRESS_VERSION = 7;
 
 const BRIEFING_STEP: GuidedStep = {
   id: "briefing",
   title: "Gather Round the Crucible of Kismeta, Dear Alchemists!",
   body: "<p>Today, you and your rival Alchemists will race to be the first to complete the <strong>Great Work</strong>, that arcane ritual of transforming your Philosopher's Stone from Lead into Gold. This race takes place across the many Cosmic Ages of the Great Year.</p><p>Each Age moves through <strong>Spring → Summer → Autumn → Winter</strong>. Your Game Master has set the table; use this guide to click through each beat as play unfolds.</p><p>Before we begin, let's learn the shape of a Cosmic Age and how you will achieve the Great Work.</p>",
   checklist: [
-    "Complete the Great Work (Lead → Gold) before your rivals",
-    "Harvest Essence, fuel Furnaces, and advance your Stone each Autumn",
-    "Build your Spread, Hand, and Arcanum across the Ages",
-    "Click Next as each step happens at the table",
+    "The Shape of a Cosmic Age, and the actions in each of its four seasons.",
+    "Harvesting Essence, fueling Furnaces, and advancing your Stone each Autumn",
+    "Building your Spread, Hand, and Arcanum across the Ages",
+    "Click Next to continue.",
   ],
   learnMorePath: "rules/game-overview",
 };
@@ -32,6 +32,15 @@ const COSMIC_AGE_OVERVIEW_STEP: GuidedStep = {
   body: "<p>Every round of Kismeta is one <strong>Cosmic Age</strong> of the Great Year. Each Age follows the same four-season pattern, repeating until someone completes the Great Work.</p><p>Learn the rhythm now; you'll walk through each season step by step once play begins.</p>",
   embed: "round-at-a-glance",
   learnMorePath: "rules/round-at-a-glance",
+};
+
+const BOARD_ANATOMY_STEP: GuidedStep = {
+  id: "board-anatomy",
+  title: "Anatomy of the Great Year Board",
+  body: "<p>Before you learn the tools of the trade, look at the <strong>Great Year Board</strong> in front of you. Every ring of the Great Work is printed there — from the Zodiac Wheel on the outside to the Altar of Kismeta at the center.</p><p>Follow along as we walk through each section, working from the outside in.</p>",
+  embed: "board-anatomy",
+  learnMorePath: "learn/components",
+  learnMoreHash: "anatomy-of-the-great-year-board",
 };
 
 const TOOLS_STEP: GuidedStep = {
@@ -115,6 +124,7 @@ function buildPlaytestGuidedSteps(): GuidedStep[] {
   return [
     BRIEFING_STEP,
     COSMIC_AGE_OVERVIEW_STEP,
+    BOARD_ANATOMY_STEP,
     TOOLS_STEP,
     ENGINE_BUILDING_STEP,
     TRANSMUTATION_STEP,
@@ -141,6 +151,7 @@ const PHASE_LABEL_KEYS: Record<GuidedPhase, string> = {
 const STANDALONE_NAV_LABELS: Record<string, string> = {
   briefing: "playtest.agy.guided.nav.briefing",
   "round-intro": "playtest.agy.guided.nav.overview",
+  "board-anatomy": "playtest.agy.guided.nav.boardAnatomy",
   "tools-of-the-alchemist": "playtest.agy.guided.nav.toolsOfTheAlchemist",
   "engine-building": "playtest.agy.guided.nav.engineBuilding",
   "transmutation-process": "playtest.agy.guided.nav.transmutation",

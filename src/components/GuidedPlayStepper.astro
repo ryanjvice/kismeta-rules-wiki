@@ -1,6 +1,7 @@
 ﻿---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import ActionFlowGuide from './ActionFlowGuide.astro';
+import AutumnHarvestEmbed from './AutumnHarvestEmbed.astro';
 import CrucibleDeckBuilds from './CrucibleDeckBuilds.astro';
 import GameTableEmbed from './GameTableEmbed.astro';
 import { wikiSlug } from '../data/wiki-base';
@@ -192,8 +193,11 @@ const navSections = getGuidedNavSections().map((section) => ({
 				<div class="guided-play__embed-panel" data-embed-panel="summer-flow" hidden>
 					<ActionFlowGuide flowId="summer-flow" />
 				</div>
-				<div class="guided-play__embed-panel" data-embed-panel="autumn-flow" hidden>
-					<ActionFlowGuide flowId="autumn-flow" />
+				<div class="guided-play__embed-panel" data-embed-panel="autumn-harvest-guide" hidden>
+					<AutumnHarvestEmbed />
+				</div>
+				<div class="guided-play__embed-panel" data-embed-panel="autumn-crucible-flow" hidden>
+					<ActionFlowGuide flowId="autumn-crucible-flow" />
 				</div>
 				<div class="guided-play__embed-panel" data-embed-panel="winter-flow" hidden>
 					<ActionFlowGuide flowId="winter-flow" />
@@ -361,6 +365,9 @@ const navSections = getGuidedNavSections().map((section) => ({
 		const root = document.querySelector<HTMLElement>('.guided-play');
 		if (!root || root.dataset.bound === 'true') return;
 		root.dataset.bound = 'true';
+
+		// Legacy autumn wizard — no longer used; clear so stale sessions don't block navigation.
+		sessionStorage.removeItem('kismeta-autumn-wizard');
 
 		const steps = JSON.parse(root.dataset.steps || '[]') as (GuidedStep & {
 			learnMoreUrl?: string;
@@ -638,9 +645,6 @@ const navSections = getGuidedNavSections().map((section) => ({
 			}
 
 			dispatchContext(step.learnMorePath, step.learnMoreHash);
-		// If an embedded wizard is now visible, let it override with its active
-		// panel's specific context (e.g. Autumn/Winter wizard panels).
-		window.dispatchEvent(new CustomEvent('kismeta:wizard-refocus'));
 
 			let progressText = labels.progress
 				.replace('{current}', String(stepIndex))
@@ -776,16 +780,6 @@ const navSections = getGuidedNavSections().map((section) => ({
 		});
 
 		root.querySelector<HTMLButtonElement>('[data-action="next"]')!.addEventListener('click', () => {
-			if (stepIndex >= stepCount) {
-				showComplete();
-				return;
-			}
-			stepIndex += 1;
-			renderStep();
-		});
-
-		window.addEventListener('kismeta:guided-advance', () => {
-			if (mainEl.hidden) return;
 			if (stepIndex >= stepCount) {
 				showComplete();
 				return;

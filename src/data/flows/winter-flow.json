@@ -1,39 +1,47 @@
 {
   "id": "winter-flow",
-  "mode": "sequentialHybrid",
+  "mode": "playerTurn",
+  "intro": "Complete Winter actions below in any order. Tap an action for a quick reminder.",
   "learnMoreHash": "phase-4-winter",
   "root": {
-    "id": "winter-sequence",
-    "label": "Winter sequence",
+    "id": "turn",
+    "label": "Your turn",
     "kind": "group",
     "children": [
       {
-        "id": "unlock",
-        "label": "1. Card Unlock",
-        "kind": "required",
-        "body": "Cards are now unlocked. Move cards freely between your Hand and Spread before taking other Winter actions.",
-        "learnMoreHash": "1-card-unlock"
-      },
-      {
-        "id": "wager",
-        "label": "2. Fateful Wager (optional)",
-        "kind": "optional",
-        "body": "Bet Cards and Reagents on the next Cosmic Age's Zodiac Sign. Guess correctly and your wager is doubled. Guess wrong and it is lost. Wagers resolve at the start of next Spring.",
-        "learnMoreHash": "2️⃣-fateful-wager-"
-      },
-      {
-        "id": "limits",
-        "label": "3. Enforce Card Limits",
-        "kind": "required",
-        "body": "Discard down to card limits before the next Age: Spread 7 cards · Hand 5 cards · Arcanum 2 Adept cards. Return Fate Cards to the discard pile at Transit.",
-        "learnMoreHash": "3️⃣-enforce-card-limits"
-      },
-      {
-        "id": "transit",
-        "label": "4. Transit the Age",
-        "kind": "required",
-        "body": "Return Fate Cards to the discard pile. Clear Zodiac Dice and Meeples. The Agekeeper shuffles the discard pile into the Kismeta Deck, then passes the Key clockwise. Return to Spring.",
-        "learnMoreHash": "4-transit-the-age"
+        "id": "winter",
+        "label": "Winter actions",
+        "kind": "group",
+        "children": [
+          {
+            "id": "unlock",
+            "label": "1. Card Unlock",
+            "kind": "required",
+            "body": "Cards are now unlocked. Move cards freely between your Hand and Spread before taking other Winter actions.",
+            "learnMoreHash": "1-card-unlock"
+          },
+          {
+            "id": "wager",
+            "label": "2. Fateful Wager (optional)",
+            "kind": "optional",
+            "body": "Bet Cards and Reagents on the next Cosmic Age's Zodiac Sign. Guess correctly and your wager is doubled. Guess wrong and it is lost. Wagers resolve at the start of next Spring.",
+            "learnMoreHash": "2️⃣-fateful-wager-"
+          },
+          {
+            "id": "limits",
+            "label": "3. Enforce Card Limits",
+            "kind": "required",
+            "body": "Discard down to card limits before the next Age: Spread 7 cards · Hand 5 cards · Arcanum 2 Adept cards. Return Fate Cards to the discard pile at Transit.",
+            "learnMoreHash": "3️⃣-enforce-card-limits"
+          },
+          {
+            "id": "transit",
+            "label": "4. Transit the Age",
+            "kind": "required",
+            "body": "Return Fate Cards to the discard pile. Clear Zodiac Dice and Meeples. The Agekeeper shuffles the discard pile into the Kismeta Deck, then passes the Key clockwise. Return to Spring.",
+            "learnMoreHash": "4-transit-the-age"
+          }
+        ]
       }
     ]
   }

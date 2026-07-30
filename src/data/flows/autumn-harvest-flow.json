@@ -1,0 +1,28 @@
+{
+  "id": "autumn-harvest-flow",
+  "mode": "playerTurn",
+  "intro": "Tap the action below for a quick reminder.",
+  "learnMoreHash": "1️⃣-harvest-elemental-essence",
+  "root": {
+    "id": "turn",
+    "label": "Your turn",
+    "kind": "group",
+    "children": [
+      {
+        "id": "harvest",
+        "label": "Harvest",
+        "kind": "group",
+        "children": [
+          {
+            "id": "opposition",
+            "label": "Harvest Elemental Essence",
+            "kind": "sequence",
+            "condition": "All players Harvest each Autumn",
+            "body": "Compare each Harvest Source (Zodiac Die, Astral Houses, Adept Cards, Spread Cards) to the Cosmic Age's Sign, Planet, and Element. Sign +3 · Planet +2 · Element +1 — stack every tier a source matches. Match all three on one source for a Perfect Match (+6). Take your total in Essence of the Cosmic Age's Element.",
+            "learnMoreHash": "1️⃣-harvest-elemental-essence"
+          }
+        ]
+      }
+    ]
+  }
+}

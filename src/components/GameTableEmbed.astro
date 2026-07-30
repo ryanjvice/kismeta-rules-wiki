@@ -1,11 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import {
 	getTable,
 	localize,
+	type HarvestScoringTable,
 	type SeasonCardsTable,
 	type StepListTable,
 	type TableId,
 } from '../data/content-registry';
+import boardImage from '../assets/games/agy/kismeta_AGY_gameBoard.jpg';
 import { resolveContentLocale } from '../utils/locale';
 
 interface Props {
@@ -33,6 +36,92 @@ const isSeasonCardsTable =
 				</li>
 			))}
 		</ol>
+	</div>
+)}
+
+{tableId === 'board-anatomy' && (
+	<div class="game-table game-table--board-anatomy" data-table-id={tableId} data-locale={locale}>
+		{intro && <p class="game-table__intro">{intro}</p>}
+		<div class="game-table__board-layout">
+			<figure class="game-table__board-image">
+				<Image
+					src={boardImage}
+					alt="The Great Year board showing the Zodiac Wheel, Mantle Ring, Forge, Furnaces, Bazaar, and Codex panels"
+					width={600}
+					loading="lazy"
+				/>
+			</figure>
+			<ol class="game-table__steps">
+				{(table as StepListTable).steps.map((step) => (
+					<li class="game-table__step">
+						<span class="game-table__step-label">{localize(step.label, locale)}</span>
+						<p class="game-table__step-body">{localize(step.body, locale)}</p>
+					</li>
+				))}
+			</ol>
+		</div>
+	</div>
+)}
+
+{tableId === 'harvest-scoring' && (
+	<div class="game-table game-table--harvest-scoring" data-table-id={tableId} data-locale={locale}>
+		{intro && <p class="game-table__intro">{intro}</p>}
+		{(() => {
+			const scoring = table as HarvestScoringTable;
+			return (
+				<>
+					<div class="doc-table">
+						<table>
+							<thead>
+								<tr>
+									<th colspan="2">{localize(scoring.scoringTitle, locale)}</th>
+								</tr>
+								<tr>
+									<th>Aspect Matched</th>
+									<th>Essence</th>
+								</tr>
+							</thead>
+							<tbody>
+								{scoring.scoringRows.map((row) => (
+									<tr>
+										<td>{localize(row.aspect, locale)}</td>
+										<td>{localize(row.essence, locale)}</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+					<div class="doc-table">
+						<table>
+							<thead>
+								<tr>
+									<th colspan="3">{localize(scoring.exampleTitle, locale)}</th>
+								</tr>
+								<tr>
+									<th>Source</th>
+									<th>Aspect Matched</th>
+									<th>Essence</th>
+								</tr>
+							</thead>
+							<tbody>
+								{scoring.exampleRows.map((row) => (
+									<tr>
+										<td>{localize(row.source, locale)}</td>
+										<td>{localize(row.matched, locale)}</td>
+										<td>{localize(row.essence, locale)}</td>
+									</tr>
+								))}
+								<tr>
+									<td><strong>Total Essence Income</strong></td>
+									<td></td>
+									<td><strong>{localize(scoring.exampleTotal, locale)}</strong></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</>
+			);
+		})()}
 	</div>
 )}
 

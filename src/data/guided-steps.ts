@@ -9,13 +9,15 @@ export type GuidedPhase = "setup" | "spring" | "summer" | "autumn" | "winter";
 
 export type GuidedEmbed =
   | "alchemist-tools"
+  | "board-anatomy"
   | "crucible-deck"
   | "harvest-order"
   | "round-at-a-glance"
   | "engine-building"
   | "transmutation-process"
   | "summer-flow"
-  | "autumn-flow"
+  | "autumn-harvest-guide"
+  | "autumn-crucible-flow"
   | "winter-flow";
 
 export type GuidedStep = {
@@ -249,15 +251,26 @@ const GUIDED_STEPS: GuidedStep[] = [
     learnMoreHash: "phase-2-summer",
   },
   {
-    id: "autumn",
-    title: "Autumn: Harvest, Fuel & Conduct the Great Work",
+    id: "autumn-1",
+    title: "Autumn: Harvest Elemental Essence",
     phase: "autumn",
     phaseStep: 1,
-    phaseTotal: 1,
-    body: "<p>Autumn pays out Essence, fuels Furnaces, and advances the Great Work. Harvest by Aligning your sources with the Cosmic Age, craft Coal to raise Heat, then Fire or Temper your Stone. Rekindle a Seized Stone for 5 Essence if needed.</p><p>📌 <em>Tip: When you Fire, commit up to 3 Reagents as Shield Reagents — rivals must match that number as an Ante to Siege you.</em></p>",
-    embed: "autumn-flow",
+    phaseTotal: 2,
+    body: "<p>Autumn opens with <strong>Harvest</strong>. Each player compares their Harvest Sources — Zodiac Die, Astral Houses, Adept Cards, and Spread Cards — to the Cosmic Age's three Aspects: Sign, Planet, and Element.</p><p>Each matching Aspect scores Essence from the bank in the Cosmic Age's Element: Sign +3 · Planet +2 · Element +1. Stack every tier a source matches; match all three on one source for a <strong>Perfect Match (+6)</strong>.</p>",
+    embed: "autumn-harvest-guide",
     learnMorePath: "play/round-overview",
-    learnMoreHash: "phase-3-autumn",
+    learnMoreHash: "1️⃣-harvest-elemental-essence",
+  },
+  {
+    id: "autumn-2",
+    title: "Autumn: Fuel & Conduct the Great Work",
+    phase: "autumn",
+    phaseStep: 2,
+    phaseTotal: 2,
+    body: "<p>After everyone Harvests, take your Crucible turn. If your Stone was Seized, Rekindle it first — then craft Coal to fuel Furnaces, Fire or Temper your Stone, and Distill Reagents if you need them before Firing.</p><p>📌 <em>Tip: When you Fire, commit up to 3 Reagents as Shield Reagents — rivals must match that number as an Ante to Siege you.</em></p>",
+    embed: "autumn-crucible-flow",
+    learnMorePath: "play/round-overview",
+    learnMoreHash: "harvest-fuel-conduct-the-great-work",
   },
   {
     id: "winter",
@@ -354,7 +367,7 @@ export const GUIDED_CONTENT_STEP_COUNT = GUIDED_STEPS.length - 1;
 
 export const GAME_MODE_STORAGE_KEY = "kismeta-game-modes";
 export const GUIDED_PROGRESS_KEY = "kismeta-guided-progress";
-export const GUIDED_PROGRESS_VERSION = 9;
+export const GUIDED_PROGRESS_VERSION = 11;
 
 export function gameModeToStorage(mode: GameMode): {
   quickplay: boolean;

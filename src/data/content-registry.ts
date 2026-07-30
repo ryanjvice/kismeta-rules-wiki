@@ -2,12 +2,15 @@
  * Lookup for game tables and action flows (Guided embeds + static reference).
  */
 import alchemistTools from './tables/alchemist-tools.json';
+import boardAnatomy from './tables/board-anatomy.json';
 import harvestOrder from './tables/harvest-order.json';
+import harvestScoring from './tables/harvest-scoring.json';
 import roundAtAGlance from './tables/round-at-a-glance.json';
 import engineBuilding from './tables/engine-building.json';
 import transmutationProcess from './tables/transmutation-process.json';
 import summerFlow from './flows/summer-flow.json';
-import autumnFlow from './flows/autumn-flow.json';
+import autumnHarvestFlow from './flows/autumn-harvest-flow.json';
+import autumnCrucibleFlow from './flows/autumn-crucible-flow.json';
 import winterFlow from './flows/winter-flow.json';
 
 export type LocalizedString = string | Record<string, string>;
@@ -61,17 +64,41 @@ export type SeasonCardsTable = {
 	}>;
 };
 
+export type HarvestScoringTable = {
+	intro?: LocalizedString;
+	scoringTitle: LocalizedString;
+	scoringRows: Array<{
+		aspect: LocalizedString;
+		essence: LocalizedString;
+	}>;
+	exampleTitle: LocalizedString;
+	exampleRows: Array<{
+		source: LocalizedString;
+		matched: LocalizedString;
+		essence: LocalizedString;
+	}>;
+	exampleTotal: LocalizedString;
+};
+
 export type TableId =
 	| 'alchemist-tools'
+	| 'board-anatomy'
 	| 'harvest-order'
+	| 'harvest-scoring'
 	| 'round-at-a-glance'
 	| 'engine-building'
 	| 'transmutation-process';
-export type FlowId = 'summer-flow' | 'autumn-flow' | 'winter-flow';
+export type FlowId =
+	| 'summer-flow'
+	| 'autumn-harvest-flow'
+	| 'autumn-crucible-flow'
+	| 'winter-flow';
 
-const TABLES: Record<TableId, StepListTable | SeasonCardsTable> = {
+const TABLES: Record<TableId, StepListTable | SeasonCardsTable | HarvestScoringTable> = {
 	'alchemist-tools': alchemistTools as StepListTable,
+	'board-anatomy': boardAnatomy as StepListTable,
 	'harvest-order': harvestOrder as StepListTable,
+	'harvest-scoring': harvestScoring as HarvestScoringTable,
 	'round-at-a-glance': roundAtAGlance as SeasonCardsTable,
 	'engine-building': engineBuilding as SeasonCardsTable,
 	'transmutation-process': transmutationProcess as SeasonCardsTable,
@@ -79,11 +106,12 @@ const TABLES: Record<TableId, StepListTable | SeasonCardsTable> = {
 
 const FLOWS: Record<FlowId, ActionFlow> = {
 	'summer-flow': summerFlow as ActionFlow,
-	'autumn-flow': autumnFlow as ActionFlow,
+	'autumn-harvest-flow': autumnHarvestFlow as ActionFlow,
+	'autumn-crucible-flow': autumnCrucibleFlow as ActionFlow,
 	'winter-flow': winterFlow as ActionFlow,
 };
 
-export function getTable(id: TableId): StepListTable | SeasonCardsTable {
+export function getTable(id: TableId): StepListTable | SeasonCardsTable | HarvestScoringTable {
 	return TABLES[id];
 }
 

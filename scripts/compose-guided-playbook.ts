@@ -18,6 +18,7 @@ import {
   localize,
   type ActionFlow,
   type FlowNode,
+  type HarvestScoringTable,
   type SeasonCardsTable,
   type StepListTable,
 } from "../src/data/content-registry.ts";
@@ -99,7 +100,8 @@ function buildPlaybookSteps(): GuidedStep[] {
     "spring-4",
     "spring-5",
     "summer",
-    "autumn",
+    "autumn-1",
+    "autumn-2",
     "winter",
     "round-end",
   ];
@@ -203,6 +205,30 @@ function renderSeasonGrid(tableId: "round-at-a-glance" | "engine-building" | "tr
   return lines.filter(Boolean).join("\n");
 }
 
+function renderHarvestScoring(): string {
+  const table = getTable("harvest-scoring") as HarvestScoringTable;
+  const intro = localize(table.intro, "en");
+  const lines = [intro ? `\n${intro}\n` : "", `\n**${localize(table.scoringTitle, "en")}**\n`];
+
+  lines.push("| Aspect Matched | Essence |");
+  lines.push("| --- | --- |");
+  for (const row of table.scoringRows) {
+    lines.push(`| ${localize(row.aspect, "en")} | ${localize(row.essence, "en")} |`);
+  }
+
+  lines.push(`\n**${localize(table.exampleTitle, "en")}**\n`);
+  lines.push("| Source | Aspect Matched | Essence |");
+  lines.push("| --- | --- | --- |");
+  for (const row of table.exampleRows) {
+    lines.push(
+      `| ${localize(row.source, "en")} | ${localize(row.matched, "en")} | ${localize(row.essence, "en")} |`
+    );
+  }
+  lines.push(`| **Total Essence Income** | | **${localize(table.exampleTotal, "en")}** |`);
+
+  return lines.filter(Boolean).join("\n");
+}
+
 function renderStepList(tableId: "alchemist-tools"): string {
   const table = getTable(tableId) as StepListTable;
   const intro = localize(table.intro, "en");
@@ -258,7 +284,9 @@ function renderFlowNode(node: FlowNode, depth = 0): string[] {
   return lines;
 }
 
-function renderFlow(flowId: "summer-flow" | "autumn-flow" | "winter-flow"): string {
+function renderFlow(
+	flowId: "summer-flow" | "autumn-harvest-flow" | "autumn-crucible-flow" | "winter-flow"
+): string {
   const flow = getFlow(flowId) as ActionFlow;
   const intro = localize(flow.intro, "en");
   const lines = [`\n${intro}\n`, ...renderFlowNode(flow.root)];
@@ -326,9 +354,12 @@ function renderEmbed(embed: GuidedEmbed): string {
     case "transmutation-process":
       return renderSeasonGrid("transmutation-process");
     case "summer-flow":
-    case "autumn-flow":
+    case "autumn-harvest-flow":
+    case "autumn-crucible-flow":
     case "winter-flow":
       return renderFlow(embed);
+    case "autumn-harvest-guide":
+      return `${renderHarvestScoring()}\n\n${renderFlow("autumn-harvest-flow")}`;
     case "crucible-deck":
       return renderCrucibleTables();
     default:

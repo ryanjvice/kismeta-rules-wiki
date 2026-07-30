@@ -1,0 +1,35 @@
+{
+  "intro": "Compare each Harvest Source to the Cosmic Age's Sign, Planet, and Element. Stack every tier a source matches; take your total in Essence of the Cosmic Age's Element.",
+  "scoringTitle": "🍂 Harvest Scoring",
+  "scoringRows": [
+    { "aspect": "Sign", "essence": "+3" },
+    { "aspect": "Planet", "essence": "+2" },
+    { "aspect": "Element", "essence": "+1" },
+    { "aspect": "Perfect Match (all three at once)", "essence": "+6" },
+    { "aspect": "No Match", "essence": "+0" }
+  ],
+  "exampleTitle": "💡 Example: Scorpio Age (Aspects = Scorpio, Mars, Water)",
+  "exampleRows": [
+    {
+      "source": "Zodiac Die: Scorpio",
+      "matched": "Sign match (Scorpio), Perfect Match",
+      "essence": "+6"
+    },
+    {
+      "source": "Spread: 7 of Pentacles",
+      "matched": "Planet match (Mars)",
+      "essence": "+2"
+    },
+    {
+      "source": "Astral House: Pisces",
+      "matched": "Element match (Water)",
+      "essence": "+1"
+    },
+    {
+      "source": "Adept Card: The Hermit",
+      "matched": "Sign match (Scorpio), Perfect Match",
+      "essence": "+6"
+    }
+  ],
+  "exampleTotal": "15 Water Essence"
+}

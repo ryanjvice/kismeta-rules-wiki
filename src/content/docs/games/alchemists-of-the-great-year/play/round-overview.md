@@ -199,7 +199,7 @@ When you Fire your Stone, commit up to 3 Reagents as **Shield Reagents**. A riva
 | Defender Wins  | The Stone holds and continues its Transmutation. Shield Reagents remain intact, and the Attacker's Ante is lost to the supply. The Defender gains a **Besieged Bonus** of +2 for any later Siege against this Stone in its current Stage. |
 
 
-## PHASE 3: 🍂 AUTUMN {#phase-3-autumn}
+## PHASE 3: 🍂 AUTUMN
 
 ### Harvest, Fuel & Conduct the Great Work {#harvest-fuel-conduct-the-great-work}
 
