@@ -22,7 +22,7 @@ const isSeasonCardsTable =
 	tableId === 'transmutation-process';
 ---
 
-{tableId === 'harvest-order' && (
+{(tableId === 'harvest-order' || tableId === 'alchemist-tools') && (
 	<div class="game-table game-table--step-list" data-table-id={tableId} data-locale={locale}>
 		{intro && <p class="game-table__intro">{intro}</p>}
 		<ol class="game-table__steps">

@@ -144,6 +144,9 @@ const navSections = getPlaytestGuidedNavSections().map((section) => ({
 			<div class="guided-play__body" data-step-body></div>
 			<ul class="guided-play__checklist" data-step-checklist hidden></ul>
 			<div class="guided-play__embed" data-step-embed hidden>
+				<div class="guided-play__embed-panel" data-embed-panel="alchemist-tools" hidden>
+					<GameTableEmbed tableId="alchemist-tools" />
+				</div>
 				<div class="guided-play__embed-panel" data-embed-panel="harvest-order" hidden>
 					<GameTableEmbed tableId="harvest-order" />
 				</div>

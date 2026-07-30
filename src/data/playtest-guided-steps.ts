@@ -11,7 +11,7 @@ import {
 } from "./guided-steps";
 
 export const PLAYTEST_GUIDED_PROGRESS_KEY = "kismeta-playtest-guided-progress";
-export const PLAYTEST_GUIDED_PROGRESS_VERSION = 3;
+export const PLAYTEST_GUIDED_PROGRESS_VERSION = 4;
 
 const BRIEFING_STEP: GuidedStep = {
   id: "briefing",
@@ -34,10 +34,18 @@ const COSMIC_AGE_OVERVIEW_STEP: GuidedStep = {
   learnMorePath: "rules/round-at-a-glance",
 };
 
+const TOOLS_STEP: GuidedStep = {
+  id: "tools-of-the-alchemist",
+  title: "Tools of the Alchemist",
+  body: "<p>Before you learn how Essence and cards fuel the Great Work, learn the <strong>tools</strong> every Alchemist uses at the table — the names every step ahead will assume you know.</p>",
+  embed: "alchemist-tools",
+  learnMorePath: "learn/components",
+};
+
 const ENGINE_BUILDING_STEP: GuidedStep = {
   id: "engine-building",
   title: "Building Your Engine",
-  body: "<p>The Great Work runs on two currencies: <strong>Essence</strong> and <strong>Kismeta cards</strong>. Harvest Essence each Autumn. Draw and play cards into your Tableau. <strong>Coal</strong> and <strong>Reagents</strong> refine those currencies when you Fire a Crucible Formula. Astral Houses, Adept Cards, and Spread synergies tune how far each one goes.</p>",
+  body: "<p>The Great Work runs on two currencies: <strong>Essence</strong> and <strong>Kismeta cards</strong>. Each Spring you draw cards and grow your Tableau. Each Autumn you Harvest Essence. Spend cards to craft Coal and build Houses; spend Essence to Distill Reagents. All of it feeds the moment you Fire a Crucible Formula.</p>",
   embed: "engine-building",
   learnMorePath: "rules/game-overview",
   learnMoreHash: "building-your-engine",
@@ -98,8 +106,7 @@ function buildPlaytestGuidedSteps(): GuidedStep[] {
       if (step.id === "spring-4") {
         return {
           ...step,
-          body:
-            "<p>Your <strong>Tableau</strong> is everything you have in play, arranged across three zones.</p><p><strong>Spread</strong> — Minor Arcana played face-up. Effects are active; cards craft Coal, pay Attunements, and score at the Harvest. They can be lost in Duels.</p><p><strong>Hand</strong> — Minor Arcana held privately. Effects are inactive; Hand cards are safe from Duels and may be committed in Sieges.</p><p><strong>Arcanum</strong> — Major Arcana (Fates and Adepts). You may hold up to two Adept Cards.</p><p>See <button type=\"button\" class=\"guided-play__inline-ref\" data-playtest-rule data-rules-path=\"rules/major-arcana\" data-rules-sections=\"fate-cards,adept-cards\" data-rules-title=\"Fate &amp; Adept Cards\">Fate &amp; Adept cards</button> and <button type=\"button\" class=\"guided-play__inline-ref\" data-playtest-rule data-rules-path=\"rules/minor-arcana\" data-rules-scope=\"page\" data-rules-title=\"Minor Arcana\">Minor Arcana</button>.</p>",
+          body: "<p>Arrange this Age's cards across your <strong>Spread</strong>, <strong>Hand</strong>, and <strong>Arcanum</strong> (see Tools of the Alchemist). Consider your goals for the Age.</p>",
         };
       }
       return step;
@@ -108,6 +115,7 @@ function buildPlaytestGuidedSteps(): GuidedStep[] {
   return [
     BRIEFING_STEP,
     COSMIC_AGE_OVERVIEW_STEP,
+    TOOLS_STEP,
     ENGINE_BUILDING_STEP,
     TRANSMUTATION_STEP,
     LAUNCH_STEP,
@@ -133,6 +141,7 @@ const PHASE_LABEL_KEYS: Record<GuidedPhase, string> = {
 const STANDALONE_NAV_LABELS: Record<string, string> = {
   briefing: "playtest.agy.guided.nav.briefing",
   "round-intro": "playtest.agy.guided.nav.overview",
+  "tools-of-the-alchemist": "playtest.agy.guided.nav.toolsOfTheAlchemist",
   "engine-building": "playtest.agy.guided.nav.engineBuilding",
   "transmutation-process": "playtest.agy.guided.nav.transmutation",
   launch: "playtest.agy.guided.nav.launch",

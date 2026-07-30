@@ -1,0 +1,35 @@
+{
+  "intro": "These are the tools you will use every Cosmic Age. Learn them now — every step ahead assumes you know these names.",
+  "steps": [
+    {
+      "id": "dice",
+      "label": "Cosmic Age Die & Zodiac Die",
+      "body": "Each Spring, the Agekeeper rolls the Cosmic Age Die to set the Sign, Planet, and Element of the Age. Each player rolls their Zodiac Die and places it on the matching Sign on the Zodiac Wheel — your Sign for the rest of the Age."
+    },
+    {
+      "id": "tableau",
+      "label": "Your Tableau",
+      "body": "Everything you have in play, arranged in three zones. Spread — Minor Arcana face-up; effects active; cards craft Coal, pay Attunements, and score at Harvest. Hand — Minor Arcana held privately; safe from Duels; committed in Sieges. Arcanum — Major Arcana (Fates and Adepts); hold up to two Adept Cards."
+    },
+    {
+      "id": "coal",
+      "label": "Coal",
+      "body": "Wooden discs in your player color. Spend 3 cards of one suit to craft 1 Coal. Place Coal in a Furnace to raise your Heat in that Element."
+    },
+    {
+      "id": "furnaces",
+      "label": "Furnaces",
+      "body": "Four shared stations on the board, one per Element. Each Age you may fuel the Furnace matching your Sign's Element. Each Furnace holds three Coal total, shared among all players. Your Coal there raises your Heat by +1."
+    },
+    {
+      "id": "adepts",
+      "label": "Adept Cards",
+      "body": "Major Arcana purchased for 3 Essence of any type when dealt. They live in your Arcanum and provide ongoing effects while in play."
+    },
+    {
+      "id": "houses",
+      "label": "Astral Houses & Mansions",
+      "body": "Spend 3 Spread cards whose Planets match your Sign's ruling Planet to build a House on your Sign — a permanent Harvest source. Upgrade to a Mansion with 2 more Planet cards plus a Reagent marker from the supply; a Mansion doubles its Alignment score."
+    }
+  ]
+}

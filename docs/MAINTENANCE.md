@@ -60,7 +60,7 @@ Paths are repo-relative. Details for the home page, sync workflow, and new pages
 - **AGY playtest** (`/games/alchemists-of-the-great-year/playtest/`)  
   Hub: `src/pages/games/alchemists-of-the-great-year/playtest/index.astro` · modules: `guided`, `round-overview`, `glossary`, `cards`, `feedback` under `playtest/` · shared shell: `PlaytestModuleLayout.astro` · hub cards: `PlaytestHubCard.astro` · module registry: `src/data/playtest.ts` · gate: `PlaytestGate.astro` · copy: `playtest.agy.*`
 
-  **Guided Session module** (`…/playtest/guided/`): live table companion for GM-led playtest — briefing, Cosmic Age overview (four-season grid), engine-building and transmutation primer cards, then Agekeeper through the first Cosmic Age. Step data: `src/data/playtest-guided-steps.ts` (playtest-only briefing/overview/primers + slice from `src/data/guided-steps.ts` starting at `setup-v`, excluding `round-intro`). Card grids: `src/data/tables/engine-building.json`, `src/data/tables/transmutation-process.json` (same renderer as `round-at-a-glance`). UI: `PlaytestGuidedStepper.astro` · progress key: `kismeta-playtest-guided-progress` · version **2** (bump invalidates saved step indices when order changes) · “Read full phase rules” opens `PlaytestDetailPanel` via `kismeta:context` (`rules/game-overview` sections extracted in context-sections). When setup or round copy changes in the guide, update matching steps in `guided-steps.ts`; the playtest slice picks them up automatically.
+  **Guided Session module** (`…/playtest/guided/`): live table companion for GM-led playtest — briefing, Cosmic Age overview (four-season grid), **Tools of the Alchemist**, engine-building and transmutation primer cards, then Agekeeper through the first Cosmic Age. Step data: `src/data/playtest-guided-steps.ts` (playtest-only briefing/overview/primers + slice from `src/data/guided-steps.ts` starting at `setup-v`, excluding `round-intro`). Card grids: `src/data/tables/engine-building.json`, `src/data/tables/transmutation-process.json`, `src/data/tables/alchemist-tools.json` (same renderer as `round-at-a-glance` / step-list). UI: `PlaytestGuidedStepper.astro` · progress key: `kismeta-playtest-guided-progress` · version **4** (bump invalidates saved step indices when order changes) · “Read full phase rules” opens `PlaytestDetailPanel` via `kismeta:context` (`rules/game-overview` sections extracted in context-sections). When setup or round copy changes in the guide, update matching steps in `guided-steps.ts`; the playtest slice picks them up automatically.
 
   **Round Overview module** (`…/playtest/round-overview/`): brief season/step list in `src/data/playtest-round-overview.ts` · UI: `PlaytestRoundOverview.astro` · step taps open `PlaytestDetailPanel.astro`, which loads pre-rendered wiki section HTML from `src/data/context-sections/en.json` (same pipeline as Guided Play). Close the panel to return to the brief overview without leaving playtest.
 
@@ -306,17 +306,33 @@ Interactive walkthrough for new players at the table — **not** synced from the
 | Top tab               | [`src/components/TabNav.astro`](../src/components/TabNav.astro) → **Guided**             |
 | Sidebar               | [`astro.config.mjs`](../astro.config.mjs) → Play → **Guided Play**                       |
 
-**Flow (17 content steps + completion screen):** Components → Setup I–VI → Round intro → Spring 1–5 → Summer / Autumn / Winter (in-step `ActionFlowGuide`) → Round end → completion CTA to Round at a Glance (`/rules/round-at-a-glance/`).
+**Flow (18 content steps + completion screen):** Components → **Tools of the Alchemist** → Setup I–VI → Round intro → Spring 1–5 → Summer / Autumn / Winter (in-step `ActionFlowGuide`) → Round end → completion CTA to Round at a Glance (`/rules/round-at-a-glance/`).
 
-**Embeds:** `crucible-deck` (Setup IV), `harvest-order` (Spring 3), `summer-flow` / `autumn-flow` / `winter-flow` (seasonal steps).
+**Embeds:** `alchemist-tools` (Tools step), `crucible-deck` (Setup IV), `harvest-order` (Spring 3), `summer-flow` / `autumn-flow` / `winter-flow` (seasonal steps). Playtest primers also use `engine-building` and `transmutation-process`.
 
-**Progress:** `kismeta-guided-progress` with `GUIDED_PROGRESS_VERSION` (currently **2**). Bumping the version invalidates saved progress from older builds.
+**Progress:** `kismeta-guided-progress` with `GUIDED_PROGRESS_VERSION` (currently **9**). Bumping the version invalidates saved progress from older builds.
 
 **Sync safety:** `play/guided.mdx` is in `PRESERVED_DOC_PATHS` in [`scripts/sync-guide.mjs`](../scripts/sync-guide.mjs).
 
 **When to update:** After changing **Components**, **Setup**, or **Round** sections in `Kismeta_GameGuide.md`, review matching steps in `guided-steps.ts`.
 
 **Game mode:** Guided Play’s mode step writes `kismeta-game-modes` in `localStorage`. [`game-modes.ts`](../src/scripts/game-modes.ts) applies ⚙️ callouts site-wide; `ActionFlowGuide` reads mode for flow-specific notes.
+
+### Guided Playbook export (external print)
+
+Standalone markdown for Word, InDesign, Pandoc, or other layout tools — **not** printed from the website.
+
+| What | Where |
+| ---- | ----- |
+| Generated output | [`Kismeta_AGY_Guided_Playbook.md`](../Kismeta_AGY_Guided_Playbook.md) (repo root) |
+| Compose script | [`scripts/compose-guided-playbook.ts`](../scripts/compose-guided-playbook.ts) |
+| Command | `npm run compose:playbook` |
+
+**Structure (22 steps):** Playtest-style primers (briefing, Cosmic Age grid, **Tools of the Alchemist**, engine-building, transmutation) → full Setup (Components + Setup I–VI) → Spring 1–5 → Summer / Autumn / Winter (flows expanded inline) → Round end. Walkthrough only — no card encyclopedia.
+
+**Sources:** `guided-steps.ts` (setup + round), print-adapted primer copy in the compose script, `src/data/tables/*.json` (including `alchemist-tools.json`), `src/data/flows/*.json`, `crucible-deck-builds.json`.
+
+**When to regenerate:** After changing guided step copy, season flows, table embeds, or crucible deck builds. The website [`print/`](src/content/docs/games/alchemists-of-the-great-year/print/) rulebook pages are separate and are **not** updated by this command.
 
 ### Context rules sidebar (Guided Play only)
 
@@ -396,6 +412,9 @@ After changing icons or manifest fields, run `npm run build` and confirm install
 ```
 Kismeta_GameGuide.md                          # AGY canonical rules
 Kismeta_VeiledAscent_gameplayGuide.md         # TVA canonical rules
+Kismeta_GameGuide.md                          # AGY rules source (npm run sync:gy)
+Kismeta_AGY_Guided_Playbook.md                # AGY guided playbook export (npm run compose:playbook)
+scripts/compose-guided-playbook.ts            # composes playbook from guided data
 scripts/sync-guide.mjs                        # AGY guide → Starlight pages + glossary.json
 scripts/sync-tva-guide.mjs                    # TVA guide → Starlight pages + glossary-tva.json
 scripts/translate-locale.mjs                  # optional locale translation (see docs/i18n.md)
@@ -405,7 +424,8 @@ src/content/docs/games/the-veiled-ascent/     # TVA wiki (sync output + hand pag
 src/content/i18n/                             # UI strings (tabs, guided, glossary, marketing)
 src/data/wiki-base.ts                         # AGY + TVA slug helpers
 src/data/wiki-nav.ts                          # Tab nav config per game (active-state rules)
-src/data/guided-steps.ts                      # AGY 17-step guided play content
+src/data/guided-steps.ts                      # AGY 18-step guided play content
+src/data/tables/alchemist-tools.json          # Tools of the Alchemist reference (guided embed)
 src/data/tva-guided-steps.ts                  # TVA 3-step guided play content
 src/data/glossary.json                        # AGY glossary entries (generated)
 src/data/glossary-tva.json                    # TVA glossary entries (generated)

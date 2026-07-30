@@ -1,6 +1,7 @@
 /**
  * Lookup for game tables and action flows (Guided embeds + static reference).
  */
+import alchemistTools from './tables/alchemist-tools.json';
 import harvestOrder from './tables/harvest-order.json';
 import roundAtAGlance from './tables/round-at-a-glance.json';
 import engineBuilding from './tables/engine-building.json';
@@ -61,6 +62,7 @@ export type SeasonCardsTable = {
 };
 
 export type TableId =
+	| 'alchemist-tools'
 	| 'harvest-order'
 	| 'round-at-a-glance'
 	| 'engine-building'
@@ -68,6 +70,7 @@ export type TableId =
 export type FlowId = 'summer-flow' | 'autumn-flow' | 'winter-flow';
 
 const TABLES: Record<TableId, StepListTable | SeasonCardsTable> = {
+	'alchemist-tools': alchemistTools as StepListTable,
 	'harvest-order': harvestOrder as StepListTable,
 	'round-at-a-glance': roundAtAGlance as SeasonCardsTable,
 	'engine-building': engineBuilding as SeasonCardsTable,

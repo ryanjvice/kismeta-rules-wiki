@@ -11,6 +11,7 @@
     "sync": "node scripts/sync-guide.mjs && node scripts/sync-card-reference.mjs && node scripts/sync-tva-guide.mjs",
     "sync:gy": "node scripts/sync-guide.mjs && node scripts/sync-card-reference.mjs",
     "sync:playtest-cards": "node scripts/sync-playtest-cards.mjs",
+    "compose:playbook": "npx tsx scripts/compose-guided-playbook.ts",
     "sync:tva": "node scripts/sync-tva-guide.mjs",
     "a11y:check": "npx pa11y-ci --config .pa11yci.json"
   },

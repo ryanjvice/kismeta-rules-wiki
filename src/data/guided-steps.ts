@@ -8,6 +8,7 @@ export type GameMode = "quickplay" | "standard" | "magnus";
 export type GuidedPhase = "setup" | "spring" | "summer" | "autumn" | "winter";
 
 export type GuidedEmbed =
+  | "alchemist-tools"
   | "crucible-deck"
   | "harvest-order"
   | "round-at-a-glance"
@@ -37,7 +38,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     title: "Components in the Box",
     phase: "setup",
     phaseStep: 1,
-    phaseTotal: 7,
+    phaseTotal: 8,
     body: "<p>Unbox and confirm you have everything before setting the table. Group cards and dice so they are easy to reach during setup.</p>",
     checklist: [
       "Great Year Board (Zodiac Wheel, Mantle Ring, Forge, Furnaces, Bazaar, Codex panels)",
@@ -51,11 +52,21 @@ const GUIDED_STEPS: GuidedStep[] = [
     learnMorePath: "learn/components",
   },
   {
+    id: "tools-of-the-alchemist",
+    title: "Tools of the Alchemist",
+    phase: "setup",
+    phaseStep: 2,
+    phaseTotal: 8,
+    body: "<p>You have seen these pieces in the box. This step defines what each one <strong>does</strong> at the table — the names and tools every Cosmic Age assumes you know.</p>",
+    embed: "alchemist-tools",
+    learnMorePath: "learn/components",
+  },
+  {
     id: "setup-i",
     title: "Setup I: Set the Table",
     phase: "setup",
-    phaseStep: 2,
-    phaseTotal: 7,
+    phaseStep: 3,
+    phaseTotal: 8,
     body: "<p>Prepare the shared play area in the center of the table.</p>",
     checklist: [
       "Place the Great Year Board in the center",
@@ -71,8 +82,8 @@ const GUIDED_STEPS: GuidedStep[] = [
     id: "setup-ii",
     title: "Setup II: Become an Alchemist",
     phase: "setup",
-    phaseStep: 3,
-    phaseTotal: 7,
+    phaseStep: 4,
+    phaseTotal: 8,
     body: "<p>Each player chooses a color (Red, Green, Blue, or White) and collects their personal gear.</p>",
     checklist: [
       "8 Essence: 2 of each Element (Fire, Water, Air, Earth)",
@@ -89,8 +100,8 @@ const GUIDED_STEPS: GuidedStep[] = [
     id: "setup-iii",
     title: "Setup III: Your Game Mode",
     phase: "setup",
-    phaseStep: 4,
-    phaseTotal: 7,
+    phaseStep: 5,
+    phaseTotal: 8,
     body: "<p>You chose a game mode at the start of guided play. Confirm these rules apply to your table.</p>",
     modeBody: {
       quickplay:
@@ -107,8 +118,8 @@ const GUIDED_STEPS: GuidedStep[] = [
     id: "setup-iv",
     title: "Setup IV: Build the Crucible Deck",
     phase: "setup",
-    phaseStep: 5,
-    phaseTotal: 7,
+    phaseStep: 6,
+    phaseTotal: 8,
     body: "<p>Sort Crucible Cards into groups A–D (letter in the lower-left corner) and shuffle each group separately. Use the builder below for your game mode and player count.</p>",
     embed: "crucible-deck",
     checklist: [
@@ -125,8 +136,8 @@ const GUIDED_STEPS: GuidedStep[] = [
     id: "setup-v",
     title: "Setup V: Determine the First Agekeeper",
     phase: "setup",
-    phaseStep: 6,
-    phaseTotal: 7,
+    phaseStep: 7,
+    phaseTotal: 8,
     body: "<p>The Agekeeper sets the Cosmic Age each Spring, deals Kismeta cards, manages the deck, and resets the board at Transit.</p>",
     checklist: [
       "Everyone rolls their Zodiac Die — highest becomes first Agekeeper (reroll ties)",
@@ -140,8 +151,8 @@ const GUIDED_STEPS: GuidedStep[] = [
     id: "setup-vi",
     title: "Setup VI: Deal the Crucible Cards",
     phase: "setup",
-    phaseStep: 7,
-    phaseTotal: 7,
+    phaseStep: 8,
+    phaseTotal: 8,
     body: "<p>The first Agekeeper finishes game prep. When this step is done, the first Cosmic Age begins.</p>",
     checklist: [
       "Shuffle the Crucible Deck; tap twice to cleanse",
@@ -208,7 +219,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 4,
     phaseTotal: 5,
-    body: "<p>Your <strong>Tableau</strong> is everything you have in play, arranged across three zones.</p><p><strong>Spread</strong> — Minor Arcana played face-up. Effects are active; cards craft Coal, pay Attunements, and score at the Harvest. They can be lost in Duels.</p><p><strong>Hand</strong> — Minor Arcana held privately. Effects are inactive; Hand cards are safe from Duels and may be committed in Sieges.</p><p><strong>Arcanum</strong> — Major Arcana (Fates and Adepts). You may hold up to two Adept Cards.</p><p>See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept cards</a> and <a href='/games/alchemists-of-the-great-year/rules/minor-arcana/'>Minor Arcana</a>.</p>",
+    body: "<p>Arrange this Age's cards across your <strong>Spread</strong>, <strong>Hand</strong>, and <strong>Arcanum</strong> (see Tools of the Alchemist). Consider your goals for the Age.</p>",
     checklist: [
       "Arrange cards across Spread, Hand, and Arcanum",
       "Consider your goals for this Age",
@@ -343,7 +354,7 @@ export const GUIDED_CONTENT_STEP_COUNT = GUIDED_STEPS.length - 1;
 
 export const GAME_MODE_STORAGE_KEY = "kismeta-game-modes";
 export const GUIDED_PROGRESS_KEY = "kismeta-guided-progress";
-export const GUIDED_PROGRESS_VERSION = 8;
+export const GUIDED_PROGRESS_VERSION = 9;
 
 export function gameModeToStorage(mode: GameMode): {
   quickplay: boolean;
