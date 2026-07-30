@@ -7,7 +7,7 @@ Keep these principles in mind as you find your footing across the first few Ages
 
 1. **Your Alignments Set Your Income.** Every Essence you earn comes from matching your Harvest Sources against the three Aspects of the Cosmic Age. A source that matches all three at once is worth six times a bare Element match, so chase Perfect Matches wherever you can engineer them.
 
-2. **Your Spread Is Your Engine.** Spread cards have active effects, form Stelliums, craft Coal and Astral Houses, pay Attunements, and score at the Harvest. Hand cards do almost none of that. What is visible is what works, and what is visible is also what a rival can take.
+2. **Your Spread Is Your Engine.** Spread cards have active effects, craft Coal and Astral Houses, pay Attunements, and score at the Harvest. Hand cards do almost none of that. What is visible is what works, and what is visible is also what a rival can take.
 
 3. **Watch the Furnace, Not Just the Formula.** A Furnace holds only three Coal for the whole table. If your Formula needs Radiant Heat, you need all three spaces, and every rival who fuels that Furnace first has taken one away from you. Fuel early in an Age when your Sign gives you access.
 

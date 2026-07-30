@@ -1021,23 +1021,13 @@
   },
   {
     "id": "minor-reference-the-aces",
-    "label": "The Aces · Sun & Wild Charge",
-    "blurb": "Wild for Stelliums and usable as a Seed when paying Formulas.",
-    "detailHtml": "<p>Aces carry the Sun and are wild for any one Stellium, chosen freely. At most one Ace may count toward any one Stellium. An Ace is also a Seed: spend it when paying an Alchemical Formula and it counts as 1 Reagent of its Suit (Ace of Wands counts as 2 Sulfur). There are 8 Aces in the deck, two per Suit.</p>",
+    "label": "The Aces · Sun & Seed",
+    "blurb": "Usable as a Seed when paying Formulas.",
+    "detailHtml": "<p>Aces carry the Sun. Each Ace is a Seed: spend it when paying an Alchemical Formula and it counts as 1 Reagent of its Suit (Ace of Wands counts as 2 Sulfur). There are 8 Aces in the deck, two per Suit.</p>",
     "deck": "minor",
     "group": "Reference",
     "wikiPath": "rules/minor-arcana",
     "wikiHash": "the-aces-sun-wild-charge"
-  },
-  {
-    "id": "minor-reference-stellium-codex",
-    "label": "Planet Stellium Codex",
-    "blurb": "Hold three cards of one Planet in your Spread to activate its Stellium.",
-    "detailHtml": "<div class=\"doc-table\"><table><thead><tr><th>Planet</th><th>Ranks</th><th>While Active</th></tr></thead><tbody><tr><td>☽ Moon</td><td>2, Queen</td><td>Your Coal cannot be Extinguished.</td></tr><tr><td>☿ Mercury</td><td>5, Princess</td><td>You may Fuel any Furnace</td></tr><tr><td>♀ Venus</td><td>4, 9</td><td>Take your Harvest in any Essence you Choose.</td></tr><tr><td>♂ Mars</td><td>7, Knight</td><td>Losing a Duel doesn't bar you from re-challenging.</td></tr><tr><td>♃ Jupiter</td><td>3, 8, King</td><td>You may build an Astral House on the Cosmic Age.</td></tr><tr><td>♄ Saturn</td><td>6, 10</td><td>Your Spread limit is 9 instead of 7.</td></tr></tbody></table></div>",
-    "deck": "minor",
-    "group": "Reference",
-    "wikiPath": "rules/minor-arcana",
-    "wikiHash": "planet-stellium-codex"
   },
   {
     "id": "minor-reference-card-effect-verbs",

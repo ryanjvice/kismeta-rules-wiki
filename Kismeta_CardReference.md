@@ -124,7 +124,7 @@ Attunement is paid from Spread cards, which are spent, or from Astral Houses, wh
 
 ## MINOR ARCANA _112 Cards · Four Suits · 14 Ranks · Two Cards Per Rank/Suit_
 
-Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Rank sets the card's Charge Value (CV), its Planet, and its printed effect. Suit sets the Element, Reagent, and Furnace that effect works on. Holding three cards of one **Planet** in your **Spread** forms a **Stellium** — a standing effect listed in the Planet Stellium Codex below.
+Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Rank sets the card's Charge Value (CV) and its printed effect. Suit sets the Element, Reagent, and Furnace that effect works on. Planet sets Attunement costs and Astral House crafting sets.
 
 ### Suit Correspondence
 
@@ -210,21 +210,6 @@ Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Rank set
 | **Knight** | 12 | Mars | ATTACK | 2 | In Fire Signs, Force Any Duel to a Best-of-Three after the First Dice Roll. |
 | **Queen** | 13 | Moon | WARD | 2 | In Fire Signs, Your Coal in the Fire Furnace is Protected. |
 | **King** | 14 | Jupiter | BOON | 2 | In Fire Signs, Raise your Furnace's Heat by +1. |
-
-### Planet Stellium Codex
-
-Hold three cards of one Planet in your Spread to activate its Stellium. It ends the moment one of those cards is lost.
-
-| Planet | Ranks | While Active |
-| --- | --- | --- |
-| ☽ **Moon** | 2, Queen | Your Coal cannot be Extinguished. |
-| ☿ **Mercury** | 5, Princess | You may Fuel any Furnace |
-| ♀ **Venus** | 4, 9 | Take your Harvest in any Essence you Choose. |
-| ♂ **Mars** | 7, Knight | Losing a Duel doesn't bar you from re-challenging. |
-| ♃ **Jupiter** | 3, 8, King | You may build an Astral House on the Cosmic Age. |
-| ♄ **Saturn** | 6, 10 | Your Spread limit is 9 instead of 7. |
-
-An Ace is wild for any one Stellium. One Ace per Stellium.
 
 ## CARD EFFECT VERBS
 

@@ -13,7 +13,7 @@ Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards pay out Essence ea
 
 ### The Card Economy
 
-Cards convert into Coal (3 of one suit) and Astral Houses (3 of one Planet). This economy is narrow and brutal. You receive only three cards per Age, plus what you steal, draw from effects, or trade for. Every card spent on a Coal is a card not spent on a House, an Attunement, or a Stellium.
+Cards convert into Coal (3 of one suit) and Astral Houses (3 of one Planet). This economy is narrow and brutal. You receive only three cards per Age, plus what you steal, draw from effects, or trade for. Every card spent on a Coal is a card not spent on a House or an Attunement.
 
 ### Where They Meet
 
@@ -25,8 +25,7 @@ Your Zodiac Die result each Spring decides which Furnace you may fuel and which 
 
 Three tools bend it:
 
-- **The Mercury Stellium** lets you fuel any Furnace, regardless of your Sign.
-- **The Jupiter Stellium** lets you build an Astral House on the **Cosmic Age**, not only your own Sign.
+- **Princess cards (Mercury)** — Burn one to fuel that Element's Furnace regardless of your Sign for the Age.
 - **The Chariot** (Adept, Leo) lets you shift your Zodiac Die result one Sign in either direction on the Wheel, once per Age.
 - **Strength** (Adept, Sagittarius) lets you declare a Siege without paying the Ante and win any tie in Sieges.
 
@@ -53,7 +52,7 @@ The counter-pressure runs the other way. A failed Siege costs the attacker their
 
 Kismeta gives you three ways to hurt a rival without advancing yourself.
 
-- **Duels** take a specific card from a Spread. The best targets are not the highest-value cards but the load-bearing ones: the third card of a Stellium, or the last card of an Attunement.
+- **Duels** take a specific card from a Spread. The best targets are not the highest-value cards but the load-bearing ones: the last card of an Attunement, or a card whose effect is holding a rival's engine together.
 - **Extinguish** removes a rival's Coal and drops their Heat. Timed just before their Autumn, it can push a Formula out of reach for a whole Age.
 - **Siege** stalls a Stone for an Age.
 
@@ -73,7 +72,7 @@ A balanced spread across the Groups. Full cognitive load: Card Lock, House place
 
 ### Magnus Alchemist (Expert Depth)
 
-Weighted to Groups C and D. Group C demands complex Attunements and card straights. Group D demands the heaviest Reagent payments and Heat spread across multiple Furnaces at once. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually a Stellium or an Adept to lift the Furnace restriction.
+Weighted to Groups C and D. Group C demands complex Attunements and card straights. Group D demands the heaviest Reagent payments and Heat spread across multiple Furnaces at once. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually an Adept or a card effect to lift the Furnace restriction.
 
 ## Conclusion & Verdict
 

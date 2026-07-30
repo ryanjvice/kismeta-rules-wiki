@@ -208,7 +208,7 @@ const GUIDED_STEPS: GuidedStep[] = [
     phase: "spring",
     phaseStep: 4,
     phaseTotal: 5,
-    body: "<p>Your <strong>Tableau</strong> is everything you have in play, arranged across three zones.</p><p><strong>Spread</strong> — Minor Arcana played face-up. Effects are active; cards craft Coal, pay Attunements, form Stelliums, and score at the Harvest. They can be lost in Duels.</p><p><strong>Hand</strong> — Minor Arcana held privately. Effects are inactive; Hand cards are safe from Duels and may be committed in Sieges.</p><p><strong>Arcanum</strong> — Major Arcana (Fates and Adepts). You may hold up to two Adept Cards.</p><p>See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept cards</a> and <a href='/games/alchemists-of-the-great-year/rules/minor-arcana/'>Minor Arcana</a>.</p>",
+    body: "<p>Your <strong>Tableau</strong> is everything you have in play, arranged across three zones.</p><p><strong>Spread</strong> — Minor Arcana played face-up. Effects are active; cards craft Coal, pay Attunements, and score at the Harvest. They can be lost in Duels.</p><p><strong>Hand</strong> — Minor Arcana held privately. Effects are inactive; Hand cards are safe from Duels and may be committed in Sieges.</p><p><strong>Arcanum</strong> — Major Arcana (Fates and Adepts). You may hold up to two Adept Cards.</p><p>See <a href='/games/alchemists-of-the-great-year/rules/major-arcana/'>Fate &amp; Adept cards</a> and <a href='/games/alchemists-of-the-great-year/rules/minor-arcana/'>Minor Arcana</a>.</p>",
     checklist: [
       "Arrange cards across Spread, Hand, and Arcanum",
       "Consider your goals for this Age",

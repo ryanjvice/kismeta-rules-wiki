@@ -23,7 +23,6 @@ _Lookup tables for play at the table. Staple separately from the Core Rulebook._
 - The Zodiac Wheel
 - Correspondence
 - Tableau Zones
-- Stelliums
 - Card Effect Verbs
 - Crucible Cards
 - Major Arcana
@@ -77,26 +76,9 @@ You always manage your Tableau across three zones.
 
 | ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS  | MAX LIMIT                                    | USED FOR                                                                                                       | CANNOT BE USED FOR                          |
 | ------- | --------------------------------------------- | ---------- | -------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | 7 cards, enforced in Winter (9 with Saturn)  | Paying Attunements, Crafting Coal, Building Astral Houses, Forming Stelliums, Harvest scoring, Trading, Wagers, Sieges | Nothing. Spread cards are eligible for every use, and are the only cards a rival may take in a Duel. |
+| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | 7 cards, enforced in Winter                  | Paying Attunements, Crafting Coal, Building Astral Houses, Harvest scoring, Trading, Wagers, Sieges | Nothing. Spread cards are eligible for every use, and are the only cards a rival may take in a Duel. |
 | HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | 5 cards, enforced in Winter                  | Committing in a Siege, Trading, Wagers                                                                         | Crafting sets, Attunements, Harvest scoring, Duel targets |
 | ARCANUM | MAJOR ARCANA: Adept & Fate Cards              | Visible    | Active   | 2 Adepts (3 with the Hierophant); Fates until Transit | Adept effects and Aspects (Harvest scoring), Trading Adepts                                          | Crafting sets, Attunements, Duel targets, Wagers |
-
----
-
-## Stelliums
-
-Every Minor Arcana card carries a Planet. Hold **three cards of one Planet** together in your **Spread** to activate that Planet's **Stellium**. The effect holds only while all three remain: losing one to a Duel switches it off.
-
-Only Spread cards count. Hand cards and Arcanum cards never contribute to a Stellium. An Ace is wild for any one Stellium. One Ace per Stellium.
-
-| Planet        | Ranks         | While Active                                                          |
-| ------------- | ------------- | --------------------------------------------------------------------- |
-| ☽ **Moon**    | 2, Queen      | Your Coal cannot be Extinguished.                                     |
-| ☿ **Mercury** | 5, Princess   | You may fuel any Furnace, not only the one matching your Sign.        |
-| ♀ **Venus**   | 4, 9          | At Harvest, take your Essence in any one Element you choose.          |
-| ♂ **Mars**    | 7, Knight     | Losing a Duel does not bar you from challenging that rival again this Age. |
-| ♃ **Jupiter** | 3, 8, King    | You may build an Astral House on the **Cosmic Age**, not only your own Sign. |
-| ♄ **Saturn**  | 6, 10         | Your Spread limit is 9 instead of 7.                                  |
 
 ---
 
@@ -229,7 +211,7 @@ The 22 Major Arcana cards are divided into two sets.
 
 ## Minor Arcana
 
-Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Rank sets the card's Charge Value (CV), its Planet, and its printed effect. Suit sets the Element, Reagent, and Furnace that effect works on.
+Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Rank sets the card's Charge Value (CV) and its printed effect. Suit sets the Element, Reagent, and Furnace that effect works on. Planet sets Attunement costs and Astral House crafting sets.
 
 ### Suit Correspondence
 
@@ -315,20 +297,5 @@ Every Minor Arcana card shows a **Rank**, a **Suit**, and a **Planet**. Rank set
 | **Knight** | 12 | Mars | ATTACK | 2 | In Fire Signs, force any Duel to a best-of-three after the first dice roll. |
 | **Queen** | 13 | Moon | WARD | 2 | In Fire Signs, your Coal in the Fire Furnace is protected. |
 | **King** | 14 | Jupiter | BOON | 2 | In Fire Signs, raise your Furnace's Heat by +1. |
-
-### Planet Stellium Codex
-
-Hold three cards of one Planet in your Spread to activate its Stellium. It ends the moment one of those cards is lost.
-
-| Planet | Ranks | While Active |
-| --- | --- | --- |
-| ☽ **Moon** | 2, Queen | Your Coal cannot be Extinguished. |
-| ☿ **Mercury** | 5, Princess | You may fuel any Furnace. |
-| ♀ **Venus** | 4, 9 | Take your Harvest in any Essence you choose. |
-| ♂ **Mars** | 7, Knight | Losing a Duel doesn't bar you from re-challenging. |
-| ♃ **Jupiter** | 3, 8, King | You may build an Astral House on the Cosmic Age. |
-| ♄ **Saturn** | 6, 10 | Your Spread limit is 9 instead of 7. |
-
-An Ace is wild for any one Stellium. One Ace per Stellium.
 
 </div>

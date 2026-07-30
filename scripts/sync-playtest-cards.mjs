@@ -298,36 +298,14 @@ function referenceEntries(lines) {
 	entries.push(
 		cardEntry({
 			id: 'minor-reference-the-aces',
-			label: 'The Aces · Sun & Wild Charge',
-			blurb: 'Wild for Stelliums and usable as a Seed when paying Formulas.',
+			label: 'The Aces · Sun & Seed',
+			blurb: 'Usable as a Seed when paying Formulas.',
 			detailHtml:
-				'<p>Aces carry the Sun and are wild for any one Stellium, chosen freely. At most one Ace may count toward any one Stellium. An Ace is also a Seed: spend it when paying an Alchemical Formula and it counts as 1 Reagent of its Suit (Ace of Wands counts as 2 Sulfur). There are 8 Aces in the deck, two per Suit.</p>',
+				'<p>Aces carry the Sun. Each Ace is a Seed: spend it when paying an Alchemical Formula and it counts as 1 Reagent of its Suit (Ace of Wands counts as 2 Sulfur). There are 8 Aces in the deck, two per Suit.</p>',
 			deck: 'minor',
 			group: 'Reference',
 			wikiPath: 'rules/minor-arcana',
 			wikiHash: 'the-aces-sun-wild-charge',
-		})
-	);
-
-	const stelliumStart = lines.findIndex((l) => l.includes('| Planet | Ranks | While Active |'));
-	const { rows: stelliumRows } = parseMarkdownTables(lines, stelliumStart + 1);
-	const stelliumBody = stelliumRows
-		.map(([planet, ranks, effect]) => {
-			const planetCell = planet.replace(/\*\*/g, '');
-			return `<tr><td>${escapeHtml(planetCell)}</td><td>${escapeHtml(ranks)}</td><td>${escapeHtml(effect)}</td></tr>`;
-		})
-		.join('');
-	entries.push(
-		cardEntry({
-			id: 'minor-reference-stellium-codex',
-			label: 'Planet Stellium Codex',
-			blurb: 'Hold three cards of one Planet in your Spread to activate its Stellium.',
-			detailHtml:
-				`<div class="doc-table"><table><thead><tr><th>Planet</th><th>Ranks</th><th>While Active</th></tr></thead><tbody>${stelliumBody}</tbody></table></div>`,
-			deck: 'minor',
-			group: 'Reference',
-			wikiPath: 'rules/minor-arcana',
-			wikiHash: 'planet-stellium-codex',
 		})
 	);
 

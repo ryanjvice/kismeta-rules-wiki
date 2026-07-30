@@ -25,7 +25,7 @@
         "id": "limits",
         "label": "3. Enforce Card Limits",
         "kind": "required",
-        "body": "Discard down to card limits before the next Age: Spread 7 cards · Hand 5 cards · Arcanum 2 Adept cards (9 Spread with Saturn Stellium). Return Fate Cards to the discard pile at Transit.",
+        "body": "Discard down to card limits before the next Age: Spread 7 cards · Hand 5 cards · Arcanum 2 Adept cards. Return Fate Cards to the discard pile at Transit.",
         "learnMoreHash": "3️⃣-enforce-card-limits"
       },
       {

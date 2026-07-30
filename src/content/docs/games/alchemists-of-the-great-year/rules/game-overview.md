@@ -39,13 +39,13 @@ The Great Work runs on two core currencies: **Essence** and **Kismeta cards**.
 - **Essence** is Harvested each Autumn. Your Zodiac Die, Spread, Astral Houses, and Adept Cards can each Align with the Cosmic Age. Distill 5 Essence of one Element to make a **Reagent** of that Element.
 - **Kismeta cards** flow from the deck into your Tableau. Spend 3 cards of one suit to craft **Coal**. Spend 3 cards of one Planet to build an **Astral House**. Upgrade a House to an **Astral Mansion** for 2 more cards of that Planet plus a Reagent marker from the supply.
 
-Coal and Reagents refine your currencies when a Crucible Formula demands them. Astral Houses, Adept Cards, Stelliums, and card effects tune how much you earn and how efficiently you spend. You can grow either currency across Ages; they converge when you are ready to Fire your Stone into the Forge.
+Coal and Reagents refine your currencies when a Crucible Formula demands them. Astral Houses, Adept Cards, and card effects tune how much you earn and how efficiently you spend. You can grow either currency across Ages; they converge when you are ready to Fire your Stone into the Forge.
 
-Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. The journey spans many Cosmic Ages, some spent building your engine, others spent driving your Stone through the Forge. In early Ages, focus on infrastructure: build Astral Houses, buy Adept Cards, hold Stelliums together in your Spread, and bank Essence.
+Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. The journey spans many Cosmic Ages, some spent building your engine, others spent driving your Stone through the Forge. In early Ages, focus on infrastructure: build Astral Houses, buy Adept Cards, and bank Essence.
 
 ## The Bazaar
 
-A shared reference lives on the board, in the space the old Stellium tracker used to occupy. It lists every fixed exchange rate in the game.
+A shared reference lives on the board. It lists every fixed exchange rate in the game.
 
 | ITEM | PRICE |
 | :--- | :--- |

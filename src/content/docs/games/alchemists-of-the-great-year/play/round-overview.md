@@ -53,7 +53,7 @@ Your **Tableau** is everything you have in play, arranged across three zones: th
 
 #### Spread
 
-Cards you place in your Spread are face up and visible to every player, and their printed effects are active. Spread cards are the cards you craft with, the cards that pay your Attunements, and the cards that form your Stelliums. They also contribute to the Harvest in Autumn. Because they are out in the open, they are the only cards a rival can take from you in a Duel.
+Cards you place in your Spread are face up and visible to every player, and their printed effects are active. Spread cards are the cards you craft with and the cards that pay your Attunements. They also contribute to the Harvest in Autumn. Because they are out in the open, they are the only cards a rival can take from you in a Duel.
 
 #### Hand
 

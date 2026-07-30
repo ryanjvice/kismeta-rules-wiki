@@ -39,7 +39,6 @@
   - [The Zodiac Wheel](#the-zodiac-wheel)
   - [Correspondence](#correspondence)
   - [KISMETA CARDS](#kismeta-cards)
-  - [Stelliums](#stelliums)
   - [Card Effect Verbs](#card-effect-verbs)
   - [Crucible Cards](#crucible-cards)
   - [Tableau: Spread, Hand & Arcanum Zones](#tableau-spread-hand--arcanum-zones)
@@ -97,7 +96,7 @@ Every ring of the Great Work is printed on the board. Working from the outside i
 - **The Forge.** Four stations at the heart of the board, passed through in order: Lead (1), Bronze (3), Silver (5), and Gold (7). There is only one of each, so every Alchemist competes for the same four stations. A Stone in the Forge is working through a Transmutation Stage, and is exposed to Siege for the single Summer it spends there.
 - **The Altar of Kismeta.** The center of the board, position 8, marks the end of the Great Work. The first Stone to arrive wins the game.
 - **The Furnaces.** Four rosettes at the corners of the board, one for each suit and Element: Wands and Fire (red), Cups and Water (blue), Swords and Air (yellow), and Pentacles and Earth (green). Coal is placed here to raise your Heat. Each Furnace holds three Coal in total, shared among all players and claimed first come, first served.
-- **The Bazaar.** A shared reference area on the board, printed where the Stellium tracker once stood. It lists every fixed exchange rate in the game, so no one has to hunt through the rules mid-turn.
+- **The Bazaar.** A shared reference area on the board. It lists every fixed exchange rate in the game, so no one has to hunt through the rules mid-turn.
 - **Codex Panels.** The four framed panels along the board's edges are your working areas. Your Codex lists the Coal and Reagent costs, and the space around it holds your Tableau: your Spread, your Hand, and your Arcanum.
 
 ---
@@ -134,13 +133,13 @@ The Great Work runs on two core currencies: **Essence** and **Kismeta cards**.
 - **Essence** is Harvested each Autumn. Your Zodiac Die, Spread, Astral Houses, and Adept Cards can each Align with the Cosmic Age. Distill 5 Essence of one Element to make a **Reagent** of that Element.
 - **Kismeta cards** flow from the deck into your Tableau. Spend 3 cards of one suit to craft **Coal**. Spend 3 cards of one Planet to build an **Astral House**. Upgrade a House to an **Astral Mansion** for 2 more cards of that Planet plus a Reagent marker from the supply.
 
-Coal and Reagents refine your currencies when a Crucible Formula demands them. Astral Houses, Adept Cards, Stelliums, and card effects tune how much you earn and how efficiently you spend. You can grow either currency across Ages; they converge when you are ready to Fire your Stone into the Forge.
+Coal and Reagents refine your currencies when a Crucible Formula demands them. Astral Houses, Adept Cards, and card effects tune how much you earn and how efficiently you spend. You can grow either currency across Ages; they converge when you are ready to Fire your Stone into the Forge.
 
-Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. The journey spans many Cosmic Ages, some spent building your engine, others spent driving your Stone through the Forge. In early Ages, focus on infrastructure: build Astral Houses, buy Adept Cards, hold Stelliums together in your Spread, and bank Essence.
+Every Alchemist aims to transmute the Philosopher's Stone from Lead to Gold and place it on the Altar of Kismeta. The journey spans many Cosmic Ages, some spent building your engine, others spent driving your Stone through the Forge. In early Ages, focus on infrastructure: build Astral Houses, buy Adept Cards, and bank Essence.
 
 ## The Bazaar
 
-A shared reference lives on the board, in the space the old Stellium tracker used to occupy. It lists every fixed exchange rate in the game.
+A shared reference lives on the board. It lists every fixed exchange rate in the game.
 
 | ITEM | PRICE |
 | :--- | :--- |
@@ -344,7 +343,7 @@ Your **Tableau** is everything you have in play, arranged across three zones: th
 
 #### Spread
 
-Cards you place in your Spread are face up and visible to every player, and their printed effects are active. Spread cards are the cards you craft with, the cards that pay your Attunements, and the cards that form your Stelliums. They also contribute to the Harvest in Autumn. Because they are out in the open, they are the only cards a rival can take from you in a Duel.
+Cards you place in your Spread are face up and visible to every player, and their printed effects are active. Spread cards are the cards you craft with and the cards that pay your Attunements. They also contribute to the Harvest in Autumn. Because they are out in the open, they are the only cards a rival can take from you in a Duel.
 
 #### Hand
 
@@ -696,7 +695,7 @@ Keep these principles in mind as you find your footing across the first few Ages
 
 1. **Your Alignments Set Your Income.** Every Essence you earn comes from matching your Harvest Sources against the three Aspects of the Cosmic Age. A source that matches all three at once is worth six times a bare Element match, so chase Perfect Matches wherever you can engineer them.
 
-2. **Your Spread Is Your Engine.** Spread cards have active effects, form Stelliums, craft Coal and Astral Houses, pay Attunements, and score at the Harvest. Hand cards do almost none of that. What is visible is what works, and what is visible is also what a rival can take.
+2. **Your Spread Is Your Engine.** Spread cards have active effects, craft Coal and Astral Houses, pay Attunements, and score at the Harvest. Hand cards do almost none of that. What is visible is what works, and what is visible is also what a rival can take.
 
 3. **Watch the Furnace, Not Just the Formula.** A Furnace holds only three Coal for the whole table. If your Formula needs Radiant Heat, you need all three spaces, and every rival who fuels that Furnace first has taken one away from you. Fuel early in an Age when your Sign gives you access.
 
@@ -724,7 +723,7 @@ Your Zodiac Die, Astral Houses, Adept Cards, and Spread Cards pay out Essence ea
 
 ### The Card Economy
 
-Cards convert into Coal (3 of one suit) and Astral Houses (3 of one Planet). This economy is narrow and brutal. You receive only three cards per Age, plus what you steal, draw from effects, or trade for. Every card spent on a Coal is a card not spent on a House, an Attunement, or a Stellium.
+Cards convert into Coal (3 of one suit) and Astral Houses (3 of one Planet). This economy is narrow and brutal. You receive only three cards per Age, plus what you steal, draw from effects, or trade for. Every card spent on a Coal is a card not spent on a House or an Attunement.
 
 ### Where They Meet
 
@@ -736,8 +735,7 @@ Your Zodiac Die result each Spring decides which Furnace you may fuel and which 
 
 Three tools bend it:
 
-- **The Mercury Stellium** lets you fuel any Furnace, regardless of your Sign.
-- **The Jupiter Stellium** lets you build an Astral House on the **Cosmic Age**, not only your own Sign.
+- **Princess cards (Mercury)** — Burn one to fuel that Element's Furnace regardless of your Sign for the Age.
 - **The Chariot** (Adept, Leo) lets you shift your Zodiac Die result one Sign in either direction on the Wheel, once per Age.
 - **Strength** (Adept, Sagittarius) lets you declare a Siege without paying the Ante and win any tie in Sieges.
 
@@ -764,7 +762,7 @@ The counter-pressure runs the other way. A failed Siege costs the attacker their
 
 Kismeta gives you three ways to hurt a rival without advancing yourself.
 
-- **Duels** take a specific card from a Spread. The best targets are not the highest-value cards but the load-bearing ones: the third card of a Stellium, or the last card of an Attunement.
+- **Duels** take a specific card from a Spread. The best targets are not the highest-value cards but the load-bearing ones: the last card of an Attunement, or a card whose effect is holding a rival's engine together.
 - **Extinguish** removes a rival's Coal and drops their Heat. Timed just before their Autumn, it can push a Formula out of reach for a whole Age.
 - **Siege** stalls a Stone for an Age.
 
@@ -784,7 +782,7 @@ A balanced spread across the Groups. Full cognitive load: Card Lock, House place
 
 ### Magnus Alchemist (Expert Depth)
 
-Weighted to Groups C and D. Group C demands complex Attunements and card straights. Group D demands the heaviest Reagent payments and Heat spread across multiple Furnaces at once. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually a Stellium or an Adept to lift the Furnace restriction.
+Weighted to Groups C and D. Group C demands complex Attunements and card straights. Group D demands the heaviest Reagent payments and Heat spread across multiple Furnaces at once. Group D Formulas require multi-Age planning, Astral Houses placed Ages in advance, and usually an Adept or a card effect to lift the Furnace restriction.
 
 ## Conclusion & Verdict
 
@@ -864,7 +862,7 @@ The Kismeta Deck (blue back) holds 134 cards: 112 Minor Arcana and 22 Major Arca
 - **Rank:** Ace, 2 through 10, Princess, Knight, Queen, King.
 - **CV:** the card's numeric value, from 1 for an Ace to 14 for a King.
 - **Suit:** Cups, Pentacles, Swords, or Wands, each tied to an Element and a Reagent.
-- **Planet:** one of seven ruling Planets. Six of them anchor a Stellium, formed by holding three cards of that Planet in your Spread. The seventh, the Sun, anchors no Stellium and is wild instead.
+- **Planet:** one of seven ruling Planets. Each card's Planet is used for Attunements, Harvest alignment, and crafting Astral Houses (3 cards of one Planet).
 - **Effect:** printed on the card, active only while it sits in your Spread.
 
 Each suit runs the same ladder of effects, expressed in that suit's Element. Every rank appears twice per suit, except the 7, which has two distinct single-copy versions.
@@ -880,23 +878,6 @@ Each suit runs the same ladder of effects, expressed in that suit's Element. Eve
 **Adept Cards** are purchased when drawn: pay **3 Essence, of any type**, to add them to your Arcanum, or discard them. You may hold two. Every Adept has two tiers: its **Base** text always applies, and it becomes **Resonant** whenever the Cosmic Age shares one of its three Aspects (Sign, Planet, or Element).
 
 📌 **For the complete Fate and Adept card reference**, see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
-
-## Stelliums
-
-Every Minor Arcana card carries a Planet. Hold **three cards of one Planet** together in your **Spread** to activate that Planet's **Stellium**. The effect holds only while all three remain: losing one to a Duel switches it off.
-
-Only Spread cards count. Hand cards and Arcanum cards never contribute to a Stellium. An Ace is wild for any one Stellium. One Ace per Stellium.
-
-| Planet        | Ranks         | While Active                                                          |
-| ------------- | ------------- | --------------------------------------------------------------------- |
-| ☽ **Moon**    | 2, Queen      | Your Coal cannot be Extinguished.                                     |
-| ☿ **Mercury** | 5, Princess   | You may fuel any Furnace, not only the one matching your Sign.        |
-| ♀ **Venus**   | 4, 9          | At Harvest, take your Essence in any one Element you choose.          |
-| ♂ **Mars**    | 7, Knight     | Losing a Duel does not bar you from challenging that rival again this Age. |
-| ♃ **Jupiter** | 3, 8, King    | You may build an Astral House on the **Cosmic Age**, not only your own Sign. |
-| ♄ **Saturn**  | 6, 10         | Your Spread limit is 9 instead of 7.                                  |
-
-📌 **For the full Stellium Codex and suit-specific card effects**, see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
 
 ## Card Effect Verbs
 
@@ -944,7 +925,7 @@ You always manage your Tableau, everything you have in play, across three zones.
 
 | ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS  | MAX LIMIT                                    | USED FOR                                                                                                       | CANNOT BE USED FOR                          |
 | ------- | --------------------------------------------- | ---------- | -------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | 7 cards, enforced in Winter (9 with Saturn)  | Paying Attunements, Crafting Coal, Building Astral Houses, Forming Stelliums, Harvest scoring, Trading, Wagers, Sieges | Nothing. Spread cards are eligible for every use, and are the only cards a rival may take in a Duel. |
+| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | 7 cards, enforced in Winter                  | Paying Attunements, Crafting Coal, Building Astral Houses, Harvest scoring, Trading, Wagers, Sieges | Nothing. Spread cards are eligible for every use, and are the only cards a rival may take in a Duel. |
 | HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | 5 cards, enforced in Winter                  | Committing in a Siege, Trading, Wagers                                                                         | Crafting sets, Attunements, Harvest scoring, Duel targets |
 | ARCANUM | MAJOR ARCANA: Adept & Fate Cards              | Visible    | Active   | 2 Adepts (3 with the Hierophant); Fates until Transit | Adept effects and Aspects (Harvest scoring), Trading Adepts                                          | Crafting sets, Attunements, Duel targets, Wagers |
 
@@ -1013,7 +994,6 @@ _Terms are listed alphabetically. Each entry provides a definition only. For ful
 | **Sign** | One of the twelve Zodiac Signs. Your Sign is set each Spring and holds for the Age. |
 | **Spread** | The public tableau zone. Spread card effects are active; they may be used in Crafting sets, and they can be lost in Duels. |
 | **Stasis** | Where a Seized Stone is held. From the Autumn of the next Age, its owner may pay 5 Essence to Rekindle it, and it waits there until they can. Marked with a ❄️ snowflake symbol. |
-| **Stellium** | A standing effect activated by holding three cards of one Planet in your Spread. It lasts only while all three remain. An Ace is wild for any one Stellium. |
 | **Suit** | One of four categories on Minor Arcana cards: Wands, Cups, Pentacles, or Swords. Each corresponds to an Element, a Reagent, and a Furnace. |
 | **Tableau** | Everything you have in play: your Spread, Hand, and Arcanum. |
 | **Temper** | The Autumn action of advancing a Stone that has spent a full Age in the Forge to the next Mantle Ring position, setting aside its Crucible Card and consuming the Coal it used. |

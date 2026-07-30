@@ -51,7 +51,7 @@ The Kismeta Deck (blue back) holds 134 cards: 112 Minor Arcana and 22 Major Arca
 - **Rank:** Ace, 2 through 10, Princess, Knight, Queen, King.
 - **CV:** the card's numeric value, from 1 for an Ace to 14 for a King.
 - **Suit:** Cups, Pentacles, Swords, or Wands, each tied to an Element and a Reagent.
-- **Planet:** one of seven ruling Planets. Six of them anchor a Stellium, formed by holding three cards of that Planet in your Spread. The seventh, the Sun, anchors no Stellium and is wild instead.
+- **Planet:** one of seven ruling Planets. Each card's Planet is used for Attunements, Harvest alignment, and crafting Astral Houses (3 cards of one Planet).
 - **Effect:** printed on the card, active only while it sits in your Spread.
 
 Each suit runs the same ladder of effects, expressed in that suit's Element. Every rank appears twice per suit, except the 7, which has two distinct single-copy versions.
@@ -67,23 +67,6 @@ Each suit runs the same ladder of effects, expressed in that suit's Element. Eve
 **Adept Cards** are purchased when drawn: pay **3 Essence, of any type**, to add them to your Arcanum, or discard them. You may hold two. Every Adept has two tiers: its **Base** text always applies, and it becomes **Resonant** whenever the Cosmic Age shares one of its three Aspects (Sign, Planet, or Element).
 
 📌 **For the complete Fate and Adept card reference**, see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
-
-## Stelliums
-
-Every Minor Arcana card carries a Planet. Hold **three cards of one Planet** together in your **Spread** to activate that Planet's **Stellium**. The effect holds only while all three remain: losing one to a Duel switches it off.
-
-Only Spread cards count. Hand cards and Arcanum cards never contribute to a Stellium. An Ace is wild for any one Stellium. One Ace per Stellium.
-
-| Planet        | Ranks         | While Active                                                          |
-| ------------- | ------------- | --------------------------------------------------------------------- |
-| ☽ **Moon**    | 2, Queen      | Your Coal cannot be Extinguished.                                     |
-| ☿ **Mercury** | 5, Princess   | You may fuel any Furnace, not only the one matching your Sign.        |
-| ♀ **Venus**   | 4, 9          | At Harvest, take your Essence in any one Element you choose.          |
-| ♂ **Mars**    | 7, Knight     | Losing a Duel does not bar you from challenging that rival again this Age. |
-| ♃ **Jupiter** | 3, 8, King    | You may build an Astral House on the **Cosmic Age**, not only your own Sign. |
-| ♄ **Saturn**  | 6, 10         | Your Spread limit is 9 instead of 7.                                  |
-
-📌 **For the full Stellium Codex and suit-specific card effects**, see **[Kismeta_CardReference.md](Kismeta_CardReference.md)**.
 
 ## Card Effect Verbs
 
@@ -131,6 +114,6 @@ You always manage your Tableau, everything you have in play, across three zones.
 
 | ZONE    | CARD TYPE                                     | VISIBILITY | EFFECTS  | MAX LIMIT                                    | USED FOR                                                                                                       | CANNOT BE USED FOR                          |
 | ------- | --------------------------------------------- | ---------- | -------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | 7 cards, enforced in Winter (9 with Saturn)  | Paying Attunements, Crafting Coal, Building Astral Houses, Forming Stelliums, Harvest scoring, Trading, Wagers, Sieges | Nothing. Spread cards are eligible for every use, and are the only cards a rival may take in a Duel. |
+| SPREAD  | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Visible    | Active   | 7 cards, enforced in Winter                  | Paying Attunements, Crafting Coal, Building Astral Houses, Harvest scoring, Trading, Wagers, Sieges | Nothing. Spread cards are eligible for every use, and are the only cards a rival may take in a Duel. |
 | HAND    | MINOR ARCANA: Cups, Pentacles, Swords & Wands | Hidden     | Inactive | 5 cards, enforced in Winter                  | Committing in a Siege, Trading, Wagers                                                                         | Crafting sets, Attunements, Harvest scoring, Duel targets |
 | ARCANUM | MAJOR ARCANA: Adept & Fate Cards              | Visible    | Active   | 2 Adepts (3 with the Hierophant); Fates until Transit | Adept effects and Aspects (Harvest scoring), Trading Adepts                                          | Crafting sets, Attunements, Duel targets, Wagers |
